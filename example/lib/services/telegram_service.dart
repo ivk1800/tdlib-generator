@@ -77,7 +77,7 @@ class TelegramService extends ChangeNotifier {
       } else if (callbackResults.containsKey(extraId)) {
         await callbackResults.remove(extraId);
       }
-    } catch(e) {
+    } catch (e) {
       print(e);
     }
   }
@@ -179,8 +179,8 @@ class TelegramService extends ChangeNotifier {
   }
 
   /// Sends request to the TDLib client. May be called from any thread.
+  // ignore: missing_return
   Future<TdObject> send(event, {Future<void> callback}) async {
-    // ignore: missing_return
     final rndId = _random();
     event.extra = rndId;
     if (callback != null) {
