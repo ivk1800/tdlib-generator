@@ -1,33 +1,28 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Creates a new basic group and sends a corresponding messageBasicGroupChatCreate. Returns the newly created chat
 class CreateNewBasicGroupChat extends TdFunction {
-  /// Creates a new basic group and sends a corresponding messageBasicGroupChatCreate. Returns the newly created chat
-  CreateNewBasicGroupChat({this.userIds, this.title});
+  CreateNewBasicGroupChat({required this.userIds, required this.title});
 
-  /// [userIds] Identifiers of users to be added to the basic group
-  List<int> userIds;
+  /// user_ids Identifiers of users to be added to the basic group
+  final List<int> userIds;
 
-  /// [title] Title of the new basic group; 1-128 characters
-  String title;
+  /// title Title of the new basic group; 1-128 characters
+  final String title;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  CreateNewBasicGroupChat.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "user_ids": this.userIds.map((i) => i).toList(),
-      "title": this.title,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'createNewBasicGroupChat';
+  static const String CONSTRUCTOR = 'createNewBasicGroupChat';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'user_ids': this.userIds,
+        'title': this.title,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

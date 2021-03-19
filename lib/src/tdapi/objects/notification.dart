@@ -1,42 +1,48 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains information about a notification
 class Notification extends TdObject {
-  /// Contains information about a notification
-  Notification({this.id, this.date, this.isSilent, this.type});
+  Notification(
+      {required this.id,
+      required this.date,
+      required this.isSilent,
+      required this.type});
 
-  /// [id] Unique persistent identifier of this notification
-  int id;
+  /// id Unique persistent identifier of this notification
+  final int id;
 
-  /// [date] Notification date
-  int date;
+  /// date Notification date
+  final int date;
 
-  /// [isSilent] True, if the notification was initially silent
-  bool isSilent;
+  /// is_silent True, if the notification was initially silent
+  final bool isSilent;
 
-  /// [type] Notification type
-  NotificationType type;
+  /// type Notification type
+  final NotificationType type;
 
-  /// Parse from a json
-  Notification.fromJson(Map<String, dynamic> json) {
-    this.id = json['id'];
-    this.date = json['date'];
-    this.isSilent = json['is_silent'];
-    this.type = NotificationType.fromJson(json['type'] ?? <String, dynamic>{});
+  static const String CONSTRUCTOR = 'notification';
+
+  static Notification? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return Notification(
+        id: json['id'],
+        date: json['date'],
+        isSilent: json['is_silent'],
+        type: NotificationType.fromJson(json['type'])!);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "id": this.id,
-      "date": this.date,
-      "is_silent": this.isSilent,
-      "type": this.type == null ? null : this.type.toJson(),
-    };
-  }
-
-  static const CONSTRUCTOR = 'notification';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'id': this.id,
+        'date': this.date,
+        'is_silent': this.isSilent,
+        'type': this.type,
+        '@type': CONSTRUCTOR
+      };
 }

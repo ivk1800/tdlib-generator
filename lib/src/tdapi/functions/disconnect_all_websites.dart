@@ -1,25 +1,17 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Disconnects all websites from the current user's Telegram account
 class DisconnectAllWebsites extends TdFunction {
-  /// Disconnects all websites from the current user's Telegram account
   DisconnectAllWebsites();
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  DisconnectAllWebsites.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'disconnectAllWebsites';
+  static const String CONSTRUCTOR = 'disconnectAllWebsites';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {'@type': CONSTRUCTOR, '@extra': this.extra};
 }

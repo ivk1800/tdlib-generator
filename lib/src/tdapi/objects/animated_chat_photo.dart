@@ -1,37 +1,42 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Animated variant of a chat photo in MPEG4 format
 class AnimatedChatPhoto extends TdObject {
-  /// Animated variant of a chat photo in MPEG4 format
-  AnimatedChatPhoto({this.length, this.file, this.mainFrameTimestamp});
+  AnimatedChatPhoto(
+      {required this.length,
+      required this.file,
+      required this.mainFrameTimestamp});
 
-  /// [length] Animation width and height
-  int length;
+  /// length Animation width and height
+  final int length;
 
-  /// [file] Information about the animation file
-  File file;
+  /// file Information about the animation file
+  final File file;
 
-  /// [mainFrameTimestamp] Timestamp of the frame, used as a static chat photo
-  double mainFrameTimestamp;
+  /// main_frame_timestamp Timestamp of the frame, used as a static chat photo
+  final double mainFrameTimestamp;
 
-  /// Parse from a json
-  AnimatedChatPhoto.fromJson(Map<String, dynamic> json) {
-    this.length = json['length'];
-    this.file = File.fromJson(json['file'] ?? <String, dynamic>{});
-    this.mainFrameTimestamp = json['main_frame_timestamp'];
+  static const String CONSTRUCTOR = 'animatedChatPhoto';
+
+  static AnimatedChatPhoto? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return AnimatedChatPhoto(
+        length: json['length'],
+        file: File.fromJson(json['file'])!,
+        mainFrameTimestamp: json['main_frame_timestamp']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "length": this.length,
-      "file": this.file == null ? null : this.file.toJson(),
-      "main_frame_timestamp": this.mainFrameTimestamp,
-    };
-  }
-
-  static const CONSTRUCTOR = 'animatedChatPhoto';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'length': this.length,
+        'file': this.file,
+        'main_frame_timestamp': this.mainFrameTimestamp,
+        '@type': CONSTRUCTOR
+      };
 }

@@ -1,33 +1,29 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains a list of sessions
 class Sessions extends TdObject {
-  /// Contains a list of sessions
-  Sessions({this.sessions});
+  Sessions({required this.sessions});
 
-  /// [sessions] List of sessions
-  List<Session> sessions;
+  /// sessions List of sessions
+  final List<Session> sessions;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'sessions';
 
-  /// Parse from a json
-  Sessions.fromJson(Map<String, dynamic> json) {
-    this.sessions = List<Session>.from((json['sessions'] ?? [])
-        .map((item) => Session.fromJson(item ?? <String, dynamic>{}))
-        .toList());
-    this.extra = json['@extra'];
+  static Sessions? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return Sessions(
+        sessions: List<Session>.from((json['sessions}'] ?? [])
+            .map((item) => Session.fromJson(json['Session'])!)
+            .toList()));
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "sessions": this.sessions.map((i) => i.toJson()).toList(),
-    };
-  }
-
-  static const CONSTRUCTOR = 'sessions';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'sessions': this.sessions, '@type': CONSTRUCTOR};
 }

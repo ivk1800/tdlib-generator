@@ -1,33 +1,29 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Returns list of chats with non-default notification settings
 class GetChatNotificationSettingsExceptions extends TdFunction {
-  /// Returns list of chats with non-default notification settings
-  GetChatNotificationSettingsExceptions({this.scope, this.compareSound});
+  GetChatNotificationSettingsExceptions(
+      {required this.scope, required this.compareSound});
 
-  /// [scope] If specified, only chats from the specified scope will be returned
-  NotificationSettingsScope scope;
+  /// scope If specified, only chats from the specified scope will be returned
+  final NotificationSettingsScope scope;
 
-  /// [compareSound] If true, also chats with non-default sound will be returned
-  bool compareSound;
+  /// compare_sound If true, also chats with non-default sound will be returned
+  final bool compareSound;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  GetChatNotificationSettingsExceptions.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "scope": this.scope == null ? null : this.scope.toJson(),
-      "compare_sound": this.compareSound,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'getChatNotificationSettingsExceptions';
+  static const String CONSTRUCTOR = 'getChatNotificationSettingsExceptions';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'scope': this.scope,
+        'compare_sound': this.compareSound,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

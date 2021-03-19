@@ -1,0 +1,45 @@
+part of '../tdapi.dart';
+
+/// Group.Objects
+/// Some language pack strings have been updated
+class UpdateLanguagePackStrings extends Update {
+  UpdateLanguagePackStrings(
+      {required this.localizationTarget,
+      required this.languagePackId,
+      required this.strings});
+
+  /// localization_target Localization target to which the language pack belongs
+  final String localizationTarget;
+
+  /// language_pack_id Identifier of the updated language pack
+  final String languagePackId;
+
+  /// strings List of changed language pack strings
+  final List<LanguagePackString> strings;
+
+  static const String CONSTRUCTOR = 'updateLanguagePackStrings';
+
+  static UpdateLanguagePackStrings? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return UpdateLanguagePackStrings(
+        localizationTarget: json['localization_target'],
+        languagePackId: json['language_pack_id'],
+        strings: List<LanguagePackString>.from((json['strings}'] ?? [])
+            .map((item) =>
+                LanguagePackString.fromJson(json['LanguagePackString'])!)
+            .toList()));
+  }
+
+  @override
+  String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'localization_target': this.localizationTarget,
+        'language_pack_id': this.languagePackId,
+        'strings': this.strings,
+        '@type': CONSTRUCTOR
+      };
+}

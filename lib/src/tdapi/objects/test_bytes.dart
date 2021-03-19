@@ -1,31 +1,25 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// A simple object containing a sequence of bytes; for testing only
 class TestBytes extends TdObject {
-  /// A simple object containing a sequence of bytes; for testing only
-  TestBytes({this.value});
+  TestBytes({required this.value});
 
-  /// [value] Bytes
-  String value;
+  /// value Bytes
+  final String value;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'testBytes';
 
-  /// Parse from a json
-  TestBytes.fromJson(Map<String, dynamic> json) {
-    this.value = json['value'];
-    this.extra = json['@extra'];
+  static TestBytes? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return TestBytes(value: json['value']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "value": this.value,
-    };
-  }
-
-  static const CONSTRUCTOR = 'testBytes';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {'value': this.value, '@type': CONSTRUCTOR};
 }

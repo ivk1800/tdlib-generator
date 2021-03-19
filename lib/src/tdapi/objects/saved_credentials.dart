@@ -1,32 +1,29 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains information about saved card credentials
 class SavedCredentials extends TdObject {
-  /// Contains information about saved card credentials
-  SavedCredentials({this.id, this.title});
+  SavedCredentials({required this.id, required this.title});
 
-  /// [id] Unique identifier of the saved credentials
-  String id;
+  /// id Unique identifier of the saved credentials
+  final String id;
 
-  /// [title] Title of the saved credentials
-  String title;
+  /// title Title of the saved credentials
+  final String title;
 
-  /// Parse from a json
-  SavedCredentials.fromJson(Map<String, dynamic> json) {
-    this.id = json['id'];
-    this.title = json['title'];
+  static const String CONSTRUCTOR = 'savedCredentials';
+
+  static SavedCredentials? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return SavedCredentials(id: json['id'], title: json['title']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "id": this.id,
-      "title": this.title,
-    };
-  }
-
-  static const CONSTRUCTOR = 'savedCredentials';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'id': this.id, 'title': this.title, '@type': CONSTRUCTOR};
 }

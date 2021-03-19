@@ -1,32 +1,30 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Represents one member of a JSON object
 class JsonObjectMember extends TdObject {
-  /// Represents one member of a JSON object
-  JsonObjectMember({this.key, this.value});
+  JsonObjectMember({required this.key, required this.value});
 
-  /// [key] Member's key
-  String key;
+  /// key Member's key
+  final String key;
 
-  /// [value] Member's value
-  JsonValue value;
+  /// value Member's value
+  final JsonValue value;
 
-  /// Parse from a json
-  JsonObjectMember.fromJson(Map<String, dynamic> json) {
-    this.key = json['key'];
-    this.value = JsonValue.fromJson(json['value'] ?? <String, dynamic>{});
+  static const String CONSTRUCTOR = 'jsonObjectMember';
+
+  static JsonObjectMember? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return JsonObjectMember(
+        key: json['key'], value: JsonValue.fromJson(json['value'])!);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "key": this.key,
-      "value": this.value == null ? null : this.value.toJson(),
-    };
-  }
-
-  static const CONSTRUCTOR = 'jsonObjectMember';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'key': this.key, 'value': this.value, '@type': CONSTRUCTOR};
 }

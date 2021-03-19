@@ -1,41 +1,44 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Describes a photo
 class Photo extends TdObject {
-  /// Describes a photo
-  Photo({this.hasStickers, this.minithumbnail, this.sizes});
+  Photo(
+      {required this.hasStickers,
+      Minithumbnail? this.minithumbnail,
+      required this.sizes});
 
-  /// [hasStickers] True, if stickers were added to the photo. The list of corresponding sticker sets can be received using getAttachedStickerSets
-  bool hasStickers;
+  /// has_stickers True, if stickers were added to the photo. The list of corresponding sticker sets can be received using getAttachedStickerSets
+  final bool hasStickers;
 
-  /// [minithumbnail] Photo minithumbnail; may be null
-  Minithumbnail minithumbnail;
+  /// minithumbnail Photo minithumbnail; may be null
+  final Minithumbnail? minithumbnail;
 
-  /// [sizes] Available variants of the photo, in different sizes
-  List<PhotoSize> sizes;
+  /// sizes Available variants of the photo, in different sizes
+  final List<PhotoSize> sizes;
 
-  /// Parse from a json
-  Photo.fromJson(Map<String, dynamic> json) {
-    this.hasStickers = json['has_stickers'];
-    this.minithumbnail =
-        Minithumbnail.fromJson(json['minithumbnail'] ?? <String, dynamic>{});
-    this.sizes = List<PhotoSize>.from((json['sizes'] ?? [])
-        .map((item) => PhotoSize.fromJson(item ?? <String, dynamic>{}))
-        .toList());
+  static const String CONSTRUCTOR = 'photo';
+
+  static Photo? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return Photo(
+        hasStickers: json['has_stickers'],
+        minithumbnail: Minithumbnail.fromJson(json['minithumbnail']),
+        sizes: List<PhotoSize>.from((json['sizes}'] ?? [])
+            .map((item) => PhotoSize.fromJson(json['PhotoSize'])!)
+            .toList()));
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "has_stickers": this.hasStickers,
-      "minithumbnail":
-          this.minithumbnail == null ? null : this.minithumbnail.toJson(),
-      "sizes": this.sizes.map((i) => i.toJson()).toList(),
-    };
-  }
-
-  static const CONSTRUCTOR = 'photo';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'has_stickers': this.hasStickers,
+        'minithumbnail': this.minithumbnail,
+        'sizes': this.sizes,
+        '@type': CONSTRUCTOR
+      };
 }

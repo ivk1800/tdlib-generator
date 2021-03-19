@@ -1,29 +1,21 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Returns the value of an option by its name. (Check the list of available options on https://core.telegram.org/tdlib/options.) Can be called before authorization
 class GetOption extends TdFunction {
-  /// Returns the value of an option by its name. (Check the list of available options on https://core.telegram.org/tdlib/options.) Can be called before authorization
-  GetOption({this.name});
+  GetOption({required this.name});
 
-  /// [name] The name of the option
-  String name;
+  /// name The name of the option
+  final String name;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  GetOption.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "name": this.name,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'getOption';
+  static const String CONSTRUCTOR = 'getOption';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'name': this.name, '@type': CONSTRUCTOR, '@extra': this.extra};
 }

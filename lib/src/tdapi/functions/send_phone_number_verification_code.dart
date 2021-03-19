@@ -1,33 +1,29 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Sends a code to verify a phone number to be added to a user's Telegram Passport
 class SendPhoneNumberVerificationCode extends TdFunction {
-  /// Sends a code to verify a phone number to be added to a user's Telegram Passport
-  SendPhoneNumberVerificationCode({this.phoneNumber, this.settings});
+  SendPhoneNumberVerificationCode(
+      {required this.phoneNumber, required this.settings});
 
-  /// [phoneNumber] The phone number of the user, in international format
-  String phoneNumber;
+  /// phone_number The phone number of the user, in international format
+  final String phoneNumber;
 
-  /// [settings] Settings for the authentication of the user's phone number
-  PhoneNumberAuthenticationSettings settings;
+  /// settings Settings for the authentication of the user's phone number
+  final PhoneNumberAuthenticationSettings settings;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  SendPhoneNumberVerificationCode.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "phone_number": this.phoneNumber,
-      "settings": this.settings == null ? null : this.settings.toJson(),
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'sendPhoneNumberVerificationCode';
+  static const String CONSTRUCTOR = 'sendPhoneNumberVerificationCode';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'phone_number': this.phoneNumber,
+        'settings': this.settings,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

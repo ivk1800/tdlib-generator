@@ -1,29 +1,24 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Discards a group call. Requires can_manage_voice_chats rights in the corresponding chat
 class DiscardGroupCall extends TdFunction {
-  /// Discards a group call. Requires can_manage_voice_chats rights in the corresponding chat
-  DiscardGroupCall({this.groupCallId});
+  DiscardGroupCall({required this.groupCallId});
 
-  /// [groupCallId] Group call identifier
-  int groupCallId;
+  /// group_call_id Group call identifier
+  final int groupCallId;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  DiscardGroupCall.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "group_call_id": this.groupCallId,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'discardGroupCall';
+  static const String CONSTRUCTOR = 'discardGroupCall';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'group_call_id': this.groupCallId,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

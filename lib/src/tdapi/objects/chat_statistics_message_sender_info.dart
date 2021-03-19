@@ -1,38 +1,42 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains statistics about messages sent by a user
 class ChatStatisticsMessageSenderInfo extends TdObject {
-  /// Contains statistics about messages sent by a user
   ChatStatisticsMessageSenderInfo(
-      {this.userId, this.sentMessageCount, this.averageCharacterCount});
+      {required this.userId,
+      required this.sentMessageCount,
+      required this.averageCharacterCount});
 
-  /// [userId] User identifier
-  int userId;
+  /// user_id User identifier
+  final int userId;
 
-  /// [sentMessageCount] Number of sent messages
-  int sentMessageCount;
+  /// sent_message_count Number of sent messages
+  final int sentMessageCount;
 
-  /// [averageCharacterCount] Average number of characters in sent messages
-  int averageCharacterCount;
+  /// average_character_count Average number of characters in sent messages
+  final int averageCharacterCount;
 
-  /// Parse from a json
-  ChatStatisticsMessageSenderInfo.fromJson(Map<String, dynamic> json) {
-    this.userId = json['user_id'];
-    this.sentMessageCount = json['sent_message_count'];
-    this.averageCharacterCount = json['average_character_count'];
+  static const String CONSTRUCTOR = 'chatStatisticsMessageSenderInfo';
+
+  static ChatStatisticsMessageSenderInfo? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return ChatStatisticsMessageSenderInfo(
+        userId: json['user_id'],
+        sentMessageCount: json['sent_message_count'],
+        averageCharacterCount: json['average_character_count']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "user_id": this.userId,
-      "sent_message_count": this.sentMessageCount,
-      "average_character_count": this.averageCharacterCount,
-    };
-  }
-
-  static const CONSTRUCTOR = 'chatStatisticsMessageSenderInfo';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'user_id': this.userId,
+        'sent_message_count': this.sentMessageCount,
+        'average_character_count': this.averageCharacterCount,
+        '@type': CONSTRUCTOR
+      };
 }

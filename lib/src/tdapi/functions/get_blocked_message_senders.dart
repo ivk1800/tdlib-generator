@@ -1,33 +1,28 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Returns users and chats that were blocked by the current user
 class GetBlockedMessageSenders extends TdFunction {
-  /// Returns users and chats that were blocked by the current user
-  GetBlockedMessageSenders({this.offset, this.limit});
+  GetBlockedMessageSenders({required this.offset, required this.limit});
 
-  /// [offset] Number of users and chats to skip in the result; must be non-negative
-  int offset;
+  /// offset Number of users and chats to skip in the result; must be non-negative
+  final int offset;
 
-  /// [limit] The maximum number of users and chats to return; up to 100
-  int limit;
+  /// limit The maximum number of users and chats to return; up to 100
+  final int limit;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  GetBlockedMessageSenders.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "offset": this.offset,
-      "limit": this.limit,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'getBlockedMessageSenders';
+  static const String CONSTRUCTOR = 'getBlockedMessageSenders';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'offset': this.offset,
+        'limit': this.limit,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

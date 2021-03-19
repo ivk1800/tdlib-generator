@@ -1,37 +1,38 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Thumbnail image of a very poor quality and low resolution
 class Minithumbnail extends TdObject {
-  /// Thumbnail image of a very poor quality and low resolution
-  Minithumbnail({this.width, this.height, this.data});
+  Minithumbnail(
+      {required this.width, required this.height, required this.data});
 
-  /// [width] Thumbnail width, usually doesn't exceed 40
-  int width;
+  /// width Thumbnail width, usually doesn't exceed 40
+  final int width;
 
-  /// [height] Thumbnail height, usually doesn't exceed 40
-  int height;
+  /// height Thumbnail height, usually doesn't exceed 40
+  final int height;
 
-  /// [data] The thumbnail in JPEG format
-  String data;
+  /// data The thumbnail in JPEG format
+  final String data;
 
-  /// Parse from a json
-  Minithumbnail.fromJson(Map<String, dynamic> json) {
-    this.width = json['width'];
-    this.height = json['height'];
-    this.data = json['data'];
+  static const String CONSTRUCTOR = 'minithumbnail';
+
+  static Minithumbnail? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return Minithumbnail(
+        width: json['width'], height: json['height'], data: json['data']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "width": this.width,
-      "height": this.height,
-      "data": this.data,
-    };
-  }
-
-  static const CONSTRUCTOR = 'minithumbnail';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'width': this.width,
+        'height': this.height,
+        'data': this.data,
+        '@type': CONSTRUCTOR
+      };
 }

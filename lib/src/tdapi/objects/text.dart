@@ -1,31 +1,25 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains some text
 class Text extends TdObject {
-  /// Contains some text
-  Text({this.text});
+  Text({required this.text});
 
-  /// [text] Text
-  String text;
+  /// text Text
+  final String text;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'text';
 
-  /// Parse from a json
-  Text.fromJson(Map<String, dynamic> json) {
-    this.text = json['text'];
-    this.extra = json['@extra'];
+  static Text? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return Text(text: json['text']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "text": this.text,
-    };
-  }
-
-  static const CONSTRUCTOR = 'text';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {'text': this.text, '@type': CONSTRUCTOR};
 }

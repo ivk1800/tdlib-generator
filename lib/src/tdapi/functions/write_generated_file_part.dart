@@ -1,37 +1,33 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Writes a part of a generated file. This method is intended to be used only if the application has no direct access to TDLib's file system, because it is usually slower than a direct write to the destination file
 class WriteGeneratedFilePart extends TdFunction {
-  /// Writes a part of a generated file. This method is intended to be used only if the application has no direct access to TDLib's file system, because it is usually slower than a direct write to the destination file
-  WriteGeneratedFilePart({this.generationId, this.offset, this.data});
+  WriteGeneratedFilePart(
+      {required this.generationId, required this.offset, required this.data});
 
-  /// [generationId] The identifier of the generation process
-  int generationId;
+  /// generation_id The identifier of the generation process
+  final int generationId;
 
-  /// [offset] The offset from which to write the data to the file
-  int offset;
+  /// offset The offset from which to write the data to the file
+  final int offset;
 
-  /// [data] The data to write
-  String data;
+  /// data The data to write
+  final String data;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  WriteGeneratedFilePart.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "generation_id": this.generationId,
-      "offset": this.offset,
-      "data": this.data,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'writeGeneratedFilePart';
+  static const String CONSTRUCTOR = 'writeGeneratedFilePart';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'generation_id': this.generationId,
+        'offset': this.offset,
+        'data': this.data,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

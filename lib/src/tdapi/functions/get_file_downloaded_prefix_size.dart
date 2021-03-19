@@ -1,33 +1,28 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Returns file downloaded prefix size from a given offset
 class GetFileDownloadedPrefixSize extends TdFunction {
-  /// Returns file downloaded prefix size from a given offset
-  GetFileDownloadedPrefixSize({this.fileId, this.offset});
+  GetFileDownloadedPrefixSize({required this.fileId, required this.offset});
 
-  /// [fileId] Identifier of the file
-  int fileId;
+  /// file_id Identifier of the file
+  final int fileId;
 
-  /// [offset] Offset from which downloaded prefix size should be calculated
-  int offset;
+  /// offset Offset from which downloaded prefix size should be calculated
+  final int offset;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  GetFileDownloadedPrefixSize.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "file_id": this.fileId,
-      "offset": this.offset,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'getFileDownloadedPrefixSize';
+  static const String CONSTRUCTOR = 'getFileDownloadedPrefixSize';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'file_id': this.fileId,
+        'offset': this.offset,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

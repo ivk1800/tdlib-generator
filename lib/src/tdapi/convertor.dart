@@ -1,10 +1,14 @@
 part of 'tdapi.dart';
 
-TdObject convertToObject(String query) {
+TdObject? convertToObject(String query) {
   if (query != null) {
     final newJson = json.decode(query);
-    final object = allObjects[newJson['@type']](newJson);
-    return object;
+
+    TdObject? Function(Map<String, dynamic>)? f = allObjects[newJson['@type']!];
+
+    if (f != null) {
+      return f(newJson);
+    }
   } else {
     return null;
   }

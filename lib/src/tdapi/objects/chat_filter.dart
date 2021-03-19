@@ -1,107 +1,108 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Represents a filter of user chats
 class ChatFilter extends TdObject {
-  /// Represents a filter of user chats
   ChatFilter(
-      {this.title,
-      this.iconName,
-      this.pinnedChatIds,
-      this.includedChatIds,
-      this.excludedChatIds,
-      this.excludeMuted,
-      this.excludeRead,
-      this.excludeArchived,
-      this.includeContacts,
-      this.includeNonContacts,
-      this.includeBots,
-      this.includeGroups,
-      this.includeChannels});
+      {required this.title,
+      required this.iconName,
+      required this.pinnedChatIds,
+      required this.includedChatIds,
+      required this.excludedChatIds,
+      required this.excludeMuted,
+      required this.excludeRead,
+      required this.excludeArchived,
+      required this.includeContacts,
+      required this.includeNonContacts,
+      required this.includeBots,
+      required this.includeGroups,
+      required this.includeChannels});
 
-  /// [title] The title of the filter; 1-12 characters without line feeds
-  String title;
+  /// title The title of the filter; 1-12 characters without line feeds
+  final String title;
 
-  /// [iconName] The icon name for short filter representation. If non-empty, must be one of "All", "Unread", "Unmuted", "Bots", "Channels", "Groups", "Private", "Custom", "Setup", "Cat", "Crown", "Favorite", "Flower", "Game", "Home", "Love", "Mask", "Party", "Sport", "Study", "Trade", "Travel", "Work".. If empty, use getChatFilterDefaultIconName to get default icon name for the filter
-  String iconName;
+  /// icon_name The icon name for short filter representation. If non-empty, must be one of "All", "Unread", "Unmuted", "Bots", "Channels", "Groups", "Private", "Custom", "Setup", "Cat", "Crown", "Favorite", "Flower", "Game", "Home", "Love", "Mask", "Party", "Sport", "Study", "Trade", "Travel", "Work".. If empty, use getChatFilterDefaultIconName to get default icon name for the filter
+  final String iconName;
 
-  /// [pinnedChatIds] The chat identifiers of pinned chats in the filtered chat list
-  List<int> pinnedChatIds;
+  /// pinned_chat_ids The chat identifiers of pinned chats in the filtered chat list
+  final List<int> pinnedChatIds;
 
-  /// [includedChatIds] The chat identifiers of always included chats in the filtered chat list
-  List<int> includedChatIds;
+  /// included_chat_ids The chat identifiers of always included chats in the filtered chat list
+  final List<int> includedChatIds;
 
-  /// [excludedChatIds] The chat identifiers of always excluded chats in the filtered chat list
-  List<int> excludedChatIds;
+  /// excluded_chat_ids The chat identifiers of always excluded chats in the filtered chat list
+  final List<int> excludedChatIds;
 
-  /// [excludeMuted] True, if muted chats need to be excluded
-  bool excludeMuted;
+  /// exclude_muted True, if muted chats need to be excluded
+  final bool excludeMuted;
 
-  /// [excludeRead] True, if read chats need to be excluded
-  bool excludeRead;
+  /// exclude_read True, if read chats need to be excluded
+  final bool excludeRead;
 
-  /// [excludeArchived] True, if archived chats need to be excluded
-  bool excludeArchived;
+  /// exclude_archived True, if archived chats need to be excluded
+  final bool excludeArchived;
 
-  /// [includeContacts] True, if contacts need to be included
-  bool includeContacts;
+  /// include_contacts True, if contacts need to be included
+  final bool includeContacts;
 
-  /// [includeNonContacts] True, if non-contact users need to be included
-  bool includeNonContacts;
+  /// include_non_contacts True, if non-contact users need to be included
+  final bool includeNonContacts;
 
-  /// [includeBots] True, if bots need to be included
-  bool includeBots;
+  /// include_bots True, if bots need to be included
+  final bool includeBots;
 
-  /// [includeGroups] True, if basic groups and supergroups need to be included
-  bool includeGroups;
+  /// include_groups True, if basic groups and supergroups need to be included
+  final bool includeGroups;
 
-  /// [includeChannels] True, if channels need to be included
-  bool includeChannels;
+  /// include_channels True, if channels need to be included
+  final bool includeChannels;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'chatFilter';
 
-  /// Parse from a json
-  ChatFilter.fromJson(Map<String, dynamic> json) {
-    this.title = json['title'];
-    this.iconName = json['icon_name'];
-    this.pinnedChatIds = List<int>.from(
-        (json['pinned_chat_ids'] ?? []).map((item) => item).toList());
-    this.includedChatIds = List<int>.from(
-        (json['included_chat_ids'] ?? []).map((item) => item).toList());
-    this.excludedChatIds = List<int>.from(
-        (json['excluded_chat_ids'] ?? []).map((item) => item).toList());
-    this.excludeMuted = json['exclude_muted'];
-    this.excludeRead = json['exclude_read'];
-    this.excludeArchived = json['exclude_archived'];
-    this.includeContacts = json['include_contacts'];
-    this.includeNonContacts = json['include_non_contacts'];
-    this.includeBots = json['include_bots'];
-    this.includeGroups = json['include_groups'];
-    this.includeChannels = json['include_channels'];
-    this.extra = json['@extra'];
+  static ChatFilter? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return ChatFilter(
+        title: json['title'],
+        iconName: json['icon_name'],
+        pinnedChatIds: List<int>.from((json['pinned_chat_ids}'] ?? [])
+            .map((item) => json['int'])
+            .toList()),
+        includedChatIds: List<int>.from((json['included_chat_ids}'] ?? [])
+            .map((item) => json['int'])
+            .toList()),
+        excludedChatIds: List<int>.from((json['excluded_chat_ids}'] ?? [])
+            .map((item) => json['int'])
+            .toList()),
+        excludeMuted: json['exclude_muted'],
+        excludeRead: json['exclude_read'],
+        excludeArchived: json['exclude_archived'],
+        includeContacts: json['include_contacts'],
+        includeNonContacts: json['include_non_contacts'],
+        includeBots: json['include_bots'],
+        includeGroups: json['include_groups'],
+        includeChannels: json['include_channels']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "title": this.title,
-      "icon_name": this.iconName,
-      "pinned_chat_ids": this.pinnedChatIds.map((i) => i).toList(),
-      "included_chat_ids": this.includedChatIds.map((i) => i).toList(),
-      "excluded_chat_ids": this.excludedChatIds.map((i) => i).toList(),
-      "exclude_muted": this.excludeMuted,
-      "exclude_read": this.excludeRead,
-      "exclude_archived": this.excludeArchived,
-      "include_contacts": this.includeContacts,
-      "include_non_contacts": this.includeNonContacts,
-      "include_bots": this.includeBots,
-      "include_groups": this.includeGroups,
-      "include_channels": this.includeChannels,
-    };
-  }
-
-  static const CONSTRUCTOR = 'chatFilter';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'title': this.title,
+        'icon_name': this.iconName,
+        'pinned_chat_ids': this.pinnedChatIds,
+        'included_chat_ids': this.includedChatIds,
+        'excluded_chat_ids': this.excludedChatIds,
+        'exclude_muted': this.excludeMuted,
+        'exclude_read': this.excludeRead,
+        'exclude_archived': this.excludeArchived,
+        'include_contacts': this.includeContacts,
+        'include_non_contacts': this.includeNonContacts,
+        'include_bots': this.includeBots,
+        'include_groups': this.includeGroups,
+        'include_channels': this.includeChannels,
+        '@type': CONSTRUCTOR
+      };
 }

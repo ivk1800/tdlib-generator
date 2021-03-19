@@ -1,147 +1,144 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains full information about a supergroup or channel
 class SupergroupFullInfo extends TdObject {
-  /// Contains full information about a supergroup or channel
   SupergroupFullInfo(
-      {this.photo,
-      this.description,
-      this.memberCount,
-      this.administratorCount,
-      this.restrictedCount,
-      this.bannedCount,
-      this.linkedChatId,
-      this.slowModeDelay,
-      this.slowModeDelayExpiresIn,
-      this.canGetMembers,
-      this.canSetUsername,
-      this.canSetStickerSet,
-      this.canSetLocation,
-      this.canGetStatistics,
-      this.isAllHistoryAvailable,
-      this.stickerSetId,
-      this.location,
-      this.inviteLink,
-      this.upgradedFromBasicGroupId,
-      this.upgradedFromMaxMessageId});
+      {ChatPhoto? this.photo,
+      required this.description,
+      required this.memberCount,
+      required this.administratorCount,
+      required this.restrictedCount,
+      required this.bannedCount,
+      required this.linkedChatId,
+      required this.slowModeDelay,
+      required this.slowModeDelayExpiresIn,
+      required this.canGetMembers,
+      required this.canSetUsername,
+      required this.canSetStickerSet,
+      required this.canSetLocation,
+      required this.canGetStatistics,
+      required this.isAllHistoryAvailable,
+      required this.stickerSetId,
+      ChatLocation? this.location,
+      required this.inviteLink,
+      required this.upgradedFromBasicGroupId,
+      required this.upgradedFromMaxMessageId});
 
-  /// [photo] Chat photo; may be null
-  ChatPhoto photo;
+  /// photo Chat photo; may be null
+  final ChatPhoto? photo;
 
-  /// [description] Supergroup or channel description
-  String description;
+  /// param_description Supergroup or channel description
+  final String description;
 
-  /// [memberCount] Number of members in the supergroup or channel; 0 if unknown
-  int memberCount;
+  /// member_count Number of members in the supergroup or channel; 0 if unknown
+  final int memberCount;
 
-  /// [administratorCount] Number of privileged users in the supergroup or channel; 0 if unknown
-  int administratorCount;
+  /// administrator_count Number of privileged users in the supergroup or channel; 0 if unknown
+  final int administratorCount;
 
-  /// [restrictedCount] Number of restricted users in the supergroup; 0 if unknown
-  int restrictedCount;
+  /// restricted_count Number of restricted users in the supergroup; 0 if unknown
+  final int restrictedCount;
 
-  /// [bannedCount] Number of users banned from chat; 0 if unknown
-  int bannedCount;
+  /// banned_count Number of users banned from chat; 0 if unknown
+  final int bannedCount;
 
-  /// [linkedChatId] Chat identifier of a discussion group for the channel, or a channel, for which the supergroup is the designated discussion group; 0 if none or unknown
-  int linkedChatId;
+  /// linked_chat_id Chat identifier of a discussion group for the channel, or a channel, for which the supergroup is the designated discussion group; 0 if none or unknown
+  final int linkedChatId;
 
-  /// [slowModeDelay] Delay between consecutive sent messages for non-administrator supergroup members, in seconds
-  int slowModeDelay;
+  /// slow_mode_delay Delay between consecutive sent messages for non-administrator supergroup members, in seconds
+  final int slowModeDelay;
 
-  /// [slowModeDelayExpiresIn] Time left before next message can be sent in the supergroup, in seconds. An updateSupergroupFullInfo update is not triggered when value of this field changes, but both new and old values are non-zero
-  double slowModeDelayExpiresIn;
+  /// slow_mode_delay_expires_in Time left before next message can be sent in the supergroup, in seconds. An updateSupergroupFullInfo update is not triggered when value of this field changes, but both new and old values are non-zero
+  final double slowModeDelayExpiresIn;
 
-  /// [canGetMembers] True, if members of the chat can be retrieved
-  bool canGetMembers;
+  /// can_get_members True, if members of the chat can be retrieved
+  final bool canGetMembers;
 
-  /// [canSetUsername] True, if the chat username can be changed
-  bool canSetUsername;
+  /// can_set_username True, if the chat username can be changed
+  final bool canSetUsername;
 
-  /// [canSetStickerSet] True, if the supergroup sticker set can be changed
-  bool canSetStickerSet;
+  /// can_set_sticker_set True, if the supergroup sticker set can be changed
+  final bool canSetStickerSet;
 
-  /// [canSetLocation] True, if the supergroup location can be changed
-  bool canSetLocation;
+  /// can_set_location True, if the supergroup location can be changed
+  final bool canSetLocation;
 
-  /// [canGetStatistics] True, if the supergroup or channel statistics are available
-  bool canGetStatistics;
+  /// can_get_statistics True, if the supergroup or channel statistics are available
+  final bool canGetStatistics;
 
-  /// [isAllHistoryAvailable] True, if new chat members will have access to old messages. In public or discussion groups and both public and private channels, old messages are always available, so this option affects only private supergroups without a linked chat. The value of this field is only available for chat administrators
-  bool isAllHistoryAvailable;
+  /// is_all_history_available True, if new chat members will have access to old messages. In public or discussion groups and both public and private channels, old messages are always available, so this option affects only private supergroups without a linked chat. The value of this field is only available for chat administrators
+  final bool isAllHistoryAvailable;
 
-  /// [stickerSetId] Identifier of the supergroup sticker set; 0 if none
-  int stickerSetId;
+  /// sticker_set_id Identifier of the supergroup sticker set; 0 if none
+  final int stickerSetId;
 
-  /// [location] Location to which the supergroup is connected; may be null
-  ChatLocation location;
+  /// location Location to which the supergroup is connected; may be null
+  final ChatLocation? location;
 
-  /// [inviteLink] Invite link for this chat
-  String inviteLink;
+  /// invite_link Invite link for this chat
+  final String inviteLink;
 
-  /// [upgradedFromBasicGroupId] Identifier of the basic group from which supergroup was upgraded; 0 if none
-  int upgradedFromBasicGroupId;
+  /// upgraded_from_basic_group_id Identifier of the basic group from which supergroup was upgraded; 0 if none
+  final int upgradedFromBasicGroupId;
 
-  /// [upgradedFromMaxMessageId] Identifier of the last message in the basic group from which supergroup was upgraded; 0 if none
-  int upgradedFromMaxMessageId;
+  /// upgraded_from_max_message_id Identifier of the last message in the basic group from which supergroup was upgraded; 0 if none
+  final int upgradedFromMaxMessageId;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'supergroupFullInfo';
 
-  /// Parse from a json
-  SupergroupFullInfo.fromJson(Map<String, dynamic> json) {
-    this.photo = ChatPhoto.fromJson(json['photo'] ?? <String, dynamic>{});
-    this.description = json['description'];
-    this.memberCount = json['member_count'];
-    this.administratorCount = json['administrator_count'];
-    this.restrictedCount = json['restricted_count'];
-    this.bannedCount = json['banned_count'];
-    this.linkedChatId = json['linked_chat_id'];
-    this.slowModeDelay = json['slow_mode_delay'];
-    this.slowModeDelayExpiresIn = json['slow_mode_delay_expires_in'];
-    this.canGetMembers = json['can_get_members'];
-    this.canSetUsername = json['can_set_username'];
-    this.canSetStickerSet = json['can_set_sticker_set'];
-    this.canSetLocation = json['can_set_location'];
-    this.canGetStatistics = json['can_get_statistics'];
-    this.isAllHistoryAvailable = json['is_all_history_available'];
-    this.stickerSetId = int.tryParse(json['sticker_set_id'] ?? "");
-    this.location =
-        ChatLocation.fromJson(json['location'] ?? <String, dynamic>{});
-    this.inviteLink = json['invite_link'];
-    this.upgradedFromBasicGroupId = json['upgraded_from_basic_group_id'];
-    this.upgradedFromMaxMessageId = json['upgraded_from_max_message_id'];
-    this.extra = json['@extra'];
+  static SupergroupFullInfo? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return SupergroupFullInfo(
+        photo: ChatPhoto.fromJson(json['photo']),
+        description: json['description'],
+        memberCount: json['member_count'],
+        administratorCount: json['administrator_count'],
+        restrictedCount: json['restricted_count'],
+        bannedCount: json['banned_count'],
+        linkedChatId: json['linked_chat_id'],
+        slowModeDelay: json['slow_mode_delay'],
+        slowModeDelayExpiresIn: json['slow_mode_delay_expires_in'],
+        canGetMembers: json['can_get_members'],
+        canSetUsername: json['can_set_username'],
+        canSetStickerSet: json['can_set_sticker_set'],
+        canSetLocation: json['can_set_location'],
+        canGetStatistics: json['can_get_statistics'],
+        isAllHistoryAvailable: json['is_all_history_available'],
+        stickerSetId: int.tryParse(json['sticker_set_id']) ?? 0,
+        location: ChatLocation.fromJson(json['location']),
+        inviteLink: json['invite_link'],
+        upgradedFromBasicGroupId: json['upgraded_from_basic_group_id'],
+        upgradedFromMaxMessageId: json['upgraded_from_max_message_id']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "photo": this.photo == null ? null : this.photo.toJson(),
-      "description": this.description,
-      "member_count": this.memberCount,
-      "administrator_count": this.administratorCount,
-      "restricted_count": this.restrictedCount,
-      "banned_count": this.bannedCount,
-      "linked_chat_id": this.linkedChatId,
-      "slow_mode_delay": this.slowModeDelay,
-      "slow_mode_delay_expires_in": this.slowModeDelayExpiresIn,
-      "can_get_members": this.canGetMembers,
-      "can_set_username": this.canSetUsername,
-      "can_set_sticker_set": this.canSetStickerSet,
-      "can_set_location": this.canSetLocation,
-      "can_get_statistics": this.canGetStatistics,
-      "is_all_history_available": this.isAllHistoryAvailable,
-      "sticker_set_id": this.stickerSetId,
-      "location": this.location == null ? null : this.location.toJson(),
-      "invite_link": this.inviteLink,
-      "upgraded_from_basic_group_id": this.upgradedFromBasicGroupId,
-      "upgraded_from_max_message_id": this.upgradedFromMaxMessageId,
-    };
-  }
-
-  static const CONSTRUCTOR = 'supergroupFullInfo';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'photo': this.photo,
+        'description': this.description,
+        'member_count': this.memberCount,
+        'administrator_count': this.administratorCount,
+        'restricted_count': this.restrictedCount,
+        'banned_count': this.bannedCount,
+        'linked_chat_id': this.linkedChatId,
+        'slow_mode_delay': this.slowModeDelay,
+        'slow_mode_delay_expires_in': this.slowModeDelayExpiresIn,
+        'can_get_members': this.canGetMembers,
+        'can_set_username': this.canSetUsername,
+        'can_set_sticker_set': this.canSetStickerSet,
+        'can_set_location': this.canSetLocation,
+        'can_get_statistics': this.canGetStatistics,
+        'is_all_history_available': this.isAllHistoryAvailable,
+        'sticker_set_id': this.stickerSetId,
+        'location': this.location,
+        'invite_link': this.inviteLink,
+        'upgraded_from_basic_group_id': this.upgradedFromBasicGroupId,
+        'upgraded_from_max_message_id': this.upgradedFromMaxMessageId,
+        '@type': CONSTRUCTOR
+      };
 }

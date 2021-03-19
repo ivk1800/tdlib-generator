@@ -1,29 +1,21 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Returns a list of installed sticker sets
 class GetInstalledStickerSets extends TdFunction {
-  /// Returns a list of installed sticker sets
-  GetInstalledStickerSets({this.isMasks});
+  GetInstalledStickerSets({required this.isMasks});
 
-  /// [isMasks] Pass true to return mask sticker sets; pass false to return ordinary sticker sets
-  bool isMasks;
+  /// is_masks Pass true to return mask sticker sets; pass false to return ordinary sticker sets
+  final bool isMasks;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  GetInstalledStickerSets.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "is_masks": this.isMasks,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'getInstalledStickerSets';
+  static const String CONSTRUCTOR = 'getInstalledStickerSets';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'is_masks': this.isMasks, '@type': CONSTRUCTOR, '@extra': this.extra};
 }

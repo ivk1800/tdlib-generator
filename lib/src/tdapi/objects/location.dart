@@ -1,37 +1,42 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Describes a location on planet Earth
 class Location extends TdObject {
-  /// Describes a location on planet Earth
-  Location({this.latitude, this.longitude, this.horizontalAccuracy});
+  Location(
+      {required this.latitude,
+      required this.longitude,
+      required this.horizontalAccuracy});
 
-  /// [latitude] Latitude of the location in degrees; as defined by the sender
-  double latitude;
+  /// latitude Latitude of the location in degrees; as defined by the sender
+  final double latitude;
 
-  /// [longitude] Longitude of the location, in degrees; as defined by the sender
-  double longitude;
+  /// longitude Longitude of the location, in degrees; as defined by the sender
+  final double longitude;
 
-  /// [horizontalAccuracy] The estimated horizontal accuracy of the location, in meters; as defined by the sender. 0 if unknown
-  double horizontalAccuracy;
+  /// horizontal_accuracy The estimated horizontal accuracy of the location, in meters; as defined by the sender. 0 if unknown
+  final double horizontalAccuracy;
 
-  /// Parse from a json
-  Location.fromJson(Map<String, dynamic> json) {
-    this.latitude = json['latitude'];
-    this.longitude = json['longitude'];
-    this.horizontalAccuracy = json['horizontal_accuracy'];
+  static const String CONSTRUCTOR = 'location';
+
+  static Location? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return Location(
+        latitude: json['latitude'],
+        longitude: json['longitude'],
+        horizontalAccuracy: json['horizontal_accuracy']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "latitude": this.latitude,
-      "longitude": this.longitude,
-      "horizontal_accuracy": this.horizontalAccuracy,
-    };
-  }
-
-  static const CONSTRUCTOR = 'location';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'latitude': this.latitude,
+        'longitude': this.longitude,
+        'horizontal_accuracy': this.horizontalAccuracy,
+        '@type': CONSTRUCTOR
+      };
 }

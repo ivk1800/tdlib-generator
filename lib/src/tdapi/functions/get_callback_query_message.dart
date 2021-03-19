@@ -1,37 +1,35 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Returns information about a message with the callback button that originated a callback query; for bots only
 class GetCallbackQueryMessage extends TdFunction {
-  /// Returns information about a message with the callback button that originated a callback query; for bots only
-  GetCallbackQueryMessage({this.chatId, this.messageId, this.callbackQueryId});
+  GetCallbackQueryMessage(
+      {required this.chatId,
+      required this.messageId,
+      required this.callbackQueryId});
 
-  /// [chatId] Identifier of the chat the message belongs to
-  int chatId;
+  /// chat_id Identifier of the chat the message belongs to
+  final int chatId;
 
-  /// [messageId] Message identifier
-  int messageId;
+  /// message_id Message identifier
+  final int messageId;
 
-  /// [callbackQueryId] Identifier of the callback query
-  int callbackQueryId;
+  /// callback_query_id Identifier of the callback query
+  final int callbackQueryId;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  GetCallbackQueryMessage.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "chat_id": this.chatId,
-      "message_id": this.messageId,
-      "callback_query_id": this.callbackQueryId,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'getCallbackQueryMessage';
+  static const String CONSTRUCTOR = 'getCallbackQueryMessage';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'chat_id': this.chatId,
+        'message_id': this.messageId,
+        'callback_query_id': this.callbackQueryId,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

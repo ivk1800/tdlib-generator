@@ -1,82 +1,84 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains the user's personal details
 class PersonalDetails extends TdObject {
-  /// Contains the user's personal details
   PersonalDetails(
-      {this.firstName,
-      this.middleName,
-      this.lastName,
-      this.nativeFirstName,
-      this.nativeMiddleName,
-      this.nativeLastName,
-      this.birthdate,
-      this.gender,
-      this.countryCode,
-      this.residenceCountryCode});
+      {required this.firstName,
+      required this.middleName,
+      required this.lastName,
+      required this.nativeFirstName,
+      required this.nativeMiddleName,
+      required this.nativeLastName,
+      required this.birthdate,
+      required this.gender,
+      required this.countryCode,
+      required this.residenceCountryCode});
 
-  /// [firstName] First name of the user written in English; 1-255 characters
-  String firstName;
+  /// first_name First name of the user written in English; 1-255 characters
+  final String firstName;
 
-  /// [middleName] Middle name of the user written in English; 0-255 characters
-  String middleName;
+  /// middle_name Middle name of the user written in English; 0-255 characters
+  final String middleName;
 
-  /// [lastName] Last name of the user written in English; 1-255 characters
-  String lastName;
+  /// last_name Last name of the user written in English; 1-255 characters
+  final String lastName;
 
-  /// [nativeFirstName] Native first name of the user; 1-255 characters
-  String nativeFirstName;
+  /// native_first_name Native first name of the user; 1-255 characters
+  final String nativeFirstName;
 
-  /// [nativeMiddleName] Native middle name of the user; 0-255 characters
-  String nativeMiddleName;
+  /// native_middle_name Native middle name of the user; 0-255 characters
+  final String nativeMiddleName;
 
-  /// [nativeLastName] Native last name of the user; 1-255 characters
-  String nativeLastName;
+  /// native_last_name Native last name of the user; 1-255 characters
+  final String nativeLastName;
 
-  /// [birthdate] Birthdate of the user
-  Date birthdate;
+  /// birthdate Birthdate of the user
+  final Date birthdate;
 
-  /// [gender] Gender of the user, "male" or "female"
-  String gender;
+  /// gender Gender of the user, "male" or "female"
+  final String gender;
 
-  /// [countryCode] A two-letter ISO 3166-1 alpha-2 country code of the user's country
-  String countryCode;
+  /// country_code A two-letter ISO 3166-1 alpha-2 country code of the user's country
+  final String countryCode;
 
-  /// [residenceCountryCode] A two-letter ISO 3166-1 alpha-2 country code of the user's residence country
-  String residenceCountryCode;
+  /// residence_country_code A two-letter ISO 3166-1 alpha-2 country code of the user's residence country
+  final String residenceCountryCode;
 
-  /// Parse from a json
-  PersonalDetails.fromJson(Map<String, dynamic> json) {
-    this.firstName = json['first_name'];
-    this.middleName = json['middle_name'];
-    this.lastName = json['last_name'];
-    this.nativeFirstName = json['native_first_name'];
-    this.nativeMiddleName = json['native_middle_name'];
-    this.nativeLastName = json['native_last_name'];
-    this.birthdate = Date.fromJson(json['birthdate'] ?? <String, dynamic>{});
-    this.gender = json['gender'];
-    this.countryCode = json['country_code'];
-    this.residenceCountryCode = json['residence_country_code'];
+  static const String CONSTRUCTOR = 'personalDetails';
+
+  static PersonalDetails? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return PersonalDetails(
+        firstName: json['first_name'],
+        middleName: json['middle_name'],
+        lastName: json['last_name'],
+        nativeFirstName: json['native_first_name'],
+        nativeMiddleName: json['native_middle_name'],
+        nativeLastName: json['native_last_name'],
+        birthdate: Date.fromJson(json['birthdate'])!,
+        gender: json['gender'],
+        countryCode: json['country_code'],
+        residenceCountryCode: json['residence_country_code']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "first_name": this.firstName,
-      "middle_name": this.middleName,
-      "last_name": this.lastName,
-      "native_first_name": this.nativeFirstName,
-      "native_middle_name": this.nativeMiddleName,
-      "native_last_name": this.nativeLastName,
-      "birthdate": this.birthdate == null ? null : this.birthdate.toJson(),
-      "gender": this.gender,
-      "country_code": this.countryCode,
-      "residence_country_code": this.residenceCountryCode,
-    };
-  }
-
-  static const CONSTRUCTOR = 'personalDetails';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'first_name': this.firstName,
+        'middle_name': this.middleName,
+        'last_name': this.lastName,
+        'native_first_name': this.nativeFirstName,
+        'native_middle_name': this.nativeMiddleName,
+        'native_last_name': this.nativeLastName,
+        'birthdate': this.birthdate,
+        'gender': this.gender,
+        'country_code': this.countryCode,
+        'residence_country_code': this.residenceCountryCode,
+        '@type': CONSTRUCTOR
+      };
 }

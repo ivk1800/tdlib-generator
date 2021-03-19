@@ -1,37 +1,40 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains information about a chat administrator
 class ChatAdministrator extends TdObject {
-  /// Contains information about a chat administrator
-  ChatAdministrator({this.userId, this.customTitle, this.isOwner});
+  ChatAdministrator(
+      {required this.userId, required this.customTitle, required this.isOwner});
 
-  /// [userId] User identifier of the administrator
-  int userId;
+  /// user_id User identifier of the administrator
+  final int userId;
 
-  /// [customTitle] Custom title of the administrator
-  String customTitle;
+  /// custom_title Custom title of the administrator
+  final String customTitle;
 
-  /// [isOwner] True, if the user is the owner of the chat
-  bool isOwner;
+  /// is_owner True, if the user is the owner of the chat
+  final bool isOwner;
 
-  /// Parse from a json
-  ChatAdministrator.fromJson(Map<String, dynamic> json) {
-    this.userId = json['user_id'];
-    this.customTitle = json['custom_title'];
-    this.isOwner = json['is_owner'];
+  static const String CONSTRUCTOR = 'chatAdministrator';
+
+  static ChatAdministrator? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return ChatAdministrator(
+        userId: json['user_id'],
+        customTitle: json['custom_title'],
+        isOwner: json['is_owner']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "user_id": this.userId,
-      "custom_title": this.customTitle,
-      "is_owner": this.isOwner,
-    };
-  }
-
-  static const CONSTRUCTOR = 'chatAdministrator';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'user_id': this.userId,
+        'custom_title': this.customTitle,
+        'is_owner': this.isOwner,
+        '@type': CONSTRUCTOR
+      };
 }

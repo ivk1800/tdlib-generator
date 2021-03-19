@@ -1,33 +1,28 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Changes information about a chat. Available for basic groups, supergroups, and channels. Requires can_change_info rights
 class SetChatDescription extends TdFunction {
-  /// Changes information about a chat. Available for basic groups, supergroups, and channels. Requires can_change_info rights
-  SetChatDescription({this.chatId, this.description});
+  SetChatDescription({required this.chatId, required this.description});
 
-  /// [chatId] Identifier of the chat
-  int chatId;
+  /// chat_id Identifier of the chat
+  final int chatId;
 
-  /// [description] New chat description; 0-255 characters
-  String description;
+  /// param_description New chat description; 0-255 characters
+  final String description;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  SetChatDescription.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "chat_id": this.chatId,
-      "description": this.description,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'setChatDescription';
+  static const String CONSTRUCTOR = 'setChatDescription';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'chat_id': this.chatId,
+        'description': this.description,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

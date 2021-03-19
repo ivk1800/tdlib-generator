@@ -1,33 +1,28 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Answers a custom query; for bots only
 class AnswerCustomQuery extends TdFunction {
-  /// Answers a custom query; for bots only
-  AnswerCustomQuery({this.customQueryId, this.data});
+  AnswerCustomQuery({required this.customQueryId, required this.data});
 
-  /// [customQueryId] Identifier of a custom query
-  int customQueryId;
+  /// custom_query_id Identifier of a custom query
+  final int customQueryId;
 
-  /// [data] JSON-serialized answer to the query
-  String data;
+  /// data JSON-serialized answer to the query
+  final String data;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  AnswerCustomQuery.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "custom_query_id": this.customQueryId,
-      "data": this.data,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'answerCustomQuery';
+  static const String CONSTRUCTOR = 'answerCustomQuery';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'custom_query_id': this.customQueryId,
+        'data': this.data,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

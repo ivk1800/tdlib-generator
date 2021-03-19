@@ -1,45 +1,40 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Pins a message in a chat; requires can_pin_messages rights or can_edit_messages rights in the channel
 class PinChatMessage extends TdFunction {
-  /// Pins a message in a chat; requires can_pin_messages rights or can_edit_messages rights in the channel
   PinChatMessage(
-      {this.chatId,
-      this.messageId,
-      this.disableNotification,
-      this.onlyForSelf});
+      {required this.chatId,
+      required this.messageId,
+      required this.disableNotification,
+      required this.onlyForSelf});
 
-  /// [chatId] Identifier of the chat
-  int chatId;
+  /// chat_id Identifier of the chat
+  final int chatId;
 
-  /// [messageId] Identifier of the new pinned message
-  int messageId;
+  /// message_id Identifier of the new pinned message
+  final int messageId;
 
-  /// [disableNotification] True, if there should be no notification about the pinned message. Notifications are always disabled in channels and private chats
-  bool disableNotification;
+  /// disable_notification True, if there should be no notification about the pinned message. Notifications are always disabled in channels and private chats
+  final bool disableNotification;
 
-  /// [onlyForSelf] True, if the message needs to be pinned for one side only; private chats only
-  bool onlyForSelf;
+  /// only_for_self True, if the message needs to be pinned for one side only; private chats only
+  final bool onlyForSelf;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  PinChatMessage.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "chat_id": this.chatId,
-      "message_id": this.messageId,
-      "disable_notification": this.disableNotification,
-      "only_for_self": this.onlyForSelf,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'pinChatMessage';
+  static const String CONSTRUCTOR = 'pinChatMessage';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'chat_id': this.chatId,
+        'message_id': this.messageId,
+        'disable_notification': this.disableNotification,
+        'only_for_self': this.onlyForSelf,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

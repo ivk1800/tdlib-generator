@@ -1,33 +1,28 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Changes the username of a supergroup or channel, requires owner privileges in the supergroup or channel
 class SetSupergroupUsername extends TdFunction {
-  /// Changes the username of a supergroup or channel, requires owner privileges in the supergroup or channel
-  SetSupergroupUsername({this.supergroupId, this.username});
+  SetSupergroupUsername({required this.supergroupId, required this.username});
 
-  /// [supergroupId] Identifier of the supergroup or channel
-  int supergroupId;
+  /// supergroup_id Identifier of the supergroup or channel
+  final int supergroupId;
 
-  /// [username] New value of the username. Use an empty string to remove the username
-  String username;
+  /// username New value of the username. Use an empty string to remove the username
+  final String username;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  SetSupergroupUsername.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "supergroup_id": this.supergroupId,
-      "username": this.username,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'setSupergroupUsername';
+  static const String CONSTRUCTOR = 'setSupergroupUsername';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'supergroup_id': this.supergroupId,
+        'username': this.username,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

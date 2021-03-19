@@ -1,29 +1,21 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Sets the list of commands supported by the bot; for bots only
 class SetCommands extends TdFunction {
-  /// Sets the list of commands supported by the bot; for bots only
-  SetCommands({this.commands});
+  SetCommands({required this.commands});
 
-  /// [commands] List of the bot's commands
-  List<BotCommand> commands;
+  /// commands List of the bot's commands
+  final List<BotCommand> commands;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  SetCommands.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "commands": this.commands.map((i) => i.toJson()).toList(),
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'setCommands';
+  static const String CONSTRUCTOR = 'setCommands';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'commands': this.commands, '@type': CONSTRUCTOR, '@extra': this.extra};
 }

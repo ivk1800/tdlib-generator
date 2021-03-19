@@ -1,50 +1,45 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Discards a call
 class DiscardCall extends TdFunction {
-  /// Discards a call
   DiscardCall(
-      {this.callId,
-      this.isDisconnected,
-      this.duration,
-      this.isVideo,
-      this.connectionId});
+      {required this.callId,
+      required this.isDisconnected,
+      required this.duration,
+      required this.isVideo,
+      required this.connectionId});
 
-  /// [callId] Call identifier
-  int callId;
+  /// call_id Call identifier
+  final int callId;
 
-  /// [isDisconnected] True, if the user was disconnected
-  bool isDisconnected;
+  /// is_disconnected True, if the user was disconnected
+  final bool isDisconnected;
 
-  /// [duration] The call duration, in seconds
-  int duration;
+  /// duration The call duration, in seconds
+  final int duration;
 
-  /// [isVideo] True, if the call was a video call
-  bool isVideo;
+  /// is_video True, if the call was a video call
+  final bool isVideo;
 
-  /// [connectionId] Identifier of the connection used during the call
-  int connectionId;
+  /// connection_id Identifier of the connection used during the call
+  final int connectionId;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  DiscardCall.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "call_id": this.callId,
-      "is_disconnected": this.isDisconnected,
-      "duration": this.duration,
-      "is_video": this.isVideo,
-      "connection_id": this.connectionId,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'discardCall';
+  static const String CONSTRUCTOR = 'discardCall';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'call_id': this.callId,
+        'is_disconnected': this.isDisconnected,
+        'duration': this.duration,
+        'is_video': this.isVideo,
+        'connection_id': this.connectionId,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

@@ -70,11 +70,15 @@ class TelegramService extends ChangeNotifier {
   }
 
   Future _resolveEvent(event) async {
-    final int extraId = event.extra;
-    if (results.containsKey(extraId)) {
-      results.remove(extraId).complete(event);
-    } else if (callbackResults.containsKey(extraId)) {
-      await callbackResults.remove(extraId);
+    try {
+      final int extraId = event.extra;
+      if (results.containsKey(extraId)) {
+        results.remove(extraId).complete(event);
+      } else if (callbackResults.containsKey(extraId)) {
+        await callbackResults.remove(extraId);
+      }
+    } catch(e) {
+      print(e);
     }
   }
 

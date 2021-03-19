@@ -1,76 +1,78 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains information about one website the current user is logged in with Telegram
 class ConnectedWebsite extends TdObject {
-  /// Contains information about one website the current user is logged in with Telegram
   ConnectedWebsite(
-      {this.id,
-      this.domainName,
-      this.botUserId,
-      this.browser,
-      this.platform,
-      this.logInDate,
-      this.lastActiveDate,
-      this.ip,
-      this.location});
+      {required this.id,
+      required this.domainName,
+      required this.botUserId,
+      required this.browser,
+      required this.platform,
+      required this.logInDate,
+      required this.lastActiveDate,
+      required this.ip,
+      required this.location});
 
-  /// [id] Website identifier
-  int id;
+  /// id Website identifier
+  final int id;
 
-  /// [domainName] The domain name of the website
-  String domainName;
+  /// domain_name The domain name of the website
+  final String domainName;
 
-  /// [botUserId] User identifier of a bot linked with the website
-  int botUserId;
+  /// bot_user_id User identifier of a bot linked with the website
+  final int botUserId;
 
-  /// [browser] The version of a browser used to log in
-  String browser;
+  /// browser The version of a browser used to log in
+  final String browser;
 
-  /// [platform] Operating system the browser is running on
-  String platform;
+  /// platform Operating system the browser is running on
+  final String platform;
 
-  /// [logInDate] Point in time (Unix timestamp) when the user was logged in
-  int logInDate;
+  /// log_in_date Point in time (Unix timestamp) when the user was logged in
+  final int logInDate;
 
-  /// [lastActiveDate] Point in time (Unix timestamp) when obtained authorization was last used
-  int lastActiveDate;
+  /// last_active_date Point in time (Unix timestamp) when obtained authorization was last used
+  final int lastActiveDate;
 
-  /// [ip] IP address from which the user was logged in, in human-readable format
-  String ip;
+  /// ip IP address from which the user was logged in, in human-readable format
+  final String ip;
 
-  /// [location] Human-readable description of a country and a region, from which the user was logged in, based on the IP address
-  String location;
+  /// location Human-readable description of a country and a region, from which the user was logged in, based on the IP address
+  final String location;
 
-  /// Parse from a json
-  ConnectedWebsite.fromJson(Map<String, dynamic> json) {
-    this.id = int.tryParse(json['id'] ?? "");
-    this.domainName = json['domain_name'];
-    this.botUserId = json['bot_user_id'];
-    this.browser = json['browser'];
-    this.platform = json['platform'];
-    this.logInDate = json['log_in_date'];
-    this.lastActiveDate = json['last_active_date'];
-    this.ip = json['ip'];
-    this.location = json['location'];
+  static const String CONSTRUCTOR = 'connectedWebsite';
+
+  static ConnectedWebsite? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return ConnectedWebsite(
+        id: int.tryParse(json['id']) ?? 0,
+        domainName: json['domain_name'],
+        botUserId: json['bot_user_id'],
+        browser: json['browser'],
+        platform: json['platform'],
+        logInDate: json['log_in_date'],
+        lastActiveDate: json['last_active_date'],
+        ip: json['ip'],
+        location: json['location']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "id": this.id,
-      "domain_name": this.domainName,
-      "bot_user_id": this.botUserId,
-      "browser": this.browser,
-      "platform": this.platform,
-      "log_in_date": this.logInDate,
-      "last_active_date": this.lastActiveDate,
-      "ip": this.ip,
-      "location": this.location,
-    };
-  }
-
-  static const CONSTRUCTOR = 'connectedWebsite';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'id': this.id,
+        'domain_name': this.domainName,
+        'bot_user_id': this.botUserId,
+        'browser': this.browser,
+        'platform': this.platform,
+        'log_in_date': this.logInDate,
+        'last_active_date': this.lastActiveDate,
+        'ip': this.ip,
+        'location': this.location,
+        '@type': CONSTRUCTOR
+      };
 }

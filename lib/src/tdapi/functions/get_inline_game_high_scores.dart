@@ -1,33 +1,29 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Returns game high scores and some part of the high score table in the range of the specified user; for bots only
 class GetInlineGameHighScores extends TdFunction {
-  /// Returns game high scores and some part of the high score table in the range of the specified user; for bots only
-  GetInlineGameHighScores({this.inlineMessageId, this.userId});
+  GetInlineGameHighScores(
+      {required this.inlineMessageId, required this.userId});
 
-  /// [inlineMessageId] Inline message identifier
-  String inlineMessageId;
+  /// inline_message_id Inline message identifier
+  final String inlineMessageId;
 
-  /// [userId] User identifier
-  int userId;
+  /// user_id User identifier
+  final int userId;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  GetInlineGameHighScores.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "inline_message_id": this.inlineMessageId,
-      "user_id": this.userId,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'getInlineGameHighScores';
+  static const String CONSTRUCTOR = 'getInlineGameHighScores';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'inline_message_id': this.inlineMessageId,
+        'user_id': this.userId,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

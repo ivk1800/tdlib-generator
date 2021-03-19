@@ -1,29 +1,21 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Returns information about a sticker set by its identifier
 class GetStickerSet extends TdFunction {
-  /// Returns information about a sticker set by its identifier
-  GetStickerSet({this.setId});
+  GetStickerSet({required this.setId});
 
-  /// [setId] Identifier of the sticker set
-  int setId;
+  /// set_id Identifier of the sticker set
+  final int setId;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  GetStickerSet.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "set_id": this.setId,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'getStickerSet';
+  static const String CONSTRUCTOR = 'getStickerSet';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'set_id': this.setId, '@type': CONSTRUCTOR, '@extra': this.extra};
 }

@@ -1,36 +1,34 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains information about a tg:// deep link
 class DeepLinkInfo extends TdObject {
-  /// Contains information about a tg:// deep link
-  DeepLinkInfo({this.text, this.needUpdateApplication});
+  DeepLinkInfo({required this.text, required this.needUpdateApplication});
 
-  /// [text] Text to be shown to the user
-  FormattedText text;
+  /// text Text to be shown to the user
+  final FormattedText text;
 
-  /// [needUpdateApplication] True, if user should be asked to update the application
-  bool needUpdateApplication;
+  /// need_update_application True, if user should be asked to update the application
+  final bool needUpdateApplication;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'deepLinkInfo';
 
-  /// Parse from a json
-  DeepLinkInfo.fromJson(Map<String, dynamic> json) {
-    this.text = FormattedText.fromJson(json['text'] ?? <String, dynamic>{});
-    this.needUpdateApplication = json['need_update_application'];
-    this.extra = json['@extra'];
+  static DeepLinkInfo? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return DeepLinkInfo(
+        text: FormattedText.fromJson(json['text'])!,
+        needUpdateApplication: json['need_update_application']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "text": this.text == null ? null : this.text.toJson(),
-      "need_update_application": this.needUpdateApplication,
-    };
-  }
-
-  static const CONSTRUCTOR = 'deepLinkInfo';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'text': this.text,
+        'need_update_application': this.needUpdateApplication,
+        '@type': CONSTRUCTOR
+      };
 }

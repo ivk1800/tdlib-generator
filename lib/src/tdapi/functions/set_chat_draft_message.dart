@@ -1,38 +1,35 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Changes the draft message in a chat
 class SetChatDraftMessage extends TdFunction {
-  /// Changes the draft message in a chat
-  SetChatDraftMessage({this.chatId, this.messageThreadId, this.draftMessage});
+  SetChatDraftMessage(
+      {required this.chatId,
+      required this.messageThreadId,
+      DraftMessage? this.draftMessage});
 
-  /// [chatId] Chat identifier
-  int chatId;
+  /// chat_id Chat identifier
+  final int chatId;
 
-  /// [messageThreadId] If not 0, a message thread identifier in which the draft was changed
-  int messageThreadId;
+  /// message_thread_id If not 0, a message thread identifier in which the draft was changed
+  final int messageThreadId;
 
-  /// [draftMessage] New draft message; may be null
-  DraftMessage draftMessage;
+  /// draft_message New draft message; may be null
+  final DraftMessage? draftMessage;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  SetChatDraftMessage.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "chat_id": this.chatId,
-      "message_thread_id": this.messageThreadId,
-      "draft_message":
-          this.draftMessage == null ? null : this.draftMessage.toJson(),
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'setChatDraftMessage';
+  static const String CONSTRUCTOR = 'setChatDraftMessage';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'chat_id': this.chatId,
+        'message_thread_id': this.messageThreadId,
+        'draft_message': this.draftMessage,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

@@ -1,25 +1,17 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Returns recommended chat filters for the current user
 class GetRecommendedChatFilters extends TdFunction {
-  /// Returns recommended chat filters for the current user
   GetRecommendedChatFilters();
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  GetRecommendedChatFilters.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'getRecommendedChatFilters';
+  static const String CONSTRUCTOR = 'getRecommendedChatFilters';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {'@type': CONSTRUCTOR, '@extra': this.extra};
 }

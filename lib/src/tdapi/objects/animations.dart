@@ -1,33 +1,29 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Represents a list of animations
 class Animations extends TdObject {
-  /// Represents a list of animations
-  Animations({this.animations});
+  Animations({required this.animations});
 
-  /// [animations] List of animations
-  List<Animation> animations;
+  /// animations List of animations
+  final List<Animation> animations;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'animations';
 
-  /// Parse from a json
-  Animations.fromJson(Map<String, dynamic> json) {
-    this.animations = List<Animation>.from((json['animations'] ?? [])
-        .map((item) => Animation.fromJson(item ?? <String, dynamic>{}))
-        .toList());
-    this.extra = json['@extra'];
+  static Animations? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return Animations(
+        animations: List<Animation>.from((json['animations}'] ?? [])
+            .map((item) => Animation.fromJson(json['Animation'])!)
+            .toList()));
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "animations": this.animations.map((i) => i.toJson()).toList(),
-    };
-  }
-
-  static const CONSTRUCTOR = 'animations';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'animations': this.animations, '@type': CONSTRUCTOR};
 }

@@ -1,31 +1,25 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains a part of a file
 class FilePart extends TdObject {
-  /// Contains a part of a file
-  FilePart({this.data});
+  FilePart({required this.data});
 
-  /// [data] File bytes
-  String data;
+  /// data File bytes
+  final String data;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'filePart';
 
-  /// Parse from a json
-  FilePart.fromJson(Map<String, dynamic> json) {
-    this.data = json['data'];
-    this.extra = json['@extra'];
+  static FilePart? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return FilePart(data: json['data']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "data": this.data,
-    };
-  }
-
-  static const CONSTRUCTOR = 'filePart';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {'data': this.data, '@type': CONSTRUCTOR};
 }

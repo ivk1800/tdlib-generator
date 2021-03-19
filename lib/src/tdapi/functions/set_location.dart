@@ -1,29 +1,21 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Changes the location of the current user. Needs to be called if GetOption("is_location_visible") is true and location changes for more than 1 kilometer
 class SetLocation extends TdFunction {
-  /// Changes the location of the current user. Needs to be called if GetOption("is_location_visible") is true and location changes for more than 1 kilometer
-  SetLocation({this.location});
+  SetLocation({required this.location});
 
-  /// [location] The new location of the user
-  Location location;
+  /// location The new location of the user
+  final Location location;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  SetLocation.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "location": this.location == null ? null : this.location.toJson(),
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'setLocation';
+  static const String CONSTRUCTOR = 'setLocation';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'location': this.location, '@type': CONSTRUCTOR, '@extra': this.extra};
 }

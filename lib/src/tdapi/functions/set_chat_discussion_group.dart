@@ -1,33 +1,29 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Changes the discussion group of a channel chat; requires can_change_info rights in the channel if it is specified
 class SetChatDiscussionGroup extends TdFunction {
-  /// Changes the discussion group of a channel chat; requires can_change_info rights in the channel if it is specified
-  SetChatDiscussionGroup({this.chatId, this.discussionChatId});
+  SetChatDiscussionGroup(
+      {required this.chatId, required this.discussionChatId});
 
-  /// [chatId] Identifier of the channel chat. Pass 0 to remove a link from the supergroup passed in the second argument to a linked channel chat (requires can_pin_messages rights in the supergroup)
-  int chatId;
+  /// chat_id Identifier of the channel chat. Pass 0 to remove a link from the supergroup passed in the second argument to a linked channel chat (requires can_pin_messages rights in the supergroup)
+  final int chatId;
 
-  /// [discussionChatId] Identifier of a new channel's discussion group. Use 0 to remove the discussion group.. Use the method getSuitableDiscussionChats to find all suitable groups. Basic group chats must be first upgraded to supergroup chats. If new chat members don't have access to old messages in the supergroup, then toggleSupergroupIsAllHistoryAvailable must be used first to change that
-  int discussionChatId;
+  /// discussion_chat_id Identifier of a new channel's discussion group. Use 0 to remove the discussion group.. Use the method getSuitableDiscussionChats to find all suitable groups. Basic group chats must be first upgraded to supergroup chats. If new chat members don't have access to old messages in the supergroup, then toggleSupergroupIsAllHistoryAvailable must be used first to change that
+  final int discussionChatId;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  SetChatDiscussionGroup.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "chat_id": this.chatId,
-      "discussion_chat_id": this.discussionChatId,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'setChatDiscussionGroup';
+  static const String CONSTRUCTOR = 'setChatDiscussionGroup';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'chat_id': this.chatId,
+        'discussion_chat_id': this.discussionChatId,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

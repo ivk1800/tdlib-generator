@@ -1,37 +1,33 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Returns information about a button of type inlineKeyboardButtonTypeLoginUrl. The method needs to be called when the user presses the button
 class GetLoginUrlInfo extends TdFunction {
-  /// Returns information about a button of type inlineKeyboardButtonTypeLoginUrl. The method needs to be called when the user presses the button
-  GetLoginUrlInfo({this.chatId, this.messageId, this.buttonId});
+  GetLoginUrlInfo(
+      {required this.chatId, required this.messageId, required this.buttonId});
 
-  /// [chatId] Chat identifier of the message with the button
-  int chatId;
+  /// chat_id Chat identifier of the message with the button
+  final int chatId;
 
-  /// [messageId] Message identifier of the message with the button
-  int messageId;
+  /// message_id Message identifier of the message with the button
+  final int messageId;
 
-  /// [buttonId] Button identifier
-  int buttonId;
+  /// button_id Button identifier
+  final int buttonId;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  GetLoginUrlInfo.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "chat_id": this.chatId,
-      "message_id": this.messageId,
-      "button_id": this.buttonId,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'getLoginUrlInfo';
+  static const String CONSTRUCTOR = 'getLoginUrlInfo';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'chat_id': this.chatId,
+        'message_id': this.messageId,
+        'button_id': this.buttonId,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

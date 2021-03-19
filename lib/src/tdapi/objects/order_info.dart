@@ -1,49 +1,48 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Order information
 class OrderInfo extends TdObject {
-  /// Order information
   OrderInfo(
-      {this.name, this.phoneNumber, this.emailAddress, this.shippingAddress});
+      {required this.name,
+      required this.phoneNumber,
+      required this.emailAddress,
+      Address? this.shippingAddress});
 
-  /// [name] Name of the user
-  String name;
+  /// name Name of the user
+  final String name;
 
-  /// [phoneNumber] Phone number of the user
-  String phoneNumber;
+  /// phone_number Phone number of the user
+  final String phoneNumber;
 
-  /// [emailAddress] Email address of the user
-  String emailAddress;
+  /// email_address Email address of the user
+  final String emailAddress;
 
-  /// [shippingAddress] Shipping address for this order; may be null
-  Address shippingAddress;
+  /// shipping_address Shipping address for this order; may be null
+  final Address? shippingAddress;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'orderInfo';
 
-  /// Parse from a json
-  OrderInfo.fromJson(Map<String, dynamic> json) {
-    this.name = json['name'];
-    this.phoneNumber = json['phone_number'];
-    this.emailAddress = json['email_address'];
-    this.shippingAddress =
-        Address.fromJson(json['shipping_address'] ?? <String, dynamic>{});
-    this.extra = json['@extra'];
+  static OrderInfo? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return OrderInfo(
+        name: json['name'],
+        phoneNumber: json['phone_number'],
+        emailAddress: json['email_address'],
+        shippingAddress: Address.fromJson(json['shipping_address']));
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "name": this.name,
-      "phone_number": this.phoneNumber,
-      "email_address": this.emailAddress,
-      "shipping_address":
-          this.shippingAddress == null ? null : this.shippingAddress.toJson(),
-    };
-  }
-
-  static const CONSTRUCTOR = 'orderInfo';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'name': this.name,
+        'phone_number': this.phoneNumber,
+        'email_address': this.emailAddress,
+        'shipping_address': this.shippingAddress,
+        '@type': CONSTRUCTOR
+      };
 }

@@ -1,39 +1,35 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Edits the time when a scheduled message will be sent. Scheduling state of all messages in the same album or forwarded together with the message will be also changed
 class EditMessageSchedulingState extends TdFunction {
-  /// Edits the time when a scheduled message will be sent. Scheduling state of all messages in the same album or forwarded together with the message will be also changed
   EditMessageSchedulingState(
-      {this.chatId, this.messageId, this.schedulingState});
+      {required this.chatId,
+      required this.messageId,
+      required this.schedulingState});
 
-  /// [chatId] The chat the message belongs to
-  int chatId;
+  /// chat_id The chat the message belongs to
+  final int chatId;
 
-  /// [messageId] Identifier of the message
-  int messageId;
+  /// message_id Identifier of the message
+  final int messageId;
 
-  /// [schedulingState] The new message scheduling state. Pass null to send the message immediately
-  MessageSchedulingState schedulingState;
+  /// scheduling_state The new message scheduling state. Pass null to send the message immediately
+  final MessageSchedulingState schedulingState;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  EditMessageSchedulingState.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "chat_id": this.chatId,
-      "message_id": this.messageId,
-      "scheduling_state":
-          this.schedulingState == null ? null : this.schedulingState.toJson(),
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'editMessageSchedulingState';
+  static const String CONSTRUCTOR = 'editMessageSchedulingState';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'chat_id': this.chatId,
+        'message_id': this.messageId,
+        'scheduling_state': this.schedulingState,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

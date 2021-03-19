@@ -1,29 +1,24 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Sets new log stream for internal logging of TDLib. Can be called synchronously
 class SetLogStream extends TdFunction {
-  /// Sets new log stream for internal logging of TDLib. Can be called synchronously
-  SetLogStream({this.logStream});
+  SetLogStream({required this.logStream});
 
-  /// [logStream] New log stream
-  LogStream logStream;
+  /// log_stream New log stream
+  final LogStream logStream;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  SetLogStream.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "log_stream": this.logStream == null ? null : this.logStream.toJson(),
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'setLogStream';
+  static const String CONSTRUCTOR = 'setLogStream';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'log_stream': this.logStream,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

@@ -1,32 +1,27 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// A simple object containing a vector of strings; for testing only
 class TestVectorString extends TdObject {
-  /// A simple object containing a vector of strings; for testing only
-  TestVectorString({this.value});
+  TestVectorString({required this.value});
 
-  /// [value] Vector of strings
-  List<String> value;
+  /// value Vector of strings
+  final List<String> value;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'testVectorString';
 
-  /// Parse from a json
-  TestVectorString.fromJson(Map<String, dynamic> json) {
-    this.value =
-        List<String>.from((json['value'] ?? []).map((item) => item).toList());
-    this.extra = json['@extra'];
+  static TestVectorString? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return TestVectorString(
+        value: List<String>.from(
+            (json['value}'] ?? []).map((item) => json['String']).toList()));
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "value": this.value.map((i) => i).toList(),
-    };
-  }
-
-  static const CONSTRUCTOR = 'testVectorString';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {'value': this.value, '@type': CONSTRUCTOR};
 }

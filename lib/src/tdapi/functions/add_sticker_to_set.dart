@@ -1,37 +1,33 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Adds a new sticker to a set; for bots only. Returns the sticker set
 class AddStickerToSet extends TdFunction {
-  /// Adds a new sticker to a set; for bots only. Returns the sticker set
-  AddStickerToSet({this.userId, this.name, this.sticker});
+  AddStickerToSet(
+      {required this.userId, required this.name, required this.sticker});
 
-  /// [userId] Sticker set owner
-  int userId;
+  /// user_id Sticker set owner
+  final int userId;
 
-  /// [name] Sticker set name
-  String name;
+  /// name Sticker set name
+  final String name;
 
-  /// [sticker] Sticker to add to the set
-  InputSticker sticker;
+  /// sticker Sticker to add to the set
+  final InputSticker sticker;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  AddStickerToSet.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "user_id": this.userId,
-      "name": this.name,
-      "sticker": this.sticker == null ? null : this.sticker.toJson(),
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'addStickerToSet';
+  static const String CONSTRUCTOR = 'addStickerToSet';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'user_id': this.userId,
+        'name': this.name,
+        'sticker': this.sticker,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

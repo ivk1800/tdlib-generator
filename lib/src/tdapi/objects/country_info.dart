@@ -1,53 +1,56 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains information about a country
 class CountryInfo extends TdObject {
-  /// Contains information about a country
   CountryInfo(
-      {this.countryCode,
-      this.name,
-      this.englishName,
-      this.isHidden,
-      this.callingCodes});
+      {required this.countryCode,
+      required this.name,
+      required this.englishName,
+      required this.isHidden,
+      required this.callingCodes});
 
-  /// [countryCode] A two-letter ISO 3166-1 alpha-2 country code
-  String countryCode;
+  /// country_code A two-letter ISO 3166-1 alpha-2 country code
+  final String countryCode;
 
-  /// [name] Native name of the country
-  String name;
+  /// name Native name of the country
+  final String name;
 
-  /// [englishName] English name of the country
-  String englishName;
+  /// english_name English name of the country
+  final String englishName;
 
-  /// [isHidden] True, if the country should be hidden from the list of all countries
-  bool isHidden;
+  /// is_hidden True, if the country should be hidden from the list of all countries
+  final bool isHidden;
 
-  /// [callingCodes] List of country calling codes
-  List<String> callingCodes;
+  /// calling_codes List of country calling codes
+  final List<String> callingCodes;
 
-  /// Parse from a json
-  CountryInfo.fromJson(Map<String, dynamic> json) {
-    this.countryCode = json['country_code'];
-    this.name = json['name'];
-    this.englishName = json['english_name'];
-    this.isHidden = json['is_hidden'];
-    this.callingCodes = List<String>.from(
-        (json['calling_codes'] ?? []).map((item) => item).toList());
+  static const String CONSTRUCTOR = 'countryInfo';
+
+  static CountryInfo? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return CountryInfo(
+        countryCode: json['country_code'],
+        name: json['name'],
+        englishName: json['english_name'],
+        isHidden: json['is_hidden'],
+        callingCodes: List<String>.from((json['calling_codes}'] ?? [])
+            .map((item) => json['String'])
+            .toList()));
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "country_code": this.countryCode,
-      "name": this.name,
-      "english_name": this.englishName,
-      "is_hidden": this.isHidden,
-      "calling_codes": this.callingCodes.map((i) => i).toList(),
-    };
-  }
-
-  static const CONSTRUCTOR = 'countryInfo';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'country_code': this.countryCode,
+        'name': this.name,
+        'english_name': this.englishName,
+        'is_hidden': this.isHidden,
+        'calling_codes': this.callingCodes,
+        '@type': CONSTRUCTOR
+      };
 }

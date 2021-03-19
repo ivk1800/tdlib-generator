@@ -1,33 +1,28 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Returns the last message sent in a chat no later than the specified date
 class GetChatMessageByDate extends TdFunction {
-  /// Returns the last message sent in a chat no later than the specified date
-  GetChatMessageByDate({this.chatId, this.date});
+  GetChatMessageByDate({required this.chatId, required this.date});
 
-  /// [chatId] Chat identifier
-  int chatId;
+  /// chat_id Chat identifier
+  final int chatId;
 
-  /// [date] Point in time (Unix timestamp) relative to which to search for messages
-  int date;
+  /// date Point in time (Unix timestamp) relative to which to search for messages
+  final int date;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  GetChatMessageByDate.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "chat_id": this.chatId,
-      "date": this.date,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'getChatMessageByDate';
+  static const String CONSTRUCTOR = 'getChatMessageByDate';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'chat_id': this.chatId,
+        'date': this.date,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

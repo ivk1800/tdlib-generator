@@ -1,37 +1,42 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// A value with information about its recent changes
 class StatisticalValue extends TdObject {
-  /// A value with information about its recent changes
-  StatisticalValue({this.value, this.previousValue, this.growthRatePercentage});
+  StatisticalValue(
+      {required this.value,
+      required this.previousValue,
+      required this.growthRatePercentage});
 
-  /// [value] The current value
-  double value;
+  /// value The current value
+  final double value;
 
-  /// [previousValue] The value for the previous day
-  double previousValue;
+  /// previous_value The value for the previous day
+  final double previousValue;
 
-  /// [growthRatePercentage] The growth rate of the value, as a percentage
-  double growthRatePercentage;
+  /// growth_rate_percentage The growth rate of the value, as a percentage
+  final double growthRatePercentage;
 
-  /// Parse from a json
-  StatisticalValue.fromJson(Map<String, dynamic> json) {
-    this.value = json['value'];
-    this.previousValue = json['previous_value'];
-    this.growthRatePercentage = json['growth_rate_percentage'];
+  static const String CONSTRUCTOR = 'statisticalValue';
+
+  static StatisticalValue? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return StatisticalValue(
+        value: json['value'],
+        previousValue: json['previous_value'],
+        growthRatePercentage: json['growth_rate_percentage']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "value": this.value,
-      "previous_value": this.previousValue,
-      "growth_rate_percentage": this.growthRatePercentage,
-    };
-  }
-
-  static const CONSTRUCTOR = 'statisticalValue';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'value': this.value,
+        'previous_value': this.previousValue,
+        'growth_rate_percentage': this.growthRatePercentage,
+        '@type': CONSTRUCTOR
+      };
 }

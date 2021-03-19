@@ -1,33 +1,28 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains a list of t.me URLs
 class TMeUrls extends TdObject {
-  /// Contains a list of t.me URLs
-  TMeUrls({this.urls});
+  TMeUrls({required this.urls});
 
-  /// [urls] List of URLs
-  List<TMeUrl> urls;
+  /// urls List of URLs
+  final List<TMeUrl> urls;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'tMeUrls';
 
-  /// Parse from a json
-  TMeUrls.fromJson(Map<String, dynamic> json) {
-    this.urls = List<TMeUrl>.from((json['urls'] ?? [])
-        .map((item) => TMeUrl.fromJson(item ?? <String, dynamic>{}))
-        .toList());
-    this.extra = json['@extra'];
+  static TMeUrls? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return TMeUrls(
+        urls: List<TMeUrl>.from((json['urls}'] ?? [])
+            .map((item) => TMeUrl.fromJson(json['TMeUrl'])!)
+            .toList()));
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "urls": this.urls.map((i) => i.toJson()).toList(),
-    };
-  }
-
-  static const CONSTRUCTOR = 'tMeUrls';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {'urls': this.urls, '@type': CONSTRUCTOR};
 }

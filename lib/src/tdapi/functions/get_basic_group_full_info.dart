@@ -1,29 +1,24 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Returns full information about a basic group by its identifier
 class GetBasicGroupFullInfo extends TdFunction {
-  /// Returns full information about a basic group by its identifier
-  GetBasicGroupFullInfo({this.basicGroupId});
+  GetBasicGroupFullInfo({required this.basicGroupId});
 
-  /// [basicGroupId] Basic group identifier
-  int basicGroupId;
+  /// basic_group_id Basic group identifier
+  final int basicGroupId;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  GetBasicGroupFullInfo.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "basic_group_id": this.basicGroupId,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'getBasicGroupFullInfo';
+  static const String CONSTRUCTOR = 'getBasicGroupFullInfo';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'basic_group_id': this.basicGroupId,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

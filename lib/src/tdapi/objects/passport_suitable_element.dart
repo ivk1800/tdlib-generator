@@ -1,47 +1,48 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains information about a Telegram Passport element that was requested by a service
 class PassportSuitableElement extends TdObject {
-  /// Contains information about a Telegram Passport element that was requested by a service
   PassportSuitableElement(
-      {this.type,
-      this.isSelfieRequired,
-      this.isTranslationRequired,
-      this.isNativeNameRequired});
+      {required this.type,
+      required this.isSelfieRequired,
+      required this.isTranslationRequired,
+      required this.isNativeNameRequired});
 
-  /// [type] Type of the element
-  PassportElementType type;
+  /// type Type of the element
+  final PassportElementType type;
 
-  /// [isSelfieRequired] True, if a selfie is required with the identity document
-  bool isSelfieRequired;
+  /// is_selfie_required True, if a selfie is required with the identity document
+  final bool isSelfieRequired;
 
-  /// [isTranslationRequired] True, if a certified English translation is required with the document
-  bool isTranslationRequired;
+  /// is_translation_required True, if a certified English translation is required with the document
+  final bool isTranslationRequired;
 
-  /// [isNativeNameRequired] True, if personal details must include the user's name in the language of their country of residence
-  bool isNativeNameRequired;
+  /// is_native_name_required True, if personal details must include the user's name in the language of their country of residence
+  final bool isNativeNameRequired;
 
-  /// Parse from a json
-  PassportSuitableElement.fromJson(Map<String, dynamic> json) {
-    this.type =
-        PassportElementType.fromJson(json['type'] ?? <String, dynamic>{});
-    this.isSelfieRequired = json['is_selfie_required'];
-    this.isTranslationRequired = json['is_translation_required'];
-    this.isNativeNameRequired = json['is_native_name_required'];
+  static const String CONSTRUCTOR = 'passportSuitableElement';
+
+  static PassportSuitableElement? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return PassportSuitableElement(
+        type: PassportElementType.fromJson(json['type'])!,
+        isSelfieRequired: json['is_selfie_required'],
+        isTranslationRequired: json['is_translation_required'],
+        isNativeNameRequired: json['is_native_name_required']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "type": this.type == null ? null : this.type.toJson(),
-      "is_selfie_required": this.isSelfieRequired,
-      "is_translation_required": this.isTranslationRequired,
-      "is_native_name_required": this.isNativeNameRequired,
-    };
-  }
-
-  static const CONSTRUCTOR = 'passportSuitableElement';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'type': this.type,
+        'is_selfie_required': this.isSelfieRequired,
+        'is_translation_required': this.isTranslationRequired,
+        'is_native_name_required': this.isNativeNameRequired,
+        '@type': CONSTRUCTOR
+      };
 }

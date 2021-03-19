@@ -1,33 +1,28 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Returns an existing chat corresponding to a known basic group
 class CreateBasicGroupChat extends TdFunction {
-  /// Returns an existing chat corresponding to a known basic group
-  CreateBasicGroupChat({this.basicGroupId, this.force});
+  CreateBasicGroupChat({required this.basicGroupId, required this.force});
 
-  /// [basicGroupId] Basic group identifier
-  int basicGroupId;
+  /// basic_group_id Basic group identifier
+  final int basicGroupId;
 
-  /// [force] If true, the chat will be created without network request. In this case all information about the chat except its type, title and photo can be incorrect
-  bool force;
+  /// force If true, the chat will be created without network request. In this case all information about the chat except its type, title and photo can be incorrect
+  final bool force;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  CreateBasicGroupChat.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "basic_group_id": this.basicGroupId,
-      "force": this.force,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'createBasicGroupChat';
+  static const String CONSTRUCTOR = 'createBasicGroupChat';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'basic_group_id': this.basicGroupId,
+        'force': this.force,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

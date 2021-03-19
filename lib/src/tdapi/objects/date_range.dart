@@ -1,32 +1,32 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Represents a date range
 class DateRange extends TdObject {
-  /// Represents a date range
-  DateRange({this.startDate, this.endDate});
+  DateRange({required this.startDate, required this.endDate});
 
-  /// [startDate] Point in time (Unix timestamp) at which the date range begins
-  int startDate;
+  /// start_date Point in time (Unix timestamp) at which the date range begins
+  final int startDate;
 
-  /// [endDate] Point in time (Unix timestamp) at which the date range ends
-  int endDate;
+  /// end_date Point in time (Unix timestamp) at which the date range ends
+  final int endDate;
 
-  /// Parse from a json
-  DateRange.fromJson(Map<String, dynamic> json) {
-    this.startDate = json['start_date'];
-    this.endDate = json['end_date'];
+  static const String CONSTRUCTOR = 'dateRange';
+
+  static DateRange? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return DateRange(startDate: json['start_date'], endDate: json['end_date']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "start_date": this.startDate,
-      "end_date": this.endDate,
-    };
-  }
-
-  static const CONSTRUCTOR = 'dateRange';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'start_date': this.startDate,
+        'end_date': this.endDate,
+        '@type': CONSTRUCTOR
+      };
 }

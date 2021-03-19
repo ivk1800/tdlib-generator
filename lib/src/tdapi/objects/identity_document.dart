@@ -1,63 +1,62 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// An identity document
 class IdentityDocument extends TdObject {
-  /// An identity document
   IdentityDocument(
-      {this.number,
-      this.expiryDate,
-      this.frontSide,
-      this.reverseSide,
-      this.selfie,
-      this.translation});
+      {required this.number,
+      Date? this.expiryDate,
+      required this.frontSide,
+      required this.reverseSide,
+      DatedFile? this.selfie,
+      required this.translation});
 
-  /// [number] Document number; 1-24 characters
-  String number;
+  /// number Document number; 1-24 characters
+  final String number;
 
-  /// [expiryDate] Document expiry date; may be null
-  Date expiryDate;
+  /// expiry_date Document expiry date; may be null
+  final Date? expiryDate;
 
-  /// [frontSide] Front side of the document
-  DatedFile frontSide;
+  /// front_side Front side of the document
+  final DatedFile frontSide;
 
-  /// [reverseSide] Reverse side of the document; only for driver license and identity card
-  DatedFile reverseSide;
+  /// reverse_side Reverse side of the document; only for driver license and identity card
+  final DatedFile reverseSide;
 
-  /// [selfie] Selfie with the document; may be null
-  DatedFile selfie;
+  /// selfie Selfie with the document; may be null
+  final DatedFile? selfie;
 
-  /// [translation] List of files containing a certified English translation of the document
-  List<DatedFile> translation;
+  /// translation List of files containing a certified English translation of the document
+  final List<DatedFile> translation;
 
-  /// Parse from a json
-  IdentityDocument.fromJson(Map<String, dynamic> json) {
-    this.number = json['number'];
-    this.expiryDate = Date.fromJson(json['expiry_date'] ?? <String, dynamic>{});
-    this.frontSide =
-        DatedFile.fromJson(json['front_side'] ?? <String, dynamic>{});
-    this.reverseSide =
-        DatedFile.fromJson(json['reverse_side'] ?? <String, dynamic>{});
-    this.selfie = DatedFile.fromJson(json['selfie'] ?? <String, dynamic>{});
-    this.translation = List<DatedFile>.from((json['translation'] ?? [])
-        .map((item) => DatedFile.fromJson(item ?? <String, dynamic>{}))
-        .toList());
+  static const String CONSTRUCTOR = 'identityDocument';
+
+  static IdentityDocument? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return IdentityDocument(
+        number: json['number'],
+        expiryDate: Date.fromJson(json['expiry_date']),
+        frontSide: DatedFile.fromJson(json['front_side'])!,
+        reverseSide: DatedFile.fromJson(json['reverse_side'])!,
+        selfie: DatedFile.fromJson(json['selfie']),
+        translation: List<DatedFile>.from((json['translation}'] ?? [])
+            .map((item) => DatedFile.fromJson(json['DatedFile'])!)
+            .toList()));
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "number": this.number,
-      "expiry_date": this.expiryDate == null ? null : this.expiryDate.toJson(),
-      "front_side": this.frontSide == null ? null : this.frontSide.toJson(),
-      "reverse_side":
-          this.reverseSide == null ? null : this.reverseSide.toJson(),
-      "selfie": this.selfie == null ? null : this.selfie.toJson(),
-      "translation": this.translation.map((i) => i.toJson()).toList(),
-    };
-  }
-
-  static const CONSTRUCTOR = 'identityDocument';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'number': this.number,
+        'expiry_date': this.expiryDate,
+        'front_side': this.frontSide,
+        'reverse_side': this.reverseSide,
+        'selfie': this.selfie,
+        'translation': this.translation,
+        '@type': CONSTRUCTOR
+      };
 }

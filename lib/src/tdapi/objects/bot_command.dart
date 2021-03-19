@@ -1,32 +1,33 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Represents a command supported by a bot
 class BotCommand extends TdObject {
-  /// Represents a command supported by a bot
-  BotCommand({this.command, this.description});
+  BotCommand({required this.command, required this.description});
 
-  /// [command] Text of the bot command
-  String command;
+  /// command Text of the bot command
+  final String command;
 
-  /// [description] Description of the bot command
-  String description;
+  /// param_description Description of the bot command
+  final String description;
 
-  /// Parse from a json
-  BotCommand.fromJson(Map<String, dynamic> json) {
-    this.command = json['command'];
-    this.description = json['description'];
+  static const String CONSTRUCTOR = 'botCommand';
+
+  static BotCommand? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return BotCommand(
+        command: json['command'], description: json['description']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "command": this.command,
-      "description": this.description,
-    };
-  }
-
-  static const CONSTRUCTOR = 'botCommand';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'command': this.command,
+        'description': this.description,
+        '@type': CONSTRUCTOR
+      };
 }

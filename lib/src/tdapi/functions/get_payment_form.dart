@@ -1,33 +1,28 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Returns an invoice payment form. This method should be called when the user presses inlineKeyboardButtonBuy
 class GetPaymentForm extends TdFunction {
-  /// Returns an invoice payment form. This method should be called when the user presses inlineKeyboardButtonBuy
-  GetPaymentForm({this.chatId, this.messageId});
+  GetPaymentForm({required this.chatId, required this.messageId});
 
-  /// [chatId] Chat identifier of the Invoice message
-  int chatId;
+  /// chat_id Chat identifier of the Invoice message
+  final int chatId;
 
-  /// [messageId] Message identifier
-  int messageId;
+  /// message_id Message identifier
+  final int messageId;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  GetPaymentForm.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "chat_id": this.chatId,
-      "message_id": this.messageId,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'getPaymentForm';
+  static const String CONSTRUCTOR = 'getPaymentForm';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'chat_id': this.chatId,
+        'message_id': this.messageId,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

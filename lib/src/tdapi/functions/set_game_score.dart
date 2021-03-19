@@ -1,55 +1,50 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Updates the game score of the specified user in the game; for bots only
 class SetGameScore extends TdFunction {
-  /// Updates the game score of the specified user in the game; for bots only
   SetGameScore(
-      {this.chatId,
-      this.messageId,
-      this.editMessage,
-      this.userId,
-      this.score,
-      this.force});
+      {required this.chatId,
+      required this.messageId,
+      required this.editMessage,
+      required this.userId,
+      required this.score,
+      required this.force});
 
-  /// [chatId] The chat to which the message with the game belongs
-  int chatId;
+  /// chat_id The chat to which the message with the game belongs
+  final int chatId;
 
-  /// [messageId] Identifier of the message
-  int messageId;
+  /// message_id Identifier of the message
+  final int messageId;
 
-  /// [editMessage] True, if the message should be edited
-  bool editMessage;
+  /// edit_message True, if the message should be edited
+  final bool editMessage;
 
-  /// [userId] User identifier
-  int userId;
+  /// user_id User identifier
+  final int userId;
 
-  /// [score] The new score
-  int score;
+  /// score The new score
+  final int score;
 
-  /// [force] Pass true to update the score even if it decreases. If the score is 0, the user will be deleted from the high score table
-  bool force;
+  /// force Pass true to update the score even if it decreases. If the score is 0, the user will be deleted from the high score table
+  final bool force;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  SetGameScore.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "chat_id": this.chatId,
-      "message_id": this.messageId,
-      "edit_message": this.editMessage,
-      "user_id": this.userId,
-      "score": this.score,
-      "force": this.force,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'setGameScore';
+  static const String CONSTRUCTOR = 'setGameScore';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'chat_id': this.chatId,
+        'message_id': this.messageId,
+        'edit_message': this.editMessage,
+        'user_id': this.userId,
+        'score': this.score,
+        'force': this.force,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

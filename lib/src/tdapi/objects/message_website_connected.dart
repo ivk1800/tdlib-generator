@@ -1,0 +1,26 @@
+part of '../tdapi.dart';
+
+/// Group.Objects
+/// The current user has connected a website by logging in using Telegram Login Widget on it
+class MessageWebsiteConnected extends MessageContent {
+  MessageWebsiteConnected({required this.domainName});
+
+  /// domain_name Domain name of the connected website
+  final String domainName;
+
+  static const String CONSTRUCTOR = 'messageWebsiteConnected';
+
+  static MessageWebsiteConnected? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return MessageWebsiteConnected(domainName: json['domain_name']);
+  }
+
+  @override
+  String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'domain_name': this.domainName, '@type': CONSTRUCTOR};
+}

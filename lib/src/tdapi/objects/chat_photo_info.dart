@@ -1,37 +1,40 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains basic information about the photo of a chat
 class ChatPhotoInfo extends TdObject {
-  /// Contains basic information about the photo of a chat
-  ChatPhotoInfo({this.small, this.big, this.hasAnimation});
+  ChatPhotoInfo(
+      {required this.small, required this.big, required this.hasAnimation});
 
-  /// [small] A small (160x160) chat photo variant in JPEG format. The file can be downloaded only before the photo is changed
-  File small;
+  /// small A small (160x160) chat photo variant in JPEG format. The file can be downloaded only before the photo is changed
+  final File small;
 
-  /// [big] A big (640x640) chat photo variant in JPEG format. The file can be downloaded only before the photo is changed
-  File big;
+  /// big A big (640x640) chat photo variant in JPEG format. The file can be downloaded only before the photo is changed
+  final File big;
 
-  /// [hasAnimation] True, if the photo has animated variant
-  bool hasAnimation;
+  /// has_animation True, if the photo has animated variant
+  final bool hasAnimation;
 
-  /// Parse from a json
-  ChatPhotoInfo.fromJson(Map<String, dynamic> json) {
-    this.small = File.fromJson(json['small'] ?? <String, dynamic>{});
-    this.big = File.fromJson(json['big'] ?? <String, dynamic>{});
-    this.hasAnimation = json['has_animation'];
+  static const String CONSTRUCTOR = 'chatPhotoInfo';
+
+  static ChatPhotoInfo? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return ChatPhotoInfo(
+        small: File.fromJson(json['small'])!,
+        big: File.fromJson(json['big'])!,
+        hasAnimation: json['has_animation']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "small": this.small == null ? null : this.small.toJson(),
-      "big": this.big == null ? null : this.big.toJson(),
-      "has_animation": this.hasAnimation,
-    };
-  }
-
-  static const CONSTRUCTOR = 'chatPhotoInfo';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'small': this.small,
+        'big': this.big,
+        'has_animation': this.hasAnimation,
+        '@type': CONSTRUCTOR
+      };
 }

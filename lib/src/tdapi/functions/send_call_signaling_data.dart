@@ -1,33 +1,28 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Sends call signaling data
 class SendCallSignalingData extends TdFunction {
-  /// Sends call signaling data
-  SendCallSignalingData({this.callId, this.data});
+  SendCallSignalingData({required this.callId, required this.data});
 
-  /// [callId] Call identifier
-  int callId;
+  /// call_id Call identifier
+  final int callId;
 
-  /// [data] The data
-  String data;
+  /// data The data
+  final String data;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  SendCallSignalingData.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "call_id": this.callId,
-      "data": this.data,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'sendCallSignalingData';
+  static const String CONSTRUCTOR = 'sendCallSignalingData';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'call_id': this.callId,
+        'data': this.data,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

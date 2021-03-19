@@ -1,42 +1,39 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Represents a list of chats located nearby
 class ChatsNearby extends TdObject {
-  /// Represents a list of chats located nearby
-  ChatsNearby({this.usersNearby, this.supergroupsNearby});
+  ChatsNearby({required this.usersNearby, required this.supergroupsNearby});
 
-  /// [usersNearby] List of users nearby
-  List<ChatNearby> usersNearby;
+  /// users_nearby List of users nearby
+  final List<ChatNearby> usersNearby;
 
-  /// [supergroupsNearby] List of location-based supergroups nearby
-  List<ChatNearby> supergroupsNearby;
+  /// supergroups_nearby List of location-based supergroups nearby
+  final List<ChatNearby> supergroupsNearby;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'chatsNearby';
 
-  /// Parse from a json
-  ChatsNearby.fromJson(Map<String, dynamic> json) {
-    this.usersNearby = List<ChatNearby>.from((json['users_nearby'] ?? [])
-        .map((item) => ChatNearby.fromJson(item ?? <String, dynamic>{}))
-        .toList());
-    this.supergroupsNearby = List<ChatNearby>.from(
-        (json['supergroups_nearby'] ?? [])
-            .map((item) => ChatNearby.fromJson(item ?? <String, dynamic>{}))
-            .toList());
-    this.extra = json['@extra'];
+  static ChatsNearby? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return ChatsNearby(
+        usersNearby: List<ChatNearby>.from((json['users_nearby}'] ?? [])
+            .map((item) => ChatNearby.fromJson(json['ChatNearby'])!)
+            .toList()),
+        supergroupsNearby: List<ChatNearby>.from(
+            (json['supergroups_nearby}'] ?? [])
+                .map((item) => ChatNearby.fromJson(json['ChatNearby'])!)
+                .toList()));
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "users_nearby": this.usersNearby.map((i) => i.toJson()).toList(),
-      "supergroups_nearby":
-          this.supergroupsNearby.map((i) => i.toJson()).toList(),
-    };
-  }
-
-  static const CONSTRUCTOR = 'chatsNearby';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'users_nearby': this.usersNearby,
+        'supergroups_nearby': this.supergroupsNearby,
+        '@type': CONSTRUCTOR
+      };
 }

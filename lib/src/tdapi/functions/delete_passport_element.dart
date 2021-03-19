@@ -1,29 +1,21 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Deletes a Telegram Passport element
 class DeletePassportElement extends TdFunction {
-  /// Deletes a Telegram Passport element
-  DeletePassportElement({this.type});
+  DeletePassportElement({required this.type});
 
-  /// [type] Element type
-  PassportElementType type;
+  /// type Element type
+  final PassportElementType type;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  DeletePassportElement.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "type": this.type == null ? null : this.type.toJson(),
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'deletePassportElement';
+  static const String CONSTRUCTOR = 'deletePassportElement';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'type': this.type, '@type': CONSTRUCTOR, '@extra': this.extra};
 }

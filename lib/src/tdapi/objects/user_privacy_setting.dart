@@ -1,19 +1,26 @@
 part of '../tdapi.dart';
 
-class UserPrivacySetting extends TdObject {
-  /// Describes available user privacy settings
-  UserPrivacySetting();
+/// Group.Classes
+/// Describes available user privacy settings
+abstract class UserPrivacySetting extends TdObject {
+  const UserPrivacySetting();
 
-  /// a UserPrivacySetting return type can be :
-  /// * UserPrivacySettingShowStatus
-  /// * UserPrivacySettingShowProfilePhoto
-  /// * UserPrivacySettingShowLinkInForwardedMessages
-  /// * UserPrivacySettingShowPhoneNumber
-  /// * UserPrivacySettingAllowChatInvites
-  /// * UserPrivacySettingAllowCalls
-  /// * UserPrivacySettingAllowPeerToPeerCalls
-  /// * UserPrivacySettingAllowFindingByPhoneNumber
-  factory UserPrivacySetting.fromJson(Map<String, dynamic> json) {
+  static const String CONSTRUCTOR = 'userPrivacySetting';
+
+  /// Inherited by:
+  /// [UserPrivacySettingShowStatus]
+  /// [UserPrivacySettingShowProfilePhoto]
+  /// [UserPrivacySettingShowLinkInForwardedMessages]
+  /// [UserPrivacySettingShowPhoneNumber]
+  /// [UserPrivacySettingAllowChatInvites]
+  /// [UserPrivacySettingAllowCalls]
+  /// [UserPrivacySettingAllowPeerToPeerCalls]
+  /// [UserPrivacySettingAllowFindingByPhoneNumber]
+  static UserPrivacySetting? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
     switch (json["@type"]) {
       case UserPrivacySettingShowStatus.CONSTRUCTOR:
         return UserPrivacySettingShowStatus.fromJson(json);
@@ -35,175 +42,6 @@ class UserPrivacySetting extends TdObject {
         return null;
     }
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {};
-  }
-
-  static const CONSTRUCTOR = 'userPrivacySetting';
-
-  @override
-  String getConstructor() => CONSTRUCTOR;
-}
-
-class UserPrivacySettingShowStatus extends UserPrivacySetting {
-  /// A privacy setting for managing whether the user's online status is visible
-  UserPrivacySettingShowStatus();
-
-  /// Parse from a json
-  UserPrivacySettingShowStatus.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-    };
-  }
-
-  static const CONSTRUCTOR = 'userPrivacySettingShowStatus';
-
-  @override
-  String getConstructor() => CONSTRUCTOR;
-}
-
-class UserPrivacySettingShowProfilePhoto extends UserPrivacySetting {
-  /// A privacy setting for managing whether the user's profile photo is visible
-  UserPrivacySettingShowProfilePhoto();
-
-  /// Parse from a json
-  UserPrivacySettingShowProfilePhoto.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-    };
-  }
-
-  static const CONSTRUCTOR = 'userPrivacySettingShowProfilePhoto';
-
-  @override
-  String getConstructor() => CONSTRUCTOR;
-}
-
-class UserPrivacySettingShowLinkInForwardedMessages extends UserPrivacySetting {
-  /// A privacy setting for managing whether a link to the user's account is included in forwarded messages
-  UserPrivacySettingShowLinkInForwardedMessages();
-
-  /// Parse from a json
-  UserPrivacySettingShowLinkInForwardedMessages.fromJson(
-      Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-    };
-  }
-
-  static const CONSTRUCTOR = 'userPrivacySettingShowLinkInForwardedMessages';
-
-  @override
-  String getConstructor() => CONSTRUCTOR;
-}
-
-class UserPrivacySettingShowPhoneNumber extends UserPrivacySetting {
-  /// A privacy setting for managing whether the user's phone number is visible
-  UserPrivacySettingShowPhoneNumber();
-
-  /// Parse from a json
-  UserPrivacySettingShowPhoneNumber.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-    };
-  }
-
-  static const CONSTRUCTOR = 'userPrivacySettingShowPhoneNumber';
-
-  @override
-  String getConstructor() => CONSTRUCTOR;
-}
-
-class UserPrivacySettingAllowChatInvites extends UserPrivacySetting {
-  /// A privacy setting for managing whether the user can be invited to chats
-  UserPrivacySettingAllowChatInvites();
-
-  /// Parse from a json
-  UserPrivacySettingAllowChatInvites.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-    };
-  }
-
-  static const CONSTRUCTOR = 'userPrivacySettingAllowChatInvites';
-
-  @override
-  String getConstructor() => CONSTRUCTOR;
-}
-
-class UserPrivacySettingAllowCalls extends UserPrivacySetting {
-  /// A privacy setting for managing whether the user can be called
-  UserPrivacySettingAllowCalls();
-
-  /// Parse from a json
-  UserPrivacySettingAllowCalls.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-    };
-  }
-
-  static const CONSTRUCTOR = 'userPrivacySettingAllowCalls';
-
-  @override
-  String getConstructor() => CONSTRUCTOR;
-}
-
-class UserPrivacySettingAllowPeerToPeerCalls extends UserPrivacySetting {
-  /// A privacy setting for managing whether peer-to-peer connections can be used for calls
-  UserPrivacySettingAllowPeerToPeerCalls();
-
-  /// Parse from a json
-  UserPrivacySettingAllowPeerToPeerCalls.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-    };
-  }
-
-  static const CONSTRUCTOR = 'userPrivacySettingAllowPeerToPeerCalls';
-
-  @override
-  String getConstructor() => CONSTRUCTOR;
-}
-
-class UserPrivacySettingAllowFindingByPhoneNumber extends UserPrivacySetting {
-  /// A privacy setting for managing whether the user can be found by their phone number. Checked only if the phone number is not known to the other user. Can be set only to "Allow contacts" or "Allow all"
-  UserPrivacySettingAllowFindingByPhoneNumber();
-
-  /// Parse from a json
-  UserPrivacySettingAllowFindingByPhoneNumber.fromJson(
-      Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-    };
-  }
-
-  static const CONSTRUCTOR = 'userPrivacySettingAllowFindingByPhoneNumber';
 
   @override
   String getConstructor() => CONSTRUCTOR;

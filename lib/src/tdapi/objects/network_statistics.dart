@@ -1,39 +1,37 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// A full list of available network statistic entries
 class NetworkStatistics extends TdObject {
-  /// A full list of available network statistic entries
-  NetworkStatistics({this.sinceDate, this.entries});
+  NetworkStatistics({required this.sinceDate, required this.entries});
 
-  /// [sinceDate] Point in time (Unix timestamp) from which the statistics are collected
-  int sinceDate;
+  /// since_date Point in time (Unix timestamp) from which the statistics are collected
+  final int sinceDate;
 
-  /// [entries] Network statistics entries
-  List<NetworkStatisticsEntry> entries;
+  /// entries Network statistics entries
+  final List<NetworkStatisticsEntry> entries;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'networkStatistics';
 
-  /// Parse from a json
-  NetworkStatistics.fromJson(Map<String, dynamic> json) {
-    this.sinceDate = json['since_date'];
-    this.entries = List<NetworkStatisticsEntry>.from((json['entries'] ?? [])
-        .map((item) =>
-            NetworkStatisticsEntry.fromJson(item ?? <String, dynamic>{}))
-        .toList());
-    this.extra = json['@extra'];
+  static NetworkStatistics? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return NetworkStatistics(
+        sinceDate: json['since_date'],
+        entries: List<NetworkStatisticsEntry>.from((json['entries}'] ?? [])
+            .map((item) => NetworkStatisticsEntry.fromJson(
+                json['NetworkStatisticsEntry'])!)
+            .toList()));
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "since_date": this.sinceDate,
-      "entries": this.entries.map((i) => i.toJson()).toList(),
-    };
-  }
-
-  static const CONSTRUCTOR = 'networkStatistics';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'since_date': this.sinceDate,
+        'entries': this.entries,
+        '@type': CONSTRUCTOR
+      };
 }

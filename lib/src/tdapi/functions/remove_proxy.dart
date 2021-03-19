@@ -1,29 +1,21 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Removes a proxy server. Can be called before authorization
 class RemoveProxy extends TdFunction {
-  /// Removes a proxy server. Can be called before authorization
-  RemoveProxy({this.proxyId});
+  RemoveProxy({required this.proxyId});
 
-  /// [proxyId] Proxy identifier
-  int proxyId;
+  /// proxy_id Proxy identifier
+  final int proxyId;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  RemoveProxy.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "proxy_id": this.proxyId,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'removeProxy';
+  static const String CONSTRUCTOR = 'removeProxy';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'proxy_id': this.proxyId, '@type': CONSTRUCTOR, '@extra': this.extra};
 }

@@ -1,33 +1,29 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains a list of text entities
 class TextEntities extends TdObject {
-  /// Contains a list of text entities
-  TextEntities({this.entities});
+  TextEntities({required this.entities});
 
-  /// [entities] List of text entities
-  List<TextEntity> entities;
+  /// entities List of text entities
+  final List<TextEntity> entities;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'textEntities';
 
-  /// Parse from a json
-  TextEntities.fromJson(Map<String, dynamic> json) {
-    this.entities = List<TextEntity>.from((json['entities'] ?? [])
-        .map((item) => TextEntity.fromJson(item ?? <String, dynamic>{}))
-        .toList());
-    this.extra = json['@extra'];
+  static TextEntities? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return TextEntities(
+        entities: List<TextEntity>.from((json['entities}'] ?? [])
+            .map((item) => TextEntity.fromJson(json['TextEntity'])!)
+            .toList()));
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "entities": this.entities.map((i) => i.toJson()).toList(),
-    };
-  }
-
-  static const CONSTRUCTOR = 'textEntities';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'entities': this.entities, '@type': CONSTRUCTOR};
 }

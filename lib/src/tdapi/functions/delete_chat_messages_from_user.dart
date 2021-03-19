@@ -1,33 +1,28 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Deletes all messages sent by the specified user to a chat. Supported only for supergroups; requires can_delete_messages administrator privileges
 class DeleteChatMessagesFromUser extends TdFunction {
-  /// Deletes all messages sent by the specified user to a chat. Supported only for supergroups; requires can_delete_messages administrator privileges
-  DeleteChatMessagesFromUser({this.chatId, this.userId});
+  DeleteChatMessagesFromUser({required this.chatId, required this.userId});
 
-  /// [chatId] Chat identifier
-  int chatId;
+  /// chat_id Chat identifier
+  final int chatId;
 
-  /// [userId] User identifier
-  int userId;
+  /// user_id User identifier
+  final int userId;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  DeleteChatMessagesFromUser.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "chat_id": this.chatId,
-      "user_id": this.userId,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'deleteChatMessagesFromUser';
+  static const String CONSTRUCTOR = 'deleteChatMessagesFromUser';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'chat_id': this.chatId,
+        'user_id': this.userId,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

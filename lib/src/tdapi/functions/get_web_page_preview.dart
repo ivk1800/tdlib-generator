@@ -1,29 +1,21 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Returns a web page preview by the text of the message. Do not call this function too often. Returns a 404 error if the web page has no preview
 class GetWebPagePreview extends TdFunction {
-  /// Returns a web page preview by the text of the message. Do not call this function too often. Returns a 404 error if the web page has no preview
-  GetWebPagePreview({this.text});
+  GetWebPagePreview({required this.text});
 
-  /// [text] Message text with formatting
-  FormattedText text;
+  /// text Message text with formatting
+  final FormattedText text;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  GetWebPagePreview.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "text": this.text == null ? null : this.text.toJson(),
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'getWebPagePreview';
+  static const String CONSTRUCTOR = 'getWebPagePreview';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'text': this.text, '@type': CONSTRUCTOR, '@extra': this.extra};
 }

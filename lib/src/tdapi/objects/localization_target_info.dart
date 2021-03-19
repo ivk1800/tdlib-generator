@@ -1,34 +1,30 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains information about the current localization target
 class LocalizationTargetInfo extends TdObject {
-  /// Contains information about the current localization target
-  LocalizationTargetInfo({this.languagePacks});
+  LocalizationTargetInfo({required this.languagePacks});
 
-  /// [languagePacks] List of available language packs for this application
-  List<LanguagePackInfo> languagePacks;
+  /// language_packs List of available language packs for this application
+  final List<LanguagePackInfo> languagePacks;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'localizationTargetInfo';
 
-  /// Parse from a json
-  LocalizationTargetInfo.fromJson(Map<String, dynamic> json) {
-    this.languagePacks = List<LanguagePackInfo>.from((json['language_packs'] ??
-            [])
-        .map((item) => LanguagePackInfo.fromJson(item ?? <String, dynamic>{}))
-        .toList());
-    this.extra = json['@extra'];
+  static LocalizationTargetInfo? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return LocalizationTargetInfo(
+        languagePacks: List<LanguagePackInfo>.from((json['language_packs}'] ??
+                [])
+            .map((item) => LanguagePackInfo.fromJson(json['LanguagePackInfo'])!)
+            .toList()));
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "language_packs": this.languagePacks.map((i) => i.toJson()).toList(),
-    };
-  }
-
-  static const CONSTRUCTOR = 'localizationTargetInfo';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'language_packs': this.languagePacks, '@type': CONSTRUCTOR};
 }

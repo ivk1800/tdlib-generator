@@ -1,36 +1,29 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains an HTTPS link to a message in a supergroup or channel
 class MessageLink extends TdObject {
-  /// Contains an HTTPS link to a message in a supergroup or channel
-  MessageLink({this.link, this.isPublic});
+  MessageLink({required this.link, required this.isPublic});
 
-  /// [link] Message link
-  String link;
+  /// link Message link
+  final String link;
 
-  /// [isPublic] True, if the link will work for non-members of the chat
-  bool isPublic;
+  /// is_public True, if the link will work for non-members of the chat
+  final bool isPublic;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'messageLink';
 
-  /// Parse from a json
-  MessageLink.fromJson(Map<String, dynamic> json) {
-    this.link = json['link'];
-    this.isPublic = json['is_public'];
-    this.extra = json['@extra'];
+  static MessageLink? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return MessageLink(link: json['link'], isPublic: json['is_public']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "link": this.link,
-      "is_public": this.isPublic,
-    };
-  }
-
-  static const CONSTRUCTOR = 'messageLink';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'link': this.link, 'is_public': this.isPublic, '@type': CONSTRUCTOR};
 }

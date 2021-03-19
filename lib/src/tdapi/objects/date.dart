@@ -1,37 +1,36 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Represents a date according to the Gregorian calendar
 class Date extends TdObject {
-  /// Represents a date according to the Gregorian calendar
-  Date({this.day, this.month, this.year});
+  Date({required this.day, required this.month, required this.year});
 
-  /// [day] Day of the month, 1-31
-  int day;
+  /// day Day of the month, 1-31
+  final int day;
 
-  /// [month] Month, 1-12
-  int month;
+  /// month Month, 1-12
+  final int month;
 
-  /// [year] Year, 1-9999
-  int year;
+  /// year Year, 1-9999
+  final int year;
 
-  /// Parse from a json
-  Date.fromJson(Map<String, dynamic> json) {
-    this.day = json['day'];
-    this.month = json['month'];
-    this.year = json['year'];
+  static const String CONSTRUCTOR = 'date';
+
+  static Date? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return Date(day: json['day'], month: json['month'], year: json['year']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "day": this.day,
-      "month": this.month,
-      "year": this.year,
-    };
-  }
-
-  static const CONSTRUCTOR = 'date';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'day': this.day,
+        'month': this.month,
+        'year': this.year,
+        '@type': CONSTRUCTOR
+      };
 }

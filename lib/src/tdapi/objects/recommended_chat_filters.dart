@@ -1,35 +1,31 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains a list of recommended chat filters
 class RecommendedChatFilters extends TdObject {
-  /// Contains a list of recommended chat filters
-  RecommendedChatFilters({this.chatFilters});
+  RecommendedChatFilters({required this.chatFilters});
 
-  /// [chatFilters] List of recommended chat filters
-  List<RecommendedChatFilter> chatFilters;
+  /// chat_filters List of recommended chat filters
+  final List<RecommendedChatFilter> chatFilters;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'recommendedChatFilters';
 
-  /// Parse from a json
-  RecommendedChatFilters.fromJson(Map<String, dynamic> json) {
-    this.chatFilters = List<RecommendedChatFilter>.from(
-        (json['chat_filters'] ?? [])
+  static RecommendedChatFilters? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return RecommendedChatFilters(
+        chatFilters: List<RecommendedChatFilter>.from((json['chat_filters}'] ??
+                [])
             .map((item) =>
-                RecommendedChatFilter.fromJson(item ?? <String, dynamic>{}))
-            .toList());
-    this.extra = json['@extra'];
+                RecommendedChatFilter.fromJson(json['RecommendedChatFilter'])!)
+            .toList()));
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "chat_filters": this.chatFilters.map((i) => i.toJson()).toList(),
-    };
-  }
-
-  static const CONSTRUCTOR = 'recommendedChatFilters';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'chat_filters': this.chatFilters, '@type': CONSTRUCTOR};
 }

@@ -1,29 +1,21 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Searches for a sticker set by its name
 class SearchStickerSet extends TdFunction {
-  /// Searches for a sticker set by its name
-  SearchStickerSet({this.name});
+  SearchStickerSet({required this.name});
 
-  /// [name] Name of the sticker set
-  String name;
+  /// name Name of the sticker set
+  final String name;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  SearchStickerSet.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "name": this.name,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'searchStickerSet';
+  static const String CONSTRUCTOR = 'searchStickerSet';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'name': this.name, '@type': CONSTRUCTOR, '@extra': this.extra};
 }

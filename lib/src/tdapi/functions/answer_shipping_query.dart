@@ -1,38 +1,35 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Sets the result of a shipping query; for bots only
 class AnswerShippingQuery extends TdFunction {
-  /// Sets the result of a shipping query; for bots only
   AnswerShippingQuery(
-      {this.shippingQueryId, this.shippingOptions, this.errorMessage});
+      {required this.shippingQueryId,
+      required this.shippingOptions,
+      required this.errorMessage});
 
-  /// [shippingQueryId] Identifier of the shipping query
-  int shippingQueryId;
+  /// shipping_query_id Identifier of the shipping query
+  final int shippingQueryId;
 
-  /// [shippingOptions] Available shipping options
-  List<ShippingOption> shippingOptions;
+  /// shipping_options Available shipping options
+  final List<ShippingOption> shippingOptions;
 
-  /// [errorMessage] An error message, empty on success
-  String errorMessage;
+  /// error_message An error message, empty on success
+  final String errorMessage;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  AnswerShippingQuery.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "shipping_query_id": this.shippingQueryId,
-      "shipping_options": this.shippingOptions.map((i) => i.toJson()).toList(),
-      "error_message": this.errorMessage,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'answerShippingQuery';
+  static const String CONSTRUCTOR = 'answerShippingQuery';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'shipping_query_id': this.shippingQueryId,
+        'shipping_options': this.shippingOptions,
+        'error_message': this.errorMessage,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

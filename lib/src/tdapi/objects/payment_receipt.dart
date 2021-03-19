@@ -1,65 +1,60 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains information about a successful payment
 class PaymentReceipt extends TdObject {
-  /// Contains information about a successful payment
   PaymentReceipt(
-      {this.date,
-      this.paymentsProviderUserId,
-      this.invoice,
-      this.orderInfo,
-      this.shippingOption,
-      this.credentialsTitle});
+      {required this.date,
+      required this.paymentsProviderUserId,
+      required this.invoice,
+      OrderInfo? this.orderInfo,
+      ShippingOption? this.shippingOption,
+      required this.credentialsTitle});
 
-  /// [date] Point in time (Unix timestamp) when the payment was made
-  int date;
+  /// date Point in time (Unix timestamp) when the payment was made
+  final int date;
 
-  /// [paymentsProviderUserId] User identifier of the payment provider bot
-  int paymentsProviderUserId;
+  /// payments_provider_user_id User identifier of the payment provider bot
+  final int paymentsProviderUserId;
 
-  /// [invoice] Contains information about the invoice
-  Invoice invoice;
+  /// invoice Contains information about the invoice
+  final Invoice invoice;
 
-  /// [orderInfo] Contains order information; may be null
-  OrderInfo orderInfo;
+  /// order_info Contains order information; may be null
+  final OrderInfo? orderInfo;
 
-  /// [shippingOption] Chosen shipping option; may be null
-  ShippingOption shippingOption;
+  /// shipping_option Chosen shipping option; may be null
+  final ShippingOption? shippingOption;
 
-  /// [credentialsTitle] Title of the saved credentials
-  String credentialsTitle;
+  /// credentials_title Title of the saved credentials
+  final String credentialsTitle;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'paymentReceipt';
 
-  /// Parse from a json
-  PaymentReceipt.fromJson(Map<String, dynamic> json) {
-    this.date = json['date'];
-    this.paymentsProviderUserId = json['payments_provider_user_id'];
-    this.invoice = Invoice.fromJson(json['invoice'] ?? <String, dynamic>{});
-    this.orderInfo =
-        OrderInfo.fromJson(json['order_info'] ?? <String, dynamic>{});
-    this.shippingOption =
-        ShippingOption.fromJson(json['shipping_option'] ?? <String, dynamic>{});
-    this.credentialsTitle = json['credentials_title'];
-    this.extra = json['@extra'];
+  static PaymentReceipt? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return PaymentReceipt(
+        date: json['date'],
+        paymentsProviderUserId: json['payments_provider_user_id'],
+        invoice: Invoice.fromJson(json['invoice'])!,
+        orderInfo: OrderInfo.fromJson(json['order_info']),
+        shippingOption: ShippingOption.fromJson(json['shipping_option']),
+        credentialsTitle: json['credentials_title']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "date": this.date,
-      "payments_provider_user_id": this.paymentsProviderUserId,
-      "invoice": this.invoice == null ? null : this.invoice.toJson(),
-      "order_info": this.orderInfo == null ? null : this.orderInfo.toJson(),
-      "shipping_option":
-          this.shippingOption == null ? null : this.shippingOption.toJson(),
-      "credentials_title": this.credentialsTitle,
-    };
-  }
-
-  static const CONSTRUCTOR = 'paymentReceipt';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'date': this.date,
+        'payments_provider_user_id': this.paymentsProviderUserId,
+        'invoice': this.invoice,
+        'order_info': this.orderInfo,
+        'shipping_option': this.shippingOption,
+        'credentials_title': this.credentialsTitle,
+        '@type': CONSTRUCTOR
+      };
 }

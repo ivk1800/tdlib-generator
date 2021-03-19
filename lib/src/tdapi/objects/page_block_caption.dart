@@ -1,32 +1,31 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains a caption of an instant view web page block, consisting of a text and a trailing credit
 class PageBlockCaption extends TdObject {
-  /// Contains a caption of an instant view web page block, consisting of a text and a trailing credit
-  PageBlockCaption({this.text, this.credit});
+  PageBlockCaption({required this.text, required this.credit});
 
-  /// [text] Content of the caption
-  RichText text;
+  /// text Content of the caption
+  final RichText text;
 
-  /// [credit] Block credit (like HTML tag <cite>)
-  RichText credit;
+  /// credit Block credit (like HTML tag <cite>)
+  final RichText credit;
 
-  /// Parse from a json
-  PageBlockCaption.fromJson(Map<String, dynamic> json) {
-    this.text = RichText.fromJson(json['text'] ?? <String, dynamic>{});
-    this.credit = RichText.fromJson(json['credit'] ?? <String, dynamic>{});
+  static const String CONSTRUCTOR = 'pageBlockCaption';
+
+  static PageBlockCaption? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return PageBlockCaption(
+        text: RichText.fromJson(json['text'])!,
+        credit: RichText.fromJson(json['credit'])!);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "text": this.text == null ? null : this.text.toJson(),
-      "credit": this.credit == null ? null : this.credit.toJson(),
-    };
-  }
-
-  static const CONSTRUCTOR = 'pageBlockCaption';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'text': this.text, 'credit': this.credit, '@type': CONSTRUCTOR};
 }

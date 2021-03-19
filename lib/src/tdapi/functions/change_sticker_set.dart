@@ -1,37 +1,35 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Installs/uninstalls or activates/archives a sticker set
 class ChangeStickerSet extends TdFunction {
-  /// Installs/uninstalls or activates/archives a sticker set
-  ChangeStickerSet({this.setId, this.isInstalled, this.isArchived});
+  ChangeStickerSet(
+      {required this.setId,
+      required this.isInstalled,
+      required this.isArchived});
 
-  /// [setId] Identifier of the sticker set
-  int setId;
+  /// set_id Identifier of the sticker set
+  final int setId;
 
-  /// [isInstalled] The new value of is_installed
-  bool isInstalled;
+  /// is_installed The new value of is_installed
+  final bool isInstalled;
 
-  /// [isArchived] The new value of is_archived. A sticker set can't be installed and archived simultaneously
-  bool isArchived;
+  /// is_archived The new value of is_archived. A sticker set can't be installed and archived simultaneously
+  final bool isArchived;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  ChangeStickerSet.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "set_id": this.setId,
-      "is_installed": this.isInstalled,
-      "is_archived": this.isArchived,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'changeStickerSet';
+  static const String CONSTRUCTOR = 'changeStickerSet';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'set_id': this.setId,
+        'is_installed': this.isInstalled,
+        'is_archived': this.isArchived,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

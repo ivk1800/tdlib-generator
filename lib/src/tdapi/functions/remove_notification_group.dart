@@ -1,33 +1,29 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Removes a group of active notifications. Needs to be called only if the notification group is removed by the current user
 class RemoveNotificationGroup extends TdFunction {
-  /// Removes a group of active notifications. Needs to be called only if the notification group is removed by the current user
-  RemoveNotificationGroup({this.notificationGroupId, this.maxNotificationId});
+  RemoveNotificationGroup(
+      {required this.notificationGroupId, required this.maxNotificationId});
 
-  /// [notificationGroupId] Notification group identifier
-  int notificationGroupId;
+  /// notification_group_id Notification group identifier
+  final int notificationGroupId;
 
-  /// [maxNotificationId] The maximum identifier of removed notifications
-  int maxNotificationId;
+  /// max_notification_id The maximum identifier of removed notifications
+  final int maxNotificationId;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  RemoveNotificationGroup.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "notification_group_id": this.notificationGroupId,
-      "max_notification_id": this.maxNotificationId,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'removeNotificationGroup';
+  static const String CONSTRUCTOR = 'removeNotificationGroup';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'notification_group_id': this.notificationGroupId,
+        'max_notification_id': this.maxNotificationId,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

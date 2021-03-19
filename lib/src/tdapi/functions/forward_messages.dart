@@ -1,55 +1,50 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Forwards previously sent messages. Returns the forwarded messages in the same order as the message identifiers passed in message_ids. If a message can't be forwarded, null will be returned instead of the message
 class ForwardMessages extends TdFunction {
-  /// Forwards previously sent messages. Returns the forwarded messages in the same order as the message identifiers passed in message_ids. If a message can't be forwarded, null will be returned instead of the message
   ForwardMessages(
-      {this.chatId,
-      this.fromChatId,
-      this.messageIds,
-      this.options,
-      this.sendCopy,
-      this.removeCaption});
+      {required this.chatId,
+      required this.fromChatId,
+      required this.messageIds,
+      required this.options,
+      required this.sendCopy,
+      required this.removeCaption});
 
-  /// [chatId] Identifier of the chat to which to forward messages
-  int chatId;
+  /// chat_id Identifier of the chat to which to forward messages
+  final int chatId;
 
-  /// [fromChatId] Identifier of the chat from which to forward messages
-  int fromChatId;
+  /// from_chat_id Identifier of the chat from which to forward messages
+  final int fromChatId;
 
-  /// [messageIds] Identifiers of the messages to forward. Message identifiers must be in a strictly increasing order. At most 100 messages can be forwarded simultaneously
-  List<int> messageIds;
+  /// message_ids Identifiers of the messages to forward. Message identifiers must be in a strictly increasing order. At most 100 messages can be forwarded simultaneously
+  final List<int> messageIds;
 
-  /// [options] Options to be used to send the messages
-  MessageSendOptions options;
+  /// options Options to be used to send the messages
+  final MessageSendOptions options;
 
-  /// [sendCopy] True, if content of the messages needs to be copied without links to the original messages. Always true if the messages are forwarded to a secret chat
-  bool sendCopy;
+  /// send_copy True, if content of the messages needs to be copied without links to the original messages. Always true if the messages are forwarded to a secret chat
+  final bool sendCopy;
 
-  /// [removeCaption] True, if media caption of message copies needs to be removed. Ignored if send_copy is false
-  bool removeCaption;
+  /// remove_caption True, if media caption of message copies needs to be removed. Ignored if send_copy is false
+  final bool removeCaption;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  ForwardMessages.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "chat_id": this.chatId,
-      "from_chat_id": this.fromChatId,
-      "message_ids": this.messageIds.map((i) => i).toList(),
-      "options": this.options == null ? null : this.options.toJson(),
-      "send_copy": this.sendCopy,
-      "remove_caption": this.removeCaption,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'forwardMessages';
+  static const String CONSTRUCTOR = 'forwardMessages';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'chat_id': this.chatId,
+        'from_chat_id': this.fromChatId,
+        'message_ids': this.messageIds,
+        'options': this.options,
+        'send_copy': this.sendCopy,
+        'remove_caption': this.removeCaption,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

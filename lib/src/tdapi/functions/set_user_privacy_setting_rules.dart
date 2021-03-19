@@ -1,33 +1,28 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Changes user privacy settings
 class SetUserPrivacySettingRules extends TdFunction {
-  /// Changes user privacy settings
-  SetUserPrivacySettingRules({this.setting, this.rules});
+  SetUserPrivacySettingRules({required this.setting, required this.rules});
 
-  /// [setting] The privacy setting
-  UserPrivacySetting setting;
+  /// setting The privacy setting
+  final UserPrivacySetting setting;
 
-  /// [rules] The new privacy rules
-  UserPrivacySettingRules rules;
+  /// rules The new privacy rules
+  final UserPrivacySettingRules rules;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  SetUserPrivacySettingRules.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "setting": this.setting == null ? null : this.setting.toJson(),
-      "rules": this.rules == null ? null : this.rules.toJson(),
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'setUserPrivacySettingRules';
+  static const String CONSTRUCTOR = 'setUserPrivacySettingRules';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'setting': this.setting,
+        'rules': this.rules,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

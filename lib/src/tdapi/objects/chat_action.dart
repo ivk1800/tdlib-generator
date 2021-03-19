@@ -1,24 +1,31 @@
 part of '../tdapi.dart';
 
-class ChatAction extends TdObject {
-  /// Describes the different types of activity in a chat
-  ChatAction();
+/// Group.Classes
+/// Describes the different types of activity in a chat
+abstract class ChatAction extends TdObject {
+  const ChatAction();
 
-  /// a ChatAction return type can be :
-  /// * ChatActionTyping
-  /// * ChatActionRecordingVideo
-  /// * ChatActionUploadingVideo
-  /// * ChatActionRecordingVoiceNote
-  /// * ChatActionUploadingVoiceNote
-  /// * ChatActionUploadingPhoto
-  /// * ChatActionUploadingDocument
-  /// * ChatActionChoosingLocation
-  /// * ChatActionChoosingContact
-  /// * ChatActionStartPlayingGame
-  /// * ChatActionRecordingVideoNote
-  /// * ChatActionUploadingVideoNote
-  /// * ChatActionCancel
-  factory ChatAction.fromJson(Map<String, dynamic> json) {
+  static const String CONSTRUCTOR = 'chatAction';
+
+  /// Inherited by:
+  /// [ChatActionTyping]
+  /// [ChatActionRecordingVideo]
+  /// [ChatActionUploadingVideo]
+  /// [ChatActionRecordingVoiceNote]
+  /// [ChatActionUploadingVoiceNote]
+  /// [ChatActionUploadingPhoto]
+  /// [ChatActionUploadingDocument]
+  /// [ChatActionChoosingLocation]
+  /// [ChatActionChoosingContact]
+  /// [ChatActionStartPlayingGame]
+  /// [ChatActionRecordingVideoNote]
+  /// [ChatActionUploadingVideoNote]
+  /// [ChatActionCancel]
+  static ChatAction? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
     switch (json["@type"]) {
       case ChatActionTyping.CONSTRUCTOR:
         return ChatActionTyping.fromJson(json);
@@ -50,303 +57,6 @@ class ChatAction extends TdObject {
         return null;
     }
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {};
-  }
-
-  static const CONSTRUCTOR = 'chatAction';
-
-  @override
-  String getConstructor() => CONSTRUCTOR;
-}
-
-class ChatActionTyping extends ChatAction {
-  /// The user is typing a message
-  ChatActionTyping();
-
-  /// Parse from a json
-  ChatActionTyping.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-    };
-  }
-
-  static const CONSTRUCTOR = 'chatActionTyping';
-
-  @override
-  String getConstructor() => CONSTRUCTOR;
-}
-
-class ChatActionRecordingVideo extends ChatAction {
-  /// The user is recording a video
-  ChatActionRecordingVideo();
-
-  /// Parse from a json
-  ChatActionRecordingVideo.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-    };
-  }
-
-  static const CONSTRUCTOR = 'chatActionRecordingVideo';
-
-  @override
-  String getConstructor() => CONSTRUCTOR;
-}
-
-class ChatActionUploadingVideo extends ChatAction {
-  /// The user is uploading a video
-  ChatActionUploadingVideo({this.progress});
-
-  /// [progress] Upload progress, as a percentage
-  int progress;
-
-  /// Parse from a json
-  ChatActionUploadingVideo.fromJson(Map<String, dynamic> json) {
-    this.progress = json['progress'];
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "progress": this.progress,
-    };
-  }
-
-  static const CONSTRUCTOR = 'chatActionUploadingVideo';
-
-  @override
-  String getConstructor() => CONSTRUCTOR;
-}
-
-class ChatActionRecordingVoiceNote extends ChatAction {
-  /// The user is recording a voice note
-  ChatActionRecordingVoiceNote();
-
-  /// Parse from a json
-  ChatActionRecordingVoiceNote.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-    };
-  }
-
-  static const CONSTRUCTOR = 'chatActionRecordingVoiceNote';
-
-  @override
-  String getConstructor() => CONSTRUCTOR;
-}
-
-class ChatActionUploadingVoiceNote extends ChatAction {
-  /// The user is uploading a voice note
-  ChatActionUploadingVoiceNote({this.progress});
-
-  /// [progress] Upload progress, as a percentage
-  int progress;
-
-  /// Parse from a json
-  ChatActionUploadingVoiceNote.fromJson(Map<String, dynamic> json) {
-    this.progress = json['progress'];
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "progress": this.progress,
-    };
-  }
-
-  static const CONSTRUCTOR = 'chatActionUploadingVoiceNote';
-
-  @override
-  String getConstructor() => CONSTRUCTOR;
-}
-
-class ChatActionUploadingPhoto extends ChatAction {
-  /// The user is uploading a photo
-  ChatActionUploadingPhoto({this.progress});
-
-  /// [progress] Upload progress, as a percentage
-  int progress;
-
-  /// Parse from a json
-  ChatActionUploadingPhoto.fromJson(Map<String, dynamic> json) {
-    this.progress = json['progress'];
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "progress": this.progress,
-    };
-  }
-
-  static const CONSTRUCTOR = 'chatActionUploadingPhoto';
-
-  @override
-  String getConstructor() => CONSTRUCTOR;
-}
-
-class ChatActionUploadingDocument extends ChatAction {
-  /// The user is uploading a document
-  ChatActionUploadingDocument({this.progress});
-
-  /// [progress] Upload progress, as a percentage
-  int progress;
-
-  /// Parse from a json
-  ChatActionUploadingDocument.fromJson(Map<String, dynamic> json) {
-    this.progress = json['progress'];
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "progress": this.progress,
-    };
-  }
-
-  static const CONSTRUCTOR = 'chatActionUploadingDocument';
-
-  @override
-  String getConstructor() => CONSTRUCTOR;
-}
-
-class ChatActionChoosingLocation extends ChatAction {
-  /// The user is picking a location or venue to send
-  ChatActionChoosingLocation();
-
-  /// Parse from a json
-  ChatActionChoosingLocation.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-    };
-  }
-
-  static const CONSTRUCTOR = 'chatActionChoosingLocation';
-
-  @override
-  String getConstructor() => CONSTRUCTOR;
-}
-
-class ChatActionChoosingContact extends ChatAction {
-  /// The user is picking a contact to send
-  ChatActionChoosingContact();
-
-  /// Parse from a json
-  ChatActionChoosingContact.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-    };
-  }
-
-  static const CONSTRUCTOR = 'chatActionChoosingContact';
-
-  @override
-  String getConstructor() => CONSTRUCTOR;
-}
-
-class ChatActionStartPlayingGame extends ChatAction {
-  /// The user has started to play a game
-  ChatActionStartPlayingGame();
-
-  /// Parse from a json
-  ChatActionStartPlayingGame.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-    };
-  }
-
-  static const CONSTRUCTOR = 'chatActionStartPlayingGame';
-
-  @override
-  String getConstructor() => CONSTRUCTOR;
-}
-
-class ChatActionRecordingVideoNote extends ChatAction {
-  /// The user is recording a video note
-  ChatActionRecordingVideoNote();
-
-  /// Parse from a json
-  ChatActionRecordingVideoNote.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-    };
-  }
-
-  static const CONSTRUCTOR = 'chatActionRecordingVideoNote';
-
-  @override
-  String getConstructor() => CONSTRUCTOR;
-}
-
-class ChatActionUploadingVideoNote extends ChatAction {
-  /// The user is uploading a video note
-  ChatActionUploadingVideoNote({this.progress});
-
-  /// [progress] Upload progress, as a percentage
-  int progress;
-
-  /// Parse from a json
-  ChatActionUploadingVideoNote.fromJson(Map<String, dynamic> json) {
-    this.progress = json['progress'];
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "progress": this.progress,
-    };
-  }
-
-  static const CONSTRUCTOR = 'chatActionUploadingVideoNote';
-
-  @override
-  String getConstructor() => CONSTRUCTOR;
-}
-
-class ChatActionCancel extends ChatAction {
-  /// The user has cancelled the previous action
-  ChatActionCancel();
-
-  /// Parse from a json
-  ChatActionCancel.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-    };
-  }
-
-  static const CONSTRUCTOR = 'chatActionCancel';
 
   @override
   String getConstructor() => CONSTRUCTOR;

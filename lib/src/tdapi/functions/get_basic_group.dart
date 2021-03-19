@@ -1,29 +1,24 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Returns information about a basic group by its identifier. This is an offline request if the current user is not a bot
 class GetBasicGroup extends TdFunction {
-  /// Returns information about a basic group by its identifier. This is an offline request if the current user is not a bot
-  GetBasicGroup({this.basicGroupId});
+  GetBasicGroup({required this.basicGroupId});
 
-  /// [basicGroupId] Basic group identifier
-  int basicGroupId;
+  /// basic_group_id Basic group identifier
+  final int basicGroupId;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  GetBasicGroup.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "basic_group_id": this.basicGroupId,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'getBasicGroup';
+  static const String CONSTRUCTOR = 'getBasicGroup';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'basic_group_id': this.basicGroupId,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

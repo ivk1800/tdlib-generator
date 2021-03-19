@@ -1,0 +1,44 @@
+part of '../tdapi.dart';
+
+/// Group.Objects
+/// The last message of a chat was changed. If last_message is null, then the last message in the chat became unknown. Some new unknown messages might be added to the chat in this case
+class UpdateChatLastMessage extends Update {
+  UpdateChatLastMessage(
+      {required this.chatId,
+      Message? this.lastMessage,
+      required this.positions});
+
+  /// chat_id Chat identifier
+  final int chatId;
+
+  /// last_message The new last message in the chat; may be null
+  final Message? lastMessage;
+
+  /// positions The new chat positions in the chat lists
+  final List<ChatPosition> positions;
+
+  static const String CONSTRUCTOR = 'updateChatLastMessage';
+
+  static UpdateChatLastMessage? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return UpdateChatLastMessage(
+        chatId: json['chat_id'],
+        lastMessage: Message.fromJson(json['last_message']),
+        positions: List<ChatPosition>.from((json['positions}'] ?? [])
+            .map((item) => ChatPosition.fromJson(json['ChatPosition'])!)
+            .toList()));
+  }
+
+  @override
+  String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'chat_id': this.chatId,
+        'last_message': this.lastMessage,
+        'positions': this.positions,
+        '@type': CONSTRUCTOR
+      };
+}

@@ -1,29 +1,21 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Deletes a file from the TDLib file cache
 class DeleteFile extends TdFunction {
-  /// Deletes a file from the TDLib file cache
-  DeleteFile({this.fileId});
+  DeleteFile({required this.fileId});
 
-  /// [fileId] Identifier of the file to delete
-  int fileId;
+  /// file_id Identifier of the file to delete
+  final int fileId;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  DeleteFile.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "file_id": this.fileId,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'deleteFile';
+  static const String CONSTRUCTOR = 'deleteFile';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'file_id': this.fileId, '@type': CONSTRUCTOR, '@extra': this.extra};
 }

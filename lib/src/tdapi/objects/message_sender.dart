@@ -1,13 +1,20 @@
 part of '../tdapi.dart';
 
-class MessageSender extends TdObject {
-  /// Contains information about the sender of a message
-  MessageSender();
+/// Group.Classes
+/// Contains information about the sender of a message
+abstract class MessageSender extends TdObject {
+  const MessageSender();
 
-  /// a MessageSender return type can be :
-  /// * MessageSenderUser
-  /// * MessageSenderChat
-  factory MessageSender.fromJson(Map<String, dynamic> json) {
+  static const String CONSTRUCTOR = 'messageSender';
+
+  /// Inherited by:
+  /// [MessageSenderUser]
+  /// [MessageSenderChat]
+  static MessageSender? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
     switch (json["@type"]) {
       case MessageSenderUser.CONSTRUCTOR:
         return MessageSenderUser.fromJson(json);
@@ -17,65 +24,6 @@ class MessageSender extends TdObject {
         return null;
     }
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {};
-  }
-
-  static const CONSTRUCTOR = 'messageSender';
-
-  @override
-  String getConstructor() => CONSTRUCTOR;
-}
-
-class MessageSenderUser extends MessageSender {
-  /// The message was sent by a known user
-  MessageSenderUser({this.userId});
-
-  /// [userId] Identifier of the user that sent the message
-  int userId;
-
-  /// Parse from a json
-  MessageSenderUser.fromJson(Map<String, dynamic> json) {
-    this.userId = json['user_id'];
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "user_id": this.userId,
-    };
-  }
-
-  static const CONSTRUCTOR = 'messageSenderUser';
-
-  @override
-  String getConstructor() => CONSTRUCTOR;
-}
-
-class MessageSenderChat extends MessageSender {
-  /// The message was sent on behalf of a chat
-  MessageSenderChat({this.chatId});
-
-  /// [chatId] Identifier of the chat that sent the message
-  int chatId;
-
-  /// Parse from a json
-  MessageSenderChat.fromJson(Map<String, dynamic> json) {
-    this.chatId = json['chat_id'];
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "chat_id": this.chatId,
-    };
-  }
-
-  static const CONSTRUCTOR = 'messageSenderChat';
 
   @override
   String getConstructor() => CONSTRUCTOR;

@@ -1,51 +1,45 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Sends an inline query to a bot and returns its results. Returns an error with code 502 if the bot fails to answer the query before the query timeout expires
 class GetInlineQueryResults extends TdFunction {
-  /// Sends an inline query to a bot and returns its results. Returns an error with code 502 if the bot fails to answer the query before the query timeout expires
   GetInlineQueryResults(
-      {this.botUserId,
-      this.chatId,
-      this.userLocation,
-      this.query,
-      this.offset});
+      {required this.botUserId,
+      required this.chatId,
+      required this.userLocation,
+      required this.query,
+      required this.offset});
 
-  /// [botUserId] The identifier of the target bot
-  int botUserId;
+  /// bot_user_id The identifier of the target bot
+  final int botUserId;
 
-  /// [chatId] Identifier of the chat where the query was sent
-  int chatId;
+  /// chat_id Identifier of the chat where the query was sent
+  final int chatId;
 
-  /// [userLocation] Location of the user, only if needed
-  Location userLocation;
+  /// user_location Location of the user, only if needed
+  final Location userLocation;
 
-  /// [query] Text of the query
-  String query;
+  /// query Text of the query
+  final String query;
 
-  /// [offset] Offset of the first entry to return
-  String offset;
+  /// offset Offset of the first entry to return
+  final String offset;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  GetInlineQueryResults.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "bot_user_id": this.botUserId,
-      "chat_id": this.chatId,
-      "user_location":
-          this.userLocation == null ? null : this.userLocation.toJson(),
-      "query": this.query,
-      "offset": this.offset,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'getInlineQueryResults';
+  static const String CONSTRUCTOR = 'getInlineQueryResults';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'bot_user_id': this.botUserId,
+        'chat_id': this.chatId,
+        'user_location': this.userLocation,
+        'query': this.query,
+        'offset': this.offset,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

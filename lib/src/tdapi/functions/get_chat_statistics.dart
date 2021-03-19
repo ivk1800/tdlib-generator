@@ -1,33 +1,28 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Returns detailed statistics about a chat. Currently this method can be used only for supergroups and channels. Can be used only if SupergroupFullInfo.can_get_statistics == true
 class GetChatStatistics extends TdFunction {
-  /// Returns detailed statistics about a chat. Currently this method can be used only for supergroups and channels. Can be used only if SupergroupFullInfo.can_get_statistics == true
-  GetChatStatistics({this.chatId, this.isDark});
+  GetChatStatistics({required this.chatId, required this.isDark});
 
-  /// [chatId] Chat identifier
-  int chatId;
+  /// chat_id Chat identifier
+  final int chatId;
 
-  /// [isDark] Pass true if a dark theme is used by the application
-  bool isDark;
+  /// is_dark Pass true if a dark theme is used by the application
+  final bool isDark;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  GetChatStatistics.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "chat_id": this.chatId,
-      "is_dark": this.isDark,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'getChatStatistics';
+  static const String CONSTRUCTOR = 'getChatStatistics';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'chat_id': this.chatId,
+        'is_dark': this.isDark,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

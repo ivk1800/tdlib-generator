@@ -1,33 +1,29 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Changes the order of installed sticker sets
 class ReorderInstalledStickerSets extends TdFunction {
-  /// Changes the order of installed sticker sets
-  ReorderInstalledStickerSets({this.isMasks, this.stickerSetIds});
+  ReorderInstalledStickerSets(
+      {required this.isMasks, required this.stickerSetIds});
 
-  /// [isMasks] Pass true to change the order of mask sticker sets; pass false to change the order of ordinary sticker sets
-  bool isMasks;
+  /// is_masks Pass true to change the order of mask sticker sets; pass false to change the order of ordinary sticker sets
+  final bool isMasks;
 
-  /// [stickerSetIds] Identifiers of installed sticker sets in the new correct order
-  List<int> stickerSetIds;
+  /// sticker_set_ids Identifiers of installed sticker sets in the new correct order
+  final List<int> stickerSetIds;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  ReorderInstalledStickerSets.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "is_masks": this.isMasks,
-      "sticker_set_ids": this.stickerSetIds.map((i) => i).toList(),
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'reorderInstalledStickerSets';
+  static const String CONSTRUCTOR = 'reorderInstalledStickerSets';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'is_masks': this.isMasks,
+        'sticker_set_ids': this.stickerSetIds,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

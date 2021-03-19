@@ -1,42 +1,40 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Creates a new supergroup or channel and sends a corresponding messageSupergroupChatCreate. Returns the newly created chat
 class CreateNewSupergroupChat extends TdFunction {
-  /// Creates a new supergroup or channel and sends a corresponding messageSupergroupChatCreate. Returns the newly created chat
   CreateNewSupergroupChat(
-      {this.title, this.isChannel, this.description, this.location});
+      {required this.title,
+      required this.isChannel,
+      required this.description,
+      required this.location});
 
-  /// [title] Title of the new chat; 1-128 characters
-  String title;
+  /// title Title of the new chat; 1-128 characters
+  final String title;
 
-  /// [isChannel] True, if a channel chat should be created
-  bool isChannel;
+  /// is_channel True, if a channel chat should be created
+  final bool isChannel;
 
-  /// [description] Chat description; 0-255 characters
-  String description;
+  /// param_description Chat description; 0-255 characters
+  final String description;
 
-  /// [location] Chat location if a location-based supergroup is being created
-  ChatLocation location;
+  /// location Chat location if a location-based supergroup is being created
+  final ChatLocation location;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  CreateNewSupergroupChat.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "title": this.title,
-      "is_channel": this.isChannel,
-      "description": this.description,
-      "location": this.location == null ? null : this.location.toJson(),
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'createNewSupergroupChat';
+  static const String CONSTRUCTOR = 'createNewSupergroupChat';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'title': this.title,
+        'is_channel': this.isChannel,
+        'description': this.description,
+        'location': this.location,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

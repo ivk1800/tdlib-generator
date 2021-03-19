@@ -1,37 +1,33 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Returns the high scores for a game and some part of the high score table in the range of the specified user; for bots only
 class GetGameHighScores extends TdFunction {
-  /// Returns the high scores for a game and some part of the high score table in the range of the specified user; for bots only
-  GetGameHighScores({this.chatId, this.messageId, this.userId});
+  GetGameHighScores(
+      {required this.chatId, required this.messageId, required this.userId});
 
-  /// [chatId] The chat that contains the message with the game
-  int chatId;
+  /// chat_id The chat that contains the message with the game
+  final int chatId;
 
-  /// [messageId] Identifier of the message
-  int messageId;
+  /// message_id Identifier of the message
+  final int messageId;
 
-  /// [userId] User identifier
-  int userId;
+  /// user_id User identifier
+  final int userId;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  GetGameHighScores.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "chat_id": this.chatId,
-      "message_id": this.messageId,
-      "user_id": this.userId,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'getGameHighScores';
+  static const String CONSTRUCTOR = 'getGameHighScores';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'chat_id': this.chatId,
+        'message_id': this.messageId,
+        'user_id': this.userId,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

@@ -1,37 +1,33 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Sends phone number confirmation code. Should be called when user presses "https://t.me/confirmphone?phone=*******&hash=**********" or "tg://confirmphone?phone=*******&hash=**********" link
 class SendPhoneNumberConfirmationCode extends TdFunction {
-  /// Sends phone number confirmation code. Should be called when user presses "https://t.me/confirmphone?phone=*******&hash=**********" or "tg://confirmphone?phone=*******&hash=**********" link
-  SendPhoneNumberConfirmationCode({this.hash, this.phoneNumber, this.settings});
+  SendPhoneNumberConfirmationCode(
+      {required this.hash, required this.phoneNumber, required this.settings});
 
-  /// [hash] Value of the "hash" parameter from the link
-  String hash;
+  /// hash Value of the "hash" parameter from the link
+  final String hash;
 
-  /// [phoneNumber] Value of the "phone" parameter from the link
-  String phoneNumber;
+  /// phone_number Value of the "phone" parameter from the link
+  final String phoneNumber;
 
-  /// [settings] Settings for the authentication of the user's phone number
-  PhoneNumberAuthenticationSettings settings;
+  /// settings Settings for the authentication of the user's phone number
+  final PhoneNumberAuthenticationSettings settings;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  SendPhoneNumberConfirmationCode.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "hash": this.hash,
-      "phone_number": this.phoneNumber,
-      "settings": this.settings == null ? null : this.settings.toJson(),
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'sendPhoneNumberConfirmationCode';
+  static const String CONSTRUCTOR = 'sendPhoneNumberConfirmationCode';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'hash': this.hash,
+        'phone_number': this.phoneNumber,
+        'settings': this.settings,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

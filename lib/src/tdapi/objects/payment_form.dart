@@ -1,74 +1,67 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains information about an invoice payment form
 class PaymentForm extends TdObject {
-  /// Contains information about an invoice payment form
   PaymentForm(
-      {this.invoice,
-      this.url,
-      this.paymentsProvider,
-      this.savedOrderInfo,
-      this.savedCredentials,
-      this.canSaveCredentials,
-      this.needPassword});
+      {required this.invoice,
+      required this.url,
+      PaymentsProviderStripe? this.paymentsProvider,
+      OrderInfo? this.savedOrderInfo,
+      SavedCredentials? this.savedCredentials,
+      required this.canSaveCredentials,
+      required this.needPassword});
 
-  /// [invoice] Full information of the invoice
-  Invoice invoice;
+  /// invoice Full information of the invoice
+  final Invoice invoice;
 
-  /// [url] Payment form URL
-  String url;
+  /// url Payment form URL
+  final String url;
 
-  /// [paymentsProvider] Contains information about the payment provider, if available, to support it natively without the need for opening the URL; may be null
-  PaymentsProviderStripe paymentsProvider;
+  /// payments_provider Contains information about the payment provider, if available, to support it natively without the need for opening the URL; may be null
+  final PaymentsProviderStripe? paymentsProvider;
 
-  /// [savedOrderInfo] Saved server-side order information; may be null
-  OrderInfo savedOrderInfo;
+  /// saved_order_info Saved server-side order information; may be null
+  final OrderInfo? savedOrderInfo;
 
-  /// [savedCredentials] Contains information about saved card credentials; may be null
-  SavedCredentials savedCredentials;
+  /// saved_credentials Contains information about saved card credentials; may be null
+  final SavedCredentials? savedCredentials;
 
-  /// [canSaveCredentials] True, if the user can choose to save credentials
-  bool canSaveCredentials;
+  /// can_save_credentials True, if the user can choose to save credentials
+  final bool canSaveCredentials;
 
-  /// [needPassword] True, if the user will be able to save credentials protected by a password they set up
-  bool needPassword;
+  /// need_password True, if the user will be able to save credentials protected by a password they set up
+  final bool needPassword;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'paymentForm';
 
-  /// Parse from a json
-  PaymentForm.fromJson(Map<String, dynamic> json) {
-    this.invoice = Invoice.fromJson(json['invoice'] ?? <String, dynamic>{});
-    this.url = json['url'];
-    this.paymentsProvider = PaymentsProviderStripe.fromJson(
-        json['payments_provider'] ?? <String, dynamic>{});
-    this.savedOrderInfo =
-        OrderInfo.fromJson(json['saved_order_info'] ?? <String, dynamic>{});
-    this.savedCredentials = SavedCredentials.fromJson(
-        json['saved_credentials'] ?? <String, dynamic>{});
-    this.canSaveCredentials = json['can_save_credentials'];
-    this.needPassword = json['need_password'];
-    this.extra = json['@extra'];
+  static PaymentForm? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return PaymentForm(
+        invoice: Invoice.fromJson(json['invoice'])!,
+        url: json['url'],
+        paymentsProvider:
+            PaymentsProviderStripe.fromJson(json['payments_provider']),
+        savedOrderInfo: OrderInfo.fromJson(json['saved_order_info']),
+        savedCredentials: SavedCredentials.fromJson(json['saved_credentials']),
+        canSaveCredentials: json['can_save_credentials'],
+        needPassword: json['need_password']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "invoice": this.invoice == null ? null : this.invoice.toJson(),
-      "url": this.url,
-      "payments_provider":
-          this.paymentsProvider == null ? null : this.paymentsProvider.toJson(),
-      "saved_order_info":
-          this.savedOrderInfo == null ? null : this.savedOrderInfo.toJson(),
-      "saved_credentials":
-          this.savedCredentials == null ? null : this.savedCredentials.toJson(),
-      "can_save_credentials": this.canSaveCredentials,
-      "need_password": this.needPassword,
-    };
-  }
-
-  static const CONSTRUCTOR = 'paymentForm';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'invoice': this.invoice,
+        'url': this.url,
+        'payments_provider': this.paymentsProvider,
+        'saved_order_info': this.savedOrderInfo,
+        'saved_credentials': this.savedCredentials,
+        'can_save_credentials': this.canSaveCredentials,
+        'need_password': this.needPassword,
+        '@type': CONSTRUCTOR
+      };
 }

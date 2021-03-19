@@ -1,29 +1,24 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Recovers the password using a recovery code sent to an email address that was previously set up
 class RecoverPassword extends TdFunction {
-  /// Recovers the password using a recovery code sent to an email address that was previously set up
-  RecoverPassword({this.recoveryCode});
+  RecoverPassword({required this.recoveryCode});
 
-  /// [recoveryCode] Recovery code to check
-  String recoveryCode;
+  /// recovery_code Recovery code to check
+  final String recoveryCode;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  RecoverPassword.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "recovery_code": this.recoveryCode,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'recoverPassword';
+  static const String CONSTRUCTOR = 'recoverPassword';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'recovery_code': this.recoveryCode,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

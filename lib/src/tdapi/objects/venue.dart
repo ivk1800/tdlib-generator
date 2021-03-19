@@ -1,58 +1,60 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Describes a venue
 class Venue extends TdObject {
-  /// Describes a venue
   Venue(
-      {this.location,
-      this.title,
-      this.address,
-      this.provider,
-      this.id,
-      this.type});
+      {required this.location,
+      required this.title,
+      required this.address,
+      required this.provider,
+      required this.id,
+      required this.type});
 
-  /// [location] Venue location; as defined by the sender
-  Location location;
+  /// location Venue location; as defined by the sender
+  final Location location;
 
-  /// [title] Venue name; as defined by the sender
-  String title;
+  /// title Venue name; as defined by the sender
+  final String title;
 
-  /// [address] Venue address; as defined by the sender
-  String address;
+  /// address Venue address; as defined by the sender
+  final String address;
 
-  /// [provider] Provider of the venue database; as defined by the sender. Currently only "foursquare" and "gplaces" (Google Places) need to be supported
-  String provider;
+  /// provider Provider of the venue database; as defined by the sender. Currently only "foursquare" and "gplaces" (Google Places) need to be supported
+  final String provider;
 
-  /// [id] Identifier of the venue in the provider database; as defined by the sender
-  String id;
+  /// id Identifier of the venue in the provider database; as defined by the sender
+  final String id;
 
-  /// [type] Type of the venue in the provider database; as defined by the sender
-  String type;
+  /// type Type of the venue in the provider database; as defined by the sender
+  final String type;
 
-  /// Parse from a json
-  Venue.fromJson(Map<String, dynamic> json) {
-    this.location = Location.fromJson(json['location'] ?? <String, dynamic>{});
-    this.title = json['title'];
-    this.address = json['address'];
-    this.provider = json['provider'];
-    this.id = json['id'];
-    this.type = json['type'];
+  static const String CONSTRUCTOR = 'venue';
+
+  static Venue? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return Venue(
+        location: Location.fromJson(json['location'])!,
+        title: json['title'],
+        address: json['address'],
+        provider: json['provider'],
+        id: json['id'],
+        type: json['type']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "location": this.location == null ? null : this.location.toJson(),
-      "title": this.title,
-      "address": this.address,
-      "provider": this.provider,
-      "id": this.id,
-      "type": this.type,
-    };
-  }
-
-  static const CONSTRUCTOR = 'venue';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'location': this.location,
+        'title': this.title,
+        'address': this.address,
+        'provider': this.provider,
+        'id': this.id,
+        'type': this.type,
+        '@type': CONSTRUCTOR
+      };
 }

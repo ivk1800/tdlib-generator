@@ -1,29 +1,21 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Returns a 2-step verification recovery email address that was previously set up. This method can be used to verify a password provided by the user
 class GetRecoveryEmailAddress extends TdFunction {
-  /// Returns a 2-step verification recovery email address that was previously set up. This method can be used to verify a password provided by the user
-  GetRecoveryEmailAddress({this.password});
+  GetRecoveryEmailAddress({required this.password});
 
-  /// [password] The password for the current user
-  String password;
+  /// password The password for the current user
+  final String password;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  GetRecoveryEmailAddress.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "password": this.password,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'getRecoveryEmailAddress';
+  static const String CONSTRUCTOR = 'getRecoveryEmailAddress';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'password': this.password, '@type': CONSTRUCTOR, '@extra': this.extra};
 }

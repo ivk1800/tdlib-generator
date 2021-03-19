@@ -1,32 +1,34 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains statistics about number of new members invited by a user
 class ChatStatisticsInviterInfo extends TdObject {
-  /// Contains statistics about number of new members invited by a user
-  ChatStatisticsInviterInfo({this.userId, this.addedMemberCount});
+  ChatStatisticsInviterInfo(
+      {required this.userId, required this.addedMemberCount});
 
-  /// [userId] User identifier
-  int userId;
+  /// user_id User identifier
+  final int userId;
 
-  /// [addedMemberCount] Number of new members invited by the user
-  int addedMemberCount;
+  /// added_member_count Number of new members invited by the user
+  final int addedMemberCount;
 
-  /// Parse from a json
-  ChatStatisticsInviterInfo.fromJson(Map<String, dynamic> json) {
-    this.userId = json['user_id'];
-    this.addedMemberCount = json['added_member_count'];
+  static const String CONSTRUCTOR = 'chatStatisticsInviterInfo';
+
+  static ChatStatisticsInviterInfo? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return ChatStatisticsInviterInfo(
+        userId: json['user_id'], addedMemberCount: json['added_member_count']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "user_id": this.userId,
-      "added_member_count": this.addedMemberCount,
-    };
-  }
-
-  static const CONSTRUCTOR = 'chatStatisticsInviterInfo';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'user_id': this.userId,
+        'added_member_count': this.addedMemberCount,
+        '@type': CONSTRUCTOR
+      };
 }

@@ -1,42 +1,40 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Validates the order information provided by a user and returns the available shipping options for a flexible invoice
 class ValidateOrderInfo extends TdFunction {
-  /// Validates the order information provided by a user and returns the available shipping options for a flexible invoice
   ValidateOrderInfo(
-      {this.chatId, this.messageId, this.orderInfo, this.allowSave});
+      {required this.chatId,
+      required this.messageId,
+      required this.orderInfo,
+      required this.allowSave});
 
-  /// [chatId] Chat identifier of the Invoice message
-  int chatId;
+  /// chat_id Chat identifier of the Invoice message
+  final int chatId;
 
-  /// [messageId] Message identifier
-  int messageId;
+  /// message_id Message identifier
+  final int messageId;
 
-  /// [orderInfo] The order information, provided by the user
-  OrderInfo orderInfo;
+  /// order_info The order information, provided by the user
+  final OrderInfo orderInfo;
 
-  /// [allowSave] True, if the order information can be saved
-  bool allowSave;
+  /// allow_save True, if the order information can be saved
+  final bool allowSave;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  ValidateOrderInfo.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "chat_id": this.chatId,
-      "message_id": this.messageId,
-      "order_info": this.orderInfo == null ? null : this.orderInfo.toJson(),
-      "allow_save": this.allowSave,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'validateOrderInfo';
+  static const String CONSTRUCTOR = 'validateOrderInfo';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'chat_id': this.chatId,
+        'message_id': this.messageId,
+        'order_info': this.orderInfo,
+        'allow_save': this.allowSave,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

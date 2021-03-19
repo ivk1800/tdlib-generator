@@ -1,56 +1,54 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains approximate storage usage statistics, excluding files of unknown file type
 class StorageStatisticsFast extends TdObject {
-  /// Contains approximate storage usage statistics, excluding files of unknown file type
   StorageStatisticsFast(
-      {this.filesSize,
-      this.fileCount,
-      this.databaseSize,
-      this.languagePackDatabaseSize,
-      this.logSize});
+      {required this.filesSize,
+      required this.fileCount,
+      required this.databaseSize,
+      required this.languagePackDatabaseSize,
+      required this.logSize});
 
-  /// [filesSize] Approximate total size of files
-  int filesSize;
+  /// files_size Approximate total size of files
+  final int filesSize;
 
-  /// [fileCount] Approximate number of files
-  int fileCount;
+  /// file_count Approximate number of files
+  final int fileCount;
 
-  /// [databaseSize] Size of the database
-  int databaseSize;
+  /// database_size Size of the database
+  final int databaseSize;
 
-  /// [languagePackDatabaseSize] Size of the language pack database
-  int languagePackDatabaseSize;
+  /// language_pack_database_size Size of the language pack database
+  final int languagePackDatabaseSize;
 
-  /// [logSize] Size of the TDLib internal log
-  int logSize;
+  /// log_size Size of the TDLib internal log
+  final int logSize;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'storageStatisticsFast';
 
-  /// Parse from a json
-  StorageStatisticsFast.fromJson(Map<String, dynamic> json) {
-    this.filesSize = json['files_size'];
-    this.fileCount = json['file_count'];
-    this.databaseSize = json['database_size'];
-    this.languagePackDatabaseSize = json['language_pack_database_size'];
-    this.logSize = json['log_size'];
-    this.extra = json['@extra'];
+  static StorageStatisticsFast? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return StorageStatisticsFast(
+        filesSize: json['files_size'],
+        fileCount: json['file_count'],
+        databaseSize: json['database_size'],
+        languagePackDatabaseSize: json['language_pack_database_size'],
+        logSize: json['log_size']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "files_size": this.filesSize,
-      "file_count": this.fileCount,
-      "database_size": this.databaseSize,
-      "language_pack_database_size": this.languagePackDatabaseSize,
-      "log_size": this.logSize,
-    };
-  }
-
-  static const CONSTRUCTOR = 'storageStatisticsFast';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'files_size': this.filesSize,
+        'file_count': this.fileCount,
+        'database_size': this.databaseSize,
+        'language_pack_database_size': this.languagePackDatabaseSize,
+        'log_size': this.logSize,
+        '@type': CONSTRUCTOR
+      };
 }

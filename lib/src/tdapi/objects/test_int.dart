@@ -1,31 +1,25 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// A simple object containing a number; for testing only
 class TestInt extends TdObject {
-  /// A simple object containing a number; for testing only
-  TestInt({this.value});
+  TestInt({required this.value});
 
-  /// [value] Number
-  int value;
+  /// value Number
+  final int value;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'testInt';
 
-  /// Parse from a json
-  TestInt.fromJson(Map<String, dynamic> json) {
-    this.value = json['value'];
-    this.extra = json['@extra'];
+  static TestInt? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return TestInt(value: json['value']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "value": this.value,
-    };
-  }
-
-  static const CONSTRUCTOR = 'testInt';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {'value': this.value, '@type': CONSTRUCTOR};
 }

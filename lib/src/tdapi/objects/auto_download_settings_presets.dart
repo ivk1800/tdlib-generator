@@ -1,44 +1,40 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains auto-download settings presets for the user
 class AutoDownloadSettingsPresets extends TdObject {
-  /// Contains auto-download settings presets for the user
-  AutoDownloadSettingsPresets({this.low, this.medium, this.high});
+  AutoDownloadSettingsPresets(
+      {required this.low, required this.medium, required this.high});
 
-  /// [low] Preset with lowest settings; supposed to be used by default when roaming
-  AutoDownloadSettings low;
+  /// low Preset with lowest settings; supposed to be used by default when roaming
+  final AutoDownloadSettings low;
 
-  /// [medium] Preset with medium settings; supposed to be used by default when using mobile data
-  AutoDownloadSettings medium;
+  /// medium Preset with medium settings; supposed to be used by default when using mobile data
+  final AutoDownloadSettings medium;
 
-  /// [high] Preset with highest settings; supposed to be used by default when connected on Wi-Fi
-  AutoDownloadSettings high;
+  /// high Preset with highest settings; supposed to be used by default when connected on Wi-Fi
+  final AutoDownloadSettings high;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'autoDownloadSettingsPresets';
 
-  /// Parse from a json
-  AutoDownloadSettingsPresets.fromJson(Map<String, dynamic> json) {
-    this.low =
-        AutoDownloadSettings.fromJson(json['low'] ?? <String, dynamic>{});
-    this.medium =
-        AutoDownloadSettings.fromJson(json['medium'] ?? <String, dynamic>{});
-    this.high =
-        AutoDownloadSettings.fromJson(json['high'] ?? <String, dynamic>{});
-    this.extra = json['@extra'];
+  static AutoDownloadSettingsPresets? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return AutoDownloadSettingsPresets(
+        low: AutoDownloadSettings.fromJson(json['low'])!,
+        medium: AutoDownloadSettings.fromJson(json['medium'])!,
+        high: AutoDownloadSettings.fromJson(json['high'])!);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "low": this.low == null ? null : this.low.toJson(),
-      "medium": this.medium == null ? null : this.medium.toJson(),
-      "high": this.high == null ? null : this.high.toJson(),
-    };
-  }
-
-  static const CONSTRUCTOR = 'autoDownloadSettingsPresets';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'low': this.low,
+        'medium': this.medium,
+        'high': this.high,
+        '@type': CONSTRUCTOR
+      };
 }

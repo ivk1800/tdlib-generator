@@ -1,13 +1,20 @@
 part of '../tdapi.dart';
 
-class PublicChatType extends TdObject {
-  /// Describes a type of public chats
-  PublicChatType();
+/// Group.Classes
+/// Describes a type of public chats
+abstract class PublicChatType extends TdObject {
+  const PublicChatType();
 
-  /// a PublicChatType return type can be :
-  /// * PublicChatTypeHasUsername
-  /// * PublicChatTypeIsLocationBased
-  factory PublicChatType.fromJson(Map<String, dynamic> json) {
+  static const String CONSTRUCTOR = 'publicChatType';
+
+  /// Inherited by:
+  /// [PublicChatTypeHasUsername]
+  /// [PublicChatTypeIsLocationBased]
+  static PublicChatType? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
     switch (json["@type"]) {
       case PublicChatTypeHasUsername.CONSTRUCTOR:
         return PublicChatTypeHasUsername.fromJson(json);
@@ -17,53 +24,6 @@ class PublicChatType extends TdObject {
         return null;
     }
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {};
-  }
-
-  static const CONSTRUCTOR = 'publicChatType';
-
-  @override
-  String getConstructor() => CONSTRUCTOR;
-}
-
-class PublicChatTypeHasUsername extends PublicChatType {
-  /// The chat is public, because it has username
-  PublicChatTypeHasUsername();
-
-  /// Parse from a json
-  PublicChatTypeHasUsername.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-    };
-  }
-
-  static const CONSTRUCTOR = 'publicChatTypeHasUsername';
-
-  @override
-  String getConstructor() => CONSTRUCTOR;
-}
-
-class PublicChatTypeIsLocationBased extends PublicChatType {
-  /// The chat is public, because it is a location-based supergroup
-  PublicChatTypeIsLocationBased();
-
-  /// Parse from a json
-  PublicChatTypeIsLocationBased.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-    };
-  }
-
-  static const CONSTRUCTOR = 'publicChatTypeIsLocationBased';
 
   @override
   String getConstructor() => CONSTRUCTOR;

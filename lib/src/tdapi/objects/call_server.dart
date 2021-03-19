@@ -1,47 +1,54 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Describes a server for relaying call data
 class CallServer extends TdObject {
-  /// Describes a server for relaying call data
-  CallServer({this.id, this.ipAddress, this.ipv6Address, this.port, this.type});
+  CallServer(
+      {required this.id,
+      required this.ipAddress,
+      required this.ipv6Address,
+      required this.port,
+      required this.type});
 
-  /// [id] Server identifier
-  int id;
+  /// id Server identifier
+  final int id;
 
-  /// [ipAddress] Server IPv4 address
-  String ipAddress;
+  /// ip_address Server IPv4 address
+  final String ipAddress;
 
-  /// [ipv6Address] Server IPv6 address
-  String ipv6Address;
+  /// ipv6_address Server IPv6 address
+  final String ipv6Address;
 
-  /// [port] Server port number
-  int port;
+  /// port Server port number
+  final int port;
 
-  /// [type] Server type
-  CallServerType type;
+  /// type Server type
+  final CallServerType type;
 
-  /// Parse from a json
-  CallServer.fromJson(Map<String, dynamic> json) {
-    this.id = int.tryParse(json['id'] ?? "");
-    this.ipAddress = json['ip_address'];
-    this.ipv6Address = json['ipv6_address'];
-    this.port = json['port'];
-    this.type = CallServerType.fromJson(json['type'] ?? <String, dynamic>{});
+  static const String CONSTRUCTOR = 'callServer';
+
+  static CallServer? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return CallServer(
+        id: int.tryParse(json['id']) ?? 0,
+        ipAddress: json['ip_address'],
+        ipv6Address: json['ipv6_address'],
+        port: json['port'],
+        type: CallServerType.fromJson(json['type'])!);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "id": this.id,
-      "ip_address": this.ipAddress,
-      "ipv6_address": this.ipv6Address,
-      "port": this.port,
-      "type": this.type == null ? null : this.type.toJson(),
-    };
-  }
-
-  static const CONSTRUCTOR = 'callServer';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'id': this.id,
+        'ip_address': this.ipAddress,
+        'ipv6_address': this.ipv6Address,
+        'port': this.port,
+        'type': this.type,
+        '@type': CONSTRUCTOR
+      };
 }

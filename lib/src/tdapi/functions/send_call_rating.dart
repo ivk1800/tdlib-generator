@@ -1,41 +1,40 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Sends a call rating
 class SendCallRating extends TdFunction {
-  /// Sends a call rating
-  SendCallRating({this.callId, this.rating, this.comment, this.problems});
+  SendCallRating(
+      {required this.callId,
+      required this.rating,
+      required this.comment,
+      required this.problems});
 
-  /// [callId] Call identifier
-  int callId;
+  /// call_id Call identifier
+  final int callId;
 
-  /// [rating] Call rating; 1-5
-  int rating;
+  /// rating Call rating; 1-5
+  final int rating;
 
-  /// [comment] An optional user comment if the rating is less than 5
-  String comment;
+  /// comment An optional user comment if the rating is less than 5
+  final String comment;
 
-  /// [problems] List of the exact types of problems with the call, specified by the user
-  List<CallProblem> problems;
+  /// problems List of the exact types of problems with the call, specified by the user
+  final List<CallProblem> problems;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  SendCallRating.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "call_id": this.callId,
-      "rating": this.rating,
-      "comment": this.comment,
-      "problems": this.problems.map((i) => i.toJson()).toList(),
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'sendCallRating';
+  static const String CONSTRUCTOR = 'sendCallRating';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'call_id': this.callId,
+        'rating': this.rating,
+        'comment': this.comment,
+        'problems': this.problems,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

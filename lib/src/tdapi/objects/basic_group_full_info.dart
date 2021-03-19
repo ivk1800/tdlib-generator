@@ -1,58 +1,56 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains full information about a basic group
 class BasicGroupFullInfo extends TdObject {
-  /// Contains full information about a basic group
   BasicGroupFullInfo(
-      {this.photo,
-      this.description,
-      this.creatorUserId,
-      this.members,
-      this.inviteLink});
+      {ChatPhoto? this.photo,
+      required this.description,
+      required this.creatorUserId,
+      required this.members,
+      required this.inviteLink});
 
-  /// [photo] Chat photo; may be null
-  ChatPhoto photo;
+  /// photo Chat photo; may be null
+  final ChatPhoto? photo;
 
-  /// [description] Group description
-  String description;
+  /// param_description Group description
+  final String description;
 
-  /// [creatorUserId] User identifier of the creator of the group; 0 if unknown
-  int creatorUserId;
+  /// creator_user_id User identifier of the creator of the group; 0 if unknown
+  final int creatorUserId;
 
-  /// [members] Group members
-  List<ChatMember> members;
+  /// members Group members
+  final List<ChatMember> members;
 
-  /// [inviteLink] Invite link for this group; available only after it has been generated at least once and only for the group creator
-  String inviteLink;
+  /// invite_link Invite link for this group; available only after it has been generated at least once and only for the group creator
+  final String inviteLink;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'basicGroupFullInfo';
 
-  /// Parse from a json
-  BasicGroupFullInfo.fromJson(Map<String, dynamic> json) {
-    this.photo = ChatPhoto.fromJson(json['photo'] ?? <String, dynamic>{});
-    this.description = json['description'];
-    this.creatorUserId = json['creator_user_id'];
-    this.members = List<ChatMember>.from((json['members'] ?? [])
-        .map((item) => ChatMember.fromJson(item ?? <String, dynamic>{}))
-        .toList());
-    this.inviteLink = json['invite_link'];
-    this.extra = json['@extra'];
+  static BasicGroupFullInfo? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return BasicGroupFullInfo(
+        photo: ChatPhoto.fromJson(json['photo']),
+        description: json['description'],
+        creatorUserId: json['creator_user_id'],
+        members: List<ChatMember>.from((json['members}'] ?? [])
+            .map((item) => ChatMember.fromJson(json['ChatMember'])!)
+            .toList()),
+        inviteLink: json['invite_link']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "photo": this.photo == null ? null : this.photo.toJson(),
-      "description": this.description,
-      "creator_user_id": this.creatorUserId,
-      "members": this.members.map((i) => i.toJson()).toList(),
-      "invite_link": this.inviteLink,
-    };
-  }
-
-  static const CONSTRUCTOR = 'basicGroupFullInfo';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'photo': this.photo,
+        'description': this.description,
+        'creator_user_id': this.creatorUserId,
+        'members': this.members,
+        'invite_link': this.inviteLink,
+        '@type': CONSTRUCTOR
+      };
 }

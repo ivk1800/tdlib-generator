@@ -1,29 +1,24 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Sets the parameters for TDLib initialization. Works only when the current authorization state is authorizationStateWaitTdlibParameters
 class SetTdlibParameters extends TdFunction {
-  /// Sets the parameters for TDLib initialization. Works only when the current authorization state is authorizationStateWaitTdlibParameters
-  SetTdlibParameters({this.parameters});
+  SetTdlibParameters({required this.parameters});
 
-  /// [parameters] Parameters
-  TdlibParameters parameters;
+  /// parameters Parameters
+  final TdlibParameters parameters;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  SetTdlibParameters.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "parameters": this.parameters == null ? null : this.parameters.toJson(),
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'setTdlibParameters';
+  static const String CONSTRUCTOR = 'setTdlibParameters';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'parameters': this.parameters,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

@@ -1,31 +1,25 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains a globally unique push receiver identifier, which can be used to identify which account has received a push notification
 class PushReceiverId extends TdObject {
-  /// Contains a globally unique push receiver identifier, which can be used to identify which account has received a push notification
-  PushReceiverId({this.id});
+  PushReceiverId({required this.id});
 
-  /// [id] The globally unique identifier of push notification subscription
-  int id;
+  /// id The globally unique identifier of push notification subscription
+  final int id;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'pushReceiverId';
 
-  /// Parse from a json
-  PushReceiverId.fromJson(Map<String, dynamic> json) {
-    this.id = int.tryParse(json['id'] ?? "");
-    this.extra = json['@extra'];
+  static PushReceiverId? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return PushReceiverId(id: int.tryParse(json['id']) ?? 0);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "id": this.id,
-    };
-  }
-
-  static const CONSTRUCTOR = 'pushReceiverId';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {'id': this.id, '@type': CONSTRUCTOR};
 }

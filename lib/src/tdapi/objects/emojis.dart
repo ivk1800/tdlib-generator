@@ -1,32 +1,28 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Represents a list of emoji
 class Emojis extends TdObject {
-  /// Represents a list of emoji
-  Emojis({this.emojis});
+  Emojis({required this.emojis});
 
-  /// [emojis] List of emojis
-  List<String> emojis;
+  /// emojis List of emojis
+  final List<String> emojis;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'emojis';
 
-  /// Parse from a json
-  Emojis.fromJson(Map<String, dynamic> json) {
-    this.emojis =
-        List<String>.from((json['emojis'] ?? []).map((item) => item).toList());
-    this.extra = json['@extra'];
+  static Emojis? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return Emojis(
+        emojis: List<String>.from(
+            (json['emojis}'] ?? []).map((item) => json['String']).toList()));
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "emojis": this.emojis.map((i) => i).toList(),
-    };
-  }
-
-  static const CONSTRUCTOR = 'emojis';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'emojis': this.emojis, '@type': CONSTRUCTOR};
 }

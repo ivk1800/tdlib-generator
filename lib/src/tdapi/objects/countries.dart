@@ -1,33 +1,29 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains information about countries
 class Countries extends TdObject {
-  /// Contains information about countries
-  Countries({this.countries});
+  Countries({required this.countries});
 
-  /// [countries] The list of countries
-  List<CountryInfo> countries;
+  /// countries The list of countries
+  final List<CountryInfo> countries;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'countries';
 
-  /// Parse from a json
-  Countries.fromJson(Map<String, dynamic> json) {
-    this.countries = List<CountryInfo>.from((json['countries'] ?? [])
-        .map((item) => CountryInfo.fromJson(item ?? <String, dynamic>{}))
-        .toList());
-    this.extra = json['@extra'];
+  static Countries? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return Countries(
+        countries: List<CountryInfo>.from((json['countries}'] ?? [])
+            .map((item) => CountryInfo.fromJson(json['CountryInfo'])!)
+            .toList()));
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "countries": this.countries.map((i) => i.toJson()).toList(),
-    };
-  }
-
-  static const CONSTRUCTOR = 'countries';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'countries': this.countries, '@type': CONSTRUCTOR};
 }

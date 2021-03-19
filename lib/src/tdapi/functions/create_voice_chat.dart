@@ -1,29 +1,21 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Creates a voice chat (a group call bound to a chat). Available only for basic groups and supergroups; requires can_manage_voice_chats rights
 class CreateVoiceChat extends TdFunction {
-  /// Creates a voice chat (a group call bound to a chat). Available only for basic groups and supergroups; requires can_manage_voice_chats rights
-  CreateVoiceChat({this.chatId});
+  CreateVoiceChat({required this.chatId});
 
-  /// [chatId] Chat identifier
-  int chatId;
+  /// chat_id Chat identifier
+  final int chatId;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  CreateVoiceChat.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "chat_id": this.chatId,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'createVoiceChat';
+  static const String CONSTRUCTOR = 'createVoiceChat';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'chat_id': this.chatId, '@type': CONSTRUCTOR, '@extra': this.extra};
 }

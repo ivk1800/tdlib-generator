@@ -1,29 +1,21 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Returns all scheduled messages in a chat. The messages are returned in a reverse chronological order (i.e., in order of decreasing message_id)
 class GetChatScheduledMessages extends TdFunction {
-  /// Returns all scheduled messages in a chat. The messages are returned in a reverse chronological order (i.e., in order of decreasing message_id)
-  GetChatScheduledMessages({this.chatId});
+  GetChatScheduledMessages({required this.chatId});
 
-  /// [chatId] Chat identifier
-  int chatId;
+  /// chat_id Chat identifier
+  final int chatId;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  GetChatScheduledMessages.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "chat_id": this.chatId,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'getChatScheduledMessages';
+  static const String CONSTRUCTOR = 'getChatScheduledMessages';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'chat_id': this.chatId, '@type': CONSTRUCTOR, '@extra': this.extra};
 }

@@ -1,37 +1,40 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Describes a payload fingerprint for interaction with tgcalls
 class GroupCallPayloadFingerprint extends TdObject {
-  /// Describes a payload fingerprint for interaction with tgcalls
-  GroupCallPayloadFingerprint({this.hash, this.setup, this.fingerprint});
+  GroupCallPayloadFingerprint(
+      {required this.hash, required this.setup, required this.fingerprint});
 
-  /// [hash] Value of the field hash
-  String hash;
+  /// hash Value of the field hash
+  final String hash;
 
-  /// [setup] Value of the field setup
-  String setup;
+  /// setup Value of the field setup
+  final String setup;
 
-  /// [fingerprint] Value of the field fingerprint
-  String fingerprint;
+  /// fingerprint Value of the field fingerprint
+  final String fingerprint;
 
-  /// Parse from a json
-  GroupCallPayloadFingerprint.fromJson(Map<String, dynamic> json) {
-    this.hash = json['hash'];
-    this.setup = json['setup'];
-    this.fingerprint = json['fingerprint'];
+  static const String CONSTRUCTOR = 'groupCallPayloadFingerprint';
+
+  static GroupCallPayloadFingerprint? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return GroupCallPayloadFingerprint(
+        hash: json['hash'],
+        setup: json['setup'],
+        fingerprint: json['fingerprint']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "hash": this.hash,
-      "setup": this.setup,
-      "fingerprint": this.fingerprint,
-    };
-  }
-
-  static const CONSTRUCTOR = 'groupCallPayloadFingerprint';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'hash': this.hash,
+        'setup': this.setup,
+        'fingerprint': this.fingerprint,
+        '@type': CONSTRUCTOR
+      };
 }

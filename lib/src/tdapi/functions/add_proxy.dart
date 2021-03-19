@@ -1,41 +1,40 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Adds a proxy server for network requests. Can be called before authorization
 class AddProxy extends TdFunction {
-  /// Adds a proxy server for network requests. Can be called before authorization
-  AddProxy({this.server, this.port, this.enable, this.type});
+  AddProxy(
+      {required this.server,
+      required this.port,
+      required this.enable,
+      required this.type});
 
-  /// [server] Proxy server IP address
-  String server;
+  /// server Proxy server IP address
+  final String server;
 
-  /// [port] Proxy server port
-  int port;
+  /// port Proxy server port
+  final int port;
 
-  /// [enable] True, if the proxy should be enabled
-  bool enable;
+  /// enable True, if the proxy should be enabled
+  final bool enable;
 
-  /// [type] Proxy type
-  ProxyType type;
+  /// type Proxy type
+  final ProxyType type;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  AddProxy.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "server": this.server,
-      "port": this.port,
-      "enable": this.enable,
-      "type": this.type == null ? null : this.type.toJson(),
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'addProxy';
+  static const String CONSTRUCTOR = 'addProxy';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'server': this.server,
+        'port': this.port,
+        'enable': this.enable,
+        'type': this.type,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

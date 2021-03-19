@@ -1,29 +1,21 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Returns emoji corresponding to a sticker. The list is only for informational purposes, because a sticker is always sent with a fixed emoji from the corresponding Sticker object
 class GetStickerEmojis extends TdFunction {
-  /// Returns emoji corresponding to a sticker. The list is only for informational purposes, because a sticker is always sent with a fixed emoji from the corresponding Sticker object
-  GetStickerEmojis({this.sticker});
+  GetStickerEmojis({required this.sticker});
 
-  /// [sticker] Sticker file identifier
-  InputFile sticker;
+  /// sticker Sticker file identifier
+  final InputFile sticker;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  GetStickerEmojis.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "sticker": this.sticker == null ? null : this.sticker.toJson(),
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'getStickerEmojis';
+  static const String CONSTRUCTOR = 'getStickerEmojis';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'sticker': this.sticker, '@type': CONSTRUCTOR, '@extra': this.extra};
 }

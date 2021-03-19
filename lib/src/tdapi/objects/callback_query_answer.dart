@@ -1,41 +1,38 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains a bot's answer to a callback query
 class CallbackQueryAnswer extends TdObject {
-  /// Contains a bot's answer to a callback query
-  CallbackQueryAnswer({this.text, this.showAlert, this.url});
+  CallbackQueryAnswer(
+      {required this.text, required this.showAlert, required this.url});
 
-  /// [text] Text of the answer
-  String text;
+  /// text Text of the answer
+  final String text;
 
-  /// [showAlert] True, if an alert should be shown to the user instead of a toast notification
-  bool showAlert;
+  /// show_alert True, if an alert should be shown to the user instead of a toast notification
+  final bool showAlert;
 
-  /// [url] URL to be opened
-  String url;
+  /// url URL to be opened
+  final String url;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'callbackQueryAnswer';
 
-  /// Parse from a json
-  CallbackQueryAnswer.fromJson(Map<String, dynamic> json) {
-    this.text = json['text'];
-    this.showAlert = json['show_alert'];
-    this.url = json['url'];
-    this.extra = json['@extra'];
+  static CallbackQueryAnswer? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return CallbackQueryAnswer(
+        text: json['text'], showAlert: json['show_alert'], url: json['url']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "text": this.text,
-      "show_alert": this.showAlert,
-      "url": this.url,
-    };
-  }
-
-  static const CONSTRUCTOR = 'callbackQueryAnswer';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'text': this.text,
+        'show_alert': this.showAlert,
+        'url': this.url,
+        '@type': CONSTRUCTOR
+      };
 }

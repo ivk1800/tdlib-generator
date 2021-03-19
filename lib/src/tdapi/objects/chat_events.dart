@@ -1,33 +1,29 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains a list of chat events
 class ChatEvents extends TdObject {
-  /// Contains a list of chat events
-  ChatEvents({this.events});
+  ChatEvents({required this.events});
 
-  /// [events] List of events
-  List<ChatEvent> events;
+  /// events List of events
+  final List<ChatEvent> events;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'chatEvents';
 
-  /// Parse from a json
-  ChatEvents.fromJson(Map<String, dynamic> json) {
-    this.events = List<ChatEvent>.from((json['events'] ?? [])
-        .map((item) => ChatEvent.fromJson(item ?? <String, dynamic>{}))
-        .toList());
-    this.extra = json['@extra'];
+  static ChatEvents? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return ChatEvents(
+        events: List<ChatEvent>.from((json['events}'] ?? [])
+            .map((item) => ChatEvent.fromJson(json['ChatEvent'])!)
+            .toList()));
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "events": this.events.map((i) => i.toJson()).toList(),
-    };
-  }
-
-  static const CONSTRUCTOR = 'chatEvents';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'events': this.events, '@type': CONSTRUCTOR};
 }

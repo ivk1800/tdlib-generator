@@ -1,37 +1,33 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Returns a list of common group chats with a given user. Chats are sorted by their type and creation date
 class GetGroupsInCommon extends TdFunction {
-  /// Returns a list of common group chats with a given user. Chats are sorted by their type and creation date
-  GetGroupsInCommon({this.userId, this.offsetChatId, this.limit});
+  GetGroupsInCommon(
+      {required this.userId, required this.offsetChatId, required this.limit});
 
-  /// [userId] User identifier
-  int userId;
+  /// user_id User identifier
+  final int userId;
 
-  /// [offsetChatId] Chat identifier starting from which to return chats; use 0 for the first request
-  int offsetChatId;
+  /// offset_chat_id Chat identifier starting from which to return chats; use 0 for the first request
+  final int offsetChatId;
 
-  /// [limit] The maximum number of chats to be returned; up to 100
-  int limit;
+  /// limit The maximum number of chats to be returned; up to 100
+  final int limit;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  GetGroupsInCommon.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "user_id": this.userId,
-      "offset_chat_id": this.offsetChatId,
-      "limit": this.limit,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'getGroupsInCommon';
+  static const String CONSTRUCTOR = 'getGroupsInCommon';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'user_id': this.userId,
+        'offset_chat_id': this.offsetChatId,
+        'limit': this.limit,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

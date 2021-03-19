@@ -1,13 +1,20 @@
 part of '../tdapi.dart';
 
-class SuggestedAction extends TdObject {
-  /// Describes an action suggested to the current user
-  SuggestedAction();
+/// Group.Classes
+/// Describes an action suggested to the current user
+abstract class SuggestedAction extends TdObject {
+  const SuggestedAction();
 
-  /// a SuggestedAction return type can be :
-  /// * SuggestedActionEnableArchiveAndMuteNewChats
-  /// * SuggestedActionCheckPhoneNumber
-  factory SuggestedAction.fromJson(Map<String, dynamic> json) {
+  static const String CONSTRUCTOR = 'suggestedAction';
+
+  /// Inherited by:
+  /// [SuggestedActionEnableArchiveAndMuteNewChats]
+  /// [SuggestedActionCheckPhoneNumber]
+  static SuggestedAction? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
     switch (json["@type"]) {
       case SuggestedActionEnableArchiveAndMuteNewChats.CONSTRUCTOR:
         return SuggestedActionEnableArchiveAndMuteNewChats.fromJson(json);
@@ -17,54 +24,6 @@ class SuggestedAction extends TdObject {
         return null;
     }
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {};
-  }
-
-  static const CONSTRUCTOR = 'suggestedAction';
-
-  @override
-  String getConstructor() => CONSTRUCTOR;
-}
-
-class SuggestedActionEnableArchiveAndMuteNewChats extends SuggestedAction {
-  /// Suggests the user to enable "archive_and_mute_new_chats_from_unknown_users" option
-  SuggestedActionEnableArchiveAndMuteNewChats();
-
-  /// Parse from a json
-  SuggestedActionEnableArchiveAndMuteNewChats.fromJson(
-      Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-    };
-  }
-
-  static const CONSTRUCTOR = 'suggestedActionEnableArchiveAndMuteNewChats';
-
-  @override
-  String getConstructor() => CONSTRUCTOR;
-}
-
-class SuggestedActionCheckPhoneNumber extends SuggestedAction {
-  /// Suggests the user to check authorization phone number and change the phone number if it is inaccessible
-  SuggestedActionCheckPhoneNumber();
-
-  /// Parse from a json
-  SuggestedActionCheckPhoneNumber.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-    };
-  }
-
-  static const CONSTRUCTOR = 'suggestedActionCheckPhoneNumber';
 
   @override
   String getConstructor() => CONSTRUCTOR;

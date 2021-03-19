@@ -1,29 +1,24 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Leaves a group call
 class LeaveGroupCall extends TdFunction {
-  /// Leaves a group call
-  LeaveGroupCall({this.groupCallId});
+  LeaveGroupCall({required this.groupCallId});
 
-  /// [groupCallId] Group call identifier
-  int groupCallId;
+  /// group_call_id Group call identifier
+  final int groupCallId;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  LeaveGroupCall.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "group_call_id": this.groupCallId,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'leaveGroupCall';
+  static const String CONSTRUCTOR = 'leaveGroupCall';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'group_call_id': this.groupCallId,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

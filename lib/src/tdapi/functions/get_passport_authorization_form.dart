@@ -1,42 +1,40 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Returns a Telegram Passport authorization form for sharing data with a service
 class GetPassportAuthorizationForm extends TdFunction {
-  /// Returns a Telegram Passport authorization form for sharing data with a service
   GetPassportAuthorizationForm(
-      {this.botUserId, this.scope, this.publicKey, this.nonce});
+      {required this.botUserId,
+      required this.scope,
+      required this.publicKey,
+      required this.nonce});
 
-  /// [botUserId] User identifier of the service's bot
-  int botUserId;
+  /// bot_user_id User identifier of the service's bot
+  final int botUserId;
 
-  /// [scope] Telegram Passport element types requested by the service
-  String scope;
+  /// scope Telegram Passport element types requested by the service
+  final String scope;
 
-  /// [publicKey] Service's public_key
-  String publicKey;
+  /// public_key Service's public_key
+  final String publicKey;
 
-  /// [nonce] Authorization form nonce provided by the service
-  String nonce;
+  /// nonce Authorization form nonce provided by the service
+  final String nonce;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  GetPassportAuthorizationForm.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "bot_user_id": this.botUserId,
-      "scope": this.scope,
-      "public_key": this.publicKey,
-      "nonce": this.nonce,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'getPassportAuthorizationForm';
+  static const String CONSTRUCTOR = 'getPassportAuthorizationForm';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'bot_user_id': this.botUserId,
+        'scope': this.scope,
+        'public_key': this.publicKey,
+        'nonce': this.nonce,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

@@ -1,29 +1,21 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Returns information about a file; this is an offline request
 class GetFile extends TdFunction {
-  /// Returns information about a file; this is an offline request
-  GetFile({this.fileId});
+  GetFile({required this.fileId});
 
-  /// [fileId] Identifier of the file to get
-  int fileId;
+  /// file_id Identifier of the file to get
+  final int fileId;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  GetFile.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "file_id": this.fileId,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'getFile';
+  static const String CONSTRUCTOR = 'getFile';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'file_id': this.fileId, '@type': CONSTRUCTOR, '@extra': this.extra};
 }

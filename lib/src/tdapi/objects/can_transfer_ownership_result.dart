@@ -1,15 +1,22 @@
 part of '../tdapi.dart';
 
-class CanTransferOwnershipResult extends TdObject {
-  /// Represents result of checking whether the current session can be used to transfer a chat ownership to another user
-  CanTransferOwnershipResult();
+/// Group.Classes
+/// Represents result of checking whether the current session can be used to transfer a chat ownership to another user
+abstract class CanTransferOwnershipResult extends TdObject {
+  const CanTransferOwnershipResult();
 
-  /// a CanTransferOwnershipResult return type can be :
-  /// * CanTransferOwnershipResultOk
-  /// * CanTransferOwnershipResultPasswordNeeded
-  /// * CanTransferOwnershipResultPasswordTooFresh
-  /// * CanTransferOwnershipResultSessionTooFresh
-  factory CanTransferOwnershipResult.fromJson(Map<String, dynamic> json) {
+  static const String CONSTRUCTOR = 'canTransferOwnershipResult';
+
+  /// Inherited by:
+  /// [CanTransferOwnershipResultOk]
+  /// [CanTransferOwnershipResultPasswordNeeded]
+  /// [CanTransferOwnershipResultPasswordTooFresh]
+  /// [CanTransferOwnershipResultSessionTooFresh]
+  static CanTransferOwnershipResult? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
     switch (json["@type"]) {
       case CanTransferOwnershipResultOk.CONSTRUCTOR:
         return CanTransferOwnershipResultOk.fromJson(json);
@@ -23,128 +30,6 @@ class CanTransferOwnershipResult extends TdObject {
         return null;
     }
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {};
-  }
-
-  static const CONSTRUCTOR = 'canTransferOwnershipResult';
-
-  @override
-  String getConstructor() => CONSTRUCTOR;
-}
-
-class CanTransferOwnershipResultOk extends CanTransferOwnershipResult {
-  /// The session can be used
-  CanTransferOwnershipResultOk();
-
-  /// callback sign
-  dynamic extra;
-
-  /// Parse from a json
-  CanTransferOwnershipResultOk.fromJson(Map<String, dynamic> json) {
-    this.extra = json['@extra'];
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-    };
-  }
-
-  static const CONSTRUCTOR = 'canTransferOwnershipResultOk';
-
-  @override
-  String getConstructor() => CONSTRUCTOR;
-}
-
-class CanTransferOwnershipResultPasswordNeeded
-    extends CanTransferOwnershipResult {
-  /// The 2-step verification needs to be enabled first
-  CanTransferOwnershipResultPasswordNeeded();
-
-  /// callback sign
-  dynamic extra;
-
-  /// Parse from a json
-  CanTransferOwnershipResultPasswordNeeded.fromJson(Map<String, dynamic> json) {
-    this.extra = json['@extra'];
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-    };
-  }
-
-  static const CONSTRUCTOR = 'canTransferOwnershipResultPasswordNeeded';
-
-  @override
-  String getConstructor() => CONSTRUCTOR;
-}
-
-class CanTransferOwnershipResultPasswordTooFresh
-    extends CanTransferOwnershipResult {
-  /// The 2-step verification was enabled recently, user needs to wait
-  CanTransferOwnershipResultPasswordTooFresh({this.retryAfter});
-
-  /// [retryAfter] Time left before the session can be used to transfer ownership of a chat, in seconds
-  int retryAfter;
-
-  /// callback sign
-  dynamic extra;
-
-  /// Parse from a json
-  CanTransferOwnershipResultPasswordTooFresh.fromJson(
-      Map<String, dynamic> json) {
-    this.retryAfter = json['retry_after'];
-    this.extra = json['@extra'];
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "retry_after": this.retryAfter,
-    };
-  }
-
-  static const CONSTRUCTOR = 'canTransferOwnershipResultPasswordTooFresh';
-
-  @override
-  String getConstructor() => CONSTRUCTOR;
-}
-
-class CanTransferOwnershipResultSessionTooFresh
-    extends CanTransferOwnershipResult {
-  /// The session was created recently, user needs to wait
-  CanTransferOwnershipResultSessionTooFresh({this.retryAfter});
-
-  /// [retryAfter] Time left before the session can be used to transfer ownership of a chat, in seconds
-  int retryAfter;
-
-  /// callback sign
-  dynamic extra;
-
-  /// Parse from a json
-  CanTransferOwnershipResultSessionTooFresh.fromJson(
-      Map<String, dynamic> json) {
-    this.retryAfter = json['retry_after'];
-    this.extra = json['@extra'];
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "retry_after": this.retryAfter,
-    };
-  }
-
-  static const CONSTRUCTOR = 'canTransferOwnershipResultSessionTooFresh';
 
   @override
   String getConstructor() => CONSTRUCTOR;

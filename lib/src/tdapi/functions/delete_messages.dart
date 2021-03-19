@@ -1,37 +1,33 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Deletes messages
 class DeleteMessages extends TdFunction {
-  /// Deletes messages
-  DeleteMessages({this.chatId, this.messageIds, this.revoke});
+  DeleteMessages(
+      {required this.chatId, required this.messageIds, required this.revoke});
 
-  /// [chatId] Chat identifier
-  int chatId;
+  /// chat_id Chat identifier
+  final int chatId;
 
-  /// [messageIds] Identifiers of the messages to be deleted
-  List<int> messageIds;
+  /// message_ids Identifiers of the messages to be deleted
+  final List<int> messageIds;
 
-  /// [revoke] Pass true to try to delete messages for all chat members. Always true for supergroups, channels and secret chats
-  bool revoke;
+  /// revoke Pass true to try to delete messages for all chat members. Always true for supergroups, channels and secret chats
+  final bool revoke;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  DeleteMessages.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "chat_id": this.chatId,
-      "message_ids": this.messageIds.map((i) => i).toList(),
-      "revoke": this.revoke,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'deleteMessages';
+  static const String CONSTRUCTOR = 'deleteMessages';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'chat_id': this.chatId,
+        'message_ids': this.messageIds,
+        'revoke': this.revoke,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

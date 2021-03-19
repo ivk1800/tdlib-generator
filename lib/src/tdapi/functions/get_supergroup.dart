@@ -1,29 +1,24 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Returns information about a supergroup or a channel by its identifier. This is an offline request if the current user is not a bot
 class GetSupergroup extends TdFunction {
-  /// Returns information about a supergroup or a channel by its identifier. This is an offline request if the current user is not a bot
-  GetSupergroup({this.supergroupId});
+  GetSupergroup({required this.supergroupId});
 
-  /// [supergroupId] Supergroup or channel identifier
-  int supergroupId;
+  /// supergroup_id Supergroup or channel identifier
+  final int supergroupId;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  GetSupergroup.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "supergroup_id": this.supergroupId,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'getSupergroup';
+  static const String CONSTRUCTOR = 'getSupergroup';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'supergroup_id': this.supergroupId,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

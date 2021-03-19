@@ -1,33 +1,28 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Returns information about a message thread. Can be used only if message.can_get_message_thread == true
 class GetMessageThread extends TdFunction {
-  /// Returns information about a message thread. Can be used only if message.can_get_message_thread == true
-  GetMessageThread({this.chatId, this.messageId});
+  GetMessageThread({required this.chatId, required this.messageId});
 
-  /// [chatId] Chat identifier
-  int chatId;
+  /// chat_id Chat identifier
+  final int chatId;
 
-  /// [messageId] Identifier of the message
-  int messageId;
+  /// message_id Identifier of the message
+  final int messageId;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  GetMessageThread.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "chat_id": this.chatId,
-      "message_id": this.messageId,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'getMessageThread';
+  static const String CONSTRUCTOR = 'getMessageThread';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'chat_id': this.chatId,
+        'message_id': this.messageId,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

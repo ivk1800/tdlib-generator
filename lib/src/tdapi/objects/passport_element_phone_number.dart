@@ -1,0 +1,26 @@
+part of '../tdapi.dart';
+
+/// Group.Objects
+/// A Telegram Passport element containing the user's phone number
+class PassportElementPhoneNumber extends PassportElement {
+  PassportElementPhoneNumber({required this.phoneNumber});
+
+  /// phone_number Phone number
+  final String phoneNumber;
+
+  static const String CONSTRUCTOR = 'passportElementPhoneNumber';
+
+  static PassportElementPhoneNumber? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return PassportElementPhoneNumber(phoneNumber: json['phone_number']);
+  }
+
+  @override
+  String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'phone_number': this.phoneNumber, '@type': CONSTRUCTOR};
+}

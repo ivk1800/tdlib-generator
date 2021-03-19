@@ -1,29 +1,21 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Returns a list of sticker sets attached to a file. Currently only photos and videos can have attached sticker sets
 class GetAttachedStickerSets extends TdFunction {
-  /// Returns a list of sticker sets attached to a file. Currently only photos and videos can have attached sticker sets
-  GetAttachedStickerSets({this.fileId});
+  GetAttachedStickerSets({required this.fileId});
 
-  /// [fileId] File identifier
-  int fileId;
+  /// file_id File identifier
+  final int fileId;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  GetAttachedStickerSets.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "file_id": this.fileId,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'getAttachedStickerSets';
+  static const String CONSTRUCTOR = 'getAttachedStickerSets';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'file_id': this.fileId, '@type': CONSTRUCTOR, '@extra': this.extra};
 }

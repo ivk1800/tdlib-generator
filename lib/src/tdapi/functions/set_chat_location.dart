@@ -1,33 +1,28 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Changes the location of a chat. Available only for some location-based supergroups, use supergroupFullInfo.can_set_location to check whether the method is allowed to use
 class SetChatLocation extends TdFunction {
-  /// Changes the location of a chat. Available only for some location-based supergroups, use supergroupFullInfo.can_set_location to check whether the method is allowed to use
-  SetChatLocation({this.chatId, this.location});
+  SetChatLocation({required this.chatId, required this.location});
 
-  /// [chatId] Chat identifier
-  int chatId;
+  /// chat_id Chat identifier
+  final int chatId;
 
-  /// [location] New location for the chat; must be valid and not null
-  ChatLocation location;
+  /// location New location for the chat; must be valid and not null
+  final ChatLocation location;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  SetChatLocation.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "chat_id": this.chatId,
-      "location": this.location == null ? null : this.location.toJson(),
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'setChatLocation';
+  static const String CONSTRUCTOR = 'setChatLocation';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'chat_id': this.chatId,
+        'location': this.location,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

@@ -1,37 +1,35 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Changes the background selected by the user; adds background to the list of installed backgrounds
 class SetBackground extends TdFunction {
-  /// Changes the background selected by the user; adds background to the list of installed backgrounds
-  SetBackground({this.background, this.type, this.forDarkTheme});
+  SetBackground(
+      {required this.background,
+      required this.type,
+      required this.forDarkTheme});
 
-  /// [background] The input background to use, null for filled backgrounds
-  InputBackground background;
+  /// background The input background to use, null for filled backgrounds
+  final InputBackground background;
 
-  /// [type] Background type; null for default background. The method will return error 404 if type is null
-  BackgroundType type;
+  /// type Background type; null for default background. The method will return error 404 if type is null
+  final BackgroundType type;
 
-  /// [forDarkTheme] True, if the background is chosen for dark theme
-  bool forDarkTheme;
+  /// for_dark_theme True, if the background is chosen for dark theme
+  final bool forDarkTheme;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  SetBackground.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "background": this.background == null ? null : this.background.toJson(),
-      "type": this.type == null ? null : this.type.toJson(),
-      "for_dark_theme": this.forDarkTheme,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'setBackground';
+  static const String CONSTRUCTOR = 'setBackground';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'background': this.background,
+        'type': this.type,
+        'for_dark_theme': this.forDarkTheme,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

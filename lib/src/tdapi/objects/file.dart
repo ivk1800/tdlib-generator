@@ -1,51 +1,54 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Represents a file
 class File extends TdObject {
-  /// Represents a file
-  File({this.id, this.size, this.expectedSize, this.local, this.remote});
+  File(
+      {required this.id,
+      required this.size,
+      required this.expectedSize,
+      required this.local,
+      required this.remote});
 
-  /// [id] Unique file identifier
-  int id;
+  /// id Unique file identifier
+  final int id;
 
-  /// [size] File size; 0 if unknown
-  int size;
+  /// size File size; 0 if unknown
+  final int size;
 
-  /// [expectedSize] Expected file size in case the exact file size is unknown, but an approximate size is known. Can be used to show download/upload progress
-  int expectedSize;
+  /// expected_size Expected file size in case the exact file size is unknown, but an approximate size is known. Can be used to show download/upload progress
+  final int expectedSize;
 
-  /// [local] Information about the local copy of the file
-  LocalFile local;
+  /// local Information about the local copy of the file
+  final LocalFile local;
 
-  /// [remote] Information about the remote copy of the file
-  RemoteFile remote;
+  /// remote Information about the remote copy of the file
+  final RemoteFile remote;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'file';
 
-  /// Parse from a json
-  File.fromJson(Map<String, dynamic> json) {
-    this.id = json['id'];
-    this.size = json['size'];
-    this.expectedSize = json['expected_size'];
-    this.local = LocalFile.fromJson(json['local'] ?? <String, dynamic>{});
-    this.remote = RemoteFile.fromJson(json['remote'] ?? <String, dynamic>{});
-    this.extra = json['@extra'];
+  static File? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return File(
+        id: json['id'],
+        size: json['size'],
+        expectedSize: json['expected_size'],
+        local: LocalFile.fromJson(json['local'])!,
+        remote: RemoteFile.fromJson(json['remote'])!);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "id": this.id,
-      "size": this.size,
-      "expected_size": this.expectedSize,
-      "local": this.local == null ? null : this.local.toJson(),
-      "remote": this.remote == null ? null : this.remote.toJson(),
-    };
-  }
-
-  static const CONSTRUCTOR = 'file';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'id': this.id,
+        'size': this.size,
+        'expected_size': this.expectedSize,
+        'local': this.local,
+        'remote': this.remote,
+        '@type': CONSTRUCTOR
+      };
 }

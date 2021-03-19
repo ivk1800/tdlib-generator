@@ -1,29 +1,21 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Returns the received vector of strings; for testing only. This is an offline method. Can be called before authorization
 class TestCallVectorString extends TdFunction {
-  /// Returns the received vector of strings; for testing only. This is an offline method. Can be called before authorization
-  TestCallVectorString({this.x});
+  TestCallVectorString({required this.x});
 
-  /// [x] Vector of strings to return
-  List<String> x;
+  /// x Vector of strings to return
+  final List<String> x;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  TestCallVectorString.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "x": this.x.map((i) => i).toList(),
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'testCallVectorString';
+  static const String CONSTRUCTOR = 'testCallVectorString';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'x': this.x, '@type': CONSTRUCTOR, '@extra': this.extra};
 }

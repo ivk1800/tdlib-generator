@@ -1,33 +1,29 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains a list of backgrounds
 class Backgrounds extends TdObject {
-  /// Contains a list of backgrounds
-  Backgrounds({this.backgrounds});
+  Backgrounds({required this.backgrounds});
 
-  /// [backgrounds] A list of backgrounds
-  List<Background> backgrounds;
+  /// backgrounds A list of backgrounds
+  final List<Background> backgrounds;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'backgrounds';
 
-  /// Parse from a json
-  Backgrounds.fromJson(Map<String, dynamic> json) {
-    this.backgrounds = List<Background>.from((json['backgrounds'] ?? [])
-        .map((item) => Background.fromJson(item ?? <String, dynamic>{}))
-        .toList());
-    this.extra = json['@extra'];
+  static Backgrounds? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return Backgrounds(
+        backgrounds: List<Background>.from((json['backgrounds}'] ?? [])
+            .map((item) => Background.fromJson(json['Background'])!)
+            .toList()));
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "backgrounds": this.backgrounds.map((i) => i.toJson()).toList(),
-    };
-  }
-
-  static const CONSTRUCTOR = 'backgrounds';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'backgrounds': this.backgrounds, '@type': CONSTRUCTOR};
 }

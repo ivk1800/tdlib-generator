@@ -1,88 +1,86 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains full information about a user
 class UserFullInfo extends TdObject {
-  /// Contains full information about a user
   UserFullInfo(
-      {this.photo,
-      this.isBlocked,
-      this.canBeCalled,
-      this.supportsVideoCalls,
-      this.hasPrivateCalls,
-      this.needPhoneNumberPrivacyException,
-      this.bio,
-      this.shareText,
-      this.groupInCommonCount,
-      this.botInfo});
+      {ChatPhoto? this.photo,
+      required this.isBlocked,
+      required this.canBeCalled,
+      required this.supportsVideoCalls,
+      required this.hasPrivateCalls,
+      required this.needPhoneNumberPrivacyException,
+      required this.bio,
+      required this.shareText,
+      required this.groupInCommonCount,
+      BotInfo? this.botInfo});
 
-  /// [photo] User profile photo; may be null
-  ChatPhoto photo;
+  /// photo User profile photo; may be null
+  final ChatPhoto? photo;
 
-  /// [isBlocked] True, if the user is blocked by the current user
-  bool isBlocked;
+  /// is_blocked True, if the user is blocked by the current user
+  final bool isBlocked;
 
-  /// [canBeCalled] True, if the user can be called
-  bool canBeCalled;
+  /// can_be_called True, if the user can be called
+  final bool canBeCalled;
 
-  /// [supportsVideoCalls] True, if a video call can be created with the user
-  bool supportsVideoCalls;
+  /// supports_video_calls True, if a video call can be created with the user
+  final bool supportsVideoCalls;
 
-  /// [hasPrivateCalls] True, if the user can't be called due to their privacy settings
-  bool hasPrivateCalls;
+  /// has_private_calls True, if the user can't be called due to their privacy settings
+  final bool hasPrivateCalls;
 
-  /// [needPhoneNumberPrivacyException] True, if the current user needs to explicitly allow to share their phone number with the user when the method addContact is used
-  bool needPhoneNumberPrivacyException;
+  /// need_phone_number_privacy_exception True, if the current user needs to explicitly allow to share their phone number with the user when the method addContact is used
+  final bool needPhoneNumberPrivacyException;
 
-  /// [bio] A short user bio
-  String bio;
+  /// bio A short user bio
+  final String bio;
 
-  /// [shareText] For bots, the text that is included with the link when users share the bot
-  String shareText;
+  /// share_text For bots, the text that is included with the link when users share the bot
+  final String shareText;
 
-  /// [groupInCommonCount] Number of group chats where both the other user and the current user are a member; 0 for the current user
-  int groupInCommonCount;
+  /// group_in_common_count Number of group chats where both the other user and the current user are a member; 0 for the current user
+  final int groupInCommonCount;
 
-  /// [botInfo] If the user is a bot, information about the bot; may be null
-  BotInfo botInfo;
+  /// bot_info If the user is a bot, information about the bot; may be null
+  final BotInfo? botInfo;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'userFullInfo';
 
-  /// Parse from a json
-  UserFullInfo.fromJson(Map<String, dynamic> json) {
-    this.photo = ChatPhoto.fromJson(json['photo'] ?? <String, dynamic>{});
-    this.isBlocked = json['is_blocked'];
-    this.canBeCalled = json['can_be_called'];
-    this.supportsVideoCalls = json['supports_video_calls'];
-    this.hasPrivateCalls = json['has_private_calls'];
-    this.needPhoneNumberPrivacyException =
-        json['need_phone_number_privacy_exception'];
-    this.bio = json['bio'];
-    this.shareText = json['share_text'];
-    this.groupInCommonCount = json['group_in_common_count'];
-    this.botInfo = BotInfo.fromJson(json['bot_info'] ?? <String, dynamic>{});
-    this.extra = json['@extra'];
+  static UserFullInfo? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return UserFullInfo(
+        photo: ChatPhoto.fromJson(json['photo']),
+        isBlocked: json['is_blocked'],
+        canBeCalled: json['can_be_called'],
+        supportsVideoCalls: json['supports_video_calls'],
+        hasPrivateCalls: json['has_private_calls'],
+        needPhoneNumberPrivacyException:
+            json['need_phone_number_privacy_exception'],
+        bio: json['bio'],
+        shareText: json['share_text'],
+        groupInCommonCount: json['group_in_common_count'],
+        botInfo: BotInfo.fromJson(json['bot_info']));
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "photo": this.photo == null ? null : this.photo.toJson(),
-      "is_blocked": this.isBlocked,
-      "can_be_called": this.canBeCalled,
-      "supports_video_calls": this.supportsVideoCalls,
-      "has_private_calls": this.hasPrivateCalls,
-      "need_phone_number_privacy_exception":
-          this.needPhoneNumberPrivacyException,
-      "bio": this.bio,
-      "share_text": this.shareText,
-      "group_in_common_count": this.groupInCommonCount,
-      "bot_info": this.botInfo == null ? null : this.botInfo.toJson(),
-    };
-  }
-
-  static const CONSTRUCTOR = 'userFullInfo';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'photo': this.photo,
+        'is_blocked': this.isBlocked,
+        'can_be_called': this.canBeCalled,
+        'supports_video_calls': this.supportsVideoCalls,
+        'has_private_calls': this.hasPrivateCalls,
+        'need_phone_number_privacy_exception':
+            this.needPhoneNumberPrivacyException,
+        'bio': this.bio,
+        'share_text': this.shareText,
+        'group_in_common_count': this.groupInCommonCount,
+        'bot_info': this.botInfo,
+        '@type': CONSTRUCTOR
+      };
 }

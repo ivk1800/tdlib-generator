@@ -1,38 +1,36 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Represents a list of message senders
 class MessageSenders extends TdObject {
-  /// Represents a list of message senders
-  MessageSenders({this.totalCount, this.senders});
+  MessageSenders({required this.totalCount, required this.senders});
 
-  /// [totalCount] Approximate total count of messages senders found
-  int totalCount;
+  /// total_count Approximate total count of messages senders found
+  final int totalCount;
 
-  /// [senders] List of message senders
-  List<MessageSender> senders;
+  /// senders List of message senders
+  final List<MessageSender> senders;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'messageSenders';
 
-  /// Parse from a json
-  MessageSenders.fromJson(Map<String, dynamic> json) {
-    this.totalCount = json['total_count'];
-    this.senders = List<MessageSender>.from((json['senders'] ?? [])
-        .map((item) => MessageSender.fromJson(item ?? <String, dynamic>{}))
-        .toList());
-    this.extra = json['@extra'];
+  static MessageSenders? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return MessageSenders(
+        totalCount: json['total_count'],
+        senders: List<MessageSender>.from((json['senders}'] ?? [])
+            .map((item) => MessageSender.fromJson(json['MessageSender'])!)
+            .toList()));
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "total_count": this.totalCount,
-      "senders": this.senders.map((i) => i.toJson()).toList(),
-    };
-  }
-
-  static const CONSTRUCTOR = 'messageSenders';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'total_count': this.totalCount,
+        'senders': this.senders,
+        '@type': CONSTRUCTOR
+      };
 }

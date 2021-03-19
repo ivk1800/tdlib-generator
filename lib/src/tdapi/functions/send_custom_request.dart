@@ -1,33 +1,28 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Sends a custom request; for bots only
 class SendCustomRequest extends TdFunction {
-  /// Sends a custom request; for bots only
-  SendCustomRequest({this.method, this.parameters});
+  SendCustomRequest({required this.method, required this.parameters});
 
-  /// [method] The method name
-  String method;
+  /// method The method name
+  final String method;
 
-  /// [parameters] JSON-serialized method parameters
-  String parameters;
+  /// parameters JSON-serialized method parameters
+  final String parameters;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  SendCustomRequest.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "method": this.method,
-      "parameters": this.parameters,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'sendCustomRequest';
+  static const String CONSTRUCTOR = 'sendCustomRequest';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'method': this.method,
+        'parameters': this.parameters,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

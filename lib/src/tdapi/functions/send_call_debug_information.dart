@@ -1,33 +1,29 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Sends debug information for a call
 class SendCallDebugInformation extends TdFunction {
-  /// Sends debug information for a call
-  SendCallDebugInformation({this.callId, this.debugInformation});
+  SendCallDebugInformation(
+      {required this.callId, required this.debugInformation});
 
-  /// [callId] Call identifier
-  int callId;
+  /// call_id Call identifier
+  final int callId;
 
-  /// [debugInformation] Debug information in application-specific format
-  String debugInformation;
+  /// debug_information Debug information in application-specific format
+  final String debugInformation;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  SendCallDebugInformation.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "call_id": this.callId,
-      "debug_information": this.debugInformation,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'sendCallDebugInformation';
+  static const String CONSTRUCTOR = 'sendCallDebugInformation';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'call_id': this.callId,
+        'debug_information': this.debugInformation,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

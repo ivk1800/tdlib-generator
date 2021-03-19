@@ -1,29 +1,24 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Changes the order of chat filters
 class ReorderChatFilters extends TdFunction {
-  /// Changes the order of chat filters
-  ReorderChatFilters({this.chatFilterIds});
+  ReorderChatFilters({required this.chatFilterIds});
 
-  /// [chatFilterIds] Identifiers of chat filters in the new correct order
-  List<int> chatFilterIds;
+  /// chat_filter_ids Identifiers of chat filters in the new correct order
+  final List<int> chatFilterIds;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  ReorderChatFilters.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "chat_filter_ids": this.chatFilterIds.map((i) => i).toList(),
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'reorderChatFilters';
+  static const String CONSTRUCTOR = 'reorderChatFilters';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'chat_filter_ids': this.chatFilterIds,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

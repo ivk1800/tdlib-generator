@@ -1,29 +1,24 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Informs the server that some trending sticker sets have been viewed by the user
 class ViewTrendingStickerSets extends TdFunction {
-  /// Informs the server that some trending sticker sets have been viewed by the user
-  ViewTrendingStickerSets({this.stickerSetIds});
+  ViewTrendingStickerSets({required this.stickerSetIds});
 
-  /// [stickerSetIds] Identifiers of viewed trending sticker sets
-  List<int> stickerSetIds;
+  /// sticker_set_ids Identifiers of viewed trending sticker sets
+  final List<int> stickerSetIds;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  ViewTrendingStickerSets.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "sticker_set_ids": this.stickerSetIds.map((i) => i).toList(),
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'viewTrendingStickerSets';
+  static const String CONSTRUCTOR = 'viewTrendingStickerSets';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'sticker_set_ids': this.stickerSetIds,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

@@ -1,33 +1,29 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Informs the server about the number of pending bot updates if they haven't been processed for a long time; for bots only
 class SetBotUpdatesStatus extends TdFunction {
-  /// Informs the server about the number of pending bot updates if they haven't been processed for a long time; for bots only
-  SetBotUpdatesStatus({this.pendingUpdateCount, this.errorMessage});
+  SetBotUpdatesStatus(
+      {required this.pendingUpdateCount, required this.errorMessage});
 
-  /// [pendingUpdateCount] The number of pending updates
-  int pendingUpdateCount;
+  /// pending_update_count The number of pending updates
+  final int pendingUpdateCount;
 
-  /// [errorMessage] The last error message
-  String errorMessage;
+  /// error_message The last error message
+  final String errorMessage;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  SetBotUpdatesStatus.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "pending_update_count": this.pendingUpdateCount,
-      "error_message": this.errorMessage,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'setBotUpdatesStatus';
+  static const String CONSTRUCTOR = 'setBotUpdatesStatus';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'pending_update_count': this.pendingUpdateCount,
+        'error_message': this.errorMessage,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

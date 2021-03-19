@@ -1,45 +1,45 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Sends a simple network request to the Telegram servers via proxy; for testing only. Can be called before authorization
 class TestProxy extends TdFunction {
-  /// Sends a simple network request to the Telegram servers via proxy; for testing only. Can be called before authorization
-  TestProxy({this.server, this.port, this.type, this.dcId, this.timeout});
+  TestProxy(
+      {required this.server,
+      required this.port,
+      required this.type,
+      required this.dcId,
+      required this.timeout});
 
-  /// [server] Proxy server IP address
-  String server;
+  /// server Proxy server IP address
+  final String server;
 
-  /// [port] Proxy server port
-  int port;
+  /// port Proxy server port
+  final int port;
 
-  /// [type] Proxy type
-  ProxyType type;
+  /// type Proxy type
+  final ProxyType type;
 
-  /// [dcId] Identifier of a datacenter, with which to test connection
-  int dcId;
+  /// dc_id Identifier of a datacenter, with which to test connection
+  final int dcId;
 
-  /// [timeout] The maximum overall timeout for the request
-  double timeout;
+  /// timeout The maximum overall timeout for the request
+  final double timeout;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  TestProxy.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "server": this.server,
-      "port": this.port,
-      "type": this.type == null ? null : this.type.toJson(),
-      "dc_id": this.dcId,
-      "timeout": this.timeout,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'testProxy';
+  static const String CONSTRUCTOR = 'testProxy';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'server': this.server,
+        'port': this.port,
+        'type': this.type,
+        'dc_id': this.dcId,
+        'timeout': this.timeout,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

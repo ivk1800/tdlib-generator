@@ -1,33 +1,29 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Toggles sender signatures messages sent in a channel; requires can_change_info rights
 class ToggleSupergroupSignMessages extends TdFunction {
-  /// Toggles sender signatures messages sent in a channel; requires can_change_info rights
-  ToggleSupergroupSignMessages({this.supergroupId, this.signMessages});
+  ToggleSupergroupSignMessages(
+      {required this.supergroupId, required this.signMessages});
 
-  /// [supergroupId] Identifier of the channel
-  int supergroupId;
+  /// supergroup_id Identifier of the channel
+  final int supergroupId;
 
-  /// [signMessages] New value of sign_messages
-  bool signMessages;
+  /// sign_messages New value of sign_messages
+  final bool signMessages;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  ToggleSupergroupSignMessages.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "supergroup_id": this.supergroupId,
-      "sign_messages": this.signMessages,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'toggleSupergroupSignMessages';
+  static const String CONSTRUCTOR = 'toggleSupergroupSignMessages';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'supergroup_id': this.supergroupId,
+        'sign_messages': this.signMessages,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

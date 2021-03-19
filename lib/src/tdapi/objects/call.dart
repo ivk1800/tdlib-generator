@@ -1,47 +1,54 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Describes a call
 class Call extends TdObject {
-  /// Describes a call
-  Call({this.id, this.userId, this.isOutgoing, this.isVideo, this.state});
+  Call(
+      {required this.id,
+      required this.userId,
+      required this.isOutgoing,
+      required this.isVideo,
+      required this.state});
 
-  /// [id] Call identifier, not persistent
-  int id;
+  /// id Call identifier, not persistent
+  final int id;
 
-  /// [userId] Peer user identifier
-  int userId;
+  /// user_id Peer user identifier
+  final int userId;
 
-  /// [isOutgoing] True, if the call is outgoing
-  bool isOutgoing;
+  /// is_outgoing True, if the call is outgoing
+  final bool isOutgoing;
 
-  /// [isVideo] True, if the call is a video call
-  bool isVideo;
+  /// is_video True, if the call is a video call
+  final bool isVideo;
 
-  /// [state] Call state
-  CallState state;
+  /// state Call state
+  final CallState state;
 
-  /// Parse from a json
-  Call.fromJson(Map<String, dynamic> json) {
-    this.id = json['id'];
-    this.userId = json['user_id'];
-    this.isOutgoing = json['is_outgoing'];
-    this.isVideo = json['is_video'];
-    this.state = CallState.fromJson(json['state'] ?? <String, dynamic>{});
+  static const String CONSTRUCTOR = 'call';
+
+  static Call? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return Call(
+        id: json['id'],
+        userId: json['user_id'],
+        isOutgoing: json['is_outgoing'],
+        isVideo: json['is_video'],
+        state: CallState.fromJson(json['state'])!);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "id": this.id,
-      "user_id": this.userId,
-      "is_outgoing": this.isOutgoing,
-      "is_video": this.isVideo,
-      "state": this.state == null ? null : this.state.toJson(),
-    };
-  }
-
-  static const CONSTRUCTOR = 'call';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'id': this.id,
+        'user_id': this.userId,
+        'is_outgoing': this.isOutgoing,
+        'is_video': this.isVideo,
+        'state': this.state,
+        '@type': CONSTRUCTOR
+      };
 }

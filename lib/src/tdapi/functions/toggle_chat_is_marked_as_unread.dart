@@ -1,33 +1,29 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Changes the marked as unread state of a chat
 class ToggleChatIsMarkedAsUnread extends TdFunction {
-  /// Changes the marked as unread state of a chat
-  ToggleChatIsMarkedAsUnread({this.chatId, this.isMarkedAsUnread});
+  ToggleChatIsMarkedAsUnread(
+      {required this.chatId, required this.isMarkedAsUnread});
 
-  /// [chatId] Chat identifier
-  int chatId;
+  /// chat_id Chat identifier
+  final int chatId;
 
-  /// [isMarkedAsUnread] New value of is_marked_as_unread
-  bool isMarkedAsUnread;
+  /// is_marked_as_unread New value of is_marked_as_unread
+  final bool isMarkedAsUnread;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  ToggleChatIsMarkedAsUnread.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "chat_id": this.chatId,
-      "is_marked_as_unread": this.isMarkedAsUnread,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'toggleChatIsMarkedAsUnread';
+  static const String CONSTRUCTOR = 'toggleChatIsMarkedAsUnread';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'chat_id': this.chatId,
+        'is_marked_as_unread': this.isMarkedAsUnread,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

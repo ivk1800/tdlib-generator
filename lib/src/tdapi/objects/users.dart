@@ -1,37 +1,35 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Represents a list of users
 class Users extends TdObject {
-  /// Represents a list of users
-  Users({this.totalCount, this.userIds});
+  Users({required this.totalCount, required this.userIds});
 
-  /// [totalCount] Approximate total count of users found
-  int totalCount;
+  /// total_count Approximate total count of users found
+  final int totalCount;
 
-  /// [userIds] A list of user identifiers
-  List<int> userIds;
+  /// user_ids A list of user identifiers
+  final List<int> userIds;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'users';
 
-  /// Parse from a json
-  Users.fromJson(Map<String, dynamic> json) {
-    this.totalCount = json['total_count'];
-    this.userIds =
-        List<int>.from((json['user_ids'] ?? []).map((item) => item).toList());
-    this.extra = json['@extra'];
+  static Users? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return Users(
+        totalCount: json['total_count'],
+        userIds: List<int>.from(
+            (json['user_ids}'] ?? []).map((item) => json['int']).toList()));
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "total_count": this.totalCount,
-      "user_ids": this.userIds.map((i) => i).toList(),
-    };
-  }
-
-  static const CONSTRUCTOR = 'users';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'total_count': this.totalCount,
+        'user_ids': this.userIds,
+        '@type': CONSTRUCTOR
+      };
 }

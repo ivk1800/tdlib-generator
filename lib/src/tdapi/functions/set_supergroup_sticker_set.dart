@@ -1,33 +1,29 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Changes the sticker set of a supergroup; requires can_change_info rights
 class SetSupergroupStickerSet extends TdFunction {
-  /// Changes the sticker set of a supergroup; requires can_change_info rights
-  SetSupergroupStickerSet({this.supergroupId, this.stickerSetId});
+  SetSupergroupStickerSet(
+      {required this.supergroupId, required this.stickerSetId});
 
-  /// [supergroupId] Identifier of the supergroup
-  int supergroupId;
+  /// supergroup_id Identifier of the supergroup
+  final int supergroupId;
 
-  /// [stickerSetId] New value of the supergroup sticker set identifier. Use 0 to remove the supergroup sticker set
-  int stickerSetId;
+  /// sticker_set_id New value of the supergroup sticker set identifier. Use 0 to remove the supergroup sticker set
+  final int stickerSetId;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  SetSupergroupStickerSet.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "supergroup_id": this.supergroupId,
-      "sticker_set_id": this.stickerSetId,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'setSupergroupStickerSet';
+  static const String CONSTRUCTOR = 'setSupergroupStickerSet';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'supergroup_id': this.supergroupId,
+        'sticker_set_id': this.stickerSetId,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

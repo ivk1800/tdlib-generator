@@ -1,36 +1,33 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains the result of a payment request
 class PaymentResult extends TdObject {
-  /// Contains the result of a payment request
-  PaymentResult({this.success, this.verificationUrl});
+  PaymentResult({required this.success, required this.verificationUrl});
 
-  /// [success] True, if the payment request was successful; otherwise the verification_url will be not empty
-  bool success;
+  /// success True, if the payment request was successful; otherwise the verification_url will be not empty
+  final bool success;
 
-  /// [verificationUrl] URL for additional payment credentials verification
-  String verificationUrl;
+  /// verification_url URL for additional payment credentials verification
+  final String verificationUrl;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'paymentResult';
 
-  /// Parse from a json
-  PaymentResult.fromJson(Map<String, dynamic> json) {
-    this.success = json['success'];
-    this.verificationUrl = json['verification_url'];
-    this.extra = json['@extra'];
+  static PaymentResult? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return PaymentResult(
+        success: json['success'], verificationUrl: json['verification_url']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "success": this.success,
-      "verification_url": this.verificationUrl,
-    };
-  }
-
-  static const CONSTRUCTOR = 'paymentResult';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'success': this.success,
+        'verification_url': this.verificationUrl,
+        '@type': CONSTRUCTOR
+      };
 }

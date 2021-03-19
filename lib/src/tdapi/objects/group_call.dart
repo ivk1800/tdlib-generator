@@ -1,104 +1,102 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Describes a group call
 class GroupCall extends TdObject {
-  /// Describes a group call
   GroupCall(
-      {this.id,
-      this.isActive,
-      this.isJoined,
-      this.needRejoin,
-      this.canUnmuteSelf,
-      this.canBeManaged,
-      this.participantCount,
-      this.loadedAllParticipants,
-      this.recentSpeakers,
-      this.muteNewParticipants,
-      this.allowedChangeMuteNewParticipants,
-      this.duration});
+      {required this.id,
+      required this.isActive,
+      required this.isJoined,
+      required this.needRejoin,
+      required this.canUnmuteSelf,
+      required this.canBeManaged,
+      required this.participantCount,
+      required this.loadedAllParticipants,
+      required this.recentSpeakers,
+      required this.muteNewParticipants,
+      required this.allowedChangeMuteNewParticipants,
+      required this.duration});
 
-  /// [id] Group call identifier
-  int id;
+  /// id Group call identifier
+  final int id;
 
-  /// [isActive] True, if the call is active
-  bool isActive;
+  /// is_active True, if the call is active
+  final bool isActive;
 
-  /// [isJoined] True, if the call is joined
-  bool isJoined;
+  /// is_joined True, if the call is joined
+  final bool isJoined;
 
-  /// [needRejoin] True, if user was kicked from the call because of network loss and the call needs to be rejoined
-  bool needRejoin;
+  /// need_rejoin True, if user was kicked from the call because of network loss and the call needs to be rejoined
+  final bool needRejoin;
 
-  /// [canUnmuteSelf] True, if the current user can unmute themself
-  bool canUnmuteSelf;
+  /// can_unmute_self True, if the current user can unmute themself
+  final bool canUnmuteSelf;
 
-  /// [canBeManaged] True, if the current user can manage the group call
-  bool canBeManaged;
+  /// can_be_managed True, if the current user can manage the group call
+  final bool canBeManaged;
 
-  /// [participantCount] Number of participants in the group call
-  int participantCount;
+  /// participant_count Number of participants in the group call
+  final int participantCount;
 
-  /// [loadedAllParticipants] True, if all group call participants are loaded
-  bool loadedAllParticipants;
+  /// loaded_all_participants True, if all group call participants are loaded
+  final bool loadedAllParticipants;
 
-  /// [recentSpeakers] Recently speaking users in the group call
-  List<GroupCallRecentSpeaker> recentSpeakers;
+  /// recent_speakers Recently speaking users in the group call
+  final List<GroupCallRecentSpeaker> recentSpeakers;
 
-  /// [muteNewParticipants] True, if only group call administrators can unmute new participants
-  bool muteNewParticipants;
+  /// mute_new_participants True, if only group call administrators can unmute new participants
+  final bool muteNewParticipants;
 
-  /// [allowedChangeMuteNewParticipants] True, if group call administrators can enable or disable mute_new_participants setting
-  bool allowedChangeMuteNewParticipants;
+  /// allowed_change_mute_new_participants True, if group call administrators can enable or disable mute_new_participants setting
+  final bool allowedChangeMuteNewParticipants;
 
-  /// [duration] Call duration; for ended calls only
-  int duration;
+  /// duration Call duration; for ended calls only
+  final int duration;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'groupCall';
 
-  /// Parse from a json
-  GroupCall.fromJson(Map<String, dynamic> json) {
-    this.id = json['id'];
-    this.isActive = json['is_active'];
-    this.isJoined = json['is_joined'];
-    this.needRejoin = json['need_rejoin'];
-    this.canUnmuteSelf = json['can_unmute_self'];
-    this.canBeManaged = json['can_be_managed'];
-    this.participantCount = json['participant_count'];
-    this.loadedAllParticipants = json['loaded_all_participants'];
-    this.recentSpeakers = List<GroupCallRecentSpeaker>.from(
-        (json['recent_speakers'] ?? [])
-            .map((item) =>
-                GroupCallRecentSpeaker.fromJson(item ?? <String, dynamic>{}))
-            .toList());
-    this.muteNewParticipants = json['mute_new_participants'];
-    this.allowedChangeMuteNewParticipants =
-        json['allowed_change_mute_new_participants'];
-    this.duration = json['duration'];
-    this.extra = json['@extra'];
+  static GroupCall? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return GroupCall(
+        id: json['id'],
+        isActive: json['is_active'],
+        isJoined: json['is_joined'],
+        needRejoin: json['need_rejoin'],
+        canUnmuteSelf: json['can_unmute_self'],
+        canBeManaged: json['can_be_managed'],
+        participantCount: json['participant_count'],
+        loadedAllParticipants: json['loaded_all_participants'],
+        recentSpeakers: List<GroupCallRecentSpeaker>.from(
+            (json['recent_speakers}'] ?? [])
+                .map((item) => GroupCallRecentSpeaker.fromJson(
+                    json['GroupCallRecentSpeaker'])!)
+                .toList()),
+        muteNewParticipants: json['mute_new_participants'],
+        allowedChangeMuteNewParticipants:
+            json['allowed_change_mute_new_participants'],
+        duration: json['duration']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "id": this.id,
-      "is_active": this.isActive,
-      "is_joined": this.isJoined,
-      "need_rejoin": this.needRejoin,
-      "can_unmute_self": this.canUnmuteSelf,
-      "can_be_managed": this.canBeManaged,
-      "participant_count": this.participantCount,
-      "loaded_all_participants": this.loadedAllParticipants,
-      "recent_speakers": this.recentSpeakers.map((i) => i.toJson()).toList(),
-      "mute_new_participants": this.muteNewParticipants,
-      "allowed_change_mute_new_participants":
-          this.allowedChangeMuteNewParticipants,
-      "duration": this.duration,
-    };
-  }
-
-  static const CONSTRUCTOR = 'groupCall';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'id': this.id,
+        'is_active': this.isActive,
+        'is_joined': this.isJoined,
+        'need_rejoin': this.needRejoin,
+        'can_unmute_self': this.canUnmuteSelf,
+        'can_be_managed': this.canBeManaged,
+        'participant_count': this.participantCount,
+        'loaded_all_participants': this.loadedAllParticipants,
+        'recent_speakers': this.recentSpeakers,
+        'mute_new_participants': this.muteNewParticipants,
+        'allowed_change_mute_new_participants':
+            this.allowedChangeMuteNewParticipants,
+        'duration': this.duration,
+        '@type': CONSTRUCTOR
+      };
 }

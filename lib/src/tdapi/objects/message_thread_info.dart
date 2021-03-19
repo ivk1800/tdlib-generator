@@ -1,61 +1,56 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains information about a message thread
 class MessageThreadInfo extends TdObject {
-  /// Contains information about a message thread
   MessageThreadInfo(
-      {this.chatId,
-      this.messageThreadId,
-      this.replyInfo,
-      this.messages,
-      this.draftMessage});
+      {required this.chatId,
+      required this.messageThreadId,
+      required this.replyInfo,
+      required this.messages,
+      DraftMessage? this.draftMessage});
 
-  /// [chatId] Identifier of the chat to which the message thread belongs
-  int chatId;
+  /// chat_id Identifier of the chat to which the message thread belongs
+  final int chatId;
 
-  /// [messageThreadId] Message thread identifier, unique within the chat
-  int messageThreadId;
+  /// message_thread_id Message thread identifier, unique within the chat
+  final int messageThreadId;
 
-  /// [replyInfo] Contains information about the message thread
-  MessageReplyInfo replyInfo;
+  /// reply_info Contains information about the message thread
+  final MessageReplyInfo replyInfo;
 
-  /// [messages] The messages from which the thread starts. The messages are returned in a reverse chronological order (i.e., in order of decreasing message_id)
-  List<Message> messages;
+  /// messages The messages from which the thread starts. The messages are returned in a reverse chronological order (i.e., in order of decreasing message_id)
+  final List<Message> messages;
 
-  /// [draftMessage] A draft of a message in the message thread; may be null
-  DraftMessage draftMessage;
+  /// draft_message A draft of a message in the message thread; may be null
+  final DraftMessage? draftMessage;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'messageThreadInfo';
 
-  /// Parse from a json
-  MessageThreadInfo.fromJson(Map<String, dynamic> json) {
-    this.chatId = json['chat_id'];
-    this.messageThreadId = json['message_thread_id'];
-    this.replyInfo =
-        MessageReplyInfo.fromJson(json['reply_info'] ?? <String, dynamic>{});
-    this.messages = List<Message>.from((json['messages'] ?? [])
-        .map((item) => Message.fromJson(item ?? <String, dynamic>{}))
-        .toList());
-    this.draftMessage =
-        DraftMessage.fromJson(json['draft_message'] ?? <String, dynamic>{});
-    this.extra = json['@extra'];
+  static MessageThreadInfo? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return MessageThreadInfo(
+        chatId: json['chat_id'],
+        messageThreadId: json['message_thread_id'],
+        replyInfo: MessageReplyInfo.fromJson(json['reply_info'])!,
+        messages: List<Message>.from((json['messages}'] ?? [])
+            .map((item) => Message.fromJson(json['Message'])!)
+            .toList()),
+        draftMessage: DraftMessage.fromJson(json['draft_message']));
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "chat_id": this.chatId,
-      "message_thread_id": this.messageThreadId,
-      "reply_info": this.replyInfo == null ? null : this.replyInfo.toJson(),
-      "messages": this.messages.map((i) => i.toJson()).toList(),
-      "draft_message":
-          this.draftMessage == null ? null : this.draftMessage.toJson(),
-    };
-  }
-
-  static const CONSTRUCTOR = 'messageThreadInfo';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'chat_id': this.chatId,
+        'message_thread_id': this.messageThreadId,
+        'reply_info': this.replyInfo,
+        'messages': this.messages,
+        'draft_message': this.draftMessage,
+        '@type': CONSTRUCTOR
+      };
 }

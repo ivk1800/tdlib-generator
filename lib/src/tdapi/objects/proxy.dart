@@ -1,62 +1,60 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains information about a proxy server
 class Proxy extends TdObject {
-  /// Contains information about a proxy server
   Proxy(
-      {this.id,
-      this.server,
-      this.port,
-      this.lastUsedDate,
-      this.isEnabled,
-      this.type});
+      {required this.id,
+      required this.server,
+      required this.port,
+      required this.lastUsedDate,
+      required this.isEnabled,
+      required this.type});
 
-  /// [id] Unique identifier of the proxy
-  int id;
+  /// id Unique identifier of the proxy
+  final int id;
 
-  /// [server] Proxy server IP address
-  String server;
+  /// server Proxy server IP address
+  final String server;
 
-  /// [port] Proxy server port
-  int port;
+  /// port Proxy server port
+  final int port;
 
-  /// [lastUsedDate] Point in time (Unix timestamp) when the proxy was last used; 0 if never
-  int lastUsedDate;
+  /// last_used_date Point in time (Unix timestamp) when the proxy was last used; 0 if never
+  final int lastUsedDate;
 
-  /// [isEnabled] True, if the proxy is enabled now
-  bool isEnabled;
+  /// is_enabled True, if the proxy is enabled now
+  final bool isEnabled;
 
-  /// [type] Type of the proxy
-  ProxyType type;
+  /// type Type of the proxy
+  final ProxyType type;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'proxy';
 
-  /// Parse from a json
-  Proxy.fromJson(Map<String, dynamic> json) {
-    this.id = json['id'];
-    this.server = json['server'];
-    this.port = json['port'];
-    this.lastUsedDate = json['last_used_date'];
-    this.isEnabled = json['is_enabled'];
-    this.type = ProxyType.fromJson(json['type'] ?? <String, dynamic>{});
-    this.extra = json['@extra'];
+  static Proxy? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return Proxy(
+        id: json['id'],
+        server: json['server'],
+        port: json['port'],
+        lastUsedDate: json['last_used_date'],
+        isEnabled: json['is_enabled'],
+        type: ProxyType.fromJson(json['type'])!);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "id": this.id,
-      "server": this.server,
-      "port": this.port,
-      "last_used_date": this.lastUsedDate,
-      "is_enabled": this.isEnabled,
-      "type": this.type == null ? null : this.type.toJson(),
-    };
-  }
-
-  static const CONSTRUCTOR = 'proxy';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'id': this.id,
+        'server': this.server,
+        'port': this.port,
+        'last_used_date': this.lastUsedDate,
+        'is_enabled': this.isEnabled,
+        'type': this.type,
+        '@type': CONSTRUCTOR
+      };
 }

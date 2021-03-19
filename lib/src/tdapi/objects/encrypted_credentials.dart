@@ -1,37 +1,38 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains encrypted Telegram Passport data credentials
 class EncryptedCredentials extends TdObject {
-  /// Contains encrypted Telegram Passport data credentials
-  EncryptedCredentials({this.data, this.hash, this.secret});
+  EncryptedCredentials(
+      {required this.data, required this.hash, required this.secret});
 
-  /// [data] The encrypted credentials
-  String data;
+  /// data The encrypted credentials
+  final String data;
 
-  /// [hash] The decrypted data hash
-  String hash;
+  /// hash The decrypted data hash
+  final String hash;
 
-  /// [secret] Secret for data decryption, encrypted with the service's public key
-  String secret;
+  /// secret Secret for data decryption, encrypted with the service's public key
+  final String secret;
 
-  /// Parse from a json
-  EncryptedCredentials.fromJson(Map<String, dynamic> json) {
-    this.data = json['data'];
-    this.hash = json['hash'];
-    this.secret = json['secret'];
+  static const String CONSTRUCTOR = 'encryptedCredentials';
+
+  static EncryptedCredentials? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return EncryptedCredentials(
+        data: json['data'], hash: json['hash'], secret: json['secret']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "data": this.data,
-      "hash": this.hash,
-      "secret": this.secret,
-    };
-  }
-
-  static const CONSTRUCTOR = 'encryptedCredentials';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'data': this.data,
+        'hash': this.hash,
+        'secret': this.secret,
+        '@type': CONSTRUCTOR
+      };
 }

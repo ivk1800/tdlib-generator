@@ -1,37 +1,35 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Sends a notification about user activity in a chat
 class SendChatAction extends TdFunction {
-  /// Sends a notification about user activity in a chat
-  SendChatAction({this.chatId, this.messageThreadId, this.action});
+  SendChatAction(
+      {required this.chatId,
+      required this.messageThreadId,
+      required this.action});
 
-  /// [chatId] Chat identifier
-  int chatId;
+  /// chat_id Chat identifier
+  final int chatId;
 
-  /// [messageThreadId] If not 0, a message thread identifier in which the action was performed
-  int messageThreadId;
+  /// message_thread_id If not 0, a message thread identifier in which the action was performed
+  final int messageThreadId;
 
-  /// [action] The action description
-  ChatAction action;
+  /// action The action description
+  final ChatAction action;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  SendChatAction.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "chat_id": this.chatId,
-      "message_thread_id": this.messageThreadId,
-      "action": this.action == null ? null : this.action.toJson(),
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'sendChatAction';
+  static const String CONSTRUCTOR = 'sendChatAction';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'chat_id': this.chatId,
+        'message_thread_id': this.messageThreadId,
+        'action': this.action,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

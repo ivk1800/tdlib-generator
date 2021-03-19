@@ -33,7 +33,7 @@ class TdClient {
 
   /// Events from the incoming updates and request responses from the TDLib client by [clientId] identifier.
   /// Must be call once per client.
-  static Stream<TdObject> clientEvents(int clientId) {
+  static Stream<TdObject?> clientEvents(int clientId) {
     return _eventChannel
         .receiveBroadcastStream(clientId)
         .map((event) => convertToObject(event));
@@ -42,14 +42,14 @@ class TdClient {
   /// Receives incoming updates and request responses from the TDLib client by [clientId] identifier and [timeout].
   /// May be called from any thread, but shouldn't be called simultaneously from two different threads.
   /// Returned pointer will be deallocated by TDLib during next call to clientExecute or clientSend in the same thread, so it can't be used after that.
-  static Future<TdObject> clientReceive(int clientId, double timeout) async =>
+  static Future<TdObject?> clientReceive(int clientId, double timeout) async =>
       convertToObject(await _platform.invokeMethod('clientReceive',
           <String, dynamic>{'client': clientId, 'timeout': timeout}));
 
   /// Synchronously executes TDLib request. May be called from any thread.
   /// Only a few requests can be executed synchronously.
   /// Returned pointer will be deallocated by TDLib during next call to clientReceive or clientExecute in the same thread, so it can't be used after that.
-  static Future<TdObject> clientExecute(int clientId, TdFunction event) async =>
+  static Future<TdObject?> clientExecute(int clientId, TdFunction event) async =>
       convertToObject(await _platform.invokeMethod('clientExecute',
           <String, dynamic>{'client': clientId, 'query': json.encode(event)}));
 

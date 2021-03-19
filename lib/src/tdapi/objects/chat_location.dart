@@ -1,32 +1,34 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Represents a location to which a chat is connected
 class ChatLocation extends TdObject {
-  /// Represents a location to which a chat is connected
-  ChatLocation({this.location, this.address});
+  ChatLocation({required this.location, required this.address});
 
-  /// [location] The location
-  Location location;
+  /// location The location
+  final Location location;
 
-  /// [address] Location address; 1-64 characters, as defined by the chat owner
-  String address;
+  /// address Location address; 1-64 characters, as defined by the chat owner
+  final String address;
 
-  /// Parse from a json
-  ChatLocation.fromJson(Map<String, dynamic> json) {
-    this.location = Location.fromJson(json['location'] ?? <String, dynamic>{});
-    this.address = json['address'];
+  static const String CONSTRUCTOR = 'chatLocation';
+
+  static ChatLocation? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return ChatLocation(
+        location: Location.fromJson(json['location'])!,
+        address: json['address']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "location": this.location == null ? null : this.location.toJson(),
-      "address": this.address,
-    };
-  }
-
-  static const CONSTRUCTOR = 'chatLocation';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'location': this.location,
+        'address': this.address,
+        '@type': CONSTRUCTOR
+      };
 }

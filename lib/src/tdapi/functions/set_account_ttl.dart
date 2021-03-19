@@ -1,29 +1,21 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Changes the period of inactivity after which the account of the current user will automatically be deleted
 class SetAccountTtl extends TdFunction {
-  /// Changes the period of inactivity after which the account of the current user will automatically be deleted
-  SetAccountTtl({this.ttl});
+  SetAccountTtl({required this.ttl});
 
-  /// [ttl] New account TTL
-  AccountTtl ttl;
+  /// ttl New account TTL
+  final AccountTtl ttl;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  SetAccountTtl.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "ttl": this.ttl == null ? null : this.ttl.toJson(),
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'setAccountTtl';
+  static const String CONSTRUCTOR = 'setAccountTtl';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'ttl': this.ttl, '@type': CONSTRUCTOR, '@extra': this.extra};
 }

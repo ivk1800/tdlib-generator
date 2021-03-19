@@ -1,33 +1,28 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Returns information about a successful payment
 class GetPaymentReceipt extends TdFunction {
-  /// Returns information about a successful payment
-  GetPaymentReceipt({this.chatId, this.messageId});
+  GetPaymentReceipt({required this.chatId, required this.messageId});
 
-  /// [chatId] Chat identifier of the PaymentSuccessful message
-  int chatId;
+  /// chat_id Chat identifier of the PaymentSuccessful message
+  final int chatId;
 
-  /// [messageId] Message identifier
-  int messageId;
+  /// message_id Message identifier
+  final int messageId;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  GetPaymentReceipt.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "chat_id": this.chatId,
-      "message_id": this.messageId,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'getPaymentReceipt';
+  static const String CONSTRUCTOR = 'getPaymentReceipt';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'chat_id': this.chatId,
+        'message_id': this.messageId,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

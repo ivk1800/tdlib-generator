@@ -1,31 +1,26 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains a chat invite link
 class ChatInviteLink extends TdObject {
-  /// Contains a chat invite link
-  ChatInviteLink({this.inviteLink});
+  ChatInviteLink({required this.inviteLink});
 
-  /// [inviteLink] Chat invite link
-  String inviteLink;
+  /// invite_link Chat invite link
+  final String inviteLink;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'chatInviteLink';
 
-  /// Parse from a json
-  ChatInviteLink.fromJson(Map<String, dynamic> json) {
-    this.inviteLink = json['invite_link'];
-    this.extra = json['@extra'];
+  static ChatInviteLink? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return ChatInviteLink(inviteLink: json['invite_link']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "invite_link": this.inviteLink,
-    };
-  }
-
-  static const CONSTRUCTOR = 'chatInviteLink';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'invite_link': this.inviteLink, '@type': CONSTRUCTOR};
 }

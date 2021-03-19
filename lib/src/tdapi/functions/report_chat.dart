@@ -1,37 +1,33 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Reports a chat to the Telegram moderators. A chat can be reported only from the chat action bar, or if this is a private chats with a bot, a private chat with a user sharing their location, a supergroup, or a channel, since other chats can't be checked by moderators
 class ReportChat extends TdFunction {
-  /// Reports a chat to the Telegram moderators. A chat can be reported only from the chat action bar, or if this is a private chats with a bot, a private chat with a user sharing their location, a supergroup, or a channel, since other chats can't be checked by moderators
-  ReportChat({this.chatId, this.reason, this.messageIds});
+  ReportChat(
+      {required this.chatId, required this.reason, required this.messageIds});
 
-  /// [chatId] Chat identifier
-  int chatId;
+  /// chat_id Chat identifier
+  final int chatId;
 
-  /// [reason] The reason for reporting the chat
-  ChatReportReason reason;
+  /// reason The reason for reporting the chat
+  final ChatReportReason reason;
 
-  /// [messageIds] Identifiers of reported messages, if any
-  List<int> messageIds;
+  /// message_ids Identifiers of reported messages, if any
+  final List<int> messageIds;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  ReportChat.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "chat_id": this.chatId,
-      "reason": this.reason == null ? null : this.reason.toJson(),
-      "message_ids": this.messageIds.map((i) => i).toList(),
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'reportChat';
+  static const String CONSTRUCTOR = 'reportChat';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'chat_id': this.chatId,
+        'reason': this.reason,
+        'message_ids': this.messageIds,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

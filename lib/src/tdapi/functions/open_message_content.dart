@@ -1,33 +1,28 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Informs TDLib that the message content has been opened (e.g., the user has opened a photo, video, document, location or venue, or has listened to an audio file or voice note message). An updateMessageContentOpened update will be generated if something has changed
 class OpenMessageContent extends TdFunction {
-  /// Informs TDLib that the message content has been opened (e.g., the user has opened a photo, video, document, location or venue, or has listened to an audio file or voice note message). An updateMessageContentOpened update will be generated if something has changed
-  OpenMessageContent({this.chatId, this.messageId});
+  OpenMessageContent({required this.chatId, required this.messageId});
 
-  /// [chatId] Chat identifier of the message
-  int chatId;
+  /// chat_id Chat identifier of the message
+  final int chatId;
 
-  /// [messageId] Identifier of the message with the opened content
-  int messageId;
+  /// message_id Identifier of the message with the opened content
+  final int messageId;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  OpenMessageContent.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "chat_id": this.chatId,
-      "message_id": this.messageId,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'openMessageContent';
+  static const String CONSTRUCTOR = 'openMessageContent';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'chat_id': this.chatId,
+        'message_id': this.messageId,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

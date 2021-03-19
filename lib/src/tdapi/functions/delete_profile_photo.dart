@@ -1,29 +1,24 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Deletes a profile photo
 class DeleteProfilePhoto extends TdFunction {
-  /// Deletes a profile photo
-  DeleteProfilePhoto({this.profilePhotoId});
+  DeleteProfilePhoto({required this.profilePhotoId});
 
-  /// [profilePhotoId] Identifier of the profile photo to delete
-  int profilePhotoId;
+  /// profile_photo_id Identifier of the profile photo to delete
+  final int profilePhotoId;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  DeleteProfilePhoto.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "profile_photo_id": this.profilePhotoId,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'deleteProfilePhoto';
+  static const String CONSTRUCTOR = 'deleteProfilePhoto';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'profile_photo_id': this.profilePhotoId,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

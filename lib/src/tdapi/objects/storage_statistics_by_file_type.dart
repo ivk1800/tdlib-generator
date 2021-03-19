@@ -1,37 +1,40 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains the storage usage statistics for a specific file type
 class StorageStatisticsByFileType extends TdObject {
-  /// Contains the storage usage statistics for a specific file type
-  StorageStatisticsByFileType({this.fileType, this.size, this.count});
+  StorageStatisticsByFileType(
+      {required this.fileType, required this.size, required this.count});
 
-  /// [fileType] File type
-  FileType fileType;
+  /// file_type File type
+  final FileType fileType;
 
-  /// [size] Total size of the files
-  int size;
+  /// size Total size of the files
+  final int size;
 
-  /// [count] Total number of files
-  int count;
+  /// count Total number of files
+  final int count;
 
-  /// Parse from a json
-  StorageStatisticsByFileType.fromJson(Map<String, dynamic> json) {
-    this.fileType = FileType.fromJson(json['file_type'] ?? <String, dynamic>{});
-    this.size = json['size'];
-    this.count = json['count'];
+  static const String CONSTRUCTOR = 'storageStatisticsByFileType';
+
+  static StorageStatisticsByFileType? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return StorageStatisticsByFileType(
+        fileType: FileType.fromJson(json['file_type'])!,
+        size: json['size'],
+        count: json['count']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "file_type": this.fileType == null ? null : this.fileType.toJson(),
-      "size": this.size,
-      "count": this.count,
-    };
-  }
-
-  static const CONSTRUCTOR = 'storageStatisticsByFileType';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'file_type': this.fileType,
+        'size': this.size,
+        'count': this.count,
+        '@type': CONSTRUCTOR
+      };
 }

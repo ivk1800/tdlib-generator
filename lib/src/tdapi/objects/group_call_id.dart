@@ -1,31 +1,25 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains the group call identifier
 class GroupCallId extends TdObject {
-  /// Contains the group call identifier
-  GroupCallId({this.id});
+  GroupCallId({required this.id});
 
-  /// [id] Group call identifier
-  int id;
+  /// id Group call identifier
+  final int id;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'groupCallId';
 
-  /// Parse from a json
-  GroupCallId.fromJson(Map<String, dynamic> json) {
-    this.id = json['id'];
-    this.extra = json['@extra'];
+  static GroupCallId? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return GroupCallId(id: json['id']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "id": this.id,
-    };
-  }
-
-  static const CONSTRUCTOR = 'groupCallId';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {'id': this.id, '@type': CONSTRUCTOR};
 }

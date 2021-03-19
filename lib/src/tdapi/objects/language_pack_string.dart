@@ -1,33 +1,31 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Represents one language pack string
 class LanguagePackString extends TdObject {
-  /// Represents one language pack string
-  LanguagePackString({this.key, this.value});
+  LanguagePackString({required this.key, required this.value});
 
-  /// [key] String key
-  String key;
+  /// key String key
+  final String key;
 
-  /// [value] String value
-  LanguagePackStringValue value;
+  /// value String value
+  final LanguagePackStringValue value;
 
-  /// Parse from a json
-  LanguagePackString.fromJson(Map<String, dynamic> json) {
-    this.key = json['key'];
-    this.value =
-        LanguagePackStringValue.fromJson(json['value'] ?? <String, dynamic>{});
+  static const String CONSTRUCTOR = 'languagePackString';
+
+  static LanguagePackString? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return LanguagePackString(
+        key: json['key'],
+        value: LanguagePackStringValue.fromJson(json['value'])!);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "key": this.key,
-      "value": this.value == null ? null : this.value.toJson(),
-    };
-  }
-
-  static const CONSTRUCTOR = 'languagePackString';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'key': this.key, 'value': this.value, '@type': CONSTRUCTOR};
 }

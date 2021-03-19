@@ -1,31 +1,26 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains the result of a custom request
 class CustomRequestResult extends TdObject {
-  /// Contains the result of a custom request
-  CustomRequestResult({this.result});
+  CustomRequestResult({required this.result});
 
-  /// [result] A JSON-serialized result
-  String result;
+  /// result A JSON-serialized result
+  final String result;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'customRequestResult';
 
-  /// Parse from a json
-  CustomRequestResult.fromJson(Map<String, dynamic> json) {
-    this.result = json['result'];
-    this.extra = json['@extra'];
+  static CustomRequestResult? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return CustomRequestResult(result: json['result']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "result": this.result,
-    };
-  }
-
-  static const CONSTRUCTOR = 'customRequestResult';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'result': this.result, '@type': CONSTRUCTOR};
 }

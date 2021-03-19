@@ -1,29 +1,21 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Removes a sticker from the list of favorite stickers
 class RemoveFavoriteSticker extends TdFunction {
-  /// Removes a sticker from the list of favorite stickers
-  RemoveFavoriteSticker({this.sticker});
+  RemoveFavoriteSticker({required this.sticker});
 
-  /// [sticker] Sticker file to delete from the list
-  InputFile sticker;
+  /// sticker Sticker file to delete from the list
+  final InputFile sticker;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  RemoveFavoriteSticker.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "sticker": this.sticker == null ? null : this.sticker.toJson(),
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'removeFavoriteSticker';
+  static const String CONSTRUCTOR = 'removeFavoriteSticker';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'sticker': this.sticker, '@type': CONSTRUCTOR, '@extra': this.extra};
 }

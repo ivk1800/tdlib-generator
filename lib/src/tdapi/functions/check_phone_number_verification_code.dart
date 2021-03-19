@@ -1,29 +1,21 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Checks the phone number verification code for Telegram Passport
 class CheckPhoneNumberVerificationCode extends TdFunction {
-  /// Checks the phone number verification code for Telegram Passport
-  CheckPhoneNumberVerificationCode({this.code});
+  CheckPhoneNumberVerificationCode({required this.code});
 
-  /// [code] Verification code
-  String code;
+  /// code Verification code
+  final String code;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  CheckPhoneNumberVerificationCode.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "code": this.code,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'checkPhoneNumberVerificationCode';
+  static const String CONSTRUCTOR = 'checkPhoneNumberVerificationCode';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'code': this.code, '@type': CONSTRUCTOR, '@extra': this.extra};
 }

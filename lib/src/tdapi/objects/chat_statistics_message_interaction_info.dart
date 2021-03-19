@@ -1,38 +1,43 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains statistics about interactions with a message
 class ChatStatisticsMessageInteractionInfo extends TdObject {
-  /// Contains statistics about interactions with a message
   ChatStatisticsMessageInteractionInfo(
-      {this.messageId, this.viewCount, this.forwardCount});
+      {required this.messageId,
+      required this.viewCount,
+      required this.forwardCount});
 
-  /// [messageId] Message identifier
-  int messageId;
+  /// message_id Message identifier
+  final int messageId;
 
-  /// [viewCount] Number of times the message was viewed
-  int viewCount;
+  /// view_count Number of times the message was viewed
+  final int viewCount;
 
-  /// [forwardCount] Number of times the message was forwarded
-  int forwardCount;
+  /// forward_count Number of times the message was forwarded
+  final int forwardCount;
 
-  /// Parse from a json
-  ChatStatisticsMessageInteractionInfo.fromJson(Map<String, dynamic> json) {
-    this.messageId = json['message_id'];
-    this.viewCount = json['view_count'];
-    this.forwardCount = json['forward_count'];
+  static const String CONSTRUCTOR = 'chatStatisticsMessageInteractionInfo';
+
+  static ChatStatisticsMessageInteractionInfo? fromJson(
+      Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return ChatStatisticsMessageInteractionInfo(
+        messageId: json['message_id'],
+        viewCount: json['view_count'],
+        forwardCount: json['forward_count']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "message_id": this.messageId,
-      "view_count": this.viewCount,
-      "forward_count": this.forwardCount,
-    };
-  }
-
-  static const CONSTRUCTOR = 'chatStatisticsMessageInteractionInfo';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'message_id': this.messageId,
+        'view_count': this.viewCount,
+        'forward_count': this.forwardCount,
+        '@type': CONSTRUCTOR
+      };
 }

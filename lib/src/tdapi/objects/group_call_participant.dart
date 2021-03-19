@@ -1,70 +1,72 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Represents a group call participant
 class GroupCallParticipant extends TdObject {
-  /// Represents a group call participant
   GroupCallParticipant(
-      {this.userId,
-      this.source,
-      this.isSpeaking,
-      this.canBeMuted,
-      this.canBeUnmuted,
-      this.isMuted,
-      this.canUnmuteSelf,
-      this.order});
+      {required this.userId,
+      required this.source,
+      required this.isSpeaking,
+      required this.canBeMuted,
+      required this.canBeUnmuted,
+      required this.isMuted,
+      required this.canUnmuteSelf,
+      required this.order});
 
-  /// [userId] Identifier of the user
-  int userId;
+  /// user_id Identifier of the user
+  final int userId;
 
-  /// [source] User's synchronization source
-  int source;
+  /// source User's synchronization source
+  final int source;
 
-  /// [isSpeaking] True, if the participant is speaking as set by setGroupCallParticipantIsSpeaking
-  bool isSpeaking;
+  /// is_speaking True, if the participant is speaking as set by setGroupCallParticipantIsSpeaking
+  final bool isSpeaking;
 
-  /// [canBeMuted] True, if the current user can mute the participant
-  bool canBeMuted;
+  /// can_be_muted True, if the current user can mute the participant
+  final bool canBeMuted;
 
-  /// [canBeUnmuted] True, if the current user can allow the participant to unmute themself or unmute the participant (only for self)
-  bool canBeUnmuted;
+  /// can_be_unmuted True, if the current user can allow the participant to unmute themself or unmute the participant (only for self)
+  final bool canBeUnmuted;
 
-  /// [isMuted] True, if the participant is muted
-  bool isMuted;
+  /// is_muted True, if the participant is muted
+  final bool isMuted;
 
-  /// [canUnmuteSelf] True, if the participant can unmute themself
-  bool canUnmuteSelf;
+  /// can_unmute_self True, if the participant can unmute themself
+  final bool canUnmuteSelf;
 
-  /// [order] User's order in the group call participant list. The bigger is order, the higher is user in the list. If order is 0, the user must be removed from the participant list
-  int order;
+  /// order User's order in the group call participant list. The bigger is order, the higher is user in the list. If order is 0, the user must be removed from the participant list
+  final int order;
 
-  /// Parse from a json
-  GroupCallParticipant.fromJson(Map<String, dynamic> json) {
-    this.userId = json['user_id'];
-    this.source = json['source'];
-    this.isSpeaking = json['is_speaking'];
-    this.canBeMuted = json['can_be_muted'];
-    this.canBeUnmuted = json['can_be_unmuted'];
-    this.isMuted = json['is_muted'];
-    this.canUnmuteSelf = json['can_unmute_self'];
-    this.order = int.tryParse(json['order'] ?? "");
+  static const String CONSTRUCTOR = 'groupCallParticipant';
+
+  static GroupCallParticipant? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return GroupCallParticipant(
+        userId: json['user_id'],
+        source: json['source'],
+        isSpeaking: json['is_speaking'],
+        canBeMuted: json['can_be_muted'],
+        canBeUnmuted: json['can_be_unmuted'],
+        isMuted: json['is_muted'],
+        canUnmuteSelf: json['can_unmute_self'],
+        order: int.tryParse(json['order']) ?? 0);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "user_id": this.userId,
-      "source": this.source,
-      "is_speaking": this.isSpeaking,
-      "can_be_muted": this.canBeMuted,
-      "can_be_unmuted": this.canBeUnmuted,
-      "is_muted": this.isMuted,
-      "can_unmute_self": this.canUnmuteSelf,
-      "order": this.order,
-    };
-  }
-
-  static const CONSTRUCTOR = 'groupCallParticipant';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'user_id': this.userId,
+        'source': this.source,
+        'is_speaking': this.isSpeaking,
+        'can_be_muted': this.canBeMuted,
+        'can_be_unmuted': this.canBeUnmuted,
+        'is_muted': this.isMuted,
+        'can_unmute_self': this.canUnmuteSelf,
+        'order': this.order,
+        '@type': CONSTRUCTOR
+      };
 }

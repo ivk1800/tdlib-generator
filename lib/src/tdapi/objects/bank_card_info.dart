@@ -1,39 +1,34 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Information about a bank card
 class BankCardInfo extends TdObject {
-  /// Information about a bank card
-  BankCardInfo({this.title, this.actions});
+  BankCardInfo({required this.title, required this.actions});
 
-  /// [title] Title of the bank card description
-  String title;
+  /// title Title of the bank card description
+  final String title;
 
-  /// [actions] Actions that can be done with the bank card number
-  List<BankCardActionOpenUrl> actions;
+  /// actions Actions that can be done with the bank card number
+  final List<BankCardActionOpenUrl> actions;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'bankCardInfo';
 
-  /// Parse from a json
-  BankCardInfo.fromJson(Map<String, dynamic> json) {
-    this.title = json['title'];
-    this.actions = List<BankCardActionOpenUrl>.from((json['actions'] ?? [])
-        .map((item) =>
-            BankCardActionOpenUrl.fromJson(item ?? <String, dynamic>{}))
-        .toList());
-    this.extra = json['@extra'];
+  static BankCardInfo? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return BankCardInfo(
+        title: json['title'],
+        actions: List<BankCardActionOpenUrl>.from((json['actions}'] ?? [])
+            .map((item) =>
+                BankCardActionOpenUrl.fromJson(json['BankCardActionOpenUrl'])!)
+            .toList()));
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "title": this.title,
-      "actions": this.actions.map((i) => i.toJson()).toList(),
-    };
-  }
-
-  static const CONSTRUCTOR = 'bankCardInfo';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'title': this.title, 'actions': this.actions, '@type': CONSTRUCTOR};
 }

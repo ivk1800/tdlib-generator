@@ -1,37 +1,33 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Returns an HTTP URL with the chat statistics. Currently this method of getting the statistics are disabled and can be deleted in the future
 class GetChatStatisticsUrl extends TdFunction {
-  /// Returns an HTTP URL with the chat statistics. Currently this method of getting the statistics are disabled and can be deleted in the future
-  GetChatStatisticsUrl({this.chatId, this.parameters, this.isDark});
+  GetChatStatisticsUrl(
+      {required this.chatId, required this.parameters, required this.isDark});
 
-  /// [chatId] Chat identifier
-  int chatId;
+  /// chat_id Chat identifier
+  final int chatId;
 
-  /// [parameters] Parameters from "tg://statsrefresh?params=******" link
-  String parameters;
+  /// parameters Parameters from "tg://statsrefresh?params=******" link
+  final String parameters;
 
-  /// [isDark] Pass true if a URL with the dark theme must be returned
-  bool isDark;
+  /// is_dark Pass true if a URL with the dark theme must be returned
+  final bool isDark;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  GetChatStatisticsUrl.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "chat_id": this.chatId,
-      "parameters": this.parameters,
-      "is_dark": this.isDark,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'getChatStatisticsUrl';
+  static const String CONSTRUCTOR = 'getChatStatisticsUrl';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'chat_id': this.chatId,
+        'parameters': this.parameters,
+        'is_dark': this.isDark,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

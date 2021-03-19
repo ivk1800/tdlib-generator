@@ -1,29 +1,21 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Returns a list of public chats of the specified type, owned by the user
 class GetCreatedPublicChats extends TdFunction {
-  /// Returns a list of public chats of the specified type, owned by the user
-  GetCreatedPublicChats({this.type});
+  GetCreatedPublicChats({required this.type});
 
-  /// [type] Type of the public chats to return
-  PublicChatType type;
+  /// type Type of the public chats to return
+  final PublicChatType type;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  GetCreatedPublicChats.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "type": this.type == null ? null : this.type.toJson(),
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'getCreatedPublicChats';
+  static const String CONSTRUCTOR = 'getCreatedPublicChats';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'type': this.type, '@type': CONSTRUCTOR, '@extra': this.extra};
 }

@@ -1,0 +1,31 @@
+part of '../tdapi.dart';
+
+/// Group.Objects
+/// The list of attached files contains an error. The error is considered resolved when the file list changes
+class InputPassportElementErrorSourceFiles
+    extends InputPassportElementErrorSource {
+  InputPassportElementErrorSourceFiles({required this.fileHashes});
+
+  /// file_hashes Current hashes of all attached files
+  final List<String> fileHashes;
+
+  static const String CONSTRUCTOR = 'inputPassportElementErrorSourceFiles';
+
+  static InputPassportElementErrorSourceFiles? fromJson(
+      Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return InputPassportElementErrorSourceFiles(
+        fileHashes: List<String>.from((json['file_hashes}'] ?? [])
+            .map((item) => json['String'])
+            .toList()));
+  }
+
+  @override
+  String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'file_hashes': this.fileHashes, '@type': CONSTRUCTOR};
+}

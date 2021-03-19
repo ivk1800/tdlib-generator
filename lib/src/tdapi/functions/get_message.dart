@@ -1,33 +1,28 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Returns information about a message
 class GetMessage extends TdFunction {
-  /// Returns information about a message
-  GetMessage({this.chatId, this.messageId});
+  GetMessage({required this.chatId, required this.messageId});
 
-  /// [chatId] Identifier of the chat the message belongs to
-  int chatId;
+  /// chat_id Identifier of the chat the message belongs to
+  final int chatId;
 
-  /// [messageId] Identifier of the message to get
-  int messageId;
+  /// message_id Identifier of the message to get
+  final int messageId;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  GetMessage.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "chat_id": this.chatId,
-      "message_id": this.messageId,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'getMessage';
+  static const String CONSTRUCTOR = 'getMessage';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'chat_id': this.chatId,
+        'message_id': this.messageId,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

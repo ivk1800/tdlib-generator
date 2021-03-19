@@ -1,31 +1,26 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains a value representing a number of seconds
 class Seconds extends TdObject {
-  /// Contains a value representing a number of seconds
-  Seconds({this.seconds});
+  Seconds({required this.seconds});
 
-  /// [seconds] Number of seconds
-  double seconds;
+  /// seconds Number of seconds
+  final double seconds;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'seconds';
 
-  /// Parse from a json
-  Seconds.fromJson(Map<String, dynamic> json) {
-    this.seconds = json['seconds'];
-    this.extra = json['@extra'];
+  static Seconds? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return Seconds(seconds: json['seconds']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "seconds": this.seconds,
-    };
-  }
-
-  static const CONSTRUCTOR = 'seconds';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'seconds': this.seconds, '@type': CONSTRUCTOR};
 }

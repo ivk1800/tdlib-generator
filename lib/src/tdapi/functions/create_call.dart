@@ -1,37 +1,33 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Creates a new call
 class CreateCall extends TdFunction {
-  /// Creates a new call
-  CreateCall({this.userId, this.protocol, this.isVideo});
+  CreateCall(
+      {required this.userId, required this.protocol, required this.isVideo});
 
-  /// [userId] Identifier of the user to be called
-  int userId;
+  /// user_id Identifier of the user to be called
+  final int userId;
 
-  /// [protocol] Description of the call protocols supported by the application
-  CallProtocol protocol;
+  /// protocol Description of the call protocols supported by the application
+  final CallProtocol protocol;
 
-  /// [isVideo] True, if a video call needs to be created
-  bool isVideo;
+  /// is_video True, if a video call needs to be created
+  final bool isVideo;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  CreateCall.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "user_id": this.userId,
-      "protocol": this.protocol == null ? null : this.protocol.toJson(),
-      "is_video": this.isVideo,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'createCall';
+  static const String CONSTRUCTOR = 'createCall';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'user_id': this.userId,
+        'protocol': this.protocol,
+        'is_video': this.isVideo,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

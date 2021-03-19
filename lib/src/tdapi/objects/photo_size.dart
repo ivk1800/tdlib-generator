@@ -1,49 +1,56 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Describes an image in JPEG format
 class PhotoSize extends TdObject {
-  /// Describes an image in JPEG format
   PhotoSize(
-      {this.type, this.photo, this.width, this.height, this.progressiveSizes});
+      {required this.type,
+      required this.photo,
+      required this.width,
+      required this.height,
+      required this.progressiveSizes});
 
-  /// [type] Image type (see https://core.telegram.org/constructor/photoSize)
-  String type;
+  /// type Image type (see https://core.telegram.org/constructor/photoSize)
+  final String type;
 
-  /// [photo] Information about the image file
-  File photo;
+  /// photo Information about the image file
+  final File photo;
 
-  /// [width] Image width
-  int width;
+  /// width Image width
+  final int width;
 
-  /// [height] Image height
-  int height;
+  /// height Image height
+  final int height;
 
-  /// [progressiveSizes] Sizes of progressive JPEG file prefixes, which can be used to preliminarily show the image
-  List<int> progressiveSizes;
+  /// progressive_sizes Sizes of progressive JPEG file prefixes, which can be used to preliminarily show the image
+  final List<int> progressiveSizes;
 
-  /// Parse from a json
-  PhotoSize.fromJson(Map<String, dynamic> json) {
-    this.type = json['type'];
-    this.photo = File.fromJson(json['photo'] ?? <String, dynamic>{});
-    this.width = json['width'];
-    this.height = json['height'];
-    this.progressiveSizes = List<int>.from(
-        (json['progressive_sizes'] ?? []).map((item) => item).toList());
+  static const String CONSTRUCTOR = 'photoSize';
+
+  static PhotoSize? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return PhotoSize(
+        type: json['type'],
+        photo: File.fromJson(json['photo'])!,
+        width: json['width'],
+        height: json['height'],
+        progressiveSizes: List<int>.from((json['progressive_sizes}'] ?? [])
+            .map((item) => json['int'])
+            .toList()));
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "type": this.type,
-      "photo": this.photo == null ? null : this.photo.toJson(),
-      "width": this.width,
-      "height": this.height,
-      "progressive_sizes": this.progressiveSizes.map((i) => i).toList(),
-    };
-  }
-
-  static const CONSTRUCTOR = 'photoSize';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'type': this.type,
+        'photo': this.photo,
+        'width': this.width,
+        'height': this.height,
+        'progressive_sizes': this.progressiveSizes,
+        '@type': CONSTRUCTOR
+      };
 }

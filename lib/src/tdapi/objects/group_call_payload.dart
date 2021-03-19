@@ -1,41 +1,44 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Describes a payload for interaction with tgcalls
 class GroupCallPayload extends TdObject {
-  /// Describes a payload for interaction with tgcalls
-  GroupCallPayload({this.ufrag, this.pwd, this.fingerprints});
+  GroupCallPayload(
+      {required this.ufrag, required this.pwd, required this.fingerprints});
 
-  /// [ufrag] Value of the field ufrag
-  String ufrag;
+  /// ufrag Value of the field ufrag
+  final String ufrag;
 
-  /// [pwd] Value of the field pwd
-  String pwd;
+  /// pwd Value of the field pwd
+  final String pwd;
 
-  /// [fingerprints] The list of fingerprints
-  List<GroupCallPayloadFingerprint> fingerprints;
+  /// fingerprints The list of fingerprints
+  final List<GroupCallPayloadFingerprint> fingerprints;
 
-  /// Parse from a json
-  GroupCallPayload.fromJson(Map<String, dynamic> json) {
-    this.ufrag = json['ufrag'];
-    this.pwd = json['pwd'];
-    this.fingerprints = List<GroupCallPayloadFingerprint>.from(
-        (json['fingerprints'] ?? [])
-            .map((item) => GroupCallPayloadFingerprint.fromJson(
-                item ?? <String, dynamic>{}))
-            .toList());
+  static const String CONSTRUCTOR = 'groupCallPayload';
+
+  static GroupCallPayload? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return GroupCallPayload(
+        ufrag: json['ufrag'],
+        pwd: json['pwd'],
+        fingerprints: List<GroupCallPayloadFingerprint>.from(
+            (json['fingerprints}'] ?? [])
+                .map((item) => GroupCallPayloadFingerprint.fromJson(
+                    json['GroupCallPayloadFingerprint'])!)
+                .toList()));
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "ufrag": this.ufrag,
-      "pwd": this.pwd,
-      "fingerprints": this.fingerprints.map((i) => i.toJson()).toList(),
-    };
-  }
-
-  static const CONSTRUCTOR = 'groupCallPayload';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'ufrag': this.ufrag,
+        'pwd': this.pwd,
+        'fingerprints': this.fingerprints,
+        '@type': CONSTRUCTOR
+      };
 }

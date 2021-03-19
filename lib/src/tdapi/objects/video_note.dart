@@ -1,55 +1,54 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Describes a video note. The video must be equal in width and height, cropped to a circle, and stored in MPEG4 format
 class VideoNote extends TdObject {
-  /// Describes a video note. The video must be equal in width and height, cropped to a circle, and stored in MPEG4 format
   VideoNote(
-      {this.duration,
-      this.length,
-      this.minithumbnail,
-      this.thumbnail,
-      this.video});
+      {required this.duration,
+      required this.length,
+      Minithumbnail? this.minithumbnail,
+      Thumbnail? this.thumbnail,
+      required this.video});
 
-  /// [duration] Duration of the video, in seconds; as defined by the sender
-  int duration;
+  /// duration Duration of the video, in seconds; as defined by the sender
+  final int duration;
 
-  /// [length] Video width and height; as defined by the sender
-  int length;
+  /// length Video width and height; as defined by the sender
+  final int length;
 
-  /// [minithumbnail] Video minithumbnail; may be null
-  Minithumbnail minithumbnail;
+  /// minithumbnail Video minithumbnail; may be null
+  final Minithumbnail? minithumbnail;
 
-  /// [thumbnail] Video thumbnail in JPEG format; as defined by the sender; may be null
-  Thumbnail thumbnail;
+  /// thumbnail Video thumbnail in JPEG format; as defined by the sender; may be null
+  final Thumbnail? thumbnail;
 
-  /// [video] File containing the video
-  File video;
+  /// video File containing the video
+  final File video;
 
-  /// Parse from a json
-  VideoNote.fromJson(Map<String, dynamic> json) {
-    this.duration = json['duration'];
-    this.length = json['length'];
-    this.minithumbnail =
-        Minithumbnail.fromJson(json['minithumbnail'] ?? <String, dynamic>{});
-    this.thumbnail =
-        Thumbnail.fromJson(json['thumbnail'] ?? <String, dynamic>{});
-    this.video = File.fromJson(json['video'] ?? <String, dynamic>{});
+  static const String CONSTRUCTOR = 'videoNote';
+
+  static VideoNote? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return VideoNote(
+        duration: json['duration'],
+        length: json['length'],
+        minithumbnail: Minithumbnail.fromJson(json['minithumbnail']),
+        thumbnail: Thumbnail.fromJson(json['thumbnail']),
+        video: File.fromJson(json['video'])!);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "duration": this.duration,
-      "length": this.length,
-      "minithumbnail":
-          this.minithumbnail == null ? null : this.minithumbnail.toJson(),
-      "thumbnail": this.thumbnail == null ? null : this.thumbnail.toJson(),
-      "video": this.video == null ? null : this.video.toJson(),
-    };
-  }
-
-  static const CONSTRUCTOR = 'videoNote';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'duration': this.duration,
+        'length': this.length,
+        'minithumbnail': this.minithumbnail,
+        'thumbnail': this.thumbnail,
+        'video': this.video,
+        '@type': CONSTRUCTOR
+      };
 }

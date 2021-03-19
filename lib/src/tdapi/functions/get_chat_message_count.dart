@@ -1,37 +1,33 @@
 part of '../tdapi.dart';
 
+/// Group.Functions
+/// Returns approximate number of messages of the specified type in the chat
 class GetChatMessageCount extends TdFunction {
-  /// Returns approximate number of messages of the specified type in the chat
-  GetChatMessageCount({this.chatId, this.filter, this.returnLocal});
+  GetChatMessageCount(
+      {required this.chatId, required this.filter, required this.returnLocal});
 
-  /// [chatId] Identifier of the chat in which to count messages
-  int chatId;
+  /// chat_id Identifier of the chat in which to count messages
+  final int chatId;
 
-  /// [filter] Filter for message content; searchMessagesFilterEmpty is unsupported in this function
-  SearchMessagesFilter filter;
+  /// filter Filter for message content; searchMessagesFilterEmpty is unsupported in this function
+  final SearchMessagesFilter filter;
 
-  /// [returnLocal] If true, returns count that is available locally without sending network requests, returning -1 if the number of messages is unknown
-  bool returnLocal;
+  /// return_local If true, returns count that is available locally without sending network requests, returning -1 if the number of messages is unknown
+  final bool returnLocal;
 
   /// callback sign
   dynamic extra;
 
-  /// Parse from a json
-  GetChatMessageCount.fromJson(Map<String, dynamic> json);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "chat_id": this.chatId,
-      "filter": this.filter == null ? null : this.filter.toJson(),
-      "return_local": this.returnLocal,
-      "@extra": this.extra,
-    };
-  }
-
-  static const CONSTRUCTOR = 'getChatMessageCount';
+  static const String CONSTRUCTOR = 'getChatMessageCount';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'chat_id': this.chatId,
+        'filter': this.filter,
+        'return_local': this.returnLocal,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

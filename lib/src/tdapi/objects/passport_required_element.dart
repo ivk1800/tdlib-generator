@@ -1,32 +1,31 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Contains a description of the required Telegram Passport element that was requested by a service
 class PassportRequiredElement extends TdObject {
-  /// Contains a description of the required Telegram Passport element that was requested by a service
-  PassportRequiredElement({this.suitableElements});
+  PassportRequiredElement({required this.suitableElements});
 
-  /// [suitableElements] List of Telegram Passport elements any of which is enough to provide
-  List<PassportSuitableElement> suitableElements;
+  /// suitable_elements List of Telegram Passport elements any of which is enough to provide
+  final List<PassportSuitableElement> suitableElements;
 
-  /// Parse from a json
-  PassportRequiredElement.fromJson(Map<String, dynamic> json) {
-    this.suitableElements = List<PassportSuitableElement>.from(
-        (json['suitable_elements'] ?? [])
-            .map((item) =>
-                PassportSuitableElement.fromJson(item ?? <String, dynamic>{}))
-            .toList());
+  static const String CONSTRUCTOR = 'passportRequiredElement';
+
+  static PassportRequiredElement? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return PassportRequiredElement(
+        suitableElements: List<PassportSuitableElement>.from(
+            (json['suitable_elements}'] ?? [])
+                .map((item) => PassportSuitableElement.fromJson(
+                    json['PassportSuitableElement'])!)
+                .toList()));
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "suitable_elements":
-          this.suitableElements.map((i) => i.toJson()).toList(),
-    };
-  }
-
-  static const CONSTRUCTOR = 'passportRequiredElement';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() =>
+      {'suitable_elements': this.suitableElements, '@type': CONSTRUCTOR};
 }

@@ -1,36 +1,33 @@
 part of '../tdapi.dart';
 
+/// Group.Objects
+/// Returns information about the availability of a temporary password, which can be used for payments
 class TemporaryPasswordState extends TdObject {
-  /// Returns information about the availability of a temporary password, which can be used for payments
-  TemporaryPasswordState({this.hasPassword, this.validFor});
+  TemporaryPasswordState({required this.hasPassword, required this.validFor});
 
-  /// [hasPassword] True, if a temporary password is available
-  bool hasPassword;
+  /// has_password True, if a temporary password is available
+  final bool hasPassword;
 
-  /// [validFor] Time left before the temporary password expires, in seconds
-  int validFor;
+  /// valid_for Time left before the temporary password expires, in seconds
+  final int validFor;
 
-  /// callback sign
-  dynamic extra;
+  static const String CONSTRUCTOR = 'temporaryPasswordState';
 
-  /// Parse from a json
-  TemporaryPasswordState.fromJson(Map<String, dynamic> json) {
-    this.hasPassword = json['has_password'];
-    this.validFor = json['valid_for'];
-    this.extra = json['@extra'];
+  static TemporaryPasswordState? fromJson(Map<String, dynamic>? json) {
+    if (json == null) {
+      return null;
+    }
+
+    return TemporaryPasswordState(
+        hasPassword: json['has_password'], validFor: json['valid_for']);
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "has_password": this.hasPassword,
-      "valid_for": this.validFor,
-    };
-  }
-
-  static const CONSTRUCTOR = 'temporaryPasswordState';
 
   @override
   String getConstructor() => CONSTRUCTOR;
+  @override
+  Map<String, dynamic> toJson() => {
+        'has_password': this.hasPassword,
+        'valid_for': this.validFor,
+        '@type': CONSTRUCTOR
+      };
 }
