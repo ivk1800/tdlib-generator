@@ -11,6 +11,7 @@ import 'package:tdlib/src/variable_type.dart';
 class Generator {
   static String tdApiDir = '../lib/src/tdapi';
   final File tdApiFile = File('$tdApiDir/tdapi.dart');
+  final File copyExtensionsFile = File('$tdApiDir/copy_extensions.dart');
   final Directory functionsDir = Directory("$tdApiDir/functions");
   final Directory objectsDir = Directory("$tdApiDir/objects");
 
@@ -123,7 +124,8 @@ class Generator {
       "import 'dart:convert' show json;",
       "part 'function.dart';",
       "part 'object.dart';",
-      "part 'convertor.dart';"
+      "part 'convertor.dart';",
+      "part 'copy_extensions.dart';"
     ];
 
     for (Class value in classes) {
@@ -148,6 +150,51 @@ class Generator {
     final objFile = File(tdApiFile.path);
     objFile.create();
     objFile.writeAsString(c.join('\n'), mode: FileMode.write);
+
+    if (copyExtensionsFile.existsSync())
+      copyExtensionsFile.deleteSync(recursive: true);
+    copyExtensionsFile.createSync(recursive: true);
+
+    copyExtensionsFile.create();
+
+    final List<String> extenisonsLines = <String>["part of 'tdapi.dart';"];
+
+    for (Class value in classes) {
+      if (value.variables.isEmpty) {
+        continue;
+      }
+
+      var extension = cb.Extension((extensionBuilder) {
+        extensionBuilder.name = '${value.name}CopyExtension';
+        extensionBuilder.on = cb.TypeReference((b) => b.symbol = value.name);
+        extensionBuilder.methods.add(cb.Method((methodBuilder) {
+          methodBuilder.name = "copy";
+          methodBuilder.returns = cb.refer(value.name);
+          methodBuilder.optionalParameters
+              .addAll(value.variables.map((Variable v) {
+            return cb.Parameter((parameterBuilder) {
+              parameterBuilder.named = true;
+              parameterBuilder.name = v.name.toVariableName();
+              parameterBuilder.type = cb.Reference('${v.type}?');
+            });
+          }));
+          methodBuilder.lambda = true;
+          methodBuilder.body = cb.Block((b) {
+            b.statements.add(cb.ToCodeExpression(cb.refer(value.name).newInstance(
+                <cb.Expression>[],
+                Map.fromEntries(value.variables.map((e) => MapEntry(
+                    e.name.toVariableName(),
+                    cb.refer(
+                        '${e.name.toVariableName()} ?? this.${e.name.toVariableName()}')))))));
+          });
+        }));
+      });
+      extenisonsLines
+          .add(DartFormatter().format('${extension.accept(emitter)}'));
+    }
+
+    copyExtensionsFile.writeAsString(extenisonsLines.join('\n'),
+        mode: FileMode.write);
   }
 
   cb.Method _createFromJsonStaticMethod(Class value, List<Class> classes) {

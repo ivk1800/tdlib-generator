@@ -2,6 +2,7 @@ import 'dart:convert' show json;
 part 'function.dart';
 part 'object.dart';
 part 'convertor.dart';
+part 'copy_extensions.dart';
 part 'objects/td_error.dart';
 part 'objects/ok.dart';
 part 'objects/tdlib_parameters.dart';
