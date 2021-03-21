@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Describes a chat located nearby
 class ChatNearby extends TdObject {
   ChatNearby({required this.chatId, required this.distance});
 
-  /// chat_id Chat identifier
+  /// [chatId] Chat identifier
   final int chatId;
 
-  /// distance Distance to the chat location, in meters
+  /// [distance] Distance to the chat location, in meters
   final int distance;
 
   static const String CONSTRUCTOR = 'chatNearby';

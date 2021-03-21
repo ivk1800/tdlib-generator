@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The call is hanging up after discardCall has been called
 class CallStateHangingUp extends CallState {
   const CallStateHangingUp();

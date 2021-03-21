@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A personal document, containing some information about a user
 class PersonalDocument extends TdObject {
   PersonalDocument({required this.files, required this.translation});
 
-  /// files List of files containing the pages of the document
+  /// [files] List of files containing the pages of the document
   final List<DatedFile> files;
 
-  /// translation List of files containing a certified English translation of the document
+  /// [translation] List of files containing a certified English translation of the document
   final List<DatedFile> translation;
 
   static const String CONSTRUCTOR = 'personalDocument';

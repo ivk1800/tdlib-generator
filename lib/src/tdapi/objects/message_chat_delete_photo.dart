@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A deleted chat photo
 class MessageChatDeletePhoto extends MessageContent {
   const MessageChatDeletePhoto();

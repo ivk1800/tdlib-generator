@@ -1,18 +1,17 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains one row of the game high score table
 class GameHighScore extends TdObject {
   GameHighScore(
       {required this.position, required this.userId, required this.score});
 
-  /// position Position in the high score table
+  /// [position] Position in the high score table
   final int position;
 
-  /// user_id User identifier
+  /// [userId] User identifier
   final int userId;
 
-  /// score User score
+  /// [score] User score
   final int score;
 
   static const String CONSTRUCTOR = 'gameHighScore';

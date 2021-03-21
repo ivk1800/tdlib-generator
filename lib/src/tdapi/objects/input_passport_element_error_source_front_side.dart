@@ -1,12 +1,11 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The front side of the document contains an error. The error is considered resolved when the file with the front side of the document changes
 class InputPassportElementErrorSourceFrontSide
     extends InputPassportElementErrorSource {
   InputPassportElementErrorSourceFrontSide({required this.fileHash});
 
-  /// file_hash Current hash of the file containing the front side
+  /// [fileHash] Current hash of the file containing the front side
   final String fileHash;
 
   static const String CONSTRUCTOR = 'inputPassportElementErrorSourceFrontSide';

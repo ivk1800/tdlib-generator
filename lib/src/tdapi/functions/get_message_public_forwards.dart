@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns forwarded copies of a channel message to different public channels. For optimal performance the number of returned messages is chosen by the library
 class GetMessagePublicForwards extends TdFunction {
   GetMessagePublicForwards(
@@ -9,16 +8,16 @@ class GetMessagePublicForwards extends TdFunction {
       required this.offset,
       required this.limit});
 
-  /// chat_id Chat identifier of the message
+  /// [chatId] Chat identifier of the message
   final int chatId;
 
-  /// message_id Message identifier
+  /// [messageId] Message identifier
   final int messageId;
 
-  /// offset Offset of the first entry to return as received from the previous request; use empty string to get first chunk of results
+  /// [offset] Offset of the first entry to return as received from the previous request; use empty string to get first chunk of results
   final String offset;
 
-  /// limit The maximum number of messages to be returned; must be positive and can't be greater than 100. Fewer messages may be returned than specified by the limit, even if the end of the list has not been reached
+  /// [limit] The maximum number of messages to be returned; must be positive and can't be greater than 100. Fewer messages may be returned than specified by the limit, even if the end of the list has not been reached
   final int limit;
 
   /// callback sign

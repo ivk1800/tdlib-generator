@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns all user contacts
 class GetContacts extends TdFunction {
   GetContacts();

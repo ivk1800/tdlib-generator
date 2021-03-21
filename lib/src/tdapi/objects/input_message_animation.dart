@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// An animation message (GIF-style).
 class InputMessageAnimation extends InputMessageContent {
   InputMessageAnimation(
@@ -12,25 +11,25 @@ class InputMessageAnimation extends InputMessageContent {
       required this.height,
       required this.caption});
 
-  /// animation Animation file to be sent
+  /// [animation] Animation file to be sent
   final InputFile animation;
 
-  /// thumbnail Animation thumbnail, if available
+  /// [thumbnail] Animation thumbnail, if available
   final InputThumbnail thumbnail;
 
-  /// added_sticker_file_ids File identifiers of the stickers added to the animation, if applicable
+  /// [addedStickerFileIds] File identifiers of the stickers added to the animation, if applicable
   final List<int> addedStickerFileIds;
 
-  /// duration Duration of the animation, in seconds
+  /// [duration] Duration of the animation, in seconds
   final int duration;
 
-  /// width Width of the animation; may be replaced by the server
+  /// [width] Width of the animation; may be replaced by the server
   final int width;
 
-  /// height Height of the animation; may be replaced by the server
+  /// [height] Height of the animation; may be replaced by the server
   final int height;
 
-  /// caption Animation caption; 0-GetOption("message_caption_length_max") characters
+  /// [caption] Animation caption; 0-GetOption("message_caption_length_max") characters
   final FormattedText caption;
 
   static const String CONSTRUCTOR = 'inputMessageAnimation';

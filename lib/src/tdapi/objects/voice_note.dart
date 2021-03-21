@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Describes a voice note. The voice note must be encoded with the Opus codec, and stored inside an OGG container. Voice notes can have only a single audio channel
 class VoiceNote extends TdObject {
   VoiceNote(
@@ -9,16 +8,16 @@ class VoiceNote extends TdObject {
       required this.mimeType,
       required this.voice});
 
-  /// duration Duration of the voice note, in seconds; as defined by the sender
+  /// [duration] Duration of the voice note, in seconds; as defined by the sender
   final int duration;
 
-  /// waveform A waveform representation of the voice note in 5-bit format
+  /// [waveform] A waveform representation of the voice note in 5-bit format
   final String waveform;
 
-  /// mime_type MIME type of the file; as defined by the sender
+  /// [mimeType] MIME type of the file; as defined by the sender
   final String mimeType;
 
-  /// voice File containing the voice note
+  /// [voice] File containing the voice note
   final File voice;
 
   static const String CONSTRUCTOR = 'voiceNote';

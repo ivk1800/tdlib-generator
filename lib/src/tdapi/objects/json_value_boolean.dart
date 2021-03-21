@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a boolean JSON value
 class JsonValueBoolean extends JsonValue {
   JsonValueBoolean({required this.value});
 
-  /// value The value
+  /// [value] The value
   final bool value;
 
   static const String CONSTRUCTOR = 'jsonValueBoolean';

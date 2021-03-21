@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The title of a page
 class PageBlockTitle extends PageBlock {
   PageBlockTitle({required this.title});
 
-  /// title Title
+  /// [title] Title
   final RichText title;
 
   static const String CONSTRUCTOR = 'pageBlockTitle';

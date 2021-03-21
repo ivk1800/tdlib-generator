@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The chat contains copyrighted content
 class ChatReportReasonCopyright extends ChatReportReason {
   const ChatReportReasonCopyright();

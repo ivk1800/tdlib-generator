@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Edits the time when a scheduled message will be sent. Scheduling state of all messages in the same album or forwarded together with the message will be also changed
 class EditMessageSchedulingState extends TdFunction {
   EditMessageSchedulingState(
@@ -8,13 +7,13 @@ class EditMessageSchedulingState extends TdFunction {
       required this.messageId,
       required this.schedulingState});
 
-  /// chat_id The chat the message belongs to
+  /// [chatId] The chat the message belongs to
   final int chatId;
 
-  /// message_id Identifier of the message
+  /// [messageId] Identifier of the message
   final int messageId;
 
-  /// scheduling_state The new message scheduling state. Pass null to send the message immediately
+  /// [schedulingState] The new message scheduling state. Pass null to send the message immediately
   final MessageSchedulingState schedulingState;
 
   /// callback sign

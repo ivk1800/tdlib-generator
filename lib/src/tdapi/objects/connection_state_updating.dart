@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Downloading data received while the application was offline
 class ConnectionStateUpdating extends ConnectionState {
   const ConnectionStateUpdating();

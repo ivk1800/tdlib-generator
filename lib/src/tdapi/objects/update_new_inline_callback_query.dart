@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A new incoming callback query from a message sent via a bot; for bots only
 class UpdateNewInlineCallbackQuery extends Update {
   UpdateNewInlineCallbackQuery(
@@ -10,19 +9,19 @@ class UpdateNewInlineCallbackQuery extends Update {
       required this.chatInstance,
       required this.payload});
 
-  /// id Unique query identifier
+  /// [id] Unique query identifier
   final int id;
 
-  /// sender_user_id Identifier of the user who sent the query
+  /// [senderUserId] Identifier of the user who sent the query
   final int senderUserId;
 
-  /// inline_message_id Identifier of the inline message, from which the query originated
+  /// [inlineMessageId] Identifier of the inline message, from which the query originated
   final String inlineMessageId;
 
-  /// chat_instance An identifier uniquely corresponding to the chat a message was sent to
+  /// [chatInstance] An identifier uniquely corresponding to the chat a message was sent to
   final int chatInstance;
 
-  /// payload Query payload
+  /// [payload] Query payload
   final CallbackQueryPayload payload;
 
   static const String CONSTRUCTOR = 'updateNewInlineCallbackQuery';

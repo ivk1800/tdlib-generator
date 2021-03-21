@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A bold rich text
 class RichTextBold extends RichText {
   RichTextBold({required this.text});
 
-  /// text Text
+  /// [text] Text
   final RichText text;
 
   static const String CONSTRUCTOR = 'richTextBold';

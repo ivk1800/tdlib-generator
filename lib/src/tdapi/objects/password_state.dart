@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents the current state of 2-step verification
 class PasswordState extends TdObject {
   PasswordState(
@@ -10,19 +9,19 @@ class PasswordState extends TdObject {
       required this.hasPassportData,
       EmailAddressAuthenticationCodeInfo? this.recoveryEmailAddressCodeInfo});
 
-  /// has_password True, if a 2-step verification password is set
+  /// [hasPassword] True, if a 2-step verification password is set
   final bool hasPassword;
 
-  /// password_hint Hint for the password; may be empty
+  /// [passwordHint] Hint for the password; may be empty
   final String passwordHint;
 
-  /// has_recovery_email_address True, if a recovery email is set
+  /// [hasRecoveryEmailAddress] True, if a recovery email is set
   final bool hasRecoveryEmailAddress;
 
-  /// has_passport_data True, if some Telegram Passport elements were saved
+  /// [hasPassportData] True, if some Telegram Passport elements were saved
   final bool hasPassportData;
 
-  /// recovery_email_address_code_info Information about the recovery email address to which the confirmation email was sent; may be null
+  /// [recoveryEmailAddressCodeInfo] Information about the recovery email address to which the confirmation email was sent; may be null
   final EmailAddressAuthenticationCodeInfo? recoveryEmailAddressCodeInfo;
 
   static const String CONSTRUCTOR = 'passwordState';

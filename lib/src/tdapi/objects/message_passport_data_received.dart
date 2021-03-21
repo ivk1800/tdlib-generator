@@ -1,15 +1,14 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Telegram Passport data has been received; for bots only
 class MessagePassportDataReceived extends MessageContent {
   MessagePassportDataReceived(
       {required this.elements, required this.credentials});
 
-  /// elements List of received Telegram Passport elements
+  /// [elements] List of received Telegram Passport elements
   final List<EncryptedPassportElement> elements;
 
-  /// credentials Encrypted data credentials
+  /// [credentials] Encrypted data credentials
   final EncryptedCredentials credentials;
 
   static const String CONSTRUCTOR = 'messagePassportDataReceived';

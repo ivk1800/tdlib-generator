@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// An identity document
 class IdentityDocument extends TdObject {
   IdentityDocument(
@@ -11,22 +10,22 @@ class IdentityDocument extends TdObject {
       DatedFile? this.selfie,
       required this.translation});
 
-  /// number Document number; 1-24 characters
+  /// [number] Document number; 1-24 characters
   final String number;
 
-  /// expiry_date Document expiry date; may be null
+  /// [expiryDate] Document expiry date; may be null
   final Date? expiryDate;
 
-  /// front_side Front side of the document
+  /// [frontSide] Front side of the document
   final DatedFile frontSide;
 
-  /// reverse_side Reverse side of the document; only for driver license and identity card
+  /// [reverseSide] Reverse side of the document; only for driver license and identity card
   final DatedFile reverseSide;
 
-  /// selfie Selfie with the document; may be null
+  /// [selfie] Selfie with the document; may be null
   final DatedFile? selfie;
 
-  /// translation List of files containing a certified English translation of the document
+  /// [translation] List of files containing a certified English translation of the document
   final List<DatedFile> translation;
 
   static const String CONSTRUCTOR = 'identityDocument';

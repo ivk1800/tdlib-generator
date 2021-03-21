@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The user is uploading a video note
 class ChatActionUploadingVideoNote extends ChatAction {
   ChatActionUploadingVideoNote({required this.progress});
 
-  /// progress Upload progress, as a percentage
+  /// [progress] Upload progress, as a percentage
   final int progress;
 
   static const String CONSTRUCTOR = 'chatActionUploadingVideoNote';

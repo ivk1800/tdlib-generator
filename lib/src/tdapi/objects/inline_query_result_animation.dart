@@ -1,18 +1,17 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents an animation file
 class InlineQueryResultAnimation extends InlineQueryResult {
   InlineQueryResultAnimation(
       {required this.id, required this.animation, required this.title});
 
-  /// id Unique identifier of the query result
+  /// [id] Unique identifier of the query result
   final String id;
 
-  /// animation Animation file
+  /// [animation] Animation file
   final Animation animation;
 
-  /// title Animation title
+  /// [title] Animation title
   final String title;
 
   static const String CONSTRUCTOR = 'inlineQueryResultAnimation';

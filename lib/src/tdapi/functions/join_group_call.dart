@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Joins a group call
 class JoinGroupCall extends TdFunction {
   JoinGroupCall(
@@ -9,16 +8,16 @@ class JoinGroupCall extends TdFunction {
       required this.source,
       required this.isMuted});
 
-  /// group_call_id Group call identifier
+  /// [groupCallId] Group call identifier
   final int groupCallId;
 
-  /// payload Group join payload, received from tgcalls. Use null to cancel previous joinGroupCall request
+  /// [payload] Group join payload, received from tgcalls. Use null to cancel previous joinGroupCall request
   final GroupCallPayload payload;
 
-  /// source Caller synchronization source identifier; received from tgcalls
+  /// [source] Caller synchronization source identifier; received from tgcalls
   final int source;
 
-  /// is_muted True, if the user's microphone is muted
+  /// [isMuted] True, if the user's microphone is muted
   final bool isMuted;
 
   /// callback sign

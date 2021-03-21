@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Edits the message content of a live location. Messages can be edited for a limited period of time specified in the live location. Returns the edited message after the edit is completed on the server side
 class EditMessageLiveLocation extends TdFunction {
   EditMessageLiveLocation(
@@ -11,22 +10,22 @@ class EditMessageLiveLocation extends TdFunction {
       required this.heading,
       required this.proximityAlertRadius});
 
-  /// chat_id The chat the message belongs to
+  /// [chatId] The chat the message belongs to
   final int chatId;
 
-  /// message_id Identifier of the message
+  /// [messageId] Identifier of the message
   final int messageId;
 
-  /// reply_markup The new message reply markup; for bots only
+  /// [replyMarkup] The new message reply markup; for bots only
   final ReplyMarkup replyMarkup;
 
-  /// location New location content of the message; may be null. Pass null to stop sharing the live location
+  /// [location] New location content of the message; may be null. Pass null to stop sharing the live location
   final Location? location;
 
-  /// heading The new direction in which the location moves, in degrees; 1-360. Pass 0 if unknown
+  /// [heading] The new direction in which the location moves, in degrees; 1-360. Pass 0 if unknown
   final int heading;
 
-  /// proximity_alert_radius The new maximum distance for proximity alerts, in meters (0-100000). Pass 0 if the notification is disabled
+  /// [proximityAlertRadius] The new maximum distance for proximity alerts, in meters (0-100000). Pass 0 if the notification is disabled
   final int proximityAlertRadius;
 
   /// callback sign

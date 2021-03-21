@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The user is picking a contact to send
 class ChatActionChoosingContact extends ChatAction {
   const ChatActionChoosingContact();

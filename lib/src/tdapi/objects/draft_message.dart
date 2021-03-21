@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains information about a message draft
 class DraftMessage extends TdObject {
   DraftMessage(
@@ -8,13 +7,13 @@ class DraftMessage extends TdObject {
       required this.date,
       required this.inputMessageText});
 
-  /// reply_to_message_id Identifier of the message to reply to; 0 if none
+  /// [replyToMessageId] Identifier of the message to reply to; 0 if none
   final int replyToMessageId;
 
-  /// date Point in time (Unix timestamp) when the draft was created
+  /// [date] Point in time (Unix timestamp) when the draft was created
   final int date;
 
-  /// input_message_text Content of the message draft; this should always be of type inputMessageText
+  /// [inputMessageText] Content of the message draft; this should always be of type inputMessageText
   final InputMessageContent inputMessageText;
 
   static const String CONSTRUCTOR = 'draftMessage';

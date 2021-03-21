@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The list of favorite stickers was updated
 class UpdateFavoriteStickers extends Update {
   UpdateFavoriteStickers({required this.stickerIds});
 
-  /// sticker_ids The new list of file identifiers of favorite stickers
+  /// [stickerIds] The new list of file identifiers of favorite stickers
   final List<int> stickerIds;
 
   static const String CONSTRUCTOR = 'updateFavoriteStickers';

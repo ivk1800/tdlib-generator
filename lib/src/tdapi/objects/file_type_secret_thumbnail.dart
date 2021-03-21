@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The file is a thumbnail of a file from a secret chat
 class FileTypeSecretThumbnail extends FileType {
   const FileTypeSecretThumbnail();

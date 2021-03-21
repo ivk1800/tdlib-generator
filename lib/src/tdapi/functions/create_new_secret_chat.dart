@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Creates a new secret chat. Returns the newly created chat
 class CreateNewSecretChat extends TdFunction {
   CreateNewSecretChat({required this.userId});
 
-  /// user_id Identifier of the target user
+  /// [userId] Identifier of the target user
   final int userId;
 
   /// callback sign

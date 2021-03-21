@@ -1,12 +1,11 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The translation of the document contains an error. The error is considered resolved when the list of files changes
 class InputPassportElementErrorSourceTranslationFiles
     extends InputPassportElementErrorSource {
   InputPassportElementErrorSourceTranslationFiles({required this.fileHashes});
 
-  /// file_hashes Current hashes of all files with the translation
+  /// [fileHashes] Current hashes of all files with the translation
   final List<String> fileHashes;
 
   static const String CONSTRUCTOR =

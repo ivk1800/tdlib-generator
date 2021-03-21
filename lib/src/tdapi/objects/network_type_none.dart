@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The network is not available
 class NetworkTypeNone extends NetworkType {
   const NetworkTypeNone();

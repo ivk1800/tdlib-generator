@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Changes the chat members permissions. Supported only for basic groups and supergroups. Requires can_restrict_members administrator right
 class SetChatPermissions extends TdFunction {
   SetChatPermissions({required this.chatId, required this.permissions});
 
-  /// chat_id Chat identifier
+  /// [chatId] Chat identifier
   final int chatId;
 
-  /// permissions New non-administrator members permissions in the chat
+  /// [permissions] New non-administrator members permissions in the chat
   final ChatPermissions permissions;
 
   /// callback sign

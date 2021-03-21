@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains a list of updates
 class Updates extends TdObject {
   Updates({required this.updates});
 
-  /// updates List of updates
+  /// [updates] List of updates
   final List<Update> updates;
 
   static const String CONSTRUCTOR = 'updates';

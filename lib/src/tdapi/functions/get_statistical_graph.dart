@@ -1,18 +1,17 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Loads an asynchronous or a zoomed in statistical graph
 class GetStatisticalGraph extends TdFunction {
   GetStatisticalGraph(
       {required this.chatId, required this.token, required this.x});
 
-  /// chat_id Chat identifier
+  /// [chatId] Chat identifier
   final int chatId;
 
-  /// token The token for graph loading
+  /// [token] The token for graph loading
   final String token;
 
-  /// x X-value for zoomed in graph or 0 otherwise
+  /// [x] X-value for zoomed in graph or 0 otherwise
   final int x;
 
   /// callback sign

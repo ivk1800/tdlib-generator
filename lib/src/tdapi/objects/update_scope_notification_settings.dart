@@ -1,15 +1,14 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Notification settings for some type of chats were updated
 class UpdateScopeNotificationSettings extends Update {
   UpdateScopeNotificationSettings(
       {required this.scope, required this.notificationSettings});
 
-  /// scope Types of chats for which notification settings were updated
+  /// [scope] Types of chats for which notification settings were updated
   final NotificationSettingsScope scope;
 
-  /// notification_settings The new notification settings
+  /// [notificationSettings] The new notification settings
   final ScopeNotificationSettings notificationSettings;
 
   static const String CONSTRUCTOR = 'updateScopeNotificationSettings';

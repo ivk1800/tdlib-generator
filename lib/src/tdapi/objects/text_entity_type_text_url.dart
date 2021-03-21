@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A text description shown instead of a raw URL
 class TextEntityTypeTextUrl extends TextEntityType {
   TextEntityTypeTextUrl({required this.url});
 
-  /// url HTTP or tg:// URL to be opened when the link is clicked
+  /// [url] HTTP or tg:// URL to be opened when the link is clicked
   final String url;
 
   static const String CONSTRUCTOR = 'textEntityTypeTextUrl';

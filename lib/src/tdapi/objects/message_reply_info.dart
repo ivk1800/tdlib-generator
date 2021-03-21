@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains information about replies to a message
 class MessageReplyInfo extends TdObject {
   MessageReplyInfo(
@@ -10,19 +9,19 @@ class MessageReplyInfo extends TdObject {
       required this.lastReadOutboxMessageId,
       required this.lastMessageId});
 
-  /// reply_count Number of times the message was directly or indirectly replied
+  /// [replyCount] Number of times the message was directly or indirectly replied
   final int replyCount;
 
-  /// recent_repliers Recent repliers to the message; available in channels with a discussion supergroup
+  /// [recentRepliers] Recent repliers to the message; available in channels with a discussion supergroup
   final List<MessageSender> recentRepliers;
 
-  /// last_read_inbox_message_id Identifier of the last read incoming reply to the message
+  /// [lastReadInboxMessageId] Identifier of the last read incoming reply to the message
   final int lastReadInboxMessageId;
 
-  /// last_read_outbox_message_id Identifier of the last read outgoing reply to the message
+  /// [lastReadOutboxMessageId] Identifier of the last read outgoing reply to the message
   final int lastReadOutboxMessageId;
 
-  /// last_message_id Identifier of the last reply to the message
+  /// [lastMessageId] Identifier of the last reply to the message
   final int lastMessageId;
 
   static const String CONSTRUCTOR = 'messageReplyInfo';

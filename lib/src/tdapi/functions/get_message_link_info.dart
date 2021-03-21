@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns information about a public or private message link
 class GetMessageLinkInfo extends TdFunction {
   GetMessageLinkInfo({required this.url});
 
-  /// url The message link in the format "https://t.me/c/...", or "tg://privatepost?...", or "https://t.me/username/...", or "tg://resolve?..."
+  /// [url] The message link in the format "https://t.me/c/...", or "tg://privatepost?...", or "https://t.me/username/...", or "tg://resolve?..."
   final String url;
 
   /// callback sign

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A member left the chat
 class ChatEventMemberLeft extends ChatEventAction {
   const ChatEventMemberLeft();

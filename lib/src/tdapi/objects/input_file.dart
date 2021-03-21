@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Points to a file
 abstract class InputFile extends TdObject {
   const InputFile();

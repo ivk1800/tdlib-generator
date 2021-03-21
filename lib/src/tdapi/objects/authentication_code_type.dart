@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Provides information about the method by which an authentication code is delivered to the user
 abstract class AuthenticationCodeType extends TdObject {
   const AuthenticationCodeType();

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A video note message
 class InputMessageVideoNote extends InputMessageContent {
   InputMessageVideoNote(
@@ -9,16 +8,16 @@ class InputMessageVideoNote extends InputMessageContent {
       required this.duration,
       required this.length});
 
-  /// video_note Video note to be sent
+  /// [videoNote] Video note to be sent
   final InputFile videoNote;
 
-  /// thumbnail Video thumbnail, if available
+  /// [thumbnail] Video thumbnail, if available
   final InputThumbnail thumbnail;
 
-  /// duration Duration of the video, in seconds
+  /// [duration] Duration of the video, in seconds
   final int duration;
 
-  /// length Video width and height; must be positive and not greater than 640
+  /// [length] Video width and height; must be positive and not greater than 640
   final int length;
 
   static const String CONSTRUCTOR = 'inputMessageVideoNote';

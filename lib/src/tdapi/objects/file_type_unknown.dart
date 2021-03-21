@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The file type is not yet known
 class FileTypeUnknown extends FileType {
   const FileTypeUnknown();

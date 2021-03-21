@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains statistics about interactions with a message
 class ChatStatisticsMessageInteractionInfo extends TdObject {
   ChatStatisticsMessageInteractionInfo(
@@ -8,13 +7,13 @@ class ChatStatisticsMessageInteractionInfo extends TdObject {
       required this.viewCount,
       required this.forwardCount});
 
-  /// message_id Message identifier
+  /// [messageId] Message identifier
   final int messageId;
 
-  /// view_count Number of times the message was viewed
+  /// [viewCount] Number of times the message was viewed
   final int viewCount;
 
-  /// forward_count Number of times the message was forwarded
+  /// [forwardCount] Number of times the message was forwarded
   final int forwardCount;
 
   static const String CONSTRUCTOR = 'chatStatisticsMessageInteractionInfo';

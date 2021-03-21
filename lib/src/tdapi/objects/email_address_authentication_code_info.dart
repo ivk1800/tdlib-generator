@@ -1,15 +1,14 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Information about the email address authentication code that was sent
 class EmailAddressAuthenticationCodeInfo extends TdObject {
   EmailAddressAuthenticationCodeInfo(
       {required this.emailAddressPattern, required this.length});
 
-  /// email_address_pattern Pattern of the email address to which an authentication code was sent
+  /// [emailAddressPattern] Pattern of the email address to which an authentication code was sent
   final String emailAddressPattern;
 
-  /// length Length of the code; 0 if unknown
+  /// [length] Length of the code; 0 if unknown
   final int length;
 
   static const String CONSTRUCTOR = 'emailAddressAuthenticationCodeInfo';

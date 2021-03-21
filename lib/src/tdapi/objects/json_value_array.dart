@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a JSON array
 class JsonValueArray extends JsonValue {
   JsonValueArray({required this.values});
 
-  /// values The list of array elements
+  /// [values] The list of array elements
   final List<JsonValue> values;
 
   static const String CONSTRUCTOR = 'jsonValueArray';

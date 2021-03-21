@@ -1,18 +1,17 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// An animation message (GIF-style).
 class MessageAnimation extends MessageContent {
   MessageAnimation(
       {required this.animation, required this.caption, required this.isSecret});
 
-  /// animation The animation description
+  /// [animation] The animation description
   final Animation animation;
 
-  /// caption Animation caption
+  /// [caption] Animation caption
   final FormattedText caption;
 
-  /// is_secret True, if the animation thumbnail must be blurred and the animation must be shown only while tapped
+  /// [isSecret] True, if the animation thumbnail must be blurred and the animation must be shown only while tapped
   final bool isSecret;
 
   static const String CONSTRUCTOR = 'messageAnimation';

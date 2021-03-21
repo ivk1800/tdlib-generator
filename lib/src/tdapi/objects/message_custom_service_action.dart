@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A non-standard action has happened in the chat
 class MessageCustomServiceAction extends MessageContent {
   MessageCustomServiceAction({required this.text});
 
-  /// text Message text to be shown in the chat
+  /// [text] Message text to be shown in the chat
   final String text;
 
   static const String CONSTRUCTOR = 'messageCustomServiceAction';

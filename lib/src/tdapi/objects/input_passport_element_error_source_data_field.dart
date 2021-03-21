@@ -1,16 +1,15 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A data field contains an error. The error is considered resolved when the field's value changes
 class InputPassportElementErrorSourceDataField
     extends InputPassportElementErrorSource {
   InputPassportElementErrorSourceDataField(
       {required this.fieldName, required this.dataHash});
 
-  /// field_name Field name
+  /// [fieldName] Field name
   final String fieldName;
 
-  /// data_hash Current data hash
+  /// [dataHash] Current data hash
   final String dataHash;
 
   static const String CONSTRUCTOR = 'inputPassportElementErrorSourceDataField';

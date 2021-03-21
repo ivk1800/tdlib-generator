@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Describes a document of any type
 class Document extends TdObject {
   Document(
@@ -10,19 +9,19 @@ class Document extends TdObject {
       Thumbnail? this.thumbnail,
       required this.document});
 
-  /// file_name Original name of the file; as defined by the sender
+  /// [fileName] Original name of the file; as defined by the sender
   final String fileName;
 
-  /// mime_type MIME type of the file; as defined by the sender
+  /// [mimeType] MIME type of the file; as defined by the sender
   final String mimeType;
 
-  /// minithumbnail Document minithumbnail; may be null
+  /// [minithumbnail] Document minithumbnail; may be null
   final Minithumbnail? minithumbnail;
 
-  /// thumbnail Document thumbnail in JPEG or PNG format (PNG will be used only for background patterns); as defined by the sender; may be null
+  /// [thumbnail] Document thumbnail in JPEG or PNG format (PNG will be used only for background patterns); as defined by the sender; may be null
   final Thumbnail? thumbnail;
 
-  /// document File containing the document
+  /// [document] File containing the document
   final File document;
 
   static const String CONSTRUCTOR = 'document';

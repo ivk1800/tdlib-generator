@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Text that must be formatted as if inside a code HTML tag
 class TextEntityTypeCode extends TextEntityType {
   const TextEntityTypeCode();

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Contains content of a push message notification
 abstract class PushMessageContent extends TdObject {
   const PushMessageContent();

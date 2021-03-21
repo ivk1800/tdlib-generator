@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Blocks an original sender of a message in the Replies chat
 class BlockMessageSenderFromReplies extends TdFunction {
   BlockMessageSenderFromReplies(
@@ -9,16 +8,16 @@ class BlockMessageSenderFromReplies extends TdFunction {
       required this.deleteAllMessages,
       required this.reportSpam});
 
-  /// message_id The identifier of an incoming message in the Replies chat
+  /// [messageId] The identifier of an incoming message in the Replies chat
   final int messageId;
 
-  /// delete_message Pass true if the message must be deleted
+  /// [deleteMessage] Pass true if the message must be deleted
   final bool deleteMessage;
 
-  /// delete_all_messages Pass true if all messages from the same sender must be deleted
+  /// [deleteAllMessages] Pass true if all messages from the same sender must be deleted
   final bool deleteAllMessages;
 
-  /// report_spam Pass true if the sender must be reported to the Telegram moderators
+  /// [reportSpam] Pass true if the sender must be reported to the Telegram moderators
   final bool reportSpam;
 
   /// callback sign

@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Describes a recently speaking user in a group call
 class GroupCallRecentSpeaker extends TdObject {
   GroupCallRecentSpeaker({required this.userId, required this.isSpeaking});
 
-  /// user_id User identifier
+  /// [userId] User identifier
   final int userId;
 
-  /// is_speaking True, is the user has spoken recently
+  /// [isSpeaking] True, is the user has spoken recently
   final bool isSpeaking;
 
   static const String CONSTRUCTOR = 'groupCallRecentSpeaker';

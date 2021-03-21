@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Contains a detailed statistics about a chat
 abstract class ChatStatistics extends TdObject {
   const ChatStatistics();

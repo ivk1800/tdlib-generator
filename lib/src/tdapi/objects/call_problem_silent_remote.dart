@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The other side couldn't hear the user
 class CallProblemSilentRemote extends CallProblem {
   const CallProblemSilentRemote();

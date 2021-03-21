@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Describes a sticker that needs to be added to a sticker set
 abstract class InputSticker extends TdObject {
   const InputSticker();

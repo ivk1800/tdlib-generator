@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains an HTTP URL
 class HttpUrl extends TdObject {
   HttpUrl({required this.url});
 
-  /// url The URL
+  /// [url] The URL
   final String url;
 
   static const String CONSTRUCTOR = 'httpUrl';

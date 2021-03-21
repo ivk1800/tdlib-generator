@@ -1,12 +1,11 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The file contains an error. The error is considered resolved when the file changes
 class InputPassportElementErrorSourceFile
     extends InputPassportElementErrorSource {
   InputPassportElementErrorSourceFile({required this.fileHash});
 
-  /// file_hash Current hash of the file which has the error
+  /// [fileHash] Current hash of the file which has the error
   final String fileHash;
 
   static const String CONSTRUCTOR = 'inputPassportElementErrorSourceFile';

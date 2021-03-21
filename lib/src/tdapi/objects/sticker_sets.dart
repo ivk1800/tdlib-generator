@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a list of sticker sets
 class StickerSets extends TdObject {
   StickerSets({required this.totalCount, required this.sets});
 
-  /// total_count Approximate total number of sticker sets found
+  /// [totalCount] Approximate total number of sticker sets found
   final int totalCount;
 
-  /// sets List of sticker sets
+  /// [sets] List of sticker sets
   final List<StickerSetInfo> sets;
 
   static const String CONSTRUCTOR = 'stickerSets';

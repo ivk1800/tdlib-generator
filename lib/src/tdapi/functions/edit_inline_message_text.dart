@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Edits the text of an inline text or game message sent via a bot; for bots only
 class EditInlineMessageText extends TdFunction {
   EditInlineMessageText(
@@ -8,13 +7,13 @@ class EditInlineMessageText extends TdFunction {
       required this.replyMarkup,
       required this.inputMessageContent});
 
-  /// inline_message_id Inline message identifier
+  /// [inlineMessageId] Inline message identifier
   final String inlineMessageId;
 
-  /// reply_markup The new message reply markup
+  /// [replyMarkup] The new message reply markup
   final ReplyMarkup replyMarkup;
 
-  /// input_message_content New text content of the message. Should be of type InputMessageText
+  /// [inputMessageContent] New text content of the message. Should be of type InputMessageText
   final InputMessageContent inputMessageContent;
 
   /// callback sign

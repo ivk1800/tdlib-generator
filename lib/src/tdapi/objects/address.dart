@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Describes an address
 class Address extends TdObject {
   Address(
@@ -11,22 +10,22 @@ class Address extends TdObject {
       required this.streetLine2,
       required this.postalCode});
 
-  /// country_code A two-letter ISO 3166-1 alpha-2 country code
+  /// [countryCode] A two-letter ISO 3166-1 alpha-2 country code
   final String countryCode;
 
-  /// state State, if applicable
+  /// [state] State, if applicable
   final String state;
 
-  /// city City
+  /// [city] City
   final String city;
 
-  /// street_line1 First line of the address
+  /// [streetLine1] First line of the address
   final String streetLine1;
 
-  /// street_line2 Second line of the address
+  /// [streetLine2] Second line of the address
   final String streetLine2;
 
-  /// postal_code Address postal code
+  /// [postalCode] Address postal code
   final String postalCode;
 
   static const String CONSTRUCTOR = 'address';

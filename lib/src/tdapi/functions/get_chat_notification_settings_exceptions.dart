@@ -1,15 +1,14 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns list of chats with non-default notification settings
 class GetChatNotificationSettingsExceptions extends TdFunction {
   GetChatNotificationSettingsExceptions(
       {required this.scope, required this.compareSound});
 
-  /// scope If specified, only chats from the specified scope will be returned
+  /// [scope] If specified, only chats from the specified scope will be returned
   final NotificationSettingsScope scope;
 
-  /// compare_sound If true, also chats with non-default sound will be returned
+  /// [compareSound] If true, also chats with non-default sound will be returned
   final bool compareSound;
 
   /// callback sign

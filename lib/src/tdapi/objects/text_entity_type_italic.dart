@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// An italic text
 class TextEntityTypeItalic extends TextEntityType {
   const TextEntityTypeItalic();

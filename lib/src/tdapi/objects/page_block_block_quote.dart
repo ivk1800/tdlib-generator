@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A block quote
 class PageBlockBlockQuote extends PageBlock {
   PageBlockBlockQuote({required this.text, required this.credit});
 
-  /// text Quote text
+  /// [text] Quote text
   final RichText text;
 
-  /// credit Quote credit
+  /// [credit] Quote credit
   final RichText credit;
 
   static const String CONSTRUCTOR = 'pageBlockBlockQuote';

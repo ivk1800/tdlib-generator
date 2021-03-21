@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A new member joined the chat
 class ChatEventMemberJoined extends ChatEventAction {
   const ChatEventMemberJoined();

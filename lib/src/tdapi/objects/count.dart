@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains a counter
 class Count extends TdObject {
   Count({required this.count});
 
-  /// count Count
+  /// [count] Count
   final int count;
 
   static const String CONSTRUCTOR = 'count';

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// An embedded web page
 class PageBlockEmbedded extends PageBlock {
   PageBlockEmbedded(
@@ -13,28 +12,28 @@ class PageBlockEmbedded extends PageBlock {
       required this.isFullWidth,
       required this.allowScrolling});
 
-  /// url Web page URL, if available
+  /// [url] Web page URL, if available
   final String url;
 
-  /// html HTML-markup of the embedded page
+  /// [html] HTML-markup of the embedded page
   final String html;
 
-  /// poster_photo Poster photo, if available; may be null
+  /// [posterPhoto] Poster photo, if available; may be null
   final Photo? posterPhoto;
 
-  /// width Block width; 0 if unknown
+  /// [width] Block width; 0 if unknown
   final int width;
 
-  /// height Block height; 0 if unknown
+  /// [height] Block height; 0 if unknown
   final int height;
 
-  /// caption Block caption
+  /// [caption] Block caption
   final PageBlockCaption caption;
 
-  /// is_full_width True, if the block should be full width
+  /// [isFullWidth] True, if the block should be full width
   final bool isFullWidth;
 
-  /// allow_scrolling True, if scrolling should be allowed
+  /// [allowScrolling] True, if scrolling should be allowed
   final bool allowScrolling;
 
   static const String CONSTRUCTOR = 'pageBlockEmbedded';

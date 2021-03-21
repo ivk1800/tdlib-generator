@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns a user that can be contacted to get support
 class GetSupportUser extends TdFunction {
   GetSupportUser();

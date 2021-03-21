@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Returns only call messages
 class SearchMessagesFilterCall extends SearchMessagesFilter {
   const SearchMessagesFilterCall();

@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Deletes all messages sent by the specified user to a chat. Supported only for supergroups; requires can_delete_messages administrator privileges
 class DeleteChatMessagesFromUser extends TdFunction {
   DeleteChatMessagesFromUser({required this.chatId, required this.userId});
 
-  /// chat_id Chat identifier
+  /// [chatId] Chat identifier
   final int chatId;
 
-  /// user_id User identifier
+  /// [userId] User identifier
   final int userId;
 
   /// callback sign

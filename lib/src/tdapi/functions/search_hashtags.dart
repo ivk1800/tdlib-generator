@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Searches for recently used hashtags by their prefix
 class SearchHashtags extends TdFunction {
   SearchHashtags({required this.prefix, required this.limit});
 
-  /// prefix Hashtag prefix to search for
+  /// [prefix] Hashtag prefix to search for
   final String prefix;
 
-  /// limit The maximum number of hashtags to be returned
+  /// [limit] The maximum number of hashtags to be returned
   final int limit;
 
   /// callback sign

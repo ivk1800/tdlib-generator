@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A privacy setting for managing whether the user's profile photo is visible
 class UserPrivacySettingShowProfilePhoto extends UserPrivacySetting {
   const UserPrivacySettingShowProfilePhoto();

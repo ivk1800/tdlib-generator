@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A chat voice chat state has changed
 class UpdateChatVoiceChat extends Update {
   UpdateChatVoiceChat(
@@ -8,13 +7,13 @@ class UpdateChatVoiceChat extends Update {
       required this.voiceChatGroupCallId,
       required this.isVoiceChatEmpty});
 
-  /// chat_id Chat identifier
+  /// [chatId] Chat identifier
   final int chatId;
 
-  /// voice_chat_group_call_id New value of voice_chat_group_call_id
+  /// [voiceChatGroupCallId] New value of voice_chat_group_call_id
   final int voiceChatGroupCallId;
 
-  /// is_voice_chat_empty New value of is_voice_chat_empty
+  /// [isVoiceChatEmpty] New value of is_voice_chat_empty
   final bool isVoiceChatEmpty;
 
   static const String CONSTRUCTOR = 'updateChatVoiceChat';

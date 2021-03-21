@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Returns users which can be mentioned in the chat
 class ChatMembersFilterMention extends ChatMembersFilter {
   ChatMembersFilterMention({required this.messageThreadId});
 
-  /// message_thread_id If non-zero, the identifier of the current message thread
+  /// [messageThreadId] If non-zero, the identifier of the current message thread
   final int messageThreadId;
 
   static const String CONSTRUCTOR = 'chatMembersFilterMention';

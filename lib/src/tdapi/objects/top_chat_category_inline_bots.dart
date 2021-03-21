@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A category containing frequently used chats with inline bots sorted by their usage in inline mode
 class TopChatCategoryInlineBots extends TopChatCategory {
   const TopChatCategoryInlineBots();

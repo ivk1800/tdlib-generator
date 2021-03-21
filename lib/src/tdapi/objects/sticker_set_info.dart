@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents short information about a sticker set
 class StickerSetInfo extends TdObject {
   StickerSetInfo(
@@ -18,43 +17,43 @@ class StickerSetInfo extends TdObject {
       required this.size,
       required this.covers});
 
-  /// id Identifier of the sticker set
+  /// [id] Identifier of the sticker set
   final int id;
 
-  /// title Title of the sticker set
+  /// [title] Title of the sticker set
   final String title;
 
-  /// name Name of the sticker set
+  /// [name] Name of the sticker set
   final String name;
 
-  /// thumbnail Sticker set thumbnail in WEBP or TGS format with width and height 100; may be null
+  /// [thumbnail] Sticker set thumbnail in WEBP or TGS format with width and height 100; may be null
   final Thumbnail? thumbnail;
 
-  /// thumbnail_outline Sticker set thumbnail's outline represented as a list of closed vector paths; may be empty. The coordinate system origin is in the upper-left corner
+  /// [thumbnailOutline] Sticker set thumbnail's outline represented as a list of closed vector paths; may be empty. The coordinate system origin is in the upper-left corner
   final List<ClosedVectorPath> thumbnailOutline;
 
-  /// is_installed True, if the sticker set has been installed by the current user
+  /// [isInstalled] True, if the sticker set has been installed by the current user
   final bool isInstalled;
 
-  /// is_archived True, if the sticker set has been archived. A sticker set can't be installed and archived simultaneously
+  /// [isArchived] True, if the sticker set has been archived. A sticker set can't be installed and archived simultaneously
   final bool isArchived;
 
-  /// is_official True, if the sticker set is official
+  /// [isOfficial] True, if the sticker set is official
   final bool isOfficial;
 
-  /// is_animated True, is the stickers in the set are animated
+  /// [isAnimated] True, is the stickers in the set are animated
   final bool isAnimated;
 
-  /// is_masks True, if the stickers in the set are masks
+  /// [isMasks] True, if the stickers in the set are masks
   final bool isMasks;
 
-  /// is_viewed True for already viewed trending sticker sets
+  /// [isViewed] True for already viewed trending sticker sets
   final bool isViewed;
 
-  /// size Total number of stickers in the set
+  /// [size] Total number of stickers in the set
   final int size;
 
-  /// covers Contains up to the first 5 stickers from the set, depending on the context. If the application needs more stickers the full set should be requested
+  /// [covers] Contains up to the first 5 stickers from the set, depending on the context. If the application needs more stickers the full set should be requested
   final List<Sticker> covers;
 
   static const String CONSTRUCTOR = 'stickerSetInfo';

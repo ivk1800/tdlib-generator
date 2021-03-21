@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A Telegram Passport element containing the user's passport
 class PassportElementPassport extends PassportElement {
   PassportElementPassport({required this.passport});
 
-  /// passport Passport
+  /// [passport] Passport
   final IdentityDocument passport;
 
   static const String CONSTRUCTOR = 'passportElementPassport';

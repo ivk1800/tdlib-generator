@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A URL linking to a sticker set
 class TMeUrlTypeStickerSet extends TMeUrlType {
   TMeUrlTypeStickerSet({required this.stickerSetId});
 
-  /// sticker_set_id Identifier of the sticker set
+  /// [stickerSetId] Identifier of the sticker set
   final int stickerSetId;
 
   static const String CONSTRUCTOR = 'tMeUrlTypeStickerSet';

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Describes a photo to be set as a user profile or chat photo
 abstract class InputChatPhoto extends TdObject {
   const InputChatPhoto();

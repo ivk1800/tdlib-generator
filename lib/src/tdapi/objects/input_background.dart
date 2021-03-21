@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Contains information about background to set
 abstract class InputBackground extends TdObject {
   const InputBackground();

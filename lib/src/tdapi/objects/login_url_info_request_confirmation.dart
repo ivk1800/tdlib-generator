@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// An authorization confirmation dialog needs to be shown to the user
 class LoginUrlInfoRequestConfirmation extends LoginUrlInfo {
   LoginUrlInfoRequestConfirmation(
@@ -9,16 +8,16 @@ class LoginUrlInfoRequestConfirmation extends LoginUrlInfo {
       required this.botUserId,
       required this.requestWriteAccess});
 
-  /// url An HTTP URL to be opened
+  /// [url] An HTTP URL to be opened
   final String url;
 
-  /// domain A domain of the URL
+  /// [domain] A domain of the URL
   final String domain;
 
-  /// bot_user_id User identifier of a bot linked with the website
+  /// [botUserId] User identifier of a bot linked with the website
   final int botUserId;
 
-  /// request_write_access True, if the user needs to be requested to give the permission to the bot to send them messages
+  /// [requestWriteAccess] True, if the user needs to be requested to give the permission to the bot to send them messages
   final bool requestWriteAccess;
 
   static const String CONSTRUCTOR = 'loginUrlInfoRequestConfirmation';

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The file is a sticker
 class FileTypeSticker extends FileType {
   const FileTypeSticker();

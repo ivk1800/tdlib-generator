@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The TTL (Time To Live) setting messages in a secret chat has been changed
 class MessageChatSetTtl extends MessageContent {
   MessageChatSetTtl({required this.ttl});
 
-  /// ttl New TTL
+  /// [ttl] New TTL
   final int ttl;
 
   static const String CONSTRUCTOR = 'messageChatSetTtl';

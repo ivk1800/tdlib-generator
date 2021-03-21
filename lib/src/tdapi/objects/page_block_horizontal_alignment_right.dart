@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The content should be right-aligned
 class PageBlockHorizontalAlignmentRight extends PageBlockHorizontalAlignment {
   const PageBlockHorizontalAlignmentRight();

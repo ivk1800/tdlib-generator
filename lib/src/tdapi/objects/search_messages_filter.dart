@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Represents a filter for message search results
 abstract class SearchMessagesFilter extends TdObject {
   const SearchMessagesFilter();

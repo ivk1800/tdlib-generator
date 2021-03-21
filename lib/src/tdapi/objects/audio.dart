@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Describes an audio file. Audio is usually in MP3 or M4A format
 class Audio extends TdObject {
   Audio(
@@ -13,28 +12,28 @@ class Audio extends TdObject {
       Thumbnail? this.albumCoverThumbnail,
       required this.audio});
 
-  /// duration Duration of the audio, in seconds; as defined by the sender
+  /// [duration] Duration of the audio, in seconds; as defined by the sender
   final int duration;
 
-  /// title Title of the audio; as defined by the sender
+  /// [title] Title of the audio; as defined by the sender
   final String title;
 
-  /// performer Performer of the audio; as defined by the sender
+  /// [performer] Performer of the audio; as defined by the sender
   final String performer;
 
-  /// file_name Original name of the file; as defined by the sender
+  /// [fileName] Original name of the file; as defined by the sender
   final String fileName;
 
-  /// mime_type The MIME type of the file; as defined by the sender
+  /// [mimeType] The MIME type of the file; as defined by the sender
   final String mimeType;
 
-  /// album_cover_minithumbnail The minithumbnail of the album cover; may be null
+  /// [albumCoverMinithumbnail] The minithumbnail of the album cover; may be null
   final Minithumbnail? albumCoverMinithumbnail;
 
-  /// album_cover_thumbnail The thumbnail of the album cover in JPEG format; as defined by the sender. The full size thumbnail should be extracted from the downloaded file; may be null
+  /// [albumCoverThumbnail] The thumbnail of the album cover in JPEG format; as defined by the sender. The full size thumbnail should be extracted from the downloaded file; may be null
   final Thumbnail? albumCoverThumbnail;
 
-  /// audio File containing the audio
+  /// [audio] File containing the audio
   final File audio;
 
   static const String CONSTRUCTOR = 'audio';

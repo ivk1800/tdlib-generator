@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A message with a game
 class PushMessageContentGame extends PushMessageContent {
   PushMessageContentGame({required this.title, required this.isPinned});
 
-  /// title Game title, empty for pinned game message
+  /// [title] Game title, empty for pinned game message
   final String title;
 
-  /// is_pinned True, if the message is a pinned message with the specified content
+  /// [isPinned] True, if the message is a pinned message with the specified content
   final bool isPinned;
 
   static const String CONSTRUCTOR = 'pushMessageContentGame';

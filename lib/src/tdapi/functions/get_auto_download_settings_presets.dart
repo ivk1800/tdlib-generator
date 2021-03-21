@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns auto-download settings presets for the current user
 class GetAutoDownloadSettingsPresets extends TdFunction {
   GetAutoDownloadSettingsPresets();

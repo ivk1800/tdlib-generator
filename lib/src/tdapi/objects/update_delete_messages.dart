@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Some messages were deleted
 class UpdateDeleteMessages extends Update {
   UpdateDeleteMessages(
@@ -9,16 +8,16 @@ class UpdateDeleteMessages extends Update {
       required this.isPermanent,
       required this.fromCache});
 
-  /// chat_id Chat identifier
+  /// [chatId] Chat identifier
   final int chatId;
 
-  /// message_ids Identifiers of the deleted messages
+  /// [messageIds] Identifiers of the deleted messages
   final List<int> messageIds;
 
-  /// is_permanent True, if the messages are permanently deleted by a user (as opposed to just becoming inaccessible)
+  /// [isPermanent] True, if the messages are permanently deleted by a user (as opposed to just becoming inaccessible)
   final bool isPermanent;
 
-  /// from_cache True, if the messages are deleted only from the cache and can possibly be retrieved again in the future
+  /// [fromCache] True, if the messages are deleted only from the cache and can possibly be retrieved again in the future
   final bool fromCache;
 
   static const String CONSTRUCTOR = 'updateDeleteMessages';

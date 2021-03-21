@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Recovers the password using a recovery code sent to an email address that was previously set up
 class RecoverPassword extends TdFunction {
   RecoverPassword({required this.recoveryCode});
 
-  /// recovery_code Recovery code to check
+  /// [recoveryCode] Recovery code to check
   final String recoveryCode;
 
   /// callback sign

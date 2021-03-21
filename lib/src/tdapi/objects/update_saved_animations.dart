@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The list of saved animations was updated
 class UpdateSavedAnimations extends Update {
   UpdateSavedAnimations({required this.animationIds});
 
-  /// animation_ids The new list of file identifiers of saved animations
+  /// [animationIds] The new list of file identifiers of saved animations
   final List<int> animationIds;
 
   static const String CONSTRUCTOR = 'updateSavedAnimations';

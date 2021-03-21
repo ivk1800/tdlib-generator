@@ -1,15 +1,14 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The value of the default disable_notification parameter, used when a message is sent to the chat, was changed
 class UpdateChatDefaultDisableNotification extends Update {
   UpdateChatDefaultDisableNotification(
       {required this.chatId, required this.defaultDisableNotification});
 
-  /// chat_id Chat identifier
+  /// [chatId] Chat identifier
   final int chatId;
 
-  /// default_disable_notification The new default_disable_notification value
+  /// [defaultDisableNotification] The new default_disable_notification value
   final bool defaultDisableNotification;
 
   static const String CONSTRUCTOR = 'updateChatDefaultDisableNotification';

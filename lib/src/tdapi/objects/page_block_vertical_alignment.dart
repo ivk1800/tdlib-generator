@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Describes a Vertical alignment of a table cell content
 abstract class PageBlockVerticalAlignment extends TdObject {
   const PageBlockVerticalAlignment();

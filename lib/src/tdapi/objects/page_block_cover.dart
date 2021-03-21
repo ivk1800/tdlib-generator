@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A page cover
 class PageBlockCover extends PageBlock {
   PageBlockCover({required this.cover});
 
-  /// cover Cover
+  /// [cover] Cover
   final PageBlock cover;
 
   static const String CONSTRUCTOR = 'pageBlockCover';

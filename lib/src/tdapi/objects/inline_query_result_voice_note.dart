@@ -1,18 +1,17 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a voice note
 class InlineQueryResultVoiceNote extends InlineQueryResult {
   InlineQueryResultVoiceNote(
       {required this.id, required this.voiceNote, required this.title});
 
-  /// id Unique identifier of the query result
+  /// [id] Unique identifier of the query result
   final String id;
 
-  /// voice_note Voice note
+  /// [voiceNote] Voice note
   final VoiceNote voiceNote;
 
-  /// title Title of the voice note
+  /// [title] Title of the voice note
   final String title;
 
   static const String CONSTRUCTOR = 'inlineQueryResultVoiceNote';

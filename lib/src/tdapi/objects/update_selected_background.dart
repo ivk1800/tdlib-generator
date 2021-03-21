@@ -1,15 +1,14 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The selected background has changed
 class UpdateSelectedBackground extends Update {
   UpdateSelectedBackground(
       {required this.forDarkTheme, Background? this.background});
 
-  /// for_dark_theme True, if background for dark theme has changed
+  /// [forDarkTheme] True, if background for dark theme has changed
   final bool forDarkTheme;
 
-  /// background The new selected background; may be null
+  /// [background] The new selected background; may be null
   final Background? background;
 
   static const String CONSTRUCTOR = 'updateSelectedBackground';

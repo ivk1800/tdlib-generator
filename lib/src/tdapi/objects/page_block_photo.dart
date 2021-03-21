@@ -1,17 +1,16 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A photo
 class PageBlockPhoto extends PageBlock {
   PageBlockPhoto({Photo? this.photo, required this.caption, required this.url});
 
-  /// photo Photo file; may be null
+  /// [photo] Photo file; may be null
   final Photo? photo;
 
-  /// caption Photo caption
+  /// [caption] Photo caption
   final PageBlockCaption caption;
 
-  /// url URL that needs to be opened when the photo is clicked
+  /// [url] URL that needs to be opened when the photo is clicked
   final String url;
 
   static const String CONSTRUCTOR = 'pageBlockPhoto';

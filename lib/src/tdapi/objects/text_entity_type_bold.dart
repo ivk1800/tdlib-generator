@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A bold text
 class TextEntityTypeBold extends TextEntityType {
   const TextEntityTypeBold();

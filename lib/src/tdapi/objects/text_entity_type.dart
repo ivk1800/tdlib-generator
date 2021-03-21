@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Represents a part of the text which must be formatted differently
 abstract class TextEntityType extends TdObject {
   const TextEntityType();

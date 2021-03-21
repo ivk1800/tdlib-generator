@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains a list of messages found by a search
 class FoundMessages extends TdObject {
   FoundMessages(
@@ -8,13 +7,13 @@ class FoundMessages extends TdObject {
       required this.messages,
       required this.nextOffset});
 
-  /// total_count Approximate total count of messages found; -1 if unknown
+  /// [totalCount] Approximate total count of messages found; -1 if unknown
   final int totalCount;
 
-  /// messages List of messages
+  /// [messages] List of messages
   final List<Message> messages;
 
-  /// next_offset The offset for the next request. If empty, there are no more results
+  /// [nextOffset] The offset for the next request. If empty, there are no more results
   final String nextOffset;
 
   static const String CONSTRUCTOR = 'foundMessages';

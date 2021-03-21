@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The call is pending, waiting to be accepted by a user
 class CallStatePending extends CallState {
   CallStatePending({required this.isCreated, required this.isReceived});
 
-  /// is_created True, if the call has already been created by the server
+  /// [isCreated] True, if the call has already been created by the server
   final bool isCreated;
 
-  /// is_received True, if the call has already been received by the other party
+  /// [isReceived] True, if the call has already been received by the other party
   final bool isReceived;
 
   static const String CONSTRUCTOR = 'callStatePending';

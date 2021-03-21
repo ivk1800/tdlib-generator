@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The thumbnail is in JPEG format
 class ThumbnailFormatJpeg extends ThumbnailFormat {
   const ThumbnailFormatJpeg();

@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains information about a tg:// deep link
 class DeepLinkInfo extends TdObject {
   DeepLinkInfo({required this.text, required this.needUpdateApplication});
 
-  /// text Text to be shown to the user
+  /// [text] Text to be shown to the user
   final FormattedText text;
 
-  /// need_update_application True, if user should be asked to update the application
+  /// [needUpdateApplication] True, if user should be asked to update the application
   final bool needUpdateApplication;
 
   static const String CONSTRUCTOR = 'deepLinkInfo';

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Describes a photo
 class Photo extends TdObject {
   Photo(
@@ -8,13 +7,13 @@ class Photo extends TdObject {
       Minithumbnail? this.minithumbnail,
       required this.sizes});
 
-  /// has_stickers True, if stickers were added to the photo. The list of corresponding sticker sets can be received using getAttachedStickerSets
+  /// [hasStickers] True, if stickers were added to the photo. The list of corresponding sticker sets can be received using getAttachedStickerSets
   final bool hasStickers;
 
-  /// minithumbnail Photo minithumbnail; may be null
+  /// [minithumbnail] Photo minithumbnail; may be null
   final Minithumbnail? minithumbnail;
 
-  /// sizes Available variants of the photo, in different sizes
+  /// [sizes] Available variants of the photo, in different sizes
   final List<PhotoSize> sizes;
 
   static const String CONSTRUCTOR = 'photo';

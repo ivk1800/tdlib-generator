@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// An audio file
 class PageBlockAudio extends PageBlock {
   PageBlockAudio({Audio? this.audio, required this.caption});
 
-  /// audio Audio file; may be null
+  /// [audio] Audio file; may be null
   final Audio? audio;
 
-  /// caption Audio file caption
+  /// [caption] Audio file caption
   final PageBlockCaption caption;
 
   static const String CONSTRUCTOR = 'pageBlockAudio';

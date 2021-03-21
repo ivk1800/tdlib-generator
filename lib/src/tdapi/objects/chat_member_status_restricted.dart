@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The user is under certain restrictions in the chat. Not supported in basic groups and channels
 class ChatMemberStatusRestricted extends ChatMemberStatus {
   ChatMemberStatusRestricted(
@@ -8,13 +7,13 @@ class ChatMemberStatusRestricted extends ChatMemberStatus {
       required this.restrictedUntilDate,
       required this.permissions});
 
-  /// is_member True, if the user is a member of the chat
+  /// [isMember] True, if the user is a member of the chat
   final bool isMember;
 
-  /// restricted_until_date Point in time (Unix timestamp) when restrictions will be lifted from the user; 0 if never. If the user is restricted for more than 366 days or for less than 30 seconds from the current time, the user is considered to be restricted forever
+  /// [restrictedUntilDate] Point in time (Unix timestamp) when restrictions will be lifted from the user; 0 if never. If the user is restricted for more than 366 days or for less than 30 seconds from the current time, the user is considered to be restricted forever
   final int restrictedUntilDate;
 
-  /// permissions User permissions in the chat
+  /// [permissions] User permissions in the chat
   final ChatPermissions permissions;
 
   static const String CONSTRUCTOR = 'chatMemberStatusRestricted';

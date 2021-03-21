@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains a list of chat lists
 class ChatLists extends TdObject {
   ChatLists({required this.chatLists});
 
-  /// chat_lists List of chat lists
+  /// [chatLists] List of chat lists
   final List<ChatList> chatLists;
 
   static const String CONSTRUCTOR = 'chatLists';

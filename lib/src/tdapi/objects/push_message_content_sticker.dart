@@ -1,18 +1,17 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A message with a sticker
 class PushMessageContentSticker extends PushMessageContent {
   PushMessageContentSticker(
       {Sticker? this.sticker, required this.emoji, required this.isPinned});
 
-  /// sticker Message content; may be null
+  /// [sticker] Message content; may be null
   final Sticker? sticker;
 
-  /// emoji Emoji corresponding to the sticker; may be empty
+  /// [emoji] Emoji corresponding to the sticker; may be empty
   final String emoji;
 
-  /// is_pinned True, if the message is a pinned message with the specified content
+  /// [isPinned] True, if the message is a pinned message with the specified content
   final bool isPinned;
 
   static const String CONSTRUCTOR = 'pushMessageContentSticker';

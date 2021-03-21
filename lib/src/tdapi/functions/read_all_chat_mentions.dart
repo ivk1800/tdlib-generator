@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Marks all mentions in a chat as read
 class ReadAllChatMentions extends TdFunction {
   ReadAllChatMentions({required this.chatId});
 
-  /// chat_id Chat identifier
+  /// [chatId] Chat identifier
   final int chatId;
 
   /// callback sign

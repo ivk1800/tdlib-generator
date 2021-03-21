@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains a value representing a number of seconds
 class Seconds extends TdObject {
   Seconds({required this.seconds});
 
-  /// seconds Number of seconds
+  /// [seconds] Number of seconds
   final double seconds;
 
   static const String CONSTRUCTOR = 'seconds';

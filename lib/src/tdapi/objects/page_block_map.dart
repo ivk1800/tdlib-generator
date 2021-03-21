@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A map
 class PageBlockMap extends PageBlock {
   PageBlockMap(
@@ -10,19 +9,19 @@ class PageBlockMap extends PageBlock {
       required this.height,
       required this.caption});
 
-  /// location Location of the map center
+  /// [location] Location of the map center
   final Location location;
 
-  /// zoom Map zoom level
+  /// [zoom] Map zoom level
   final int zoom;
 
-  /// width Map width
+  /// [width] Map width
   final int width;
 
-  /// height Map height
+  /// [height] Map height
   final int height;
 
-  /// caption Block caption
+  /// [caption] Block caption
   final PageBlockCaption caption;
 
   static const String CONSTRUCTOR = 'pageBlockMap';

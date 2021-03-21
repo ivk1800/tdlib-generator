@@ -1,18 +1,17 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Describes a payload for interaction with tgcalls
 class GroupCallPayload extends TdObject {
   GroupCallPayload(
       {required this.ufrag, required this.pwd, required this.fingerprints});
 
-  /// ufrag Value of the field ufrag
+  /// [ufrag] Value of the field ufrag
   final String ufrag;
 
-  /// pwd Value of the field pwd
+  /// [pwd] Value of the field pwd
   final String pwd;
 
-  /// fingerprints The list of fingerprints
+  /// [fingerprints] The list of fingerprints
   final List<GroupCallPayloadFingerprint> fingerprints;
 
   static const String CONSTRUCTOR = 'groupCallPayload';

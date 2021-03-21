@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A static photo in JPEG format
 class InputChatPhotoStatic extends InputChatPhoto {
   InputChatPhotoStatic({required this.photo});
 
-  /// photo Photo to be set as profile photo. Only inputFileLocal and inputFileGenerated are allowed
+  /// [photo] Photo to be set as profile photo. Only inputFileLocal and inputFileGenerated are allowed
   final InputFile photo;
 
   static const String CONSTRUCTOR = 'inputChatPhotoStatic';

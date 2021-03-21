@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Edits the message reply markup; for bots only. Returns the edited message after the edit is completed on the server side
 class EditMessageReplyMarkup extends TdFunction {
   EditMessageReplyMarkup(
@@ -8,13 +7,13 @@ class EditMessageReplyMarkup extends TdFunction {
       required this.messageId,
       required this.replyMarkup});
 
-  /// chat_id The chat the message belongs to
+  /// [chatId] The chat the message belongs to
   final int chatId;
 
-  /// message_id Identifier of the message
+  /// [messageId] Identifier of the message
   final int messageId;
 
-  /// reply_markup The new message reply markup
+  /// [replyMarkup] The new message reply markup
   final ReplyMarkup replyMarkup;
 
   /// callback sign

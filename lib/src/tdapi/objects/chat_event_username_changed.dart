@@ -1,15 +1,14 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The chat username was changed
 class ChatEventUsernameChanged extends ChatEventAction {
   ChatEventUsernameChanged(
       {required this.oldUsername, required this.newUsername});
 
-  /// old_username Previous chat username
+  /// [oldUsername] Previous chat username
   final String oldUsername;
 
-  /// new_username New chat username
+  /// [newUsername] New chat username
   final String newUsername;
 
   static const String CONSTRUCTOR = 'chatEventUsernameChanged';

@@ -1,15 +1,14 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains a temporary identifier of validated order information, which is stored for one hour. Also contains the available shipping options
 class ValidatedOrderInfo extends TdObject {
   ValidatedOrderInfo(
       {required this.orderInfoId, required this.shippingOptions});
 
-  /// order_info_id Temporary identifier of the order information
+  /// [orderInfoId] Temporary identifier of the order information
   final String orderInfoId;
 
-  /// shipping_options Available shipping options
+  /// [shippingOptions] Available shipping options
   final List<ShippingOption> shippingOptions;
 
   static const String CONSTRUCTOR = 'validatedOrderInfo';

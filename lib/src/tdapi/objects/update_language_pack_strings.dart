@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Some language pack strings have been updated
 class UpdateLanguagePackStrings extends Update {
   UpdateLanguagePackStrings(
@@ -8,13 +7,13 @@ class UpdateLanguagePackStrings extends Update {
       required this.languagePackId,
       required this.strings});
 
-  /// localization_target Localization target to which the language pack belongs
+  /// [localizationTarget] Localization target to which the language pack belongs
   final String localizationTarget;
 
-  /// language_pack_id Identifier of the updated language pack
+  /// [languagePackId] Identifier of the updated language pack
   final String languagePackId;
 
-  /// strings List of changed language pack strings
+  /// [strings] List of changed language pack strings
   final List<LanguagePackString> strings;
 
   static const String CONSTRUCTOR = 'updateLanguagePackStrings';

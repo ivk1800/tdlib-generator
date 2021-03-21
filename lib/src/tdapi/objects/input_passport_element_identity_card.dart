@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A Telegram Passport element to be saved containing the user's identity card
 class InputPassportElementIdentityCard extends InputPassportElement {
   InputPassportElementIdentityCard({required this.identityCard});
 
-  /// identity_card The identity card to be saved
+  /// [identityCard] The identity card to be saved
   final InputIdentityDocument identityCard;
 
   static const String CONSTRUCTOR = 'inputPassportElementIdentityCard';

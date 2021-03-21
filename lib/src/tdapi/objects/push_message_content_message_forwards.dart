@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A forwarded messages
 class PushMessageContentMessageForwards extends PushMessageContent {
   PushMessageContentMessageForwards({required this.totalCount});
 
-  /// total_count Number of forwarded messages
+  /// [totalCount] Number of forwarded messages
   final int totalCount;
 
   static const String CONSTRUCTOR = 'pushMessageContentMessageForwards';

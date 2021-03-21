@@ -1,12 +1,11 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The list of attached files contains an error. The error is considered resolved when the file list changes
 class InputPassportElementErrorSourceFiles
     extends InputPassportElementErrorSource {
   InputPassportElementErrorSourceFiles({required this.fileHashes});
 
-  /// file_hashes Current hashes of all attached files
+  /// [fileHashes] Current hashes of all attached files
   final List<String> fileHashes;
 
   static const String CONSTRUCTOR = 'inputPassportElementErrorSourceFiles';

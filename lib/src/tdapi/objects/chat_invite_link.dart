@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains a chat invite link
 class ChatInviteLink extends TdObject {
   ChatInviteLink({required this.inviteLink});
 
-  /// invite_link Chat invite link
+  /// [inviteLink] Chat invite link
   final String inviteLink;
 
   static const String CONSTRUCTOR = 'chatInviteLink';

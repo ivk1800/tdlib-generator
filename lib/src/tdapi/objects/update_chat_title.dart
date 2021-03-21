@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The title of a chat was changed
 class UpdateChatTitle extends Update {
   UpdateChatTitle({required this.chatId, required this.title});
 
-  /// chat_id Chat identifier
+  /// [chatId] Chat identifier
   final int chatId;
 
-  /// title The new chat title
+  /// [title] The new chat title
   final String title;
 
   static const String CONSTRUCTOR = 'updateChatTitle';

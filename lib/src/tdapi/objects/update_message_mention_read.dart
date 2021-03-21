@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A message with an unread mention was read
 class UpdateMessageMentionRead extends Update {
   UpdateMessageMentionRead(
@@ -8,13 +7,13 @@ class UpdateMessageMentionRead extends Update {
       required this.messageId,
       required this.unreadMentionCount});
 
-  /// chat_id Chat identifier
+  /// [chatId] Chat identifier
   final int chatId;
 
-  /// message_id Message identifier
+  /// [messageId] Message identifier
   final int messageId;
 
-  /// unread_mention_count The new number of unread mention messages left in the chat
+  /// [unreadMentionCount] The new number of unread mention messages left in the chat
   final int unreadMentionCount;
 
   static const String CONSTRUCTOR = 'updateMessageMentionRead';

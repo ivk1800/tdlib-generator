@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A supergroup has been created from a basic group
 class MessageChatUpgradeFrom extends MessageContent {
   MessageChatUpgradeFrom({required this.title, required this.basicGroupId});
 
-  /// title Title of the newly created supergroup
+  /// [title] Title of the newly created supergroup
   final String title;
 
-  /// basic_group_id The identifier of the original basic group
+  /// [basicGroupId] The identifier of the original basic group
   final int basicGroupId;
 
   static const String CONSTRUCTOR = 'messageChatUpgradeFrom';

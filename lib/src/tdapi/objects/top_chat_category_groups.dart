@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A category containing frequently used basic groups and supergroups
 class TopChatCategoryGroups extends TopChatCategory {
   const TopChatCategoryGroups();

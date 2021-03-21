@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A token for Tizen Push Service
 class DeviceTokenTizenPush extends DeviceToken {
   DeviceTokenTizenPush({required this.regId});
 
-  /// reg_id Push service registration identifier; may be empty to de-register a device
+  /// [regId] Push service registration identifier; may be empty to de-register a device
   final String regId;
 
   static const String CONSTRUCTOR = 'deviceTokenTizenPush';

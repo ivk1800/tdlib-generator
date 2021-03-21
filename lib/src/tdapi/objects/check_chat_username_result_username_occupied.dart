@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The username is occupied
 class CheckChatUsernameResultUsernameOccupied extends CheckChatUsernameResult {
   const CheckChatUsernameResultUsernameOccupied();

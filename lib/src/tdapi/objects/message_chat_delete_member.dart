@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A chat member was deleted
 class MessageChatDeleteMember extends MessageContent {
   MessageChatDeleteMember({required this.userId});
 
-  /// user_id User identifier of the deleted chat member
+  /// [userId] User identifier of the deleted chat member
   final int userId;
 
   static const String CONSTRUCTOR = 'messageChatDeleteMember';

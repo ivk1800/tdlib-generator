@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns favorite stickers
 class GetFavoriteStickers extends TdFunction {
   GetFavoriteStickers();

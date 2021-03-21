@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains information about interactions with a message
 class MessageInteractionInfo extends TdObject {
   MessageInteractionInfo(
@@ -8,13 +7,13 @@ class MessageInteractionInfo extends TdObject {
       required this.forwardCount,
       MessageReplyInfo? this.replyInfo});
 
-  /// view_count Number of times the message was viewed
+  /// [viewCount] Number of times the message was viewed
   final int viewCount;
 
-  /// forward_count Number of times the message was forwarded
+  /// [forwardCount] Number of times the message was forwarded
   final int forwardCount;
 
-  /// reply_info Contains information about direct or indirect replies to the message; may be null. Currently, available only in channels with a discussion supergroup and discussion supergroups for messages, which are not replies itself
+  /// [replyInfo] Contains information about direct or indirect replies to the message; may be null. Currently, available only in channels with a discussion supergroup and discussion supergroups for messages, which are not replies itself
   final MessageReplyInfo? replyInfo;
 
   static const String CONSTRUCTOR = 'messageInteractionInfo';

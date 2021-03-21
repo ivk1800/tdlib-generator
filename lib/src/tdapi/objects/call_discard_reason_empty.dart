@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The call wasn't discarded, or the reason is unknown
 class CallDiscardReasonEmpty extends CallDiscardReason {
   const CallDiscardReasonEmpty();

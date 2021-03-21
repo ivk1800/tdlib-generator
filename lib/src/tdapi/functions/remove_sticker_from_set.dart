@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Removes a sticker from the set to which it belongs; for bots only. The sticker set must have been created by the bot
 class RemoveStickerFromSet extends TdFunction {
   RemoveStickerFromSet({required this.sticker});
 
-  /// sticker Sticker
+  /// [sticker] Sticker
   final InputFile sticker;
 
   /// callback sign

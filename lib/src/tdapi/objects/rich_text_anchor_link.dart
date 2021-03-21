@@ -1,18 +1,17 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A link to an anchor on the same web page
 class RichTextAnchorLink extends RichText {
   RichTextAnchorLink(
       {required this.text, required this.anchorName, required this.url});
 
-  /// text The link text
+  /// [text] The link text
   final RichText text;
 
-  /// anchor_name The anchor name. If the name is empty, the link should bring back to top
+  /// [anchorName] The anchor name. If the name is empty, the link should bring back to top
   final String anchorName;
 
-  /// url An HTTP URL, opening the anchor
+  /// [url] An HTTP URL, opening the anchor
   final String url;
 
   static const String CONSTRUCTOR = 'richTextAnchorLink';

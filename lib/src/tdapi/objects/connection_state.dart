@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Describes the current state of the connection to Telegram servers
 abstract class ConnectionState extends TdObject {
   const ConnectionState();

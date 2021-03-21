@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The file is a document
 class FileTypeDocument extends FileType {
   const FileTypeDocument();

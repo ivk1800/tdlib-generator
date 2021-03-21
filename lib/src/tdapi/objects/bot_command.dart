@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a command supported by a bot
 class BotCommand extends TdObject {
   BotCommand({required this.command, required this.description});
 
-  /// command Text of the bot command
+  /// [command] Text of the bot command
   final String command;
 
-  /// param_description Description of the bot command
+  /// param_[description] Description of the bot command
   final String description;
 
   static const String CONSTRUCTOR = 'botCommand';

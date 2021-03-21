@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// An anchor
 class RichTextAnchor extends RichText {
   RichTextAnchor({required this.name});
 
-  /// name Anchor name
+  /// [name] Anchor name
   final String name;
 
   static const String CONSTRUCTOR = 'richTextAnchor';

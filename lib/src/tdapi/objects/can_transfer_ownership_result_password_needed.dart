@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The 2-step verification needs to be enabled first
 class CanTransferOwnershipResultPasswordNeeded
     extends CanTransferOwnershipResult {

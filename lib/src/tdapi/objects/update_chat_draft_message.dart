@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A chat draft has changed. Be aware that the update may come in the currently opened chat but with old content of the draft. If the user has changed the content of the draft, this update shouldn't be applied
 class UpdateChatDraftMessage extends Update {
   UpdateChatDraftMessage(
@@ -8,13 +7,13 @@ class UpdateChatDraftMessage extends Update {
       DraftMessage? this.draftMessage,
       required this.positions});
 
-  /// chat_id Chat identifier
+  /// [chatId] Chat identifier
   final int chatId;
 
-  /// draft_message The new draft message; may be null
+  /// [draftMessage] The new draft message; may be null
   final DraftMessage? draftMessage;
 
-  /// positions The new chat positions in the chat lists
+  /// [positions] The new chat positions in the chat lists
   final List<ChatPosition> positions;
 
   static const String CONSTRUCTOR = 'updateChatDraftMessage';

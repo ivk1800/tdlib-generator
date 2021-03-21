@@ -1,17 +1,16 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A rich text URL link
 class RichTextUrl extends RichText {
   RichTextUrl({required this.text, required this.url, required this.isCached});
 
-  /// text Text
+  /// [text] Text
   final RichText text;
 
-  /// url URL
+  /// [url] URL
   final String url;
 
-  /// is_cached True, if the URL has cached instant view server-side
+  /// [isCached] True, if the URL has cached instant view server-side
   final bool isCached;
 
   static const String CONSTRUCTOR = 'richTextUrl';

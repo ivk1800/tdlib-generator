@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The user is currently logging out
 class AuthorizationStateLoggingOut extends AuthorizationState {
   const AuthorizationStateLoggingOut();

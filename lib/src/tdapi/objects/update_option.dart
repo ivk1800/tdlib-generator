@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// An option changed its value
 class UpdateOption extends Update {
   UpdateOption({required this.name, required this.value});
 
-  /// name The option name
+  /// [name] The option name
   final String name;
 
-  /// value The new option value
+  /// [value] The new option value
   final OptionValue value;
 
   static const String CONSTRUCTOR = 'updateOption';

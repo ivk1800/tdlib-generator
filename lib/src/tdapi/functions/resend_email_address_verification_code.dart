@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Re-sends the code to verify an email address to be added to a user's Telegram Passport
 class ResendEmailAddressVerificationCode extends TdFunction {
   ResendEmailAddressVerificationCode();

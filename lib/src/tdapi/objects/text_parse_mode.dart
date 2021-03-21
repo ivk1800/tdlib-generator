@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Describes the way the text should be parsed for TextEntities
 abstract class TextParseMode extends TdObject {
   const TextParseMode();

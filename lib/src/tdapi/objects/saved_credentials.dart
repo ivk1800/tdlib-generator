@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains information about saved card credentials
 class SavedCredentials extends TdObject {
   SavedCredentials({required this.id, required this.title});
 
-  /// id Unique identifier of the saved credentials
+  /// [id] Unique identifier of the saved credentials
   final String id;
 
-  /// title Title of the saved credentials
+  /// [title] Title of the saved credentials
   final String title;
 
   static const String CONSTRUCTOR = 'savedCredentials';

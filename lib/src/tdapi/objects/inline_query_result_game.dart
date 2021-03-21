@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents information about a game
 class InlineQueryResultGame extends InlineQueryResult {
   InlineQueryResultGame({required this.id, required this.game});
 
-  /// id Unique identifier of the query result
+  /// [id] Unique identifier of the query result
   final String id;
 
-  /// game Game result
+  /// [game] Game result
   final Game game;
 
   static const String CONSTRUCTOR = 'inlineQueryResultGame';

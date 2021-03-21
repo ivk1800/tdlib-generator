@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A Telegram Passport element containing the user's utility bill
 class PassportElementUtilityBill extends PassportElement {
   PassportElementUtilityBill({required this.utilityBill});
 
-  /// utility_bill Utility bill
+  /// [utilityBill] Utility bill
   final PersonalDocument utilityBill;
 
   static const String CONSTRUCTOR = 'passportElementUtilityBill';

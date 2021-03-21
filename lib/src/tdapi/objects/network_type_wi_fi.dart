@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A Wi-Fi network
 class NetworkTypeWiFi extends NetworkType {
   const NetworkTypeWiFi();

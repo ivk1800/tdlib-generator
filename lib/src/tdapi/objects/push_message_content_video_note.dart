@@ -1,15 +1,14 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A video note message
 class PushMessageContentVideoNote extends PushMessageContent {
   PushMessageContentVideoNote(
       {VideoNote? this.videoNote, required this.isPinned});
 
-  /// video_note Message content; may be null
+  /// [videoNote] Message content; may be null
   final VideoNote? videoNote;
 
-  /// is_pinned True, if the message is a pinned message with the specified content
+  /// [isPinned] True, if the message is a pinned message with the specified content
   final bool isPinned;
 
   static const String CONSTRUCTOR = 'pushMessageContentVideoNote';

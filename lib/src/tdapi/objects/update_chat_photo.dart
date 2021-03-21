@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A chat photo was changed
 class UpdateChatPhoto extends Update {
   UpdateChatPhoto({required this.chatId, ChatPhotoInfo? this.photo});
 
-  /// chat_id Chat identifier
+  /// [chatId] Chat identifier
   final int chatId;
 
-  /// photo The new chat photo; may be null
+  /// [photo] The new chat photo; may be null
   final ChatPhotoInfo? photo;
 
   static const String CONSTRUCTOR = 'updateChatPhoto';

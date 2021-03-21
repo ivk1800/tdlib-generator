@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Contains information about the time when a scheduled message will be sent
 abstract class MessageSchedulingState extends TdObject {
   const MessageSchedulingState();

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A rule to allow all users to do something
 class UserPrivacySettingRuleAllowAll extends UserPrivacySettingRule {
   const UserPrivacySettingRuleAllowAll();

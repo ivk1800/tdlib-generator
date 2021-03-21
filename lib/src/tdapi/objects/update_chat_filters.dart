@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The list of chat filters or a chat filter has changed
 class UpdateChatFilters extends Update {
   UpdateChatFilters({required this.chatFilters});
 
-  /// chat_filters The new list of chat filters
+  /// [chatFilters] The new list of chat filters
   final List<ChatFilterInfo> chatFilters;
 
   static const String CONSTRUCTOR = 'updateChatFilters';

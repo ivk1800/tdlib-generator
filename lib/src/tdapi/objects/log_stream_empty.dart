@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The log is written nowhere
 class LogStreamEmpty extends LogStream {
   const LogStreamEmpty();

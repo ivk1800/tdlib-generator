@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A kicker
 class PageBlockKicker extends PageBlock {
   PageBlockKicker({required this.kicker});
 
-  /// kicker Kicker
+  /// [kicker] Kicker
   final RichText kicker;
 
   static const String CONSTRUCTOR = 'pageBlockKicker';

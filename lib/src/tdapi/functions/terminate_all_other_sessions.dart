@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Terminates all other sessions of the current user
 class TerminateAllOtherSessions extends TdFunction {
   TerminateAllOtherSessions();

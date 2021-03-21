@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a cell of a table
 class PageBlockTableCell extends TdObject {
   PageBlockTableCell(
@@ -11,22 +10,22 @@ class PageBlockTableCell extends TdObject {
       required this.align,
       required this.valign});
 
-  /// text Cell text; may be null. If the text is null, then the cell should be invisible
+  /// [text] Cell text; may be null. If the text is null, then the cell should be invisible
   final RichText? text;
 
-  /// is_header True, if it is a header cell
+  /// [isHeader] True, if it is a header cell
   final bool isHeader;
 
-  /// colspan The number of columns the cell should span
+  /// [colspan] The number of columns the cell should span
   final int colspan;
 
-  /// rowspan The number of rows the cell should span
+  /// [rowspan] The number of rows the cell should span
   final int rowspan;
 
-  /// align Horizontal cell content alignment
+  /// [align] Horizontal cell content alignment
   final PageBlockHorizontalAlignment align;
 
-  /// valign Vertical cell content alignment
+  /// [valign] Vertical cell content alignment
   final PageBlockVerticalAlignment valign;
 
   static const String CONSTRUCTOR = 'pageBlockTableCell';

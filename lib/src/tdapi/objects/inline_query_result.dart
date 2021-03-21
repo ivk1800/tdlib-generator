@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Represents a single result of an inline query
 abstract class InlineQueryResult extends TdObject {
   const InlineQueryResult();

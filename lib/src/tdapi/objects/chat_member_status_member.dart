@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The user is a member of a chat, without any additional privileges or restrictions
 class ChatMemberStatusMember extends ChatMemberStatus {
   const ChatMemberStatusMember();

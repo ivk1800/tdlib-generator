@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// New call was received
 class NotificationTypeNewCall extends NotificationType {
   NotificationTypeNewCall({required this.callId});
 
-  /// call_id Call identifier
+  /// [callId] Call identifier
   final int callId;
 
   static const String CONSTRUCTOR = 'notificationTypeNewCall';

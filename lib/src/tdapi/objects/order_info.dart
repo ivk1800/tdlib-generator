@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Order information
 class OrderInfo extends TdObject {
   OrderInfo(
@@ -9,16 +8,16 @@ class OrderInfo extends TdObject {
       required this.emailAddress,
       Address? this.shippingAddress});
 
-  /// name Name of the user
+  /// [name] Name of the user
   final String name;
 
-  /// phone_number Phone number of the user
+  /// [phoneNumber] Phone number of the user
   final String phoneNumber;
 
-  /// email_address Email address of the user
+  /// [emailAddress] Email address of the user
   final String emailAddress;
 
-  /// shipping_address Shipping address for this order; may be null
+  /// [shippingAddress] Shipping address for this order; may be null
   final Address? shippingAddress;
 
   static const String CONSTRUCTOR = 'orderInfo';

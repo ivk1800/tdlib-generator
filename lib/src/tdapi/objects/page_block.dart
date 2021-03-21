@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Describes a block of an instant view web page
 abstract class PageBlock extends TdObject {
   const PageBlock();

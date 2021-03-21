@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns the current state of 2-step verification
 class GetPasswordState extends TdFunction {
   GetPasswordState();

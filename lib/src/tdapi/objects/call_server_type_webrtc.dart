@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A WebRTC server
 class CallServerTypeWebrtc extends CallServerType {
   CallServerTypeWebrtc(
@@ -9,16 +8,16 @@ class CallServerTypeWebrtc extends CallServerType {
       required this.supportsTurn,
       required this.supportsStun});
 
-  /// username Username to be used for authentication
+  /// [username] Username to be used for authentication
   final String username;
 
-  /// password Authentication password
+  /// [password] Authentication password
   final String password;
 
-  /// supports_turn True, if the server supports TURN
+  /// [supportsTurn] True, if the server supports TURN
   final bool supportsTurn;
 
-  /// supports_stun True, if the server supports STUN
+  /// [supportsStun] True, if the server supports STUN
   final bool supportsStun;
 
   static const String CONSTRUCTOR = 'callServerTypeWebrtc';

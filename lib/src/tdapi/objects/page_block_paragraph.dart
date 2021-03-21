@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A text paragraph
 class PageBlockParagraph extends PageBlock {
   PageBlockParagraph({required this.text});
 
-  /// text Paragraph text
+  /// [text] Paragraph text
   final RichText text;
 
   static const String CONSTRUCTOR = 'pageBlockParagraph';

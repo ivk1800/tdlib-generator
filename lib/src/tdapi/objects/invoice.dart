@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Product invoice
 class Invoice extends TdObject {
   Invoice(
@@ -15,34 +14,34 @@ class Invoice extends TdObject {
       required this.sendEmailAddressToProvider,
       required this.isFlexible});
 
-  /// currency ISO 4217 currency code
+  /// [currency] ISO 4217 currency code
   final String currency;
 
-  /// price_parts A list of objects used to calculate the total price of the product
+  /// [priceParts] A list of objects used to calculate the total price of the product
   final List<LabeledPricePart> priceParts;
 
-  /// is_test True, if the payment is a test payment
+  /// [isTest] True, if the payment is a test payment
   final bool isTest;
 
-  /// need_name True, if the user's name is needed for payment
+  /// [needName] True, if the user's name is needed for payment
   final bool needName;
 
-  /// need_phone_number True, if the user's phone number is needed for payment
+  /// [needPhoneNumber] True, if the user's phone number is needed for payment
   final bool needPhoneNumber;
 
-  /// need_email_address True, if the user's email address is needed for payment
+  /// [needEmailAddress] True, if the user's email address is needed for payment
   final bool needEmailAddress;
 
-  /// need_shipping_address True, if the user's shipping address is needed for payment
+  /// [needShippingAddress] True, if the user's shipping address is needed for payment
   final bool needShippingAddress;
 
-  /// send_phone_number_to_provider True, if the user's phone number will be sent to the provider
+  /// [sendPhoneNumberToProvider] True, if the user's phone number will be sent to the provider
   final bool sendPhoneNumberToProvider;
 
-  /// send_email_address_to_provider True, if the user's email address will be sent to the provider
+  /// [sendEmailAddressToProvider] True, if the user's email address will be sent to the provider
   final bool sendEmailAddressToProvider;
 
-  /// is_flexible True, if the total price depends on the shipping method
+  /// [isFlexible] True, if the total price depends on the shipping method
   final bool isFlexible;
 
   static const String CONSTRUCTOR = 'invoice';

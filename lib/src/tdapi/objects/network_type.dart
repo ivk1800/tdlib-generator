@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Represents the type of a network
 abstract class NetworkType extends TdObject {
   const NetworkType();

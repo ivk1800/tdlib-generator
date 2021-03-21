@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a game
 class InputInlineQueryResultGame extends InputInlineQueryResult {
   InputInlineQueryResultGame(
@@ -8,13 +7,13 @@ class InputInlineQueryResultGame extends InputInlineQueryResult {
       required this.gameShortName,
       ReplyMarkup? this.replyMarkup});
 
-  /// id Unique identifier of the query result
+  /// [id] Unique identifier of the query result
   final String id;
 
-  /// game_short_name Short name of the game
+  /// [gameShortName] Short name of the game
   final String gameShortName;
 
-  /// reply_markup Message reply markup. Must be of type replyMarkupInlineKeyboard or null
+  /// [replyMarkup] Message reply markup. Must be of type replyMarkupInlineKeyboard or null
   final ReplyMarkup? replyMarkup;
 
   static const String CONSTRUCTOR = 'inputInlineQueryResultGame';

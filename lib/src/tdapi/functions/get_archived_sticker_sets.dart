@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns a list of archived sticker sets
 class GetArchivedStickerSets extends TdFunction {
   GetArchivedStickerSets(
@@ -8,13 +7,13 @@ class GetArchivedStickerSets extends TdFunction {
       required this.offsetStickerSetId,
       required this.limit});
 
-  /// is_masks Pass true to return mask stickers sets; pass false to return ordinary sticker sets
+  /// [isMasks] Pass true to return mask stickers sets; pass false to return ordinary sticker sets
   final bool isMasks;
 
-  /// offset_sticker_set_id Identifier of the sticker set from which to return the result
+  /// [offsetStickerSetId] Identifier of the sticker set from which to return the result
   final int offsetStickerSetId;
 
-  /// limit The maximum number of sticker sets to return
+  /// [limit] The maximum number of sticker sets to return
   final int limit;
 
   /// callback sign

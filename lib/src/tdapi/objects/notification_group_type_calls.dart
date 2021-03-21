@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A group containing notifications of type notificationTypeNewCall
 class NotificationGroupTypeCalls extends NotificationGroupType {
   const NotificationGroupTypeCalls();

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Installs/uninstalls or activates/archives a sticker set
 class ChangeStickerSet extends TdFunction {
   ChangeStickerSet(
@@ -8,13 +7,13 @@ class ChangeStickerSet extends TdFunction {
       required this.isInstalled,
       required this.isArchived});
 
-  /// set_id Identifier of the sticker set
+  /// [setId] Identifier of the sticker set
   final int setId;
 
-  /// is_installed The new value of is_installed
+  /// [isInstalled] The new value of is_installed
   final bool isInstalled;
 
-  /// is_archived The new value of is_archived. A sticker set can't be installed and archived simultaneously
+  /// [isArchived] The new value of is_archived. A sticker set can't be installed and archived simultaneously
   final bool isArchived;
 
   /// callback sign

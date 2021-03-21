@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Describes an instant view page for a web page
 class WebPageInstantView extends TdObject {
   WebPageInstantView(
@@ -10,19 +9,19 @@ class WebPageInstantView extends TdObject {
       required this.isRtl,
       required this.isFull});
 
-  /// page_blocks Content of the web page
+  /// [pageBlocks] Content of the web page
   final List<PageBlock> pageBlocks;
 
-  /// view_count Number of the instant view views; 0 if unknown
+  /// [viewCount] Number of the instant view views; 0 if unknown
   final int viewCount;
 
-  /// version Version of the instant view, currently can be 1 or 2
+  /// [version] Version of the instant view, currently can be 1 or 2
   final int version;
 
-  /// is_rtl True, if the instant view must be shown from right to left
+  /// [isRtl] True, if the instant view must be shown from right to left
   final bool isRtl;
 
-  /// is_full True, if the instant view contains the full page. A network request might be needed to get the full web page instant view
+  /// [isFull] True, if the instant view contains the full page. A network request might be needed to get the full web page instant view
   final bool isFull;
 
   static const String CONSTRUCTOR = 'webPageInstantView';

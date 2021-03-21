@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A sticker message
 class MessageSticker extends MessageContent {
   MessageSticker({required this.sticker});
 
-  /// sticker The sticker description
+  /// [sticker] The sticker description
   final Sticker sticker;
 
   static const String CONSTRUCTOR = 'messageSticker';

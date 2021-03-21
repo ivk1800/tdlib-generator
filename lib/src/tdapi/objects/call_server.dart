@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Describes a server for relaying call data
 class CallServer extends TdObject {
   CallServer(
@@ -10,19 +9,19 @@ class CallServer extends TdObject {
       required this.port,
       required this.type});
 
-  /// id Server identifier
+  /// [id] Server identifier
   final int id;
 
-  /// ip_address Server IPv4 address
+  /// [ipAddress] Server IPv4 address
   final String ipAddress;
 
-  /// ipv6_address Server IPv6 address
+  /// [ipv6Address] Server IPv6 address
   final String ipv6Address;
 
-  /// port Server port number
+  /// [port] Server port number
   final int port;
 
-  /// type Server type
+  /// [type] Server type
   final CallServerType type;
 
   static const String CONSTRUCTOR = 'callServer';

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Deletes saved credentials for all payment provider bots
 class DeleteSavedCredentials extends TdFunction {
   DeleteSavedCredentials();

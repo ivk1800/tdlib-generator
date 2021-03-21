@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns information about a single member of a chat
 class GetChatMember extends TdFunction {
   GetChatMember({required this.chatId, required this.userId});
 
-  /// chat_id Chat identifier
+  /// [chatId] Chat identifier
   final int chatId;
 
-  /// user_id User identifier
+  /// [userId] User identifier
   final int userId;
 
   /// callback sign

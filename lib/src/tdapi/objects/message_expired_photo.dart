@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// An expired photo message (self-destructed after TTL has elapsed)
 class MessageExpiredPhoto extends MessageContent {
   const MessageExpiredPhoto();

@@ -1,12 +1,11 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The selfie contains an error. The error is considered resolved when the file with the selfie changes
 class InputPassportElementErrorSourceSelfie
     extends InputPassportElementErrorSource {
   InputPassportElementErrorSourceSelfie({required this.fileHash});
 
-  /// file_hash Current hash of the file containing the selfie
+  /// [fileHash] Current hash of the file containing the selfie
   final String fileHash;
 
   static const String CONSTRUCTOR = 'inputPassportElementErrorSourceSelfie';

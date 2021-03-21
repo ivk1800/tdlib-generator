@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains auto-download settings
 class AutoDownloadSettings extends TdObject {
   AutoDownloadSettings(
@@ -13,28 +12,28 @@ class AutoDownloadSettings extends TdObject {
       required this.preloadNextAudio,
       required this.useLessDataForCalls});
 
-  /// is_auto_download_enabled True, if the auto-download is enabled
+  /// [isAutoDownloadEnabled] True, if the auto-download is enabled
   final bool isAutoDownloadEnabled;
 
-  /// max_photo_file_size The maximum size of a photo file to be auto-downloaded
+  /// [maxPhotoFileSize] The maximum size of a photo file to be auto-downloaded
   final int maxPhotoFileSize;
 
-  /// max_video_file_size The maximum size of a video file to be auto-downloaded
+  /// [maxVideoFileSize] The maximum size of a video file to be auto-downloaded
   final int maxVideoFileSize;
 
-  /// max_other_file_size The maximum size of other file types to be auto-downloaded
+  /// [maxOtherFileSize] The maximum size of other file types to be auto-downloaded
   final int maxOtherFileSize;
 
-  /// video_upload_bitrate The maximum suggested bitrate for uploaded videos
+  /// [videoUploadBitrate] The maximum suggested bitrate for uploaded videos
   final int videoUploadBitrate;
 
-  /// preload_large_videos True, if the beginning of video files needs to be preloaded for instant playback
+  /// [preloadLargeVideos] True, if the beginning of video files needs to be preloaded for instant playback
   final bool preloadLargeVideos;
 
-  /// preload_next_audio True, if the next audio track needs to be preloaded while the user is listening to an audio file
+  /// [preloadNextAudio] True, if the next audio track needs to be preloaded while the user is listening to an audio file
   final bool preloadNextAudio;
 
-  /// use_less_data_for_calls True, if "use less data for calls" option needs to be enabled
+  /// [useLessDataForCalls] True, if "use less data for calls" option needs to be enabled
   final bool useLessDataForCalls;
 
   static const String CONSTRUCTOR = 'autoDownloadSettings';

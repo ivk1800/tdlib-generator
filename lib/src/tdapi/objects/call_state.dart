@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Describes the current call state
 abstract class CallState extends TdObject {
   const CallState();

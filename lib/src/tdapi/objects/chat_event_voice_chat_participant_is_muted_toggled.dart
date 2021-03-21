@@ -1,15 +1,14 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A voice chat participant was muted or unmuted
 class ChatEventVoiceChatParticipantIsMutedToggled extends ChatEventAction {
   ChatEventVoiceChatParticipantIsMutedToggled(
       {required this.userId, required this.isMuted});
 
-  /// user_id Identifier of the affected user
+  /// [userId] Identifier of the affected user
   final int userId;
 
-  /// is_muted New value of is_muted
+  /// [isMuted] New value of is_muted
   final bool isMuted;
 
   static const String CONSTRUCTOR =

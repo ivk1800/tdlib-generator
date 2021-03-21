@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A document message (a general file)
 class PushMessageContentDocument extends PushMessageContent {
   PushMessageContentDocument({Document? this.document, required this.isPinned});
 
-  /// document Message content; may be null
+  /// [document] Message content; may be null
   final Document? document;
 
-  /// is_pinned True, if the message is a pinned message with the specified content
+  /// [isPinned] True, if the message is a pinned message with the specified content
   final bool isPinned;
 
   static const String CONSTRUCTOR = 'pushMessageContentDocument';

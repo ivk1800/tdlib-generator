@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The speech was distorted
 class CallProblemDistortedSpeech extends CallProblem {
   const CallProblemDistortedSpeech();

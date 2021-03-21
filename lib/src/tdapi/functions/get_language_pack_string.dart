@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns a string stored in the local database from the specified localization target and language pack by its key. Returns a 404 error if the string is not found. Can be called synchronously
 class GetLanguagePackString extends TdFunction {
   GetLanguagePackString(
@@ -9,16 +8,16 @@ class GetLanguagePackString extends TdFunction {
       required this.languagePackId,
       required this.key});
 
-  /// language_pack_database_path Path to the language pack database in which strings are stored
+  /// [languagePackDatabasePath] Path to the language pack database in which strings are stored
   final String languagePackDatabasePath;
 
-  /// localization_target Localization target to which the language pack belongs
+  /// [localizationTarget] Localization target to which the language pack belongs
   final String localizationTarget;
 
-  /// language_pack_id Language pack identifier
+  /// [languagePackId] Language pack identifier
   final String languagePackId;
 
-  /// key Language pack key of the string to be returned
+  /// [key] Language pack key of the string to be returned
   final String key;
 
   /// callback sign

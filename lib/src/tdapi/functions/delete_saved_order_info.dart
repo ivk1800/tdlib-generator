@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Deletes saved order info
 class DeleteSavedOrderInfo extends TdFunction {
   DeleteSavedOrderInfo();

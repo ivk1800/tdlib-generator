@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Returns users under certain restrictions in the chat; can be used only by administrators in a supergroup
 class ChatMembersFilterRestricted extends ChatMembersFilter {
   const ChatMembersFilterRestricted();

@@ -1,15 +1,14 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A message with a live location was viewed. When the update is received, the application is supposed to update the live location
 class UpdateMessageLiveLocationViewed extends Update {
   UpdateMessageLiveLocationViewed(
       {required this.chatId, required this.messageId});
 
-  /// chat_id Identifier of the chat with the live location message
+  /// [chatId] Identifier of the chat with the live location message
   final int chatId;
 
-  /// message_id Identifier of the message with live location
+  /// [messageId] Identifier of the message with live location
   final int messageId;
 
   static const String CONSTRUCTOR = 'updateMessageLiveLocationViewed';

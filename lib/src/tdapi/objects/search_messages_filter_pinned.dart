@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Returns only pinned messages
 class SearchMessagesFilterPinned extends SearchMessagesFilter {
   const SearchMessagesFilterPinned();

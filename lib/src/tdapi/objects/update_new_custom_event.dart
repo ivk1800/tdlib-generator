@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A new incoming event; for bots only
 class UpdateNewCustomEvent extends Update {
   UpdateNewCustomEvent({required this.event});
 
-  /// event A JSON-serialized event
+  /// [event] A JSON-serialized event
   final String event;
 
   static const String CONSTRUCTOR = 'updateNewCustomEvent';

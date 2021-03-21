@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains database statistics
 class DatabaseStatistics extends TdObject {
   DatabaseStatistics({required this.statistics});
 
-  /// statistics Database statistics in an unspecified human-readable format
+  /// [statistics] Database statistics in an unspecified human-readable format
   final String statistics;
 
   static const String CONSTRUCTOR = 'databaseStatistics';

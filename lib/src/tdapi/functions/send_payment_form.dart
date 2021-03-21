@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Sends a filled-out payment form to the bot for final verification
 class SendPaymentForm extends TdFunction {
   SendPaymentForm(
@@ -10,19 +9,19 @@ class SendPaymentForm extends TdFunction {
       required this.shippingOptionId,
       required this.credentials});
 
-  /// chat_id Chat identifier of the Invoice message
+  /// [chatId] Chat identifier of the Invoice message
   final int chatId;
 
-  /// message_id Message identifier
+  /// [messageId] Message identifier
   final int messageId;
 
-  /// order_info_id Identifier returned by ValidateOrderInfo, or an empty string
+  /// [orderInfoId] Identifier returned by ValidateOrderInfo, or an empty string
   final String orderInfoId;
 
-  /// shipping_option_id Identifier of a chosen shipping option, if applicable
+  /// [shippingOptionId] Identifier of a chosen shipping option, if applicable
   final String shippingOptionId;
 
-  /// credentials The credentials chosen by user for payment
+  /// [credentials] The credentials chosen by user for payment
   final InputCredentials credentials;
 
   /// callback sign

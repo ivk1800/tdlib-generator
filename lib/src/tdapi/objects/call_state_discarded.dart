@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The call has ended successfully
 class CallStateDiscarded extends CallState {
   CallStateDiscarded(
@@ -8,13 +7,13 @@ class CallStateDiscarded extends CallState {
       required this.needRating,
       required this.needDebugInformation});
 
-  /// reason The reason, why the call has ended
+  /// [reason] The reason, why the call has ended
   final CallDiscardReason reason;
 
-  /// need_rating True, if the call rating should be sent to the server
+  /// [needRating] True, if the call rating should be sent to the server
   final bool needRating;
 
-  /// need_debug_information True, if the call debug information should be sent to the server
+  /// [needDebugInformation] True, if the call debug information should be sent to the server
   final bool needDebugInformation;
 
   static const String CONSTRUCTOR = 'callStateDiscarded';

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A photo message
 class InputMessagePhoto extends InputMessageContent {
   InputMessagePhoto(
@@ -12,25 +11,25 @@ class InputMessagePhoto extends InputMessageContent {
       required this.caption,
       required this.ttl});
 
-  /// photo Photo to send
+  /// [photo] Photo to send
   final InputFile photo;
 
-  /// thumbnail Photo thumbnail to be sent, this is sent to the other party in secret chats only
+  /// [thumbnail] Photo thumbnail to be sent, this is sent to the other party in secret chats only
   final InputThumbnail thumbnail;
 
-  /// added_sticker_file_ids File identifiers of the stickers added to the photo, if applicable
+  /// [addedStickerFileIds] File identifiers of the stickers added to the photo, if applicable
   final List<int> addedStickerFileIds;
 
-  /// width Photo width
+  /// [width] Photo width
   final int width;
 
-  /// height Photo height
+  /// [height] Photo height
   final int height;
 
-  /// caption Photo caption; 0-GetOption("message_caption_length_max") characters
+  /// [caption] Photo caption; 0-GetOption("message_caption_length_max") characters
   final FormattedText caption;
 
-  /// ttl Photo TTL (Time To Live), in seconds (0-60). A non-zero TTL can be specified only in private chats
+  /// [ttl] Photo TTL (Time To Live), in seconds (0-60). A non-zero TTL can be specified only in private chats
   final int ttl;
 
   static const String CONSTRUCTOR = 'inputMessagePhoto';

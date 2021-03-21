@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Informs TDLib that the chat is closed by the user. Many useful activities depend on the chat being opened or closed
 class CloseChat extends TdFunction {
   CloseChat({required this.chatId});
 
-  /// chat_id Chat identifier
+  /// [chatId] Chat identifier
   final int chatId;
 
   /// callback sign

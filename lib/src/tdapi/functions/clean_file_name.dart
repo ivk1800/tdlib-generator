@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Removes potentially dangerous characters from the name of a file. The encoding of the file name is supposed to be UTF-8. Returns an empty string on failure. Can be called synchronously
 class CleanFileName extends TdFunction {
   CleanFileName({required this.fileName});
 
-  /// file_name File name or path to the file
+  /// [fileName] File name or path to the file
   final String fileName;
 
   /// callback sign

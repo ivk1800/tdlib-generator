@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A message was deleted
 class ChatEventMessageDeleted extends ChatEventAction {
   ChatEventMessageDeleted({required this.message});
 
-  /// message Deleted message
+  /// [message] Deleted message
   final Message message;
 
   static const String CONSTRUCTOR = 'chatEventMessageDeleted';

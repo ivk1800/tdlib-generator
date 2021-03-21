@@ -1,15 +1,14 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Information about a group call participant was changed. The updates are sent only after the group call is received through getGroupCall and only if the call is joined or being joined
 class UpdateGroupCallParticipant extends Update {
   UpdateGroupCallParticipant(
       {required this.groupCallId, required this.participant});
 
-  /// group_call_id Identifier of group call
+  /// [groupCallId] Identifier of group call
   final int groupCallId;
 
-  /// participant New data about a participant
+  /// [participant] New data about a participant
   final GroupCallParticipant participant;
 
   static const String CONSTRUCTOR = 'updateGroupCallParticipant';

@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains information about the current recovery email address
 class RecoveryEmailAddress extends TdObject {
   RecoveryEmailAddress({required this.recoveryEmailAddress});
 
-  /// recovery_email_address Recovery email address
+  /// [recoveryEmailAddress] Recovery email address
   final String recoveryEmailAddress;
 
   static const String CONSTRUCTOR = 'recoveryEmailAddress';

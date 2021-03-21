@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The graph data to be asynchronously loaded through getStatisticalGraph
 class StatisticalGraphAsync extends StatisticalGraph {
   StatisticalGraphAsync({required this.token});
 
-  /// token The token to use for data loading
+  /// [token] The token to use for data loading
   final String token;
 
   static const String CONSTRUCTOR = 'statisticalGraphAsync';

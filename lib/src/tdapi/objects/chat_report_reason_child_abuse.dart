@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The chat has child abuse related content
 class ChatReportReasonChildAbuse extends ChatReportReason {
   const ChatReportReasonChildAbuse();

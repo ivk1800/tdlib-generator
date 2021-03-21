@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A text shows instead of a raw mention of the user (e.g., when the user has no username)
 class TextEntityTypeMentionName extends TextEntityType {
   TextEntityTypeMentionName({required this.userId});
 
-  /// user_id Identifier of the mentioned user
+  /// [userId] Identifier of the mentioned user
   final int userId;
 
   static const String CONSTRUCTOR = 'textEntityTypeMentionName';

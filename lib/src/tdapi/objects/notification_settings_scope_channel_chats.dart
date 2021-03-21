@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Notification settings applied to all channels when the corresponding chat setting has a default value
 class NotificationSettingsScopeChannelChats extends NotificationSettingsScope {
   const NotificationSettingsScopeChannelChats();

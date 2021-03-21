@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The user is offline, but was online last month
 class UserStatusLastMonth extends UserStatus {
   const UserStatusLastMonth();

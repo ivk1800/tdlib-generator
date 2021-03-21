@@ -1,18 +1,17 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Adds a new sticker to a set; for bots only. Returns the sticker set
 class AddStickerToSet extends TdFunction {
   AddStickerToSet(
       {required this.userId, required this.name, required this.sticker});
 
-  /// user_id Sticker set owner
+  /// [userId] Sticker set owner
   final int userId;
 
-  /// name Sticker set name
+  /// [name] Sticker set name
   final String name;
 
-  /// sticker Sticker to add to the set
+  /// [sticker] Sticker to add to the set
   final InputSticker sticker;
 
   /// callback sign

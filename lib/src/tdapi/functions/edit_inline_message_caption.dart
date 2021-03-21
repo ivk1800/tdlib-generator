@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Edits the caption of an inline message sent via a bot; for bots only
 class EditInlineMessageCaption extends TdFunction {
   EditInlineMessageCaption(
@@ -8,13 +7,13 @@ class EditInlineMessageCaption extends TdFunction {
       required this.replyMarkup,
       required this.caption});
 
-  /// inline_message_id Inline message identifier
+  /// [inlineMessageId] Inline message identifier
   final String inlineMessageId;
 
-  /// reply_markup The new message reply markup
+  /// [replyMarkup] The new message reply markup
   final ReplyMarkup replyMarkup;
 
-  /// caption New message content caption; 0-GetOption("message_caption_length_max") characters
+  /// [caption] New message content caption; 0-GetOption("message_caption_length_max") characters
   final FormattedText caption;
 
   /// callback sign

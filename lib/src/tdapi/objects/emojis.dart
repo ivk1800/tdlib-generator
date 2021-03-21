@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a list of emoji
 class Emojis extends TdObject {
   Emojis({required this.emojis});
 
-  /// emojis List of emojis
+  /// [emojis] List of emojis
   final List<String> emojis;
 
   static const String CONSTRUCTOR = 'emojis';

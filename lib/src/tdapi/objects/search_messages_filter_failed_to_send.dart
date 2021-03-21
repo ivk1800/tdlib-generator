@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Returns only failed to send messages. This filter can be used only if the message database is used
 class SearchMessagesFilterFailedToSend extends SearchMessagesFilter {
   const SearchMessagesFilterFailedToSend();

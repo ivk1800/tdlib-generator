@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// An ordinary language pack string
 class LanguagePackStringValueOrdinary extends LanguagePackStringValue {
   LanguagePackStringValueOrdinary({required this.value});
 
-  /// value String value
+  /// [value] String value
   final String value;
 
   static const String CONSTRUCTOR = 'languagePackStringValueOrdinary';

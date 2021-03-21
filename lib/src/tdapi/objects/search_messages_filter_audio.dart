@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Returns only audio messages
 class SearchMessagesFilterAudio extends SearchMessagesFilter {
   const SearchMessagesFilterAudio();

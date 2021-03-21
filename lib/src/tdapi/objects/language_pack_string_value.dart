@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Represents the value of a string in a language pack
 abstract class LanguagePackStringValue extends TdObject {
   const LanguagePackStringValue();

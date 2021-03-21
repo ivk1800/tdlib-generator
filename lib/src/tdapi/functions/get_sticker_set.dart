@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns information about a sticker set by its identifier
 class GetStickerSet extends TdFunction {
   GetStickerSet({required this.setId});
 
-  /// set_id Identifier of the sticker set
+  /// [setId] Identifier of the sticker set
   final int setId;
 
   /// callback sign

@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Some privacy setting rules have been changed
 class UpdateUserPrivacySettingRules extends Update {
   UpdateUserPrivacySettingRules({required this.setting, required this.rules});
 
-  /// setting The privacy setting
+  /// [setting] The privacy setting
   final UserPrivacySetting setting;
 
-  /// rules New privacy rules
+  /// [rules] New privacy rules
   final UserPrivacySettingRules rules;
 
   static const String CONSTRUCTOR = 'updateUserPrivacySettingRules';

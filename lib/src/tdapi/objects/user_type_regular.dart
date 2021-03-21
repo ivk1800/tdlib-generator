@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A regular user
 class UserTypeRegular extends UserType {
   const UserTypeRegular();

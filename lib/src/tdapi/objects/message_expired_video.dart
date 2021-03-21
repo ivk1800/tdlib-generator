@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// An expired video message (self-destructed after TTL has elapsed)
 class MessageExpiredVideo extends MessageContent {
   const MessageExpiredVideo();

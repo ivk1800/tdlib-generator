@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The file is a thumbnail of another file
 class FileTypeThumbnail extends FileType {
   const FileTypeThumbnail();

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Describes the current secret chat state
 abstract class SecretChatState extends TdObject {
   const SecretChatState();

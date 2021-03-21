@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Contains the description of an error in a Telegram Passport element
 abstract class PassportElementErrorSource extends TdObject {
   const PassportElementErrorSource();

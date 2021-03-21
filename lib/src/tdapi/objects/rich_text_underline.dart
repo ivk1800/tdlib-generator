@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// An underlined rich text
 class RichTextUnderline extends RichText {
   RichTextUnderline({required this.text});
 
-  /// text Text
+  /// [text] Text
   final RichText text;
 
   static const String CONSTRUCTOR = 'richTextUnderline';

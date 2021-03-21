@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Removes a chat action bar without any other action
 class RemoveChatActionBar extends TdFunction {
   RemoveChatActionBar({required this.chatId});
 
-  /// chat_id Chat identifier
+  /// [chatId] Chat identifier
   final int chatId;
 
   /// callback sign

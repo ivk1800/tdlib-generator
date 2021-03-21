@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The chat title was changed
 class ChatEventTitleChanged extends ChatEventAction {
   ChatEventTitleChanged({required this.oldTitle, required this.newTitle});
 
-  /// old_title Previous chat title
+  /// [oldTitle] Previous chat title
   final String oldTitle;
 
-  /// new_title New chat title
+  /// [newTitle] New chat title
   final String newTitle;
 
   static const String CONSTRUCTOR = 'chatEventTitleChanged';

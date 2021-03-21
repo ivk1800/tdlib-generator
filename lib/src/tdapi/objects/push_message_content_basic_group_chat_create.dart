@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A newly created basic group
 class PushMessageContentBasicGroupChatCreate extends PushMessageContent {
   const PushMessageContentBasicGroupChatCreate();

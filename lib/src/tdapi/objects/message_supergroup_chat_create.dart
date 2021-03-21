@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A newly created supergroup or channel
 class MessageSupergroupChatCreate extends MessageContent {
   MessageSupergroupChatCreate({required this.title});
 
-  /// title Title of the supergroup or channel
+  /// [title] Title of the supergroup or channel
   final String title;
 
   static const String CONSTRUCTOR = 'messageSupergroupChatCreate';

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The user is typing a message
 class ChatActionTyping extends ChatAction {
   const ChatActionTyping();

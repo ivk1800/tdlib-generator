@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Describes a solid fill of a background
 class BackgroundFillSolid extends BackgroundFill {
   BackgroundFillSolid({required this.color});
 
-  /// color A color of the background in the RGB24 format
+  /// [color] A color of the background in the RGB24 format
   final int color;
 
   static const String CONSTRUCTOR = 'backgroundFillSolid';

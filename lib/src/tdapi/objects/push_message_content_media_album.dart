@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A media album
 class PushMessageContentMediaAlbum extends PushMessageContent {
   PushMessageContentMediaAlbum(
@@ -10,19 +9,19 @@ class PushMessageContentMediaAlbum extends PushMessageContent {
       required this.hasAudios,
       required this.hasDocuments});
 
-  /// total_count Number of messages in the album
+  /// [totalCount] Number of messages in the album
   final int totalCount;
 
-  /// has_photos True, if the album has at least one photo
+  /// [hasPhotos] True, if the album has at least one photo
   final bool hasPhotos;
 
-  /// has_videos True, if the album has at least one video
+  /// [hasVideos] True, if the album has at least one video
   final bool hasVideos;
 
-  /// has_audios True, if the album has at least one audio file
+  /// [hasAudios] True, if the album has at least one audio file
   final bool hasAudios;
 
-  /// has_documents True, if the album has at least one document
+  /// [hasDocuments] True, if the album has at least one document
   final bool hasDocuments;
 
   static const String CONSTRUCTOR = 'pushMessageContentMediaAlbum';

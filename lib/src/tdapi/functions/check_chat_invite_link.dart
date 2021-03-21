@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Checks the validity of an invite link for a chat and returns information about the corresponding chat
 class CheckChatInviteLink extends TdFunction {
   CheckChatInviteLink({required this.inviteLink});
 
-  /// invite_link Invite link to be checked; should begin with "https://t.me/joinchat/", "https://telegram.me/joinchat/", or "https://telegram.dog/joinchat/"
+  /// [inviteLink] Invite link to be checked; should begin with "https://t.me/joinchat/", "https://telegram.me/joinchat/", or "https://telegram.dog/joinchat/"
   final String inviteLink;
 
   /// callback sign

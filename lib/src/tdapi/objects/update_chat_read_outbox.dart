@@ -1,15 +1,14 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Outgoing messages were read
 class UpdateChatReadOutbox extends Update {
   UpdateChatReadOutbox(
       {required this.chatId, required this.lastReadOutboxMessageId});
 
-  /// chat_id Chat identifier
+  /// [chatId] Chat identifier
   final int chatId;
 
-  /// last_read_outbox_message_id Identifier of last read outgoing message
+  /// [lastReadOutboxMessageId] Identifier of last read outgoing message
   final int lastReadOutboxMessageId;
 
   static const String CONSTRUCTOR = 'updateChatReadOutbox';

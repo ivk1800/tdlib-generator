@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Describes an action associated with a bank card number
 class BankCardActionOpenUrl extends TdObject {
   BankCardActionOpenUrl({required this.text, required this.url});
 
-  /// text Action text
+  /// [text] Action text
   final String text;
 
-  /// url The URL to be opened
+  /// [url] The URL to be opened
   final String url;
 
   static const String CONSTRUCTOR = 'bankCardActionOpenUrl';

@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Succeeds after a specified amount of time has passed. Can be called before initialization
 class SetAlarm extends TdFunction {
   SetAlarm({required this.seconds});
 
-  /// seconds Number of seconds before the function returns
+  /// [seconds] Number of seconds before the function returns
   final double seconds;
 
   /// callback sign

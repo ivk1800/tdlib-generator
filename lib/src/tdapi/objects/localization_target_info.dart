@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains information about the current localization target
 class LocalizationTargetInfo extends TdObject {
   LocalizationTargetInfo({required this.languagePacks});
 
-  /// language_packs List of available language packs for this application
+  /// [languagePacks] List of available language packs for this application
   final List<LanguagePackInfo> languagePacks;
 
   static const String CONSTRUCTOR = 'localizationTargetInfo';

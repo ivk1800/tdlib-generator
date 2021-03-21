@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Describes the type of a call server
 abstract class CallServerType extends TdObject {
   const CallServerType();

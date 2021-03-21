@@ -1,15 +1,14 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The list of installed sticker sets was updated
 class UpdateInstalledStickerSets extends Update {
   UpdateInstalledStickerSets(
       {required this.isMasks, required this.stickerSetIds});
 
-  /// is_masks True, if the list of installed mask sticker sets was updated
+  /// [isMasks] True, if the list of installed mask sticker sets was updated
   final bool isMasks;
 
-  /// sticker_set_ids The new list of installed ordinary sticker sets
+  /// [stickerSetIds] The new list of installed ordinary sticker sets
   final List<int> stickerSetIds;
 
   static const String CONSTRUCTOR = 'updateInstalledStickerSets';

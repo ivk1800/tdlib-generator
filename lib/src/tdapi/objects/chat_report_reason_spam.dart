@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The chat contains spam messages
 class ChatReportReasonSpam extends ChatReportReason {
   const ChatReportReasonSpam();

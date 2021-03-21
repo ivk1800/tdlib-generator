@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Describes the type of a background
 abstract class BackgroundType extends TdObject {
   const BackgroundType();

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A bot command, beginning with "/". This shouldn't be highlighted if there are no bots in the chat
 class TextEntityTypeBotCommand extends TextEntityType {
   const TextEntityTypeBotCommand();

@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A SOCKS5 proxy server
 class ProxyTypeSocks5 extends ProxyType {
   ProxyTypeSocks5({required this.username, required this.password});
 
-  /// username Username for logging in; may be empty
+  /// [username] Username for logging in; may be empty
   final String username;
 
-  /// password Password for logging in; may be empty
+  /// [password] Password for logging in; may be empty
   final String password;
 
   static const String CONSTRUCTOR = 'proxyTypeSocks5';

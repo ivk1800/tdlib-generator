@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Specifies the supported call protocols
 class CallProtocol extends TdObject {
   CallProtocol(
@@ -10,19 +9,19 @@ class CallProtocol extends TdObject {
       required this.maxLayer,
       required this.libraryVersions});
 
-  /// udp_p2p True, if UDP peer-to-peer connections are supported
+  /// [udpP2p] True, if UDP peer-to-peer connections are supported
   final bool udpP2p;
 
-  /// udp_reflector True, if connection through UDP reflectors is supported
+  /// [udpReflector] True, if connection through UDP reflectors is supported
   final bool udpReflector;
 
-  /// min_layer The minimum supported API layer; use 65
+  /// [minLayer] The minimum supported API layer; use 65
   final int minLayer;
 
-  /// max_layer The maximum supported API layer; use 65
+  /// [maxLayer] The maximum supported API layer; use 65
   final int maxLayer;
 
-  /// library_versions List of supported tgcalls versions
+  /// [libraryVersions] List of supported tgcalls versions
   final List<String> libraryVersions;
 
   static const String CONSTRUCTOR = 'callProtocol';

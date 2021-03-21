@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A superscript rich text
 class RichTextSuperscript extends RichText {
   RichTextSuperscript({required this.text});
 
-  /// text Text
+  /// [text] Text
   final RichText text;
 
   static const String CONSTRUCTOR = 'richTextSuperscript';

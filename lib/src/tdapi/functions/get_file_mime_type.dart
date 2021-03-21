@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns the MIME type of a file, guessed by its extension. Returns an empty string on failure. Can be called synchronously
 class GetFileMimeType extends TdFunction {
   GetFileMimeType({required this.fileName});
 
-  /// file_name The name of the file or path to the file
+  /// [fileName] The name of the file or path to the file
   final String fileName;
 
   /// callback sign

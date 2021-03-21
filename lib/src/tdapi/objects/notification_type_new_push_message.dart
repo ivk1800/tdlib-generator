@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// New message was received through a push notification
 class NotificationTypeNewPushMessage extends NotificationType {
   NotificationTypeNewPushMessage(
@@ -10,19 +9,19 @@ class NotificationTypeNewPushMessage extends NotificationType {
       required this.isOutgoing,
       required this.content});
 
-  /// message_id The message identifier. The message will not be available in the chat history, but the ID can be used in viewMessages, or as reply_to_message_id
+  /// [messageId] The message identifier. The message will not be available in the chat history, but the ID can be used in viewMessages, or as reply_to_message_id
   final int messageId;
 
-  /// sender The sender of the message. Corresponding user or chat may be inaccessible
+  /// [sender] The sender of the message. Corresponding user or chat may be inaccessible
   final MessageSender sender;
 
-  /// sender_name Name of the sender
+  /// [senderName] Name of the sender
   final String senderName;
 
-  /// is_outgoing True, if the message is outgoing
+  /// [isOutgoing] True, if the message is outgoing
   final bool isOutgoing;
 
-  /// content Push message content
+  /// [content] Push message content
   final PushMessageContent content;
 
   static const String CONSTRUCTOR = 'notificationTypeNewPushMessage';

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Describes the type of a proxy server
 abstract class ProxyType extends TdObject {
   const ProxyType();

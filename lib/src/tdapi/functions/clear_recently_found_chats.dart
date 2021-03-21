@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Clears the list of recently found chats
 class ClearRecentlyFoundChats extends TdFunction {
   ClearRecentlyFoundChats();

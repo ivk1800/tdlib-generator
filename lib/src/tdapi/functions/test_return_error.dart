@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns the specified error and ensures that the Error object is used; for testing only. Can be called synchronously
 class TestReturnError extends TdFunction {
   TestReturnError({required this.error});
 
-  /// error The error to be returned
+  /// [error] The error to be returned
   final TdError error;
 
   /// callback sign

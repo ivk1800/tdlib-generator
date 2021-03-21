@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// New message was received
 class NotificationTypeNewMessage extends NotificationType {
   NotificationTypeNewMessage({required this.message});
 
-  /// message The message
+  /// [message] The message
   final Message message;
 
   static const String CONSTRUCTOR = 'notificationTypeNewMessage';

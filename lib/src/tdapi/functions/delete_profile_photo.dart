@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Deletes a profile photo
 class DeleteProfilePhoto extends TdFunction {
   DeleteProfilePhoto({required this.profilePhotoId});
 
-  /// profile_photo_id Identifier of the profile photo to delete
+  /// [profilePhotoId] Identifier of the profile photo to delete
   final int profilePhotoId;
 
   /// callback sign

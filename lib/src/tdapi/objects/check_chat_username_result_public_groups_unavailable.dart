@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The user can't be a member of a public supergroup
 class CheckChatUsernameResultPublicGroupsUnavailable
     extends CheckChatUsernameResult {

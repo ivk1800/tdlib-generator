@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Applies if a user enters new credentials on a payment provider website
 class InputCredentialsNew extends InputCredentials {
   InputCredentialsNew({required this.data, required this.allowSave});
 
-  /// data Contains JSON-encoded data with a credential identifier from the payment provider
+  /// [data] Contains JSON-encoded data with a credential identifier from the payment provider
   final String data;
 
-  /// allow_save True, if the credential identifier can be saved on the server side
+  /// [allowSave] True, if the credential identifier can be saved on the server side
   final bool allowSave;
 
   static const String CONSTRUCTOR = 'inputCredentialsNew';

@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Checks the authentication password for correctness. Works only when the current authorization state is authorizationStateWaitPassword
 class CheckAuthenticationPassword extends TdFunction {
   CheckAuthenticationPassword({required this.password});
 
-  /// password The password to check
+  /// [password] The password to check
   final String password;
 
   /// callback sign

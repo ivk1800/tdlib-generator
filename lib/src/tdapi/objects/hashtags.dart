@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains a list of hashtags
 class Hashtags extends TdObject {
   Hashtags({required this.hashtags});
 
-  /// hashtags A list of hashtags
+  /// [hashtags] A list of hashtags
   final List<String> hashtags;
 
   static const String CONSTRUCTOR = 'hashtags';

@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a string option
 class OptionValueString extends OptionValue {
   OptionValueString({required this.value});
 
-  /// value The value of the option
+  /// [value] The value of the option
   final String value;
 
   static const String CONSTRUCTOR = 'optionValueString';

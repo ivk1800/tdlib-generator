@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The thumbnail is in WEBP format. It will be used only for some stickers
 class ThumbnailFormatWebp extends ThumbnailFormat {
   const ThumbnailFormatWebp();

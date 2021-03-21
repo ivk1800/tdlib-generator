@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The username can be set
 class CheckChatUsernameResultOk extends CheckChatUsernameResult {
   const CheckChatUsernameResultOk();

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains the user's personal details
 class PersonalDetails extends TdObject {
   PersonalDetails(
@@ -15,34 +14,34 @@ class PersonalDetails extends TdObject {
       required this.countryCode,
       required this.residenceCountryCode});
 
-  /// first_name First name of the user written in English; 1-255 characters
+  /// [firstName] First name of the user written in English; 1-255 characters
   final String firstName;
 
-  /// middle_name Middle name of the user written in English; 0-255 characters
+  /// [middleName] Middle name of the user written in English; 0-255 characters
   final String middleName;
 
-  /// last_name Last name of the user written in English; 1-255 characters
+  /// [lastName] Last name of the user written in English; 1-255 characters
   final String lastName;
 
-  /// native_first_name Native first name of the user; 1-255 characters
+  /// [nativeFirstName] Native first name of the user; 1-255 characters
   final String nativeFirstName;
 
-  /// native_middle_name Native middle name of the user; 0-255 characters
+  /// [nativeMiddleName] Native middle name of the user; 0-255 characters
   final String nativeMiddleName;
 
-  /// native_last_name Native last name of the user; 1-255 characters
+  /// [nativeLastName] Native last name of the user; 1-255 characters
   final String nativeLastName;
 
-  /// birthdate Birthdate of the user
+  /// [birthdate] Birthdate of the user
   final Date birthdate;
 
-  /// gender Gender of the user, "male" or "female"
+  /// [gender] Gender of the user, "male" or "female"
   final String gender;
 
-  /// country_code A two-letter ISO 3166-1 alpha-2 country code of the user's country
+  /// [countryCode] A two-letter ISO 3166-1 alpha-2 country code of the user's country
   final String countryCode;
 
-  /// residence_country_code A two-letter ISO 3166-1 alpha-2 country code of the user's residence country
+  /// [residenceCountryCode] A two-letter ISO 3166-1 alpha-2 country code of the user's residence country
   final String residenceCountryCode;
 
   static const String CONSTRUCTOR = 'personalDetails';

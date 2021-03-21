@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Disconnects website from the current user's Telegram account
 class DisconnectWebsite extends TdFunction {
   DisconnectWebsite({required this.websiteId});
 
-  /// website_id Website identifier
+  /// [websiteId] Website identifier
   final int websiteId;
 
   /// callback sign

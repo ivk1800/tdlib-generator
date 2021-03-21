@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A privacy setting for managing whether the user's phone number is visible
 class UserPrivacySettingShowPhoneNumber extends UserPrivacySetting {
   const UserPrivacySettingShowPhoneNumber();

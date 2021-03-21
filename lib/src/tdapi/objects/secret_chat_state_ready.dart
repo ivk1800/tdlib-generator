@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The secret chat is ready to use
 class SecretChatStateReady extends SecretChatState {
   const SecretChatStateReady();

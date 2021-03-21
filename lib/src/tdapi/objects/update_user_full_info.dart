@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Some data from userFullInfo has been changed
 class UpdateUserFullInfo extends Update {
   UpdateUserFullInfo({required this.userId, required this.userFullInfo});
 
-  /// user_id User identifier
+  /// [userId] User identifier
   final int userId;
 
-  /// user_full_info New full information about the user
+  /// [userFullInfo] New full information about the user
   final UserFullInfo userFullInfo;
 
   static const String CONSTRUCTOR = 'updateUserFullInfo';

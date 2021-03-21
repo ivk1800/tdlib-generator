@@ -1,12 +1,11 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The mute_new_participants setting of a voice chat was toggled
 class ChatEventVoiceChatMuteNewParticipantsToggled extends ChatEventAction {
   ChatEventVoiceChatMuteNewParticipantsToggled(
       {required this.muteNewParticipants});
 
-  /// mute_new_participants New value of the mute_new_participants setting
+  /// [muteNewParticipants] New value of the mute_new_participants setting
   final bool muteNewParticipants;
 
   static const String CONSTRUCTOR =

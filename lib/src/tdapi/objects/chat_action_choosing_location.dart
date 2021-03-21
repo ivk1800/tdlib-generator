@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The user is picking a location or venue to send
 class ChatActionChoosingLocation extends ChatAction {
   const ChatActionChoosingLocation();

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The call was ended before the conversation started. It was declined by the other party
 class CallDiscardReasonDeclined extends CallDiscardReason {
   const CallDiscardReasonDeclined();

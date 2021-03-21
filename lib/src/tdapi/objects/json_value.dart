@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Represents a JSON value
 abstract class JsonValue extends TdObject {
   const JsonValue();

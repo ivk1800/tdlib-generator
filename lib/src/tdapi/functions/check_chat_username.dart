@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Checks whether a username can be set for a chat
 class CheckChatUsername extends TdFunction {
   CheckChatUsername({required this.chatId, required this.username});
 
-  /// chat_id Chat identifier; should be identifier of a supergroup chat, or a channel chat, or a private chat with self, or zero if chat is being created
+  /// [chatId] Chat identifier; should be identifier of a supergroup chat, or a channel chat, or a private chat with self, or zero if chat is being created
   final int chatId;
 
-  /// username Username to be checked
+  /// [username] Username to be checked
   final String username;
 
   /// callback sign

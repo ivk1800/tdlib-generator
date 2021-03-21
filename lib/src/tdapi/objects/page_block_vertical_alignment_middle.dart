@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The content should be middle-aligned
 class PageBlockVerticalAlignmentMiddle extends PageBlockVerticalAlignment {
   const PageBlockVerticalAlignmentMiddle();

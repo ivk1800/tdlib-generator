@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A message with a poll
 class PushMessageContentPoll extends PushMessageContent {
   PushMessageContentPoll(
@@ -8,13 +7,13 @@ class PushMessageContentPoll extends PushMessageContent {
       required this.isRegular,
       required this.isPinned});
 
-  /// question Poll question
+  /// [question] Poll question
   final String question;
 
-  /// is_regular True, if the poll is regular and not in quiz mode
+  /// [isRegular] True, if the poll is regular and not in quiz mode
   final bool isRegular;
 
-  /// is_pinned True, if the message is a pinned message with the specified content
+  /// [isPinned] True, if the message is a pinned message with the specified content
   final bool isPinned;
 
   static const String CONSTRUCTOR = 'pushMessageContentPoll';

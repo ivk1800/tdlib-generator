@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Returns only voice and video note messages
 class SearchMessagesFilterVoiceAndVideoNote extends SearchMessagesFilter {
   const SearchMessagesFilterVoiceAndVideoNote();

@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns the received bytes; for testing only. This is an offline method. Can be called before authorization
 class TestCallBytes extends TdFunction {
   TestCallBytes({required this.x});
 
-  /// x Bytes to return
+  /// [x] Bytes to return
   final String x;
 
   /// callback sign

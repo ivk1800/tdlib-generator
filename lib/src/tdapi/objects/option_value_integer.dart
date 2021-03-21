@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents an integer option
 class OptionValueInteger extends OptionValue {
   OptionValueInteger({required this.value});
 
-  /// value The value of the option
+  /// [value] The value of the option
   final int value;
 
   static const String CONSTRUCTOR = 'optionValueInteger';

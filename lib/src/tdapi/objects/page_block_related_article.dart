@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains information about a related article
 class PageBlockRelatedArticle extends TdObject {
   PageBlockRelatedArticle(
@@ -11,22 +10,22 @@ class PageBlockRelatedArticle extends TdObject {
       required this.author,
       required this.publishDate});
 
-  /// url Related article URL
+  /// [url] Related article URL
   final String url;
 
-  /// title Article title; may be empty
+  /// [title] Article title; may be empty
   final String title;
 
-  /// param_description Article description; may be empty
+  /// param_[description] Article description; may be empty
   final String description;
 
-  /// photo Article photo; may be null
+  /// [photo] Article photo; may be null
   final Photo? photo;
 
-  /// author Article author; may be empty
+  /// [author] Article author; may be empty
   final String author;
 
-  /// publish_date Point in time (Unix timestamp) when the article was published; 0 if unknown
+  /// [publishDate] Point in time (Unix timestamp) when the article was published; 0 if unknown
   final int publishDate;
 
   static const String CONSTRUCTOR = 'pageBlockRelatedArticle';

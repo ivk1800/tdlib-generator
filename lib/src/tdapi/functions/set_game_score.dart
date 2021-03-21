@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Updates the game score of the specified user in the game; for bots only
 class SetGameScore extends TdFunction {
   SetGameScore(
@@ -11,22 +10,22 @@ class SetGameScore extends TdFunction {
       required this.score,
       required this.force});
 
-  /// chat_id The chat to which the message with the game belongs
+  /// [chatId] The chat to which the message with the game belongs
   final int chatId;
 
-  /// message_id Identifier of the message
+  /// [messageId] Identifier of the message
   final int messageId;
 
-  /// edit_message True, if the message should be edited
+  /// [editMessage] True, if the message should be edited
   final bool editMessage;
 
-  /// user_id User identifier
+  /// [userId] User identifier
   final int userId;
 
-  /// score The new score
+  /// [score] The new score
   final int score;
 
-  /// force Pass true to update the score even if it decreases. If the score is 0, the user will be deleted from the high score table
+  /// [force] Pass true to update the score even if it decreases. If the score is 0, the user will be deleted from the high score table
   final bool force;
 
   /// callback sign

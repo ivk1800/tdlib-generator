@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns chat lists to which the chat can be added. This is an offline request
 class GetChatListsToAddChat extends TdFunction {
   GetChatListsToAddChat({required this.chatId});
 
-  /// chat_id Chat identifier
+  /// [chatId] Chat identifier
   final int chatId;
 
   /// callback sign

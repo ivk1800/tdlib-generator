@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Position on a photo where a mask should be placed
 class MaskPosition extends TdObject {
   MaskPosition(
@@ -9,16 +8,16 @@ class MaskPosition extends TdObject {
       required this.yShift,
       required this.scale});
 
-  /// point Part of the face, relative to which the mask should be placed
+  /// [point] Part of the face, relative to which the mask should be placed
   final MaskPoint point;
 
-  /// x_shift Shift by X-axis measured in widths of the mask scaled to the face size, from left to right. (For example, -1.0 will place the mask just to the left of the default mask position)
+  /// [xShift] Shift by X-axis measured in widths of the mask scaled to the face size, from left to right. (For example, -1.0 will place the mask just to the left of the default mask position)
   final double xShift;
 
-  /// y_shift Shift by Y-axis measured in heights of the mask scaled to the face size, from top to bottom. (For example, 1.0 will place the mask just below the default mask position)
+  /// [yShift] Shift by Y-axis measured in heights of the mask scaled to the face size, from top to bottom. (For example, 1.0 will place the mask just below the default mask position)
   final double yShift;
 
-  /// scale Mask scaling coefficient. (For example, 2.0 means a doubled size)
+  /// [scale] Mask scaling coefficient. (For example, 2.0 means a doubled size)
   final double scale;
 
   static const String CONSTRUCTOR = 'maskPosition';

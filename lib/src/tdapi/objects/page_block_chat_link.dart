@@ -1,18 +1,17 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A link to a chat
 class PageBlockChatLink extends PageBlock {
   PageBlockChatLink(
       {required this.title, ChatPhotoInfo? this.photo, required this.username});
 
-  /// title Chat title
+  /// [title] Chat title
   final String title;
 
-  /// photo Chat photo; may be null
+  /// [photo] Chat photo; may be null
   final ChatPhotoInfo? photo;
 
-  /// username Chat username, by which all other information about the chat should be resolved
+  /// [username] Chat username, by which all other information about the chat should be resolved
   final String username;
 
   static const String CONSTRUCTOR = 'pageBlockChatLink';

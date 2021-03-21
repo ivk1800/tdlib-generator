@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains a part of a file
 class FilePart extends TdObject {
   FilePart({required this.data});
 
-  /// data File bytes
+  /// [data] File bytes
   final String data;
 
   static const String CONSTRUCTOR = 'filePart';

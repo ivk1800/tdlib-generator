@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A list of data blocks
 class PageBlockList extends PageBlock {
   PageBlockList({required this.items});
 
-  /// items The items of the list
+  /// [items] The items of the list
   final List<PageBlockListItem> items;
 
   static const String CONSTRUCTOR = 'pageBlockList';

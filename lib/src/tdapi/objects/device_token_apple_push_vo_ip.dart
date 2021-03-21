@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A token for Apple Push Notification service VoIP notifications
 class DeviceTokenApplePushVoIP extends DeviceToken {
   DeviceTokenApplePushVoIP(
@@ -8,13 +7,13 @@ class DeviceTokenApplePushVoIP extends DeviceToken {
       required this.isAppSandbox,
       required this.encrypt});
 
-  /// device_token Device token; may be empty to de-register a device
+  /// [deviceToken] Device token; may be empty to de-register a device
   final String deviceToken;
 
-  /// is_app_sandbox True, if App Sandbox is enabled
+  /// [isAppSandbox] True, if App Sandbox is enabled
   final bool isAppSandbox;
 
-  /// encrypt True, if push notifications should be additionally encrypted
+  /// [encrypt] True, if push notifications should be additionally encrypted
   final bool encrypt;
 
   static const String CONSTRUCTOR = 'deviceTokenApplePushVoIP';

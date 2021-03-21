@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A different network type (e.g., Ethernet network)
 class NetworkTypeOther extends NetworkType {
   const NetworkTypeOther();

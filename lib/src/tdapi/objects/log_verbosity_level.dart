@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains a TDLib internal log verbosity level
 class LogVerbosityLevel extends TdObject {
   LogVerbosityLevel({required this.verbosityLevel});
 
-  /// verbosity_level Log verbosity level
+  /// [verbosityLevel] Log verbosity level
   final int verbosityLevel;
 
   static const String CONSTRUCTOR = 'logVerbosityLevel';

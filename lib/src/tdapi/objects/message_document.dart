@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A document message (general file)
 class MessageDocument extends MessageContent {
   MessageDocument({required this.document, required this.caption});
 
-  /// document The document description
+  /// [document] The document description
   final Document document;
 
-  /// caption Document caption
+  /// [caption] Document caption
   final FormattedText caption;
 
   static const String CONSTRUCTOR = 'messageDocument';

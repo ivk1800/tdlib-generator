@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A marked rich text
 class RichTextMarked extends RichText {
   RichTextMarked({required this.text});
 
-  /// text Text
+  /// [text] Text
   final RichText text;
 
   static const String CONSTRUCTOR = 'richTextMarked';

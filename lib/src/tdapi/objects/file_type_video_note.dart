@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The file is a video note
 class FileTypeVideoNote extends FileType {
   const FileTypeVideoNote();

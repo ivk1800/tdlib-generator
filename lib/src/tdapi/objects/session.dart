@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains information about one session in a Telegram application used by the current user. Sessions should be shown to the user in the returned order
 class Session extends TdObject {
   Session(
@@ -20,49 +19,49 @@ class Session extends TdObject {
       required this.country,
       required this.region});
 
-  /// id Session identifier
+  /// [id] Session identifier
   final int id;
 
-  /// is_current True, if this session is the current session
+  /// [isCurrent] True, if this session is the current session
   final bool isCurrent;
 
-  /// is_password_pending True, if a password is needed to complete authorization of the session
+  /// [isPasswordPending] True, if a password is needed to complete authorization of the session
   final bool isPasswordPending;
 
-  /// api_id Telegram API identifier, as provided by the application
+  /// [apiId] Telegram API identifier, as provided by the application
   final int apiId;
 
-  /// application_name Name of the application, as provided by the application
+  /// [applicationName] Name of the application, as provided by the application
   final String applicationName;
 
-  /// application_version The version of the application, as provided by the application
+  /// [applicationVersion] The version of the application, as provided by the application
   final String applicationVersion;
 
-  /// is_official_application True, if the application is an official application or uses the api_id of an official application
+  /// [isOfficialApplication] True, if the application is an official application or uses the api_id of an official application
   final bool isOfficialApplication;
 
-  /// device_model Model of the device the application has been run or is running on, as provided by the application
+  /// [deviceModel] Model of the device the application has been run or is running on, as provided by the application
   final String deviceModel;
 
-  /// platform Operating system the application has been run or is running on, as provided by the application
+  /// [platform] Operating system the application has been run or is running on, as provided by the application
   final String platform;
 
-  /// system_version Version of the operating system the application has been run or is running on, as provided by the application
+  /// [systemVersion] Version of the operating system the application has been run or is running on, as provided by the application
   final String systemVersion;
 
-  /// log_in_date Point in time (Unix timestamp) when the user has logged in
+  /// [logInDate] Point in time (Unix timestamp) when the user has logged in
   final int logInDate;
 
-  /// last_active_date Point in time (Unix timestamp) when the session was last used
+  /// [lastActiveDate] Point in time (Unix timestamp) when the session was last used
   final int lastActiveDate;
 
-  /// ip IP address from which the session was created, in human-readable format
+  /// [ip] IP address from which the session was created, in human-readable format
   final String ip;
 
-  /// country A two-letter country code for the country from which the session was created, based on the IP address
+  /// [country] A two-letter country code for the country from which the session was created, based on the IP address
   final String country;
 
-  /// region Region code from which the session was created, based on the IP address
+  /// [region] Region code from which the session was created, based on the IP address
   final String region;
 
   static const String CONSTRUCTOR = 'session';

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns saved order info, if any
 class GetSavedOrderInfo extends TdFunction {
   GetSavedOrderInfo();

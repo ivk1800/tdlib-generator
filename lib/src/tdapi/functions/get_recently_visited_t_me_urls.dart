@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns t.me URLs recently visited by a newly registered user
 class GetRecentlyVisitedTMeUrls extends TdFunction {
   GetRecentlyVisitedTMeUrls({required this.referrer});
 
-  /// referrer Google Play referrer to identify the user
+  /// [referrer] Google Play referrer to identify the user
   final String referrer;
 
   /// callback sign

@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// An error message to be shown to the user instead of the graph
 class StatisticalGraphError extends StatisticalGraph {
   StatisticalGraphError({required this.errorMessage});
 
-  /// error_message The error message
+  /// [errorMessage] The error message
   final String errorMessage;
 
   static const String CONSTRUCTOR = 'statisticalGraphError';

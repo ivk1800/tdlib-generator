@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A table
 class PageBlockTable extends PageBlock {
   PageBlockTable(
@@ -9,16 +8,16 @@ class PageBlockTable extends PageBlock {
       required this.isBordered,
       required this.isStriped});
 
-  /// caption Table caption
+  /// [caption] Table caption
   final RichText caption;
 
-  /// cells Table cells
+  /// [cells] Table cells
   final List<List<PageBlockTableCell>> cells;
 
-  /// is_bordered True, if the table is bordered
+  /// [isBordered] True, if the table is bordered
   final bool isBordered;
 
-  /// is_striped True, if the table is striped
+  /// [isStriped] True, if the table is striped
   final bool isStriped;
 
   static const String CONSTRUCTOR = 'pageBlockTable';

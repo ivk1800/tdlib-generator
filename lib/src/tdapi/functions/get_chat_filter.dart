@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns information about a chat filter by its identifier
 class GetChatFilter extends TdFunction {
   GetChatFilter({required this.chatFilterId});
 
-  /// chat_filter_id Chat filter identifier
+  /// [chatFilterId] Chat filter identifier
   final int chatFilterId;
 
   /// callback sign

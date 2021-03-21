@@ -1,15 +1,14 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A voice note message
 class PushMessageContentVoiceNote extends PushMessageContent {
   PushMessageContentVoiceNote(
       {VoiceNote? this.voiceNote, required this.isPinned});
 
-  /// voice_note Message content; may be null
+  /// [voiceNote] Message content; may be null
   final VoiceNote? voiceNote;
 
-  /// is_pinned True, if the message is a pinned message with the specified content
+  /// [isPinned] True, if the message is a pinned message with the specified content
   final bool isPinned;
 
   static const String CONSTRUCTOR = 'pushMessageContentVoiceNote';

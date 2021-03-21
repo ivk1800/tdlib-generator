@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Sends call signaling data
 class SendCallSignalingData extends TdFunction {
   SendCallSignalingData({required this.callId, required this.data});
 
-  /// call_id Call identifier
+  /// [callId] Call identifier
   final int callId;
 
-  /// data The data
+  /// [data] The data
   final String data;
 
   /// callback sign

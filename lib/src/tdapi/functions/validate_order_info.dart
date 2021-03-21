@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Validates the order information provided by a user and returns the available shipping options for a flexible invoice
 class ValidateOrderInfo extends TdFunction {
   ValidateOrderInfo(
@@ -9,16 +8,16 @@ class ValidateOrderInfo extends TdFunction {
       required this.orderInfo,
       required this.allowSave});
 
-  /// chat_id Chat identifier of the Invoice message
+  /// [chatId] Chat identifier of the Invoice message
   final int chatId;
 
-  /// message_id Message identifier
+  /// [messageId] Message identifier
   final int messageId;
 
-  /// order_info The order information, provided by the user
+  /// [orderInfo] The order information, provided by the user
   final OrderInfo orderInfo;
 
-  /// allow_save True, if the order information can be saved
+  /// [allowSave] True, if the order information can be saved
   final bool allowSave;
 
   /// callback sign

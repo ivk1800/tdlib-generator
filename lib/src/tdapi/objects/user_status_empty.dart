@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The user status was never changed
 class UserStatusEmpty extends UserStatus {
   const UserStatusEmpty();

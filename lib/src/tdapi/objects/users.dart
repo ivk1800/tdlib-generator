@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a list of users
 class Users extends TdObject {
   Users({required this.totalCount, required this.userIds});
 
-  /// total_count Approximate total count of users found
+  /// [totalCount] Approximate total count of users found
   final int totalCount;
 
-  /// user_ids A list of user identifiers
+  /// [userIds] A list of user identifiers
   final List<int> userIds;
 
   static const String CONSTRUCTOR = 'users';

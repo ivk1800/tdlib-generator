@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains information about the total amount of data that was used for calls
 class NetworkStatisticsEntryCall extends NetworkStatisticsEntry {
   NetworkStatisticsEntryCall(
@@ -9,16 +8,16 @@ class NetworkStatisticsEntryCall extends NetworkStatisticsEntry {
       required this.receivedBytes,
       required this.duration});
 
-  /// network_type Type of the network the data was sent through. Call setNetworkType to maintain the actual network type
+  /// [networkType] Type of the network the data was sent through. Call setNetworkType to maintain the actual network type
   final NetworkType networkType;
 
-  /// sent_bytes Total number of bytes sent
+  /// [sentBytes] Total number of bytes sent
   final int sentBytes;
 
-  /// received_bytes Total number of bytes received
+  /// [receivedBytes] Total number of bytes received
   final int receivedBytes;
 
-  /// duration Total call duration, in seconds
+  /// [duration] Total call duration, in seconds
   final double duration;
 
   static const String CONSTRUCTOR = 'networkStatisticsEntryCall';

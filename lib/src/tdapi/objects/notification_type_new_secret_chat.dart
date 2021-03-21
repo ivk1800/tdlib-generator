@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// New secret chat was created
 class NotificationTypeNewSecretChat extends NotificationType {
   const NotificationTypeNewSecretChat();

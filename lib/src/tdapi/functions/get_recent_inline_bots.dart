@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns up to 20 recently used inline bots in the order of their last usage
 class GetRecentInlineBots extends TdFunction {
   GetRecentInlineBots();

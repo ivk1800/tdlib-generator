@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A privacy setting for managing whether a link to the user's account is included in forwarded messages
 class UserPrivacySettingShowLinkInForwardedMessages extends UserPrivacySetting {
   const UserPrivacySettingShowLinkInForwardedMessages();

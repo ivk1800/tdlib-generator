@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Deletes existing chat filter
 class DeleteChatFilter extends TdFunction {
   DeleteChatFilter({required this.chatFilterId});
 
-  /// chat_filter_id Chat filter identifier
+  /// [chatFilterId] Chat filter identifier
   final int chatFilterId;
 
   /// callback sign

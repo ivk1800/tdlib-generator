@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Constructs a persistent HTTP URL for a background
 class GetBackgroundUrl extends TdFunction {
   GetBackgroundUrl({required this.name, required this.type});
 
-  /// name Background name
+  /// [name] Background name
   final String name;
 
-  /// type Background type
+  /// [type] Background type
   final BackgroundType type;
 
   /// callback sign

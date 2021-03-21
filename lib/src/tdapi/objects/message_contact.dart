@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A message with a user contact
 class MessageContact extends MessageContent {
   MessageContact({required this.contact});
 
-  /// contact The contact description
+  /// [contact] The contact description
   final Contact contact;
 
   static const String CONSTRUCTOR = 'messageContact';

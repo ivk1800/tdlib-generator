@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Information about a group call was updated
 class UpdateGroupCall extends Update {
   UpdateGroupCall({required this.groupCall});
 
-  /// group_call New data about a group call
+  /// [groupCall] New data about a group call
   final GroupCall groupCall;
 
   static const String CONSTRUCTOR = 'updateGroupCall';

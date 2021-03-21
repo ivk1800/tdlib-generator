@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A simple object containing a sequence of bytes; for testing only
 class TestBytes extends TdObject {
   TestBytes({required this.value});
 
-  /// value Bytes
+  /// [value] Bytes
   final String value;
 
   static const String CONSTRUCTOR = 'testBytes';

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Number of unread messages in a chat list has changed. This update is sent only if the message database is used
 class UpdateUnreadMessageCount extends Update {
   UpdateUnreadMessageCount(
@@ -8,13 +7,13 @@ class UpdateUnreadMessageCount extends Update {
       required this.unreadCount,
       required this.unreadUnmutedCount});
 
-  /// chat_list The chat list with changed number of unread messages
+  /// [chatList] The chat list with changed number of unread messages
   final ChatList chatList;
 
-  /// unread_count Total number of unread messages
+  /// [unreadCount] Total number of unread messages
   final int unreadCount;
 
-  /// unread_unmuted_count Total number of unread messages in unmuted chats
+  /// [unreadUnmutedCount] Total number of unread messages in unmuted chats
   final int unreadUnmutedCount;
 
   static const String CONSTRUCTOR = 'updateUnreadMessageCount';

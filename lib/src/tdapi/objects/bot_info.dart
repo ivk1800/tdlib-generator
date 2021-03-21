@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Provides information about a bot and its supported commands
 class BotInfo extends TdObject {
   BotInfo({required this.description, required this.commands});
 
-  /// param_description Long description shown on the user info page
+  /// param_[description] Long description shown on the user info page
   final String description;
 
-  /// commands A list of commands supported by the bot
+  /// [commands] A list of commands supported by the bot
   final List<BotCommand> commands;
 
   static const String CONSTRUCTOR = 'botInfo';

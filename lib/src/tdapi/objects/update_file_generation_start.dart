@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The file generation process needs to be started by the application
 class UpdateFileGenerationStart extends Update {
   UpdateFileGenerationStart(
@@ -9,16 +8,16 @@ class UpdateFileGenerationStart extends Update {
       required this.destinationPath,
       required this.conversion});
 
-  /// generation_id Unique identifier for the generation process
+  /// [generationId] Unique identifier for the generation process
   final int generationId;
 
-  /// original_path The path to a file from which a new file is generated; may be empty
+  /// [originalPath] The path to a file from which a new file is generated; may be empty
   final String originalPath;
 
-  /// destination_path The path to a file that should be created and where the new file should be generated
+  /// [destinationPath] The path to a file that should be created and where the new file should be generated
   final String destinationPath;
 
-  /// conversion String specifying the conversion applied to the original file. If conversion is "#url#" than original_path contains an HTTP/HTTPS URL of a file, which should be downloaded by the application
+  /// [conversion] String specifying the conversion applied to the original file. If conversion is "#url#" than original_path contains an HTTP/HTTPS URL of a file, which should be downloaded by the application
   final String conversion;
 
   static const String CONSTRUCTOR = 'updateFileGenerationStart';

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Describes a video file
 class Video extends TdObject {
   Video(
@@ -15,34 +14,34 @@ class Video extends TdObject {
       Thumbnail? this.thumbnail,
       required this.video});
 
-  /// duration Duration of the video, in seconds; as defined by the sender
+  /// [duration] Duration of the video, in seconds; as defined by the sender
   final int duration;
 
-  /// width Video width; as defined by the sender
+  /// [width] Video width; as defined by the sender
   final int width;
 
-  /// height Video height; as defined by the sender
+  /// [height] Video height; as defined by the sender
   final int height;
 
-  /// file_name Original name of the file; as defined by the sender
+  /// [fileName] Original name of the file; as defined by the sender
   final String fileName;
 
-  /// mime_type MIME type of the file; as defined by the sender
+  /// [mimeType] MIME type of the file; as defined by the sender
   final String mimeType;
 
-  /// has_stickers True, if stickers were added to the video. The list of corresponding sticker sets can be received using getAttachedStickerSets
+  /// [hasStickers] True, if stickers were added to the video. The list of corresponding sticker sets can be received using getAttachedStickerSets
   final bool hasStickers;
 
-  /// supports_streaming True, if the video should be tried to be streamed
+  /// [supportsStreaming] True, if the video should be tried to be streamed
   final bool supportsStreaming;
 
-  /// minithumbnail Video minithumbnail; may be null
+  /// [minithumbnail] Video minithumbnail; may be null
   final Minithumbnail? minithumbnail;
 
-  /// thumbnail Video thumbnail in JPEG or MPEG4 format; as defined by the sender; may be null
+  /// [thumbnail] Video thumbnail in JPEG or MPEG4 format; as defined by the sender; may be null
   final Thumbnail? thumbnail;
 
-  /// video File containing the video
+  /// [video] File containing the video
   final File video;
 
   static const String CONSTRUCTOR = 'video';

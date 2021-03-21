@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Changes the bio of the current user
 class SetBio extends TdFunction {
   SetBio({required this.bio});
 
-  /// bio The new value of the user bio; 0-70 characters without line feeds
+  /// [bio] The new value of the user bio; 0-70 characters without line feeds
   final String bio;
 
   /// callback sign

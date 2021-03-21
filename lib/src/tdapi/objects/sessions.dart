@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains a list of sessions
 class Sessions extends TdObject {
   Sessions({required this.sessions});
 
-  /// sessions List of sessions
+  /// [sessions] List of sessions
   final List<Session> sessions;
 
   static const String CONSTRUCTOR = 'sessions';

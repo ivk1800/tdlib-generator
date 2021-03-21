@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Contains statistics about network usage
 abstract class NetworkStatisticsEntry extends TdObject {
   const NetworkStatisticsEntry();

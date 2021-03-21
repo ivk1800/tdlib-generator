@@ -1,18 +1,17 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A photo message
 class MessagePhoto extends MessageContent {
   MessagePhoto(
       {required this.photo, required this.caption, required this.isSecret});
 
-  /// photo The photo description
+  /// [photo] The photo description
   final Photo photo;
 
-  /// caption Photo caption
+  /// [caption] Photo caption
   final FormattedText caption;
 
-  /// is_secret True, if the photo must be blurred and must be shown only while tapped
+  /// [isSecret] True, if the photo must be blurred and must be shown only while tapped
   final bool isSecret;
 
   static const String CONSTRUCTOR = 'messagePhoto';

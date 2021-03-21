@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Returns contacts of the user
 class ChatMembersFilterContacts extends ChatMembersFilter {
   const ChatMembersFilterContacts();

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns database statistics
 class GetDatabaseStatistics extends TdFunction {
   GetDatabaseStatistics();

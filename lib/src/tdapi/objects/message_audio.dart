@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// An audio message
 class MessageAudio extends MessageContent {
   MessageAudio({required this.audio, required this.caption});
 
-  /// audio The audio description
+  /// [audio] The audio description
   final Audio audio;
 
-  /// caption Audio caption
+  /// [caption] Audio caption
   final FormattedText caption;
 
   static const String CONSTRUCTOR = 'messageAudio';

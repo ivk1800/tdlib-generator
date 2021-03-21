@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A basic group (i.e., a chat with 0-200 other users)
 class ChatTypeBasicGroup extends ChatType {
   ChatTypeBasicGroup({required this.basicGroupId});
 
-  /// basic_group_id Basic group identifier
+  /// [basicGroupId] Basic group identifier
   final int basicGroupId;
 
   static const String CONSTRUCTOR = 'chatTypeBasicGroup';

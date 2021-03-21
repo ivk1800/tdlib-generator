@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns current verbosity level of the internal logging of TDLib. Can be called synchronously
 class GetLogVerbosityLevel extends TdFunction {
   GetLogVerbosityLevel();

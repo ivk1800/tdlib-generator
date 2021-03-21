@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// New call was created or information about a call was updated
 class UpdateCall extends Update {
   UpdateCall({required this.call});
 
-  /// call New data about a call
+  /// [call] New data about a call
   final Call call;
 
   static const String CONSTRUCTOR = 'updateCall';

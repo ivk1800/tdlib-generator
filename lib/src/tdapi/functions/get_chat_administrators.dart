@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns a list of administrators of the chat with their custom titles
 class GetChatAdministrators extends TdFunction {
   GetChatAdministrators({required this.chatId});
 
-  /// chat_id Chat identifier
+  /// [chatId] Chat identifier
   final int chatId;
 
   /// callback sign

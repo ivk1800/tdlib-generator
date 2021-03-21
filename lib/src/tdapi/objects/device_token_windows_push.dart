@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A token for Windows Push Notification Services
 class DeviceTokenWindowsPush extends DeviceToken {
   DeviceTokenWindowsPush({required this.accessToken});
 
-  /// access_token The access token that will be used to send notifications; may be empty to de-register a device
+  /// [accessToken] The access token that will be used to send notifications; may be empty to de-register a device
   final String accessToken;
 
   static const String CONSTRUCTOR = 'deviceTokenWindowsPush';

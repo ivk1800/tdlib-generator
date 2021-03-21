@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A message with a poll
 class MessagePoll extends MessageContent {
   MessagePoll({required this.poll});
 
-  /// poll The poll description
+  /// [poll] The poll description
   final Poll poll;
 
   static const String CONSTRUCTOR = 'messagePoll';

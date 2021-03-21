@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The content should be center-aligned
 class PageBlockHorizontalAlignmentCenter extends PageBlockHorizontalAlignment {
   const PageBlockHorizontalAlignmentCenter();

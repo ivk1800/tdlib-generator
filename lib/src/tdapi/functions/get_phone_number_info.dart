@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns information about a phone number by its prefix. Can be called before authorization
 class GetPhoneNumberInfo extends TdFunction {
   GetPhoneNumberInfo({required this.phoneNumberPrefix});
 
-  /// phone_number_prefix The phone number prefix
+  /// [phoneNumberPrefix] The phone number prefix
   final String phoneNumberPrefix;
 
   /// callback sign

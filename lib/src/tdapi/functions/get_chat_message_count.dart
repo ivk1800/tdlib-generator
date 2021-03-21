@@ -1,18 +1,17 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns approximate number of messages of the specified type in the chat
 class GetChatMessageCount extends TdFunction {
   GetChatMessageCount(
       {required this.chatId, required this.filter, required this.returnLocal});
 
-  /// chat_id Identifier of the chat in which to count messages
+  /// [chatId] Identifier of the chat in which to count messages
   final int chatId;
 
-  /// filter Filter for message content; searchMessagesFilterEmpty is unsupported in this function
+  /// [filter] Filter for message content; searchMessagesFilterEmpty is unsupported in this function
   final SearchMessagesFilter filter;
 
-  /// return_local If true, returns count that is available locally without sending network requests, returning -1 if the number of messages is unknown
+  /// [returnLocal] If true, returns count that is available locally without sending network requests, returning -1 if the number of messages is unknown
   final bool returnLocal;
 
   /// callback sign

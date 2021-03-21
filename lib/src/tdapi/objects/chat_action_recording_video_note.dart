@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The user is recording a video note
 class ChatActionRecordingVideoNote extends ChatAction {
   const ChatActionRecordingVideoNote();

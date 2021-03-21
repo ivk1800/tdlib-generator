@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A rule to restrict all contacts of a user from doing something
 class UserPrivacySettingRuleRestrictContacts extends UserPrivacySettingRule {
   const UserPrivacySettingRuleRestrictContacts();

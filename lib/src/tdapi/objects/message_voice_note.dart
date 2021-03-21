@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A voice note message
 class MessageVoiceNote extends MessageContent {
   MessageVoiceNote(
@@ -8,13 +7,13 @@ class MessageVoiceNote extends MessageContent {
       required this.caption,
       required this.isListened});
 
-  /// voice_note The voice note description
+  /// [voiceNote] The voice note description
   final VoiceNote voiceNote;
 
-  /// caption Voice note caption
+  /// [caption] Voice note caption
   final FormattedText caption;
 
-  /// is_listened True, if at least one of the recipients has listened to the voice note
+  /// [isListened] True, if at least one of the recipients has listened to the voice note
   final bool isListened;
 
   static const String CONSTRUCTOR = 'messageVoiceNote';

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Represents the categories of chats for which a list of frequently used chats can be retrieved
 abstract class TopChatCategory extends TdObject {
   const TopChatCategory();

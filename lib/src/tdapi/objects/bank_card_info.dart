@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Information about a bank card
 class BankCardInfo extends TdObject {
   BankCardInfo({required this.title, required this.actions});
 
-  /// title Title of the bank card description
+  /// [title] Title of the bank card description
   final String title;
 
-  /// actions Actions that can be done with the bank card number
+  /// [actions] Actions that can be done with the bank card number
   final List<BankCardActionOpenUrl> actions;
 
   static const String CONSTRUCTOR = 'bankCardInfo';

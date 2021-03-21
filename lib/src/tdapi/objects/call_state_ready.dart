@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The call is ready to use
 class CallStateReady extends CallState {
   CallStateReady(
@@ -11,22 +10,22 @@ class CallStateReady extends CallState {
       required this.emojis,
       required this.allowP2p});
 
-  /// protocol Call protocols supported by the peer
+  /// [protocol] Call protocols supported by the peer
   final CallProtocol protocol;
 
-  /// servers List of available call servers
+  /// [servers] List of available call servers
   final List<CallServer> servers;
 
-  /// config A JSON-encoded call config
+  /// [config] A JSON-encoded call config
   final String config;
 
-  /// encryption_key Call encryption key
+  /// [encryptionKey] Call encryption key
   final String encryptionKey;
 
-  /// emojis Encryption key emojis fingerprint
+  /// [emojis] Encryption key emojis fingerprint
   final List<String> emojis;
 
-  /// allow_p2p True, if peer-to-peer connection is allowed by users privacy settings
+  /// [allowP2p] True, if peer-to-peer connection is allowed by users privacy settings
   final bool allowP2p;
 
   static const String CONSTRUCTOR = 'callStateReady';

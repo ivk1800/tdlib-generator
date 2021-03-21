@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A graph data
 class StatisticalGraphData extends StatisticalGraph {
   StatisticalGraphData({required this.jsonData, required this.zoomToken});
 
-  /// json_data Graph data in JSON format
+  /// [jsonData] Graph data in JSON format
   final String jsonData;
 
-  /// zoom_token If non-empty, a token which can be used to receive a zoomed in graph
+  /// [zoomToken] If non-empty, a token which can be used to receive a zoomed in graph
   final String zoomToken;
 
   static const String CONSTRUCTOR = 'statisticalGraphData';

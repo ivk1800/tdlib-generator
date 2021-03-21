@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A voice note message
 class InputMessageVoiceNote extends InputMessageContent {
   InputMessageVoiceNote(
@@ -9,16 +8,16 @@ class InputMessageVoiceNote extends InputMessageContent {
       required this.waveform,
       required this.caption});
 
-  /// voice_note Voice note to be sent
+  /// [voiceNote] Voice note to be sent
   final InputFile voiceNote;
 
-  /// duration Duration of the voice note, in seconds
+  /// [duration] Duration of the voice note, in seconds
   final int duration;
 
-  /// waveform Waveform representation of the voice note, in 5-bit format
+  /// [waveform] Waveform representation of the voice note, in 5-bit format
   final String waveform;
 
-  /// caption Voice note caption; 0-GetOption("message_caption_length_max") characters
+  /// [caption] Voice note caption; 0-GetOption("message_caption_length_max") characters
   final FormattedText caption;
 
   static const String CONSTRUCTOR = 'inputMessageVoiceNote';

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Returns all chat members, including restricted chat members
 class ChatMembersFilterMembers extends ChatMembersFilter {
   const ChatMembersFilterMembers();

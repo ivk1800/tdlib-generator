@@ -1,15 +1,14 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A button that forces an inline query to the bot to be inserted in the input field
 class InlineKeyboardButtonTypeSwitchInline extends InlineKeyboardButtonType {
   InlineKeyboardButtonTypeSwitchInline(
       {required this.query, required this.inCurrentChat});
 
-  /// query Inline query to be sent to the bot
+  /// [query] Inline query to be sent to the bot
   final String query;
 
-  /// in_current_chat True, if the inline query should be sent from the current chat
+  /// [inCurrentChat] True, if the inline query should be sent from the current chat
   final bool inCurrentChat;
 
   static const String CONSTRUCTOR = 'inlineKeyboardButtonTypeSwitchInline';

@@ -1,18 +1,17 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns detailed statistics about a message. Can be used only if Message.can_get_statistics == true
 class GetMessageStatistics extends TdFunction {
   GetMessageStatistics(
       {required this.chatId, required this.messageId, required this.isDark});
 
-  /// chat_id Chat identifier
+  /// [chatId] Chat identifier
   final int chatId;
 
-  /// message_id Message identifier
+  /// [messageId] Message identifier
   final int messageId;
 
-  /// is_dark Pass true if a dark theme is used by the application
+  /// [isDark] Pass true if a dark theme is used by the application
   final bool isDark;
 
   /// callback sign

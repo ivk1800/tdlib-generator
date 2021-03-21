@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A button that sends the user's phone number when pressed; available only in private chats
 class KeyboardButtonTypeRequestPhoneNumber extends KeyboardButtonType {
   const KeyboardButtonTypeRequestPhoneNumber();

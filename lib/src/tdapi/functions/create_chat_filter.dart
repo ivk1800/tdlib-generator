@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Creates new chat filter. Returns information about the created chat filter
 class CreateChatFilter extends TdFunction {
   CreateChatFilter({required this.filter});
 
-  /// filter Chat filter
+  /// [filter] Chat filter
   final ChatFilter filter;
 
   /// callback sign

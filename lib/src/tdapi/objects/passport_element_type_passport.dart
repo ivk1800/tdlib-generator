@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A Telegram Passport element containing the user's passport
 class PassportElementTypePassport extends PassportElementType {
   const PassportElementTypePassport();

@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A full list of available network statistic entries
 class NetworkStatistics extends TdObject {
   NetworkStatistics({required this.sinceDate, required this.entries});
 
-  /// since_date Point in time (Unix timestamp) from which the statistics are collected
+  /// [sinceDate] Point in time (Unix timestamp) from which the statistics are collected
   final int sinceDate;
 
-  /// entries Network statistics entries
+  /// [entries] Network statistics entries
   final List<NetworkStatisticsEntry> entries;
 
   static const String CONSTRUCTOR = 'networkStatistics';

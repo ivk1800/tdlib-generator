@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns a list of recently used stickers
 class GetRecentStickers extends TdFunction {
   GetRecentStickers({required this.isAttached});
 
-  /// is_attached Pass true to return stickers and masks that were recently attached to photos or video files; pass false to return recently sent stickers
+  /// [isAttached] Pass true to return stickers and masks that were recently attached to photos or video files; pass false to return recently sent stickers
   final bool isAttached;
 
   /// callback sign

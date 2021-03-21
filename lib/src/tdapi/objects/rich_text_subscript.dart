@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A subscript rich text
 class RichTextSubscript extends RichText {
   RichTextSubscript({required this.text});
 
-  /// text Text
+  /// [text] Text
   final RichText text;
 
   static const String CONSTRUCTOR = 'richTextSubscript';

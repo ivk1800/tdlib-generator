@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A mention of a user by their username
 class TextEntityTypeMention extends TextEntityType {
   const TextEntityTypeMention();

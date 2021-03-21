@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a video
 class InlineQueryResultVideo extends InlineQueryResult {
   InlineQueryResultVideo(
@@ -9,16 +8,16 @@ class InlineQueryResultVideo extends InlineQueryResult {
       required this.title,
       required this.description});
 
-  /// id Unique identifier of the query result
+  /// [id] Unique identifier of the query result
   final String id;
 
-  /// video Video
+  /// [video] Video
   final Video video;
 
-  /// title Title of the video
+  /// [title] Title of the video
   final String title;
 
-  /// param_description Description of the video
+  /// param_[description] Description of the video
   final String description;
 
   static const String CONSTRUCTOR = 'inlineQueryResultVideo';

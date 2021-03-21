@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains an HTTPS link to a message in a supergroup or channel
 class MessageLink extends TdObject {
   MessageLink({required this.link, required this.isPublic});
 
-  /// link Message link
+  /// [link] Message link
   final String link;
 
-  /// is_public True, if the link will work for non-members of the chat
+  /// [isPublic] True, if the link will work for non-members of the chat
   final bool isPublic;
 
   static const String CONSTRUCTOR = 'messageLink';

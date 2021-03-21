@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Accepts Telegram terms of services
 class AcceptTermsOfService extends TdFunction {
   AcceptTermsOfService({required this.termsOfServiceId});
 
-  /// terms_of_service_id Terms of service identifier
+  /// [termsOfServiceId] Terms of service identifier
   final String termsOfServiceId;
 
   /// callback sign

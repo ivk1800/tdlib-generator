@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A video note message
 class MessageVideoNote extends MessageContent {
   MessageVideoNote(
@@ -8,13 +7,13 @@ class MessageVideoNote extends MessageContent {
       required this.isViewed,
       required this.isSecret});
 
-  /// video_note The video note description
+  /// [videoNote] The video note description
   final VideoNote videoNote;
 
-  /// is_viewed True, if at least one of the recipients has viewed the video note
+  /// [isViewed] True, if at least one of the recipients has viewed the video note
   final bool isViewed;
 
-  /// is_secret True, if the video note thumbnail must be blurred and the video note must be shown only while tapped
+  /// [isSecret] True, if the video note thumbnail must be blurred and the video note must be shown only while tapped
   final bool isSecret;
 
   static const String CONSTRUCTOR = 'messageVideoNote';

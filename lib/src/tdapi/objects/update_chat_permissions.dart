@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Chat permissions was changed
 class UpdateChatPermissions extends Update {
   UpdateChatPermissions({required this.chatId, required this.permissions});
 
-  /// chat_id Chat identifier
+  /// [chatId] Chat identifier
   final int chatId;
 
-  /// permissions The new chat permissions
+  /// [permissions] The new chat permissions
   final ChatPermissions permissions;
 
   static const String CONSTRUCTOR = 'updateChatPermissions';

@@ -1,12 +1,11 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The 2-step verification was enabled recently, user needs to wait
 class CanTransferOwnershipResultPasswordTooFresh
     extends CanTransferOwnershipResult {
   CanTransferOwnershipResultPasswordTooFresh({required this.retryAfter});
 
-  /// retry_after Time left before the session can be used to transfer ownership of a chat, in seconds
+  /// [retryAfter] Time left before the session can be used to transfer ownership of a chat, in seconds
   final int retryAfter;
 
   static const String CONSTRUCTOR =

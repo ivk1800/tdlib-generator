@@ -1,15 +1,14 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The slow_mode_delay setting of a supergroup was changed
 class ChatEventSlowModeDelayChanged extends ChatEventAction {
   ChatEventSlowModeDelayChanged(
       {required this.oldSlowModeDelay, required this.newSlowModeDelay});
 
-  /// old_slow_mode_delay Previous value of slow_mode_delay
+  /// [oldSlowModeDelay] Previous value of slow_mode_delay
   final int oldSlowModeDelay;
 
-  /// new_slow_mode_delay New value of slow_mode_delay
+  /// [newSlowModeDelay] New value of slow_mode_delay
   final int newSlowModeDelay;
 
   static const String CONSTRUCTOR = 'chatEventSlowModeDelayChanged';

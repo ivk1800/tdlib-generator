@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A Telegram Passport element containing the user's email address
 class PassportElementEmailAddress extends PassportElement {
   PassportElementEmailAddress({required this.emailAddress});
 
-  /// email_address Email address
+  /// [emailAddress] Email address
   final String emailAddress;
 
   static const String CONSTRUCTOR = 'passportElementEmailAddress';

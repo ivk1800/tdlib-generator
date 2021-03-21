@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Represents a chat event
 abstract class ChatEventAction extends TdObject {
   const ChatEventAction();

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The content should be bottom-aligned
 class PageBlockVerticalAlignmentBottom extends PageBlockVerticalAlignment {
   const PageBlockVerticalAlignmentBottom();

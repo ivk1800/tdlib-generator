@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// An email address
 class TextEntityTypeEmailAddress extends TextEntityType {
   const TextEntityTypeEmailAddress();

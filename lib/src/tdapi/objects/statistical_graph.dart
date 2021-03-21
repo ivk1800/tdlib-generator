@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Describes a statistical graph
 abstract class StatisticalGraph extends TdObject {
   const StatisticalGraph();

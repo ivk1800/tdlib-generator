@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Describes a text object inside an instant-view web page
 abstract class RichText extends TdObject {
   const RichText();

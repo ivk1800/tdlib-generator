@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns stickers from the installed sticker sets that correspond to a given emoji. If the emoji is not empty, favorite and recently used stickers may also be returned
 class GetStickers extends TdFunction {
   GetStickers({required this.emoji, required this.limit});
 
-  /// emoji String representation of emoji. If empty, returns all known installed stickers
+  /// [emoji] String representation of emoji. If empty, returns all known installed stickers
   final String emoji;
 
-  /// limit The maximum number of stickers to be returned
+  /// [limit] The maximum number of stickers to be returned
   final int limit;
 
   /// callback sign

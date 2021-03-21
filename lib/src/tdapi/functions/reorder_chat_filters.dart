@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Changes the order of chat filters
 class ReorderChatFilters extends TdFunction {
   ReorderChatFilters({required this.chatFilterIds});
 
-  /// chat_filter_ids Identifiers of chat filters in the new correct order
+  /// [chatFilterIds] Identifiers of chat filters in the new correct order
   final List<int> chatFilterIds;
 
   /// callback sign

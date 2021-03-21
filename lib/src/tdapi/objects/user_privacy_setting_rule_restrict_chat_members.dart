@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A rule to restrict all members of specified basic groups and supergroups from doing something
 class UserPrivacySettingRuleRestrictChatMembers extends UserPrivacySettingRule {
   UserPrivacySettingRuleRestrictChatMembers({required this.chatIds});
 
-  /// chat_ids The chat identifiers, total number of chats in all rules must not exceed 20
+  /// [chatIds] The chat identifiers, total number of chats in all rules must not exceed 20
   final List<int> chatIds;
 
   static const String CONSTRUCTOR = 'userPrivacySettingRuleRestrictChatMembers';

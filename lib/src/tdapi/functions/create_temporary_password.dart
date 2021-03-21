@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Creates a new temporary password for processing payments
 class CreateTemporaryPassword extends TdFunction {
   CreateTemporaryPassword({required this.password, required this.validFor});
 
-  /// password Persistent user password
+  /// [password] Persistent user password
   final String password;
 
-  /// valid_for Time during which the temporary password will be valid, in seconds; should be between 60 and 86400
+  /// [validFor] Time during which the temporary password will be valid, in seconds; should be between 60 and 86400
   final int validFor;
 
   /// callback sign

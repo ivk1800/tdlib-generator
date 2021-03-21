@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Applies if a user chooses some previously saved payment credentials. To use their previously saved credentials, the user must have a valid temporary password
 class InputCredentialsSaved extends InputCredentials {
   InputCredentialsSaved({required this.savedCredentialsId});
 
-  /// saved_credentials_id Identifier of the saved credentials
+  /// [savedCredentialsId] Identifier of the saved credentials
   final String savedCredentialsId;
 
   static const String CONSTRUCTOR = 'inputCredentialsSaved';

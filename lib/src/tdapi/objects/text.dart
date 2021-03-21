@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains some text
 class Text extends TdObject {
   Text({required this.text});
 
-  /// text Text
+  /// [text] Text
   final String text;
 
   static const String CONSTRUCTOR = 'text';

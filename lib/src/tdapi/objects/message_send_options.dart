@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Options to be used when a message is sent
 class MessageSendOptions extends TdObject {
   MessageSendOptions(
@@ -8,13 +7,13 @@ class MessageSendOptions extends TdObject {
       required this.fromBackground,
       required this.schedulingState});
 
-  /// disable_notification Pass true to disable notification for the message
+  /// [disableNotification] Pass true to disable notification for the message
   final bool disableNotification;
 
-  /// from_background Pass true if the message is sent from the background
+  /// [fromBackground] Pass true if the message is sent from the background
   final bool fromBackground;
 
-  /// scheduling_state Message scheduling state. Messages sent to a secret chat, live location messages and self-destructing messages can't be scheduled
+  /// [schedulingState] Message scheduling state. Messages sent to a secret chat, live location messages and self-destructing messages can't be scheduled
   final MessageSchedulingState schedulingState;
 
   static const String CONSTRUCTOR = 'messageSendOptions';

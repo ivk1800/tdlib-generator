@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Searches for call messages. Returns the results in reverse chronological order (i. e., in order of decreasing message_id). For optimal performance the number of returned messages is chosen by the library
 class SearchCallMessages extends TdFunction {
   SearchCallMessages(
@@ -8,13 +7,13 @@ class SearchCallMessages extends TdFunction {
       required this.limit,
       required this.onlyMissed});
 
-  /// from_message_id Identifier of the message from which to search; use 0 to get results from the last message
+  /// [fromMessageId] Identifier of the message from which to search; use 0 to get results from the last message
   final int fromMessageId;
 
-  /// limit The maximum number of messages to be returned; up to 100. Fewer messages may be returned than specified by the limit, even if the end of the message history has not been reached
+  /// [limit] The maximum number of messages to be returned; up to 100. Fewer messages may be returned than specified by the limit, even if the end of the message history has not been reached
   final int limit;
 
-  /// only_missed If true, returns only messages with missed calls
+  /// [onlyMissed] If true, returns only messages with missed calls
   final bool onlyMissed;
 
   /// callback sign

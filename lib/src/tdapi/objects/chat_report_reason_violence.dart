@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The chat promotes violence
 class ChatReportReasonViolence extends ChatReportReason {
   const ChatReportReasonViolence();

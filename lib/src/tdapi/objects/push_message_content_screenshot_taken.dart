@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A screenshot of a message in the chat has been taken
 class PushMessageContentScreenshotTaken extends PushMessageContent {
   const PushMessageContentScreenshotTaken();

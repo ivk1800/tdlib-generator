@@ -1,18 +1,17 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A new high score was achieved in a game
 class PushMessageContentGameScore extends PushMessageContent {
   PushMessageContentGameScore(
       {required this.title, required this.score, required this.isPinned});
 
-  /// title Game title, empty for pinned message
+  /// [title] Game title, empty for pinned message
   final String title;
 
-  /// score New score, 0 for pinned message
+  /// [score] New score, 0 for pinned message
   final int score;
 
-  /// is_pinned True, if the message is a pinned message with the specified content
+  /// [isPinned] True, if the message is a pinned message with the specified content
   final bool isPinned;
 
   static const String CONSTRUCTOR = 'pushMessageContentGameScore';

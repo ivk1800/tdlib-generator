@@ -1,15 +1,14 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A token for Firebase Cloud Messaging
 class DeviceTokenFirebaseCloudMessaging extends DeviceToken {
   DeviceTokenFirebaseCloudMessaging(
       {required this.token, required this.encrypt});
 
-  /// token Device registration token; may be empty to de-register a device
+  /// [token] Device registration token; may be empty to de-register a device
   final String token;
 
-  /// encrypt True, if push notifications should be additionally encrypted
+  /// [encrypt] True, if push notifications should be additionally encrypted
   final bool encrypt;
 
   static const String CONSTRUCTOR = 'deviceTokenFirebaseCloudMessaging';

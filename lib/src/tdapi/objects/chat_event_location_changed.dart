@@ -1,15 +1,14 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The supergroup location was changed
 class ChatEventLocationChanged extends ChatEventAction {
   ChatEventLocationChanged(
       {ChatLocation? this.oldLocation, ChatLocation? this.newLocation});
 
-  /// old_location Previous location; may be null
+  /// [oldLocation] Previous location; may be null
   final ChatLocation? oldLocation;
 
-  /// new_location New location; may be null
+  /// [newLocation] New location; may be null
   final ChatLocation? newLocation;
 
   static const String CONSTRUCTOR = 'chatEventLocationChanged';

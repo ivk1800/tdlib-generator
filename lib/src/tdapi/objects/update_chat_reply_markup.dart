@@ -1,15 +1,14 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The default chat reply markup was changed. Can occur because new messages with reply markup were received or because an old reply markup was hidden by the user
 class UpdateChatReplyMarkup extends Update {
   UpdateChatReplyMarkup(
       {required this.chatId, required this.replyMarkupMessageId});
 
-  /// chat_id Chat identifier
+  /// [chatId] Chat identifier
   final int chatId;
 
-  /// reply_markup_message_id Identifier of the message from which reply markup needs to be used; 0 if there is no default custom reply markup in the chat
+  /// [replyMarkupMessageId] Identifier of the message from which reply markup needs to be used; 0 if there is no default custom reply markup in the chat
   final int replyMarkupMessageId;
 
   static const String CONSTRUCTOR = 'updateChatReplyMarkup';

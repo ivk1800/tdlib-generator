@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Describes a keyboard button type
 abstract class KeyboardButtonType extends TdObject {
   const KeyboardButtonType();

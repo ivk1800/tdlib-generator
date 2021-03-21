@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains active notifications that was shown on previous application launches. This update is sent only if the message database is used. In that case it comes once before any updateNotification and updateNotificationGroup update
 class UpdateActiveNotifications extends Update {
   UpdateActiveNotifications({required this.groups});
 
-  /// groups Lists of active notification groups
+  /// [groups] Lists of active notification groups
   final List<NotificationGroup> groups;
 
   static const String CONSTRUCTOR = 'updateActiveNotifications';

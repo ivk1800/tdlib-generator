@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains information about notification settings for a chat
 class ChatNotificationSettings extends TdObject {
   ChatNotificationSettings(
@@ -15,34 +14,34 @@ class ChatNotificationSettings extends TdObject {
       required this.useDefaultDisableMentionNotifications,
       required this.disableMentionNotifications});
 
-  /// use_default_mute_for If true, mute_for is ignored and the value for the relevant type of chat is used instead
+  /// [useDefaultMuteFor] If true, mute_for is ignored and the value for the relevant type of chat is used instead
   final bool useDefaultMuteFor;
 
-  /// mute_for Time left before notifications will be unmuted, in seconds
+  /// [muteFor] Time left before notifications will be unmuted, in seconds
   final int muteFor;
 
-  /// use_default_sound If true, sound is ignored and the value for the relevant type of chat is used instead
+  /// [useDefaultSound] If true, sound is ignored and the value for the relevant type of chat is used instead
   final bool useDefaultSound;
 
-  /// sound The name of an audio file to be used for notification sounds; only applies to iOS applications
+  /// [sound] The name of an audio file to be used for notification sounds; only applies to iOS applications
   final String sound;
 
-  /// use_default_show_preview If true, show_preview is ignored and the value for the relevant type of chat is used instead
+  /// [useDefaultShowPreview] If true, show_preview is ignored and the value for the relevant type of chat is used instead
   final bool useDefaultShowPreview;
 
-  /// show_preview True, if message content should be displayed in notifications
+  /// [showPreview] True, if message content should be displayed in notifications
   final bool showPreview;
 
-  /// use_default_disable_pinned_message_notifications If true, disable_pinned_message_notifications is ignored and the value for the relevant type of chat is used instead
+  /// [useDefaultDisablePinnedMessageNotifications] If true, disable_pinned_message_notifications is ignored and the value for the relevant type of chat is used instead
   final bool useDefaultDisablePinnedMessageNotifications;
 
-  /// disable_pinned_message_notifications If true, notifications for incoming pinned messages will be created as for an ordinary unread message
+  /// [disablePinnedMessageNotifications] If true, notifications for incoming pinned messages will be created as for an ordinary unread message
   final bool disablePinnedMessageNotifications;
 
-  /// use_default_disable_mention_notifications If true, disable_mention_notifications is ignored and the value for the relevant type of chat is used instead
+  /// [useDefaultDisableMentionNotifications] If true, disable_mention_notifications is ignored and the value for the relevant type of chat is used instead
   final bool useDefaultDisableMentionNotifications;
 
-  /// disable_mention_notifications If true, notifications for messages with mentions will be created as for an ordinary unread message
+  /// [disableMentionNotifications] If true, notifications for messages with mentions will be created as for an ordinary unread message
   final bool disableMentionNotifications;
 
   static const String CONSTRUCTOR = 'chatNotificationSettings';

@@ -1,15 +1,14 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Some data from supergroupFullInfo has been changed
 class UpdateSupergroupFullInfo extends Update {
   UpdateSupergroupFullInfo(
       {required this.supergroupId, required this.supergroupFullInfo});
 
-  /// supergroup_id Identifier of the supergroup or channel
+  /// [supergroupId] Identifier of the supergroup or channel
   final int supergroupId;
 
-  /// supergroup_full_info New full information about the supergroup
+  /// [supergroupFullInfo] New full information about the supergroup
   final SupergroupFullInfo supergroupFullInfo;
 
   static const String CONSTRUCTOR = 'updateSupergroupFullInfo';

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a sticker set
 class StickerSet extends TdObject {
   StickerSet(
@@ -18,43 +17,43 @@ class StickerSet extends TdObject {
       required this.stickers,
       required this.emojis});
 
-  /// id Identifier of the sticker set
+  /// [id] Identifier of the sticker set
   final int id;
 
-  /// title Title of the sticker set
+  /// [title] Title of the sticker set
   final String title;
 
-  /// name Name of the sticker set
+  /// [name] Name of the sticker set
   final String name;
 
-  /// thumbnail Sticker set thumbnail in WEBP or TGS format with width and height 100; may be null. The file can be downloaded only before the thumbnail is changed
+  /// [thumbnail] Sticker set thumbnail in WEBP or TGS format with width and height 100; may be null. The file can be downloaded only before the thumbnail is changed
   final Thumbnail? thumbnail;
 
-  /// thumbnail_outline Sticker set thumbnail's outline represented as a list of closed vector paths; may be empty. The coordinate system origin is in the upper-left corner
+  /// [thumbnailOutline] Sticker set thumbnail's outline represented as a list of closed vector paths; may be empty. The coordinate system origin is in the upper-left corner
   final List<ClosedVectorPath> thumbnailOutline;
 
-  /// is_installed True, if the sticker set has been installed by the current user
+  /// [isInstalled] True, if the sticker set has been installed by the current user
   final bool isInstalled;
 
-  /// is_archived True, if the sticker set has been archived. A sticker set can't be installed and archived simultaneously
+  /// [isArchived] True, if the sticker set has been archived. A sticker set can't be installed and archived simultaneously
   final bool isArchived;
 
-  /// is_official True, if the sticker set is official
+  /// [isOfficial] True, if the sticker set is official
   final bool isOfficial;
 
-  /// is_animated True, is the stickers in the set are animated
+  /// [isAnimated] True, is the stickers in the set are animated
   final bool isAnimated;
 
-  /// is_masks True, if the stickers in the set are masks
+  /// [isMasks] True, if the stickers in the set are masks
   final bool isMasks;
 
-  /// is_viewed True for already viewed trending sticker sets
+  /// [isViewed] True for already viewed trending sticker sets
   final bool isViewed;
 
-  /// stickers List of stickers in this set
+  /// [stickers] List of stickers in this set
   final List<Sticker> stickers;
 
-  /// emojis A list of emoji corresponding to the stickers in the same order. The list is only for informational purposes, because a sticker is always sent with a fixed emoji from the corresponding Sticker object
+  /// [emojis] A list of emoji corresponding to the stickers in the same order. The list is only for informational purposes, because a sticker is always sent with a fixed emoji from the corresponding Sticker object
   final List<Emojis> emojis;
 
   static const String CONSTRUCTOR = 'stickerSet';

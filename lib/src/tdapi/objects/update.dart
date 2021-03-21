@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Contains notifications about data changes
 abstract class Update extends TdObject {
   const Update();

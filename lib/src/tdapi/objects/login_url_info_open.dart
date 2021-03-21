@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// An HTTP url needs to be open
 class LoginUrlInfoOpen extends LoginUrlInfo {
   LoginUrlInfoOpen({required this.url, required this.skipConfirm});
 
-  /// url The URL to open
+  /// [url] The URL to open
   final String url;
 
-  /// skip_confirm True, if there is no need to show an ordinary open URL confirm
+  /// [skipConfirm] True, if there is no need to show an ordinary open URL confirm
   final bool skipConfirm;
 
   static const String CONSTRUCTOR = 'loginUrlInfoOpen';

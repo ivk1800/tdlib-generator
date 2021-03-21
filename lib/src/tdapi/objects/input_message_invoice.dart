@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A message with an invoice; can be used only by bots and only in private chats
 class InputMessageInvoice extends InputMessageContent {
   InputMessageInvoice(
@@ -16,37 +15,37 @@ class InputMessageInvoice extends InputMessageContent {
       required this.providerData,
       required this.startParameter});
 
-  /// invoice Invoice
+  /// [invoice] Invoice
   final Invoice invoice;
 
-  /// title Product title; 1-32 characters
+  /// [title] Product title; 1-32 characters
   final String title;
 
-  /// param_description Product description; 0-255 characters
+  /// param_[description] Product description; 0-255 characters
   final String description;
 
-  /// photo_url Product photo URL; optional
+  /// [photoUrl] Product photo URL; optional
   final String photoUrl;
 
-  /// photo_size Product photo size
+  /// [photoSize] Product photo size
   final int photoSize;
 
-  /// photo_width Product photo width
+  /// [photoWidth] Product photo width
   final int photoWidth;
 
-  /// photo_height Product photo height
+  /// [photoHeight] Product photo height
   final int photoHeight;
 
-  /// payload The invoice payload
+  /// [payload] The invoice payload
   final String payload;
 
-  /// provider_token Payment provider token
+  /// [providerToken] Payment provider token
   final String providerToken;
 
-  /// provider_data JSON-encoded data about the invoice, which will be shared with the payment provider
+  /// [providerData] JSON-encoded data about the invoice, which will be shared with the payment provider
   final String providerData;
 
-  /// start_parameter Unique invoice bot start_parameter for the generation of this invoice
+  /// [startParameter] Unique invoice bot start_parameter for the generation of this invoice
   final String startParameter;
 
   static const String CONSTRUCTOR = 'inputMessageInvoice';

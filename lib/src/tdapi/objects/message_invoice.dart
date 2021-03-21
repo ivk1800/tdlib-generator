@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A message with an invoice from a bot
 class MessageInvoice extends MessageContent {
   MessageInvoice(
@@ -14,31 +13,31 @@ class MessageInvoice extends MessageContent {
       required this.needShippingAddress,
       required this.receiptMessageId});
 
-  /// title Product title
+  /// [title] Product title
   final String title;
 
-  /// param_description Product description
+  /// param_[description] Product description
   final String description;
 
-  /// photo Product photo; may be null
+  /// [photo] Product photo; may be null
   final Photo? photo;
 
-  /// currency Currency for the product price
+  /// [currency] Currency for the product price
   final String currency;
 
-  /// total_amount Product total price in the minimal quantity of the currency
+  /// [totalAmount] Product total price in the minimal quantity of the currency
   final int totalAmount;
 
-  /// start_parameter Unique invoice bot start_parameter. To share an invoice use the URL https://t.me/{bot_username}?start={start_parameter}
+  /// [startParameter] Unique invoice bot start_parameter. To share an invoice use the URL https://t.me/{bot_username}?start={start_parameter}
   final String startParameter;
 
-  /// is_test True, if the invoice is a test invoice
+  /// [isTest] True, if the invoice is a test invoice
   final bool isTest;
 
-  /// need_shipping_address True, if the shipping address should be specified
+  /// [needShippingAddress] True, if the shipping address should be specified
   final bool needShippingAddress;
 
-  /// receipt_message_id The identifier of the message with the receipt, after the product has been purchased
+  /// [receiptMessageId] The identifier of the message with the receipt, after the product has been purchased
   final int receiptMessageId;
 
   static const String CONSTRUCTOR = 'messageInvoice';

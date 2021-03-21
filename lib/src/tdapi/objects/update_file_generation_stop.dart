@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// File generation is no longer needed
 class UpdateFileGenerationStop extends Update {
   UpdateFileGenerationStop({required this.generationId});
 
-  /// generation_id Unique identifier for the generation process
+  /// [generationId] Unique identifier for the generation process
   final int generationId;
 
   static const String CONSTRUCTOR = 'updateFileGenerationStop';

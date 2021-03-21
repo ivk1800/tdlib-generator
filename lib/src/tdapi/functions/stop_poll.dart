@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Stops a poll. A poll in a message can be stopped when the message has can_be_edited flag set
 class StopPoll extends TdFunction {
   StopPoll(
@@ -8,13 +7,13 @@ class StopPoll extends TdFunction {
       required this.messageId,
       required this.replyMarkup});
 
-  /// chat_id Identifier of the chat to which the poll belongs
+  /// [chatId] Identifier of the chat to which the poll belongs
   final int chatId;
 
-  /// message_id Identifier of the message containing the poll
+  /// [messageId] Identifier of the message containing the poll
   final int messageId;
 
-  /// reply_markup The new message reply markup; for bots only
+  /// [replyMarkup] The new message reply markup; for bots only
   final ReplyMarkup replyMarkup;
 
   /// callback sign

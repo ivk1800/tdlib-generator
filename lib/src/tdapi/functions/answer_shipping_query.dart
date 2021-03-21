@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Sets the result of a shipping query; for bots only
 class AnswerShippingQuery extends TdFunction {
   AnswerShippingQuery(
@@ -8,13 +7,13 @@ class AnswerShippingQuery extends TdFunction {
       required this.shippingOptions,
       required this.errorMessage});
 
-  /// shipping_query_id Identifier of the shipping query
+  /// [shippingQueryId] Identifier of the shipping query
   final int shippingQueryId;
 
-  /// shipping_options Available shipping options
+  /// [shippingOptions] Available shipping options
   final List<ShippingOption> shippingOptions;
 
-  /// error_message An error message, empty on success
+  /// [errorMessage] An error message, empty on success
   final String errorMessage;
 
   /// callback sign

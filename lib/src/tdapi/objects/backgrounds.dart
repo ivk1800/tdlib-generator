@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains a list of backgrounds
 class Backgrounds extends TdObject {
   Backgrounds({required this.backgrounds});
 
-  /// backgrounds A list of backgrounds
+  /// [backgrounds] A list of backgrounds
   final List<Background> backgrounds;
 
   static const String CONSTRUCTOR = 'backgrounds';

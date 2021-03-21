@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Some data of a user has changed. This update is guaranteed to come before the user identifier is returned to the application
 class UpdateUser extends Update {
   UpdateUser({required this.user});
 
-  /// user New data about the user
+  /// [user] New data about the user
   final User user;
 
   static const String CONSTRUCTOR = 'updateUser';

@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A message with a location
 class PushMessageContentLocation extends PushMessageContent {
   PushMessageContentLocation({required this.isLive, required this.isPinned});
 
-  /// is_live True, if the location is live
+  /// [isLive] True, if the location is live
   final bool isLive;
 
-  /// is_pinned True, if the message is a pinned message with the specified content
+  /// [isPinned] True, if the message is a pinned message with the specified content
   final bool isPinned;
 
   static const String CONSTRUCTOR = 'pushMessageContentLocation';

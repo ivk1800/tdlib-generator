@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns one of the available Telegram Passport elements
 class GetPassportElement extends TdFunction {
   GetPassportElement({required this.type, required this.password});
 
-  /// type Telegram Passport element type
+  /// [type] Telegram Passport element type
   final PassportElementType type;
 
-  /// password Password of the current user
+  /// [password] Password of the current user
   final String password;
 
   /// callback sign

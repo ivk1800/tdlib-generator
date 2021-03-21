@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The user has too much chats with username, one of them should be made private first
 class CheckChatUsernameResultPublicChatsTooMuch
     extends CheckChatUsernameResult {

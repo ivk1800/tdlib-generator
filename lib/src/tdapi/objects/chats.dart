@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a list of chats
 class Chats extends TdObject {
   Chats({required this.totalCount, required this.chatIds});
 
-  /// total_count Approximate total count of chats found
+  /// [totalCount] Approximate total count of chats found
   final int totalCount;
 
-  /// chat_ids List of chat identifiers
+  /// [chatIds] List of chat identifiers
   final List<int> chatIds;
 
   static const String CONSTRUCTOR = 'chats';

@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains a list of recommended chat filters
 class RecommendedChatFilters extends TdObject {
   RecommendedChatFilters({required this.chatFilters});
 
-  /// chat_filters List of recommended chat filters
+  /// [chatFilters] List of recommended chat filters
   final List<RecommendedChatFilter> chatFilters;
 
   static const String CONSTRUCTOR = 'recommendedChatFilters';

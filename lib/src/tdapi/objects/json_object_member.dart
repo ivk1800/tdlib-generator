@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents one member of a JSON object
 class JsonObjectMember extends TdObject {
   JsonObjectMember({required this.key, required this.value});
 
-  /// key Member's key
+  /// [key] Member's key
   final String key;
 
-  /// value Member's value
+  /// [value] Member's value
   final JsonValue value;
 
   static const String CONSTRUCTOR = 'jsonObjectMember';

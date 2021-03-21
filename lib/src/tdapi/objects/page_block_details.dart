@@ -1,18 +1,17 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A collapsible block
 class PageBlockDetails extends PageBlock {
   PageBlockDetails(
       {required this.header, required this.pageBlocks, required this.isOpen});
 
-  /// header Always visible heading for the block
+  /// [header] Always visible heading for the block
   final RichText header;
 
-  /// page_blocks Block contents
+  /// [pageBlocks] Block contents
   final List<PageBlock> pageBlocks;
 
-  /// is_open True, if the block is open by default
+  /// [isOpen] True, if the block is open by default
   final bool isOpen;
 
   static const String CONSTRUCTOR = 'pageBlockDetails';

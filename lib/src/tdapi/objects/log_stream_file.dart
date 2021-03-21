@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The log is written to a file
 class LogStreamFile extends LogStream {
   LogStreamFile(
@@ -8,13 +7,13 @@ class LogStreamFile extends LogStream {
       required this.maxFileSize,
       required this.redirectStderr});
 
-  /// path Path to the file to where the internal TDLib log will be written
+  /// [path] Path to the file to where the internal TDLib log will be written
   final String path;
 
-  /// max_file_size The maximum size of the file to where the internal TDLib log is written before the file will be auto-rotated
+  /// [maxFileSize] The maximum size of the file to where the internal TDLib log is written before the file will be auto-rotated
   final int maxFileSize;
 
-  /// redirect_stderr Pass true to additionally redirect stderr to the log file. Ignored on Windows
+  /// [redirectStderr] Pass true to additionally redirect stderr to the log file. Ignored on Windows
   final bool redirectStderr;
 
   static const String CONSTRUCTOR = 'logStreamFile';

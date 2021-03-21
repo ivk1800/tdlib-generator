@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a basic group of 0-200 users (must be upgraded to a supergroup to accommodate more than 200 users)
 class BasicGroup extends TdObject {
   BasicGroup(
@@ -10,19 +9,19 @@ class BasicGroup extends TdObject {
       required this.isActive,
       required this.upgradedToSupergroupId});
 
-  /// id Group identifier
+  /// [id] Group identifier
   final int id;
 
-  /// member_count Number of members in the group
+  /// [memberCount] Number of members in the group
   final int memberCount;
 
-  /// status Status of the current user in the group
+  /// [status] Status of the current user in the group
   final ChatMemberStatus status;
 
-  /// is_active True, if the group is active
+  /// [isActive] True, if the group is active
   final bool isActive;
 
-  /// upgraded_to_supergroup_id Identifier of the supergroup to which this group was upgraded; 0 if none
+  /// [upgradedToSupergroupId] Identifier of the supergroup to which this group was upgraded; 0 if none
   final int upgradedToSupergroupId;
 
   static const String CONSTRUCTOR = 'basicGroup';

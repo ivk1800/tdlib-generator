@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains a list of language pack strings
 class LanguagePackStrings extends TdObject {
   LanguagePackStrings({required this.strings});
 
-  /// strings A list of language pack strings
+  /// [strings] A list of language pack strings
   final List<LanguagePackString> strings;
 
   static const String CONSTRUCTOR = 'languagePackStrings';

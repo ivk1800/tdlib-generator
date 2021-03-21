@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A token for Apple Push Notification service
 class DeviceTokenApplePush extends DeviceToken {
   DeviceTokenApplePush({required this.deviceToken, required this.isAppSandbox});
 
-  /// device_token Device token; may be empty to de-register a device
+  /// [deviceToken] Device token; may be empty to de-register a device
   final String deviceToken;
 
-  /// is_app_sandbox True, if App Sandbox is enabled
+  /// [isAppSandbox] True, if App Sandbox is enabled
   final bool isAppSandbox;
 
   static const String CONSTRUCTOR = 'deviceTokenApplePush';

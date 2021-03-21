@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A text message
 class MessageText extends MessageContent {
   MessageText({required this.text, WebPage? this.webPage});
 
-  /// text Text of the message
+  /// [text] Text of the message
   final FormattedText text;
 
-  /// web_page A preview of the web page that's mentioned in the text; may be null
+  /// [webPage] A preview of the web page that's mentioned in the text; may be null
   final WebPage? webPage;
 
   static const String CONSTRUCTOR = 'messageText';

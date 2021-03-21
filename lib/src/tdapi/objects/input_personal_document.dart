@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A personal document to be saved to Telegram Passport
 class InputPersonalDocument extends TdObject {
   InputPersonalDocument({required this.files, required this.translation});
 
-  /// files List of files containing the pages of the document
+  /// [files] List of files containing the pages of the document
   final List<InputFile> files;
 
-  /// translation List of files containing a certified English translation of the document
+  /// [translation] List of files containing a certified English translation of the document
   final List<InputFile> translation;
 
   static const String CONSTRUCTOR = 'inputPersonalDocument';

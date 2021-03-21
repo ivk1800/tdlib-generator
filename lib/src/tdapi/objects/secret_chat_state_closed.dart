@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The secret chat is closed
 class SecretChatStateClosed extends SecretChatState {
   const SecretChatStateClosed();

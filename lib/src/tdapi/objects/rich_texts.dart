@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A concatenation of rich texts
 class RichTexts extends RichText {
   RichTexts({required this.texts});
 
-  /// texts Texts
+  /// [texts] Texts
   final List<RichText> texts;
 
   static const String CONSTRUCTOR = 'richTexts';

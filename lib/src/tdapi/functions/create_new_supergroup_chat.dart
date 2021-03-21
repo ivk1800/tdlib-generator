@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Creates a new supergroup or channel and sends a corresponding messageSupergroupChatCreate. Returns the newly created chat
 class CreateNewSupergroupChat extends TdFunction {
   CreateNewSupergroupChat(
@@ -9,16 +8,16 @@ class CreateNewSupergroupChat extends TdFunction {
       required this.description,
       required this.location});
 
-  /// title Title of the new chat; 1-128 characters
+  /// [title] Title of the new chat; 1-128 characters
   final String title;
 
-  /// is_channel True, if a channel chat should be created
+  /// [isChannel] True, if a channel chat should be created
   final bool isChannel;
 
-  /// param_description Chat description; 0-255 characters
+  /// param_[description] Chat description; 0-255 characters
   final String description;
 
-  /// location Chat location if a location-based supergroup is being created
+  /// [location] Chat location if a location-based supergroup is being created
   final ChatLocation location;
 
   /// callback sign

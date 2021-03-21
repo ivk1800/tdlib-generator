@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A Telegram Passport element containing the user's temporary registration
 class PassportElementTypeTemporaryRegistration extends PassportElementType {
   const PassportElementTypeTemporaryRegistration();

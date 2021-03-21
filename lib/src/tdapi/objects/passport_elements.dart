@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains information about saved Telegram Passport elements
 class PassportElements extends TdObject {
   PassportElements({required this.elements});
 
-  /// elements Telegram Passport elements
+  /// [elements] Telegram Passport elements
   final List<PassportElement> elements;
 
   static const String CONSTRUCTOR = 'passportElements';

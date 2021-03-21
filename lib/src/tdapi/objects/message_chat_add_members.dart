@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// New chat members were added
 class MessageChatAddMembers extends MessageContent {
   MessageChatAddMembers({required this.memberUserIds});
 
-  /// member_user_ids User identifiers of the new members
+  /// [memberUserIds] User identifiers of the new members
   final List<int> memberUserIds;
 
   static const String CONSTRUCTOR = 'messageChatAddMembers';

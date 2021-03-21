@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The subtitle of a page
 class PageBlockSubtitle extends PageBlock {
   PageBlockSubtitle({required this.subtitle});
 
-  /// subtitle Subtitle
+  /// [subtitle] Subtitle
   final RichText subtitle;
 
   static const String CONSTRUCTOR = 'pageBlockSubtitle';

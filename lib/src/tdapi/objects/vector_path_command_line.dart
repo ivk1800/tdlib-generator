@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A straight line to a given point
 class VectorPathCommandLine extends VectorPathCommand {
   VectorPathCommandLine({required this.endPoint});
 
-  /// end_point The end point of the straight line
+  /// [endPoint] The end point of the straight line
   final Point endPoint;
 
   static const String CONSTRUCTOR = 'vectorPathCommandLine';

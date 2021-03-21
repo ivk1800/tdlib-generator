@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a link to a file
 class InputInlineQueryResultDocument extends InputInlineQueryResult {
   InputInlineQueryResultDocument(
@@ -15,34 +14,34 @@ class InputInlineQueryResultDocument extends InputInlineQueryResult {
       ReplyMarkup? this.replyMarkup,
       required this.inputMessageContent});
 
-  /// id Unique identifier of the query result
+  /// [id] Unique identifier of the query result
   final String id;
 
-  /// title Title of the resulting file
+  /// [title] Title of the resulting file
   final String title;
 
-  /// param_description Short description of the result, if known
+  /// param_[description] Short description of the result, if known
   final String description;
 
-  /// document_url URL of the file
+  /// [documentUrl] URL of the file
   final String documentUrl;
 
-  /// mime_type MIME type of the file content; only "application/pdf" and "application/zip" are currently allowed
+  /// [mimeType] MIME type of the file content; only "application/pdf" and "application/zip" are currently allowed
   final String mimeType;
 
-  /// thumbnail_url The URL of the file thumbnail, if it exists
+  /// [thumbnailUrl] The URL of the file thumbnail, if it exists
   final String thumbnailUrl;
 
-  /// thumbnail_width Width of the thumbnail
+  /// [thumbnailWidth] Width of the thumbnail
   final int thumbnailWidth;
 
-  /// thumbnail_height Height of the thumbnail
+  /// [thumbnailHeight] Height of the thumbnail
   final int thumbnailHeight;
 
-  /// reply_markup The message reply markup. Must be of type replyMarkupInlineKeyboard or null
+  /// [replyMarkup] The message reply markup. Must be of type replyMarkupInlineKeyboard or null
   final ReplyMarkup? replyMarkup;
 
-  /// input_message_content The content of the message to be sent. Must be one of the following types: InputMessageText, InputMessageDocument, InputMessageLocation, InputMessageVenue or InputMessageContact
+  /// [inputMessageContent] The content of the message to be sent. Must be one of the following types: InputMessageText, InputMessageDocument, InputMessageLocation, InputMessageVenue or InputMessageContact
   final InputMessageContent inputMessageContent;
 
   static const String CONSTRUCTOR = 'inputInlineQueryResultDocument';

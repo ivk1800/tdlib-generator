@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains information about an encrypted Telegram Passport element; for bots only
 class EncryptedPassportElement extends TdObject {
   EncryptedPassportElement(
@@ -14,31 +13,31 @@ class EncryptedPassportElement extends TdObject {
       required this.value,
       required this.hash});
 
-  /// type Type of Telegram Passport element
+  /// [type] Type of Telegram Passport element
   final PassportElementType type;
 
-  /// data Encrypted JSON-encoded data about the user
+  /// [data] Encrypted JSON-encoded data about the user
   final String data;
 
-  /// front_side The front side of an identity document
+  /// [frontSide] The front side of an identity document
   final DatedFile frontSide;
 
-  /// reverse_side The reverse side of an identity document; may be null
+  /// [reverseSide] The reverse side of an identity document; may be null
   final DatedFile? reverseSide;
 
-  /// selfie Selfie with the document; may be null
+  /// [selfie] Selfie with the document; may be null
   final DatedFile? selfie;
 
-  /// translation List of files containing a certified English translation of the document
+  /// [translation] List of files containing a certified English translation of the document
   final List<DatedFile> translation;
 
-  /// files List of attached files
+  /// [files] List of attached files
   final List<DatedFile> files;
 
-  /// value Unencrypted data, phone number or email address
+  /// [value] Unencrypted data, phone number or email address
   final String value;
 
-  /// hash Hash of the entire element
+  /// [hash] Hash of the entire element
   final String hash;
 
   static const String CONSTRUCTOR = 'encryptedPassportElement';

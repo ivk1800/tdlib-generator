@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Describes the reason why a call was discarded
 abstract class CallDiscardReason extends TdObject {
   const CallDiscardReason();

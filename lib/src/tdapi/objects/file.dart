@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a file
 class File extends TdObject {
   File(
@@ -10,19 +9,19 @@ class File extends TdObject {
       required this.local,
       required this.remote});
 
-  /// id Unique file identifier
+  /// [id] Unique file identifier
   final int id;
 
-  /// size File size; 0 if unknown
+  /// [size] File size; 0 if unknown
   final int size;
 
-  /// expected_size Expected file size in case the exact file size is unknown, but an approximate size is known. Can be used to show download/upload progress
+  /// [expectedSize] Expected file size in case the exact file size is unknown, but an approximate size is known. Can be used to show download/upload progress
   final int expectedSize;
 
-  /// local Information about the local copy of the file
+  /// [local] Information about the local copy of the file
   final LocalFile local;
 
-  /// remote Information about the remote copy of the file
+  /// [remote] Information about the remote copy of the file
   final RemoteFile remote;
 
   static const String CONSTRUCTOR = 'file';

@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The message was originally sent by a user, which is hidden by their privacy settings
 class MessageForwardOriginHiddenUser extends MessageForwardOrigin {
   MessageForwardOriginHiddenUser({required this.senderName});
 
-  /// sender_name Name of the sender
+  /// [senderName] Name of the sender
   final String senderName;
 
   static const String CONSTRUCTOR = 'messageForwardOriginHiddenUser';

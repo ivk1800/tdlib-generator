@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A message with a user contact
 class PushMessageContentContact extends PushMessageContent {
   PushMessageContentContact({required this.name, required this.isPinned});
 
-  /// name Contact's name
+  /// [name] Contact's name
   final String name;
 
-  /// is_pinned True, if the message is a pinned message with the specified content
+  /// [isPinned] True, if the message is a pinned message with the specified content
   final bool isPinned;
 
   static const String CONSTRUCTOR = 'pushMessageContentContact';

@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a numeric JSON value
 class JsonValueNumber extends JsonValue {
   JsonValueNumber({required this.value});
 
-  /// value The value
+  /// [value] The value
   final double value;
 
   static const String CONSTRUCTOR = 'jsonValueNumber';

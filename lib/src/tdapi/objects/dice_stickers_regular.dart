@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A regular animated sticker
 class DiceStickersRegular extends DiceStickers {
   DiceStickersRegular({required this.sticker});
 
-  /// sticker The animated sticker with the dice animation
+  /// [sticker] The animated sticker with the dice animation
   final Sticker sticker;
 
   static const String CONSTRUCTOR = 'diceStickersRegular';

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a chat event
 class ChatEvent extends TdObject {
   ChatEvent(
@@ -9,16 +8,16 @@ class ChatEvent extends TdObject {
       required this.userId,
       required this.action});
 
-  /// id Chat event identifier
+  /// [id] Chat event identifier
   final int id;
 
-  /// date Point in time (Unix timestamp) when the event happened
+  /// [date] Point in time (Unix timestamp) when the event happened
   final int date;
 
-  /// user_id Identifier of the user who performed the action that triggered the event
+  /// [userId] Identifier of the user who performed the action that triggered the event
   final int userId;
 
-  /// action Action performed by the user
+  /// [action] Action performed by the user
   final ChatEventAction action;
 
   static const String CONSTRUCTOR = 'chatEvent';

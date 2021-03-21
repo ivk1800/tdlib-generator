@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A bank card number. The getBankCardInfo method can be used to get information about the bank card
 class TextEntityTypeBankCardNumber extends TextEntityType {
   const TextEntityTypeBankCardNumber();

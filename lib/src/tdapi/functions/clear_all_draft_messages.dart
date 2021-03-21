@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Clears draft messages in all chats
 class ClearAllDraftMessages extends TdFunction {
   ClearAllDraftMessages({required this.excludeSecretChats});
 
-  /// exclude_secret_chats If true, local draft messages in secret chats will not be cleared
+  /// [excludeSecretChats] If true, local draft messages in secret chats will not be cleared
   final bool excludeSecretChats;
 
   /// callback sign

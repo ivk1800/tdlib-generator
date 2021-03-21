@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains approximate storage usage statistics, excluding files of unknown file type
 class StorageStatisticsFast extends TdObject {
   StorageStatisticsFast(
@@ -10,19 +9,19 @@ class StorageStatisticsFast extends TdObject {
       required this.languagePackDatabaseSize,
       required this.logSize});
 
-  /// files_size Approximate total size of files
+  /// [filesSize] Approximate total size of files
   final int filesSize;
 
-  /// file_count Approximate number of files
+  /// [fileCount] Approximate number of files
   final int fileCount;
 
-  /// database_size Size of the database
+  /// [databaseSize] Size of the database
   final int databaseSize;
 
-  /// language_pack_database_size Size of the language pack database
+  /// [languagePackDatabaseSize] Size of the language pack database
   final int languagePackDatabaseSize;
 
-  /// log_size Size of the TDLib internal log
+  /// [logSize] Size of the TDLib internal log
   final int logSize;
 
   static const String CONSTRUCTOR = 'storageStatisticsFast';

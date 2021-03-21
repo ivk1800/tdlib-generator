@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns information about a successful payment
 class GetPaymentReceipt extends TdFunction {
   GetPaymentReceipt({required this.chatId, required this.messageId});
 
-  /// chat_id Chat identifier of the PaymentSuccessful message
+  /// [chatId] Chat identifier of the PaymentSuccessful message
   final int chatId;
 
-  /// message_id Message identifier
+  /// [messageId] Message identifier
   final int messageId;
 
   /// callback sign

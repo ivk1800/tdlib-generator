@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A chat photo was edited
 class PushMessageContentChatChangePhoto extends PushMessageContent {
   const PushMessageContentChatChangePhoto();

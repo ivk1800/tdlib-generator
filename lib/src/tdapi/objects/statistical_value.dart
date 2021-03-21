@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A value with information about its recent changes
 class StatisticalValue extends TdObject {
   StatisticalValue(
@@ -8,13 +7,13 @@ class StatisticalValue extends TdObject {
       required this.previousValue,
       required this.growthRatePercentage});
 
-  /// value The current value
+  /// [value] The current value
   final double value;
 
-  /// previous_value The value for the previous day
+  /// [previousValue] The value for the previous day
   final double previousValue;
 
-  /// growth_rate_percentage The growth rate of the value, as a percentage
+  /// [growthRatePercentage] The growth rate of the value, as a percentage
   final double growthRatePercentage;
 
   static const String CONSTRUCTOR = 'statisticalValue';

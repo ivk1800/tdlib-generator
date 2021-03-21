@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A background from the server
 class InputBackgroundRemote extends InputBackground {
   InputBackgroundRemote({required this.backgroundId});
 
-  /// background_id The background identifier
+  /// [backgroundId] The background identifier
   final int backgroundId;
 
   static const String CONSTRUCTOR = 'inputBackgroundRemote';

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// An HTTP URL
 class TextEntityTypeUrl extends TextEntityType {
   const TextEntityTypeUrl();

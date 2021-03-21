@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Contains detailed information about a notification
 abstract class NotificationType extends TdObject {
   const NotificationType();

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// An embedded post
 class PageBlockEmbeddedPost extends PageBlock {
   PageBlockEmbeddedPost(
@@ -11,22 +10,22 @@ class PageBlockEmbeddedPost extends PageBlock {
       required this.pageBlocks,
       required this.caption});
 
-  /// url Web page URL
+  /// [url] Web page URL
   final String url;
 
-  /// author Post author
+  /// [author] Post author
   final String author;
 
-  /// author_photo Post author photo; may be null
+  /// [authorPhoto] Post author photo; may be null
   final Photo? authorPhoto;
 
-  /// date Point in time (Unix timestamp) when the post was created; 0 if unknown
+  /// [date] Point in time (Unix timestamp) when the post was created; 0 if unknown
   final int date;
 
-  /// page_blocks Post content
+  /// [pageBlocks] Post content
   final List<PageBlock> pageBlocks;
 
-  /// caption Post caption
+  /// [caption] Post caption
   final PageBlockCaption caption;
 
   static const String CONSTRUCTOR = 'pageBlockEmbeddedPost';

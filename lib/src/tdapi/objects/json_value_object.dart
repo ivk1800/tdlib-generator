@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a JSON object
 class JsonValueObject extends JsonValue {
   JsonValueObject({required this.members});
 
-  /// members The list of object members
+  /// [members] The list of object members
   final List<JsonObjectMember> members;
 
   static const String CONSTRUCTOR = 'jsonValueObject';

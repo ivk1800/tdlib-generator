@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A contact has registered with Telegram
 class MessageContactRegistered extends MessageContent {
   const MessageContactRegistered();

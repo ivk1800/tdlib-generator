@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A plain text
 class RichTextPlain extends RichText {
   RichTextPlain({required this.text});
 
-  /// text Text
+  /// [text] Text
   final String text;
 
   static const String CONSTRUCTOR = 'richTextPlain';

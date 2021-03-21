@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The video was pixelated
 class CallProblemPixelatedVideo extends CallProblem {
   const CallProblemPixelatedVideo();

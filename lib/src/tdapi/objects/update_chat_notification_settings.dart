@@ -1,15 +1,14 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Notification settings for a chat were changed
 class UpdateChatNotificationSettings extends Update {
   UpdateChatNotificationSettings(
       {required this.chatId, required this.notificationSettings});
 
-  /// chat_id Chat identifier
+  /// [chatId] Chat identifier
   final int chatId;
 
-  /// notification_settings The new notification settings
+  /// [notificationSettings] The new notification settings
   final ChatNotificationSettings notificationSettings;
 
   static const String CONSTRUCTOR = 'updateChatNotificationSettings';

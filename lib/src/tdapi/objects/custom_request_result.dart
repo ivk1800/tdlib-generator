@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains the result of a custom request
 class CustomRequestResult extends TdObject {
   CustomRequestResult({required this.result});
 
-  /// result A JSON-serialized result
+  /// [result] A JSON-serialized result
   final String result;
 
   static const String CONSTRUCTOR = 'customRequestResult';

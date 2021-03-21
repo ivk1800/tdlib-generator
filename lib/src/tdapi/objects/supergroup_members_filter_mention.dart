@@ -1,15 +1,14 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Returns users which can be mentioned in the supergroup
 class SupergroupMembersFilterMention extends SupergroupMembersFilter {
   SupergroupMembersFilterMention(
       {required this.query, required this.messageThreadId});
 
-  /// query Query to search for
+  /// [query] Query to search for
   final String query;
 
-  /// message_thread_id If non-zero, the identifier of the current message thread
+  /// [messageThreadId] If non-zero, the identifier of the current message thread
   final int messageThreadId;
 
   static const String CONSTRUCTOR = 'supergroupMembersFilterMention';

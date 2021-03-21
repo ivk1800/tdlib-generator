@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Related articles
 class PageBlockRelatedArticles extends PageBlock {
   PageBlockRelatedArticles({required this.header, required this.articles});
 
-  /// header Block header
+  /// [header] Block header
   final RichText header;
 
-  /// articles List of related articles
+  /// [articles] List of related articles
   final List<PageBlockRelatedArticle> articles;
 
   static const String CONSTRUCTOR = 'pageBlockRelatedArticles';

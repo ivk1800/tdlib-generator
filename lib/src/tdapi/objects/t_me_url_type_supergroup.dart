@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A URL linking to a public supergroup or channel
 class TMeUrlTypeSupergroup extends TMeUrlType {
   TMeUrlTypeSupergroup({required this.supergroupId});
 
-  /// supergroup_id Identifier of the supergroup or channel
+  /// [supergroupId] Identifier of the supergroup or channel
   final int supergroupId;
 
   static const String CONSTRUCTOR = 'tMeUrlTypeSupergroup';

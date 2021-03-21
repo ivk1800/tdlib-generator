@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A message was pinned
 class ChatEventMessagePinned extends ChatEventAction {
   ChatEventMessagePinned({required this.message});
 
-  /// message Pinned message
+  /// [message] Pinned message
   final Message message;
 
   static const String CONSTRUCTOR = 'chatEventMessagePinned';

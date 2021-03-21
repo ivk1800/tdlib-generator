@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Contains animated stickers which should be used for dice animation rendering
 abstract class DiceStickers extends TdObject {
   const DiceStickers();

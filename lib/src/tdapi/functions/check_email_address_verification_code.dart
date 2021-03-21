@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Checks the email address verification code for Telegram Passport
 class CheckEmailAddressVerificationCode extends TdFunction {
   CheckEmailAddressVerificationCode({required this.code});
 
-  /// code Verification code
+  /// [code] Verification code
   final String code;
 
   /// callback sign

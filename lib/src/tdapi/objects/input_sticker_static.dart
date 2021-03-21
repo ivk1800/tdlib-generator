@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A static sticker in PNG format, which will be converted to WEBP server-side
 class InputStickerStatic extends InputSticker {
   InputStickerStatic(
@@ -8,13 +7,13 @@ class InputStickerStatic extends InputSticker {
       required this.emojis,
       MaskPosition? this.maskPosition});
 
-  /// sticker PNG image with the sticker; must be up to 512 KB in size and fit in a 512x512 square
+  /// [sticker] PNG image with the sticker; must be up to 512 KB in size and fit in a 512x512 square
   final InputFile sticker;
 
-  /// emojis Emojis corresponding to the sticker
+  /// [emojis] Emojis corresponding to the sticker
   final String emojis;
 
-  /// mask_position For masks, position where the mask should be placed; may be null
+  /// [maskPosition] For masks, position where the mask should be placed; may be null
   final MaskPosition? maskPosition;
 
   static const String CONSTRUCTOR = 'inputStickerStatic';

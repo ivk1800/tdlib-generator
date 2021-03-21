@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Informs the user that some of the elements in their Telegram Passport contain errors; for bots only. The user will not be able to resend the elements, until the errors are fixed
 class SetPassportElementErrors extends TdFunction {
   SetPassportElementErrors({required this.userId, required this.errors});
 
-  /// user_id User identifier
+  /// [userId] User identifier
   final int userId;
 
-  /// errors The errors
+  /// [errors] The errors
   final List<InputPassportElementError> errors;
 
   /// callback sign

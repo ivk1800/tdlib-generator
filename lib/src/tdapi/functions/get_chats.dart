@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns an ordered list of chats in a chat list. Chats are sorted by the pair (chat.position.order, chat.id) in descending order. (For example, to get a list of chats from the beginning, the offset_order should be equal to a biggest signed 64-bit number 9223372036854775807 == 2. For optimal performance the number of returned chats is chosen by the library
 class GetChats extends TdFunction {
   GetChats(
@@ -9,16 +8,16 @@ class GetChats extends TdFunction {
       required this.offsetChatId,
       required this.limit});
 
-  /// chat_list The chat list in which to return chats
+  /// [chatList] The chat list in which to return chats
   final ChatList chatList;
 
-  /// offset_order Chat order to return chats from
+  /// [offsetOrder] Chat order to return chats from
   final int offsetOrder;
 
-  /// offset_chat_id Chat identifier to return chats from
+  /// [offsetChatId] Chat identifier to return chats from
   final int offsetChatId;
 
-  /// limit The maximum number of chats to be returned. It is possible that fewer chats than the limit are returned even if the end of the list is not reached
+  /// [limit] The maximum number of chats to be returned. It is possible that fewer chats than the limit are returned even if the end of the list is not reached
   final int limit;
 
   /// callback sign

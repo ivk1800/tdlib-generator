@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains parameters for TDLib initialization
 class TdlibParameters extends TdObject {
   TdlibParameters(
@@ -20,49 +19,49 @@ class TdlibParameters extends TdObject {
       required this.enableStorageOptimizer,
       required this.ignoreFileNames});
 
-  /// use_test_dc If set to true, the Telegram test environment will be used instead of the production environment
+  /// [useTestDc] If set to true, the Telegram test environment will be used instead of the production environment
   final bool useTestDc;
 
-  /// database_directory The path to the directory for the persistent database; if empty, the current working directory will be used
+  /// [databaseDirectory] The path to the directory for the persistent database; if empty, the current working directory will be used
   final String databaseDirectory;
 
-  /// files_directory The path to the directory for storing files; if empty, database_directory will be used
+  /// [filesDirectory] The path to the directory for storing files; if empty, database_directory will be used
   final String filesDirectory;
 
-  /// use_file_database If set to true, information about downloaded and uploaded files will be saved between application restarts
+  /// [useFileDatabase] If set to true, information about downloaded and uploaded files will be saved between application restarts
   final bool useFileDatabase;
 
-  /// use_chat_info_database If set to true, the library will maintain a cache of users, basic groups, supergroups, channels and secret chats. Implies use_file_database
+  /// [useChatInfoDatabase] If set to true, the library will maintain a cache of users, basic groups, supergroups, channels and secret chats. Implies use_file_database
   final bool useChatInfoDatabase;
 
-  /// use_message_database If set to true, the library will maintain a cache of chats and messages. Implies use_chat_info_database
+  /// [useMessageDatabase] If set to true, the library will maintain a cache of chats and messages. Implies use_chat_info_database
   final bool useMessageDatabase;
 
-  /// use_secret_chats If set to true, support for secret chats will be enabled
+  /// [useSecretChats] If set to true, support for secret chats will be enabled
   final bool useSecretChats;
 
-  /// api_id Application identifier for Telegram API access, which can be obtained at https://my.telegram.org
+  /// [apiId] Application identifier for Telegram API access, which can be obtained at https://my.telegram.org
   final int apiId;
 
-  /// api_hash Application identifier hash for Telegram API access, which can be obtained at https://my.telegram.org
+  /// [apiHash] Application identifier hash for Telegram API access, which can be obtained at https://my.telegram.org
   final String apiHash;
 
-  /// system_language_code IETF language tag of the user's operating system language; must be non-empty
+  /// [systemLanguageCode] IETF language tag of the user's operating system language; must be non-empty
   final String systemLanguageCode;
 
-  /// device_model Model of the device the application is being run on; must be non-empty
+  /// [deviceModel] Model of the device the application is being run on; must be non-empty
   final String deviceModel;
 
-  /// system_version Version of the operating system the application is being run on. If empty, the version is automatically detected by TDLib
+  /// [systemVersion] Version of the operating system the application is being run on. If empty, the version is automatically detected by TDLib
   final String systemVersion;
 
-  /// application_version Application version; must be non-empty
+  /// [applicationVersion] Application version; must be non-empty
   final String applicationVersion;
 
-  /// enable_storage_optimizer If set to true, old files will automatically be deleted
+  /// [enableStorageOptimizer] If set to true, old files will automatically be deleted
   final bool enableStorageOptimizer;
 
-  /// ignore_file_names If set to true, original file names will be ignored. Otherwise, downloaded files will be saved under names as close as possible to the original name
+  /// [ignoreFileNames] If set to true, original file names will be ignored. Otherwise, downloaded files will be saved under names as close as possible to the original name
   final bool ignoreFileNames;
 
   static const String CONSTRUCTOR = 'tdlibParameters';

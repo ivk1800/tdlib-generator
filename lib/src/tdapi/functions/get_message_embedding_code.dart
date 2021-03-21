@@ -1,18 +1,17 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns an HTML code for embedding the message. Available only for messages in supergroups and channels with a username
 class GetMessageEmbeddingCode extends TdFunction {
   GetMessageEmbeddingCode(
       {required this.chatId, required this.messageId, required this.forAlbum});
 
-  /// chat_id Identifier of the chat to which the message belongs
+  /// [chatId] Identifier of the chat to which the message belongs
   final int chatId;
 
-  /// message_id Identifier of the message
+  /// [messageId] Identifier of the message
   final int messageId;
 
-  /// for_album Pass true to return an HTML code for embedding of the whole media album
+  /// [forAlbum] Pass true to return an HTML code for embedding of the whole media album
   final bool forAlbum;
 
   /// callback sign

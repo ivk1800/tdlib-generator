@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Describes the different types of activity in a chat
 abstract class ChatAction extends TdObject {
   const ChatAction();

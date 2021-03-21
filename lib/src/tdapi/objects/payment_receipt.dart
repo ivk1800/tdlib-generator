@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains information about a successful payment
 class PaymentReceipt extends TdObject {
   PaymentReceipt(
@@ -11,22 +10,22 @@ class PaymentReceipt extends TdObject {
       ShippingOption? this.shippingOption,
       required this.credentialsTitle});
 
-  /// date Point in time (Unix timestamp) when the payment was made
+  /// [date] Point in time (Unix timestamp) when the payment was made
   final int date;
 
-  /// payments_provider_user_id User identifier of the payment provider bot
+  /// [paymentsProviderUserId] User identifier of the payment provider bot
   final int paymentsProviderUserId;
 
-  /// invoice Contains information about the invoice
+  /// [invoice] Contains information about the invoice
   final Invoice invoice;
 
-  /// order_info Contains order information; may be null
+  /// [orderInfo] Contains order information; may be null
   final OrderInfo? orderInfo;
 
-  /// shipping_option Chosen shipping option; may be null
+  /// [shippingOption] Chosen shipping option; may be null
   final ShippingOption? shippingOption;
 
-  /// credentials_title Title of the saved credentials
+  /// [credentialsTitle] Title of the saved credentials
   final String credentialsTitle;
 
   static const String CONSTRUCTOR = 'paymentReceipt';

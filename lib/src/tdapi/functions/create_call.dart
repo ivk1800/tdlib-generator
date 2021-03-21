@@ -1,18 +1,17 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Creates a new call
 class CreateCall extends TdFunction {
   CreateCall(
       {required this.userId, required this.protocol, required this.isVideo});
 
-  /// user_id Identifier of the user to be called
+  /// [userId] Identifier of the user to be called
   final int userId;
 
-  /// protocol Description of the call protocols supported by the application
+  /// [protocol] Description of the call protocols supported by the application
   final CallProtocol protocol;
 
-  /// is_video True, if a video call needs to be created
+  /// [isVideo] True, if a video call needs to be created
   final bool isVideo;
 
   /// callback sign

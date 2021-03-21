@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A document message (general file)
 class InputMessageDocument extends InputMessageContent {
   InputMessageDocument(
@@ -9,16 +8,16 @@ class InputMessageDocument extends InputMessageContent {
       required this.disableContentTypeDetection,
       required this.caption});
 
-  /// document Document to be sent
+  /// [document] Document to be sent
   final InputFile document;
 
-  /// thumbnail Document thumbnail, if available
+  /// [thumbnail] Document thumbnail, if available
   final InputThumbnail thumbnail;
 
-  /// disable_content_type_detection If true, automatic file type detection will be disabled and the document will be always sent as file. Always true for files sent to secret chats
+  /// [disableContentTypeDetection] If true, automatic file type detection will be disabled and the document will be always sent as file. Always true for files sent to secret chats
   final bool disableContentTypeDetection;
 
-  /// caption Document caption; 0-GetOption("message_caption_length_max") characters
+  /// [caption] Document caption; 0-GetOption("message_caption_length_max") characters
   final FormattedText caption;
 
   static const String CONSTRUCTOR = 'inputMessageDocument';

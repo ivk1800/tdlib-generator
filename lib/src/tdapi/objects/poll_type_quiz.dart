@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A poll in quiz mode, which has exactly one correct answer option and can be answered only once
 class PollTypeQuiz extends PollType {
   PollTypeQuiz({required this.correctOptionId, required this.explanation});
 
-  /// correct_option_id 0-based identifier of the correct answer option; -1 for a yet unanswered poll
+  /// [correctOptionId] 0-based identifier of the correct answer option; -1 for a yet unanswered poll
   final int correctOptionId;
 
-  /// explanation Text that is shown when the user chooses an incorrect answer or taps on the lamp icon, 0-200 characters with at most 2 line feeds; empty for a yet unanswered poll
+  /// [explanation] Text that is shown when the user chooses an incorrect answer or taps on the lamp icon, 0-200 characters with at most 2 line feeds; empty for a yet unanswered poll
   final FormattedText explanation;
 
   static const String CONSTRUCTOR = 'pollTypeQuiz';

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a point on the map
 class InputInlineQueryResultLocation extends InputInlineQueryResult {
   InputInlineQueryResultLocation(
@@ -14,31 +13,31 @@ class InputInlineQueryResultLocation extends InputInlineQueryResult {
       ReplyMarkup? this.replyMarkup,
       required this.inputMessageContent});
 
-  /// id Unique identifier of the query result
+  /// [id] Unique identifier of the query result
   final String id;
 
-  /// location Location result
+  /// [location] Location result
   final Location location;
 
-  /// live_period Amount of time relative to the message sent time until the location can be updated, in seconds
+  /// [livePeriod] Amount of time relative to the message sent time until the location can be updated, in seconds
   final int livePeriod;
 
-  /// title Title of the result
+  /// [title] Title of the result
   final String title;
 
-  /// thumbnail_url URL of the result thumbnail, if it exists
+  /// [thumbnailUrl] URL of the result thumbnail, if it exists
   final String thumbnailUrl;
 
-  /// thumbnail_width Thumbnail width, if known
+  /// [thumbnailWidth] Thumbnail width, if known
   final int thumbnailWidth;
 
-  /// thumbnail_height Thumbnail height, if known
+  /// [thumbnailHeight] Thumbnail height, if known
   final int thumbnailHeight;
 
-  /// reply_markup The message reply markup. Must be of type replyMarkupInlineKeyboard or null
+  /// [replyMarkup] The message reply markup. Must be of type replyMarkupInlineKeyboard or null
   final ReplyMarkup? replyMarkup;
 
-  /// input_message_content The content of the message to be sent. Must be one of the following types: InputMessageText, InputMessageLocation, InputMessageVenue or InputMessageContact
+  /// [inputMessageContent] The content of the message to be sent. Must be one of the following types: InputMessageText, InputMessageLocation, InputMessageVenue or InputMessageContact
   final InputMessageContent inputMessageContent;
 
   static const String CONSTRUCTOR = 'inputInlineQueryResultLocation';

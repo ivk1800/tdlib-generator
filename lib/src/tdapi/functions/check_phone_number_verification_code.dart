@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Checks the phone number verification code for Telegram Passport
 class CheckPhoneNumberVerificationCode extends TdFunction {
   CheckPhoneNumberVerificationCode({required this.code});
 
-  /// code Verification code
+  /// [code] Verification code
   final String code;
 
   /// callback sign

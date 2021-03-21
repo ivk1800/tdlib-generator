@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The chat photo was changed
 class ChatEventPhotoChanged extends ChatEventAction {
   ChatEventPhotoChanged({ChatPhoto? this.oldPhoto, ChatPhoto? this.newPhoto});
 
-  /// old_photo Previous chat photo value; may be null
+  /// [oldPhoto] Previous chat photo value; may be null
   final ChatPhoto? oldPhoto;
 
-  /// new_photo New chat photo value; may be null
+  /// [newPhoto] New chat photo value; may be null
   final ChatPhoto? newPhoto;
 
   static const String CONSTRUCTOR = 'chatEventPhotoChanged';

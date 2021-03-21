@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a sticker
 class InlineQueryResultSticker extends InlineQueryResult {
   InlineQueryResultSticker({required this.id, required this.sticker});
 
-  /// id Unique identifier of the query result
+  /// [id] Unique identifier of the query result
   final String id;
 
-  /// sticker Sticker
+  /// [sticker] Sticker
   final Sticker sticker;
 
   static const String CONSTRUCTOR = 'inlineQueryResultSticker';

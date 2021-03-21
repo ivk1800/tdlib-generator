@@ -1,18 +1,17 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A new high score was achieved in a game
 class MessageGameScore extends MessageContent {
   MessageGameScore(
       {required this.gameMessageId, required this.gameId, required this.score});
 
-  /// game_message_id Identifier of the message with the game, can be an identifier of a deleted message
+  /// [gameMessageId] Identifier of the message with the game, can be an identifier of a deleted message
   final int gameMessageId;
 
-  /// game_id Identifier of the game; may be different from the games presented in the message with the game
+  /// [gameId] Identifier of the game; may be different from the games presented in the message with the game
   final int gameId;
 
-  /// score New score
+  /// [score] New score
   final int score;
 
   static const String CONSTRUCTOR = 'messageGameScore';

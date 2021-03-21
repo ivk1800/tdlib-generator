@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Describes a chat or user profile photo
 class ChatPhoto extends TdObject {
   ChatPhoto(
@@ -10,19 +9,19 @@ class ChatPhoto extends TdObject {
       required this.sizes,
       AnimatedChatPhoto? this.animation});
 
-  /// id Unique photo identifier
+  /// [id] Unique photo identifier
   final int id;
 
-  /// added_date Point in time (Unix timestamp) when the photo has been added
+  /// [addedDate] Point in time (Unix timestamp) when the photo has been added
   final int addedDate;
 
-  /// minithumbnail Photo minithumbnail; may be null
+  /// [minithumbnail] Photo minithumbnail; may be null
   final Minithumbnail? minithumbnail;
 
-  /// sizes Available variants of the photo in JPEG format, in different size
+  /// [sizes] Available variants of the photo in JPEG format, in different size
   final List<PhotoSize> sizes;
 
-  /// animation Animated variant of the photo in MPEG4 format; may be null
+  /// [animation] Animated variant of the photo in MPEG4 format; may be null
   final AnimatedChatPhoto? animation;
 
   static const String CONSTRUCTOR = 'chatPhoto';

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Represents the current authorization state of the TDLib client
 abstract class AuthorizationState extends TdObject {
   const AuthorizationState();

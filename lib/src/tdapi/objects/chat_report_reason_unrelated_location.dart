@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The location-based chat is unrelated to its stated location
 class ChatReportReasonUnrelatedLocation extends ChatReportReason {
   const ChatReportReasonUnrelatedLocation();

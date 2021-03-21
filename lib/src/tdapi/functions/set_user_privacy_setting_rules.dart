@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Changes user privacy settings
 class SetUserPrivacySettingRules extends TdFunction {
   SetUserPrivacySettingRules({required this.setting, required this.rules});
 
-  /// setting The privacy setting
+  /// [setting] The privacy setting
   final UserPrivacySetting setting;
 
-  /// rules The new privacy rules
+  /// [rules] The new privacy rules
   final UserPrivacySettingRules rules;
 
   /// callback sign

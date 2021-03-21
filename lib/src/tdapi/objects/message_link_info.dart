@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains information about a link to a message in a chat
 class MessageLinkInfo extends TdObject {
   MessageLinkInfo(
@@ -10,19 +9,19 @@ class MessageLinkInfo extends TdObject {
       required this.forAlbum,
       required this.forComment});
 
-  /// is_public True, if the link is a public link for a message in a chat
+  /// [isPublic] True, if the link is a public link for a message in a chat
   final bool isPublic;
 
-  /// chat_id If found, identifier of the chat to which the message belongs, 0 otherwise
+  /// [chatId] If found, identifier of the chat to which the message belongs, 0 otherwise
   final int chatId;
 
-  /// message If found, the linked message; may be null
+  /// [message] If found, the linked message; may be null
   final Message? message;
 
-  /// for_album True, if the whole media album to which the message belongs is linked
+  /// [forAlbum] True, if the whole media album to which the message belongs is linked
   final bool forAlbum;
 
-  /// for_comment True, if the message is linked as a channel post comment or from a message thread
+  /// [forComment] True, if the message is linked as a channel post comment or from a message thread
   final bool forComment;
 
   static const String CONSTRUCTOR = 'messageLinkInfo';

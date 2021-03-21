@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a list of stickers
 class Stickers extends TdObject {
   Stickers({required this.stickers});
 
-  /// stickers List of stickers
+  /// [stickers] List of stickers
   final List<Sticker> stickers;
 
   static const String CONSTRUCTOR = 'stickers';

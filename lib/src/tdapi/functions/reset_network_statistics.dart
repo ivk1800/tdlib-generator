@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Resets all network data usage statistics to zero. Can be called before authorization
 class ResetNetworkStatistics extends TdFunction {
   ResetNetworkStatistics();

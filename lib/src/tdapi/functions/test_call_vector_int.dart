@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns the received vector of numbers; for testing only. This is an offline method. Can be called before authorization
 class TestCallVectorInt extends TdFunction {
   TestCallVectorInt({required this.x});
 
-  /// x Vector of numbers to return
+  /// [x] Vector of numbers to return
   final List<int> x;
 
   /// callback sign

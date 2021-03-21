@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Changes the draft message in a chat
 class SetChatDraftMessage extends TdFunction {
   SetChatDraftMessage(
@@ -8,13 +7,13 @@ class SetChatDraftMessage extends TdFunction {
       required this.messageThreadId,
       DraftMessage? this.draftMessage});
 
-  /// chat_id Chat identifier
+  /// [chatId] Chat identifier
   final int chatId;
 
-  /// message_thread_id If not 0, a message thread identifier in which the draft was changed
+  /// [messageThreadId] If not 0, a message thread identifier in which the draft was changed
   final int messageThreadId;
 
-  /// draft_message New draft message; may be null
+  /// [draftMessage] New draft message; may be null
   final DraftMessage? draftMessage;
 
   /// callback sign

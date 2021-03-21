@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Sets the result of a callback query; for bots only
 class AnswerCallbackQuery extends TdFunction {
   AnswerCallbackQuery(
@@ -10,19 +9,19 @@ class AnswerCallbackQuery extends TdFunction {
       required this.url,
       required this.cacheTime});
 
-  /// callback_query_id Identifier of the callback query
+  /// [callbackQueryId] Identifier of the callback query
   final int callbackQueryId;
 
-  /// text Text of the answer
+  /// [text] Text of the answer
   final String text;
 
-  /// show_alert If true, an alert should be shown to the user instead of a toast notification
+  /// [showAlert] If true, an alert should be shown to the user instead of a toast notification
   final bool showAlert;
 
-  /// url URL to be opened
+  /// [url] URL to be opened
   final String url;
 
-  /// cache_time Time during which the result of the query can be cached, in seconds
+  /// [cacheTime] Time during which the result of the query can be cached, in seconds
   final int cacheTime;
 
   /// callback sign

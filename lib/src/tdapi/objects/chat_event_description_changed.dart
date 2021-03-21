@@ -1,15 +1,14 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The chat description was changed
 class ChatEventDescriptionChanged extends ChatEventAction {
   ChatEventDescriptionChanged(
       {required this.oldDescription, required this.newDescription});
 
-  /// old_description Previous chat description
+  /// [oldDescription] Previous chat description
   final String oldDescription;
 
-  /// new_description New chat description
+  /// [newDescription] New chat description
   final String newDescription;
 
   static const String CONSTRUCTOR = 'chatEventDescriptionChanged';

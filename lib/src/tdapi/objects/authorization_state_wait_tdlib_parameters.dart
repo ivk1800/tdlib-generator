@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// TDLib needs TdlibParameters for initialization
 class AuthorizationStateWaitTdlibParameters extends AuthorizationState {
   const AuthorizationStateWaitTdlibParameters();

@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Returns users banned from the supergroup or channel; can be used only by administrators
 class SupergroupMembersFilterBanned extends SupergroupMembersFilter {
   SupergroupMembersFilterBanned({required this.query});
 
-  /// query Query to search for
+  /// [query] Query to search for
   final String query;
 
   static const String CONSTRUCTOR = 'supergroupMembersFilterBanned';

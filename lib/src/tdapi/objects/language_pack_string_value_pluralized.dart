@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A language pack string which has different forms based on the number of some object it mentions. See https://www.unicode.org/cldr/charts/latest/supplemental/language_plural_rules.html for more info
 class LanguagePackStringValuePluralized extends LanguagePackStringValue {
   LanguagePackStringValuePluralized(
@@ -11,22 +10,22 @@ class LanguagePackStringValuePluralized extends LanguagePackStringValue {
       required this.manyValue,
       required this.otherValue});
 
-  /// zero_value Value for zero objects
+  /// [zeroValue] Value for zero objects
   final String zeroValue;
 
-  /// one_value Value for one object
+  /// [oneValue] Value for one object
   final String oneValue;
 
-  /// two_value Value for two objects
+  /// [twoValue] Value for two objects
   final String twoValue;
 
-  /// few_value Value for few objects
+  /// [fewValue] Value for few objects
   final String fewValue;
 
-  /// many_value Value for many objects
+  /// [manyValue] Value for many objects
   final String manyValue;
 
-  /// other_value Default value
+  /// [otherValue] Default value
   final String otherValue;
 
   static const String CONSTRUCTOR = 'languagePackStringValuePluralized';

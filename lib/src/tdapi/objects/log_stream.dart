@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Describes a stream to which TDLib internal log is written
 abstract class LogStream extends TdObject {
   const LogStream();

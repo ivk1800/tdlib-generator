@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A video
 class PageBlockVideo extends PageBlock {
   PageBlockVideo(
@@ -9,16 +8,16 @@ class PageBlockVideo extends PageBlock {
       required this.needAutoplay,
       required this.isLooped});
 
-  /// video Video file; may be null
+  /// [video] Video file; may be null
   final Video? video;
 
-  /// caption Video caption
+  /// [caption] Video caption
   final PageBlockCaption caption;
 
-  /// need_autoplay True, if the video should be played automatically
+  /// [needAutoplay] True, if the video should be played automatically
   final bool needAutoplay;
 
-  /// is_looped True, if the video should be looped
+  /// [isLooped] True, if the video should be looped
   final bool isLooped;
 
   static const String CONSTRUCTOR = 'pageBlockVideo';

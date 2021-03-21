@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Changes the background selected by the user; adds background to the list of installed backgrounds
 class SetBackground extends TdFunction {
   SetBackground(
@@ -8,13 +7,13 @@ class SetBackground extends TdFunction {
       required this.type,
       required this.forDarkTheme});
 
-  /// background The input background to use, null for filled backgrounds
+  /// [background] The input background to use, null for filled backgrounds
   final InputBackground background;
 
-  /// type Background type; null for default background. The method will return error 404 if type is null
+  /// [type] Background type; null for default background. The method will return error 404 if type is null
   final BackgroundType type;
 
-  /// for_dark_theme True, if the background is chosen for dark theme
+  /// [forDarkTheme] True, if the background is chosen for dark theme
   final bool forDarkTheme;
 
   /// callback sign

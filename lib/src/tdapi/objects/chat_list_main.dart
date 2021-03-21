@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A main list of chats
 class ChatListMain extends ChatList {
   const ChatListMain();

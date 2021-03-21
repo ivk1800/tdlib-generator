@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Represents a payload of a callback query
 abstract class CallbackQueryPayload extends TdObject {
   const CallbackQueryPayload();

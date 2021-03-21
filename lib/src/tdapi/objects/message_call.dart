@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A message with information about an ended call
 class MessageCall extends MessageContent {
   MessageCall(
@@ -8,13 +7,13 @@ class MessageCall extends MessageContent {
       required this.discardReason,
       required this.duration});
 
-  /// is_video True, if the call was a video call
+  /// [isVideo] True, if the call was a video call
   final bool isVideo;
 
-  /// discard_reason Reason why the call was discarded
+  /// [discardReason] Reason why the call was discarded
   final CallDiscardReason discardReason;
 
-  /// duration Call duration, in seconds
+  /// [duration] Call duration, in seconds
   final int duration;
 
   static const String CONSTRUCTOR = 'messageCall';

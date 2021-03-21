@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The user went online or offline
 class UpdateUserStatus extends Update {
   UpdateUserStatus({required this.userId, required this.status});
 
-  /// user_id User identifier
+  /// [userId] User identifier
   final int userId;
 
-  /// status New status of the user
+  /// [status] New status of the user
   final UserStatus status;
 
   static const String CONSTRUCTOR = 'updateUserStatus';

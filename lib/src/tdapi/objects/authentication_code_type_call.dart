@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// An authentication code is delivered via a phone call to the specified phone number
 class AuthenticationCodeTypeCall extends AuthenticationCodeType {
   AuthenticationCodeTypeCall({required this.length});
 
-  /// length Length of the code
+  /// [length] Length of the code
   final int length;
 
   static const String CONSTRUCTOR = 'authenticationCodeTypeCall';

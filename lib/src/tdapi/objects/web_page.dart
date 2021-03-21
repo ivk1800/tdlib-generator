@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Describes a web page preview
 class WebPage extends TdObject {
   WebPage(
@@ -26,67 +25,67 @@ class WebPage extends TdObject {
       VoiceNote? this.voiceNote,
       required this.instantViewVersion});
 
-  /// url Original URL of the link
+  /// [url] Original URL of the link
   final String url;
 
-  /// display_url URL to display
+  /// [displayUrl] URL to display
   final String displayUrl;
 
-  /// type Type of the web page. Can be: article, photo, audio, video, document, profile, app, or something else
+  /// [type] Type of the web page. Can be: article, photo, audio, video, document, profile, app, or something else
   final String type;
 
-  /// site_name Short name of the site (e.g., Google Docs, App Store)
+  /// [siteName] Short name of the site (e.g., Google Docs, App Store)
   final String siteName;
 
-  /// title Title of the content
+  /// [title] Title of the content
   final String title;
 
-  /// param_description Description of the content
+  /// param_[description] Description of the content
   final FormattedText description;
 
-  /// photo Image representing the content; may be null
+  /// [photo] Image representing the content; may be null
   final Photo? photo;
 
-  /// embed_url URL to show in the embedded preview
+  /// [embedUrl] URL to show in the embedded preview
   final String embedUrl;
 
-  /// embed_type MIME type of the embedded preview, (e.g., text/html or video/mp4)
+  /// [embedType] MIME type of the embedded preview, (e.g., text/html or video/mp4)
   final String embedType;
 
-  /// embed_width Width of the embedded preview
+  /// [embedWidth] Width of the embedded preview
   final int embedWidth;
 
-  /// embed_height Height of the embedded preview
+  /// [embedHeight] Height of the embedded preview
   final int embedHeight;
 
-  /// duration Duration of the content, in seconds
+  /// [duration] Duration of the content, in seconds
   final int duration;
 
-  /// author Author of the content
+  /// [author] Author of the content
   final String author;
 
-  /// animation Preview of the content as an animation, if available; may be null
+  /// [animation] Preview of the content as an animation, if available; may be null
   final Animation? animation;
 
-  /// audio Preview of the content as an audio file, if available; may be null
+  /// [audio] Preview of the content as an audio file, if available; may be null
   final Audio? audio;
 
-  /// document Preview of the content as a document, if available (currently only available for small PDF files and ZIP archives); may be null
+  /// [document] Preview of the content as a document, if available (currently only available for small PDF files and ZIP archives); may be null
   final Document? document;
 
-  /// sticker Preview of the content as a sticker for small WEBP files, if available; may be null
+  /// [sticker] Preview of the content as a sticker for small WEBP files, if available; may be null
   final Sticker? sticker;
 
-  /// video Preview of the content as a video, if available; may be null
+  /// [video] Preview of the content as a video, if available; may be null
   final Video? video;
 
-  /// video_note Preview of the content as a video note, if available; may be null
+  /// [videoNote] Preview of the content as a video note, if available; may be null
   final VideoNote? videoNote;
 
-  /// voice_note Preview of the content as a voice note, if available; may be null
+  /// [voiceNote] Preview of the content as a voice note, if available; may be null
   final VoiceNote? voiceNote;
 
-  /// instant_view_version Version of instant view, available for the web page (currently can be 1 or 2), 0 if none
+  /// [instantViewVersion] Version of instant view, available for the web page (currently can be 1 or 2), 0 if none
   final int instantViewVersion;
 
   static const String CONSTRUCTOR = 'webPage';

@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The message was originally sent by a known user
 class MessageForwardOriginUser extends MessageForwardOrigin {
   MessageForwardOriginUser({required this.senderUserId});
 
-  /// sender_user_id Identifier of the user that originally sent the message
+  /// [senderUserId] Identifier of the user that originally sent the message
   final int senderUserId;
 
   static const String CONSTRUCTOR = 'messageForwardOriginUser';

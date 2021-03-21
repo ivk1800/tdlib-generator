@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Describes a join response candidate for interaction with tgcalls
 class GroupCallJoinResponseCandidate extends TdObject {
   GroupCallJoinResponseCandidate(
@@ -18,43 +17,43 @@ class GroupCallJoinResponseCandidate extends TdObject {
       required this.relAddr,
       required this.relPort});
 
-  /// port Value of the field port
+  /// [port] Value of the field port
   final String port;
 
-  /// protocol Value of the field protocol
+  /// [protocol] Value of the field protocol
   final String protocol;
 
-  /// network Value of the field network
+  /// [network] Value of the field network
   final String network;
 
-  /// generation Value of the field generation
+  /// [generation] Value of the field generation
   final String generation;
 
-  /// id Value of the field id
+  /// [id] Value of the field id
   final String id;
 
-  /// component Value of the field component
+  /// [component] Value of the field component
   final String component;
 
-  /// foundation Value of the field foundation
+  /// [foundation] Value of the field foundation
   final String foundation;
 
-  /// priority Value of the field priority
+  /// [priority] Value of the field priority
   final String priority;
 
-  /// ip Value of the field ip
+  /// [ip] Value of the field ip
   final String ip;
 
-  /// type Value of the field type
+  /// [type] Value of the field type
   final String type;
 
-  /// tcp_type Value of the field tcp_type
+  /// [tcpType] Value of the field tcp_type
   final String tcpType;
 
-  /// rel_addr Value of the field rel_addr
+  /// [relAddr] Value of the field rel_addr
   final String relAddr;
 
-  /// rel_port Value of the field rel_port
+  /// [relPort] Value of the field rel_port
   final String relPort;
 
   static const String CONSTRUCTOR = 'groupCallJoinResponseCandidate';

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Describes the type of a poll
 abstract class PollType extends TdObject {
   const PollType();

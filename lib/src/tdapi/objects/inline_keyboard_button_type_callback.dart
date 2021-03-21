@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A button that sends a callback query to a bot
 class InlineKeyboardButtonTypeCallback extends InlineKeyboardButtonType {
   InlineKeyboardButtonTypeCallback({required this.data});
 
-  /// data Data to be sent to the bot via a callback query
+  /// [data] Data to be sent to the bot via a callback query
   final String data;
 
   static const String CONSTRUCTOR = 'inlineKeyboardButtonTypeCallback';

@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a URL linking to an internal Telegram entity
 class TMeUrl extends TdObject {
   TMeUrl({required this.url, required this.type});
 
-  /// url URL
+  /// [url] URL
   final String url;
 
-  /// type Type of the URL
+  /// [type] Type of the URL
   final TMeUrlType type;
 
   static const String CONSTRUCTOR = 'tMeUrl';

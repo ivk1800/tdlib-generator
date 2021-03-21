@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A message failed to send. Be aware that some messages being sent can be irrecoverably deleted, in which case updateDeleteMessages will be received instead of this update
 class UpdateMessageSendFailed extends Update {
   UpdateMessageSendFailed(
@@ -9,16 +8,16 @@ class UpdateMessageSendFailed extends Update {
       required this.errorCode,
       required this.errorMessage});
 
-  /// message Contains information about the message which failed to send
+  /// [message] Contains information about the message which failed to send
   final Message message;
 
-  /// old_message_id The previous temporary message identifier
+  /// [oldMessageId] The previous temporary message identifier
   final int oldMessageId;
 
-  /// error_code An error code
+  /// [errorCode] An error code
   final int errorCode;
 
-  /// error_message Error message
+  /// [errorMessage] Error message
   final String errorMessage;
 
   static const String CONSTRUCTOR = 'updateMessageSendFailed';

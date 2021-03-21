@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A privacy setting for managing whether the user can be called
 class UserPrivacySettingAllowCalls extends UserPrivacySetting {
   const UserPrivacySettingAllowCalls();

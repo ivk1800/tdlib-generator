@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Describes available user privacy settings
 abstract class UserPrivacySetting extends TdObject {
   const UserPrivacySetting();

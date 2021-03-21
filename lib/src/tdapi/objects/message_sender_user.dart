@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The message was sent by a known user
 class MessageSenderUser extends MessageSender {
   MessageSenderUser({required this.userId});
 
-  /// user_id Identifier of the user that sent the message
+  /// [userId] Identifier of the user that sent the message
   final int userId;
 
   static const String CONSTRUCTOR = 'messageSenderUser';

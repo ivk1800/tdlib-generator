@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Text that must be formatted as if inside pre, and code HTML tags
 class TextEntityTypePreCode extends TextEntityType {
   TextEntityTypePreCode({required this.language});
 
-  /// language Programming language of the code; as defined by the sender
+  /// [language] Programming language of the code; as defined by the sender
   final String language;
 
   static const String CONSTRUCTOR = 'textEntityTypePreCode';

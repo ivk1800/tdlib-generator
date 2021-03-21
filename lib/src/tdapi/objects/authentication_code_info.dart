@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Information about the authentication code that was sent
 class AuthenticationCodeInfo extends TdObject {
   AuthenticationCodeInfo(
@@ -9,16 +8,16 @@ class AuthenticationCodeInfo extends TdObject {
       AuthenticationCodeType? this.nextType,
       required this.timeout});
 
-  /// phone_number A phone number that is being authenticated
+  /// [phoneNumber] A phone number that is being authenticated
   final String phoneNumber;
 
-  /// type Describes the way the code was sent to the user
+  /// [type] Describes the way the code was sent to the user
   final AuthenticationCodeType type;
 
-  /// next_type Describes the way the next code will be sent to the user; may be null
+  /// [nextType] Describes the way the next code will be sent to the user; may be null
   final AuthenticationCodeType? nextType;
 
-  /// timeout Timeout before the code should be re-sent, in seconds
+  /// [timeout] Timeout before the code should be re-sent, in seconds
   final int timeout;
 
   static const String CONSTRUCTOR = 'authenticationCodeInfo';

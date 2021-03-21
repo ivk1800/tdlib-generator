@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A token for Simple Push API for Firefox OS
 class DeviceTokenSimplePush extends DeviceToken {
   DeviceTokenSimplePush({required this.endpoint});
 
-  /// endpoint Absolute URL exposed by the push service where the application server can send push messages; may be empty to de-register a device
+  /// [endpoint] Absolute URL exposed by the push service where the application server can send push messages; may be empty to de-register a device
   final String endpoint;
 
   static const String CONSTRUCTOR = 'deviceTokenSimplePush';

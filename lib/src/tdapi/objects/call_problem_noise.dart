@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The user heard background noise
 class CallProblemNoise extends CallProblem {
   const CallProblemNoise();

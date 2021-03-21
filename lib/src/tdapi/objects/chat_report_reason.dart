@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Describes the reason why a chat is reported
 abstract class ChatReportReason extends TdObject {
   const ChatReportReason();

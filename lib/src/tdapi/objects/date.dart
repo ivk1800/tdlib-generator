@@ -1,17 +1,16 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a date according to the Gregorian calendar
 class Date extends TdObject {
   Date({required this.day, required this.month, required this.year});
 
-  /// day Day of the month, 1-31
+  /// [day] Day of the month, 1-31
   final int day;
 
-  /// month Month, 1-12
+  /// [month] Month, 1-12
   final int month;
 
-  /// year Year, 1-9999
+  /// [year] Year, 1-9999
   final int year;
 
   static const String CONSTRUCTOR = 'date';

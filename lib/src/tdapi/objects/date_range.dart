@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a date range
 class DateRange extends TdObject {
   DateRange({required this.startDate, required this.endDate});
 
-  /// start_date Point in time (Unix timestamp) at which the date range begins
+  /// [startDate] Point in time (Unix timestamp) at which the date range begins
   final int startDate;
 
-  /// end_date Point in time (Unix timestamp) at which the date range ends
+  /// [endDate] Point in time (Unix timestamp) at which the date range ends
   final int endDate;
 
   static const String CONSTRUCTOR = 'dateRange';

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The message content has changed
 class UpdateMessageContent extends Update {
   UpdateMessageContent(
@@ -8,13 +7,13 @@ class UpdateMessageContent extends Update {
       required this.messageId,
       required this.newContent});
 
-  /// chat_id Chat identifier
+  /// [chatId] Chat identifier
   final int chatId;
 
-  /// message_id Message identifier
+  /// [messageId] Message identifier
   final int messageId;
 
-  /// new_content New message content
+  /// [newContent] New message content
   final MessageContent newContent;
 
   static const String CONSTRUCTOR = 'updateMessageContent';

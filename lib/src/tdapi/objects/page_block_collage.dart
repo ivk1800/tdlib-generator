@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A collage
 class PageBlockCollage extends PageBlock {
   PageBlockCollage({required this.pageBlocks, required this.caption});
 
-  /// page_blocks Collage item contents
+  /// [pageBlocks] Collage item contents
   final List<PageBlock> pageBlocks;
 
-  /// caption Block caption
+  /// [caption] Block caption
   final PageBlockCaption caption;
 
   static const String CONSTRUCTOR = 'pageBlockCollage';

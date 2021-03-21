@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Describes a chat background
 class Background extends TdObject {
   Background(
@@ -11,22 +10,22 @@ class Background extends TdObject {
       Document? this.document,
       required this.type});
 
-  /// id Unique background identifier
+  /// [id] Unique background identifier
   final int id;
 
-  /// is_default True, if this is one of default backgrounds
+  /// [isDefault] True, if this is one of default backgrounds
   final bool isDefault;
 
-  /// is_dark True, if the background is dark and is recommended to be used with dark theme
+  /// [isDark] True, if the background is dark and is recommended to be used with dark theme
   final bool isDark;
 
-  /// name Unique background name
+  /// [name] Unique background name
   final String name;
 
-  /// document Document with the background; may be null. Null only for filled backgrounds
+  /// [document] Document with the background; may be null. Null only for filled backgrounds
   final Document? document;
 
-  /// type Type of the background
+  /// [type] Type of the background
   final BackgroundType type;
 
   static const String CONSTRUCTOR = 'background';

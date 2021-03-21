@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains a list of websites the current user is logged in with Telegram
 class ConnectedWebsites extends TdObject {
   ConnectedWebsites({required this.websites});
 
-  /// websites List of connected websites
+  /// [websites] List of connected websites
   final List<ConnectedWebsite> websites;
 
   static const String CONSTRUCTOR = 'connectedWebsites';

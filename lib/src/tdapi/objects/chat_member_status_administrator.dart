@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The user is a member of a chat and has some additional privileges. In basic groups, administrators can edit and delete messages sent by others, add new members, ban unprivileged members, and manage voice chats. In supergroups and channels, there are more detailed options for administrator privileges
 class ChatMemberStatusAdministrator extends ChatMemberStatus {
   ChatMemberStatusAdministrator(
@@ -17,40 +16,40 @@ class ChatMemberStatusAdministrator extends ChatMemberStatus {
       required this.canManageVoiceChats,
       required this.isAnonymous});
 
-  /// custom_title A custom title of the administrator; 0-16 characters without emojis; applicable to supergroups only
+  /// [customTitle] A custom title of the administrator; 0-16 characters without emojis; applicable to supergroups only
   final String customTitle;
 
-  /// can_be_edited True, if the current user can edit the administrator privileges for the called user
+  /// [canBeEdited] True, if the current user can edit the administrator privileges for the called user
   final bool canBeEdited;
 
-  /// can_change_info True, if the administrator can change the chat title, photo, and other settings
+  /// [canChangeInfo] True, if the administrator can change the chat title, photo, and other settings
   final bool canChangeInfo;
 
-  /// can_post_messages True, if the administrator can create channel posts; applicable to channels only
+  /// [canPostMessages] True, if the administrator can create channel posts; applicable to channels only
   final bool canPostMessages;
 
-  /// can_edit_messages True, if the administrator can edit messages of other users and pin messages; applicable to channels only
+  /// [canEditMessages] True, if the administrator can edit messages of other users and pin messages; applicable to channels only
   final bool canEditMessages;
 
-  /// can_delete_messages True, if the administrator can delete messages of other users
+  /// [canDeleteMessages] True, if the administrator can delete messages of other users
   final bool canDeleteMessages;
 
-  /// can_invite_users True, if the administrator can invite new users to the chat
+  /// [canInviteUsers] True, if the administrator can invite new users to the chat
   final bool canInviteUsers;
 
-  /// can_restrict_members True, if the administrator can restrict, ban, or unban chat members
+  /// [canRestrictMembers] True, if the administrator can restrict, ban, or unban chat members
   final bool canRestrictMembers;
 
-  /// can_pin_messages True, if the administrator can pin messages; applicable to groups only
+  /// [canPinMessages] True, if the administrator can pin messages; applicable to groups only
   final bool canPinMessages;
 
-  /// can_promote_members True, if the administrator can add new administrators with a subset of their own privileges or demote administrators that were directly or indirectly promoted by them
+  /// [canPromoteMembers] True, if the administrator can add new administrators with a subset of their own privileges or demote administrators that were directly or indirectly promoted by them
   final bool canPromoteMembers;
 
-  /// can_manage_voice_chats True, if the administrator can manage voice chats; applicable to groups only
+  /// [canManageVoiceChats] True, if the administrator can manage voice chats; applicable to groups only
   final bool canManageVoiceChats;
 
-  /// is_anonymous True, if the administrator isn't shown in the chat member list and sends messages anonymously; applicable to supergroups only
+  /// [isAnonymous] True, if the administrator isn't shown in the chat member list and sends messages anonymously; applicable to supergroups only
   final bool isAnonymous;
 
   static const String CONSTRUCTOR = 'chatMemberStatusAdministrator';

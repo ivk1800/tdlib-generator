@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A category containing frequently used channels
 class TopChatCategoryChannels extends TopChatCategory {
   const TopChatCategoryChannels();

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Describes the type of an inline keyboard button
 abstract class InlineKeyboardButtonType extends TdObject {
   const InlineKeyboardButtonType();

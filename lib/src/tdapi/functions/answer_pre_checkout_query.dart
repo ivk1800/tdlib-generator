@@ -1,15 +1,14 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Sets the result of a pre-checkout query; for bots only
 class AnswerPreCheckoutQuery extends TdFunction {
   AnswerPreCheckoutQuery(
       {required this.preCheckoutQueryId, required this.errorMessage});
 
-  /// pre_checkout_query_id Identifier of the pre-checkout query
+  /// [preCheckoutQueryId] Identifier of the pre-checkout query
   final int preCheckoutQueryId;
 
-  /// error_message An error message, empty on success
+  /// [errorMessage] An error message, empty on success
   final String errorMessage;
 
   /// callback sign

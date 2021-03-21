@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A message with a game
 class MessageGame extends MessageContent {
   MessageGame({required this.game});
 
-  /// game The game description
+  /// [game] The game description
   final Game game;
 
   static const String CONSTRUCTOR = 'messageGame';

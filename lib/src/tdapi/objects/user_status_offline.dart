@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The user is offline
 class UserStatusOffline extends UserStatus {
   UserStatusOffline({required this.wasOnline});
 
-  /// was_online Point in time (Unix timestamp) when the user was last online
+  /// [wasOnline] Point in time (Unix timestamp) when the user was last online
   final int wasOnline;
 
   static const String CONSTRUCTOR = 'userStatusOffline';

@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains a list of text entities
 class TextEntities extends TdObject {
   TextEntities({required this.entities});
 
-  /// entities List of text entities
+  /// [entities] List of text entities
   final List<TextEntity> entities;
 
   static const String CONSTRUCTOR = 'textEntities';

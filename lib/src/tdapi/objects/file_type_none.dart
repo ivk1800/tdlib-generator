@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The data is not a file
 class FileTypeNone extends FileType {
   const FileTypeNone();

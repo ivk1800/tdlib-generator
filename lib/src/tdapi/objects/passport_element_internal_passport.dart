@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A Telegram Passport element containing the user's internal passport
 class PassportElementInternalPassport extends PassportElement {
   PassportElementInternalPassport({required this.internalPassport});
 
-  /// internal_passport Internal passport
+  /// [internalPassport] Internal passport
   final IdentityDocument internalPassport;
 
   static const String CONSTRUCTOR = 'passportElementInternalPassport';

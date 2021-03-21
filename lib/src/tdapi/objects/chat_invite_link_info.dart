@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains information about a chat invite link
 class ChatInviteLinkInfo extends TdObject {
   ChatInviteLinkInfo(
@@ -13,28 +12,28 @@ class ChatInviteLinkInfo extends TdObject {
       required this.memberUserIds,
       required this.isPublic});
 
-  /// chat_id Chat identifier of the invite link; 0 if the user has no access to the chat before joining
+  /// [chatId] Chat identifier of the invite link; 0 if the user has no access to the chat before joining
   final int chatId;
 
-  /// accessible_for If non-zero, the amount of time for which read access to the chat will remain available, in seconds
+  /// [accessibleFor] If non-zero, the amount of time for which read access to the chat will remain available, in seconds
   final int accessibleFor;
 
-  /// type Contains information about the type of the chat
+  /// [type] Contains information about the type of the chat
   final ChatType type;
 
-  /// title Title of the chat
+  /// [title] Title of the chat
   final String title;
 
-  /// photo Chat photo; may be null
+  /// [photo] Chat photo; may be null
   final ChatPhotoInfo? photo;
 
-  /// member_count Number of members in the chat
+  /// [memberCount] Number of members in the chat
   final int memberCount;
 
-  /// member_user_ids User identifiers of some chat members that may be known to the current user
+  /// [memberUserIds] User identifiers of some chat members that may be known to the current user
   final List<int> memberUserIds;
 
-  /// is_public True, if the chat is a public supergroup or channel, i.e. it has a username or it is a location-based supergroup
+  /// [isPublic] True, if the chat is a public supergroup or channel, i.e. it has a username or it is a location-based supergroup
   final bool isPublic;
 
   static const String CONSTRUCTOR = 'chatInviteLinkInfo';

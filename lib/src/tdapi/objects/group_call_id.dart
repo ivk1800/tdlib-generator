@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains the group call identifier
 class GroupCallId extends TdObject {
   GroupCallId({required this.id});
 
-  /// id Group call identifier
+  /// [id] Group call identifier
   final int id;
 
   static const String CONSTRUCTOR = 'groupCallId';

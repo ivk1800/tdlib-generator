@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Represents the value of an option
 abstract class OptionValue extends TdObject {
   const OptionValue();

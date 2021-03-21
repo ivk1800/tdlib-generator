@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Returns only animation messages
 class SearchMessagesFilterAnimation extends SearchMessagesFilter {
   const SearchMessagesFilterAnimation();

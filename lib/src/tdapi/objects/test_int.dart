@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A simple object containing a number; for testing only
 class TestInt extends TdObject {
   TestInt({required this.value});
 
-  /// value Number
+  /// [value] Number
   final int value;
 
   static const String CONSTRUCTOR = 'testInt';

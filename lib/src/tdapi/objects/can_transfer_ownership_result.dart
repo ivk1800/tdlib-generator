@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Represents result of checking whether the current session can be used to transfer a chat ownership to another user
 abstract class CanTransferOwnershipResult extends TdObject {
   const CanTransferOwnershipResult();

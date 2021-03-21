@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains a list of game high scores
 class GameHighScores extends TdObject {
   GameHighScores({required this.scores});
 
-  /// scores A list of game high scores
+  /// [scores] A list of game high scores
   final List<GameHighScore> scores;
 
   static const String CONSTRUCTOR = 'gameHighScores';

@@ -1,15 +1,14 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Informs the server about the number of pending bot updates if they haven't been processed for a long time; for bots only
 class SetBotUpdatesStatus extends TdFunction {
   SetBotUpdatesStatus(
       {required this.pendingUpdateCount, required this.errorMessage});
 
-  /// pending_update_count The number of pending updates
+  /// [pendingUpdateCount] The number of pending updates
   final int pendingUpdateCount;
 
-  /// error_message The last error message
+  /// [errorMessage] The last error message
   final String errorMessage;
 
   /// callback sign

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a point on the map
 class InlineQueryResultLocation extends InlineQueryResult {
   InlineQueryResultLocation(
@@ -9,16 +8,16 @@ class InlineQueryResultLocation extends InlineQueryResult {
       required this.title,
       Thumbnail? this.thumbnail});
 
-  /// id Unique identifier of the query result
+  /// [id] Unique identifier of the query result
   final String id;
 
-  /// location Location result
+  /// [location] Location result
   final Location location;
 
-  /// title Title of the result
+  /// [title] Title of the result
   final String title;
 
-  /// thumbnail Result thumbnail in JPEG format; may be null
+  /// [thumbnail] Result thumbnail in JPEG format; may be null
   final Thumbnail? thumbnail;
 
   static const String CONSTRUCTOR = 'inlineQueryResultLocation';

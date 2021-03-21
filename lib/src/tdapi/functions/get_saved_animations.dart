@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns saved animations
 class GetSavedAnimations extends TdFunction {
   GetSavedAnimations();

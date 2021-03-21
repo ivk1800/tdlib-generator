@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A header
 class PageBlockHeader extends PageBlock {
   PageBlockHeader({required this.header});
 
-  /// header Header
+  /// [header] Header
   final RichText header;
 
   static const String CONSTRUCTOR = 'pageBlockHeader';

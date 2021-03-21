@@ -1,15 +1,14 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Some data from basicGroupFullInfo has been changed
 class UpdateBasicGroupFullInfo extends Update {
   UpdateBasicGroupFullInfo(
       {required this.basicGroupId, required this.basicGroupFullInfo});
 
-  /// basic_group_id Identifier of a basic group
+  /// [basicGroupId] Identifier of a basic group
   final int basicGroupId;
 
-  /// basic_group_full_info New full information about the group
+  /// [basicGroupFullInfo] New full information about the group
   final BasicGroupFullInfo basicGroupFullInfo;
 
   static const String CONSTRUCTOR = 'updateBasicGroupFullInfo';

@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Removes background from the list of installed backgrounds
 class RemoveBackground extends TdFunction {
   RemoveBackground({required this.backgroundId});
 
-  /// background_id The background identifier
+  /// [backgroundId] The background identifier
   final int backgroundId;
 
   /// callback sign

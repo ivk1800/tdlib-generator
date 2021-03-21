@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains information about one website the current user is logged in with Telegram
 class ConnectedWebsite extends TdObject {
   ConnectedWebsite(
@@ -14,31 +13,31 @@ class ConnectedWebsite extends TdObject {
       required this.ip,
       required this.location});
 
-  /// id Website identifier
+  /// [id] Website identifier
   final int id;
 
-  /// domain_name The domain name of the website
+  /// [domainName] The domain name of the website
   final String domainName;
 
-  /// bot_user_id User identifier of a bot linked with the website
+  /// [botUserId] User identifier of a bot linked with the website
   final int botUserId;
 
-  /// browser The version of a browser used to log in
+  /// [browser] The version of a browser used to log in
   final String browser;
 
-  /// platform Operating system the browser is running on
+  /// [platform] Operating system the browser is running on
   final String platform;
 
-  /// log_in_date Point in time (Unix timestamp) when the user was logged in
+  /// [logInDate] Point in time (Unix timestamp) when the user was logged in
   final int logInDate;
 
-  /// last_active_date Point in time (Unix timestamp) when obtained authorization was last used
+  /// [lastActiveDate] Point in time (Unix timestamp) when obtained authorization was last used
   final int lastActiveDate;
 
-  /// ip IP address from which the user was logged in, in human-readable format
+  /// [ip] IP address from which the user was logged in, in human-readable format
   final String ip;
 
-  /// location Human-readable description of a country and a region, from which the user was logged in, based on the IP address
+  /// [location] Human-readable description of a country and a region, from which the user was logged in, based on the IP address
   final String location;
 
   static const String CONSTRUCTOR = 'connectedWebsite';

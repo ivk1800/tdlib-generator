@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Accepts an incoming call
 class AcceptCall extends TdFunction {
   AcceptCall({required this.callId, required this.protocol});
 
-  /// call_id Call identifier
+  /// [callId] Call identifier
   final int callId;
 
-  /// protocol Description of the call protocols supported by the application
+  /// [protocol] Description of the call protocols supported by the application
   final CallProtocol protocol;
 
   /// callback sign

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a group call participant
 class GroupCallParticipant extends TdObject {
   GroupCallParticipant(
@@ -13,28 +12,28 @@ class GroupCallParticipant extends TdObject {
       required this.canUnmuteSelf,
       required this.order});
 
-  /// user_id Identifier of the user
+  /// [userId] Identifier of the user
   final int userId;
 
-  /// source User's synchronization source
+  /// [source] User's synchronization source
   final int source;
 
-  /// is_speaking True, if the participant is speaking as set by setGroupCallParticipantIsSpeaking
+  /// [isSpeaking] True, if the participant is speaking as set by setGroupCallParticipantIsSpeaking
   final bool isSpeaking;
 
-  /// can_be_muted True, if the current user can mute the participant
+  /// [canBeMuted] True, if the current user can mute the participant
   final bool canBeMuted;
 
-  /// can_be_unmuted True, if the current user can allow the participant to unmute themself or unmute the participant (only for self)
+  /// [canBeUnmuted] True, if the current user can allow the participant to unmute themself or unmute the participant (only for self)
   final bool canBeUnmuted;
 
-  /// is_muted True, if the participant is muted
+  /// [isMuted] True, if the participant is muted
   final bool isMuted;
 
-  /// can_unmute_self True, if the participant can unmute themself
+  /// [canUnmuteSelf] True, if the participant can unmute themself
   final bool canUnmuteSelf;
 
-  /// order User's order in the group call participant list. The bigger is order, the higher is user in the list. If order is 0, the user must be removed from the participant list
+  /// [order] User's order in the group call participant list. The bigger is order, the higher is user in the list. If order is 0, the user must be removed from the participant list
   final int order;
 
   static const String CONSTRUCTOR = 'groupCallParticipant';

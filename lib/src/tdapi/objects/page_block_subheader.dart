@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A subheader
 class PageBlockSubheader extends PageBlock {
   PageBlockSubheader({required this.subheader});
 
-  /// subheader Subheader
+  /// [subheader] Subheader
   final RichText subheader;
 
   static const String CONSTRUCTOR = 'pageBlockSubheader';

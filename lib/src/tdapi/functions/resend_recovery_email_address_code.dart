@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Resends the 2-step verification recovery email address verification code
 class ResendRecoveryEmailAddressCode extends TdFunction {
   ResendRecoveryEmailAddressCode();

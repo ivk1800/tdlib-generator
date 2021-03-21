@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The sign_messages setting of a channel was toggled
 class ChatEventSignMessagesToggled extends ChatEventAction {
   ChatEventSignMessagesToggled({required this.signMessages});
 
-  /// sign_messages New value of sign_messages
+  /// [signMessages] New value of sign_messages
   final bool signMessages;
 
   static const String CONSTRUCTOR = 'chatEventSignMessagesToggled';

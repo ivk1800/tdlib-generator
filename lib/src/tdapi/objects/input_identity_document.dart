@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// An identity document to be saved to Telegram Passport
 class InputIdentityDocument extends TdObject {
   InputIdentityDocument(
@@ -11,22 +10,22 @@ class InputIdentityDocument extends TdObject {
       required this.selfie,
       required this.translation});
 
-  /// number Document number; 1-24 characters
+  /// [number] Document number; 1-24 characters
   final String number;
 
-  /// expiry_date Document expiry date, if available
+  /// [expiryDate] Document expiry date, if available
   final Date expiryDate;
 
-  /// front_side Front side of the document
+  /// [frontSide] Front side of the document
   final InputFile frontSide;
 
-  /// reverse_side Reverse side of the document; only for driver license and identity card
+  /// [reverseSide] Reverse side of the document; only for driver license and identity card
   final InputFile reverseSide;
 
-  /// selfie Selfie with the document, if available
+  /// [selfie] Selfie with the document, if available
   final InputFile selfie;
 
-  /// translation List of files containing a certified English translation of the document
+  /// [translation] List of files containing a certified English translation of the document
   final List<InputFile> translation;
 
   static const String CONSTRUCTOR = 'inputIdentityDocument';

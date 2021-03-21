@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns an existing chat corresponding to a known basic group
 class CreateBasicGroupChat extends TdFunction {
   CreateBasicGroupChat({required this.basicGroupId, required this.force});
 
-  /// basic_group_id Basic group identifier
+  /// [basicGroupId] Basic group identifier
   final int basicGroupId;
 
-  /// force If true, the chat will be created without network request. In this case all information about the chat except its type, title and photo can be incorrect
+  /// [force] If true, the chat will be created without network request. In this case all information about the chat except its type, title and photo can be incorrect
   final bool force;
 
   /// callback sign

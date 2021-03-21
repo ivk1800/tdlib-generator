@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains a list of chat members
 class ChatMembers extends TdObject {
   ChatMembers({required this.totalCount, required this.members});
 
-  /// total_count Approximate total count of chat members found
+  /// [totalCount] Approximate total count of chat members found
   final int totalCount;
 
-  /// members A list of chat members
+  /// [members] A list of chat members
   final List<ChatMember> members;
 
   static const String CONSTRUCTOR = 'chatMembers';

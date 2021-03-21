@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Returns users banned from the chat; can be used only by administrators in a supergroup or in a channel
 class ChatMembersFilterBanned extends ChatMembersFilter {
   const ChatMembersFilterBanned();

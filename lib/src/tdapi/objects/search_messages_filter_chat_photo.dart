@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Returns only messages containing chat photos
 class SearchMessagesFilterChatPhoto extends SearchMessagesFilter {
   const SearchMessagesFilterChatPhoto();

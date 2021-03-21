@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// An underlined text
 class TextEntityTypeUnderline extends TextEntityType {
   const TextEntityTypeUnderline();

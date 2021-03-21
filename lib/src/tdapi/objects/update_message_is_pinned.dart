@@ -1,18 +1,17 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The message pinned state was changed
 class UpdateMessageIsPinned extends Update {
   UpdateMessageIsPinned(
       {required this.chatId, required this.messageId, required this.isPinned});
 
-  /// chat_id Chat identifier
+  /// [chatId] Chat identifier
   final int chatId;
 
-  /// message_id The message identifier
+  /// [messageId] The message identifier
   final int messageId;
 
-  /// is_pinned True, if the message is pinned
+  /// [isPinned] True, if the message is pinned
   final bool isPinned;
 
   static const String CONSTRUCTOR = 'updateMessageIsPinned';

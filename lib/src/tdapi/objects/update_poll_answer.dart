@@ -1,18 +1,17 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A user changed the answer to a poll; for bots only
 class UpdatePollAnswer extends Update {
   UpdatePollAnswer(
       {required this.pollId, required this.userId, required this.optionIds});
 
-  /// poll_id Unique poll identifier
+  /// [pollId] Unique poll identifier
   final int pollId;
 
-  /// user_id The user, who changed the answer to the poll
+  /// [userId] The user, who changed the answer to the poll
   final int userId;
 
-  /// option_ids 0-based identifiers of answer options, chosen by the user
+  /// [optionIds] 0-based identifiers of answer options, chosen by the user
   final List<int> optionIds;
 
   static const String CONSTRUCTOR = 'updatePollAnswer';

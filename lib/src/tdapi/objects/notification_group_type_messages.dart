@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A group containing notifications of type notificationTypeNewMessage and notificationTypeNewPushMessage with ordinary unread messages
 class NotificationGroupTypeMessages extends NotificationGroupType {
   const NotificationGroupTypeMessages();

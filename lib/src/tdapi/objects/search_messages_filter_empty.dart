@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Returns all found messages, no filter is applied
 class SearchMessagesFilterEmpty extends SearchMessagesFilter {
   const SearchMessagesFilterEmpty();

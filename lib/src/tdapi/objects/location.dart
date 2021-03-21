@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Describes a location on planet Earth
 class Location extends TdObject {
   Location(
@@ -8,13 +7,13 @@ class Location extends TdObject {
       required this.longitude,
       required this.horizontalAccuracy});
 
-  /// latitude Latitude of the location in degrees; as defined by the sender
+  /// [latitude] Latitude of the location in degrees; as defined by the sender
   final double latitude;
 
-  /// longitude Longitude of the location, in degrees; as defined by the sender
+  /// [longitude] Longitude of the location, in degrees; as defined by the sender
   final double longitude;
 
-  /// horizontal_accuracy The estimated horizontal accuracy of the location, in meters; as defined by the sender. 0 if unknown
+  /// [horizontalAccuracy] The estimated horizontal accuracy of the location, in meters; as defined by the sender. 0 if unknown
   final double horizontalAccuracy;
 
   static const String CONSTRUCTOR = 'location';

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Contains information about the sender of a message
 abstract class MessageSender extends TdObject {
   const MessageSender();

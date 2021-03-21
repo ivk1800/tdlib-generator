@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The file is a voice note
 class FileTypeVoiceNote extends FileType {
   const FileTypeVoiceNote();

@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns full information about a basic group by its identifier
 class GetBasicGroupFullInfo extends TdFunction {
   GetBasicGroupFullInfo({required this.basicGroupId});
 
-  /// basic_group_id Basic group identifier
+  /// [basicGroupId] Basic group identifier
   final int basicGroupId;
 
   /// callback sign

@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// An ordinary chat with a user
 class ChatTypePrivate extends ChatType {
   ChatTypePrivate({required this.userId});
 
-  /// user_id User identifier
+  /// [userId] User identifier
   final int userId;
 
   static const String CONSTRUCTOR = 'chatTypePrivate';

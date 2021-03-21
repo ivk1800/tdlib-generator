@@ -1,18 +1,17 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a user contact
 class InlineQueryResultContact extends InlineQueryResult {
   InlineQueryResultContact(
       {required this.id, required this.contact, Thumbnail? this.thumbnail});
 
-  /// id Unique identifier of the query result
+  /// [id] Unique identifier of the query result
   final String id;
 
-  /// contact A user contact
+  /// [contact] A user contact
   final Contact contact;
 
-  /// thumbnail Result thumbnail in JPEG format; may be null
+  /// [thumbnail] Result thumbnail in JPEG format; may be null
   final Thumbnail? thumbnail;
 
   static const String CONSTRUCTOR = 'inlineQueryResultContact';

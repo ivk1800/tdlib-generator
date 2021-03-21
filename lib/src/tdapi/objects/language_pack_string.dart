@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents one language pack string
 class LanguagePackString extends TdObject {
   LanguagePackString({required this.key, required this.value});
 
-  /// key String key
+  /// [key] String key
   final String key;
 
-  /// value String value
+  /// [value] String value
   final LanguagePackStringValue value;
 
   static const String CONSTRUCTOR = 'languagePackString';

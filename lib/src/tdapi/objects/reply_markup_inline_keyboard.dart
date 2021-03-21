@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains an inline keyboard layout
 class ReplyMarkupInlineKeyboard extends ReplyMarkup {
   ReplyMarkupInlineKeyboard({required this.rows});
 
-  /// rows A list of rows of inline keyboard buttons
+  /// [rows] A list of rows of inline keyboard buttons
   final List<List<InlineKeyboardButton>> rows;
 
   static const String CONSTRUCTOR = 'replyMarkupInlineKeyboard';

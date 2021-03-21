@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains a list of available TDLib internal log tags
 class LogTags extends TdObject {
   LogTags({required this.tags});
 
-  /// tags List of log tags
+  /// [tags] List of log tags
   final List<String> tags;
 
   static const String CONSTRUCTOR = 'logTags';

@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns the received string; for testing only. This is an offline method. Can be called before authorization
 class TestCallString extends TdFunction {
   TestCallString({required this.x});
 
-  /// x String to return
+  /// [x] String to return
   final String x;
 
   /// callback sign

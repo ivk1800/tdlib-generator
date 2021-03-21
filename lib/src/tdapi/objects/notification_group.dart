@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Describes a group of notifications
 class NotificationGroup extends TdObject {
   NotificationGroup(
@@ -10,19 +9,19 @@ class NotificationGroup extends TdObject {
       required this.totalCount,
       required this.notifications});
 
-  /// id Unique persistent auto-incremented from 1 identifier of the notification group
+  /// [id] Unique persistent auto-incremented from 1 identifier of the notification group
   final int id;
 
-  /// type Type of the group
+  /// [type] Type of the group
   final NotificationGroupType type;
 
-  /// chat_id Identifier of a chat to which all notifications in the group belong
+  /// [chatId] Identifier of a chat to which all notifications in the group belong
   final int chatId;
 
-  /// total_count Total number of active notifications in the group
+  /// [totalCount] Total number of active notifications in the group
   final int totalCount;
 
-  /// notifications The list of active notifications
+  /// [notifications] The list of active notifications
   final List<Notification> notifications;
 
   static const String CONSTRUCTOR = 'notificationGroup';

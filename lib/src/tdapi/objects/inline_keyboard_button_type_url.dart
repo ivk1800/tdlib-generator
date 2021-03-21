@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A button that opens a specified URL
 class InlineKeyboardButtonTypeUrl extends InlineKeyboardButtonType {
   InlineKeyboardButtonTypeUrl({required this.url});
 
-  /// url HTTP or tg:// URL to open
+  /// [url] HTTP or tg:// URL to open
   final String url;
 
   static const String CONSTRUCTOR = 'inlineKeyboardButtonTypeUrl';

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A group containing a notification of type notificationTypeNewSecretChat
 class NotificationGroupTypeSecretChat extends NotificationGroupType {
   const NotificationGroupTypeSecretChat();

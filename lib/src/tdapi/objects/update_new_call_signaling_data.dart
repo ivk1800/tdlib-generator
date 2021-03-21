@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// New call signaling data arrived
 class UpdateNewCallSignalingData extends Update {
   UpdateNewCallSignalingData({required this.callId, required this.data});
 
-  /// call_id The call identifier
+  /// [callId] The call identifier
   final int callId;
 
-  /// data The data
+  /// [data] The data
   final String data;
 
   static const String CONSTRUCTOR = 'updateNewCallSignalingData';

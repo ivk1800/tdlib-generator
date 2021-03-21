@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A message was edited. Changes in the message content will come in a separate updateMessageContent
 class UpdateMessageEdited extends Update {
   UpdateMessageEdited(
@@ -9,16 +8,16 @@ class UpdateMessageEdited extends Update {
       required this.editDate,
       ReplyMarkup? this.replyMarkup});
 
-  /// chat_id Chat identifier
+  /// [chatId] Chat identifier
   final int chatId;
 
-  /// message_id Message identifier
+  /// [messageId] Message identifier
   final int messageId;
 
-  /// edit_date Point in time (Unix timestamp) when the message was edited
+  /// [editDate] Point in time (Unix timestamp) when the message was edited
   final int editDate;
 
-  /// reply_markup New message reply markup; may be null
+  /// [replyMarkup] New message reply markup; may be null
   final ReplyMarkup? replyMarkup;
 
   static const String CONSTRUCTOR = 'updateMessageEdited';

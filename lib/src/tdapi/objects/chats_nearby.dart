@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a list of chats located nearby
 class ChatsNearby extends TdObject {
   ChatsNearby({required this.usersNearby, required this.supergroupsNearby});
 
-  /// users_nearby List of users nearby
+  /// [usersNearby] List of users nearby
   final List<ChatNearby> usersNearby;
 
-  /// supergroups_nearby List of location-based supergroups nearby
+  /// [supergroupsNearby] List of location-based supergroups nearby
   final List<ChatNearby> supergroupsNearby;
 
   static const String CONSTRUCTOR = 'chatsNearby';

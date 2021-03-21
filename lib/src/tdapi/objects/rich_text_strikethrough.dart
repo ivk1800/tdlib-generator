@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A strikethrough rich text
 class RichTextStrikethrough extends RichText {
   RichTextStrikethrough({required this.text});
 
-  /// text Text
+  /// [text] Text
   final RichText text;
 
   static const String CONSTRUCTOR = 'richTextStrikethrough';

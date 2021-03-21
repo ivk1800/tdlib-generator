@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The thumbnail is in TGS format. It will be used only for animated sticker sets
 class ThumbnailFormatTgs extends ThumbnailFormat {
   const ThumbnailFormatTgs();

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Does nothing; for testing only. This is an offline method. Can be called before authorization
 class TestCallEmpty extends TdFunction {
   TestCallEmpty();

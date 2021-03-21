@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A Telegram Passport element to be saved containing the user's bank statement
 class InputPassportElementBankStatement extends InputPassportElement {
   InputPassportElementBankStatement({required this.bankStatement});
 
-  /// bank_statement The bank statement to be saved
+  /// [bankStatement] The bank statement to be saved
   final InputPersonalDocument bankStatement;
 
   static const String CONSTRUCTOR = 'inputPassportElementBankStatement';

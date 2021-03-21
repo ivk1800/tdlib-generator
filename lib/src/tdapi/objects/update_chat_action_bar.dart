@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The chat action bar was changed
 class UpdateChatActionBar extends Update {
   UpdateChatActionBar({required this.chatId, ChatActionBar? this.actionBar});
 
-  /// chat_id Chat identifier
+  /// [chatId] Chat identifier
   final int chatId;
 
-  /// action_bar The new value of the action bar; may be null
+  /// [actionBar] The new value of the action bar; may be null
   final ChatActionBar? actionBar;
 
   static const String CONSTRUCTOR = 'updateChatActionBar';

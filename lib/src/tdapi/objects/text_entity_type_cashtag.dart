@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A cashtag text, beginning with "$" and consisting of capital english letters (i.e. "$USD")
 class TextEntityTypeCashtag extends TextEntityType {
   const TextEntityTypeCashtag();

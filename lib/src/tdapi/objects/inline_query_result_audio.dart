@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents an audio file
 class InlineQueryResultAudio extends InlineQueryResult {
   InlineQueryResultAudio({required this.id, required this.audio});
 
-  /// id Unique identifier of the query result
+  /// [id] Unique identifier of the query result
   final String id;
 
-  /// audio Audio file
+  /// [audio] Audio file
   final Audio audio;
 
   static const String CONSTRUCTOR = 'inlineQueryResultAudio';

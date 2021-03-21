@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A voice note
 class PageBlockVoiceNote extends PageBlock {
   PageBlockVoiceNote({VoiceNote? this.voiceNote, required this.caption});
 
-  /// voice_note Voice note; may be null
+  /// [voiceNote] Voice note; may be null
   final VoiceNote? voiceNote;
 
-  /// caption Voice note caption
+  /// [caption] Voice note caption
   final PageBlockCaption caption;
 
   static const String CONSTRUCTOR = 'pageBlockVoiceNote';

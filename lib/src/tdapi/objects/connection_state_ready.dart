@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// There is a working connection to the Telegram servers
 class ConnectionStateReady extends ConnectionState {
   const ConnectionStateReady();

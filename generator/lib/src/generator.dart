@@ -28,7 +28,6 @@ class Generator {
       final generatedClass = cb.Class((b) {
         b
           ..docs.add("part of '../tdapi.dart';")
-          ..docs.add("/// ${value.group}")
           ..docs.add("/// ${value.description}")
           ..name = value.name
           ..extend = cb.refer(value.parent);
@@ -63,7 +62,7 @@ class Generator {
             fieldBuilder.type =
                 cb.Reference('${v.type} ${v.isNullable ? '?' : ''}');
             fieldBuilder.modifier = cb.FieldModifier.final$;
-            fieldBuilder.docs.add('/// ${v.description}');
+            fieldBuilder.docs.add('/// ${v.resolveFieldDoc()}');
           });
         }));
 
@@ -258,7 +257,8 @@ class Generator {
     });
   }
 
-  String _createInitializer(Variable variable, [String? overrideJsonKey = null]) {
+  String _createInitializer(Variable variable,
+      [String? overrideJsonKey = null]) {
     if (variable.type.isDartType) {
       if (variable.type.rawType == "int64") {
         return "int.tryParse(json['${variable.name}']) ?? 0";
@@ -322,4 +322,13 @@ class Generator {
 
 extension _StringExtension on String {
   String toVariableName() => this.camelCase().lowerFirstChar();
+}
+
+extension _VariableExtension on Variable {
+  String resolveFieldDoc() {
+    return this
+            .description
+            ?.replaceFirst(this.name, '[${this.name.toVariableName()}]') ??
+        '';
+  }
 }

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Represents the type of a file
 abstract class FileType extends TdObject {
   const FileType();

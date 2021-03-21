@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns the last message sent in a chat no later than the specified date
 class GetChatMessageByDate extends TdFunction {
   GetChatMessageByDate({required this.chatId, required this.date});
 
-  /// chat_id Chat identifier
+  /// [chatId] Chat identifier
   final int chatId;
 
-  /// date Point in time (Unix timestamp) relative to which to search for messages
+  /// [date] Point in time (Unix timestamp) relative to which to search for messages
   final int date;
 
   /// callback sign

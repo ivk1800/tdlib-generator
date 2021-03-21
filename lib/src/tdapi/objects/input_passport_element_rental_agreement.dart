@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A Telegram Passport element to be saved containing the user's rental agreement
 class InputPassportElementRentalAgreement extends InputPassportElement {
   InputPassportElementRentalAgreement({required this.rentalAgreement});
 
-  /// rental_agreement The rental agreement to be saved
+  /// [rentalAgreement] The rental agreement to be saved
   final InputPersonalDocument rentalAgreement;
 
   static const String CONSTRUCTOR = 'inputPassportElementRentalAgreement';

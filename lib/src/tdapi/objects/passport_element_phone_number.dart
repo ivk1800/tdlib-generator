@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A Telegram Passport element containing the user's phone number
 class PassportElementPhoneNumber extends PassportElement {
   PassportElementPhoneNumber({required this.phoneNumber});
 
-  /// phone_number Phone number
+  /// [phoneNumber] Phone number
   final String phoneNumber;
 
   static const String CONSTRUCTOR = 'passportElementPhoneNumber';

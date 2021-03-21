@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Describes an action suggested to the current user
 abstract class SuggestedAction extends TdObject {
   const SuggestedAction();

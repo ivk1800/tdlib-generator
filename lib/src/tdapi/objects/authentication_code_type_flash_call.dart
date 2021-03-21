@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// An authentication code is delivered by an immediately cancelled call to the specified phone number. The number from which the call was made is the code
 class AuthenticationCodeTypeFlashCall extends AuthenticationCodeType {
   AuthenticationCodeTypeFlashCall({required this.pattern});
 
-  /// pattern Pattern of the phone number from which the call will be made
+  /// [pattern] Pattern of the phone number from which the call will be made
   final String pattern;
 
   static const String CONSTRUCTOR = 'authenticationCodeTypeFlashCall';

@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A new message was received; can also be an outgoing message
 class UpdateNewMessage extends Update {
   UpdateNewMessage({required this.message});
 
-  /// message The new message
+  /// [message] The new message
   final Message message;
 
   static const String CONSTRUCTOR = 'updateNewMessage';

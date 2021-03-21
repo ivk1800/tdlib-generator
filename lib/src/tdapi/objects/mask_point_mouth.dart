@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A mask should be placed relatively to the mouth
 class MaskPointMouth extends MaskPoint {
   const MaskPointMouth();

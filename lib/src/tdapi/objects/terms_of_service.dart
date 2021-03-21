@@ -1,18 +1,17 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains Telegram terms of service
 class TermsOfService extends TdObject {
   TermsOfService(
       {required this.text, required this.minUserAge, required this.showPopup});
 
-  /// text Text of the terms of service
+  /// [text] Text of the terms of service
   final FormattedText text;
 
-  /// min_user_age The minimum age of a user to be able to accept the terms; 0 if any
+  /// [minUserAge] The minimum age of a user to be able to accept the terms; 0 if any
   final int minUserAge;
 
-  /// show_popup True, if a blocking popup with terms of service must be shown to the user
+  /// [showPopup] True, if a blocking popup with terms of service must be shown to the user
   final bool showPopup;
 
   static const String CONSTRUCTOR = 'termsOfService';

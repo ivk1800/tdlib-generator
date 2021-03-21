@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Changes application-specific data associated with a chat
 class SetChatClientData extends TdFunction {
   SetChatClientData({required this.chatId, required this.clientData});
 
-  /// chat_id Chat identifier
+  /// [chatId] Chat identifier
   final int chatId;
 
-  /// client_data New value of client_data
+  /// [clientData] New value of client_data
   final String clientData;
 
   /// callback sign

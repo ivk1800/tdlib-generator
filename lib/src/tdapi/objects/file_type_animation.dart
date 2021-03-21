@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The file is an animation
 class FileTypeAnimation extends FileType {
   const FileTypeAnimation();

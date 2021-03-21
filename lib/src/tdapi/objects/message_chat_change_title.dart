@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// An updated chat title
 class MessageChatChangeTitle extends MessageContent {
   MessageChatChangeTitle({required this.title});
 
-  /// title New chat title
+  /// [title] New chat title
   final String title;
 
   static const String CONSTRUCTOR = 'messageChatChangeTitle';

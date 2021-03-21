@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The file was sent to a secret chat (the file type is not known to the server)
 class FileTypeSecret extends FileType {
   const FileTypeSecret();

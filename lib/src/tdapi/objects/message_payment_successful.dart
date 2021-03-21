@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A payment has been completed
 class MessagePaymentSuccessful extends MessageContent {
   MessagePaymentSuccessful(
@@ -8,13 +7,13 @@ class MessagePaymentSuccessful extends MessageContent {
       required this.currency,
       required this.totalAmount});
 
-  /// invoice_message_id Identifier of the message with the corresponding invoice; can be an identifier of a deleted message
+  /// [invoiceMessageId] Identifier of the message with the corresponding invoice; can be an identifier of a deleted message
   final int invoiceMessageId;
 
-  /// currency Currency for the price of the product
+  /// [currency] Currency for the price of the product
   final String currency;
 
-  /// total_amount Total price for the product, in the minimal quantity of the currency
+  /// [totalAmount] Total price for the product, in the minimal quantity of the currency
   final int totalAmount;
 
   static const String CONSTRUCTOR = 'messagePaymentSuccessful';

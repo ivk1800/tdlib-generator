@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The user is not a chat member
 class ChatMemberStatusLeft extends ChatMemberStatus {
   const ChatMemberStatusLeft();

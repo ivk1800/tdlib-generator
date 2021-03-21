@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The can_invite_users permission of a supergroup chat was toggled
 class ChatEventInvitesToggled extends ChatEventAction {
   ChatEventInvitesToggled({required this.canInviteUsers});
 
-  /// can_invite_users New value of can_invite_users permission
+  /// [canInviteUsers] New value of can_invite_users permission
   final bool canInviteUsers;
 
   static const String CONSTRUCTOR = 'chatEventInvitesToggled';

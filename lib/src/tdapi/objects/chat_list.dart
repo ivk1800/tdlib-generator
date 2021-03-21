@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Describes a list of chats
 abstract class ChatList extends TdObject {
   const ChatList();

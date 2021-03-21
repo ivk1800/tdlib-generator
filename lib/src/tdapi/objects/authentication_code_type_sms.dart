@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// An authentication code is delivered via an SMS message to the specified phone number
 class AuthenticationCodeTypeSms extends AuthenticationCodeType {
   AuthenticationCodeTypeSms({required this.length});
 
-  /// length Length of the code
+  /// [length] Length of the code
   final int length;
 
   static const String CONSTRUCTOR = 'authenticationCodeTypeSms';

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a photo
 class InlineQueryResultPhoto extends InlineQueryResult {
   InlineQueryResultPhoto(
@@ -9,16 +8,16 @@ class InlineQueryResultPhoto extends InlineQueryResult {
       required this.title,
       required this.description});
 
-  /// id Unique identifier of the query result
+  /// [id] Unique identifier of the query result
   final String id;
 
-  /// photo Photo
+  /// [photo] Photo
   final Photo photo;
 
-  /// title Title of the result, if known
+  /// [title] Title of the result, if known
   final String title;
 
-  /// param_description A short description of the result, if known
+  /// param_[description] A short description of the result, if known
   final String description;
 
   static const String CONSTRUCTOR = 'inlineQueryResultPhoto';

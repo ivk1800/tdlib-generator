@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Describes a poll
 class Poll extends TdObject {
   Poll(
@@ -15,34 +14,34 @@ class Poll extends TdObject {
       required this.closeDate,
       required this.isClosed});
 
-  /// id Unique poll identifier
+  /// [id] Unique poll identifier
   final int id;
 
-  /// question Poll question, 1-300 characters
+  /// [question] Poll question, 1-300 characters
   final String question;
 
-  /// options List of poll answer options
+  /// [options] List of poll answer options
   final List<PollOption> options;
 
-  /// total_voter_count Total number of voters, participating in the poll
+  /// [totalVoterCount] Total number of voters, participating in the poll
   final int totalVoterCount;
 
-  /// recent_voter_user_ids User identifiers of recent voters, if the poll is non-anonymous
+  /// [recentVoterUserIds] User identifiers of recent voters, if the poll is non-anonymous
   final List<int> recentVoterUserIds;
 
-  /// is_anonymous True, if the poll is anonymous
+  /// [isAnonymous] True, if the poll is anonymous
   final bool isAnonymous;
 
-  /// type Type of the poll
+  /// [type] Type of the poll
   final PollType type;
 
-  /// open_period Amount of time the poll will be active after creation, in seconds
+  /// [openPeriod] Amount of time the poll will be active after creation, in seconds
   final int openPeriod;
 
-  /// close_date Point in time (Unix timestamp) when the poll will be automatically closed
+  /// [closeDate] Point in time (Unix timestamp) when the poll will be automatically closed
   final int closeDate;
 
-  /// is_closed True, if the poll is closed
+  /// [isClosed] True, if the poll is closed
   final bool isClosed;
 
   static const String CONSTRUCTOR = 'poll';

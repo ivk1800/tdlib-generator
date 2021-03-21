@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Sends the result of an inline query as a message. Returns the sent message. Always clears a chat draft message
 class SendInlineQueryResultMessage extends TdFunction {
   SendInlineQueryResultMessage(
@@ -12,25 +11,25 @@ class SendInlineQueryResultMessage extends TdFunction {
       required this.resultId,
       required this.hideViaBot});
 
-  /// chat_id Target chat
+  /// [chatId] Target chat
   final int chatId;
 
-  /// message_thread_id If not 0, a message thread identifier in which the message will be sent
+  /// [messageThreadId] If not 0, a message thread identifier in which the message will be sent
   final int messageThreadId;
 
-  /// reply_to_message_id Identifier of a message to reply to or 0
+  /// [replyToMessageId] Identifier of a message to reply to or 0
   final int replyToMessageId;
 
-  /// options Options to be used to send the message
+  /// [options] Options to be used to send the message
   final MessageSendOptions options;
 
-  /// query_id Identifier of the inline query
+  /// [queryId] Identifier of the inline query
   final int queryId;
 
-  /// result_id Identifier of the inline result
+  /// [resultId] Identifier of the inline result
   final String resultId;
 
-  /// hide_via_bot If true, there will be no mention of a bot, via which the message is sent. Can be used only for bots GetOption("animation_search_bot_username"), GetOption("photo_search_bot_username") and GetOption("venue_search_bot_username")
+  /// [hideViaBot] If true, there will be no mention of a bot, via which the message is sent. Can be used only for bots GetOption("animation_search_bot_username"), GetOption("photo_search_bot_username") and GetOption("venue_search_bot_username")
   final bool hideViaBot;
 
   /// callback sign

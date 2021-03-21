@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Contains information about the payment method chosen by the user
 abstract class InputCredentials extends TdObject {
   const InputCredentials();

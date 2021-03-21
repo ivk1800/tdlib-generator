@@ -1,15 +1,14 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The payload for a callback button requiring password
 class CallbackQueryPayloadDataWithPassword extends CallbackQueryPayload {
   CallbackQueryPayloadDataWithPassword(
       {required this.password, required this.data});
 
-  /// password The password for the current user
+  /// [password] The password for the current user
   final String password;
 
-  /// data Data that was attached to the callback button
+  /// [data] Data that was attached to the callback button
   final String data;
 
   static const String CONSTRUCTOR = 'callbackQueryPayloadDataWithPassword';

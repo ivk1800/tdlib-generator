@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns information about a secret chat by its identifier. This is an offline request
 class GetSecretChat extends TdFunction {
   GetSecretChat({required this.secretChatId});
 
-  /// secret_chat_id Secret chat identifier
+  /// [secretChatId] Secret chat identifier
   final int secretChatId;
 
   /// callback sign

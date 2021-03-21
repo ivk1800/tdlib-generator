@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains a custom keyboard layout to quickly reply to bots
 class ReplyMarkupShowKeyboard extends ReplyMarkup {
   ReplyMarkupShowKeyboard(
@@ -9,16 +8,16 @@ class ReplyMarkupShowKeyboard extends ReplyMarkup {
       required this.oneTime,
       required this.isPersonal});
 
-  /// rows A list of rows of bot keyboard buttons
+  /// [rows] A list of rows of bot keyboard buttons
   final List<List<KeyboardButton>> rows;
 
-  /// resize_keyboard True, if the application needs to resize the keyboard vertically
+  /// [resizeKeyboard] True, if the application needs to resize the keyboard vertically
   final bool resizeKeyboard;
 
-  /// one_time True, if the application needs to hide the keyboard after use
+  /// [oneTime] True, if the application needs to hide the keyboard after use
   final bool oneTime;
 
-  /// is_personal True, if the keyboard must automatically be shown to the current user. For outgoing messages, specify true to show the keyboard only for the mentioned users and for the target user of a reply
+  /// [isPersonal] True, if the keyboard must automatically be shown to the current user. For outgoing messages, specify true to show the keyboard only for the mentioned users and for the target user of a reply
   final bool isPersonal;
 
   static const String CONSTRUCTOR = 'replyMarkupShowKeyboard';

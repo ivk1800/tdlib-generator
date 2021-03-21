@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The user heard their own voice
 class CallProblemEcho extends CallProblem {
   const CallProblemEcho();

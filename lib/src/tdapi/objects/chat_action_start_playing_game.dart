@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The user has started to play a game
 class ChatActionStartPlayingGame extends ChatAction {
   const ChatActionStartPlayingGame();

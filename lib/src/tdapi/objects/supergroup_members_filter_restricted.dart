@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Returns restricted supergroup members; can be used only by administrators
 class SupergroupMembersFilterRestricted extends SupergroupMembersFilter {
   SupergroupMembersFilterRestricted({required this.query});
 
-  /// query Query to search for
+  /// [query] Query to search for
   final String query;
 
   static const String CONSTRUCTOR = 'supergroupMembersFilterRestricted';

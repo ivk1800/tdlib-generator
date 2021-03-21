@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A URL linking to a user
 class TMeUrlTypeUser extends TMeUrlType {
   TMeUrlTypeUser({required this.userId});
 
-  /// user_id Identifier of the user
+  /// [userId] Identifier of the user
   final int userId;
 
   static const String CONSTRUCTOR = 'tMeUrlTypeUser';

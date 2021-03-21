@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A preformatted text paragraph
 class PageBlockPreformatted extends PageBlock {
   PageBlockPreformatted({required this.text, required this.language});
 
-  /// text Paragraph text
+  /// [text] Paragraph text
   final RichText text;
 
-  /// language Programming language for which the text should be formatted
+  /// [language] Programming language for which the text should be formatted
   final String language;
 
   static const String CONSTRUCTOR = 'pageBlockPreformatted';

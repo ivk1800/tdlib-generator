@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A token for Microsoft Push Notification Service
 class DeviceTokenMicrosoftPush extends DeviceToken {
   DeviceTokenMicrosoftPush({required this.channelUri});
 
-  /// channel_uri Push notification channel URI; may be empty to de-register a device
+  /// [channelUri] Push notification channel URI; may be empty to de-register a device
   final String channelUri;
 
   static const String CONSTRUCTOR = 'deviceTokenMicrosoftPush';

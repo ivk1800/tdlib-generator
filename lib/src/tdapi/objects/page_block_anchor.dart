@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// An invisible anchor on a page, which can be used in a URL to open the page from the specified anchor
 class PageBlockAnchor extends PageBlock {
   PageBlockAnchor({required this.name});
 
-  /// name Name of the anchor
+  /// [name] Name of the anchor
   final String name;
 
   static const String CONSTRUCTOR = 'pageBlockAnchor';

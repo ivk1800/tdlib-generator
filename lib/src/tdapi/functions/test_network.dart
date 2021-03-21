@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Sends a simple network request to the Telegram servers; for testing only. Can be called before authorization
 class TestNetwork extends TdFunction {
   TestNetwork();

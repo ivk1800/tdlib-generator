@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Parses Bold, Italic, Underline, Strikethrough, Code, Pre, PreCode, TextUrl and MentionName entities contained in the text. Can be called synchronously
 class ParseTextEntities extends TdFunction {
   ParseTextEntities({required this.text, required this.parseMode});
 
-  /// text The text to parse
+  /// [text] The text to parse
   final String text;
 
-  /// parse_mode Text parse mode
+  /// [parseMode] Text parse mode
   final TextParseMode parseMode;
 
   /// callback sign

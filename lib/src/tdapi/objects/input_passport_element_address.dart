@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A Telegram Passport element to be saved containing the user's address
 class InputPassportElementAddress extends InputPassportElement {
   InputPassportElementAddress({required this.address});
 
-  /// address The address to be saved
+  /// [address] The address to be saved
   final Address address;
 
   static const String CONSTRUCTOR = 'inputPassportElementAddress';

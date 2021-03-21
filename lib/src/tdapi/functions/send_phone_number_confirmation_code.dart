@@ -1,18 +1,17 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Sends phone number confirmation code. Should be called when user presses "https://t.me/confirmphone?phone=*******&hash=**********" or "tg://confirmphone?phone=*******&hash=**********" link
 class SendPhoneNumberConfirmationCode extends TdFunction {
   SendPhoneNumberConfirmationCode(
       {required this.hash, required this.phoneNumber, required this.settings});
 
-  /// hash Value of the "hash" parameter from the link
+  /// [hash] Value of the "hash" parameter from the link
   final String hash;
 
-  /// phone_number Value of the "phone" parameter from the link
+  /// [phoneNumber] Value of the "phone" parameter from the link
   final String phoneNumber;
 
-  /// settings Settings for the authentication of the user's phone number
+  /// [settings] Settings for the authentication of the user's phone number
   final PhoneNumberAuthenticationSettings settings;
 
   /// callback sign

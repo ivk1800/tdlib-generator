@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents link to a JPEG image
 class InputInlineQueryResultPhoto extends InputInlineQueryResult {
   InputInlineQueryResultPhoto(
@@ -14,31 +13,31 @@ class InputInlineQueryResultPhoto extends InputInlineQueryResult {
       ReplyMarkup? this.replyMarkup,
       required this.inputMessageContent});
 
-  /// id Unique identifier of the query result
+  /// [id] Unique identifier of the query result
   final String id;
 
-  /// title Title of the result, if known
+  /// [title] Title of the result, if known
   final String title;
 
-  /// param_description A short description of the result, if known
+  /// param_[description] A short description of the result, if known
   final String description;
 
-  /// thumbnail_url URL of the photo thumbnail, if it exists
+  /// [thumbnailUrl] URL of the photo thumbnail, if it exists
   final String thumbnailUrl;
 
-  /// photo_url The URL of the JPEG photo (photo size must not exceed 5MB)
+  /// [photoUrl] The URL of the JPEG photo (photo size must not exceed 5MB)
   final String photoUrl;
 
-  /// photo_width Width of the photo
+  /// [photoWidth] Width of the photo
   final int photoWidth;
 
-  /// photo_height Height of the photo
+  /// [photoHeight] Height of the photo
   final int photoHeight;
 
-  /// reply_markup The message reply markup. Must be of type replyMarkupInlineKeyboard or null
+  /// [replyMarkup] The message reply markup. Must be of type replyMarkupInlineKeyboard or null
   final ReplyMarkup? replyMarkup;
 
-  /// input_message_content The content of the message to be sent. Must be one of the following types: InputMessageText, InputMessagePhoto, InputMessageLocation, InputMessageVenue or InputMessageContact
+  /// [inputMessageContent] The content of the message to be sent. Must be one of the following types: InputMessageText, InputMessagePhoto, InputMessageLocation, InputMessageVenue or InputMessageContact
   final InputMessageContent inputMessageContent;
 
   static const String CONSTRUCTOR = 'inputInlineQueryResultPhoto';

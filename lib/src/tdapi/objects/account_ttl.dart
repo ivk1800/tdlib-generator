@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains information about the period of inactivity after which the current user's account will automatically be deleted
 class AccountTtl extends TdObject {
   AccountTtl({required this.days});
 
-  /// days Number of days of inactivity before the account will be flagged for deletion; should range from 30-366 days
+  /// [days] Number of days of inactivity before the account will be flagged for deletion; should range from 30-366 days
   final int days;
 
   static const String CONSTRUCTOR = 'accountTtl';

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The username is invalid
 class CheckChatUsernameResultUsernameInvalid extends CheckChatUsernameResult {
   const CheckChatUsernameResultUsernameInvalid();

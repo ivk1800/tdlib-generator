@@ -1,15 +1,14 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Sends a code to verify a phone number to be added to a user's Telegram Passport
 class SendPhoneNumberVerificationCode extends TdFunction {
   SendPhoneNumberVerificationCode(
       {required this.phoneNumber, required this.settings});
 
-  /// phone_number The phone number of the user, in international format
+  /// [phoneNumber] The phone number of the user, in international format
   final String phoneNumber;
 
-  /// settings Settings for the authentication of the user's phone number
+  /// [settings] Settings for the authentication of the user's phone number
   final PhoneNumberAuthenticationSettings settings;
 
   /// callback sign

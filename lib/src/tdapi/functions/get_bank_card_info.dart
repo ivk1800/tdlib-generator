@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns information about a bank card
 class GetBankCardInfo extends TdFunction {
   GetBankCardInfo({required this.bankCardNumber});
 
-  /// bank_card_number The bank card number
+  /// [bankCardNumber] The bank card number
   final String bankCardNumber;
 
   /// callback sign

@@ -1,18 +1,17 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents information about a venue
 class InlineQueryResultVenue extends InlineQueryResult {
   InlineQueryResultVenue(
       {required this.id, required this.venue, Thumbnail? this.thumbnail});
 
-  /// id Unique identifier of the query result
+  /// [id] Unique identifier of the query result
   final String id;
 
-  /// venue Venue result
+  /// [venue] Venue result
   final Venue venue;
 
-  /// thumbnail Result thumbnail in JPEG format; may be null
+  /// [thumbnail] Result thumbnail in JPEG format; may be null
   final Thumbnail? thumbnail;
 
   static const String CONSTRUCTOR = 'inlineQueryResultVenue';

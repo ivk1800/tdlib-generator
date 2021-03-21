@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Discards a call
 class DiscardCall extends TdFunction {
   DiscardCall(
@@ -10,19 +9,19 @@ class DiscardCall extends TdFunction {
       required this.isVideo,
       required this.connectionId});
 
-  /// call_id Call identifier
+  /// [callId] Call identifier
   final int callId;
 
-  /// is_disconnected True, if the user was disconnected
+  /// [isDisconnected] True, if the user was disconnected
   final bool isDisconnected;
 
-  /// duration The call duration, in seconds
+  /// [duration] The call duration, in seconds
   final int duration;
 
-  /// is_video True, if the call was a video call
+  /// [isVideo] True, if the call was a video call
   final bool isVideo;
 
-  /// connection_id Identifier of the connection used during the call
+  /// [connectionId] Identifier of the connection used during the call
   final int connectionId;
 
   /// callback sign

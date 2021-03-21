@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains information about countries
 class Countries extends TdObject {
   Countries({required this.countries});
 
-  /// countries The list of countries
+  /// [countries] The list of countries
   final List<CountryInfo> countries;
 
   static const String CONSTRUCTOR = 'countries';

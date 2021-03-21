@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains a list of chat or user profile photos
 class ChatPhotos extends TdObject {
   ChatPhotos({required this.totalCount, required this.photos});
 
-  /// total_count Total number of photos
+  /// [totalCount] Total number of photos
   final int totalCount;
 
-  /// photos List of photos
+  /// [photos] List of photos
   final List<ChatPhoto> photos;
 
   static const String CONSTRUCTOR = 'chatPhotos';

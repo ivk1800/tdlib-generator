@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Informs TDLib on a file generation progress
 class SetFileGenerationProgress extends TdFunction {
   SetFileGenerationProgress(
@@ -8,13 +7,13 @@ class SetFileGenerationProgress extends TdFunction {
       required this.expectedSize,
       required this.localPrefixSize});
 
-  /// generation_id The identifier of the generation process
+  /// [generationId] The identifier of the generation process
   final int generationId;
 
-  /// expected_size Expected size of the generated file, in bytes; 0 if unknown
+  /// [expectedSize] Expected size of the generated file, in bytes; 0 if unknown
   final int expectedSize;
 
-  /// local_prefix_size The number of bytes already generated
+  /// [localPrefixSize] The number of bytes already generated
   final int localPrefixSize;
 
   /// callback sign

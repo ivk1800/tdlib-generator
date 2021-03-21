@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A rich text phone number
 class RichTextPhoneNumber extends RichText {
   RichTextPhoneNumber({required this.text, required this.phoneNumber});
 
-  /// text Text
+  /// [text] Text
   final RichText text;
 
-  /// phone_number Phone number
+  /// [phoneNumber] Phone number
   final String phoneNumber;
 
   static const String CONSTRUCTOR = 'richTextPhoneNumber';

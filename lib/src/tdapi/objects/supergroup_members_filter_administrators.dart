@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Returns the owner and administrators
 class SupergroupMembersFilterAdministrators extends SupergroupMembersFilter {
   const SupergroupMembersFilterAdministrators();

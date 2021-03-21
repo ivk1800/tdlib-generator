@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains information about an invoice payment form
 class PaymentForm extends TdObject {
   PaymentForm(
@@ -12,25 +11,25 @@ class PaymentForm extends TdObject {
       required this.canSaveCredentials,
       required this.needPassword});
 
-  /// invoice Full information of the invoice
+  /// [invoice] Full information of the invoice
   final Invoice invoice;
 
-  /// url Payment form URL
+  /// [url] Payment form URL
   final String url;
 
-  /// payments_provider Contains information about the payment provider, if available, to support it natively without the need for opening the URL; may be null
+  /// [paymentsProvider] Contains information about the payment provider, if available, to support it natively without the need for opening the URL; may be null
   final PaymentsProviderStripe? paymentsProvider;
 
-  /// saved_order_info Saved server-side order information; may be null
+  /// [savedOrderInfo] Saved server-side order information; may be null
   final OrderInfo? savedOrderInfo;
 
-  /// saved_credentials Contains information about saved card credentials; may be null
+  /// [savedCredentials] Contains information about saved card credentials; may be null
   final SavedCredentials? savedCredentials;
 
-  /// can_save_credentials True, if the user can choose to save credentials
+  /// [canSaveCredentials] True, if the user can choose to save credentials
   final bool canSaveCredentials;
 
-  /// need_password True, if the user will be able to save credentials protected by a password they set up
+  /// [needPassword] True, if the user will be able to save credentials protected by a password they set up
   final bool needPassword;
 
   static const String CONSTRUCTOR = 'paymentForm';

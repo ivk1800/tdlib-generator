@@ -1,12 +1,11 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The element contains an error in an unspecified place. The error will be considered resolved when new data is added
 class InputPassportElementErrorSourceUnspecified
     extends InputPassportElementErrorSource {
   InputPassportElementErrorSourceUnspecified({required this.elementHash});
 
-  /// element_hash Current hash of the entire element
+  /// [elementHash] Current hash of the entire element
   final String elementHash;
 
   static const String CONSTRUCTOR =

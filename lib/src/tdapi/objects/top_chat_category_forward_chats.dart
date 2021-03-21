@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A category containing frequently used chats used to forward messages
 class TopChatCategoryForwardChats extends TopChatCategory {
   const TopChatCategoryForwardChats();

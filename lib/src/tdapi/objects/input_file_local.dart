@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A file defined by a local path
 class InputFileLocal extends InputFile {
   InputFileLocal({required this.path});
 
-  /// path Local path to the file
+  /// [path] Local path to the file
   final String path;
 
   static const String CONSTRUCTOR = 'inputFileLocal';

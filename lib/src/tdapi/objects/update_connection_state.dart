@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The connection state has changed. This update must be used only to show a human-readable description of the connection state
 class UpdateConnectionState extends Update {
   UpdateConnectionState({required this.state});
 
-  /// state The new connection state
+  /// [state] The new connection state
   final ConnectionState state;
 
   static const String CONSTRUCTOR = 'updateConnectionState';

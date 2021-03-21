@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The message failed to be sent
 class MessageSendingStateFailed extends MessageSendingState {
   MessageSendingStateFailed(
@@ -9,16 +8,16 @@ class MessageSendingStateFailed extends MessageSendingState {
       required this.canRetry,
       required this.retryAfter});
 
-  /// error_code An error code; 0 if unknown
+  /// [errorCode] An error code; 0 if unknown
   final int errorCode;
 
-  /// error_message Error message
+  /// [errorMessage] Error message
   final String errorMessage;
 
-  /// can_retry True, if the message can be re-sent
+  /// [canRetry] True, if the message can be re-sent
   final bool canRetry;
 
-  /// retry_after Time left before the message can be re-sent, in seconds. No update is sent when this field changes
+  /// [retryAfter] Time left before the message can be re-sent, in seconds. No update is sent when this field changes
   final double retryAfter;
 
   static const String CONSTRUCTOR = 'messageSendingStateFailed';

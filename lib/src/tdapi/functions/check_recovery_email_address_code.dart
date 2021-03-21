@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Checks the 2-step verification recovery email address verification code
 class CheckRecoveryEmailAddressCode extends TdFunction {
   CheckRecoveryEmailAddressCode({required this.code});
 
-  /// code Verification code
+  /// [code] Verification code
   final String code;
 
   /// callback sign

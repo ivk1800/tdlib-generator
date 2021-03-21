@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Provides information about the status of a member in a chat
 abstract class ChatMemberStatus extends TdObject {
   const ChatMemberStatus();

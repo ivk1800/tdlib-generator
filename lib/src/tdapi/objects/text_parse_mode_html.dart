@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The text uses HTML-style formatting. The same as Telegram Bot API "HTML" parse mode
 class TextParseModeHTML extends TextParseMode {
   const TextParseModeHTML();

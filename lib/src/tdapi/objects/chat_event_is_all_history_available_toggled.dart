@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The is_all_history_available setting of a supergroup was toggled
 class ChatEventIsAllHistoryAvailableToggled extends ChatEventAction {
   ChatEventIsAllHistoryAvailableToggled({required this.isAllHistoryAvailable});
 
-  /// is_all_history_available New value of is_all_history_available
+  /// [isAllHistoryAvailable] New value of is_all_history_available
   final bool isAllHistoryAvailable;
 
   static const String CONSTRUCTOR = 'chatEventIsAllHistoryAvailableToggled';

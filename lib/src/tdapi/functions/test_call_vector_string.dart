@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns the received vector of strings; for testing only. This is an offline method. Can be called before authorization
 class TestCallVectorString extends TdFunction {
   TestCallVectorString({required this.x});
 
-  /// x Vector of strings to return
+  /// [x] Vector of strings to return
   final List<String> x;
 
   /// callback sign

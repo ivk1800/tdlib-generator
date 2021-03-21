@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Describes a sticker
 class Sticker extends TdObject {
   Sticker(
@@ -15,34 +14,34 @@ class Sticker extends TdObject {
       Thumbnail? this.thumbnail,
       required this.sticker});
 
-  /// set_id The identifier of the sticker set to which the sticker belongs; 0 if none
+  /// [setId] The identifier of the sticker set to which the sticker belongs; 0 if none
   final int setId;
 
-  /// width Sticker width; as defined by the sender
+  /// [width] Sticker width; as defined by the sender
   final int width;
 
-  /// height Sticker height; as defined by the sender
+  /// [height] Sticker height; as defined by the sender
   final int height;
 
-  /// emoji Emoji corresponding to the sticker
+  /// [emoji] Emoji corresponding to the sticker
   final String emoji;
 
-  /// is_animated True, if the sticker is an animated sticker in TGS format
+  /// [isAnimated] True, if the sticker is an animated sticker in TGS format
   final bool isAnimated;
 
-  /// is_mask True, if the sticker is a mask
+  /// [isMask] True, if the sticker is a mask
   final bool isMask;
 
-  /// mask_position Position where the mask should be placed; may be null
+  /// [maskPosition] Position where the mask should be placed; may be null
   final MaskPosition? maskPosition;
 
-  /// outline Sticker's outline represented as a list of closed vector paths; may be empty. The coordinate system origin is in the upper-left corner
+  /// [outline] Sticker's outline represented as a list of closed vector paths; may be empty. The coordinate system origin is in the upper-left corner
   final List<ClosedVectorPath> outline;
 
-  /// thumbnail Sticker thumbnail in WEBP or JPEG format; may be null
+  /// [thumbnail] Sticker thumbnail in WEBP or JPEG format; may be null
   final Thumbnail? thumbnail;
 
-  /// sticker File containing the sticker
+  /// [sticker] File containing the sticker
   final File sticker;
 
   static const String CONSTRUCTOR = 'sticker';

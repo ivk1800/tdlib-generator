@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a user
 class User extends TdObject {
   User(
@@ -21,52 +20,52 @@ class User extends TdObject {
       required this.type,
       required this.languageCode});
 
-  /// id User identifier
+  /// [id] User identifier
   final int id;
 
-  /// first_name First name of the user
+  /// [firstName] First name of the user
   final String firstName;
 
-  /// last_name Last name of the user
+  /// [lastName] Last name of the user
   final String lastName;
 
-  /// username Username of the user
+  /// [username] Username of the user
   final String username;
 
-  /// phone_number Phone number of the user
+  /// [phoneNumber] Phone number of the user
   final String phoneNumber;
 
-  /// status Current online status of the user
+  /// [status] Current online status of the user
   final UserStatus status;
 
-  /// profile_photo Profile photo of the user; may be null
+  /// [profilePhoto] Profile photo of the user; may be null
   final ProfilePhoto? profilePhoto;
 
-  /// is_contact The user is a contact of the current user
+  /// [isContact] The user is a contact of the current user
   final bool isContact;
 
-  /// is_mutual_contact The user is a contact of the current user and the current user is a contact of the user
+  /// [isMutualContact] The user is a contact of the current user and the current user is a contact of the user
   final bool isMutualContact;
 
-  /// is_verified True, if the user is verified
+  /// [isVerified] True, if the user is verified
   final bool isVerified;
 
-  /// is_support True, if the user is Telegram support account
+  /// [isSupport] True, if the user is Telegram support account
   final bool isSupport;
 
-  /// restriction_reason If non-empty, it contains a human-readable description of the reason why access to this user must be restricted
+  /// [restrictionReason] If non-empty, it contains a human-readable description of the reason why access to this user must be restricted
   final String restrictionReason;
 
-  /// is_scam True, if many users reported this user as a scam
+  /// [isScam] True, if many users reported this user as a scam
   final bool isScam;
 
-  /// have_access If false, the user is inaccessible, and the only information known about the user is inside this class. It can't be passed to any method except GetUser
+  /// [haveAccess] If false, the user is inaccessible, and the only information known about the user is inside this class. It can't be passed to any method except GetUser
   final bool haveAccess;
 
-  /// type Type of the user
+  /// [type] Type of the user
   final UserType type;
 
-  /// language_code IETF language tag of the user's language; only available to bots
+  /// [languageCode] IETF language tag of the user's language; only available to bots
   final String languageCode;
 
   static const String CONSTRUCTOR = 'user';

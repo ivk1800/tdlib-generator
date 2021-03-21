@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A new chat has been loaded/created. This update is guaranteed to come before the chat identifier is returned to the application. The chat field changes will be reported through separate updates
 class UpdateNewChat extends Update {
   UpdateNewChat({required this.chat});
 
-  /// chat The chat
+  /// [chat] The chat
   final Chat chat;
 
   static const String CONSTRUCTOR = 'updateNewChat';

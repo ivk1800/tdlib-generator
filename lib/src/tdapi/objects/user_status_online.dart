@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The user is online
 class UserStatusOnline extends UserStatus {
   UserStatusOnline({required this.expires});
 
-  /// expires Point in time (Unix timestamp) when the user's online status will expire
+  /// [expires] Point in time (Unix timestamp) when the user's online status will expire
   final int expires;
 
   static const String CONSTRUCTOR = 'userStatusOnline';

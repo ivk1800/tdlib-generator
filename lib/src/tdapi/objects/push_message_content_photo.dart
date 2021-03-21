@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A photo message
 class PushMessageContentPhoto extends PushMessageContent {
   PushMessageContentPhoto(
@@ -9,16 +8,16 @@ class PushMessageContentPhoto extends PushMessageContent {
       required this.isSecret,
       required this.isPinned});
 
-  /// photo Message content; may be null
+  /// [photo] Message content; may be null
   final Photo? photo;
 
-  /// caption Photo caption
+  /// [caption] Photo caption
   final String caption;
 
-  /// is_secret True, if the photo is secret
+  /// [isSecret] True, if the photo is secret
   final bool isSecret;
 
-  /// is_pinned True, if the message is a pinned message with the specified content
+  /// [isPinned] True, if the message is a pinned message with the specified content
   final bool isPinned;
 
   static const String CONSTRUCTOR = 'pushMessageContentPhoto';

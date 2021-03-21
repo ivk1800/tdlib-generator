@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A message with a game; not supported for channels or secret chats
 class InputMessageGame extends InputMessageContent {
   InputMessageGame({required this.botUserId, required this.gameShortName});
 
-  /// bot_user_id User identifier of the bot that owns the game
+  /// [botUserId] User identifier of the bot that owns the game
   final int botUserId;
 
-  /// game_short_name Short name of the game
+  /// [gameShortName] Short name of the game
   final String gameShortName;
 
   static const String CONSTRUCTOR = 'inputMessageGame';

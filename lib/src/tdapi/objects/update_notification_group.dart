@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A list of active notifications in a notification group has changed
 class UpdateNotificationGroup extends Update {
   UpdateNotificationGroup(
@@ -13,28 +12,28 @@ class UpdateNotificationGroup extends Update {
       required this.addedNotifications,
       required this.removedNotificationIds});
 
-  /// notification_group_id Unique notification group identifier
+  /// [notificationGroupId] Unique notification group identifier
   final int notificationGroupId;
 
-  /// type New type of the notification group
+  /// [type] New type of the notification group
   final NotificationGroupType type;
 
-  /// chat_id Identifier of a chat to which all notifications in the group belong
+  /// [chatId] Identifier of a chat to which all notifications in the group belong
   final int chatId;
 
-  /// notification_settings_chat_id Chat identifier, which notification settings must be applied to the added notifications
+  /// [notificationSettingsChatId] Chat identifier, which notification settings must be applied to the added notifications
   final int notificationSettingsChatId;
 
-  /// is_silent True, if the notifications should be shown without sound
+  /// [isSilent] True, if the notifications should be shown without sound
   final bool isSilent;
 
-  /// total_count Total number of unread notifications in the group, can be bigger than number of active notifications
+  /// [totalCount] Total number of unread notifications in the group, can be bigger than number of active notifications
   final int totalCount;
 
-  /// added_notifications List of added group notifications, sorted by notification ID
+  /// [addedNotifications] List of added group notifications, sorted by notification ID
   final List<Notification> addedNotifications;
 
-  /// removed_notification_ids Identifiers of removed group notifications, sorted by notification ID
+  /// [removedNotificationIds] Identifiers of removed group notifications, sorted by notification ID
   final List<int> removedNotificationIds;
 
   static const String CONSTRUCTOR = 'updateNotificationGroup';

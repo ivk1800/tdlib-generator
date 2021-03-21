@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A file defined by its unique ID
 class InputFileId extends InputFile {
   InputFileId({required this.id});
 
-  /// id Unique file identifier
+  /// [id] Unique file identifier
   final int id;
 
   static const String CONSTRUCTOR = 'inputFileId';

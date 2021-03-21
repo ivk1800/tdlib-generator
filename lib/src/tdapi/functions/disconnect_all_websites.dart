@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Disconnects all websites from the current user's Telegram account
 class DisconnectAllWebsites extends TdFunction {
   DisconnectAllWebsites();

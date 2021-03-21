@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A token for web Push API
 class DeviceTokenWebPush extends DeviceToken {
   DeviceTokenWebPush(
@@ -8,13 +7,13 @@ class DeviceTokenWebPush extends DeviceToken {
       required this.p256dhBase64url,
       required this.authBase64url});
 
-  /// endpoint Absolute URL exposed by the push service where the application server can send push messages; may be empty to de-register a device
+  /// [endpoint] Absolute URL exposed by the push service where the application server can send push messages; may be empty to de-register a device
   final String endpoint;
 
-  /// p256dh_base64url Base64url-encoded P-256 elliptic curve Diffie-Hellman public key
+  /// [p256dhBase64url] Base64url-encoded P-256 elliptic curve Diffie-Hellman public key
   final String p256dhBase64url;
 
-  /// auth_base64url Base64url-encoded authentication secret
+  /// [authBase64url] Base64url-encoded authentication secret
   final String authBase64url;
 
   static const String CONSTRUCTOR = 'deviceTokenWebPush';

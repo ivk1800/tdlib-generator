@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains information about a proxy server
 class Proxy extends TdObject {
   Proxy(
@@ -11,22 +10,22 @@ class Proxy extends TdObject {
       required this.isEnabled,
       required this.type});
 
-  /// id Unique identifier of the proxy
+  /// [id] Unique identifier of the proxy
   final int id;
 
-  /// server Proxy server IP address
+  /// [server] Proxy server IP address
   final String server;
 
-  /// port Proxy server port
+  /// [port] Proxy server port
   final int port;
 
-  /// last_used_date Point in time (Unix timestamp) when the proxy was last used; 0 if never
+  /// [lastUsedDate] Point in time (Unix timestamp) when the proxy was last used; 0 if never
   final int lastUsedDate;
 
-  /// is_enabled True, if the proxy is enabled now
+  /// [isEnabled] True, if the proxy is enabled now
   final bool isEnabled;
 
-  /// type Type of the proxy
+  /// [type] Type of the proxy
   final ProxyType type;
 
   static const String CONSTRUCTOR = 'proxy';

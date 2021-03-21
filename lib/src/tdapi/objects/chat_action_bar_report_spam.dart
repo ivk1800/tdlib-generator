@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The chat can be reported as spam using the method reportChat with the reason chatReportReasonSpam
 class ChatActionBarReportSpam extends ChatActionBar {
   ChatActionBarReportSpam({required this.canUnarchive});
 
-  /// can_unarchive If true, the chat was automatically archived and can be moved back to the main chat list using addChatToList simultaneously with setting chat notification settings to default using setChatNotificationSettings
+  /// [canUnarchive] If true, the chat was automatically archived and can be moved back to the main chat list using addChatToList simultaneously with setting chat notification settings to default using setChatNotificationSettings
   final bool canUnarchive;
 
   static const String CONSTRUCTOR = 'chatActionBarReportSpam';

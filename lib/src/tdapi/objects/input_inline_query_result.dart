@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Represents a single result of an inline query; for bots only
 abstract class InputInlineQueryResult extends TdObject {
   const InputInlineQueryResult();

@@ -1,15 +1,14 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The linked chat of a supergroup was changed
 class ChatEventLinkedChatChanged extends ChatEventAction {
   ChatEventLinkedChatChanged(
       {required this.oldLinkedChatId, required this.newLinkedChatId});
 
-  /// old_linked_chat_id Previous supergroup linked chat identifier
+  /// [oldLinkedChatId] Previous supergroup linked chat identifier
   final int oldLinkedChatId;
 
-  /// new_linked_chat_id New supergroup linked chat identifier
+  /// [newLinkedChatId] New supergroup linked chat identifier
   final int newLinkedChatId;
 
   static const String CONSTRUCTOR = 'chatEventLinkedChatChanged';

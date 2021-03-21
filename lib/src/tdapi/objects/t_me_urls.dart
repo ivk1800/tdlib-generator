@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains a list of t.me URLs
 class TMeUrls extends TdObject {
   TMeUrls({required this.urls});
 
-  /// urls List of URLs
+  /// [urls] List of URLs
   final List<TMeUrl> urls;
 
   static const String CONSTRUCTOR = 'tMeUrls';

@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Finishes the file generation
 class FinishFileGeneration extends TdFunction {
   FinishFileGeneration({required this.generationId, required this.error});
 
-  /// generation_id The identifier of the generation process
+  /// [generationId] The identifier of the generation process
   final int generationId;
 
-  /// error If set, means that file generation has failed and should be terminated
+  /// [error] If set, means that file generation has failed and should be terminated
   final TdError error;
 
   /// callback sign

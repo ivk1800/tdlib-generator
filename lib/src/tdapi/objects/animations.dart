@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a list of animations
 class Animations extends TdObject {
   Animations({required this.animations});
 
-  /// animations List of animations
+  /// [animations] List of animations
   final List<Animation> animations;
 
   static const String CONSTRUCTOR = 'animations';

@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The list of supported dice emojis has changed
 class UpdateDiceEmojis extends Update {
   UpdateDiceEmojis({required this.emojis});
 
-  /// emojis The new list of supported dice emojis
+  /// [emojis] The new list of supported dice emojis
   final List<String> emojis;
 
   static const String CONSTRUCTOR = 'updateDiceEmojis';

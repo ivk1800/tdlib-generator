@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns list of available TDLib internal log tags, for example,
 class GetLogTags extends TdFunction {
   GetLogTags();

@@ -1,18 +1,17 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Sets a sticker set thumbnail; for bots only. Returns the sticker set
 class SetStickerSetThumbnail extends TdFunction {
   SetStickerSetThumbnail(
       {required this.userId, required this.name, required this.thumbnail});
 
-  /// user_id Sticker set owner
+  /// [userId] Sticker set owner
   final int userId;
 
-  /// name Sticker set name
+  /// [name] Sticker set name
   final String name;
 
-  /// thumbnail Thumbnail to set in PNG or TGS format. Animated thumbnail must be set for animated sticker sets and only for them. Pass a zero InputFileId to delete the thumbnail
+  /// [thumbnail] Thumbnail to set in PNG or TGS format. Animated thumbnail must be set for animated sticker sets and only for them. Pass a zero InputFileId to delete the thumbnail
   final InputFile thumbnail;
 
   /// callback sign

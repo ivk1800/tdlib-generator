@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A message with information about an ended voice chat
 class MessageVoiceChatEnded extends MessageContent {
   MessageVoiceChatEnded({required this.duration});
 
-  /// duration Call duration
+  /// [duration] Call duration
   final int duration;
 
   static const String CONSTRUCTOR = 'messageVoiceChatEnded';

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The call was ended during the conversation because the users were disconnected
 class CallDiscardReasonDisconnected extends CallDiscardReason {
   const CallDiscardReasonDisconnected();

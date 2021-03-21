@@ -1,18 +1,17 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Describes a payload fingerprint for interaction with tgcalls
 class GroupCallPayloadFingerprint extends TdObject {
   GroupCallPayloadFingerprint(
       {required this.hash, required this.setup, required this.fingerprint});
 
-  /// hash Value of the field hash
+  /// [hash] Value of the field hash
   final String hash;
 
-  /// setup Value of the field setup
+  /// [setup] Value of the field setup
   final String setup;
 
-  /// fingerprint Value of the field fingerprint
+  /// [fingerprint] Value of the field fingerprint
   final String fingerprint;
 
   static const String CONSTRUCTOR = 'groupCallPayloadFingerprint';

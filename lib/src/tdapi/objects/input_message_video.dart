@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A video message
 class InputMessageVideo extends InputMessageContent {
   InputMessageVideo(
@@ -14,31 +13,31 @@ class InputMessageVideo extends InputMessageContent {
       required this.caption,
       required this.ttl});
 
-  /// video Video to be sent
+  /// [video] Video to be sent
   final InputFile video;
 
-  /// thumbnail Video thumbnail, if available
+  /// [thumbnail] Video thumbnail, if available
   final InputThumbnail thumbnail;
 
-  /// added_sticker_file_ids File identifiers of the stickers added to the video, if applicable
+  /// [addedStickerFileIds] File identifiers of the stickers added to the video, if applicable
   final List<int> addedStickerFileIds;
 
-  /// duration Duration of the video, in seconds
+  /// [duration] Duration of the video, in seconds
   final int duration;
 
-  /// width Video width
+  /// [width] Video width
   final int width;
 
-  /// height Video height
+  /// [height] Video height
   final int height;
 
-  /// supports_streaming True, if the video should be tried to be streamed
+  /// [supportsStreaming] True, if the video should be tried to be streamed
   final bool supportsStreaming;
 
-  /// caption Video caption; 0-GetOption("message_caption_length_max") characters
+  /// [caption] Video caption; 0-GetOption("message_caption_length_max") characters
   final FormattedText caption;
 
-  /// ttl Video TTL (Time To Live), in seconds (0-60). A non-zero TTL can be specified only in private chats
+  /// [ttl] Video TTL (Time To Live), in seconds (0-60). A non-zero TTL can be specified only in private chats
   final int ttl;
 
   static const String CONSTRUCTOR = 'inputMessageVideo';

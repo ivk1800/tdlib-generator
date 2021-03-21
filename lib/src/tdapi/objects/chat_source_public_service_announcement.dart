@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The chat contains a public service announcement
 class ChatSourcePublicServiceAnnouncement extends ChatSource {
   ChatSourcePublicServiceAnnouncement({required this.type, required this.text});
 
-  /// type The type of the announcement
+  /// [type] The type of the announcement
   final String type;
 
-  /// text The text of the announcement
+  /// [text] The text of the announcement
   final String text;
 
   static const String CONSTRUCTOR = 'chatSourcePublicServiceAnnouncement';

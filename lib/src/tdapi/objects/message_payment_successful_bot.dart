@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A payment has been completed; for bots only
 class MessagePaymentSuccessfulBot extends MessageContent {
   MessagePaymentSuccessfulBot(
@@ -13,28 +12,28 @@ class MessagePaymentSuccessfulBot extends MessageContent {
       required this.telegramPaymentChargeId,
       required this.providerPaymentChargeId});
 
-  /// invoice_message_id Identifier of the message with the corresponding invoice; can be an identifier of a deleted message
+  /// [invoiceMessageId] Identifier of the message with the corresponding invoice; can be an identifier of a deleted message
   final int invoiceMessageId;
 
-  /// currency Currency for price of the product
+  /// [currency] Currency for price of the product
   final String currency;
 
-  /// total_amount Total price for the product, in the minimal quantity of the currency
+  /// [totalAmount] Total price for the product, in the minimal quantity of the currency
   final int totalAmount;
 
-  /// invoice_payload Invoice payload
+  /// [invoicePayload] Invoice payload
   final String invoicePayload;
 
-  /// shipping_option_id Identifier of the shipping option chosen by the user; may be empty if not applicable
+  /// [shippingOptionId] Identifier of the shipping option chosen by the user; may be empty if not applicable
   final String shippingOptionId;
 
-  /// order_info Information about the order; may be null
+  /// [orderInfo] Information about the order; may be null
   final OrderInfo? orderInfo;
 
-  /// telegram_payment_charge_id Telegram payment identifier
+  /// [telegramPaymentChargeId] Telegram payment identifier
   final String telegramPaymentChargeId;
 
-  /// provider_payment_charge_id Provider payment identifier
+  /// [providerPaymentChargeId] Provider payment identifier
   final String providerPaymentChargeId;
 
   static const String CONSTRUCTOR = 'messagePaymentSuccessfulBot';

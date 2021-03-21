@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns an HTTP URL which can be used to automatically authorize the user on a website after clicking an inline button of type inlineKeyboardButtonTypeLoginUrl.. Use the method getLoginUrlInfo to find whether a prior user confirmation is needed. If an error is returned, then the button must be handled as an ordinary URL button
 class GetLoginUrl extends TdFunction {
   GetLoginUrl(
@@ -9,16 +8,16 @@ class GetLoginUrl extends TdFunction {
       required this.buttonId,
       required this.allowWriteAccess});
 
-  /// chat_id Chat identifier of the message with the button
+  /// [chatId] Chat identifier of the message with the button
   final int chatId;
 
-  /// message_id Message identifier of the message with the button
+  /// [messageId] Message identifier of the message with the button
   final int messageId;
 
-  /// button_id Button identifier
+  /// [buttonId] Button identifier
   final int buttonId;
 
-  /// allow_write_access True, if the user allowed the bot to send them messages
+  /// [allowWriteAccess] True, if the user allowed the bot to send them messages
   final bool allowWriteAccess;
 
   /// callback sign

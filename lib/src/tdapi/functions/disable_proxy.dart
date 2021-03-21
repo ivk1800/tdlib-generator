@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Disables the currently enabled proxy. Can be called before authorization
 class DisableProxy extends TdFunction {
   DisableProxy();

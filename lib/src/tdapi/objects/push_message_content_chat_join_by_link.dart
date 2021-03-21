@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A new member joined the chat by invite link
 class PushMessageContentChatJoinByLink extends PushMessageContent {
   const PushMessageContentChatJoinByLink();

@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Searches for a background by its name
 class SearchBackground extends TdFunction {
   SearchBackground({required this.name});
 
-  /// name The name of the background
+  /// [name] The name of the background
   final String name;
 
   /// callback sign

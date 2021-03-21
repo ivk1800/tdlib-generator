@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Checks phone number confirmation code
 class CheckPhoneNumberConfirmationCode extends TdFunction {
   CheckPhoneNumberConfirmationCode({required this.code});
 
-  /// code The phone number confirmation code
+  /// [code] The phone number confirmation code
   final String code;
 
   /// callback sign

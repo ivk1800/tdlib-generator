@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a string JSON value
 class JsonValueString extends JsonValue {
   JsonValueString({required this.value});
 
-  /// value The value
+  /// [value] The value
   final String value;
 
   static const String CONSTRUCTOR = 'jsonValueString';

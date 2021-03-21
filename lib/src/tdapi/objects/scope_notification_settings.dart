@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains information about notification settings for several chats
 class ScopeNotificationSettings extends TdObject {
   ScopeNotificationSettings(
@@ -10,19 +9,19 @@ class ScopeNotificationSettings extends TdObject {
       required this.disablePinnedMessageNotifications,
       required this.disableMentionNotifications});
 
-  /// mute_for Time left before notifications will be unmuted, in seconds
+  /// [muteFor] Time left before notifications will be unmuted, in seconds
   final int muteFor;
 
-  /// sound The name of an audio file to be used for notification sounds; only applies to iOS applications
+  /// [sound] The name of an audio file to be used for notification sounds; only applies to iOS applications
   final String sound;
 
-  /// show_preview True, if message content should be displayed in notifications
+  /// [showPreview] True, if message content should be displayed in notifications
   final bool showPreview;
 
-  /// disable_pinned_message_notifications True, if notifications for incoming pinned messages will be created as for an ordinary unread message
+  /// [disablePinnedMessageNotifications] True, if notifications for incoming pinned messages will be created as for an ordinary unread message
   final bool disablePinnedMessageNotifications;
 
-  /// disable_mention_notifications True, if notifications for messages with mentions will be created as for an ordinary unread message
+  /// [disableMentionNotifications] True, if notifications for messages with mentions will be created as for an ordinary unread message
   final bool disableMentionNotifications;
 
   static const String CONSTRUCTOR = 'scopeNotificationSettings';

@@ -1,15 +1,14 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Sends debug information for a call
 class SendCallDebugInformation extends TdFunction {
   SendCallDebugInformation(
       {required this.callId, required this.debugInformation});
 
-  /// call_id Call identifier
+  /// [callId] Call identifier
   final int callId;
 
-  /// debug_information Debug information in application-specific format
+  /// [debugInformation] Debug information in application-specific format
   final String debugInformation;
 
   /// callback sign

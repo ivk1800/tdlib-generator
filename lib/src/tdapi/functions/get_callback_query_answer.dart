@@ -1,18 +1,17 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Sends a callback query to a bot and returns an answer. Returns an error with code 502 if the bot fails to answer the query before the query timeout expires
 class GetCallbackQueryAnswer extends TdFunction {
   GetCallbackQueryAnswer(
       {required this.chatId, required this.messageId, required this.payload});
 
-  /// chat_id Identifier of the chat with the message
+  /// [chatId] Identifier of the chat with the message
   final int chatId;
 
-  /// message_id Identifier of the message from which the query originated
+  /// [messageId] Identifier of the message from which the query originated
   final int messageId;
 
-  /// payload Query payload
+  /// [payload] Query payload
   final CallbackQueryPayload payload;
 
   /// callback sign

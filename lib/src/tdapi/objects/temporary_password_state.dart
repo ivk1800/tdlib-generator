@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Returns information about the availability of a temporary password, which can be used for payments
 class TemporaryPasswordState extends TdObject {
   TemporaryPasswordState({required this.hasPassword, required this.validFor});
 
-  /// has_password True, if a temporary password is available
+  /// [hasPassword] True, if a temporary password is available
   final bool hasPassword;
 
-  /// valid_for Time left before the temporary password expires, in seconds
+  /// [validFor] Time left before the temporary password expires, in seconds
   final int validFor;
 
   static const String CONSTRUCTOR = 'temporaryPasswordState';

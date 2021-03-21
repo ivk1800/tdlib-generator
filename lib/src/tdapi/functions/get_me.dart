@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns the current user
 class GetMe extends TdFunction {
   GetMe();

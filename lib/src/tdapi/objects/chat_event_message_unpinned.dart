@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A message was unpinned
 class ChatEventMessageUnpinned extends ChatEventAction {
   ChatEventMessageUnpinned({required this.message});
 
-  /// message Unpinned message
+  /// [message] Unpinned message
   final Message message;
 
   static const String CONSTRUCTOR = 'chatEventMessageUnpinned';

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Represents result of checking whether a username can be set for a chat
 abstract class CheckChatUsernameResult extends TdObject {
   const CheckChatUsernameResult();

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The session can be used
 class CanTransferOwnershipResultOk extends CanTransferOwnershipResult {
   const CanTransferOwnershipResultOk();

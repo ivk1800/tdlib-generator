@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The file is a photo
 class FileTypePhoto extends FileType {
   const FileTypePhoto();

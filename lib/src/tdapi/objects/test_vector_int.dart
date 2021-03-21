@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A simple object containing a vector of numbers; for testing only
 class TestVectorInt extends TdObject {
   TestVectorInt({required this.value});
 
-  /// value Vector of numbers
+  /// [value] Vector of numbers
   final List<int> value;
 
   static const String CONSTRUCTOR = 'testVectorInt';

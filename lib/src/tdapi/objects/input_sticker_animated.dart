@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// An animated sticker in TGS format
 class InputStickerAnimated extends InputSticker {
   InputStickerAnimated({required this.sticker, required this.emojis});
 
-  /// sticker File with the animated sticker. Only local or uploaded within a week files are supported. See https://core.telegram.org/animated_stickers#technical-requirements for technical requirements
+  /// [sticker] File with the animated sticker. Only local or uploaded within a week files are supported. See https://core.telegram.org/animated_stickers#technical-requirements for technical requirements
   final InputFile sticker;
 
-  /// emojis Emojis corresponding to the sticker
+  /// [emojis] Emojis corresponding to the sticker
   final String emojis;
 
   static const String CONSTRUCTOR = 'inputStickerAnimated';

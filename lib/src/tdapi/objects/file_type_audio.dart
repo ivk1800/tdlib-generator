@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The file is an audio file
 class FileTypeAudio extends FileType {
   const FileTypeAudio();

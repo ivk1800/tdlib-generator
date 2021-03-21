@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a link to an article or web page
 class InlineQueryResultArticle extends InlineQueryResult {
   InlineQueryResultArticle(
@@ -11,22 +10,22 @@ class InlineQueryResultArticle extends InlineQueryResult {
       required this.description,
       Thumbnail? this.thumbnail});
 
-  /// id Unique identifier of the query result
+  /// [id] Unique identifier of the query result
   final String id;
 
-  /// url URL of the result, if it exists
+  /// [url] URL of the result, if it exists
   final String url;
 
-  /// hide_url True, if the URL must be not shown
+  /// [hideUrl] True, if the URL must be not shown
   final bool hideUrl;
 
-  /// title Title of the result
+  /// [title] Title of the result
   final String title;
 
-  /// param_description A short description of the result
+  /// param_[description] A short description of the result
   final String description;
 
-  /// thumbnail Result thumbnail in JPEG format; may be null
+  /// [thumbnail] Result thumbnail in JPEG format; may be null
   final Thumbnail? thumbnail;
 
   static const String CONSTRUCTOR = 'inlineQueryResultArticle';

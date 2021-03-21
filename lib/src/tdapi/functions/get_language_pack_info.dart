@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns information about a language pack. Returned language pack identifier may be different from a provided one. Can be called before authorization
 class GetLanguagePackInfo extends TdFunction {
   GetLanguagePackInfo({required this.languagePackId});
 
-  /// language_pack_id Language pack identifier
+  /// [languagePackId] Language pack identifier
   final String languagePackId;
 
   /// callback sign

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A chat member was deleted
 class PushMessageContentChatDeleteMember extends PushMessageContent {
   PushMessageContentChatDeleteMember(
@@ -8,13 +7,13 @@ class PushMessageContentChatDeleteMember extends PushMessageContent {
       required this.isCurrentUser,
       required this.isLeft});
 
-  /// member_name Name of the deleted member
+  /// [memberName] Name of the deleted member
   final String memberName;
 
-  /// is_current_user True, if the current user was deleted from the group
+  /// [isCurrentUser] True, if the current user was deleted from the group
   final bool isCurrentUser;
 
-  /// is_left True, if the user has left the group themself
+  /// [isLeft] True, if the user has left the group themself
   final bool isLeft;
 
   static const String CONSTRUCTOR = 'pushMessageContentChatDeleteMember';

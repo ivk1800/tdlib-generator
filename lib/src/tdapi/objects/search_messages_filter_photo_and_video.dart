@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Returns only photo and video messages
 class SearchMessagesFilterPhotoAndVideo extends SearchMessagesFilter {
   const SearchMessagesFilterPhotoAndVideo();

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains information about a country
 class CountryInfo extends TdObject {
   CountryInfo(
@@ -10,19 +9,19 @@ class CountryInfo extends TdObject {
       required this.isHidden,
       required this.callingCodes});
 
-  /// country_code A two-letter ISO 3166-1 alpha-2 country code
+  /// [countryCode] A two-letter ISO 3166-1 alpha-2 country code
   final String countryCode;
 
-  /// name Native name of the country
+  /// [name] Native name of the country
   final String name;
 
-  /// english_name English name of the country
+  /// [englishName] English name of the country
   final String englishName;
 
-  /// is_hidden True, if the country should be hidden from the list of all countries
+  /// [isHidden] True, if the country should be hidden from the list of all countries
   final bool isHidden;
 
-  /// calling_codes List of country calling codes
+  /// [callingCodes] List of country calling codes
   final List<String> callingCodes;
 
   static const String CONSTRUCTOR = 'countryInfo';

@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A message with information about a venue
 class InputMessageVenue extends InputMessageContent {
   InputMessageVenue({required this.venue});
 
-  /// venue Venue to send
+  /// [venue] Venue to send
   final Venue venue;
 
   static const String CONSTRUCTOR = 'inputMessageVenue';

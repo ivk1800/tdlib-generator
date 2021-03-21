@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Sends a call rating
 class SendCallRating extends TdFunction {
   SendCallRating(
@@ -9,16 +8,16 @@ class SendCallRating extends TdFunction {
       required this.comment,
       required this.problems});
 
-  /// call_id Call identifier
+  /// [callId] Call identifier
   final int callId;
 
-  /// rating Call rating; 1-5
+  /// [rating] Call rating; 1-5
   final int rating;
 
-  /// comment An optional user comment if the rating is less than 5
+  /// [comment] An optional user comment if the rating is less than 5
   final String comment;
 
-  /// problems List of the exact types of problems with the call, specified by the user
+  /// [problems] List of the exact types of problems with the call, specified by the user
   final List<CallProblem> problems;
 
   /// callback sign

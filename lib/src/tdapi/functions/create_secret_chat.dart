@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns an existing chat corresponding to a known secret chat
 class CreateSecretChat extends TdFunction {
   CreateSecretChat({required this.secretChatId});
 
-  /// secret_chat_id Secret chat identifier
+  /// [secretChatId] Secret chat identifier
   final int secretChatId;
 
   /// callback sign

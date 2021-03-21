@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Describes a game
 class Game extends TdObject {
   Game(
@@ -12,25 +11,25 @@ class Game extends TdObject {
       required this.photo,
       Animation? this.animation});
 
-  /// id Game ID
+  /// [id] Game ID
   final int id;
 
-  /// short_name Game short name. To share a game use the URL https://t.me/{bot_username}?game={game_short_name}
+  /// [shortName] Game short name. To share a game use the URL https://t.me/{bot_username}?game={game_short_name}
   final String shortName;
 
-  /// title Game title
+  /// [title] Game title
   final String title;
 
-  /// text Game text, usually containing scoreboards for a game
+  /// [text] Game text, usually containing scoreboards for a game
   final FormattedText text;
 
-  /// param_description Game description
+  /// param_[description] Game description
   final String description;
 
-  /// photo Game photo
+  /// [photo] Game photo
   final Photo photo;
 
-  /// animation Game animation; may be null
+  /// [animation] Game animation; may be null
   final Animation? animation;
 
   static const String CONSTRUCTOR = 'game';

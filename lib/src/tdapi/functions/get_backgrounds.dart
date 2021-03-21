@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns backgrounds installed by the user
 class GetBackgrounds extends TdFunction {
   GetBackgrounds({required this.forDarkTheme});
 
-  /// for_dark_theme True, if the backgrounds must be ordered for dark theme
+  /// [forDarkTheme] True, if the backgrounds must be ordered for dark theme
   final bool forDarkTheme;
 
   /// callback sign

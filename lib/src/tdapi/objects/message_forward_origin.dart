@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Contains information about the origin of a forwarded message
 abstract class MessageForwardOrigin extends TdObject {
   const MessageForwardOrigin();

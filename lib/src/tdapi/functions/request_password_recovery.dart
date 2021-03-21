@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Requests to send a password recovery code to an email address that was previously set up
 class RequestPasswordRecovery extends TdFunction {
   RequestPasswordRecovery();

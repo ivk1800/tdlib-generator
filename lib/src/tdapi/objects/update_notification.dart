@@ -1,15 +1,14 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A notification was changed
 class UpdateNotification extends Update {
   UpdateNotification(
       {required this.notificationGroupId, required this.notification});
 
-  /// notification_group_id Unique notification group identifier
+  /// [notificationGroupId] Unique notification group identifier
   final int notificationGroupId;
 
-  /// notification_group_id Unique notification group identifier
+  /// [notification]_group_id Unique notification group identifier
   final Notification notification;
 
   static const String CONSTRUCTOR = 'updateNotification';

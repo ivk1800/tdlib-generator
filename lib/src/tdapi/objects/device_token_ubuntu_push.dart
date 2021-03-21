@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A token for Ubuntu Push Client service
 class DeviceTokenUbuntuPush extends DeviceToken {
   DeviceTokenUbuntuPush({required this.token});
 
-  /// token Token; may be empty to de-register a device
+  /// [token] Token; may be empty to de-register a device
   final String token;
 
   static const String CONSTRUCTOR = 'deviceTokenUbuntuPush';

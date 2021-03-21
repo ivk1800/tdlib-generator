@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Returns only voice note messages
 class SearchMessagesFilterVoiceNote extends SearchMessagesFilter {
   const SearchMessagesFilterVoiceNote();

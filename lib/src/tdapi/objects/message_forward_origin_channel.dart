@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The message was originally a post in a channel
 class MessageForwardOriginChannel extends MessageForwardOrigin {
   MessageForwardOriginChannel(
@@ -8,13 +7,13 @@ class MessageForwardOriginChannel extends MessageForwardOrigin {
       required this.messageId,
       required this.authorSignature});
 
-  /// chat_id Identifier of the chat from which the message was originally forwarded
+  /// [chatId] Identifier of the chat from which the message was originally forwarded
   final int chatId;
 
-  /// message_id Message identifier of the original message
+  /// [messageId] Message identifier of the original message
   final int messageId;
 
-  /// author_signature Original post author signature
+  /// [authorSignature] Original post author signature
   final String authorSignature;
 
   static const String CONSTRUCTOR = 'messageForwardOriginChannel';

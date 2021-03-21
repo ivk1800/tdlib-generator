@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Telegram Passport data has been sent
 class MessagePassportDataSent extends MessageContent {
   MessagePassportDataSent({required this.types});
 
-  /// types List of Telegram Passport element types sent
+  /// [types] List of Telegram Passport element types sent
   final List<PassportElementType> types;
 
   static const String CONSTRUCTOR = 'messagePassportDataSent';

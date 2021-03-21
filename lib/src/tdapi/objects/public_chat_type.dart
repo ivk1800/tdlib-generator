@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Describes a type of public chats
 abstract class PublicChatType extends TdObject {
   const PublicChatType();

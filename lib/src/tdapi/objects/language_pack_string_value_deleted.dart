@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A deleted language pack string, the value should be taken from the built-in english language pack
 class LanguagePackStringValueDeleted extends LanguagePackStringValue {
   const LanguagePackStringValueDeleted();

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The call has been answered and encryption keys are being exchanged
 class CallStateExchangingKeys extends CallState {
   const CallStateExchangingKeys();

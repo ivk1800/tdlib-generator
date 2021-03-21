@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a filter of user chats
 class ChatFilter extends TdObject {
   ChatFilter(
@@ -18,43 +17,43 @@ class ChatFilter extends TdObject {
       required this.includeGroups,
       required this.includeChannels});
 
-  /// title The title of the filter; 1-12 characters without line feeds
+  /// [title] The title of the filter; 1-12 characters without line feeds
   final String title;
 
-  /// icon_name The icon name for short filter representation. If non-empty, must be one of "All", "Unread", "Unmuted", "Bots", "Channels", "Groups", "Private", "Custom", "Setup", "Cat", "Crown", "Favorite", "Flower", "Game", "Home", "Love", "Mask", "Party", "Sport", "Study", "Trade", "Travel", "Work".. If empty, use getChatFilterDefaultIconName to get default icon name for the filter
+  /// [iconName] The icon name for short filter representation. If non-empty, must be one of "All", "Unread", "Unmuted", "Bots", "Channels", "Groups", "Private", "Custom", "Setup", "Cat", "Crown", "Favorite", "Flower", "Game", "Home", "Love", "Mask", "Party", "Sport", "Study", "Trade", "Travel", "Work".. If empty, use getChatFilterDefaultIconName to get default icon name for the filter
   final String iconName;
 
-  /// pinned_chat_ids The chat identifiers of pinned chats in the filtered chat list
+  /// [pinnedChatIds] The chat identifiers of pinned chats in the filtered chat list
   final List<int> pinnedChatIds;
 
-  /// included_chat_ids The chat identifiers of always included chats in the filtered chat list
+  /// [includedChatIds] The chat identifiers of always included chats in the filtered chat list
   final List<int> includedChatIds;
 
-  /// excluded_chat_ids The chat identifiers of always excluded chats in the filtered chat list
+  /// [excludedChatIds] The chat identifiers of always excluded chats in the filtered chat list
   final List<int> excludedChatIds;
 
-  /// exclude_muted True, if muted chats need to be excluded
+  /// [excludeMuted] True, if muted chats need to be excluded
   final bool excludeMuted;
 
-  /// exclude_read True, if read chats need to be excluded
+  /// [excludeRead] True, if read chats need to be excluded
   final bool excludeRead;
 
-  /// exclude_archived True, if archived chats need to be excluded
+  /// [excludeArchived] True, if archived chats need to be excluded
   final bool excludeArchived;
 
-  /// include_contacts True, if contacts need to be included
+  /// [includeContacts] True, if contacts need to be included
   final bool includeContacts;
 
-  /// include_non_contacts True, if non-contact users need to be included
+  /// [includeNonContacts] True, if non-contact users need to be included
   final bool includeNonContacts;
 
-  /// include_bots True, if bots need to be included
+  /// [includeBots] True, if bots need to be included
   final bool includeBots;
 
-  /// include_groups True, if basic groups and supergroups need to be included
+  /// [includeGroups] True, if basic groups and supergroups need to be included
   final bool includeGroups;
 
-  /// include_channels True, if channels need to be included
+  /// [includeChannels] True, if channels need to be included
   final bool includeChannels;
 
   static const String CONSTRUCTOR = 'chatFilter';

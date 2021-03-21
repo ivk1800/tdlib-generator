@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a single button in a bot keyboard
 class KeyboardButton extends TdObject {
   KeyboardButton({required this.text, required this.type});
 
-  /// text Text of the button
+  /// [text] Text of the button
   final String text;
 
-  /// type Type of the button
+  /// [type] Type of the button
   final KeyboardButtonType type;
 
   static const String CONSTRUCTOR = 'keyboardButton';

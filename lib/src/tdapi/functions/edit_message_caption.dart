@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Edits the message content caption. Returns the edited message after the edit is completed on the server side
 class EditMessageCaption extends TdFunction {
   EditMessageCaption(
@@ -9,16 +8,16 @@ class EditMessageCaption extends TdFunction {
       required this.replyMarkup,
       required this.caption});
 
-  /// chat_id The chat the message belongs to
+  /// [chatId] The chat the message belongs to
   final int chatId;
 
-  /// message_id Identifier of the message
+  /// [messageId] Identifier of the message
   final int messageId;
 
-  /// reply_markup The new message reply markup; for bots only
+  /// [replyMarkup] The new message reply markup; for bots only
   final ReplyMarkup replyMarkup;
 
-  /// caption New message content caption; 0-GetOption("message_caption_length_max") characters
+  /// [caption] New message content caption; 0-GetOption("message_caption_length_max") characters
   final FormattedText caption;
 
   /// callback sign

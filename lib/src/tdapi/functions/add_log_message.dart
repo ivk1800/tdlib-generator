@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Adds a message to TDLib internal log. Can be called synchronously
 class AddLogMessage extends TdFunction {
   AddLogMessage({required this.verbosityLevel, required this.text});
 
-  /// verbosity_level The minimum verbosity level needed for the message to be logged, 0-1023
+  /// [verbosityLevel] The minimum verbosity level needed for the message to be logged, 0-1023
   final int verbosityLevel;
 
-  /// text Text of a message to log
+  /// [text] Text of a message to log
   final String text;
 
   /// callback sign

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents information about a venue
 class InputInlineQueryResultVenue extends InputInlineQueryResult {
   InputInlineQueryResultVenue(
@@ -12,25 +11,25 @@ class InputInlineQueryResultVenue extends InputInlineQueryResult {
       ReplyMarkup? this.replyMarkup,
       required this.inputMessageContent});
 
-  /// id Unique identifier of the query result
+  /// [id] Unique identifier of the query result
   final String id;
 
-  /// venue Venue result
+  /// [venue] Venue result
   final Venue venue;
 
-  /// thumbnail_url URL of the result thumbnail, if it exists
+  /// [thumbnailUrl] URL of the result thumbnail, if it exists
   final String thumbnailUrl;
 
-  /// thumbnail_width Thumbnail width, if known
+  /// [thumbnailWidth] Thumbnail width, if known
   final int thumbnailWidth;
 
-  /// thumbnail_height Thumbnail height, if known
+  /// [thumbnailHeight] Thumbnail height, if known
   final int thumbnailHeight;
 
-  /// reply_markup The message reply markup. Must be of type replyMarkupInlineKeyboard or null
+  /// [replyMarkup] The message reply markup. Must be of type replyMarkupInlineKeyboard or null
   final ReplyMarkup? replyMarkup;
 
-  /// input_message_content The content of the message to be sent. Must be one of the following types: InputMessageText, InputMessageLocation, InputMessageVenue or InputMessageContact
+  /// [inputMessageContent] The content of the message to be sent. Must be one of the following types: InputMessageText, InputMessageLocation, InputMessageVenue or InputMessageContact
   final InputMessageContent inputMessageContent;
 
   static const String CONSTRUCTOR = 'inputInlineQueryResultVenue';

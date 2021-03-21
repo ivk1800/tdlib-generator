@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A mobile network
 class NetworkTypeMobile extends NetworkType {
   const NetworkTypeMobile();

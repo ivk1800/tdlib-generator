@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Edits an existing proxy server for network requests. Can be called before authorization
 class EditProxy extends TdFunction {
   EditProxy(
@@ -10,19 +9,19 @@ class EditProxy extends TdFunction {
       required this.enable,
       required this.type});
 
-  /// proxy_id Proxy identifier
+  /// [proxyId] Proxy identifier
   final int proxyId;
 
-  /// server Proxy server IP address
+  /// [server] Proxy server IP address
   final String server;
 
-  /// port Proxy server port
+  /// [port] Proxy server port
   final int port;
 
-  /// enable True, if the proxy should be enabled
+  /// [enable] True, if the proxy should be enabled
   final bool enable;
 
-  /// type Proxy type
+  /// [type] Proxy type
   final ProxyType type;
 
   /// callback sign

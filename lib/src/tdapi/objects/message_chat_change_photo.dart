@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// An updated chat photo
 class MessageChatChangePhoto extends MessageContent {
   MessageChatChangePhoto({required this.photo});
 
-  /// photo New chat photo
+  /// [photo] New chat photo
   final ChatPhoto photo;
 
   static const String CONSTRUCTOR = 'messageChatChangePhoto';

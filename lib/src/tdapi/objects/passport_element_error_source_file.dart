@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The file contains an error. The error will be considered resolved when the file changes
 class PassportElementErrorSourceFile extends PassportElementErrorSource {
   PassportElementErrorSourceFile({required this.fileIndex});
 
-  /// file_index Index of a file with the error
+  /// [fileIndex] Index of a file with the error
   final int fileIndex;
 
   static const String CONSTRUCTOR = 'passportElementErrorSourceFile';

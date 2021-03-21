@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Describes the type of a URL linking to an internal Telegram entity
 abstract class TMeUrlType extends TdObject {
   const TMeUrlType();

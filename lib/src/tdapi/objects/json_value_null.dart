@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a null JSON value
 class JsonValueNull extends JsonValue {
   const JsonValueNull();

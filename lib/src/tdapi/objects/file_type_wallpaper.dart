@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The file is a wallpaper or a background pattern
 class FileTypeWallpaper extends FileType {
   const FileTypeWallpaper();

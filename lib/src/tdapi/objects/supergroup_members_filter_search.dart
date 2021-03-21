@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Used to search for supergroup or channel members via a (string) query
 class SupergroupMembersFilterSearch extends SupergroupMembersFilter {
   SupergroupMembersFilterSearch({required this.query});
 
-  /// query Query to search for
+  /// [query] Query to search for
   final String query;
 
   static const String CONSTRUCTOR = 'supergroupMembersFilterSearch';

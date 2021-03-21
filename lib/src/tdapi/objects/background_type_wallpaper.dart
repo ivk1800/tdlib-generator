@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A wallpaper in JPEG format
 class BackgroundTypeWallpaper extends BackgroundType {
   BackgroundTypeWallpaper({required this.isBlurred, required this.isMoving});
 
-  /// is_blurred True, if the wallpaper must be downscaled to fit in 450x450 square and then box-blurred with radius 12
+  /// [isBlurred] True, if the wallpaper must be downscaled to fit in 450x450 square and then box-blurred with radius 12
   final bool isBlurred;
 
-  /// is_moving True, if the background needs to be slightly moved when device is tilted
+  /// [isMoving] True, if the background needs to be slightly moved when device is tilted
   final bool isMoving;
 
   static const String CONSTRUCTOR = 'backgroundTypeWallpaper';

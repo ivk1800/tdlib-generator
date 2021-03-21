@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Creates a new basic group and sends a corresponding messageBasicGroupChatCreate. Returns the newly created chat
 class CreateNewBasicGroupChat extends TdFunction {
   CreateNewBasicGroupChat({required this.userIds, required this.title});
 
-  /// user_ids Identifiers of users to be added to the basic group
+  /// [userIds] Identifiers of users to be added to the basic group
   final List<int> userIds;
 
-  /// title Title of the new basic group; 1-128 characters
+  /// [title] Title of the new basic group; 1-128 characters
   final String title;
 
   /// callback sign

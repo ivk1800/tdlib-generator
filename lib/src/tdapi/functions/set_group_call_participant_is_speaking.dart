@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Informs TDLib that a group call participant speaking state has changed
 class SetGroupCallParticipantIsSpeaking extends TdFunction {
   SetGroupCallParticipantIsSpeaking(
@@ -8,13 +7,13 @@ class SetGroupCallParticipantIsSpeaking extends TdFunction {
       required this.source,
       required this.isSpeaking});
 
-  /// group_call_id Group call identifier
+  /// [groupCallId] Group call identifier
   final int groupCallId;
 
-  /// source Group call participant's synchronization source identifier, or 0 for the current user
+  /// [source] Group call participant's synchronization source identifier, or 0 for the current user
   final int source;
 
-  /// is_speaking True, if the user is speaking
+  /// [isSpeaking] True, if the user is speaking
   final bool isSpeaking;
 
   /// callback sign

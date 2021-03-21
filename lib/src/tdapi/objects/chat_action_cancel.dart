@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The user has cancelled the previous action
 class ChatActionCancel extends ChatAction {
   const ChatActionCancel();

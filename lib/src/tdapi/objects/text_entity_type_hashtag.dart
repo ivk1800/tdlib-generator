@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A hashtag text, beginning with "#"
 class TextEntityTypeHashtag extends TextEntityType {
   const TextEntityTypeHashtag();

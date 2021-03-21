@@ -1,15 +1,14 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The list of suggested to the user actions has changed
 class UpdateSuggestedActions extends Update {
   UpdateSuggestedActions(
       {required this.addedActions, required this.removedActions});
 
-  /// added_actions Added suggested actions
+  /// [addedActions] Added suggested actions
   final List<SuggestedAction> addedActions;
 
-  /// removed_actions Removed suggested actions
+  /// [removedActions] Removed suggested actions
   final List<SuggestedAction> removedActions;
 
   static const String CONSTRUCTOR = 'updateSuggestedActions';

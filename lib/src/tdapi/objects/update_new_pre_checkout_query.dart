@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A new incoming pre-checkout query; for bots only. Contains full information about a checkout
 class UpdateNewPreCheckoutQuery extends Update {
   UpdateNewPreCheckoutQuery(
@@ -12,25 +11,25 @@ class UpdateNewPreCheckoutQuery extends Update {
       required this.shippingOptionId,
       OrderInfo? this.orderInfo});
 
-  /// id Unique query identifier
+  /// [id] Unique query identifier
   final int id;
 
-  /// sender_user_id Identifier of the user who sent the query
+  /// [senderUserId] Identifier of the user who sent the query
   final int senderUserId;
 
-  /// currency Currency for the product price
+  /// [currency] Currency for the product price
   final String currency;
 
-  /// total_amount Total price for the product, in the minimal quantity of the currency
+  /// [totalAmount] Total price for the product, in the minimal quantity of the currency
   final int totalAmount;
 
-  /// invoice_payload Invoice payload
+  /// [invoicePayload] Invoice payload
   final String invoicePayload;
 
-  /// shipping_option_id Identifier of a shipping option chosen by the user; may be empty if not applicable
+  /// [shippingOptionId] Identifier of a shipping option chosen by the user; may be empty if not applicable
   final String shippingOptionId;
 
-  /// order_info Information about the order; may be null
+  /// [orderInfo] Information about the order; may be null
   final OrderInfo? orderInfo;
 
   static const String CONSTRUCTOR = 'updateNewPreCheckoutQuery';

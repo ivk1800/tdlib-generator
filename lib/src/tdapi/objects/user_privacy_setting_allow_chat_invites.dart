@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A privacy setting for managing whether the user can be invited to chats
 class UserPrivacySettingAllowChatInvites extends UserPrivacySetting {
   const UserPrivacySettingAllowChatInvites();

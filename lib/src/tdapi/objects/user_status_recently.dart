@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The user was online recently
 class UserStatusRecently extends UserStatus {
   const UserStatusRecently();

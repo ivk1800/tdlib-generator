@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// File with the date it was uploaded
 class DatedFile extends TdObject {
   DatedFile({required this.file, required this.date});
 
-  /// file The file
+  /// [file] The file
   final File file;
 
-  /// date Point in time (Unix timestamp) when the file was uploaded
+  /// [date] Point in time (Unix timestamp) when the file was uploaded
   final int date;
 
   static const String CONSTRUCTOR = 'datedFile';

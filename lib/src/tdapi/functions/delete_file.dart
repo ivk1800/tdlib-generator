@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Deletes a file from the TDLib file cache
 class DeleteFile extends TdFunction {
   DeleteFile({required this.fileId});
 
-  /// file_id Identifier of the file to delete
+  /// [fileId] Identifier of the file to delete
   final int fileId;
 
   /// callback sign

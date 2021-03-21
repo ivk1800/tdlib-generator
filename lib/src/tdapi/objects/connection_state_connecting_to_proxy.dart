@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Currently establishing a connection with a proxy server
 class ConnectionStateConnectingToProxy extends ConnectionState {
   const ConnectionStateConnectingToProxy();

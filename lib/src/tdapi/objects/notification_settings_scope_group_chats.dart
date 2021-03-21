@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Notification settings applied to all basic groups and supergroups when the corresponding chat setting has a default value
 class NotificationSettingsScopeGroupChats extends NotificationSettingsScope {
   const NotificationSettingsScopeGroupChats();

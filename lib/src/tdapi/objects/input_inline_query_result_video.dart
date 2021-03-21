@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a link to a page containing an embedded video player or a video file
 class InputInlineQueryResultVideo extends InputInlineQueryResult {
   InputInlineQueryResultVideo(
@@ -16,37 +15,37 @@ class InputInlineQueryResultVideo extends InputInlineQueryResult {
       ReplyMarkup? this.replyMarkup,
       required this.inputMessageContent});
 
-  /// id Unique identifier of the query result
+  /// [id] Unique identifier of the query result
   final String id;
 
-  /// title Title of the result
+  /// [title] Title of the result
   final String title;
 
-  /// param_description A short description of the result, if known
+  /// param_[description] A short description of the result, if known
   final String description;
 
-  /// thumbnail_url The URL of the video thumbnail (JPEG), if it exists
+  /// [thumbnailUrl] The URL of the video thumbnail (JPEG), if it exists
   final String thumbnailUrl;
 
-  /// video_url URL of the embedded video player or video file
+  /// [videoUrl] URL of the embedded video player or video file
   final String videoUrl;
 
-  /// mime_type MIME type of the content of the video URL, only "text/html" or "video/mp4" are currently supported
+  /// [mimeType] MIME type of the content of the video URL, only "text/html" or "video/mp4" are currently supported
   final String mimeType;
 
-  /// video_width Width of the video
+  /// [videoWidth] Width of the video
   final int videoWidth;
 
-  /// video_height Height of the video
+  /// [videoHeight] Height of the video
   final int videoHeight;
 
-  /// video_duration Video duration, in seconds
+  /// [videoDuration] Video duration, in seconds
   final int videoDuration;
 
-  /// reply_markup The message reply markup. Must be of type replyMarkupInlineKeyboard or null
+  /// [replyMarkup] The message reply markup. Must be of type replyMarkupInlineKeyboard or null
   final ReplyMarkup? replyMarkup;
 
-  /// input_message_content The content of the message to be sent. Must be one of the following types: InputMessageText, InputMessageVideo, InputMessageLocation, InputMessageVenue or InputMessageContact
+  /// [inputMessageContent] The content of the message to be sent. Must be one of the following types: InputMessageText, InputMessageVideo, InputMessageLocation, InputMessageVenue or InputMessageContact
   final InputMessageContent inputMessageContent;
 
   static const String CONSTRUCTOR = 'inputInlineQueryResultVideo';

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Describes a gradient fill of a background
 class BackgroundFillGradient extends BackgroundFill {
   BackgroundFillGradient(
@@ -8,13 +7,13 @@ class BackgroundFillGradient extends BackgroundFill {
       required this.bottomColor,
       required this.rotationAngle});
 
-  /// top_color A top color of the background in the RGB24 format
+  /// [topColor] A top color of the background in the RGB24 format
   final int topColor;
 
-  /// bottom_color A bottom color of the background in the RGB24 format
+  /// [bottomColor] A bottom color of the background in the RGB24 format
   final int bottomColor;
 
-  /// rotation_angle Clockwise rotation angle of the gradient, in degrees; 0-359. Should be always divisible by 45
+  /// [rotationAngle] Clockwise rotation angle of the gradient, in degrees; 0-359. Should be always divisible by 45
   final int rotationAngle;
 
   static const String CONSTRUCTOR = 'backgroundFillGradient';

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a link to an animated GIF or an animated (i.e. without sound) H.264/MPEG-4 AVC video
 class InputInlineQueryResultAnimation extends InputInlineQueryResult {
   InputInlineQueryResultAnimation(
@@ -16,37 +15,37 @@ class InputInlineQueryResultAnimation extends InputInlineQueryResult {
       ReplyMarkup? this.replyMarkup,
       required this.inputMessageContent});
 
-  /// id Unique identifier of the query result
+  /// [id] Unique identifier of the query result
   final String id;
 
-  /// title Title of the query result
+  /// [title] Title of the query result
   final String title;
 
-  /// thumbnail_url URL of the result thumbnail (JPEG, GIF, or MPEG4), if it exists
+  /// [thumbnailUrl] URL of the result thumbnail (JPEG, GIF, or MPEG4), if it exists
   final String thumbnailUrl;
 
-  /// thumbnail_mime_type MIME type of the video thumbnail. If non-empty, must be one of "image/jpeg", "image/gif" and "video/mp4"
+  /// [thumbnailMimeType] MIME type of the video thumbnail. If non-empty, must be one of "image/jpeg", "image/gif" and "video/mp4"
   final String thumbnailMimeType;
 
-  /// video_url The URL of the video file (file size must not exceed 1MB)
+  /// [videoUrl] The URL of the video file (file size must not exceed 1MB)
   final String videoUrl;
 
-  /// video_mime_type MIME type of the video file. Must be one of "image/gif" and "video/mp4"
+  /// [videoMimeType] MIME type of the video file. Must be one of "image/gif" and "video/mp4"
   final String videoMimeType;
 
-  /// video_duration Duration of the video, in seconds
+  /// [videoDuration] Duration of the video, in seconds
   final int videoDuration;
 
-  /// video_width Width of the video
+  /// [videoWidth] Width of the video
   final int videoWidth;
 
-  /// video_height Height of the video
+  /// [videoHeight] Height of the video
   final int videoHeight;
 
-  /// reply_markup The message reply markup. Must be of type replyMarkupInlineKeyboard or null
+  /// [replyMarkup] The message reply markup. Must be of type replyMarkupInlineKeyboard or null
   final ReplyMarkup? replyMarkup;
 
-  /// input_message_content The content of the message to be sent. Must be one of the following types: InputMessageText, InputMessageAnimation, InputMessageLocation, InputMessageVenue or InputMessageContact
+  /// [inputMessageContent] The content of the message to be sent. Must be one of the following types: InputMessageText, InputMessageAnimation, InputMessageLocation, InputMessageVenue or InputMessageContact
   final InputMessageContent inputMessageContent;
 
   static const String CONSTRUCTOR = 'inputInlineQueryResultAnimation';

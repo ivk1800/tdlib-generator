@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains a caption of an instant view web page block, consisting of a text and a trailing credit
 class PageBlockCaption extends TdObject {
   PageBlockCaption({required this.text, required this.credit});
 
-  /// text Content of the caption
+  /// [text] Content of the caption
   final RichText text;
 
-  /// credit Block credit (like HTML tag <cite>)
+  /// [credit] Block credit (like HTML tag <cite>)
   final RichText credit;
 
   static const String CONSTRUCTOR = 'pageBlockCaption';

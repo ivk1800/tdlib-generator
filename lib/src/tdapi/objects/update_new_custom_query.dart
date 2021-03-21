@@ -1,18 +1,17 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A new incoming query; for bots only
 class UpdateNewCustomQuery extends Update {
   UpdateNewCustomQuery(
       {required this.id, required this.data, required this.timeout});
 
-  /// id The query identifier
+  /// [id] The query identifier
   final int id;
 
-  /// data JSON-serialized query data
+  /// [data] JSON-serialized query data
   final String data;
 
-  /// timeout Query timeout
+  /// [timeout] Query timeout
   final int timeout;
 
   static const String CONSTRUCTOR = 'updateNewCustomQuery';

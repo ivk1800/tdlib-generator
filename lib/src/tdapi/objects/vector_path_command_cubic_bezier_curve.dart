@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A cubic B
 class VectorPathCommandCubicBezierCurve extends VectorPathCommand {
   VectorPathCommandCubicBezierCurve(
@@ -8,13 +7,13 @@ class VectorPathCommandCubicBezierCurve extends VectorPathCommand {
       required this.endControlPoint,
       required this.endPoint});
 
-  /// null
+  ///
   final Point startControlPoint;
 
-  /// null
+  ///
   final Point endControlPoint;
 
-  /// null
+  ///
   final Point endPoint;
 
   static const String CONSTRUCTOR = 'vectorPathCommandCubicBezierCurve';

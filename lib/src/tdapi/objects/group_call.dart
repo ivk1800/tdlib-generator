@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Describes a group call
 class GroupCall extends TdObject {
   GroupCall(
@@ -17,40 +16,40 @@ class GroupCall extends TdObject {
       required this.allowedChangeMuteNewParticipants,
       required this.duration});
 
-  /// id Group call identifier
+  /// [id] Group call identifier
   final int id;
 
-  /// is_active True, if the call is active
+  /// [isActive] True, if the call is active
   final bool isActive;
 
-  /// is_joined True, if the call is joined
+  /// [isJoined] True, if the call is joined
   final bool isJoined;
 
-  /// need_rejoin True, if user was kicked from the call because of network loss and the call needs to be rejoined
+  /// [needRejoin] True, if user was kicked from the call because of network loss and the call needs to be rejoined
   final bool needRejoin;
 
-  /// can_unmute_self True, if the current user can unmute themself
+  /// [canUnmuteSelf] True, if the current user can unmute themself
   final bool canUnmuteSelf;
 
-  /// can_be_managed True, if the current user can manage the group call
+  /// [canBeManaged] True, if the current user can manage the group call
   final bool canBeManaged;
 
-  /// participant_count Number of participants in the group call
+  /// [participantCount] Number of participants in the group call
   final int participantCount;
 
-  /// loaded_all_participants True, if all group call participants are loaded
+  /// [loadedAllParticipants] True, if all group call participants are loaded
   final bool loadedAllParticipants;
 
-  /// recent_speakers Recently speaking users in the group call
+  /// [recentSpeakers] Recently speaking users in the group call
   final List<GroupCallRecentSpeaker> recentSpeakers;
 
-  /// mute_new_participants True, if only group call administrators can unmute new participants
+  /// [muteNewParticipants] True, if only group call administrators can unmute new participants
   final bool muteNewParticipants;
 
-  /// allowed_change_mute_new_participants True, if group call administrators can enable or disable mute_new_participants setting
+  /// [allowedChangeMuteNewParticipants] True, if group call administrators can enable or disable mute_new_participants setting
   final bool allowedChangeMuteNewParticipants;
 
-  /// duration Call duration; for ended calls only
+  /// [duration] Call duration; for ended calls only
   final int duration;
 
   static const String CONSTRUCTOR = 'groupCall';

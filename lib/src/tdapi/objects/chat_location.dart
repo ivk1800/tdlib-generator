@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a location to which a chat is connected
 class ChatLocation extends TdObject {
   ChatLocation({required this.location, required this.address});
 
-  /// location The location
+  /// [location] The location
   final Location location;
 
-  /// address Location address; 1-64 characters, as defined by the chat owner
+  /// [address] Location address; 1-64 characters, as defined by the chat owner
   final String address;
 
   static const String CONSTRUCTOR = 'chatLocation';

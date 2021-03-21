@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns information about a message
 class GetMessage extends TdFunction {
   GetMessage({required this.chatId, required this.messageId});
 
-  /// chat_id Identifier of the chat the message belongs to
+  /// [chatId] Identifier of the chat the message belongs to
   final int chatId;
 
-  /// message_id Identifier of the message to get
+  /// [messageId] Identifier of the message to get
   final int messageId;
 
   /// callback sign

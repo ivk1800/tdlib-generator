@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Describes a video note. The video must be equal in width and height, cropped to a circle, and stored in MPEG4 format
 class VideoNote extends TdObject {
   VideoNote(
@@ -10,19 +9,19 @@ class VideoNote extends TdObject {
       Thumbnail? this.thumbnail,
       required this.video});
 
-  /// duration Duration of the video, in seconds; as defined by the sender
+  /// [duration] Duration of the video, in seconds; as defined by the sender
   final int duration;
 
-  /// length Video width and height; as defined by the sender
+  /// [length] Video width and height; as defined by the sender
   final int length;
 
-  /// minithumbnail Video minithumbnail; may be null
+  /// [minithumbnail] Video minithumbnail; may be null
   final Minithumbnail? minithumbnail;
 
-  /// thumbnail Video thumbnail in JPEG format; as defined by the sender; may be null
+  /// [thumbnail] Video thumbnail in JPEG format; as defined by the sender; may be null
   final Thumbnail? thumbnail;
 
-  /// video File containing the video
+  /// [video] File containing the video
   final File video;
 
   static const String CONSTRUCTOR = 'videoNote';

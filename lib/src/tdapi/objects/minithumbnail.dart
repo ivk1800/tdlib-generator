@@ -1,18 +1,17 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Thumbnail image of a very poor quality and low resolution
 class Minithumbnail extends TdObject {
   Minithumbnail(
       {required this.width, required this.height, required this.data});
 
-  /// width Thumbnail width, usually doesn't exceed 40
+  /// [width] Thumbnail width, usually doesn't exceed 40
   final int width;
 
-  /// height Thumbnail height, usually doesn't exceed 40
+  /// [height] Thumbnail height, usually doesn't exceed 40
   final int height;
 
-  /// data The thumbnail in JPEG format
+  /// [data] The thumbnail in JPEG format
   final String data;
 
   static const String CONSTRUCTOR = 'minithumbnail';

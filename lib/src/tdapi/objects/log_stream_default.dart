@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The log is written to stderr or an OS specific log
 class LogStreamDefault extends LogStream {
   const LogStreamDefault();

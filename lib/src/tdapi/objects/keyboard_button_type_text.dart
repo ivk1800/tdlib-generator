@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A simple button, with text that should be sent when the button is pressed
 class KeyboardButtonTypeText extends KeyboardButtonType {
   const KeyboardButtonTypeText();

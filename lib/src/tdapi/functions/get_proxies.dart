@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns list of proxies that are currently set up. Can be called before authorization
 class GetProxies extends TdFunction {
   GetProxies();

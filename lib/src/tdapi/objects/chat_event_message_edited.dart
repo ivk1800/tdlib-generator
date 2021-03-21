@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A message was edited
 class ChatEventMessageEdited extends ChatEventAction {
   ChatEventMessageEdited({required this.oldMessage, required this.newMessage});
 
-  /// old_message The original message before the edit
+  /// [oldMessage] The original message before the edit
   final Message oldMessage;
 
-  /// new_message The message after it was edited
+  /// [newMessage] The message after it was edited
   final Message newMessage;
 
   static const String CONSTRUCTOR = 'chatEventMessageEdited';

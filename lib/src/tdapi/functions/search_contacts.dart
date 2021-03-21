@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Searches for the specified query in the first names, last names and usernames of the known user contacts
 class SearchContacts extends TdFunction {
   SearchContacts({required this.query, required this.limit});
 
-  /// query Query to search for; may be empty to return all contacts
+  /// [query] Query to search for; may be empty to return all contacts
   final String query;
 
-  /// limit The maximum number of users to be returned
+  /// [limit] The maximum number of users to be returned
   final int limit;
 
   /// callback sign

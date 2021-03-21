@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a document
 class InlineQueryResultDocument extends InlineQueryResult {
   InlineQueryResultDocument(
@@ -9,16 +8,16 @@ class InlineQueryResultDocument extends InlineQueryResult {
       required this.title,
       required this.description});
 
-  /// id Unique identifier of the query result
+  /// [id] Unique identifier of the query result
   final String id;
 
-  /// document Document
+  /// [document] Document
   final Document document;
 
-  /// title Document title
+  /// [title] Document title
   final String title;
 
-  /// param_description Document description
+  /// param_[description] Document description
   final String description;
 
   static const String CONSTRUCTOR = 'inlineQueryResultDocument';

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Sets the result of an inline query; for bots only
 class AnswerInlineQuery extends TdFunction {
   AnswerInlineQuery(
@@ -12,25 +11,25 @@ class AnswerInlineQuery extends TdFunction {
       required this.switchPmText,
       required this.switchPmParameter});
 
-  /// inline_query_id Identifier of the inline query
+  /// [inlineQueryId] Identifier of the inline query
   final int inlineQueryId;
 
-  /// is_personal True, if the result of the query can be cached for the specified user
+  /// [isPersonal] True, if the result of the query can be cached for the specified user
   final bool isPersonal;
 
-  /// results The results of the query
+  /// [results] The results of the query
   final List<InputInlineQueryResult> results;
 
-  /// cache_time Allowed time to cache the results of the query, in seconds
+  /// [cacheTime] Allowed time to cache the results of the query, in seconds
   final int cacheTime;
 
-  /// next_offset Offset for the next inline query; pass an empty string if there are no more results
+  /// [nextOffset] Offset for the next inline query; pass an empty string if there are no more results
   final String nextOffset;
 
-  /// switch_pm_text If non-empty, this text should be shown on the button that opens a private chat with the bot and sends a start message to the bot with the parameter switch_pm_parameter
+  /// [switchPmText] If non-empty, this text should be shown on the button that opens a private chat with the bot and sends a start message to the bot with the parameter switch_pm_parameter
   final String switchPmText;
 
-  /// switch_pm_parameter The parameter for the bot start message
+  /// [switchPmParameter] The parameter for the bot start message
   final String switchPmParameter;
 
   /// callback sign

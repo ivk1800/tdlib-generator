@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns information about a supergroup or a channel by its identifier. This is an offline request if the current user is not a bot
 class GetSupergroup extends TdFunction {
   GetSupergroup({required this.supergroupId});
 
-  /// supergroup_id Supergroup or channel identifier
+  /// [supergroupId] Supergroup or channel identifier
   final int supergroupId;
 
   /// callback sign

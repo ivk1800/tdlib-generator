@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a thumbnail
 class Thumbnail extends TdObject {
   Thumbnail(
@@ -9,16 +8,16 @@ class Thumbnail extends TdObject {
       required this.height,
       required this.file});
 
-  /// format Thumbnail format
+  /// [format] Thumbnail format
   final ThumbnailFormat format;
 
-  /// width Thumbnail width
+  /// [width] Thumbnail width
   final int width;
 
-  /// height Thumbnail height
+  /// [height] Thumbnail height
   final int height;
 
-  /// file The thumbnail
+  /// [file] The thumbnail
   final File file;
 
   static const String CONSTRUCTOR = 'thumbnail';

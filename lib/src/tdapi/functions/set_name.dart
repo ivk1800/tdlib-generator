@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Changes the first and last name of the current user
 class SetName extends TdFunction {
   SetName({required this.firstName, required this.lastName});
 
-  /// first_name The new value of the first name for the user; 1-64 characters
+  /// [firstName] The new value of the first name for the user; 1-64 characters
   final String firstName;
 
-  /// last_name The new value of the optional last name for the user; 0-64 characters
+  /// [lastName] The new value of the optional last name for the user; 0-64 characters
   final String lastName;
 
   /// callback sign

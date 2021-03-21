@@ -1,15 +1,14 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A chat's has_scheduled_messages field has changed
 class UpdateChatHasScheduledMessages extends Update {
   UpdateChatHasScheduledMessages(
       {required this.chatId, required this.hasScheduledMessages});
 
-  /// chat_id Chat identifier
+  /// [chatId] Chat identifier
   final int chatId;
 
-  /// has_scheduled_messages New value of has_scheduled_messages
+  /// [hasScheduledMessages] New value of has_scheduled_messages
   final bool hasScheduledMessages;
 
   static const String CONSTRUCTOR = 'updateChatHasScheduledMessages';

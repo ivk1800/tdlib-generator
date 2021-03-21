@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A video message
 class PushMessageContentVideo extends PushMessageContent {
   PushMessageContentVideo(
@@ -9,16 +8,16 @@ class PushMessageContentVideo extends PushMessageContent {
       required this.isSecret,
       required this.isPinned});
 
-  /// video Message content; may be null
+  /// [video] Message content; may be null
   final Video? video;
 
-  /// caption Video caption
+  /// [caption] Video caption
   final String caption;
 
-  /// is_secret True, if the video is secret
+  /// [isSecret] True, if the video is secret
   final bool isSecret;
 
-  /// is_pinned True, if the message is a pinned message with the specified content
+  /// [isPinned] True, if the message is a pinned message with the specified content
   final bool isPinned;
 
   static const String CONSTRUCTOR = 'pushMessageContentVideo';

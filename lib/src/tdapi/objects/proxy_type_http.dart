@@ -1,18 +1,17 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A HTTP transparent proxy server
 class ProxyTypeHttp extends ProxyType {
   ProxyTypeHttp(
       {required this.username, required this.password, required this.httpOnly});
 
-  /// username Username for logging in; may be empty
+  /// [username] Username for logging in; may be empty
   final String username;
 
-  /// password Password for logging in; may be empty
+  /// [password] Password for logging in; may be empty
   final String password;
 
-  /// http_only Pass true if the proxy supports only HTTP requests and doesn't support transparent TCP connections via HTTP CONNECT method
+  /// [httpOnly] Pass true if the proxy supports only HTTP requests and doesn't support transparent TCP connections via HTTP CONNECT method
   final bool httpOnly;
 
   static const String CONSTRUCTOR = 'proxyTypeHttp';

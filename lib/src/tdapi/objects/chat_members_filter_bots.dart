@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Returns bot members of the chat
 class ChatMembersFilterBots extends ChatMembersFilter {
   const ChatMembersFilterBots();

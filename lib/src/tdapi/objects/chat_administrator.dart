@@ -1,18 +1,17 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains information about a chat administrator
 class ChatAdministrator extends TdObject {
   ChatAdministrator(
       {required this.userId, required this.customTitle, required this.isOwner});
 
-  /// user_id User identifier of the administrator
+  /// [userId] User identifier of the administrator
   final int userId;
 
-  /// custom_title Custom title of the administrator
+  /// [customTitle] Custom title of the administrator
   final String customTitle;
 
-  /// is_owner True, if the user is the owner of the chat
+  /// [isOwner] True, if the user is the owner of the chat
   final bool isOwner;
 
   static const String CONSTRUCTOR = 'chatAdministrator';

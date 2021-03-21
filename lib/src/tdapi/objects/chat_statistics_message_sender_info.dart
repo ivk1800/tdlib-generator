@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains statistics about messages sent by a user
 class ChatStatisticsMessageSenderInfo extends TdObject {
   ChatStatisticsMessageSenderInfo(
@@ -8,13 +7,13 @@ class ChatStatisticsMessageSenderInfo extends TdObject {
       required this.sentMessageCount,
       required this.averageCharacterCount});
 
-  /// user_id User identifier
+  /// [userId] User identifier
   final int userId;
 
-  /// sent_message_count Number of sent messages
+  /// [sentMessageCount] Number of sent messages
   final int sentMessageCount;
 
-  /// average_character_count Average number of characters in sent messages
+  /// [averageCharacterCount] Average number of characters in sent messages
   final int averageCharacterCount;
 
   static const String CONSTRUCTOR = 'chatStatisticsMessageSenderInfo';

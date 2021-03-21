@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Describes a venue
 class Venue extends TdObject {
   Venue(
@@ -11,22 +10,22 @@ class Venue extends TdObject {
       required this.id,
       required this.type});
 
-  /// location Venue location; as defined by the sender
+  /// [location] Venue location; as defined by the sender
   final Location location;
 
-  /// title Venue name; as defined by the sender
+  /// [title] Venue name; as defined by the sender
   final String title;
 
-  /// address Venue address; as defined by the sender
+  /// [address] Venue address; as defined by the sender
   final String address;
 
-  /// provider Provider of the venue database; as defined by the sender. Currently only "foursquare" and "gplaces" (Google Places) need to be supported
+  /// [provider] Provider of the venue database; as defined by the sender. Currently only "foursquare" and "gplaces" (Google Places) need to be supported
   final String provider;
 
-  /// id Identifier of the venue in the provider database; as defined by the sender
+  /// [id] Identifier of the venue in the provider database; as defined by the sender
   final String id;
 
-  /// type Type of the venue in the provider database; as defined by the sender
+  /// [type] Type of the venue in the provider database; as defined by the sender
   final String type;
 
   static const String CONSTRUCTOR = 'venue';

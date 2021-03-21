@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Sends a simple network request to the Telegram servers via proxy; for testing only. Can be called before authorization
 class TestProxy extends TdFunction {
   TestProxy(
@@ -10,19 +9,19 @@ class TestProxy extends TdFunction {
       required this.dcId,
       required this.timeout});
 
-  /// server Proxy server IP address
+  /// [server] Proxy server IP address
   final String server;
 
-  /// port Proxy server port
+  /// [port] Proxy server port
   final int port;
 
-  /// type Proxy type
+  /// [type] Proxy type
   final ProxyType type;
 
-  /// dc_id Identifier of a datacenter, with which to test connection
+  /// [dcId] Identifier of a datacenter, with which to test connection
   final int dcId;
 
-  /// timeout The maximum overall timeout for the request
+  /// [timeout] The maximum overall timeout for the request
   final double timeout;
 
   /// callback sign

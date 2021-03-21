@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a list of proxy servers
 class Proxies extends TdObject {
   Proxies({required this.proxies});
 
-  /// proxies List of proxy servers
+  /// [proxies] List of proxy servers
   final List<Proxy> proxies;
 
   static const String CONSTRUCTOR = 'proxies';

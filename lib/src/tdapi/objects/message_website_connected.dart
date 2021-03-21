@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The current user has connected a website by logging in using Telegram Login Widget on it
 class MessageWebsiteConnected extends MessageContent {
   MessageWebsiteConnected({required this.domainName});
 
-  /// domain_name Domain name of the connected website
+  /// [domainName] Domain name of the connected website
   final String domainName;
 
   static const String CONSTRUCTOR = 'messageWebsiteConnected';

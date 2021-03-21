@@ -1,18 +1,17 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns information about a button of type inlineKeyboardButtonTypeLoginUrl. The method needs to be called when the user presses the button
 class GetLoginUrlInfo extends TdFunction {
   GetLoginUrlInfo(
       {required this.chatId, required this.messageId, required this.buttonId});
 
-  /// chat_id Chat identifier of the message with the button
+  /// [chatId] Chat identifier of the message with the button
   final int chatId;
 
-  /// message_id Message identifier of the message with the button
+  /// [messageId] Message identifier of the message with the button
   final int messageId;
 
-  /// button_id Button identifier
+  /// [buttonId] Button identifier
   final int buttonId;
 
   /// callback sign

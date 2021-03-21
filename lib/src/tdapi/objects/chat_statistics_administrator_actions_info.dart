@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains statistics about administrator actions done by a user
 class ChatStatisticsAdministratorActionsInfo extends TdObject {
   ChatStatisticsAdministratorActionsInfo(
@@ -9,16 +8,16 @@ class ChatStatisticsAdministratorActionsInfo extends TdObject {
       required this.bannedUserCount,
       required this.restrictedUserCount});
 
-  /// user_id Administrator user identifier
+  /// [userId] Administrator user identifier
   final int userId;
 
-  /// deleted_message_count Number of messages deleted by the administrator
+  /// [deletedMessageCount] Number of messages deleted by the administrator
   final int deletedMessageCount;
 
-  /// banned_user_count Number of users banned by the administrator
+  /// [bannedUserCount] Number of users banned by the administrator
   final int bannedUserCount;
 
-  /// restricted_user_count Number of users restricted by the administrator
+  /// [restrictedUserCount] Number of users restricted by the administrator
   final int restrictedUserCount;
 
   static const String CONSTRUCTOR = 'chatStatisticsAdministratorActionsInfo';

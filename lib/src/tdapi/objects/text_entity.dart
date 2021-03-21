@@ -1,17 +1,16 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a part of the text that needs to be formatted in some unusual way
 class TextEntity extends TdObject {
   TextEntity({required this.offset, required this.length, required this.type});
 
-  /// offset Offset of the entity, in UTF-16 code units
+  /// [offset] Offset of the entity, in UTF-16 code units
   final int offset;
 
-  /// length Length of the entity, in UTF-16 code units
+  /// [length] Length of the entity, in UTF-16 code units
   final int length;
 
-  /// type Type of the entity
+  /// [type] Type of the entity
   final TextEntityType type;
 
   static const String CONSTRUCTOR = 'textEntity';

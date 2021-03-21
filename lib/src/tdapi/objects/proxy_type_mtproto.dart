@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// An MTProto proxy server
 class ProxyTypeMtproto extends ProxyType {
   ProxyTypeMtproto({required this.secret});
 
-  /// secret The proxy's secret in hexadecimal encoding
+  /// [secret] The proxy's secret in hexadecimal encoding
   final String secret;
 
   static const String CONSTRUCTOR = 'proxyTypeMtproto';

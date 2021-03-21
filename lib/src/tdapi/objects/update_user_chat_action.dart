@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// User activity in the chat has changed
 class UpdateUserChatAction extends Update {
   UpdateUserChatAction(
@@ -9,16 +8,16 @@ class UpdateUserChatAction extends Update {
       required this.userId,
       required this.action});
 
-  /// chat_id Chat identifier
+  /// [chatId] Chat identifier
   final int chatId;
 
-  /// message_thread_id If not 0, a message thread identifier in which the action was performed
+  /// [messageThreadId] If not 0, a message thread identifier in which the action was performed
   final int messageThreadId;
 
-  /// user_id Identifier of a user performing an action
+  /// [userId] Identifier of a user performing an action
   final int userId;
 
-  /// action The action description
+  /// [action] The action description
   final ChatAction action;
 
   static const String CONSTRUCTOR = 'updateUserChatAction';

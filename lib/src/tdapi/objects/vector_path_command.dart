@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Represents a vector path command
 abstract class VectorPathCommand extends TdObject {
   const VectorPathCommand();

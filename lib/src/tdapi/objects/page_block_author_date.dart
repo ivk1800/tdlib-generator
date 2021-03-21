@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The author and publishing date of a page
 class PageBlockAuthorDate extends PageBlock {
   PageBlockAuthorDate({required this.author, required this.publishDate});
 
-  /// author Author
+  /// [author] Author
   final RichText author;
 
-  /// publish_date Point in time (Unix timestamp) when the article was published; 0 if unknown
+  /// [publishDate] Point in time (Unix timestamp) when the article was published; 0 if unknown
   final int publishDate;
 
   static const String CONSTRUCTOR = 'pageBlockAuthorDate';

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// New chat members were invited to a group
 class PushMessageContentChatAddMembers extends PushMessageContent {
   PushMessageContentChatAddMembers(
@@ -8,13 +7,13 @@ class PushMessageContentChatAddMembers extends PushMessageContent {
       required this.isCurrentUser,
       required this.isReturned});
 
-  /// member_name Name of the added member
+  /// [memberName] Name of the added member
   final String memberName;
 
-  /// is_current_user True, if the current user was added to the group
+  /// [isCurrentUser] True, if the current user was added to the group
   final bool isCurrentUser;
 
-  /// is_returned True, if the user has returned to the group themself
+  /// [isReturned] True, if the user has returned to the group themself
   final bool isReturned;
 
   static const String CONSTRUCTOR = 'pushMessageContentChatAddMembers';

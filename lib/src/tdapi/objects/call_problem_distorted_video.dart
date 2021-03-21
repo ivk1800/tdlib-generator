@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The video was distorted
 class CallProblemDistortedVideo extends CallProblem {
   const CallProblemDistortedVideo();

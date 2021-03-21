@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A new incoming shipping query; for bots only. Only for invoices with flexible price
 class UpdateNewShippingQuery extends Update {
   UpdateNewShippingQuery(
@@ -9,16 +8,16 @@ class UpdateNewShippingQuery extends Update {
       required this.invoicePayload,
       required this.shippingAddress});
 
-  /// id Unique query identifier
+  /// [id] Unique query identifier
   final int id;
 
-  /// sender_user_id Identifier of the user who sent the query
+  /// [senderUserId] Identifier of the user who sent the query
   final int senderUserId;
 
-  /// invoice_payload Invoice payload
+  /// [invoicePayload] Invoice payload
   final String invoicePayload;
 
-  /// shipping_address User shipping address
+  /// [shippingAddress] User shipping address
   final Address shippingAddress;
 
   static const String CONSTRUCTOR = 'updateNewShippingQuery';

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Describes format of the thumbnail
 abstract class ThumbnailFormat extends TdObject {
   const ThumbnailFormat();

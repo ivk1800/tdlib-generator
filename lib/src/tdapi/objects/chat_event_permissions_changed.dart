@@ -1,15 +1,14 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The chat permissions was changed
 class ChatEventPermissionsChanged extends ChatEventAction {
   ChatEventPermissionsChanged(
       {required this.oldPermissions, required this.newPermissions});
 
-  /// old_permissions Previous chat permissions
+  /// [oldPermissions] Previous chat permissions
   final ChatPermissions oldPermissions;
 
-  /// new_permissions New chat permissions
+  /// [newPermissions] New chat permissions
   final ChatPermissions newPermissions;
 
   static const String CONSTRUCTOR = 'chatEventPermissionsChanged';

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A forwarded message
 class InputMessageForwarded extends InputMessageContent {
   InputMessageForwarded(
@@ -9,16 +8,16 @@ class InputMessageForwarded extends InputMessageContent {
       required this.inGameShare,
       required this.copyOptions});
 
-  /// from_chat_id Identifier for the chat this forwarded message came from
+  /// [fromChatId] Identifier for the chat this forwarded message came from
   final int fromChatId;
 
-  /// message_id Identifier of the message to forward
+  /// [messageId] Identifier of the message to forward
   final int messageId;
 
-  /// in_game_share True, if a game message should be shared within a launched game; applies only to game messages
+  /// [inGameShare] True, if a game message should be shared within a launched game; applies only to game messages
   final bool inGameShare;
 
-  /// copy_options Options to be used to copy content of the message without a link to the original message
+  /// [copyOptions] Options to be used to copy content of the message without a link to the original message
   final MessageCopyOptions copyOptions;
 
   static const String CONSTRUCTOR = 'inputMessageForwarded';

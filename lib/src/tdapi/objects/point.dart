@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A point on a Cartesian plane
 class Point extends TdObject {
   Point({required this.x, required this.y});
 
-  /// x The point's first coordinate
+  /// [x] The point's first coordinate
   final double x;
 
-  /// y The point's second coordinate
+  /// [y] The point's second coordinate
   final double y;
 
   static const String CONSTRUCTOR = 'point';

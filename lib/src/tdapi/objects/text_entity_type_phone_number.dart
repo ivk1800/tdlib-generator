@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A phone number
 class TextEntityTypePhoneNumber extends TextEntityType {
   const TextEntityTypePhoneNumber();

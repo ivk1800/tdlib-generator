@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains information about a language pack
 class LanguagePackInfo extends TdObject {
   LanguagePackInfo(
@@ -18,43 +17,43 @@ class LanguagePackInfo extends TdObject {
       required this.localStringCount,
       required this.translationUrl});
 
-  /// id Unique language pack identifier
+  /// [id] Unique language pack identifier
   final String id;
 
-  /// base_language_pack_id Identifier of a base language pack; may be empty. If a string is missed in the language pack, then it should be fetched from base language pack. Unsupported in custom language packs
+  /// [baseLanguagePackId] Identifier of a base language pack; may be empty. If a string is missed in the language pack, then it should be fetched from base language pack. Unsupported in custom language packs
   final String baseLanguagePackId;
 
-  /// name Language name
+  /// [name] Language name
   final String name;
 
-  /// native_name Name of the language in that language
+  /// [nativeName] Name of the language in that language
   final String nativeName;
 
-  /// plural_code A language code to be used to apply plural forms. See https://www.unicode.org/cldr/charts/latest/supplemental/language_plural_rules.html for more info
+  /// [pluralCode] A language code to be used to apply plural forms. See https://www.unicode.org/cldr/charts/latest/supplemental/language_plural_rules.html for more info
   final String pluralCode;
 
-  /// is_official True, if the language pack is official
+  /// [isOfficial] True, if the language pack is official
   final bool isOfficial;
 
-  /// is_rtl True, if the language pack strings are RTL
+  /// [isRtl] True, if the language pack strings are RTL
   final bool isRtl;
 
-  /// is_beta True, if the language pack is a beta language pack
+  /// [isBeta] True, if the language pack is a beta language pack
   final bool isBeta;
 
-  /// is_installed True, if the language pack is installed by the current user
+  /// [isInstalled] True, if the language pack is installed by the current user
   final bool isInstalled;
 
-  /// total_string_count Total number of non-deleted strings from the language pack
+  /// [totalStringCount] Total number of non-deleted strings from the language pack
   final int totalStringCount;
 
-  /// translated_string_count Total number of translated strings from the language pack
+  /// [translatedStringCount] Total number of translated strings from the language pack
   final int translatedStringCount;
 
-  /// local_string_count Total number of non-deleted strings from the language pack available locally
+  /// [localStringCount] Total number of non-deleted strings from the language pack available locally
   final int localStringCount;
 
-  /// translation_url Link to language translation interface; empty for custom local language packs
+  /// [translationUrl] Link to language translation interface; empty for custom local language packs
   final String translationUrl;
 
   static const String CONSTRUCTOR = 'languagePackInfo';

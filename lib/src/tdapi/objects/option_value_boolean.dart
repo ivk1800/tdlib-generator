@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a boolean option
 class OptionValueBoolean extends OptionValue {
   OptionValueBoolean({required this.value});
 
-  /// value The value of the option
+  /// [value] The value of the option
   final bool value;
 
   static const String CONSTRUCTOR = 'optionValueBoolean';

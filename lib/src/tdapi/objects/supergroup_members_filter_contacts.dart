@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Returns contacts of the user, which are members of the supergroup or channel
 class SupergroupMembersFilterContacts extends SupergroupMembersFilter {
   SupergroupMembersFilterContacts({required this.query});
 
-  /// query Query to search for
+  /// [query] Query to search for
   final String query;
 
   static const String CONSTRUCTOR = 'supergroupMembersFilterContacts';

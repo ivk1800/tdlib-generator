@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The payload for a general callback button
 class CallbackQueryPayloadData extends CallbackQueryPayload {
   CallbackQueryPayloadData({required this.data});
 
-  /// data Data that was attached to the callback button
+  /// [data] Data that was attached to the callback button
   final String data;
 
   static const String CONSTRUCTOR = 'callbackQueryPayloadData';

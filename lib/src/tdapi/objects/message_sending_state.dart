@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Contains information about the sending state of the message
 abstract class MessageSendingState extends TdObject {
   const MessageSendingState();

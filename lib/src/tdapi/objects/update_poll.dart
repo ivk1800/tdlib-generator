@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A poll was updated; for bots only
 class UpdatePoll extends Update {
   UpdatePoll({required this.poll});
 
-  /// poll New data about the poll
+  /// [poll] New data about the poll
   final Poll poll;
 
   static const String CONSTRUCTOR = 'updatePoll';

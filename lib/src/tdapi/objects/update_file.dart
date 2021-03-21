@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Information about a file was updated
 class UpdateFile extends Update {
   UpdateFile({required this.file});
 
-  /// file New data about the file
+  /// [file] New data about the file
   final File file;
 
   static const String CONSTRUCTOR = 'updateFile';

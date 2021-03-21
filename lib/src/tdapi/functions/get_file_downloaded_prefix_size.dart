@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns file downloaded prefix size from a given offset
 class GetFileDownloadedPrefixSize extends TdFunction {
   GetFileDownloadedPrefixSize({required this.fileId, required this.offset});
 
-  /// file_id Identifier of the file
+  /// [fileId] Identifier of the file
   final int fileId;
 
-  /// offset Offset from which downloaded prefix size should be calculated
+  /// [offset] Offset from which downloaded prefix size should be calculated
   final int offset;
 
   /// callback sign

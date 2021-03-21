@@ -1,18 +1,17 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A user in the chat came within proximity alert range
 class MessageProximityAlertTriggered extends MessageContent {
   MessageProximityAlertTriggered(
       {required this.traveler, required this.watcher, required this.distance});
 
-  /// traveler The user or chat, which triggered the proximity alert
+  /// [traveler] The user or chat, which triggered the proximity alert
   final MessageSender traveler;
 
-  /// watcher The user or chat, which subscribed for the proximity alert
+  /// [watcher] The user or chat, which subscribed for the proximity alert
   final MessageSender watcher;
 
-  /// distance The distance between the users
+  /// [distance] The distance between the users
   final int distance;
 
   static const String CONSTRUCTOR = 'messageProximityAlertTriggered';

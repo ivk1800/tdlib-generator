@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A Telegram call reflector
 class CallServerTypeTelegramReflector extends CallServerType {
   CallServerTypeTelegramReflector({required this.peerTag});
 
-  /// peer_tag A peer tag to be used with the reflector
+  /// [peerTag] A peer tag to be used with the reflector
   final String peerTag;
 
   static const String CONSTRUCTOR = 'callServerTypeTelegramReflector';

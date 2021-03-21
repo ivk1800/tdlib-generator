@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains information about a Telegram Passport authorization form that was requested
 class PassportAuthorizationForm extends TdObject {
   PassportAuthorizationForm(
@@ -8,13 +7,13 @@ class PassportAuthorizationForm extends TdObject {
       required this.requiredElements,
       required this.privacyPolicyUrl});
 
-  /// id Unique identifier of the authorization form
+  /// [id] Unique identifier of the authorization form
   final int id;
 
-  /// required_elements Information about the Telegram Passport elements that must be provided to complete the form
+  /// [requiredElements] Information about the Telegram Passport elements that must be provided to complete the form
   final List<PassportRequiredElement> requiredElements;
 
-  /// privacy_policy_url URL for the privacy policy of the service; may be empty
+  /// [privacyPolicyUrl] URL for the privacy policy of the service; may be empty
   final String privacyPolicyUrl;
 
   static const String CONSTRUCTOR = 'passportAuthorizationForm';

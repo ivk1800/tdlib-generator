@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains information about a notification
 class Notification extends TdObject {
   Notification(
@@ -9,16 +8,16 @@ class Notification extends TdObject {
       required this.isSilent,
       required this.type});
 
-  /// id Unique persistent identifier of this notification
+  /// [id] Unique persistent identifier of this notification
   final int id;
 
-  /// date Notification date
+  /// [date] Notification date
   final int date;
 
-  /// is_silent True, if the notification was initially silent
+  /// [isSilent] True, if the notification was initially silent
   final bool isSilent;
 
-  /// type Notification type
+  /// [type] Notification type
   final NotificationType type;
 
   static const String CONSTRUCTOR = 'notification';

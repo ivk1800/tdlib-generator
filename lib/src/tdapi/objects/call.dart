@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Describes a call
 class Call extends TdObject {
   Call(
@@ -10,19 +9,19 @@ class Call extends TdObject {
       required this.isVideo,
       required this.state});
 
-  /// id Call identifier, not persistent
+  /// [id] Call identifier, not persistent
   final int id;
 
-  /// user_id Peer user identifier
+  /// [userId] Peer user identifier
   final int userId;
 
-  /// is_outgoing True, if the call is outgoing
+  /// [isOutgoing] True, if the call is outgoing
   final bool isOutgoing;
 
-  /// is_video True, if the call is a video call
+  /// [isVideo] True, if the call is a video call
   final bool isVideo;
 
-  /// state Call state
+  /// [state] Call state
   final CallState state;
 
   static const String CONSTRUCTOR = 'call';

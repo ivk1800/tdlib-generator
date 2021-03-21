@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// TDLib needs the user's phone number to authorize. Call
 class AuthorizationStateWaitPhoneNumber extends AuthorizationState {
   const AuthorizationStateWaitPhoneNumber();

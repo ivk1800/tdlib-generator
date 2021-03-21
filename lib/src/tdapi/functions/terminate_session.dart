@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Terminates a session of the current user
 class TerminateSession extends TdFunction {
   TerminateSession({required this.sessionId});
 
-  /// session_id Session identifier
+  /// [sessionId] Session identifier
   final int sessionId;
 
   /// callback sign

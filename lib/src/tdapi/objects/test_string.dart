@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A simple object containing a string; for testing only
 class TestString extends TdObject {
   TestString({required this.value});
 
-  /// value String
+  /// [value] String
   final String value;
 
   static const String CONSTRUCTOR = 'testString';

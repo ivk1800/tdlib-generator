@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Quickly returns approximate storage usage statistics. Can be called before authorization
 class GetStorageStatisticsFast extends TdFunction {
   GetStorageStatisticsFast();

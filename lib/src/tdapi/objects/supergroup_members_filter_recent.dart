@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Returns recently active users in reverse chronological order
 class SupergroupMembersFilterRecent extends SupergroupMembersFilter {
   const SupergroupMembersFilterRecent();

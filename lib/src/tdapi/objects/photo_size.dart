@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Describes an image in JPEG format
 class PhotoSize extends TdObject {
   PhotoSize(
@@ -10,19 +9,19 @@ class PhotoSize extends TdObject {
       required this.height,
       required this.progressiveSizes});
 
-  /// type Image type (see https://core.telegram.org/constructor/photoSize)
+  /// [type] Image type (see https://core.telegram.org/constructor/photoSize)
   final String type;
 
-  /// photo Information about the image file
+  /// [photo] Information about the image file
   final File photo;
 
-  /// width Image width
+  /// [width] Image width
   final int width;
 
-  /// height Image height
+  /// [height] Image height
   final int height;
 
-  /// progressive_sizes Sizes of progressive JPEG file prefixes, which can be used to preliminarily show the image
+  /// [progressiveSizes] Sizes of progressive JPEG file prefixes, which can be used to preliminarily show the image
   final List<int> progressiveSizes;
 
   static const String CONSTRUCTOR = 'photoSize';

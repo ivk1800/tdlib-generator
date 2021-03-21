@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Describes a position of a chat in a chat list
 class ChatPosition extends TdObject {
   ChatPosition(
@@ -9,16 +8,16 @@ class ChatPosition extends TdObject {
       required this.isPinned,
       ChatSource? this.source});
 
-  /// list The chat list
+  /// [list] The chat list
   final ChatList list;
 
-  /// order A parameter used to determine order of the chat in the chat list. Chats must be sorted by the pair (order, chat.id) in descending order
+  /// [order] A parameter used to determine order of the chat in the chat list. Chats must be sorted by the pair (order, chat.id) in descending order
   final int order;
 
-  /// is_pinned True, if the chat is pinned in the chat list
+  /// [isPinned] True, if the chat is pinned in the chat list
   final bool isPinned;
 
-  /// source Source of the chat in the chat list; may be null
+  /// [source] Source of the chat in the chat list; may be null
   final ChatSource? source;
 
   static const String CONSTRUCTOR = 'chatPosition';

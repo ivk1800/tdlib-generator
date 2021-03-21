@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Applies if a user enters new credentials using Android Pay
 class InputCredentialsAndroidPay extends InputCredentials {
   InputCredentialsAndroidPay({required this.data});
 
-  /// data JSON-encoded data with the credential identifier
+  /// [data] JSON-encoded data with the credential identifier
   final String data;
 
   static const String CONSTRUCTOR = 'inputCredentialsAndroidPay';

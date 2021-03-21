@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Describes the exact type of a problem with a call
 abstract class CallProblem extends TdObject {
   const CallProblem();

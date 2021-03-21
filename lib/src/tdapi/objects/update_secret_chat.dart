@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Some data of a secret chat has changed. This update is guaranteed to come before the secret chat identifier is returned to the application
 class UpdateSecretChat extends Update {
   UpdateSecretChat({required this.secretChat});
 
-  /// secret_chat New data about the secret chat
+  /// [secretChat] New data about the secret chat
   final SecretChat secretChat;
 
   static const String CONSTRUCTOR = 'updateSecretChat';

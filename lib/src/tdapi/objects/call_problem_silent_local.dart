@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The user couldn't hear the other side
 class CallProblemSilentLocal extends CallProblem {
   const CallProblemSilentLocal();

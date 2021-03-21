@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The call ended unexpectedly
 class CallProblemDropped extends CallProblem {
   const CallProblemDropped();

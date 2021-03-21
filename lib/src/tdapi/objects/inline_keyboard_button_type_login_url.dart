@@ -1,18 +1,17 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A button that opens a specified URL and automatically authorize the current user if allowed to do so
 class InlineKeyboardButtonTypeLoginUrl extends InlineKeyboardButtonType {
   InlineKeyboardButtonTypeLoginUrl(
       {required this.url, required this.id, required this.forwardText});
 
-  /// url An HTTP URL to open
+  /// [url] An HTTP URL to open
   final String url;
 
-  /// id Unique button identifier
+  /// [id] Unique button identifier
   final int id;
 
-  /// forward_text If non-empty, new text of the button in forwarded messages
+  /// [forwardText] If non-empty, new text of the button in forwarded messages
   final String forwardText;
 
   static const String CONSTRUCTOR = 'inlineKeyboardButtonTypeLoginUrl';

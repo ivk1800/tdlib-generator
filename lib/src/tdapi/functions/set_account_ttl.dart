@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Changes the period of inactivity after which the account of the current user will automatically be deleted
 class SetAccountTtl extends TdFunction {
   SetAccountTtl({required this.ttl});
 
-  /// ttl New account TTL
+  /// [ttl] New account TTL
   final AccountTtl ttl;
 
   /// callback sign

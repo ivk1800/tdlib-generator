@@ -1,15 +1,14 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains statistics about number of new members invited by a user
 class ChatStatisticsInviterInfo extends TdObject {
   ChatStatisticsInviterInfo(
       {required this.userId, required this.addedMemberCount});
 
-  /// user_id User identifier
+  /// [userId] User identifier
   final int userId;
 
-  /// added_member_count Number of new members invited by the user
+  /// [addedMemberCount] Number of new members invited by the user
   final int addedMemberCount;
 
   static const String CONSTRUCTOR = 'chatStatisticsInviterInfo';

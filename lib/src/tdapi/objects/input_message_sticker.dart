@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A sticker message
 class InputMessageSticker extends InputMessageContent {
   InputMessageSticker(
@@ -10,19 +9,19 @@ class InputMessageSticker extends InputMessageContent {
       required this.height,
       required this.emoji});
 
-  /// sticker Sticker to be sent
+  /// [sticker] Sticker to be sent
   final InputFile sticker;
 
-  /// thumbnail Sticker thumbnail, if available
+  /// [thumbnail] Sticker thumbnail, if available
   final InputThumbnail thumbnail;
 
-  /// width Sticker width
+  /// [width] Sticker width
   final int width;
 
-  /// height Sticker height
+  /// [height] Sticker height
   final int height;
 
-  /// emoji Emoji used to choose the sticker
+  /// [emoji] Emoji used to choose the sticker
   final String emoji;
 
   static const String CONSTRUCTOR = 'inputMessageSticker';

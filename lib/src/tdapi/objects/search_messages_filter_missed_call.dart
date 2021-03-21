@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Returns only incoming call messages with missed/declined discard reasons
 class SearchMessagesFilterMissedCall extends SearchMessagesFilter {
   const SearchMessagesFilterMissedCall();

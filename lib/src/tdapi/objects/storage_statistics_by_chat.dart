@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains the storage usage statistics for a specific chat
 class StorageStatisticsByChat extends TdObject {
   StorageStatisticsByChat(
@@ -9,16 +8,16 @@ class StorageStatisticsByChat extends TdObject {
       required this.count,
       required this.byFileType});
 
-  /// chat_id Chat identifier; 0 if none
+  /// [chatId] Chat identifier; 0 if none
   final int chatId;
 
-  /// size Total size of the files in the chat
+  /// [size] Total size of the files in the chat
   final int size;
 
-  /// count Total number of files in the chat
+  /// [count] Total number of files in the chat
   final int count;
 
-  /// by_file_type Statistics split by file types
+  /// [byFileType] Statistics split by file types
   final List<StorageStatisticsByFileType> byFileType;
 
   static const String CONSTRUCTOR = 'storageStatisticsByChat';

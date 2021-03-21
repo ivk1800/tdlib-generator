@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Removes users from the contact list
 class RemoveContacts extends TdFunction {
   RemoveContacts({required this.userIds});
 
-  /// user_ids Identifiers of users to be deleted
+  /// [userIds] Identifiers of users to be deleted
   final List<int> userIds;
 
   /// callback sign

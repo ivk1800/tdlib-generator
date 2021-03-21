@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Describes one answer option of a poll
 class PollOption extends TdObject {
   PollOption(
@@ -10,19 +9,19 @@ class PollOption extends TdObject {
       required this.isChosen,
       required this.isBeingChosen});
 
-  /// text Option text, 1-100 characters
+  /// [text] Option text, 1-100 characters
   final String text;
 
-  /// voter_count Number of voters for this option, available only for closed or voted polls
+  /// [voterCount] Number of voters for this option, available only for closed or voted polls
   final int voterCount;
 
-  /// vote_percentage The percentage of votes for this option, 0-100
+  /// [votePercentage] The percentage of votes for this option, 0-100
   final int votePercentage;
 
-  /// is_chosen True, if the option was chosen by the user
+  /// [isChosen] True, if the option was chosen by the user
   final bool isChosen;
 
-  /// is_being_chosen True, if the option is being chosen by a pending setPollAnswer request
+  /// [isBeingChosen] True, if the option is being chosen by a pending setPollAnswer request
   final bool isBeingChosen;
 
   static const String CONSTRUCTOR = 'pollOption';

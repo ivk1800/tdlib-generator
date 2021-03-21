@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The chat is public, because it has username
 class PublicChatTypeHasUsername extends PublicChatType {
   const PublicChatTypeHasUsername();

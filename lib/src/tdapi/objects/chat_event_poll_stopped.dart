@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A poll in a message was stopped
 class ChatEventPollStopped extends ChatEventAction {
   ChatEventPollStopped({required this.message});
 
-  /// message The message with the poll
+  /// [message] The message with the poll
   final Message message;
 
   static const String CONSTRUCTOR = 'chatEventPollStopped';

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A new incoming inline query; for bots only
 class UpdateNewInlineQuery extends Update {
   UpdateNewInlineQuery(
@@ -11,22 +10,22 @@ class UpdateNewInlineQuery extends Update {
       required this.query,
       required this.offset});
 
-  /// id Unique query identifier
+  /// [id] Unique query identifier
   final int id;
 
-  /// sender_user_id Identifier of the user who sent the query
+  /// [senderUserId] Identifier of the user who sent the query
   final int senderUserId;
 
-  /// user_location User location; may be null
+  /// [userLocation] User location; may be null
   final Location? userLocation;
 
-  /// chat_type Contains information about the type of the chat, from which the query originated; may be null if unknown
+  /// [chatType] Contains information about the type of the chat, from which the query originated; may be null if unknown
   final ChatType? chatType;
 
-  /// query Text of the query
+  /// [query] Text of the query
   final String query;
 
-  /// offset Offset of the first entry to return
+  /// [offset] Offset of the first entry to return
   final String offset;
 
   static const String CONSTRUCTOR = 'updateNewInlineQuery';

@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Sends a custom request; for bots only
 class SendCustomRequest extends TdFunction {
   SendCustomRequest({required this.method, required this.parameters});
 
-  /// method The method name
+  /// [method] The method name
   final String method;
 
-  /// parameters JSON-serialized method parameters
+  /// [parameters] JSON-serialized method parameters
   final String parameters;
 
   /// callback sign

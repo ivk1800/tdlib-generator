@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Answers a custom query; for bots only
 class AnswerCustomQuery extends TdFunction {
   AnswerCustomQuery({required this.customQueryId, required this.data});
 
-  /// custom_query_id Identifier of a custom query
+  /// [customQueryId] Identifier of a custom query
   final int customQueryId;
 
-  /// data JSON-serialized answer to the query
+  /// [data] JSON-serialized answer to the query
   final String data;
 
   /// callback sign

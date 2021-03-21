@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A detailed statistics about a supergroup chat
 class ChatStatisticsSupergroup extends ChatStatistics {
   ChatStatisticsSupergroup(
@@ -21,52 +20,52 @@ class ChatStatisticsSupergroup extends ChatStatistics {
       required this.topAdministrators,
       required this.topInviters});
 
-  /// period A period to which the statistics applies
+  /// [period] A period to which the statistics applies
   final DateRange period;
 
-  /// member_count Number of members in the chat
+  /// [memberCount] Number of members in the chat
   final StatisticalValue memberCount;
 
-  /// message_count Number of messages sent to the chat
+  /// [messageCount] Number of messages sent to the chat
   final StatisticalValue messageCount;
 
-  /// viewer_count Number of users who viewed messages in the chat
+  /// [viewerCount] Number of users who viewed messages in the chat
   final StatisticalValue viewerCount;
 
-  /// sender_count Number of users who sent messages to the chat
+  /// [senderCount] Number of users who sent messages to the chat
   final StatisticalValue senderCount;
 
-  /// member_count_graph A graph containing number of members in the chat
+  /// [memberCountGraph] A graph containing number of members in the chat
   final StatisticalGraph memberCountGraph;
 
-  /// join_graph A graph containing number of members joined and left the chat
+  /// [joinGraph] A graph containing number of members joined and left the chat
   final StatisticalGraph joinGraph;
 
-  /// join_by_source_graph A graph containing number of new member joins per source
+  /// [joinBySourceGraph] A graph containing number of new member joins per source
   final StatisticalGraph joinBySourceGraph;
 
-  /// language_graph A graph containing distribution of active users per language
+  /// [languageGraph] A graph containing distribution of active users per language
   final StatisticalGraph languageGraph;
 
-  /// message_content_graph A graph containing distribution of sent messages by content type
+  /// [messageContentGraph] A graph containing distribution of sent messages by content type
   final StatisticalGraph messageContentGraph;
 
-  /// action_graph A graph containing number of different actions in the chat
+  /// [actionGraph] A graph containing number of different actions in the chat
   final StatisticalGraph actionGraph;
 
-  /// day_graph A graph containing distribution of message views per hour
+  /// [dayGraph] A graph containing distribution of message views per hour
   final StatisticalGraph dayGraph;
 
-  /// week_graph A graph containing distribution of message views per day of week
+  /// [weekGraph] A graph containing distribution of message views per day of week
   final StatisticalGraph weekGraph;
 
-  /// top_senders List of users sent most messages in the last week
+  /// [topSenders] List of users sent most messages in the last week
   final List<ChatStatisticsMessageSenderInfo> topSenders;
 
-  /// top_administrators List of most active administrators in the last week
+  /// [topAdministrators] List of most active administrators in the last week
   final List<ChatStatisticsAdministratorActionsInfo> topAdministrators;
 
-  /// top_inviters List of most active inviters of new members in the last week
+  /// [topInviters] List of most active inviters of new members in the last week
   final List<ChatStatisticsInviterInfo> topInviters;
 
   static const String CONSTRUCTOR = 'chatStatisticsSupergroup';

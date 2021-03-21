@@ -1,12 +1,11 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The session was created recently, user needs to wait
 class CanTransferOwnershipResultSessionTooFresh
     extends CanTransferOwnershipResult {
   CanTransferOwnershipResultSessionTooFresh({required this.retryAfter});
 
-  /// retry_after Time left before the session can be used to transfer ownership of a chat, in seconds
+  /// [retryAfter] Time left before the session can be used to transfer ownership of a chat, in seconds
   final int retryAfter;
 
   static const String CONSTRUCTOR = 'canTransferOwnershipResultSessionTooFresh';

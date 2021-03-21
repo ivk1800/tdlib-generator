@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The footer of a page
 class PageBlockFooter extends PageBlock {
   PageBlockFooter({required this.footer});
 
-  /// footer Footer
+  /// [footer] Footer
   final RichText footer;
 
   static const String CONSTRUCTOR = 'pageBlockFooter';

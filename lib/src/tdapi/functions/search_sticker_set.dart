@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Searches for a sticker set by its name
 class SearchStickerSet extends TdFunction {
   SearchStickerSet({required this.name});
 
-  /// name Name of the sticker set
+  /// [name] Name of the sticker set
   final String name;
 
   /// callback sign

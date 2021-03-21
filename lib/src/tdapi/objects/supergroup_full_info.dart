@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains full information about a supergroup or channel
 class SupergroupFullInfo extends TdObject {
   SupergroupFullInfo(
@@ -25,64 +24,64 @@ class SupergroupFullInfo extends TdObject {
       required this.upgradedFromBasicGroupId,
       required this.upgradedFromMaxMessageId});
 
-  /// photo Chat photo; may be null
+  /// [photo] Chat photo; may be null
   final ChatPhoto? photo;
 
-  /// param_description Supergroup or channel description
+  /// param_[description] Supergroup or channel description
   final String description;
 
-  /// member_count Number of members in the supergroup or channel; 0 if unknown
+  /// [memberCount] Number of members in the supergroup or channel; 0 if unknown
   final int memberCount;
 
-  /// administrator_count Number of privileged users in the supergroup or channel; 0 if unknown
+  /// [administratorCount] Number of privileged users in the supergroup or channel; 0 if unknown
   final int administratorCount;
 
-  /// restricted_count Number of restricted users in the supergroup; 0 if unknown
+  /// [restrictedCount] Number of restricted users in the supergroup; 0 if unknown
   final int restrictedCount;
 
-  /// banned_count Number of users banned from chat; 0 if unknown
+  /// [bannedCount] Number of users banned from chat; 0 if unknown
   final int bannedCount;
 
-  /// linked_chat_id Chat identifier of a discussion group for the channel, or a channel, for which the supergroup is the designated discussion group; 0 if none or unknown
+  /// [linkedChatId] Chat identifier of a discussion group for the channel, or a channel, for which the supergroup is the designated discussion group; 0 if none or unknown
   final int linkedChatId;
 
-  /// slow_mode_delay Delay between consecutive sent messages for non-administrator supergroup members, in seconds
+  /// [slowModeDelay] Delay between consecutive sent messages for non-administrator supergroup members, in seconds
   final int slowModeDelay;
 
-  /// slow_mode_delay_expires_in Time left before next message can be sent in the supergroup, in seconds. An updateSupergroupFullInfo update is not triggered when value of this field changes, but both new and old values are non-zero
+  /// [slowModeDelayExpiresIn] Time left before next message can be sent in the supergroup, in seconds. An updateSupergroupFullInfo update is not triggered when value of this field changes, but both new and old values are non-zero
   final double slowModeDelayExpiresIn;
 
-  /// can_get_members True, if members of the chat can be retrieved
+  /// [canGetMembers] True, if members of the chat can be retrieved
   final bool canGetMembers;
 
-  /// can_set_username True, if the chat username can be changed
+  /// [canSetUsername] True, if the chat username can be changed
   final bool canSetUsername;
 
-  /// can_set_sticker_set True, if the supergroup sticker set can be changed
+  /// [canSetStickerSet] True, if the supergroup sticker set can be changed
   final bool canSetStickerSet;
 
-  /// can_set_location True, if the supergroup location can be changed
+  /// [canSetLocation] True, if the supergroup location can be changed
   final bool canSetLocation;
 
-  /// can_get_statistics True, if the supergroup or channel statistics are available
+  /// [canGetStatistics] True, if the supergroup or channel statistics are available
   final bool canGetStatistics;
 
-  /// is_all_history_available True, if new chat members will have access to old messages. In public or discussion groups and both public and private channels, old messages are always available, so this option affects only private supergroups without a linked chat. The value of this field is only available for chat administrators
+  /// [isAllHistoryAvailable] True, if new chat members will have access to old messages. In public or discussion groups and both public and private channels, old messages are always available, so this option affects only private supergroups without a linked chat. The value of this field is only available for chat administrators
   final bool isAllHistoryAvailable;
 
-  /// sticker_set_id Identifier of the supergroup sticker set; 0 if none
+  /// [stickerSetId] Identifier of the supergroup sticker set; 0 if none
   final int stickerSetId;
 
-  /// location Location to which the supergroup is connected; may be null
+  /// [location] Location to which the supergroup is connected; may be null
   final ChatLocation? location;
 
-  /// invite_link Invite link for this chat
+  /// [inviteLink] Invite link for this chat
   final String inviteLink;
 
-  /// upgraded_from_basic_group_id Identifier of the basic group from which supergroup was upgraded; 0 if none
+  /// [upgradedFromBasicGroupId] Identifier of the basic group from which supergroup was upgraded; 0 if none
   final int upgradedFromBasicGroupId;
 
-  /// upgraded_from_max_message_id Identifier of the last message in the basic group from which supergroup was upgraded; 0 if none
+  /// [upgradedFromMaxMessageId] Identifier of the last message in the basic group from which supergroup was upgraded; 0 if none
   final int upgradedFromMaxMessageId;
 
   static const String CONSTRUCTOR = 'supergroupFullInfo';

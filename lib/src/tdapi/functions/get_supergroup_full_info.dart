@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns full information about a supergroup or a channel by its identifier, cached for up to 1 minute
 class GetSupergroupFullInfo extends TdFunction {
   GetSupergroupFullInfo({required this.supergroupId});
 
-  /// supergroup_id Supergroup or channel identifier
+  /// [supergroupId] Supergroup or channel identifier
   final int supergroupId;
 
   /// callback sign

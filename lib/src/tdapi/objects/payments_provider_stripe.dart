@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Stripe payment provider
 class PaymentsProviderStripe extends TdObject {
   PaymentsProviderStripe(
@@ -9,16 +8,16 @@ class PaymentsProviderStripe extends TdObject {
       required this.needPostalCode,
       required this.needCardholderName});
 
-  /// publishable_key Stripe API publishable key
+  /// [publishableKey] Stripe API publishable key
   final String publishableKey;
 
-  /// need_country True, if the user country must be provided
+  /// [needCountry] True, if the user country must be provided
   final bool needCountry;
 
-  /// need_postal_code True, if the user ZIP/postal code must be provided
+  /// [needPostalCode] True, if the user ZIP/postal code must be provided
   final bool needPostalCode;
 
-  /// need_cardholder_name True, if the cardholder name must be provided
+  /// [needCardholderName] True, if the cardholder name must be provided
   final bool needCardholderName;
 
   static const String CONSTRUCTOR = 'paymentsProviderStripe';

@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns an existing chat corresponding to a known supergroup or channel
 class CreateSupergroupChat extends TdFunction {
   CreateSupergroupChat({required this.supergroupId, required this.force});
 
-  /// supergroup_id Supergroup or channel identifier
+  /// [supergroupId] Supergroup or channel identifier
   final int supergroupId;
 
-  /// force If true, the chat will be created without network request. In this case all information about the chat except its type, title and photo can be incorrect
+  /// [force] If true, the chat will be created without network request. In this case all information about the chat except its type, title and photo can be incorrect
   final bool force;
 
   /// callback sign

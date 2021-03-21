@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// TDLib needs an encryption key to decrypt the local database
 class AuthorizationStateWaitEncryptionKey extends AuthorizationState {
   AuthorizationStateWaitEncryptionKey({required this.isEncrypted});
 
-  /// is_encrypted True, if the database is currently encrypted
+  /// [isEncrypted] True, if the database is currently encrypted
   final bool isEncrypted;
 
   static const String CONSTRUCTOR = 'authorizationStateWaitEncryptionKey';

@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A sticker set has changed
 class UpdateStickerSet extends Update {
   UpdateStickerSet({required this.stickerSet});
 
-  /// sticker_set The sticker set
+  /// [stickerSet] The sticker set
   final StickerSet stickerSet;
 
   static const String CONSTRUCTOR = 'updateStickerSet';

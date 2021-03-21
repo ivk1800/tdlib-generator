@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The information about interactions with a message has changed
 class UpdateMessageInteractionInfo extends Update {
   UpdateMessageInteractionInfo(
@@ -8,13 +7,13 @@ class UpdateMessageInteractionInfo extends Update {
       required this.messageId,
       MessageInteractionInfo? this.interactionInfo});
 
-  /// chat_id Chat identifier
+  /// [chatId] Chat identifier
   final int chatId;
 
-  /// message_id Message identifier
+  /// [messageId] Message identifier
   final int messageId;
 
-  /// interaction_info New information about interactions with the message; may be null
+  /// [interactionInfo] New information about interactions with the message; may be null
   final MessageInteractionInfo? interactionInfo;
 
   static const String CONSTRUCTOR = 'updateMessageInteractionInfo';

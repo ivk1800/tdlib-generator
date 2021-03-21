@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains information about a phone number
 class PhoneNumberInfo extends TdObject {
   PhoneNumberInfo(
@@ -8,13 +7,13 @@ class PhoneNumberInfo extends TdObject {
       required this.countryCallingCode,
       required this.formattedPhoneNumber});
 
-  /// country Information about the country to which the phone number belongs; may be null
+  /// [country] Information about the country to which the phone number belongs; may be null
   final CountryInfo? country;
 
-  /// country_calling_code The part of the phone number denoting country calling code or its part
+  /// [countryCallingCode] The part of the phone number denoting country calling code or its part
   final String countryCallingCode;
 
-  /// formatted_phone_number The phone number without country calling code formatted accordingly to local rules
+  /// [formattedPhoneNumber] The phone number without country calling code formatted accordingly to local rules
   final String formattedPhoneNumber;
 
   static const String CONSTRUCTOR = 'phoneNumberInfo';

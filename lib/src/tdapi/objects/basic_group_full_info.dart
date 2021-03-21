@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Contains full information about a basic group
 class BasicGroupFullInfo extends TdObject {
   BasicGroupFullInfo(
@@ -10,19 +9,19 @@ class BasicGroupFullInfo extends TdObject {
       required this.members,
       required this.inviteLink});
 
-  /// photo Chat photo; may be null
+  /// [photo] Chat photo; may be null
   final ChatPhoto? photo;
 
-  /// param_description Group description
+  /// param_[description] Group description
   final String description;
 
-  /// creator_user_id User identifier of the creator of the group; 0 if unknown
+  /// [creatorUserId] User identifier of the creator of the group; 0 if unknown
   final int creatorUserId;
 
-  /// members Group members
+  /// [members] Group members
   final List<ChatMember> members;
 
-  /// invite_link Invite link for this group; available only after it has been generated at least once and only for the group creator
+  /// [inviteLink] Invite link for this group; available only after it has been generated at least once and only for the group creator
   final String inviteLink;
 
   static const String CONSTRUCTOR = 'basicGroupFullInfo';

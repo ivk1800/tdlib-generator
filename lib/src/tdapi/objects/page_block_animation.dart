@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// An animation
 class PageBlockAnimation extends PageBlock {
   PageBlockAnimation(
@@ -8,13 +7,13 @@ class PageBlockAnimation extends PageBlock {
       required this.caption,
       required this.needAutoplay});
 
-  /// animation Animation file; may be null
+  /// [animation] Animation file; may be null
   final Animation? animation;
 
-  /// caption Animation caption
+  /// [caption] Animation caption
   final PageBlockCaption caption;
 
-  /// need_autoplay True, if the animation should be played automatically
+  /// [needAutoplay] True, if the animation should be played automatically
   final bool needAutoplay;
 
   static const String CONSTRUCTOR = 'pageBlockAnimation';

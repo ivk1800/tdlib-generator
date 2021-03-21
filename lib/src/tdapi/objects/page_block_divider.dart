@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// An empty block separating a page
 class PageBlockDivider extends PageBlock {
   const PageBlockDivider();

@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Describes a recommended chat filter
 class RecommendedChatFilter extends TdObject {
   RecommendedChatFilter({required this.filter, required this.description});
 
-  /// filter The chat filter
+  /// [filter] The chat filter
   final ChatFilter filter;
 
-  /// param_description Chat filter description
+  /// param_[description] Chat filter description
   final String description;
 
   static const String CONSTRUCTOR = 'recommendedChatFilter';

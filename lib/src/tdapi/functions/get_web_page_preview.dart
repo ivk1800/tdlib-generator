@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns a web page preview by the text of the message. Do not call this function too often. Returns a 404 error if the web page has no preview
 class GetWebPagePreview extends TdFunction {
   GetWebPagePreview({required this.text});
 
-  /// text Message text with formatting
+  /// [text] Message text with formatting
   final FormattedText text;
 
   /// callback sign

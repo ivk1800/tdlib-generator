@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Describes an item of a list page block
 class PageBlockListItem extends TdObject {
   PageBlockListItem({required this.label, required this.pageBlocks});
 
-  /// label Item label
+  /// [label] Item label
   final String label;
 
-  /// page_blocks Item blocks
+  /// [pageBlocks] Item blocks
   final List<PageBlock> pageBlocks;
 
   static const String CONSTRUCTOR = 'pageBlockListItem';

@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Hides a suggested action
 class HideSuggestedAction extends TdFunction {
   HideSuggestedAction({required this.action});
 
-  /// action Suggested action to hide
+  /// [action] Suggested action to hide
   final SuggestedAction action;
 
   /// callback sign

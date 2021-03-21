@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns a list of service actions taken by chat members and administrators in the last 48 hours. Available only for supergroups and channels. Requires administrator rights. Returns results in reverse chronological order (i. e., in order of decreasing event_id)
 class GetChatEventLog extends TdFunction {
   GetChatEventLog(
@@ -11,22 +10,22 @@ class GetChatEventLog extends TdFunction {
       required this.filters,
       required this.userIds});
 
-  /// chat_id Chat identifier
+  /// [chatId] Chat identifier
   final int chatId;
 
-  /// query Search query by which to filter events
+  /// [query] Search query by which to filter events
   final String query;
 
-  /// from_event_id Identifier of an event from which to return results. Use 0 to get results from the latest events
+  /// [fromEventId] Identifier of an event from which to return results. Use 0 to get results from the latest events
   final int fromEventId;
 
-  /// limit The maximum number of events to return; up to 100
+  /// [limit] The maximum number of events to return; up to 100
   final int limit;
 
-  /// filters The types of events to return. By default, all types will be returned
+  /// [filters] The types of events to return. By default, all types will be returned
   final ChatEventLogFilters filters;
 
-  /// user_ids User identifiers by which to filter events. By default, events relating to all users will be returned
+  /// [userIds] User identifiers by which to filter events. By default, events relating to all users will be returned
   final List<int> userIds;
 
   /// callback sign

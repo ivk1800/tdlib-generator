@@ -1,15 +1,14 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A chat was marked as unread or was read
 class UpdateChatIsMarkedAsUnread extends Update {
   UpdateChatIsMarkedAsUnread(
       {required this.chatId, required this.isMarkedAsUnread});
 
-  /// chat_id Chat identifier
+  /// [chatId] Chat identifier
   final int chatId;
 
-  /// is_marked_as_unread New value of is_marked_as_unread
+  /// [isMarkedAsUnread] New value of is_marked_as_unread
   final bool isMarkedAsUnread;
 
   static const String CONSTRUCTOR = 'updateChatIsMarkedAsUnread';

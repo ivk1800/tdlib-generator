@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Returns only messages containing URLs
 class SearchMessagesFilterUrl extends SearchMessagesFilter {
   const SearchMessagesFilterUrl();

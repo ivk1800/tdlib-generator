@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A chat was blocked or unblocked
 class UpdateChatIsBlocked extends Update {
   UpdateChatIsBlocked({required this.chatId, required this.isBlocked});
 
-  /// chat_id Chat identifier
+  /// [chatId] Chat identifier
   final int chatId;
 
-  /// is_blocked New value of is_blocked
+  /// [isBlocked] New value of is_blocked
   final bool isBlocked;
 
   static const String CONSTRUCTOR = 'updateChatIsBlocked';

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Sends a message. Returns the sent message
 class SendMessage extends TdFunction {
   SendMessage(
@@ -11,22 +10,22 @@ class SendMessage extends TdFunction {
       required this.replyMarkup,
       required this.inputMessageContent});
 
-  /// chat_id Target chat
+  /// [chatId] Target chat
   final int chatId;
 
-  /// message_thread_id If not 0, a message thread identifier in which the message will be sent
+  /// [messageThreadId] If not 0, a message thread identifier in which the message will be sent
   final int messageThreadId;
 
-  /// reply_to_message_id Identifier of the message to reply to or 0
+  /// [replyToMessageId] Identifier of the message to reply to or 0
   final int replyToMessageId;
 
-  /// options Options to be used to send the message
+  /// [options] Options to be used to send the message
   final MessageSendOptions options;
 
-  /// reply_markup Markup for replying to the message; for bots only
+  /// [replyMarkup] Markup for replying to the message; for bots only
   final ReplyMarkup replyMarkup;
 
-  /// input_message_content The content of the message to be sent
+  /// [inputMessageContent] The content of the message to be sent
   final InputMessageContent inputMessageContent;
 
   /// callback sign

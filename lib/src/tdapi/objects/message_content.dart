@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Contains the content of a message
 abstract class MessageContent extends TdObject {
   const MessageContent();

@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a list of message senders
 class MessageSenders extends TdObject {
   MessageSenders({required this.totalCount, required this.senders});
 
-  /// total_count Approximate total count of messages senders found
+  /// [totalCount] Approximate total count of messages senders found
   final int totalCount;
 
-  /// senders List of message senders
+  /// [senders] List of message senders
   final List<MessageSender> senders;
 
   static const String CONSTRUCTOR = 'messageSenders';

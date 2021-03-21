@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A filled background
 class BackgroundTypeFill extends BackgroundType {
   BackgroundTypeFill({required this.fill});
 
-  /// fill Description of the background fill
+  /// [fill] Description of the background fill
   final BackgroundFill fill;
 
   static const String CONSTRUCTOR = 'backgroundTypeFill';

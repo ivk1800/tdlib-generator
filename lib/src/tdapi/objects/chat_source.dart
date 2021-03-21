@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Describes a reason why an external chat is shown in a chat list
 abstract class ChatSource extends TdObject {
   const ChatSource();

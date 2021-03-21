@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Returns only document messages
 class SearchMessagesFilterDocument extends SearchMessagesFilter {
   const SearchMessagesFilterDocument();

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Specifies the kind of chat members to return in searchChatMembers
 abstract class ChatMembersFilter extends TdObject {
   const ChatMembersFilter();

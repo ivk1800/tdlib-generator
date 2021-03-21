@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A Telegram Passport element containing the user's driver license
 class PassportElementDriverLicense extends PassportElement {
   PassportElementDriverLicense({required this.driverLicense});
 
-  /// driver_license Driver license
+  /// [driverLicense] Driver license
   final IdentityDocument driverLicense;
 
   static const String CONSTRUCTOR = 'passportElementDriverLicense';

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Message content that is not supported in the current TDLib version
 class MessageUnsupported extends MessageContent {
   const MessageUnsupported();

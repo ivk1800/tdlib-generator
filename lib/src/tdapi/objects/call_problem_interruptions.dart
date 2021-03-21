@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The other side kept disappearing
 class CallProblemInterruptions extends CallProblem {
   const CallProblemInterruptions();

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Incoming messages were read or number of unread messages has been changed
 class UpdateChatReadInbox extends Update {
   UpdateChatReadInbox(
@@ -8,13 +7,13 @@ class UpdateChatReadInbox extends Update {
       required this.lastReadInboxMessageId,
       required this.unreadCount});
 
-  /// chat_id Chat identifier
+  /// [chatId] Chat identifier
   final int chatId;
 
-  /// last_read_inbox_message_id Identifier of the last read incoming message
+  /// [lastReadInboxMessageId] Identifier of the last read incoming message
   final int lastReadInboxMessageId;
 
-  /// unread_count The number of unread messages left in the chat
+  /// [unreadCount] The number of unread messages left in the chat
   final int unreadCount;
 
   static const String CONSTRUCTOR = 'updateChatReadInbox';

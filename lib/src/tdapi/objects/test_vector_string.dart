@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A simple object containing a vector of strings; for testing only
 class TestVectorString extends TdObject {
   TestVectorString({required this.value});
 
-  /// value Vector of strings
+  /// [value] Vector of strings
   final List<String> value;
 
   static const String CONSTRUCTOR = 'testVectorString';

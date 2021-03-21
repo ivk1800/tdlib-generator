@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Removes a chat from the list of recently found chats
 class RemoveRecentlyFoundChat extends TdFunction {
   RemoveRecentlyFoundChat({required this.chatId});
 
-  /// chat_id Identifier of the chat to be removed
+  /// [chatId] Identifier of the chat to be removed
   final int chatId;
 
   /// callback sign

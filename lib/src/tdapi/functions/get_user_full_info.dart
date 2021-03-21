@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Returns full information about a user by their identifier
 class GetUserFullInfo extends TdFunction {
   GetUserFullInfo({required this.userId});
 
-  /// user_id User identifier
+  /// [userId] User identifier
   final int userId;
 
   /// callback sign

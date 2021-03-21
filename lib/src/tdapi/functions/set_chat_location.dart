@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Changes the location of a chat. Available only for some location-based supergroups, use supergroupFullInfo.can_set_location to check whether the method is allowed to use
 class SetChatLocation extends TdFunction {
   SetChatLocation({required this.chatId, required this.location});
 
-  /// chat_id Chat identifier
+  /// [chatId] Chat identifier
   final int chatId;
 
-  /// location New location for the chat; must be valid and not null
+  /// [location] New location for the chat; must be valid and not null
   final ChatLocation location;
 
   /// callback sign

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Describes a message
 class Message extends TdObject {
   Message(
@@ -35,94 +34,94 @@ class Message extends TdObject {
       required this.content,
       ReplyMarkup? this.replyMarkup});
 
-  /// id Message identifier; unique for the chat to which the message belongs
+  /// [id] Message identifier; unique for the chat to which the message belongs
   final int id;
 
-  /// sender The sender of the message
+  /// [sender] The sender of the message
   final MessageSender sender;
 
-  /// chat_id Chat identifier
+  /// [chatId] Chat identifier
   final int chatId;
 
-  /// sending_state Information about the sending state of the message; may be null
+  /// [sendingState] Information about the sending state of the message; may be null
   final MessageSendingState? sendingState;
 
-  /// scheduling_state Information about the scheduling state of the message; may be null
+  /// [schedulingState] Information about the scheduling state of the message; may be null
   final MessageSchedulingState? schedulingState;
 
-  /// is_outgoing True, if the message is outgoing
+  /// [isOutgoing] True, if the message is outgoing
   final bool isOutgoing;
 
-  /// is_pinned True, if the message is pinned
+  /// [isPinned] True, if the message is pinned
   final bool isPinned;
 
-  /// can_be_edited True, if the message can be edited. For live location and poll messages this fields shows whether editMessageLiveLocation or stopPoll can be used with this message by the application
+  /// [canBeEdited] True, if the message can be edited. For live location and poll messages this fields shows whether editMessageLiveLocation or stopPoll can be used with this message by the application
   final bool canBeEdited;
 
-  /// can_be_forwarded True, if the message can be forwarded
+  /// [canBeForwarded] True, if the message can be forwarded
   final bool canBeForwarded;
 
-  /// can_be_deleted_only_for_self True, if the message can be deleted only for the current user while other users will continue to see it
+  /// [canBeDeletedOnlyForSelf] True, if the message can be deleted only for the current user while other users will continue to see it
   final bool canBeDeletedOnlyForSelf;
 
-  /// can_be_deleted_for_all_users True, if the message can be deleted for all users
+  /// [canBeDeletedForAllUsers] True, if the message can be deleted for all users
   final bool canBeDeletedForAllUsers;
 
-  /// can_get_statistics True, if the message statistics are available
+  /// [canGetStatistics] True, if the message statistics are available
   final bool canGetStatistics;
 
-  /// can_get_message_thread True, if the message thread info is available
+  /// [canGetMessageThread] True, if the message thread info is available
   final bool canGetMessageThread;
 
-  /// is_channel_post True, if the message is a channel post. All messages to channels are channel posts, all other messages are not channel posts
+  /// [isChannelPost] True, if the message is a channel post. All messages to channels are channel posts, all other messages are not channel posts
   final bool isChannelPost;
 
-  /// contains_unread_mention True, if the message contains an unread mention for the current user
+  /// [containsUnreadMention] True, if the message contains an unread mention for the current user
   final bool containsUnreadMention;
 
-  /// date Point in time (Unix timestamp) when the message was sent
+  /// [date] Point in time (Unix timestamp) when the message was sent
   final int date;
 
-  /// edit_date Point in time (Unix timestamp) when the message was last edited
+  /// [editDate] Point in time (Unix timestamp) when the message was last edited
   final int editDate;
 
-  /// forward_info Information about the initial message sender; may be null
+  /// [forwardInfo] Information about the initial message sender; may be null
   final MessageForwardInfo? forwardInfo;
 
-  /// interaction_info Information about interactions with the message; may be null
+  /// [interactionInfo] Information about interactions with the message; may be null
   final MessageInteractionInfo? interactionInfo;
 
-  /// reply_in_chat_id If non-zero, the identifier of the chat to which the replied message belongs; Currently, only messages in the Replies chat can have different reply_in_chat_id and chat_id
+  /// [replyInChatId] If non-zero, the identifier of the chat to which the replied message belongs; Currently, only messages in the Replies chat can have different reply_in_chat_id and chat_id
   final int replyInChatId;
 
-  /// reply_to_message_id If non-zero, the identifier of the message this message is replying to; can be the identifier of a deleted message
+  /// [replyToMessageId] If non-zero, the identifier of the message this message is replying to; can be the identifier of a deleted message
   final int replyToMessageId;
 
-  /// message_thread_id If non-zero, the identifier of the message thread the message belongs to; unique within the chat to which the message belongs
+  /// [messageThreadId] If non-zero, the identifier of the message thread the message belongs to; unique within the chat to which the message belongs
   final int messageThreadId;
 
-  /// ttl For self-destructing messages, the message's TTL (Time To Live), in seconds; 0 if none. TDLib will send updateDeleteMessages or updateMessageContent once the TTL expires
+  /// [ttl] For self-destructing messages, the message's TTL (Time To Live), in seconds; 0 if none. TDLib will send updateDeleteMessages or updateMessageContent once the TTL expires
   final int ttl;
 
-  /// ttl_expires_in Time left before the message expires, in seconds
+  /// [ttlExpiresIn] Time left before the message expires, in seconds
   final double ttlExpiresIn;
 
-  /// via_bot_user_id If non-zero, the user identifier of the bot through which this message was sent
+  /// [viaBotUserId] If non-zero, the user identifier of the bot through which this message was sent
   final int viaBotUserId;
 
-  /// author_signature For channel posts and anonymous group messages, optional author signature
+  /// [authorSignature] For channel posts and anonymous group messages, optional author signature
   final String authorSignature;
 
-  /// media_album_id Unique identifier of an album this message belongs to. Only audios, documents, photos and videos can be grouped together in albums
+  /// [mediaAlbumId] Unique identifier of an album this message belongs to. Only audios, documents, photos and videos can be grouped together in albums
   final int mediaAlbumId;
 
-  /// restriction_reason If non-empty, contains a human-readable description of the reason why access to this message must be restricted
+  /// [restrictionReason] If non-empty, contains a human-readable description of the reason why access to this message must be restricted
   final String restrictionReason;
 
-  /// content Content of the message
+  /// [content] Content of the message
   final MessageContent content;
 
-  /// reply_markup Reply markup for the message; may be null
+  /// [replyMarkup] Reply markup for the message; may be null
   final ReplyMarkup? replyMarkup;
 
   static const String CONSTRUCTOR = 'message';

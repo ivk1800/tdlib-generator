@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A previously used profile photo of the current user
 class InputChatPhotoPrevious extends InputChatPhoto {
   InputChatPhotoPrevious({required this.chatPhotoId});
 
-  /// chat_photo_id Identifier of the profile photo to reuse
+  /// [chatPhotoId] Identifier of the profile photo to reuse
   final int chatPhotoId;
 
   static const String CONSTRUCTOR = 'inputChatPhotoPrevious';

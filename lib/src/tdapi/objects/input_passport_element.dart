@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Classes
 /// Contains information about a Telegram Passport element to be saved
 abstract class InputPassportElement extends TdObject {
   const InputPassportElement();

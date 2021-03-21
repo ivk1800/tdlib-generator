@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// Represents a set of filters used to obtain a chat event log
 class ChatEventLogFilters extends TdObject {
   ChatEventLogFilters(
@@ -16,37 +15,37 @@ class ChatEventLogFilters extends TdObject {
       required this.settingChanges,
       required this.voiceChatChanges});
 
-  /// message_edits True, if message edits should be returned
+  /// [messageEdits] True, if message edits should be returned
   final bool messageEdits;
 
-  /// message_deletions True, if message deletions should be returned
+  /// [messageDeletions] True, if message deletions should be returned
   final bool messageDeletions;
 
-  /// message_pins True, if pin/unpin events should be returned
+  /// [messagePins] True, if pin/unpin events should be returned
   final bool messagePins;
 
-  /// member_joins True, if members joining events should be returned
+  /// [memberJoins] True, if members joining events should be returned
   final bool memberJoins;
 
-  /// member_leaves True, if members leaving events should be returned
+  /// [memberLeaves] True, if members leaving events should be returned
   final bool memberLeaves;
 
-  /// member_invites True, if invited member events should be returned
+  /// [memberInvites] True, if invited member events should be returned
   final bool memberInvites;
 
-  /// member_promotions True, if member promotion/demotion events should be returned
+  /// [memberPromotions] True, if member promotion/demotion events should be returned
   final bool memberPromotions;
 
-  /// member_restrictions True, if member restricted/unrestricted/banned/unbanned events should be returned
+  /// [memberRestrictions] True, if member restricted/unrestricted/banned/unbanned events should be returned
   final bool memberRestrictions;
 
-  /// info_changes True, if changes in chat information should be returned
+  /// [infoChanges] True, if changes in chat information should be returned
   final bool infoChanges;
 
-  /// setting_changes True, if changes in chat settings should be returned
+  /// [settingChanges] True, if changes in chat settings should be returned
   final bool settingChanges;
 
-  /// voice_chat_changes True, if voice chat actions should be returned
+  /// [voiceChatChanges] True, if voice chat actions should be returned
   final bool voiceChatChanges;
 
   static const String CONSTRUCTOR = 'chatEventLogFilters';

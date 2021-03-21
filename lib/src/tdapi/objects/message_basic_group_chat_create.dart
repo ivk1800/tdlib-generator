@@ -1,15 +1,14 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A newly created basic group
 class MessageBasicGroupChatCreate extends MessageContent {
   MessageBasicGroupChatCreate(
       {required this.title, required this.memberUserIds});
 
-  /// title Title of the basic group
+  /// [title] Title of the basic group
   final String title;
 
-  /// member_user_ids User identifiers of members in the basic group
+  /// [memberUserIds] User identifiers of members in the basic group
   final List<int> memberUserIds;
 
   static const String CONSTRUCTOR = 'messageBasicGroupChatCreate';

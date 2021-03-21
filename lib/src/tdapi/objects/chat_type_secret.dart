@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A secret chat with a user
 class ChatTypeSecret extends ChatType {
   ChatTypeSecret({required this.secretChatId, required this.userId});
 
-  /// secret_chat_id Secret chat identifier
+  /// [secretChatId] Secret chat identifier
   final int secretChatId;
 
-  /// user_id User identifier of the secret chat peer
+  /// [userId] User identifier of the secret chat peer
   final int userId;
 
   static const String CONSTRUCTOR = 'chatTypeSecret';

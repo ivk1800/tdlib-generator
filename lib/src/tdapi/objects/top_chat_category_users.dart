@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A category containing frequently used private chats with non-bot users
 class TopChatCategoryUsers extends TopChatCategory {
   const TopChatCategoryUsers();

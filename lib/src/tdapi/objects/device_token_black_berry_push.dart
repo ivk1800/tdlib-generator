@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A token for BlackBerry Push Service
 class DeviceTokenBlackBerryPush extends DeviceToken {
   DeviceTokenBlackBerryPush({required this.token});
 
-  /// token Token; may be empty to de-register a device
+  /// [token] Token; may be empty to de-register a device
   final String token;
 
   static const String CONSTRUCTOR = 'deviceTokenBlackBerryPush';

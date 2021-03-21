@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Searches for the specified query in the title and username of already known chats via request to the server. Returns chats in the order seen in the main chat list
 class SearchChatsOnServer extends TdFunction {
   SearchChatsOnServer({required this.query, required this.limit});
 
-  /// query Query to search for
+  /// [query] Query to search for
   final String query;
 
-  /// limit The maximum number of chats to be returned
+  /// [limit] The maximum number of chats to be returned
   final int limit;
 
   /// callback sign

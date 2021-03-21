@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// The message is being sent now, but has not yet been delivered to the server
 class MessageSendingStatePending extends MessageSendingState {
   const MessageSendingStatePending();

@@ -1,6 +1,5 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A strikethrough text
 class TextEntityTypeStrikethrough extends TextEntityType {
   const TextEntityTypeStrikethrough();

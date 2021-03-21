@@ -1,11 +1,10 @@
 part of '../tdapi.dart';
 
-/// Group.Functions
 /// Leaves a group call
 class LeaveGroupCall extends TdFunction {
   LeaveGroupCall({required this.groupCallId});
 
-  /// group_call_id Group call identifier
+  /// [groupCallId] Group call identifier
   final int groupCallId;
 
   /// callback sign

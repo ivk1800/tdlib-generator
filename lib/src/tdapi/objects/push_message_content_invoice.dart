@@ -1,14 +1,13 @@
 part of '../tdapi.dart';
 
-/// Group.Objects
 /// A message with an invoice from a bot
 class PushMessageContentInvoice extends PushMessageContent {
   PushMessageContentInvoice({required this.price, required this.isPinned});
 
-  /// price Product price
+  /// [price] Product price
   final String price;
 
-  /// is_pinned True, if the message is a pinned message with the specified content
+  /// [isPinned] True, if the message is a pinned message with the specified content
   final bool isPinned;
 
   static const String CONSTRUCTOR = 'pushMessageContentInvoice';
