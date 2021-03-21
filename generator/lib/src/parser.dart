@@ -43,6 +43,7 @@ class Parser {
             group: fixSection('classes'),
             parent: 'TdObject',
             name: className,
+            returnType: null,
             description: classDescription,
             variables: []));
 
@@ -111,8 +112,8 @@ class Parser {
         final String className = classData!.group(1)!;
         final classArgs = classData.group(2);
         var group = fixSection(section);
-        final String parent =
-            resolveParentType(group, className, classData.group(3)!);
+        final String returnType = classData.group(3)!;
+        final String parent = resolveParentType(group, className, returnType);
         final Map<String, String> args = (classArgs == null)
             ? <String, String>{}
             // ignore: prefer_for_elements_to_map_fromIterable
@@ -132,6 +133,7 @@ class Parser {
         }).toList();
         var name = className.upperFirstChar();
         var classInfo = Class(
+            returnType: group == Group.Functions ? returnType : null,
             group: group,
             constructor: name.toConstructor(),
             name: name == 'Error' ? 'TdError' : name,
