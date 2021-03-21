@@ -3,7 +3,10 @@ import '../tdapi.dart';
 /// Contains a bot's answer to a callback query
 class CallbackQueryAnswer extends TdObject {
   CallbackQueryAnswer(
-      {required this.text, required this.showAlert, required this.url});
+      {required this.text,
+      required this.showAlert,
+      required this.url,
+      this.extra});
 
   /// [text] Text of the answer
   final String text;
@@ -14,6 +17,9 @@ class CallbackQueryAnswer extends TdObject {
 
   /// [url] URL to be opened
   final String url;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'callbackQueryAnswer';
 
@@ -33,6 +39,7 @@ class CallbackQueryAnswer extends TdObject {
         'text': this.text,
         'show_alert': this.showAlert,
         'url': this.url,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

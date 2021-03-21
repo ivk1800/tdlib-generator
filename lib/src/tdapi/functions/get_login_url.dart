@@ -25,7 +25,7 @@ class GetLoginUrl extends TdFunction {
   final bool allowWriteAccess;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getLoginUrl';
 

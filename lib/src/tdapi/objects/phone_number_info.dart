@@ -5,7 +5,8 @@ class PhoneNumberInfo extends TdObject {
   PhoneNumberInfo(
       {CountryInfo? this.country,
       required this.countryCallingCode,
-      required this.formattedPhoneNumber});
+      required this.formattedPhoneNumber,
+      this.extra});
 
   /// [country] Information about the country to which the phone number belongs;
   /// be null
@@ -18,6 +19,9 @@ class PhoneNumberInfo extends TdObject {
   /// [formattedPhoneNumber] The phone number without country calling code
   /// accordingly to local rules
   final String formattedPhoneNumber;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'phoneNumberInfo';
 
@@ -39,6 +43,7 @@ class PhoneNumberInfo extends TdObject {
         'country': this.country,
         'country_calling_code': this.countryCallingCode,
         'formatted_phone_number': this.formattedPhoneNumber,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

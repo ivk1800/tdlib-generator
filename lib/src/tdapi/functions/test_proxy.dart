@@ -26,7 +26,7 @@ class TestProxy extends TdFunction {
   final double timeout;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'testProxy';
 

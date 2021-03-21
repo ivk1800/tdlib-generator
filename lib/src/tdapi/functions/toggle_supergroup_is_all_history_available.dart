@@ -13,7 +13,7 @@ class ToggleSupergroupIsAllHistoryAvailable extends TdFunction {
   final bool isAllHistoryAvailable;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'toggleSupergroupIsAllHistoryAvailable';
 

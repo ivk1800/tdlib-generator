@@ -15,7 +15,7 @@ class SendPassportAuthorizationForm extends TdFunction {
   final List<PassportElementType> types;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'sendPassportAuthorizationForm';
 

@@ -6,7 +6,7 @@ class TestUseUpdate extends TdFunction {
   TestUseUpdate();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'testUseUpdate';
 

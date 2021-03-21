@@ -2,10 +2,13 @@ import '../tdapi.dart';
 
 /// Represents a list of chat administrators
 class ChatAdministrators extends TdObject {
-  ChatAdministrators({required this.administrators});
+  ChatAdministrators({required this.administrators, this.extra});
 
   /// [administrators] A list of chat administrators
   final List<ChatAdministrator> administrators;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'chatAdministrators';
 
@@ -24,6 +27,9 @@ class ChatAdministrators extends TdObject {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'administrators': this.administrators, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() => {
+        'administrators': this.administrators,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

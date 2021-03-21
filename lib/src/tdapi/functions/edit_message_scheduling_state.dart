@@ -20,7 +20,7 @@ class EditMessageSchedulingState extends TdFunction {
   final MessageSchedulingState schedulingState;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'editMessageSchedulingState';
 

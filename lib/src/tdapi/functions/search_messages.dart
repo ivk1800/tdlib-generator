@@ -53,7 +53,7 @@ class SearchMessages extends TdFunction {
   final int maxDate;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'searchMessages';
 

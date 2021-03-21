@@ -7,7 +7,7 @@ class ResendAuthenticationCode extends TdFunction {
   ResendAuthenticationCode();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'resendAuthenticationCode';
 

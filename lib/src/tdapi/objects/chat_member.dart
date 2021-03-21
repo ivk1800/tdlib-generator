@@ -7,7 +7,8 @@ class ChatMember extends TdObject {
       required this.inviterUserId,
       required this.joinedChatDate,
       required this.status,
-      BotInfo? this.botInfo});
+      BotInfo? this.botInfo,
+      this.extra});
 
   /// [userId] User identifier of the chat member
   final int userId;
@@ -25,6 +26,9 @@ class ChatMember extends TdObject {
   /// [botInfo] If the user is a bot, information about the bot; may be null.
   /// be null even for a bot if the bot is not the chat member
   final BotInfo? botInfo;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'chatMember';
 
@@ -50,6 +54,7 @@ class ChatMember extends TdObject {
         'joined_chat_date': this.joinedChatDate,
         'status': this.status,
         'bot_info': this.botInfo,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

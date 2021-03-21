@@ -19,7 +19,7 @@ class SetChatDiscussionGroup extends TdFunction {
   final int discussionChatId;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'setChatDiscussionGroup';
 

@@ -14,7 +14,8 @@ class GroupCall extends TdObject {
       required this.recentSpeakers,
       required this.muteNewParticipants,
       required this.allowedChangeMuteNewParticipants,
-      required this.duration});
+      required this.duration,
+      this.extra});
 
   /// [id] Group call identifier
   final int id;
@@ -54,6 +55,9 @@ class GroupCall extends TdObject {
 
   /// [duration] Call duration; for ended calls only
   final int duration;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'groupCall';
 
@@ -98,6 +102,7 @@ class GroupCall extends TdObject {
         'allowed_change_mute_new_participants':
             this.allowedChangeMuteNewParticipants,
         'duration': this.duration,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

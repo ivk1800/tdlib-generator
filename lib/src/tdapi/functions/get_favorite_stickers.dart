@@ -5,7 +5,7 @@ class GetFavoriteStickers extends TdFunction {
   GetFavoriteStickers();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getFavoriteStickers';
 

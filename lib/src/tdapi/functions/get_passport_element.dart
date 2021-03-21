@@ -11,7 +11,7 @@ class GetPassportElement extends TdFunction {
   final String password;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getPassportElement';
 

@@ -8,7 +8,7 @@ class GetStickerSet extends TdFunction {
   final int setId;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getStickerSet';
 

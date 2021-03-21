@@ -5,7 +5,7 @@ class DisconnectAllWebsites extends TdFunction {
   DisconnectAllWebsites();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'disconnectAllWebsites';
 

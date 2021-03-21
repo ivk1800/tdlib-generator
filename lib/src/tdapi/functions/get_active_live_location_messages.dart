@@ -7,7 +7,7 @@ class GetActiveLiveLocationMessages extends TdFunction {
   GetActiveLiveLocationMessages();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getActiveLiveLocationMessages';
 

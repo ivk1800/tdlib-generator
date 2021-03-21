@@ -12,7 +12,7 @@ class SetChatPhoto extends TdFunction {
   final InputChatPhoto photo;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'setChatPhoto';
 

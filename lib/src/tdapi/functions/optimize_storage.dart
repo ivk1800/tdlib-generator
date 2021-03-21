@@ -54,7 +54,7 @@ class OptimizeStorage extends TdFunction {
   final int chatLimit;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'optimizeStorage';
 

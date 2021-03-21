@@ -12,7 +12,7 @@ class SendCallDebugInformation extends TdFunction {
   final String debugInformation;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'sendCallDebugInformation';
 

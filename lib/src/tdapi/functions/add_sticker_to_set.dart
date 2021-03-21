@@ -15,7 +15,7 @@ class AddStickerToSet extends TdFunction {
   final InputSticker sticker;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'addStickerToSet';
 

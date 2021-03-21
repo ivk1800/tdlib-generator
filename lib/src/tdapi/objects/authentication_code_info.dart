@@ -6,7 +6,8 @@ class AuthenticationCodeInfo extends TdObject {
       {required this.phoneNumber,
       required this.type,
       AuthenticationCodeType? this.nextType,
-      required this.timeout});
+      required this.timeout,
+      this.extra});
 
   /// [phoneNumber] A phone number that is being authenticated
   final String phoneNumber;
@@ -20,6 +21,9 @@ class AuthenticationCodeInfo extends TdObject {
 
   /// [timeout] Timeout before the code should be re-sent, in seconds
   final int timeout;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'authenticationCodeInfo';
 
@@ -43,6 +47,7 @@ class AuthenticationCodeInfo extends TdObject {
         'type': this.type,
         'next_type': this.nextType,
         'timeout': this.timeout,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

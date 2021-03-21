@@ -30,7 +30,7 @@ class SendMessageAlbum extends TdFunction {
   final List<InputMessageContent> inputMessageContents;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'sendMessageAlbum';
 

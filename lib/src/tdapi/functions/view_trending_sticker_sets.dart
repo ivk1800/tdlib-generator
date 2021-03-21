@@ -8,7 +8,7 @@ class ViewTrendingStickerSets extends TdFunction {
   final List<int> stickerSetIds;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'viewTrendingStickerSets';
 

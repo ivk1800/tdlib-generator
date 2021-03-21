@@ -12,7 +12,7 @@ class RegisterDevice extends TdFunction {
   final List<int> otherUserIds;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'registerDevice';
 

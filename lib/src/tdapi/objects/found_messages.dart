@@ -5,7 +5,8 @@ class FoundMessages extends TdObject {
   FoundMessages(
       {required this.totalCount,
       required this.messages,
-      required this.nextOffset});
+      required this.nextOffset,
+      this.extra});
 
   /// [totalCount] Approximate total count of messages found; -1 if unknown
   final int totalCount;
@@ -15,6 +16,9 @@ class FoundMessages extends TdObject {
 
   /// [nextOffset] The offset for the next request. If empty, there are no more
   final String nextOffset;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'foundMessages';
 
@@ -38,6 +42,7 @@ class FoundMessages extends TdObject {
         'total_count': this.totalCount,
         'messages': this.messages,
         'next_offset': this.nextOffset,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

@@ -2,13 +2,17 @@ import '../tdapi.dart';
 
 /// Contains information about a Telegram Passport elements and corresponding
 class PassportElementsWithErrors extends TdObject {
-  PassportElementsWithErrors({required this.elements, required this.errors});
+  PassportElementsWithErrors(
+      {required this.elements, required this.errors, this.extra});
 
   /// [elements] Telegram Passport elements
   final List<PassportElement> elements;
 
   /// [errors] Errors in the elements that are already available
   final List<PassportElementError> errors;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'passportElementsWithErrors';
 
@@ -29,6 +33,10 @@ class PassportElementsWithErrors extends TdObject {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'elements': this.elements, 'errors': this.errors, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() => {
+        'elements': this.elements,
+        'errors': this.errors,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

@@ -2,7 +2,10 @@ import '../tdapi.dart';
 
 /// Contains notifications about data changes
 abstract class Update extends TdObject {
-  const Update();
+  const Update({this.extra});
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'update';
 

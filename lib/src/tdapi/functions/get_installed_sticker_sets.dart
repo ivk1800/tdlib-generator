@@ -9,7 +9,7 @@ class GetInstalledStickerSets extends TdFunction {
   final bool isMasks;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getInstalledStickerSets';
 

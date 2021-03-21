@@ -8,7 +8,7 @@ class SetLogStream extends TdFunction {
   final LogStream logStream;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'setLogStream';
 

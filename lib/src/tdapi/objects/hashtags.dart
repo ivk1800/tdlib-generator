@@ -2,10 +2,13 @@ import '../tdapi.dart';
 
 /// Contains a list of hashtags
 class Hashtags extends TdObject {
-  Hashtags({required this.hashtags});
+  Hashtags({required this.hashtags, this.extra});
 
   /// [hashtags] A list of hashtags
   final List<String> hashtags;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'hashtags';
 
@@ -23,5 +26,5 @@ class Hashtags extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'hashtags': this.hashtags, '@type': CONSTRUCTOR};
+      {'hashtags': this.hashtags, '@type': CONSTRUCTOR, '@extra': this.extra};
 }

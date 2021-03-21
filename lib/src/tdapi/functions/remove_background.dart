@@ -8,7 +8,7 @@ class RemoveBackground extends TdFunction {
   final int backgroundId;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'removeBackground';
 

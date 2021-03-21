@@ -33,7 +33,7 @@ class DownloadFile extends TdFunction {
   final bool synchronous;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'downloadFile';
 

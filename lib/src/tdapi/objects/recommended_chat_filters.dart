@@ -2,10 +2,13 @@ import '../tdapi.dart';
 
 /// Contains a list of recommended chat filters
 class RecommendedChatFilters extends TdObject {
-  RecommendedChatFilters({required this.chatFilters});
+  RecommendedChatFilters({required this.chatFilters, this.extra});
 
   /// [chatFilters] List of recommended chat filters
   final List<RecommendedChatFilter> chatFilters;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'recommendedChatFilters';
 
@@ -24,6 +27,9 @@ class RecommendedChatFilters extends TdObject {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'chat_filters': this.chatFilters, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() => {
+        'chat_filters': this.chatFilters,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

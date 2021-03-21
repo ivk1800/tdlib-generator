@@ -15,7 +15,7 @@ class SaveApplicationLogEvent extends TdFunction {
   final JsonValue data;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'saveApplicationLogEvent';
 

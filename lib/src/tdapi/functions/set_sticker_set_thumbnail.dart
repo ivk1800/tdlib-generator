@@ -17,7 +17,7 @@ class SetStickerSetThumbnail extends TdFunction {
   final InputFile thumbnail;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'setStickerSetThumbnail';
 

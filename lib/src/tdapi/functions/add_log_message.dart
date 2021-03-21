@@ -12,7 +12,7 @@ class AddLogMessage extends TdFunction {
   final String text;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'addLogMessage';
 

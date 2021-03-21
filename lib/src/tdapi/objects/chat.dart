@@ -27,7 +27,8 @@ class Chat extends TdObject {
       required this.isVoiceChatEmpty,
       required this.replyMarkupMessageId,
       DraftMessage? this.draftMessage,
-      required this.clientData});
+      required this.clientData,
+      this.extra});
 
   /// [id] Chat unique identifier
   final int id;
@@ -115,6 +116,9 @@ class Chat extends TdObject {
   /// stored here.) Persistent if the message database is used
   final String clientData;
 
+  /// callback sign
+  final dynamic? extra;
+
   static const String CONSTRUCTOR = 'chat';
 
   static Chat? fromJson(Map<String, dynamic>? json) {
@@ -182,6 +186,7 @@ class Chat extends TdObject {
         'reply_markup_message_id': this.replyMarkupMessageId,
         'draft_message': this.draftMessage,
         'client_data': this.clientData,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

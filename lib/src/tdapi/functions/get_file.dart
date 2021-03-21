@@ -8,7 +8,7 @@ class GetFile extends TdFunction {
   final int fileId;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getFile';
 

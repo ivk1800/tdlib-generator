@@ -8,7 +8,8 @@ class InlineQueryResults extends TdObject {
       required this.nextOffset,
       required this.results,
       required this.switchPmText,
-      required this.switchPmParameter});
+      required this.switchPmParameter,
+      this.extra});
 
   /// [inlineQueryId] Unique identifier of the inline query
   final int inlineQueryId;
@@ -27,6 +28,9 @@ class InlineQueryResults extends TdObject {
 
   /// [switchPmParameter] Parameter for the bot start message
   final String switchPmParameter;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'inlineQueryResults';
 
@@ -54,6 +58,7 @@ class InlineQueryResults extends TdObject {
         'results': this.results,
         'switch_pm_text': this.switchPmText,
         'switch_pm_parameter': this.switchPmParameter,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

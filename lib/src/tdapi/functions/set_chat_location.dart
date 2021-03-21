@@ -13,7 +13,7 @@ class SetChatLocation extends TdFunction {
   final ChatLocation location;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'setChatLocation';
 

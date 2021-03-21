@@ -8,7 +8,8 @@ class Background extends TdObject {
       required this.isDark,
       required this.name,
       Document? this.document,
-      required this.type});
+      required this.type,
+      this.extra});
 
   /// [id] Unique background identifier
   final int id;
@@ -28,6 +29,9 @@ class Background extends TdObject {
 
   /// [type] Type of the background
   final BackgroundType type;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'background';
 
@@ -55,6 +59,7 @@ class Background extends TdObject {
         'name': this.name,
         'document': this.document,
         'type': this.type,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

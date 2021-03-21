@@ -7,7 +7,8 @@ class ScopeNotificationSettings extends TdObject {
       required this.sound,
       required this.showPreview,
       required this.disablePinnedMessageNotifications,
-      required this.disableMentionNotifications});
+      required this.disableMentionNotifications,
+      this.extra});
 
   /// [muteFor] Time left before notifications will be unmuted, in seconds
   final int muteFor;
@@ -26,6 +27,9 @@ class ScopeNotificationSettings extends TdObject {
   /// [disableMentionNotifications] True, if notifications for messages with
   /// will be created as for an ordinary unread message
   final bool disableMentionNotifications;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'scopeNotificationSettings';
 
@@ -53,6 +57,7 @@ class ScopeNotificationSettings extends TdObject {
         'disable_pinned_message_notifications':
             this.disablePinnedMessageNotifications,
         'disable_mention_notifications': this.disableMentionNotifications,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

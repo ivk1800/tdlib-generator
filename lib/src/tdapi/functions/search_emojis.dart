@@ -19,7 +19,7 @@ class SearchEmojis extends TdFunction {
   final List<String> inputLanguageCodes;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'searchEmojis';
 

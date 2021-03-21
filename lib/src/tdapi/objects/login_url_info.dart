@@ -2,7 +2,10 @@ import '../tdapi.dart';
 
 /// Contains information about an inline button of type
 abstract class LoginUrlInfo extends TdObject {
-  const LoginUrlInfo();
+  const LoginUrlInfo({this.extra});
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'loginUrlInfo';
 

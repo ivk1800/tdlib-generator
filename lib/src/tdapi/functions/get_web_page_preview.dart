@@ -9,7 +9,7 @@ class GetWebPagePreview extends TdFunction {
   final FormattedText text;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getWebPagePreview';
 

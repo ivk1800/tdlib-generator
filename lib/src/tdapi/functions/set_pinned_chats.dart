@@ -11,7 +11,7 @@ class SetPinnedChats extends TdFunction {
   final List<int> chatIds;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'setPinnedChats';
 

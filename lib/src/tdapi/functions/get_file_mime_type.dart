@@ -9,7 +9,7 @@ class GetFileMimeType extends TdFunction {
   final String fileName;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getFileMimeType';
 

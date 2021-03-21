@@ -13,7 +13,7 @@ class RemoveNotificationGroup extends TdFunction {
   final int maxNotificationId;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'removeNotificationGroup';
 

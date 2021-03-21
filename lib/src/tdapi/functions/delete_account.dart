@@ -11,7 +11,7 @@ class DeleteAccount extends TdFunction {
   final String reason;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'deleteAccount';
 

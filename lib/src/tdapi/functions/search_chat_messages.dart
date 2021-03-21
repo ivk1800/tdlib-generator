@@ -48,7 +48,7 @@ class SearchChatMessages extends TdFunction {
   final int messageThreadId;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'searchChatMessages';
 

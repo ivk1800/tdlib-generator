@@ -2,10 +2,13 @@ import '../tdapi.dart';
 
 /// Contains a list of chat events
 class ChatEvents extends TdObject {
-  ChatEvents({required this.events});
+  ChatEvents({required this.events, this.extra});
 
   /// [events] List of events
   final List<ChatEvent> events;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'chatEvents';
 
@@ -24,5 +27,5 @@ class ChatEvents extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'events': this.events, '@type': CONSTRUCTOR};
+      {'events': this.events, '@type': CONSTRUCTOR, '@extra': this.extra};
 }

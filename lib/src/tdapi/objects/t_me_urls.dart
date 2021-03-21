@@ -2,10 +2,13 @@ import '../tdapi.dart';
 
 /// Contains a list of t.me URLs
 class TMeUrls extends TdObject {
-  TMeUrls({required this.urls});
+  TMeUrls({required this.urls, this.extra});
 
   /// [urls] List of URLs
   final List<TMeUrl> urls;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'tMeUrls';
 
@@ -23,5 +26,6 @@ class TMeUrls extends TdObject {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() => {'urls': this.urls, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() =>
+      {'urls': this.urls, '@type': CONSTRUCTOR, '@extra': this.extra};
 }

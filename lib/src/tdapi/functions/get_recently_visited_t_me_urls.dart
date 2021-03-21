@@ -8,7 +8,7 @@ class GetRecentlyVisitedTMeUrls extends TdFunction {
   final String referrer;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getRecentlyVisitedTMeUrls';
 

@@ -7,7 +7,8 @@ class MessageThreadInfo extends TdObject {
       required this.messageThreadId,
       required this.replyInfo,
       required this.messages,
-      DraftMessage? this.draftMessage});
+      DraftMessage? this.draftMessage,
+      this.extra});
 
   /// [chatId] Identifier of the chat to which the message thread belongs
   final int chatId;
@@ -24,6 +25,9 @@ class MessageThreadInfo extends TdObject {
 
   /// [draftMessage] A draft of a message in the message thread; may be null
   final DraftMessage? draftMessage;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'messageThreadInfo';
 
@@ -51,6 +55,7 @@ class MessageThreadInfo extends TdObject {
         'reply_info': this.replyInfo,
         'messages': this.messages,
         'draft_message': this.draftMessage,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

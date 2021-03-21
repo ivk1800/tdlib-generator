@@ -9,7 +9,7 @@ class GetPushReceiverId extends TdFunction {
   final String payload;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getPushReceiverId';
 

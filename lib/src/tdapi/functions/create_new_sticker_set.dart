@@ -28,7 +28,7 @@ class CreateNewStickerSet extends TdFunction {
   final List<InputSticker> stickers;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'createNewStickerSet';
 

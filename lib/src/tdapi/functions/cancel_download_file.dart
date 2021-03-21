@@ -13,7 +13,7 @@ class CancelDownloadFile extends TdFunction {
   final bool onlyIfPending;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'cancelDownloadFile';
 

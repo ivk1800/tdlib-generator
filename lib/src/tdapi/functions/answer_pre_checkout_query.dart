@@ -12,7 +12,7 @@ class AnswerPreCheckoutQuery extends TdFunction {
   final String errorMessage;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'answerPreCheckoutQuery';
 

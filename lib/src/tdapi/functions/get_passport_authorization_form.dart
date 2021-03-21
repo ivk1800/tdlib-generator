@@ -21,7 +21,7 @@ class GetPassportAuthorizationForm extends TdFunction {
   final String nonce;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getPassportAuthorizationForm';
 

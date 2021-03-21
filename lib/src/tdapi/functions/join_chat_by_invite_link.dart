@@ -11,7 +11,7 @@ class JoinChatByInviteLink extends TdFunction {
   final String inviteLink;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'joinChatByInviteLink';
 

@@ -9,7 +9,7 @@ class GetOption extends TdFunction {
   final String name;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getOption';
 

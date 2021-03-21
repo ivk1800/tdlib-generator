@@ -13,7 +13,7 @@ class SetChatSlowModeDelay extends TdFunction {
   final int slowModeDelay;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'setChatSlowModeDelay';
 

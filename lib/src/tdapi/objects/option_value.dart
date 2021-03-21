@@ -2,7 +2,10 @@ import '../tdapi.dart';
 
 /// Represents the value of an option
 abstract class OptionValue extends TdObject {
-  const OptionValue();
+  const OptionValue({this.extra});
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'optionValue';
 

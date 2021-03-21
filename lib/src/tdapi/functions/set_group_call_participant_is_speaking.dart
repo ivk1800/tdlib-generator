@@ -18,7 +18,7 @@ class SetGroupCallParticipantIsSpeaking extends TdFunction {
   final bool isSpeaking;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'setGroupCallParticipantIsSpeaking';
 

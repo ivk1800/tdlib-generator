@@ -8,7 +8,7 @@ class HideSuggestedAction extends TdFunction {
   final SuggestedAction action;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'hideSuggestedAction';
 

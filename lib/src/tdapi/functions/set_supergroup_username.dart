@@ -12,7 +12,7 @@ class SetSupergroupUsername extends TdFunction {
   final String username;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'setSupergroupUsername';
 

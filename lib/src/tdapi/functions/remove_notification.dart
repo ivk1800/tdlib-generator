@@ -14,7 +14,7 @@ class RemoveNotification extends TdFunction {
   final int notificationId;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'removeNotification';
 

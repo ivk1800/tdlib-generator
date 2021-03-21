@@ -12,7 +12,7 @@ class SetOption extends TdFunction {
   final OptionValue value;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'setOption';
 

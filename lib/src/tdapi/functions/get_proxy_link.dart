@@ -9,7 +9,7 @@ class GetProxyLink extends TdFunction {
   final int proxyId;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getProxyLink';
 

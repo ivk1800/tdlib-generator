@@ -24,7 +24,7 @@ class PinChatMessage extends TdFunction {
   final bool onlyForSelf;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'pinChatMessage';
 

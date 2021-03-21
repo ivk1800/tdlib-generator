@@ -9,7 +9,7 @@ class RecoverPassword extends TdFunction {
   final String recoveryCode;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'recoverPassword';
 

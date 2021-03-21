@@ -12,7 +12,8 @@ class UserFullInfo extends TdObject {
       required this.bio,
       required this.shareText,
       required this.groupInCommonCount,
-      BotInfo? this.botInfo});
+      BotInfo? this.botInfo,
+      this.extra});
 
   /// [photo] User profile photo; may be null
   final ChatPhoto? photo;
@@ -47,6 +48,9 @@ class UserFullInfo extends TdObject {
 
   /// [botInfo] If the user is a bot, information about the bot; may be null
   final BotInfo? botInfo;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'userFullInfo';
 
@@ -84,6 +88,7 @@ class UserFullInfo extends TdObject {
         'share_text': this.shareText,
         'group_in_common_count': this.groupInCommonCount,
         'bot_info': this.botInfo,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

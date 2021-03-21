@@ -15,7 +15,7 @@ class CreateCall extends TdFunction {
   final bool isVideo;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'createCall';
 

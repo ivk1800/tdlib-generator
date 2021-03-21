@@ -2,10 +2,13 @@ import '../tdapi.dart';
 
 /// Contains a list of updates
 class Updates extends TdObject {
-  Updates({required this.updates});
+  Updates({required this.updates, this.extra});
 
   /// [updates] List of updates
   final List<Update> updates;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'updates';
 
@@ -24,5 +27,5 @@ class Updates extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'updates': this.updates, '@type': CONSTRUCTOR};
+      {'updates': this.updates, '@type': CONSTRUCTOR, '@extra': this.extra};
 }

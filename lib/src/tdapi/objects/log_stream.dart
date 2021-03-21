@@ -2,7 +2,10 @@ import '../tdapi.dart';
 
 /// Describes a stream to which TDLib internal log is written
 abstract class LogStream extends TdObject {
-  const LogStream();
+  const LogStream({this.extra});
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'logStream';
 

@@ -18,7 +18,8 @@ class Session extends TdObject {
       required this.lastActiveDate,
       required this.ip,
       required this.country,
-      required this.region});
+      required this.region,
+      this.extra});
 
   /// [id] Session identifier
   final int id;
@@ -71,6 +72,9 @@ class Session extends TdObject {
   /// [region] Region code from which the session was created, based on the IP
   final String region;
 
+  /// callback sign
+  final dynamic? extra;
+
   static const String CONSTRUCTOR = 'session';
 
   static Session? fromJson(Map<String, dynamic>? json) {
@@ -115,6 +119,7 @@ class Session extends TdObject {
         'ip': this.ip,
         'country': this.country,
         'region': this.region,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

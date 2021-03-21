@@ -12,7 +12,7 @@ class SetChatDescription extends TdFunction {
   final String description;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'setChatDescription';
 

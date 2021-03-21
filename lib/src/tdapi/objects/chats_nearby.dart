@@ -2,13 +2,17 @@ import '../tdapi.dart';
 
 /// Represents a list of chats located nearby
 class ChatsNearby extends TdObject {
-  ChatsNearby({required this.usersNearby, required this.supergroupsNearby});
+  ChatsNearby(
+      {required this.usersNearby, required this.supergroupsNearby, this.extra});
 
   /// [usersNearby] List of users nearby
   final List<ChatNearby> usersNearby;
 
   /// [supergroupsNearby] List of location-based supergroups nearby
   final List<ChatNearby> supergroupsNearby;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'chatsNearby';
 
@@ -33,6 +37,7 @@ class ChatsNearby extends TdObject {
   Map<String, dynamic> toJson() => {
         'users_nearby': this.usersNearby,
         'supergroups_nearby': this.supergroupsNearby,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

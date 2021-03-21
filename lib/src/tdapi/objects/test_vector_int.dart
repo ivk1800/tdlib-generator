@@ -2,10 +2,13 @@ import '../tdapi.dart';
 
 /// A simple object containing a vector of numbers; for testing only
 class TestVectorInt extends TdObject {
-  TestVectorInt({required this.value});
+  TestVectorInt({required this.value, this.extra});
 
   /// [value] Vector of numbers
   final List<int> value;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'testVectorInt';
 
@@ -22,5 +25,6 @@ class TestVectorInt extends TdObject {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() => {'value': this.value, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() =>
+      {'value': this.value, '@type': CONSTRUCTOR, '@extra': this.extra};
 }

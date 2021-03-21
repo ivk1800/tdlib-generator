@@ -22,7 +22,7 @@ class SearchCallMessages extends TdFunction {
   final bool onlyMissed;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'searchCallMessages';
 

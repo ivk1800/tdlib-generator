@@ -13,7 +13,7 @@ class SetSupergroupStickerSet extends TdFunction {
   final int stickerSetId;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'setSupergroupStickerSet';
 

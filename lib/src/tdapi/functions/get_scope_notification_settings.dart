@@ -8,7 +8,7 @@ class GetScopeNotificationSettings extends TdFunction {
   final NotificationSettingsScope scope;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getScopeNotificationSettings';
 

@@ -9,7 +9,7 @@ class SetTdlibParameters extends TdFunction {
   final TdlibParameters parameters;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'setTdlibParameters';
 

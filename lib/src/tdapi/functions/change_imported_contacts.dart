@@ -12,7 +12,7 @@ class ChangeImportedContacts extends TdFunction {
   final List<Contact> contacts;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'changeImportedContacts';
 

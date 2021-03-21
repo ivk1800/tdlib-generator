@@ -7,7 +7,7 @@ class LogOut extends TdFunction {
   LogOut();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'logOut';
 

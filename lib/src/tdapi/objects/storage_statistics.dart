@@ -3,7 +3,10 @@ import '../tdapi.dart';
 /// Contains the exact storage usage statistics split by chats and file type
 class StorageStatistics extends TdObject {
   StorageStatistics(
-      {required this.size, required this.count, required this.byChat});
+      {required this.size,
+      required this.count,
+      required this.byChat,
+      this.extra});
 
   /// [size] Total size of files
   final int size;
@@ -13,6 +16,9 @@ class StorageStatistics extends TdObject {
 
   /// [byChat] Statistics split by chats
   final List<StorageStatisticsByChat> byChat;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'storageStatistics';
 
@@ -36,6 +42,7 @@ class StorageStatistics extends TdObject {
         'size': this.size,
         'count': this.count,
         'by_chat': this.byChat,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

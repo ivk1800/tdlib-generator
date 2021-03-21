@@ -2,13 +2,16 @@ import '../tdapi.dart';
 
 /// Represents a list of chats
 class Chats extends TdObject {
-  Chats({required this.totalCount, required this.chatIds});
+  Chats({required this.totalCount, required this.chatIds, this.extra});
 
   /// [totalCount] Approximate total count of chats found
   final int totalCount;
 
   /// [chatIds] List of chat identifiers
   final List<int> chatIds;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'chats';
 
@@ -29,6 +32,7 @@ class Chats extends TdObject {
   Map<String, dynamic> toJson() => {
         'total_count': this.totalCount,
         'chat_ids': this.chatIds,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

@@ -9,7 +9,7 @@ class GetRecentStickers extends TdFunction {
   final bool isAttached;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getRecentStickers';
 

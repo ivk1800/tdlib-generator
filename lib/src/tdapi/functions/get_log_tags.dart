@@ -5,7 +5,7 @@ class GetLogTags extends TdFunction {
   GetLogTags();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getLogTags';
 

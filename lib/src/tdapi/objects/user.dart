@@ -18,7 +18,8 @@ class User extends TdObject {
       required this.isScam,
       required this.haveAccess,
       required this.type,
-      required this.languageCode});
+      required this.languageCode,
+      this.extra});
 
   /// [id] User identifier
   final int id;
@@ -72,6 +73,9 @@ class User extends TdObject {
   /// [languageCode] IETF language tag of the user's language; only available to
   final String languageCode;
 
+  /// callback sign
+  final dynamic? extra;
+
   static const String CONSTRUCTOR = 'user';
 
   static User? fromJson(Map<String, dynamic>? json) {
@@ -118,6 +122,7 @@ class User extends TdObject {
         'have_access': this.haveAccess,
         'type': this.type,
         'language_code': this.languageCode,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

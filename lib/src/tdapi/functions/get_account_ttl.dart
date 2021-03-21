@@ -6,7 +6,7 @@ class GetAccountTtl extends TdFunction {
   GetAccountTtl();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getAccountTtl';
 

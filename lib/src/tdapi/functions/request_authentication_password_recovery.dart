@@ -6,7 +6,7 @@ class RequestAuthenticationPasswordRecovery extends TdFunction {
   RequestAuthenticationPasswordRecovery();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'requestAuthenticationPasswordRecovery';
 

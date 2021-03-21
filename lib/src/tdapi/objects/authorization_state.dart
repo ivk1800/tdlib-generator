@@ -2,7 +2,10 @@ import '../tdapi.dart';
 
 /// Represents the current authorization state of the TDLib client
 abstract class AuthorizationState extends TdObject {
-  const AuthorizationState();
+  const AuthorizationState({this.extra});
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'authorizationState';
 

@@ -16,7 +16,7 @@ class GetChatStatisticsUrl extends TdFunction {
   final bool isDark;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getChatStatisticsUrl';
 

@@ -17,7 +17,7 @@ class ToggleChatIsPinned extends TdFunction {
   final bool isPinned;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'toggleChatIsPinned';
 

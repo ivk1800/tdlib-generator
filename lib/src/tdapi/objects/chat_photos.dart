@@ -2,13 +2,16 @@ import '../tdapi.dart';
 
 /// Contains a list of chat or user profile photos
 class ChatPhotos extends TdObject {
-  ChatPhotos({required this.totalCount, required this.photos});
+  ChatPhotos({required this.totalCount, required this.photos, this.extra});
 
   /// [totalCount] Total number of photos
   final int totalCount;
 
   /// [photos] List of photos
   final List<ChatPhoto> photos;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'chatPhotos';
 
@@ -30,6 +33,7 @@ class ChatPhotos extends TdObject {
   Map<String, dynamic> toJson() => {
         'total_count': this.totalCount,
         'photos': this.photos,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

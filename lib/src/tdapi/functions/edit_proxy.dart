@@ -25,7 +25,7 @@ class EditProxy extends TdFunction {
   final ProxyType type;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'editProxy';
 

@@ -9,7 +9,7 @@ class GetSupergroup extends TdFunction {
   final int supergroupId;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getSupergroup';
 

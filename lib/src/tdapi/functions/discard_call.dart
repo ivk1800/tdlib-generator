@@ -25,7 +25,7 @@ class DiscardCall extends TdFunction {
   final int connectionId;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'discardCall';
 

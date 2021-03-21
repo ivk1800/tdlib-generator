@@ -10,7 +10,8 @@ class ChatInviteLinkInfo extends TdObject {
       ChatPhotoInfo? this.photo,
       required this.memberCount,
       required this.memberUserIds,
-      required this.isPublic});
+      required this.isPublic,
+      this.extra});
 
   /// [chatId] Chat identifier of the invite link; 0 if the user has no access
   /// the chat before joining
@@ -39,6 +40,9 @@ class ChatInviteLinkInfo extends TdObject {
   /// [isPublic] True, if the chat is a public supergroup or channel, i.e. it
   /// a username or it is a location-based supergroup
   final bool isPublic;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'chatInviteLinkInfo';
 
@@ -72,6 +76,7 @@ class ChatInviteLinkInfo extends TdObject {
         'member_count': this.memberCount,
         'member_user_ids': this.memberUserIds,
         'is_public': this.isPublic,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

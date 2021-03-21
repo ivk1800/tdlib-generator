@@ -17,7 +17,7 @@ class WriteGeneratedFilePart extends TdFunction {
   final String data;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'writeGeneratedFilePart';
 

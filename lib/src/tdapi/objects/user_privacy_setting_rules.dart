@@ -4,10 +4,13 @@ import '../tdapi.dart';
 /// matched rule defines the privacy setting for a given user. If no rule
 /// the action is not allowed
 class UserPrivacySettingRules extends TdObject {
-  UserPrivacySettingRules({required this.rules});
+  UserPrivacySettingRules({required this.rules, this.extra});
 
   /// [rules] A list of rules
   final List<UserPrivacySettingRule> rules;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'userPrivacySettingRules';
 
@@ -25,5 +28,6 @@ class UserPrivacySettingRules extends TdObject {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() => {'rules': this.rules, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() =>
+      {'rules': this.rules, '@type': CONSTRUCTOR, '@extra': this.extra};
 }

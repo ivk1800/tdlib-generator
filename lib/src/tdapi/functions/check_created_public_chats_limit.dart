@@ -9,7 +9,7 @@ class CheckCreatedPublicChatsLimit extends TdFunction {
   final PublicChatType type;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'checkCreatedPublicChatsLimit';
 

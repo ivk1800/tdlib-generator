@@ -3,7 +3,10 @@ import '../tdapi.dart';
 /// Contains auto-download settings presets for the user
 class AutoDownloadSettingsPresets extends TdObject {
   AutoDownloadSettingsPresets(
-      {required this.low, required this.medium, required this.high});
+      {required this.low,
+      required this.medium,
+      required this.high,
+      this.extra});
 
   /// [low] Preset with lowest settings; supposed to be used by default when
   final AutoDownloadSettings low;
@@ -15,6 +18,9 @@ class AutoDownloadSettingsPresets extends TdObject {
   /// [high] Preset with highest settings; supposed to be used by default when
   /// on Wi-Fi
   final AutoDownloadSettings high;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'autoDownloadSettingsPresets';
 
@@ -36,6 +42,7 @@ class AutoDownloadSettingsPresets extends TdObject {
         'low': this.low,
         'medium': this.medium,
         'high': this.high,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

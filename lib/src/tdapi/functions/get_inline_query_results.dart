@@ -26,7 +26,7 @@ class GetInlineQueryResults extends TdFunction {
   final String offset;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getInlineQueryResults';
 

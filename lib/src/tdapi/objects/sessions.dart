@@ -2,10 +2,13 @@ import '../tdapi.dart';
 
 /// Contains a list of sessions
 class Sessions extends TdObject {
-  Sessions({required this.sessions});
+  Sessions({required this.sessions, this.extra});
 
   /// [sessions] List of sessions
   final List<Session> sessions;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'sessions';
 
@@ -24,5 +27,5 @@ class Sessions extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'sessions': this.sessions, '@type': CONSTRUCTOR};
+      {'sessions': this.sessions, '@type': CONSTRUCTOR, '@extra': this.extra};
 }

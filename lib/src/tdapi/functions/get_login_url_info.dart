@@ -16,7 +16,7 @@ class GetLoginUrlInfo extends TdFunction {
   final int buttonId;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getLoginUrlInfo';
 

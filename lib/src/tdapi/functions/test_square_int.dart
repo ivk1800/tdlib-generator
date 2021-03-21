@@ -9,7 +9,7 @@ class TestSquareInt extends TdFunction {
   final int x;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'testSquareInt';
 

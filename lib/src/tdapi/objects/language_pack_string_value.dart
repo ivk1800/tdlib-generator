@@ -2,7 +2,10 @@ import '../tdapi.dart';
 
 /// Represents the value of a string in a language pack
 abstract class LanguagePackStringValue extends TdObject {
-  const LanguagePackStringValue();
+  const LanguagePackStringValue({this.extra});
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'languagePackStringValue';
 

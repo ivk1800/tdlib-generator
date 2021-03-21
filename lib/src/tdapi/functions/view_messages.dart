@@ -26,7 +26,7 @@ class ViewMessages extends TdFunction {
   final bool forceRead;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'viewMessages';
 

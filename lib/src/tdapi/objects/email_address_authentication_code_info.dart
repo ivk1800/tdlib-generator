@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Information about the email address authentication code that was sent
 class EmailAddressAuthenticationCodeInfo extends TdObject {
   EmailAddressAuthenticationCodeInfo(
-      {required this.emailAddressPattern, required this.length});
+      {required this.emailAddressPattern, required this.length, this.extra});
 
   /// [emailAddressPattern] Pattern of the email address to which an
   /// code was sent
@@ -11,6 +11,9 @@ class EmailAddressAuthenticationCodeInfo extends TdObject {
 
   /// [length] Length of the code; 0 if unknown
   final int length;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'emailAddressAuthenticationCodeInfo';
 
@@ -31,6 +34,7 @@ class EmailAddressAuthenticationCodeInfo extends TdObject {
   Map<String, dynamic> toJson() => {
         'email_address_pattern': this.emailAddressPattern,
         'length': this.length,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

@@ -17,7 +17,7 @@ class SetPollAnswer extends TdFunction {
   final List<int> optionIds;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'setPollAnswer';
 

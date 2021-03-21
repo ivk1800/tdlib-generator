@@ -8,7 +8,7 @@ class SetBio extends TdFunction {
   final String bio;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'setBio';
 

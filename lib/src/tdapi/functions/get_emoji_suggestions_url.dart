@@ -10,7 +10,7 @@ class GetEmojiSuggestionsUrl extends TdFunction {
   final String languageCode;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getEmojiSuggestionsUrl';
 

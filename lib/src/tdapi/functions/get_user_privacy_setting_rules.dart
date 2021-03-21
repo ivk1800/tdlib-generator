@@ -8,7 +8,7 @@ class GetUserPrivacySettingRules extends TdFunction {
   final UserPrivacySetting setting;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getUserPrivacySettingRules';
 

@@ -118,6 +118,7 @@ class Generator {
 
   cb.Class _createClass(Class c) {
     return cb.Class((b) {
+      final bool canBeReturnByFunction = _canBeReturnByFunction(c.name);
       b
         ..docs.add("import '../tdapi.dart';")
         ..docs.addAll(c.description.resolveDoc())
@@ -142,6 +143,15 @@ class Generator {
             }
           });
         }));
+
+        if (canBeReturnByFunction) {
+          constructorBuilder.optionalParameters
+              .add(cb.Parameter((parameterBuilder) {
+            parameterBuilder.named = true;
+            parameterBuilder.name = 'extra';
+            parameterBuilder.toThis = true;
+          }));
+        }
       }));
 
       if (c.group != Group.Functions) {
@@ -158,11 +168,14 @@ class Generator {
         });
       }));
 
-      if (c.group == Group.Functions) {
+      if (c.group == Group.Functions || canBeReturnByFunction) {
         b.fields.add(cb.Field((fieldBuilder) {
           fieldBuilder.name = 'extra';
           fieldBuilder.docs.add('/// callback sign');
-          fieldBuilder.type = cb.Reference('dynamic');
+          fieldBuilder.type = cb.Reference('dynamic?');
+          if (canBeReturnByFunction) {
+            fieldBuilder.modifier = cb.FieldModifier.final$;
+          }
         }));
       }
 
@@ -197,7 +210,7 @@ class Generator {
           methodBuilder.body = cb.ToCodeExpression(
               cb.literalMap(values..["@type"] = cb.refer('CONSTRUCTOR')));
 
-          if (c.group == Group.Functions) {
+          if (c.group == Group.Functions || canBeReturnByFunction) {
             values['@extra'] = cb.refer('this.extra');
           }
         }));
@@ -263,6 +276,14 @@ class Generator {
           ]);
         }
       });
+    });
+  }
+
+  bool _canBeReturnByFunction(String className) {
+    return classes
+        .where((element) => element.group == Group.Functions)
+        .any((element) {
+      return element.returnType == className;
     });
   }
 

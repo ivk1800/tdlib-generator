@@ -9,7 +9,7 @@ class SetDatabaseEncryptionKey extends TdFunction {
   final String newEncryptionKey;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'setDatabaseEncryptionKey';
 

@@ -8,7 +8,8 @@ class BasicGroup extends TdObject {
       required this.memberCount,
       required this.status,
       required this.isActive,
-      required this.upgradedToSupergroupId});
+      required this.upgradedToSupergroupId,
+      this.extra});
 
   /// [id] Group identifier
   final int id;
@@ -25,6 +26,9 @@ class BasicGroup extends TdObject {
   /// [upgradedToSupergroupId] Identifier of the supergroup to which this group
   /// upgraded; 0 if none
   final int upgradedToSupergroupId;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'basicGroup';
 
@@ -50,6 +54,7 @@ class BasicGroup extends TdObject {
         'status': this.status,
         'is_active': this.isActive,
         'upgraded_to_supergroup_id': this.upgradedToSupergroupId,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

@@ -5,7 +5,7 @@ class GetDatabaseStatistics extends TdFunction {
   GetDatabaseStatistics();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getDatabaseStatistics';
 

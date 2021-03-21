@@ -2,10 +2,13 @@ import '../tdapi.dart';
 
 /// Represents a list of animations
 class Animations extends TdObject {
-  Animations({required this.animations});
+  Animations({required this.animations, this.extra});
 
   /// [animations] List of animations
   final List<Animation> animations;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'animations';
 
@@ -23,6 +26,9 @@ class Animations extends TdObject {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'animations': this.animations, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() => {
+        'animations': this.animations,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

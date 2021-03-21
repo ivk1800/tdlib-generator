@@ -2,10 +2,13 @@ import '../tdapi.dart';
 
 /// Contains a list of backgrounds
 class Backgrounds extends TdObject {
-  Backgrounds({required this.backgrounds});
+  Backgrounds({required this.backgrounds, this.extra});
 
   /// [backgrounds] A list of backgrounds
   final List<Background> backgrounds;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'backgrounds';
 
@@ -23,6 +26,9 @@ class Backgrounds extends TdObject {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'backgrounds': this.backgrounds, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() => {
+        'backgrounds': this.backgrounds,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

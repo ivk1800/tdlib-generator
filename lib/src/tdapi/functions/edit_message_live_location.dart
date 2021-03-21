@@ -34,7 +34,7 @@ class EditMessageLiveLocation extends TdFunction {
   final int proximityAlertRadius;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'editMessageLiveLocation';
 

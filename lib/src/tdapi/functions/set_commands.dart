@@ -8,7 +8,7 @@ class SetCommands extends TdFunction {
   final List<BotCommand> commands;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'setCommands';
 

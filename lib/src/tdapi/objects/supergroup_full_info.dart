@@ -22,7 +22,8 @@ class SupergroupFullInfo extends TdObject {
       ChatLocation? this.location,
       required this.inviteLink,
       required this.upgradedFromBasicGroupId,
-      required this.upgradedFromMaxMessageId});
+      required this.upgradedFromMaxMessageId,
+      this.extra});
 
   /// [photo] Chat photo; may be null
   final ChatPhoto? photo;
@@ -94,6 +95,9 @@ class SupergroupFullInfo extends TdObject {
   /// from which supergroup was upgraded; 0 if none
   final int upgradedFromMaxMessageId;
 
+  /// callback sign
+  final dynamic? extra;
+
   static const String CONSTRUCTOR = 'supergroupFullInfo';
 
   static SupergroupFullInfo? fromJson(Map<String, dynamic>? json) {
@@ -148,6 +152,7 @@ class SupergroupFullInfo extends TdObject {
         'invite_link': this.inviteLink,
         'upgraded_from_basic_group_id': this.upgradedFromBasicGroupId,
         'upgraded_from_max_message_id': this.upgradedFromMaxMessageId,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

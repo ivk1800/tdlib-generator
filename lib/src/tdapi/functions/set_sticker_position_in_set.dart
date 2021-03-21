@@ -12,7 +12,7 @@ class SetStickerPositionInSet extends TdFunction {
   final int position;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'setStickerPositionInSet';
 

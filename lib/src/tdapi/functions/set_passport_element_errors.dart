@@ -13,7 +13,7 @@ class SetPassportElementErrors extends TdFunction {
   final List<InputPassportElementError> errors;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'setPassportElementErrors';
 

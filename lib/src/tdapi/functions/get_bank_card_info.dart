@@ -8,7 +8,7 @@ class GetBankCardInfo extends TdFunction {
   final String bankCardNumber;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getBankCardInfo';
 

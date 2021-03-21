@@ -2,7 +2,10 @@ import '../tdapi.dart';
 
 /// Describes a statistical graph
 abstract class StatisticalGraph extends TdObject {
-  const StatisticalGraph();
+  const StatisticalGraph({this.extra});
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'statisticalGraph';
 

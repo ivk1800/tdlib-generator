@@ -12,7 +12,7 @@ class SetChatPermissions extends TdFunction {
   final ChatPermissions permissions;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'setChatPermissions';
 

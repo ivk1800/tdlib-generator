@@ -5,7 +5,7 @@ class GetRecommendedChatFilters extends TdFunction {
   GetRecommendedChatFilters();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getRecommendedChatFilters';
 

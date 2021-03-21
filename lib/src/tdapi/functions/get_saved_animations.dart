@@ -5,7 +5,7 @@ class GetSavedAnimations extends TdFunction {
   GetSavedAnimations();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getSavedAnimations';
 

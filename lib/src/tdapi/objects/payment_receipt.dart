@@ -8,7 +8,8 @@ class PaymentReceipt extends TdObject {
       required this.invoice,
       OrderInfo? this.orderInfo,
       ShippingOption? this.shippingOption,
-      required this.credentialsTitle});
+      required this.credentialsTitle,
+      this.extra});
 
   /// [date] Point in time (Unix timestamp) when the payment was made
   final int date;
@@ -27,6 +28,9 @@ class PaymentReceipt extends TdObject {
 
   /// [credentialsTitle] Title of the saved credentials
   final String credentialsTitle;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'paymentReceipt';
 
@@ -54,6 +58,7 @@ class PaymentReceipt extends TdObject {
         'order_info': this.orderInfo,
         'shipping_option': this.shippingOption,
         'credentials_title': this.credentialsTitle,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

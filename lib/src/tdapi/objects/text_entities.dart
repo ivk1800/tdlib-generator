@@ -2,10 +2,13 @@ import '../tdapi.dart';
 
 /// Contains a list of text entities
 class TextEntities extends TdObject {
-  TextEntities({required this.entities});
+  TextEntities({required this.entities, this.extra});
 
   /// [entities] List of text entities
   final List<TextEntity> entities;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'textEntities';
 
@@ -24,5 +27,5 @@ class TextEntities extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'entities': this.entities, '@type': CONSTRUCTOR};
+      {'entities': this.entities, '@type': CONSTRUCTOR, '@extra': this.extra};
 }

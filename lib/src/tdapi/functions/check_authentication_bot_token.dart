@@ -11,7 +11,7 @@ class CheckAuthenticationBotToken extends TdFunction {
   final String token;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'checkAuthenticationBotToken';
 

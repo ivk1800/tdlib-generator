@@ -18,7 +18,7 @@ class StopPoll extends TdFunction {
   final ReplyMarkup replyMarkup;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'stopPoll';
 

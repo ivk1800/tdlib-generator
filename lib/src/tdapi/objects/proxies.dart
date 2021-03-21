@@ -2,10 +2,13 @@ import '../tdapi.dart';
 
 /// Represents a list of proxy servers
 class Proxies extends TdObject {
-  Proxies({required this.proxies});
+  Proxies({required this.proxies, this.extra});
 
   /// [proxies] List of proxy servers
   final List<Proxy> proxies;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'proxies';
 
@@ -24,5 +27,5 @@ class Proxies extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'proxies': this.proxies, '@type': CONSTRUCTOR};
+      {'proxies': this.proxies, '@type': CONSTRUCTOR, '@extra': this.extra};
 }

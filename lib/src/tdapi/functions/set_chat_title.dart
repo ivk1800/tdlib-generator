@@ -12,7 +12,7 @@ class SetChatTitle extends TdFunction {
   final String title;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'setChatTitle';
 

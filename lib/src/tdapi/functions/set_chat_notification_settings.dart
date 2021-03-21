@@ -14,7 +14,7 @@ class SetChatNotificationSettings extends TdFunction {
   final ChatNotificationSettings notificationSettings;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'setChatNotificationSettings';
 

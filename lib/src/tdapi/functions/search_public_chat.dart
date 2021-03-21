@@ -10,7 +10,7 @@ class SearchPublicChat extends TdFunction {
   final String username;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'searchPublicChat';
 

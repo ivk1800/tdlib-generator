@@ -5,7 +5,7 @@ class DeleteSavedCredentials extends TdFunction {
   DeleteSavedCredentials();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'deleteSavedCredentials';
 

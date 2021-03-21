@@ -12,7 +12,7 @@ class AddChatToList extends TdFunction {
   final ChatList chatList;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'addChatToList';
 

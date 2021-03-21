@@ -11,7 +11,7 @@ class GetFileDownloadedPrefixSize extends TdFunction {
   final int offset;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getFileDownloadedPrefixSize';
 

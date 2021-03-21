@@ -9,7 +9,7 @@ class ConfirmQrCodeAuthentication extends TdFunction {
   final String link;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'confirmQrCodeAuthentication';
 

@@ -22,7 +22,7 @@ class SendCallRating extends TdFunction {
   final List<CallProblem> problems;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'sendCallRating';
 

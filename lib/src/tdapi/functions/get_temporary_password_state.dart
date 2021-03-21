@@ -5,7 +5,7 @@ class GetTemporaryPasswordState extends TdFunction {
   GetTemporaryPasswordState();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getTemporaryPasswordState';
 

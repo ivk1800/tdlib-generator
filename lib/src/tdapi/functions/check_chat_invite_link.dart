@@ -10,7 +10,7 @@ class CheckChatInviteLink extends TdFunction {
   final String inviteLink;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'checkChatInviteLink';
 

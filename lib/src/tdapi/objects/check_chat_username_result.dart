@@ -2,7 +2,10 @@ import '../tdapi.dart';
 
 /// Represents result of checking whether a username can be set for a chat
 abstract class CheckChatUsernameResult extends TdObject {
-  const CheckChatUsernameResult();
+  const CheckChatUsernameResult({this.extra});
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'checkChatUsernameResult';
 

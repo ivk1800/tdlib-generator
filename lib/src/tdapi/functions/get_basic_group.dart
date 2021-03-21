@@ -9,7 +9,7 @@ class GetBasicGroup extends TdFunction {
   final int basicGroupId;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getBasicGroup';
 

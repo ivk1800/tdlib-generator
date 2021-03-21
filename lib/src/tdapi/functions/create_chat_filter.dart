@@ -8,7 +8,7 @@ class CreateChatFilter extends TdFunction {
   final ChatFilter filter;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'createChatFilter';
 

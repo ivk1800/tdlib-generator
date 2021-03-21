@@ -12,7 +12,7 @@ class RegisterUser extends TdFunction {
   final String lastName;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'registerUser';
 

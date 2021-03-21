@@ -5,7 +5,7 @@ class ResetNetworkStatistics extends TdFunction {
   ResetNetworkStatistics();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'resetNetworkStatistics';
 

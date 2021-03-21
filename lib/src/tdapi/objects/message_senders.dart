@@ -2,13 +2,16 @@ import '../tdapi.dart';
 
 /// Represents a list of message senders
 class MessageSenders extends TdObject {
-  MessageSenders({required this.totalCount, required this.senders});
+  MessageSenders({required this.totalCount, required this.senders, this.extra});
 
   /// [totalCount] Approximate total count of messages senders found
   final int totalCount;
 
   /// [senders] List of message senders
   final List<MessageSender> senders;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'messageSenders';
 
@@ -30,6 +33,7 @@ class MessageSenders extends TdObject {
   Map<String, dynamic> toJson() => {
         'total_count': this.totalCount,
         'senders': this.senders,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

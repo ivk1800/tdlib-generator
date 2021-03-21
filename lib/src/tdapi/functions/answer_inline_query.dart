@@ -37,7 +37,7 @@ class AnswerInlineQuery extends TdFunction {
   final String switchPmParameter;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'answerInlineQuery';
 

@@ -17,7 +17,7 @@ class GetMessageEmbeddingCode extends TdFunction {
   final bool forAlbum;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getMessageEmbeddingCode';
 

@@ -10,7 +10,7 @@ class CleanFileName extends TdFunction {
   final String fileName;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'cleanFileName';
 

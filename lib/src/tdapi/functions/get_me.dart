@@ -5,7 +5,7 @@ class GetMe extends TdFunction {
   GetMe();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getMe';
 

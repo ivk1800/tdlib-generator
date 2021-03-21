@@ -14,7 +14,7 @@ class ToggleGroupCallMuteNewParticipants extends TdFunction {
   final bool muteNewParticipants;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'toggleGroupCallMuteNewParticipants';
 

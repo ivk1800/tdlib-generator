@@ -5,7 +5,7 @@ class DisableProxy extends TdFunction {
   DisableProxy();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'disableProxy';
 

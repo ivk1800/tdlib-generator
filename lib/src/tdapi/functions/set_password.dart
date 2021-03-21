@@ -29,7 +29,7 @@ class SetPassword extends TdFunction {
   final String newRecoveryEmailAddress;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'setPassword';
 

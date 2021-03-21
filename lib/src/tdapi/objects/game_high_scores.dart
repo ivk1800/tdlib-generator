@@ -2,10 +2,13 @@ import '../tdapi.dart';
 
 /// Contains a list of game high scores
 class GameHighScores extends TdObject {
-  GameHighScores({required this.scores});
+  GameHighScores({required this.scores, this.extra});
 
   /// [scores] A list of game high scores
   final List<GameHighScore> scores;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'gameHighScores';
 
@@ -24,5 +27,5 @@ class GameHighScores extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'scores': this.scores, '@type': CONSTRUCTOR};
+      {'scores': this.scores, '@type': CONSTRUCTOR, '@extra': this.extra};
 }

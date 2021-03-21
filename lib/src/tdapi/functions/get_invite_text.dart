@@ -6,7 +6,7 @@ class GetInviteText extends TdFunction {
   GetInviteText();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getInviteText';
 

@@ -9,7 +9,7 @@ class TestCallVectorIntObject extends TdFunction {
   final List<TestInt> x;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'testCallVectorIntObject';
 

@@ -30,7 +30,7 @@ class SetGameScore extends TdFunction {
   final bool force;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'setGameScore';
 

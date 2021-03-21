@@ -9,7 +9,8 @@ class PaymentForm extends TdObject {
       OrderInfo? this.savedOrderInfo,
       SavedCredentials? this.savedCredentials,
       required this.canSaveCredentials,
-      required this.needPassword});
+      required this.needPassword,
+      this.extra});
 
   /// [invoice] Full information of the invoice
   final Invoice invoice;
@@ -34,6 +35,9 @@ class PaymentForm extends TdObject {
   /// [needPassword] True, if the user will be able to save credentials
   /// by a password they set up
   final bool needPassword;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'paymentForm';
 
@@ -64,6 +68,7 @@ class PaymentForm extends TdObject {
         'saved_credentials': this.savedCredentials,
         'can_save_credentials': this.canSaveCredentials,
         'need_password': this.needPassword,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

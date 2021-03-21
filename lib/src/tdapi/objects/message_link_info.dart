@@ -7,7 +7,8 @@ class MessageLinkInfo extends TdObject {
       required this.chatId,
       Message? this.message,
       required this.forAlbum,
-      required this.forComment});
+      required this.forComment,
+      this.extra});
 
   /// [isPublic] True, if the link is a public link for a message in a chat
   final bool isPublic;
@@ -24,6 +25,9 @@ class MessageLinkInfo extends TdObject {
   /// [forComment] True, if the message is linked as a channel post comment or
   /// a message thread
   final bool forComment;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'messageLinkInfo';
 
@@ -49,6 +53,7 @@ class MessageLinkInfo extends TdObject {
         'message': this.message,
         'for_album': this.forAlbum,
         'for_comment': this.forComment,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

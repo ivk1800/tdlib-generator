@@ -11,7 +11,7 @@ class SetAutoDownloadSettings extends TdFunction {
   final NetworkType type;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'setAutoDownloadSettings';
 

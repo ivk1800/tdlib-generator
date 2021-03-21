@@ -5,7 +5,7 @@ class TerminateAllOtherSessions extends TdFunction {
   TerminateAllOtherSessions();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'terminateAllOtherSessions';
 

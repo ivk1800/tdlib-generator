@@ -22,7 +22,7 @@ class SearchChatMembers extends TdFunction {
   final ChatMembersFilter filter;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'searchChatMembers';
 

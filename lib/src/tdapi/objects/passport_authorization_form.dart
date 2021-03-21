@@ -5,7 +5,8 @@ class PassportAuthorizationForm extends TdObject {
   PassportAuthorizationForm(
       {required this.id,
       required this.requiredElements,
-      required this.privacyPolicyUrl});
+      required this.privacyPolicyUrl,
+      this.extra});
 
   /// [id] Unique identifier of the authorization form
   final int id;
@@ -16,6 +17,9 @@ class PassportAuthorizationForm extends TdObject {
 
   /// [privacyPolicyUrl] URL for the privacy policy of the service; may be empty
   final String privacyPolicyUrl;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'passportAuthorizationForm';
 
@@ -40,6 +44,7 @@ class PassportAuthorizationForm extends TdObject {
         'id': this.id,
         'required_elements': this.requiredElements,
         'privacy_policy_url': this.privacyPolicyUrl,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

@@ -21,7 +21,7 @@ class BlockMessageSenderFromReplies extends TdFunction {
   final bool reportSpam;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'blockMessageSenderFromReplies';
 

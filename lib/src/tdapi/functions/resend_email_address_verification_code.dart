@@ -6,7 +6,7 @@ class ResendEmailAddressVerificationCode extends TdFunction {
   ResendEmailAddressVerificationCode();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'resendEmailAddressVerificationCode';
 

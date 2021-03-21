@@ -8,7 +8,7 @@ class GetChatFilterDefaultIconName extends TdFunction {
   final ChatFilter filter;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getChatFilterDefaultIconName';
 

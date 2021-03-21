@@ -8,7 +8,7 @@ class SetProfilePhoto extends TdFunction {
   final InputChatPhoto photo;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'setProfilePhoto';
 

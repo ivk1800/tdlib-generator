@@ -20,7 +20,7 @@ class DeleteChatHistory extends TdFunction {
   final bool revoke;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'deleteChatHistory';
 

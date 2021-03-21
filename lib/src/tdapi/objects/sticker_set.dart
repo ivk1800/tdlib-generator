@@ -15,7 +15,8 @@ class StickerSet extends TdObject {
       required this.isMasks,
       required this.isViewed,
       required this.stickers,
-      required this.emojis});
+      required this.emojis,
+      this.extra});
 
   /// [id] Identifier of the sticker set
   final int id;
@@ -61,6 +62,9 @@ class StickerSet extends TdObject {
   /// list is only for informational purposes, because a sticker is always sent
   /// a fixed emoji from the corresponding Sticker object
   final List<Emojis> emojis;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'stickerSet';
 
@@ -109,6 +113,7 @@ class StickerSet extends TdObject {
         'is_viewed': this.isViewed,
         'stickers': this.stickers,
         'emojis': this.emojis,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

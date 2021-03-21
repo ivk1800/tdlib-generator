@@ -3,7 +3,10 @@ import '../tdapi.dart';
 /// Contains basic information about a chat filter
 class ChatFilterInfo extends TdObject {
   ChatFilterInfo(
-      {required this.id, required this.title, required this.iconName});
+      {required this.id,
+      required this.title,
+      required this.iconName,
+      this.extra});
 
   /// [id] Unique chat filter identifier
   final int id;
@@ -16,6 +19,9 @@ class ChatFilterInfo extends TdObject {
   /// "Crown", "Favorite", "Flower", "Game", "Home", "Love", "Mask", "Party",
   /// "Study", "Trade", "Travel", "Work"
   final String iconName;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'chatFilterInfo';
 
@@ -35,6 +41,7 @@ class ChatFilterInfo extends TdObject {
         'id': this.id,
         'title': this.title,
         'icon_name': this.iconName,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

@@ -13,7 +13,7 @@ class ToggleChatDefaultDisableNotification extends TdFunction {
   final bool defaultDisableNotification;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'toggleChatDefaultDisableNotification';
 

@@ -22,7 +22,7 @@ class EditMessageText extends TdFunction {
   final InputMessageContent inputMessageContent;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'editMessageText';
 

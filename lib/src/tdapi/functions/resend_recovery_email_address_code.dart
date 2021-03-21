@@ -5,7 +5,7 @@ class ResendRecoveryEmailAddressCode extends TdFunction {
   ResendRecoveryEmailAddressCode();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'resendRecoveryEmailAddressCode';
 

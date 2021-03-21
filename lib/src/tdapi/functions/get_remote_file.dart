@@ -17,7 +17,7 @@ class GetRemoteFile extends TdFunction {
   final FileType fileType;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getRemoteFile';
 

@@ -9,7 +9,7 @@ class SetLocation extends TdFunction {
   final Location location;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'setLocation';
 

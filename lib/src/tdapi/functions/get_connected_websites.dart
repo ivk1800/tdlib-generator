@@ -5,7 +5,7 @@ class GetConnectedWebsites extends TdFunction {
   GetConnectedWebsites();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getConnectedWebsites';
 

@@ -8,7 +8,7 @@ class AddNetworkStatistics extends TdFunction {
   final NetworkStatisticsEntry entry;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'addNetworkStatistics';
 

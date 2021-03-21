@@ -20,7 +20,8 @@ class Supergroup extends TdObject {
       required this.isChannel,
       required this.isVerified,
       required this.restrictionReason,
-      required this.isScam});
+      required this.isScam,
+      this.extra});
 
   /// [id] Supergroup or channel identifier
   final int id;
@@ -72,6 +73,9 @@ class Supergroup extends TdObject {
   /// [isScam] True, if many users reported this supergroup as a scam
   final bool isScam;
 
+  /// callback sign
+  final dynamic? extra;
+
   static const String CONSTRUCTOR = 'supergroup';
 
   static Supergroup? fromJson(Map<String, dynamic>? json) {
@@ -112,6 +116,7 @@ class Supergroup extends TdObject {
         'is_verified': this.isVerified,
         'restriction_reason': this.restrictionReason,
         'is_scam': this.isScam,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

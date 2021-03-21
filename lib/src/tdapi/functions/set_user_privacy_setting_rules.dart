@@ -11,7 +11,7 @@ class SetUserPrivacySettingRules extends TdFunction {
   final UserPrivacySettingRules rules;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'setUserPrivacySettingRules';
 

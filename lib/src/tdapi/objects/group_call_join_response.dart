@@ -2,13 +2,17 @@ import '../tdapi.dart';
 
 /// Describes a join response for interaction with tgcalls
 class GroupCallJoinResponse extends TdObject {
-  GroupCallJoinResponse({required this.payload, required this.candidates});
+  GroupCallJoinResponse(
+      {required this.payload, required this.candidates, this.extra});
 
   /// [payload] Join response payload to pass to tgcalls
   final GroupCallPayload payload;
 
   /// [candidates] Join response candidates to pass to tgcalls
   final List<GroupCallJoinResponseCandidate> candidates;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'groupCallJoinResponse';
 
@@ -31,6 +35,7 @@ class GroupCallJoinResponse extends TdObject {
   Map<String, dynamic> toJson() => {
         'payload': this.payload,
         'candidates': this.candidates,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

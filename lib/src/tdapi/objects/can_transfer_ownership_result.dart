@@ -3,7 +3,10 @@ import '../tdapi.dart';
 /// Represents result of checking whether the current session can be used to
 /// a chat ownership to another user
 abstract class CanTransferOwnershipResult extends TdObject {
-  const CanTransferOwnershipResult();
+  const CanTransferOwnershipResult({this.extra});
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'canTransferOwnershipResult';
 

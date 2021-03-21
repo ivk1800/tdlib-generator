@@ -10,7 +10,7 @@ class GetPreferredCountryLanguage extends TdFunction {
   final String countryCode;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getPreferredCountryLanguage';
 

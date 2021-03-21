@@ -11,7 +11,7 @@ class AcceptCall extends TdFunction {
   final CallProtocol protocol;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'acceptCall';
 

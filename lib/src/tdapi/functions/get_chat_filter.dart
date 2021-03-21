@@ -8,7 +8,7 @@ class GetChatFilter extends TdFunction {
   final int chatFilterId;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getChatFilter';
 

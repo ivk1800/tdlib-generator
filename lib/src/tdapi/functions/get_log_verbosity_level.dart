@@ -6,7 +6,7 @@ class GetLogVerbosityLevel extends TdFunction {
   GetLogVerbosityLevel();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getLogVerbosityLevel';
 

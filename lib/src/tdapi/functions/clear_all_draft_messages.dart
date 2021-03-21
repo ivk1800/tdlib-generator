@@ -9,7 +9,7 @@ class ClearAllDraftMessages extends TdFunction {
   final bool excludeSecretChats;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'clearAllDraftMessages';
 

@@ -9,7 +9,7 @@ class SetUsername extends TdFunction {
   final String username;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'setUsername';
 

@@ -12,7 +12,7 @@ class SetScopeNotificationSettings extends TdFunction {
   final ScopeNotificationSettings notificationSettings;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'setScopeNotificationSettings';
 

@@ -25,7 +25,7 @@ class SendPaymentForm extends TdFunction {
   final InputCredentials credentials;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'sendPaymentForm';
 

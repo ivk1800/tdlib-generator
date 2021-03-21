@@ -12,7 +12,7 @@ class AddSavedAnimation extends TdFunction {
   final InputFile animation;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'addSavedAnimation';
 

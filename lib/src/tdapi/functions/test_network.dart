@@ -6,7 +6,7 @@ class TestNetwork extends TdFunction {
   TestNetwork();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'testNetwork';
 

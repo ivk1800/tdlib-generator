@@ -10,7 +10,7 @@ class SynchronizeLanguagePack extends TdFunction {
   final String languagePackId;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'synchronizeLanguagePack';
 

@@ -23,7 +23,8 @@ class WebPage extends TdObject {
       Video? this.video,
       VideoNote? this.videoNote,
       VoiceNote? this.voiceNote,
-      required this.instantViewVersion});
+      required this.instantViewVersion,
+      this.extra});
 
   /// [url] Original URL of the link
   final String url;
@@ -92,6 +93,9 @@ class WebPage extends TdObject {
   /// can be 1 or 2), 0 if none
   final int instantViewVersion;
 
+  /// callback sign
+  final dynamic? extra;
+
   static const String CONSTRUCTOR = 'webPage';
 
   static WebPage? fromJson(Map<String, dynamic>? json) {
@@ -148,6 +152,7 @@ class WebPage extends TdObject {
         'video_note': this.videoNote,
         'voice_note': this.voiceNote,
         'instant_view_version': this.instantViewVersion,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

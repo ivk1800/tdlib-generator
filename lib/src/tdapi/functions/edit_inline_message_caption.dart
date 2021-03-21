@@ -18,7 +18,7 @@ class EditInlineMessageCaption extends TdFunction {
   final FormattedText caption;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'editInlineMessageCaption';
 

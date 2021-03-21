@@ -5,7 +5,7 @@ class GetSavedOrderInfo extends TdFunction {
   GetSavedOrderInfo();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getSavedOrderInfo';
 

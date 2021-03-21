@@ -18,7 +18,7 @@ class SetChatMemberStatus extends TdFunction {
   final ChatMemberStatus status;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'setChatMemberStatus';
 

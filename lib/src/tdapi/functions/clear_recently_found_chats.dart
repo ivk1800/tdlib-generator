@@ -5,7 +5,7 @@ class ClearRecentlyFoundChats extends TdFunction {
   ClearRecentlyFoundChats();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'clearRecentlyFoundChats';
 

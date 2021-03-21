@@ -2,13 +2,16 @@ import '../tdapi.dart';
 
 /// Represents a list of users
 class Users extends TdObject {
-  Users({required this.totalCount, required this.userIds});
+  Users({required this.totalCount, required this.userIds, this.extra});
 
   /// [totalCount] Approximate total count of users found
   final int totalCount;
 
   /// [userIds] A list of user identifiers
   final List<int> userIds;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'users';
 
@@ -29,6 +32,7 @@ class Users extends TdObject {
   Map<String, dynamic> toJson() => {
         'total_count': this.totalCount,
         'user_ids': this.userIds,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

@@ -13,7 +13,7 @@ class SetNetworkType extends TdFunction {
   final NetworkType type;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'setNetworkType';
 

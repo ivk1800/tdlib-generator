@@ -6,7 +6,7 @@ class GetCountryCode extends TdFunction {
   GetCountryCode();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getCountryCode';
 

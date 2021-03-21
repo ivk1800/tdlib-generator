@@ -6,7 +6,7 @@ class TestCallEmpty extends TdFunction {
   TestCallEmpty();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'testCallEmpty';
 

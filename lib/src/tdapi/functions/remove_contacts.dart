@@ -8,7 +8,7 @@ class RemoveContacts extends TdFunction {
   final List<int> userIds;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'removeContacts';
 

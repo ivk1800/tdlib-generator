@@ -8,7 +8,7 @@ class SetAlarm extends TdFunction {
   final double seconds;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'setAlarm';
 

@@ -8,7 +8,7 @@ class ReorderChatFilters extends TdFunction {
   final List<int> chatFilterIds;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'reorderChatFilters';
 

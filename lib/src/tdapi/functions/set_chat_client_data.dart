@@ -11,7 +11,7 @@ class SetChatClientData extends TdFunction {
   final String clientData;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'setChatClientData';
 

@@ -2,13 +2,17 @@ import '../tdapi.dart';
 
 /// Contains a list of messages
 class Messages extends TdObject {
-  Messages({required this.totalCount, List<Message>? this.messages});
+  Messages(
+      {required this.totalCount, List<Message>? this.messages, this.extra});
 
   /// [totalCount] Approximate total count of messages found
   final int totalCount;
 
   /// [messages] List of messages; messages may be null
   final List<Message>? messages;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'messages';
 
@@ -30,6 +34,7 @@ class Messages extends TdObject {
   Map<String, dynamic> toJson() => {
         'total_count': this.totalCount,
         'messages': this.messages,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

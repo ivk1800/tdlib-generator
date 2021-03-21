@@ -14,7 +14,7 @@ class OpenMessageContent extends TdFunction {
   final int messageId;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'openMessageContent';
 

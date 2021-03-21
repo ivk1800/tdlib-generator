@@ -17,7 +17,7 @@ class ResendMessages extends TdFunction {
   final List<int> messageIds;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'resendMessages';
 

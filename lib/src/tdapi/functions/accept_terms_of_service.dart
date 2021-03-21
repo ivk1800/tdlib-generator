@@ -8,7 +8,7 @@ class AcceptTermsOfService extends TdFunction {
   final String termsOfServiceId;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'acceptTermsOfService';
 

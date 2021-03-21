@@ -8,7 +8,7 @@ class TerminateSession extends TdFunction {
   final int sessionId;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'terminateSession';
 

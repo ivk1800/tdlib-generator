@@ -17,7 +17,7 @@ class GetChatMessageCount extends TdFunction {
   final bool returnLocal;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getChatMessageCount';
 

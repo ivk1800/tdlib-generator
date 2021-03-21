@@ -2,7 +2,10 @@ import '../tdapi.dart';
 
 /// Contains information about a Telegram Passport element
 abstract class PassportElement extends TdObject {
-  const PassportElement();
+  const PassportElement({this.extra});
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'passportElement';
 

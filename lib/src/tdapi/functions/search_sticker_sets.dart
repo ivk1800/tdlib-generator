@@ -9,7 +9,7 @@ class SearchStickerSets extends TdFunction {
   final String query;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'searchStickerSets';
 

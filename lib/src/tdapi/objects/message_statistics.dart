@@ -2,10 +2,13 @@ import '../tdapi.dart';
 
 /// A detailed statistics about a message
 class MessageStatistics extends TdObject {
-  MessageStatistics({required this.messageInteractionGraph});
+  MessageStatistics({required this.messageInteractionGraph, this.extra});
 
   /// [messageInteractionGraph] A graph containing number of message views and
   final StatisticalGraph messageInteractionGraph;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'messageStatistics';
 
@@ -24,6 +27,7 @@ class MessageStatistics extends TdObject {
   @override
   Map<String, dynamic> toJson() => {
         'message_interaction_graph': this.messageInteractionGraph,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

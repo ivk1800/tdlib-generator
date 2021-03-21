@@ -8,7 +8,7 @@ class DisconnectWebsite extends TdFunction {
   final int websiteId;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'disconnectWebsite';
 

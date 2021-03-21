@@ -16,7 +16,7 @@ class GetCallbackQueryAnswer extends TdFunction {
   final CallbackQueryPayload payload;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getCallbackQueryAnswer';
 

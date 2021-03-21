@@ -35,7 +35,7 @@ class ForwardMessages extends TdFunction {
   final bool removeCaption;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'forwardMessages';
 

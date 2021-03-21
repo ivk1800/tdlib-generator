@@ -7,7 +7,8 @@ class WebPageInstantView extends TdObject {
       required this.viewCount,
       required this.version,
       required this.isRtl,
-      required this.isFull});
+      required this.isFull,
+      this.extra});
 
   /// [pageBlocks] Content of the web page
   final List<PageBlock> pageBlocks;
@@ -24,6 +25,9 @@ class WebPageInstantView extends TdObject {
   /// [isFull] True, if the instant view contains the full page. A network
   /// might be needed to get the full web page instant view
   final bool isFull;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'webPageInstantView';
 
@@ -51,6 +55,7 @@ class WebPageInstantView extends TdObject {
         'version': this.version,
         'is_rtl': this.isRtl,
         'is_full': this.isFull,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

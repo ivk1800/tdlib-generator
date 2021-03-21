@@ -10,7 +10,7 @@ class GetLocalizationTargetInfo extends TdFunction {
   final bool onlyLocal;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getLocalizationTargetInfo';
 

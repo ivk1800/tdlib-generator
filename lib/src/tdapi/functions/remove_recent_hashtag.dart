@@ -8,7 +8,7 @@ class RemoveRecentHashtag extends TdFunction {
   final String hashtag;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'removeRecentHashtag';
 

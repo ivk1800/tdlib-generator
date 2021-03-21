@@ -7,7 +7,7 @@ class GetAuthorizationState extends TdFunction {
   GetAuthorizationState();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getAuthorizationState';
 

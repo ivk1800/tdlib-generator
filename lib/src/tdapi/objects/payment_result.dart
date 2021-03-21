@@ -2,7 +2,8 @@ import '../tdapi.dart';
 
 /// Contains the result of a payment request
 class PaymentResult extends TdObject {
-  PaymentResult({required this.success, required this.verificationUrl});
+  PaymentResult(
+      {required this.success, required this.verificationUrl, this.extra});
 
   /// [success] True, if the payment request was successful; otherwise the
   /// will be not empty
@@ -10,6 +11,9 @@ class PaymentResult extends TdObject {
 
   /// [verificationUrl] URL for additional payment credentials verification
   final String verificationUrl;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'paymentResult';
 
@@ -28,6 +32,7 @@ class PaymentResult extends TdObject {
   Map<String, dynamic> toJson() => {
         'success': this.success,
         'verification_url': this.verificationUrl,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

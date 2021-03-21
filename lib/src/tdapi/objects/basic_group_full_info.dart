@@ -7,7 +7,8 @@ class BasicGroupFullInfo extends TdObject {
       required this.description,
       required this.creatorUserId,
       required this.members,
-      required this.inviteLink});
+      required this.inviteLink,
+      this.extra});
 
   /// [photo] Chat photo; may be null
   final ChatPhoto? photo;
@@ -24,6 +25,9 @@ class BasicGroupFullInfo extends TdObject {
   /// [inviteLink] Invite link for this group; available only after it has been
   /// at least once and only for the group creator
   final String inviteLink;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'basicGroupFullInfo';
 
@@ -51,6 +55,7 @@ class BasicGroupFullInfo extends TdObject {
         'creator_user_id': this.creatorUserId,
         'members': this.members,
         'invite_link': this.inviteLink,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

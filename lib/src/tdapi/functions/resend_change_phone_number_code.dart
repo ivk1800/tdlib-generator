@@ -7,7 +7,7 @@ class ResendChangePhoneNumberCode extends TdFunction {
   ResendChangePhoneNumberCode();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'resendChangePhoneNumberCode';
 

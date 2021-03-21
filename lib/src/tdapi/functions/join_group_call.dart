@@ -22,7 +22,7 @@ class JoinGroupCall extends TdFunction {
   final bool isMuted;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'joinGroupCall';
 

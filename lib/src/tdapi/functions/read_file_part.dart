@@ -21,7 +21,7 @@ class ReadFilePart extends TdFunction {
   final int count;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'readFilePart';
 

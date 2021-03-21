@@ -13,7 +13,7 @@ class ToggleSupergroupSignMessages extends TdFunction {
   final bool signMessages;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'toggleSupergroupSignMessages';
 

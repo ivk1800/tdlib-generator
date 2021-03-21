@@ -6,7 +6,8 @@ class OrderInfo extends TdObject {
       {required this.name,
       required this.phoneNumber,
       required this.emailAddress,
-      Address? this.shippingAddress});
+      Address? this.shippingAddress,
+      this.extra});
 
   /// [name] Name of the user
   final String name;
@@ -19,6 +20,9 @@ class OrderInfo extends TdObject {
 
   /// [shippingAddress] Shipping address for this order; may be null
   final Address? shippingAddress;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'orderInfo';
 
@@ -42,6 +46,7 @@ class OrderInfo extends TdObject {
         'phone_number': this.phoneNumber,
         'email_address': this.emailAddress,
         'shipping_address': this.shippingAddress,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

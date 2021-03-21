@@ -7,7 +7,7 @@ class Close extends TdFunction {
   Close();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'close';
 

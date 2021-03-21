@@ -5,7 +5,7 @@ class GetAutoDownloadSettingsPresets extends TdFunction {
   GetAutoDownloadSettingsPresets();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getAutoDownloadSettingsPresets';
 

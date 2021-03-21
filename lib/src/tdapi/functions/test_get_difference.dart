@@ -5,7 +5,7 @@ class TestGetDifference extends TdFunction {
   TestGetDifference();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'testGetDifference';
 

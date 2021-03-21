@@ -11,7 +11,7 @@ class GetChatMessageByDate extends TdFunction {
   final int date;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getChatMessageByDate';
 

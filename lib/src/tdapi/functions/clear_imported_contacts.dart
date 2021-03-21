@@ -5,7 +5,7 @@ class ClearImportedContacts extends TdFunction {
   ClearImportedContacts();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'clearImportedContacts';
 

@@ -2,7 +2,7 @@ import '../tdapi.dart';
 
 /// A text with some entities
 class FormattedText extends TdObject {
-  FormattedText({required this.text, required this.entities});
+  FormattedText({required this.text, required this.entities, this.extra});
 
   /// [text] The text
   final String text;
@@ -13,6 +13,9 @@ class FormattedText extends TdObject {
   /// contain and to be contained in all other entities. All other entities
   /// contain each other
   final List<TextEntity> entities;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'formattedText';
 
@@ -31,6 +34,10 @@ class FormattedText extends TdObject {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'text': this.text, 'entities': this.entities, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() => {
+        'text': this.text,
+        'entities': this.entities,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

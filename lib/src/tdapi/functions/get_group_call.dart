@@ -8,7 +8,7 @@ class GetGroupCall extends TdFunction {
   final int groupCallId;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getGroupCall';
 

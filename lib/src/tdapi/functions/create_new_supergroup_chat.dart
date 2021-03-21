@@ -22,7 +22,7 @@ class CreateNewSupergroupChat extends TdFunction {
   final ChatLocation location;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'createNewSupergroupChat';
 

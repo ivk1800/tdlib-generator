@@ -5,7 +5,7 @@ class GetApplicationConfig extends TdFunction {
   GetApplicationConfig();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getApplicationConfig';
 

@@ -2,10 +2,13 @@ import '../tdapi.dart';
 
 /// Represents a list of emoji
 class Emojis extends TdObject {
-  Emojis({required this.emojis});
+  Emojis({required this.emojis, this.extra});
 
   /// [emojis] List of emojis
   final List<String> emojis;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'emojis';
 
@@ -23,5 +26,5 @@ class Emojis extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'emojis': this.emojis, '@type': CONSTRUCTOR};
+      {'emojis': this.emojis, '@type': CONSTRUCTOR, '@extra': this.extra};
 }

@@ -12,7 +12,7 @@ class ChangePhoneNumber extends TdFunction {
   final PhoneNumberAuthenticationSettings settings;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'changePhoneNumber';
 

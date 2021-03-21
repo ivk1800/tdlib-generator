@@ -18,7 +18,7 @@ class GetCallbackQueryMessage extends TdFunction {
   final int callbackQueryId;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getCallbackQueryMessage';
 

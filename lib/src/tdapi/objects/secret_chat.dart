@@ -9,7 +9,8 @@ class SecretChat extends TdObject {
       required this.isOutbound,
       required this.ttl,
       required this.keyHash,
-      required this.layer});
+      required this.layer,
+      this.extra});
 
   /// [id] Secret chat identifier
   final int id;
@@ -40,6 +41,9 @@ class SecretChat extends TdObject {
   /// application. Video notes are supported if the layer
   final int layer;
 
+  /// callback sign
+  final dynamic? extra;
+
   static const String CONSTRUCTOR = 'secretChat';
 
   static SecretChat? fromJson(Map<String, dynamic>? json) {
@@ -68,6 +72,7 @@ class SecretChat extends TdObject {
         'ttl': this.ttl,
         'key_hash': this.keyHash,
         'layer': this.layer,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

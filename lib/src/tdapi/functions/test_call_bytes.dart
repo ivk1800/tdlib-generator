@@ -9,7 +9,7 @@ class TestCallBytes extends TdFunction {
   final String x;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'testCallBytes';
 

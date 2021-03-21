@@ -13,7 +13,7 @@ class GetLanguagePackStrings extends TdFunction {
   final List<String> keys;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getLanguagePackStrings';
 

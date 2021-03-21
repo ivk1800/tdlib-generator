@@ -5,7 +5,7 @@ class GetRecentInlineBots extends TdFunction {
   GetRecentInlineBots();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getRecentInlineBots';
 

@@ -5,7 +5,7 @@ class GetImportedContactCount extends TdFunction {
   GetImportedContactCount();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getImportedContactCount';
 

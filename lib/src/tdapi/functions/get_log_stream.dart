@@ -6,7 +6,7 @@ class GetLogStream extends TdFunction {
   GetLogStream();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getLogStream';
 

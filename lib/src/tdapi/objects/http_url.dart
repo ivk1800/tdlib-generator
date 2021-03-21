@@ -2,10 +2,13 @@ import '../tdapi.dart';
 
 /// Contains an HTTP URL
 class HttpUrl extends TdObject {
-  HttpUrl({required this.url});
+  HttpUrl({required this.url, this.extra});
 
   /// [url] The URL
   final String url;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'httpUrl';
 
@@ -20,5 +23,6 @@ class HttpUrl extends TdObject {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() => {'url': this.url, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() =>
+      {'url': this.url, '@type': CONSTRUCTOR, '@extra': this.extra};
 }

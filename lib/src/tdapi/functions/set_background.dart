@@ -19,7 +19,7 @@ class SetBackground extends TdFunction {
   final bool forDarkTheme;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'setBackground';
 

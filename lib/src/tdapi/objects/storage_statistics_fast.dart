@@ -8,7 +8,8 @@ class StorageStatisticsFast extends TdObject {
       required this.fileCount,
       required this.databaseSize,
       required this.languagePackDatabaseSize,
-      required this.logSize});
+      required this.logSize,
+      this.extra});
 
   /// [filesSize] Approximate total size of files
   final int filesSize;
@@ -24,6 +25,9 @@ class StorageStatisticsFast extends TdObject {
 
   /// [logSize] Size of the TDLib internal log
   final int logSize;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'storageStatisticsFast';
 
@@ -49,6 +53,7 @@ class StorageStatisticsFast extends TdObject {
         'database_size': this.databaseSize,
         'language_pack_database_size': this.languagePackDatabaseSize,
         'log_size': this.logSize,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

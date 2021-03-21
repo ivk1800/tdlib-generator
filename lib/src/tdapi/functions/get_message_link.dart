@@ -23,7 +23,7 @@ class GetMessageLink extends TdFunction {
   final bool forComment;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getMessageLink';
 

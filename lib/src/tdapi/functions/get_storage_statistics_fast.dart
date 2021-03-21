@@ -5,7 +5,7 @@ class GetStorageStatisticsFast extends TdFunction {
   GetStorageStatisticsFast();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getStorageStatisticsFast';
 

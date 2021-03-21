@@ -18,7 +18,7 @@ class SendBotStartMessage extends TdFunction {
   final String parameter;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'sendBotStartMessage';
 

@@ -9,7 +9,7 @@ class SendChatScreenshotTakenNotification extends TdFunction {
   final int chatId;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'sendChatScreenshotTakenNotification';
 

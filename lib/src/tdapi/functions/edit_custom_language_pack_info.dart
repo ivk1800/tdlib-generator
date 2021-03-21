@@ -9,7 +9,7 @@ class EditCustomLanguagePackInfo extends TdFunction {
   final LanguagePackInfo info;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'editCustomLanguagePackInfo';
 

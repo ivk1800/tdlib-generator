@@ -8,7 +8,8 @@ class Proxy extends TdObject {
       required this.port,
       required this.lastUsedDate,
       required this.isEnabled,
-      required this.type});
+      required this.type,
+      this.extra});
 
   /// [id] Unique identifier of the proxy
   final int id;
@@ -28,6 +29,9 @@ class Proxy extends TdObject {
 
   /// [type] Type of the proxy
   final ProxyType type;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'proxy';
 
@@ -55,6 +59,7 @@ class Proxy extends TdObject {
         'last_used_date': this.lastUsedDate,
         'is_enabled': this.isEnabled,
         'type': this.type,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

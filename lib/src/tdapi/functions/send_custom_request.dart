@@ -11,7 +11,7 @@ class SendCustomRequest extends TdFunction {
   final String parameters;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'sendCustomRequest';
 

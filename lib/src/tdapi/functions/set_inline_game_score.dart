@@ -26,7 +26,7 @@ class SetInlineGameScore extends TdFunction {
   final bool force;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'setInlineGameScore';
 

@@ -12,7 +12,7 @@ class GetWebPageInstantView extends TdFunction {
   final bool forceFull;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getWebPageInstantView';
 

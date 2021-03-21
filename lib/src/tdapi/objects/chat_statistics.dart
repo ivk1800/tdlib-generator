@@ -2,7 +2,10 @@ import '../tdapi.dart';
 
 /// Contains a detailed statistics about a chat
 abstract class ChatStatistics extends TdObject {
-  const ChatStatistics();
+  const ChatStatistics({this.extra});
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'chatStatistics';
 

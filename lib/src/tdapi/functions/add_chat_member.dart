@@ -18,7 +18,7 @@ class AddChatMember extends TdFunction {
   final int forwardLimit;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'addChatMember';
 

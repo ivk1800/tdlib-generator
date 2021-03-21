@@ -18,7 +18,7 @@ class SetChatDraftMessage extends TdFunction {
   final DraftMessage? draftMessage;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'setChatDraftMessage';
 

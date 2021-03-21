@@ -9,7 +9,7 @@ class GetPhoneNumberInfo extends TdFunction {
   final String phoneNumberPrefix;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getPhoneNumberInfo';
 

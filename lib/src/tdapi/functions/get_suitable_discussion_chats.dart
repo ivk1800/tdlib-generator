@@ -9,7 +9,7 @@ class GetSuitableDiscussionChats extends TdFunction {
   GetSuitableDiscussionChats();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getSuitableDiscussionChats';
 

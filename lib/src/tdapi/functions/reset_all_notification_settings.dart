@@ -6,7 +6,7 @@ class ResetAllNotificationSettings extends TdFunction {
   ResetAllNotificationSettings();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'resetAllNotificationSettings';
 

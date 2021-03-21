@@ -13,7 +13,7 @@ class RemoveRecentSticker extends TdFunction {
   final InputFile sticker;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'removeRecentSticker';
 

@@ -12,7 +12,7 @@ class SendChatSetTtlMessage extends TdFunction {
   final int ttl;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'sendChatSetTtlMessage';
 

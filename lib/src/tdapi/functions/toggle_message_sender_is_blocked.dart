@@ -12,7 +12,7 @@ class ToggleMessageSenderIsBlocked extends TdFunction {
   final bool isBlocked;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'toggleMessageSenderIsBlocked';
 

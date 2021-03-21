@@ -9,7 +9,7 @@ class GetFileExtension extends TdFunction {
   final String mimeType;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getFileExtension';
 

@@ -12,7 +12,7 @@ class ParseTextEntities extends TdFunction {
   final TextParseMode parseMode;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'parseTextEntities';
 

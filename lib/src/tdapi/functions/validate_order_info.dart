@@ -22,7 +22,7 @@ class ValidateOrderInfo extends TdFunction {
   final bool allowSave;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'validateOrderInfo';
 

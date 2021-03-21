@@ -17,7 +17,7 @@ class SetFileGenerationProgress extends TdFunction {
   final int localPrefixSize;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'setFileGenerationProgress';
 

@@ -8,7 +8,7 @@ class GetBackgrounds extends TdFunction {
   final bool forDarkTheme;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getBackgrounds';
 

@@ -9,7 +9,7 @@ class GetMessageLinkInfo extends TdFunction {
   final String url;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getMessageLinkInfo';
 

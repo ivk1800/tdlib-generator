@@ -2,7 +2,8 @@ import '../tdapi.dart';
 
 /// A full list of available network statistic entries
 class NetworkStatistics extends TdObject {
-  NetworkStatistics({required this.sinceDate, required this.entries});
+  NetworkStatistics(
+      {required this.sinceDate, required this.entries, this.extra});
 
   /// [sinceDate] Point in time (Unix timestamp) from which the statistics are
   ///
@@ -10,6 +11,9 @@ class NetworkStatistics extends TdObject {
 
   /// [entries] Network statistics entries
   final List<NetworkStatisticsEntry> entries;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'networkStatistics';
 
@@ -31,6 +35,7 @@ class NetworkStatistics extends TdObject {
   Map<String, dynamic> toJson() => {
         'since_date': this.sinceDate,
         'entries': this.entries,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

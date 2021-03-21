@@ -9,7 +9,7 @@ class GetSecretChat extends TdFunction {
   final int secretChatId;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getSecretChat';
 

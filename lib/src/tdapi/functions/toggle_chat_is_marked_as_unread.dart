@@ -12,7 +12,7 @@ class ToggleChatIsMarkedAsUnread extends TdFunction {
   final bool isMarkedAsUnread;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'toggleChatIsMarkedAsUnread';
 

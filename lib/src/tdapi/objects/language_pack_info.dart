@@ -15,7 +15,8 @@ class LanguagePackInfo extends TdObject {
       required this.totalStringCount,
       required this.translatedStringCount,
       required this.localStringCount,
-      required this.translationUrl});
+      required this.translationUrl,
+      this.extra});
 
   /// [id] Unique language pack identifier
   final String id;
@@ -62,6 +63,9 @@ class LanguagePackInfo extends TdObject {
   /// language packs
   final String translationUrl;
 
+  /// callback sign
+  final dynamic? extra;
+
   static const String CONSTRUCTOR = 'languagePackInfo';
 
   static LanguagePackInfo? fromJson(Map<String, dynamic>? json) {
@@ -102,6 +106,7 @@ class LanguagePackInfo extends TdObject {
         'translated_string_count': this.translatedStringCount,
         'local_string_count': this.localStringCount,
         'translation_url': this.translationUrl,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

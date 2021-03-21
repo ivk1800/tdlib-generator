@@ -2,7 +2,10 @@ import '../tdapi.dart';
 
 /// Represents a JSON value
 abstract class JsonValue extends TdObject {
-  const JsonValue();
+  const JsonValue({this.extra});
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'jsonValue';
 

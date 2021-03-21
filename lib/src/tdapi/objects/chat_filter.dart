@@ -15,7 +15,8 @@ class ChatFilter extends TdObject {
       required this.includeNonContacts,
       required this.includeBots,
       required this.includeGroups,
-      required this.includeChannels});
+      required this.includeChannels,
+      this.extra});
 
   /// [title] The title of the filter; 1-12 characters without line feeds
   final String title;
@@ -61,6 +62,9 @@ class ChatFilter extends TdObject {
 
   /// [includeChannels] True, if channels need to be included
   final bool includeChannels;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'chatFilter';
 
@@ -108,6 +112,7 @@ class ChatFilter extends TdObject {
         'include_bots': this.includeBots,
         'include_groups': this.includeGroups,
         'include_channels': this.includeChannels,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

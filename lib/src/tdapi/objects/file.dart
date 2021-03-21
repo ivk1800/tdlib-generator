@@ -7,7 +7,8 @@ class File extends TdObject {
       required this.size,
       required this.expectedSize,
       required this.local,
-      required this.remote});
+      required this.remote,
+      this.extra});
 
   /// [id] Unique file identifier
   final int id;
@@ -24,6 +25,9 @@ class File extends TdObject {
 
   /// [remote] Information about the remote copy of the file
   final RemoteFile remote;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'file';
 
@@ -49,6 +53,7 @@ class File extends TdObject {
         'expected_size': this.expectedSize,
         'local': this.local,
         'remote': this.remote,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

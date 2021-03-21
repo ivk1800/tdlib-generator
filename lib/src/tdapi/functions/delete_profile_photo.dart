@@ -8,7 +8,7 @@ class DeleteProfilePhoto extends TdFunction {
   final int profilePhotoId;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'deleteProfilePhoto';
 

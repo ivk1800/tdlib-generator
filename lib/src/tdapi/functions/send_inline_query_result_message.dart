@@ -37,7 +37,7 @@ class SendInlineQueryResultMessage extends TdFunction {
   final bool hideViaBot;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'sendInlineQueryResultMessage';
 

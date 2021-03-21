@@ -9,7 +9,7 @@ class GetJsonValue extends TdFunction {
   final String json;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getJsonValue';
 

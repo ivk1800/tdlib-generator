@@ -8,7 +8,7 @@ class Destroy extends TdFunction {
   Destroy();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'destroy';
 

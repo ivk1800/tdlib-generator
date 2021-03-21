@@ -5,7 +5,7 @@ class GetContacts extends TdFunction {
   GetContacts();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getContacts';
 

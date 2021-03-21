@@ -11,7 +11,7 @@ class GetBackgroundUrl extends TdFunction {
   final BackgroundType type;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getBackgroundUrl';
 

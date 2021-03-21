@@ -12,7 +12,7 @@ class UploadStickerFile extends TdFunction {
   final InputFile pngSticker;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'uploadStickerFile';
 

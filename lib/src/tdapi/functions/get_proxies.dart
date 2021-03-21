@@ -5,7 +5,7 @@ class GetProxies extends TdFunction {
   GetProxies();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getProxies';
 

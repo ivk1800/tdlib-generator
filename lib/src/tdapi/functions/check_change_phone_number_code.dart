@@ -8,7 +8,7 @@ class CheckChangePhoneNumberCode extends TdFunction {
   final String code;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'checkChangePhoneNumberCode';
 

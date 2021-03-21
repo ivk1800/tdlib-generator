@@ -2,10 +2,13 @@ import '../tdapi.dart';
 
 /// Contains information about the current localization target
 class LocalizationTargetInfo extends TdObject {
-  LocalizationTargetInfo({required this.languagePacks});
+  LocalizationTargetInfo({required this.languagePacks, this.extra});
 
   /// [languagePacks] List of available language packs for this application
   final List<LanguagePackInfo> languagePacks;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'localizationTargetInfo';
 
@@ -24,6 +27,9 @@ class LocalizationTargetInfo extends TdObject {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'language_packs': this.languagePacks, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() => {
+        'language_packs': this.languagePacks,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

@@ -7,7 +7,7 @@ class GetInactiveSupergroupChats extends TdFunction {
   GetInactiveSupergroupChats();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getInactiveSupergroupChats';
 

@@ -5,7 +5,7 @@ class ResetBackgrounds extends TdFunction {
   ResetBackgrounds();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'resetBackgrounds';
 

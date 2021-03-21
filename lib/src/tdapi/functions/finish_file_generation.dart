@@ -11,7 +11,7 @@ class FinishFileGeneration extends TdFunction {
   final TdError error;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'finishFileGeneration';
 

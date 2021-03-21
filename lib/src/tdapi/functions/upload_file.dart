@@ -20,7 +20,7 @@ class UploadFile extends TdFunction {
   final int priority;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'uploadFile';
 

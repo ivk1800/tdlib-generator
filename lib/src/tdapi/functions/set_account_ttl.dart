@@ -9,7 +9,7 @@ class SetAccountTtl extends TdFunction {
   final AccountTtl ttl;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'setAccountTtl';
 

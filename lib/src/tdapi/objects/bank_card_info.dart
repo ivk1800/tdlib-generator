@@ -2,13 +2,16 @@ import '../tdapi.dart';
 
 /// Information about a bank card
 class BankCardInfo extends TdObject {
-  BankCardInfo({required this.title, required this.actions});
+  BankCardInfo({required this.title, required this.actions, this.extra});
 
   /// [title] Title of the bank card description
   final String title;
 
   /// [actions] Actions that can be done with the bank card number
   final List<BankCardActionOpenUrl> actions;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'bankCardInfo';
 
@@ -27,6 +30,10 @@ class BankCardInfo extends TdObject {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'title': this.title, 'actions': this.actions, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() => {
+        'title': this.title,
+        'actions': this.actions,
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

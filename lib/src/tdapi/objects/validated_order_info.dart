@@ -4,13 +4,16 @@ import '../tdapi.dart';
 /// for one hour. Also contains the available shipping options
 class ValidatedOrderInfo extends TdObject {
   ValidatedOrderInfo(
-      {required this.orderInfoId, required this.shippingOptions});
+      {required this.orderInfoId, required this.shippingOptions, this.extra});
 
   /// [orderInfoId] Temporary identifier of the order information
   final String orderInfoId;
 
   /// [shippingOptions] Available shipping options
   final List<ShippingOption> shippingOptions;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'validatedOrderInfo';
 
@@ -33,6 +36,7 @@ class ValidatedOrderInfo extends TdObject {
   Map<String, dynamic> toJson() => {
         'order_info_id': this.orderInfoId,
         'shipping_options': this.shippingOptions,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

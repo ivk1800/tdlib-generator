@@ -2,10 +2,13 @@ import '../tdapi.dart';
 
 /// A simple object containing a string; for testing only
 class TestString extends TdObject {
-  TestString({required this.value});
+  TestString({required this.value, this.extra});
 
   /// [value] String
   final String value;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'testString';
 
@@ -20,5 +23,6 @@ class TestString extends TdObject {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() => {'value': this.value, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() =>
+      {'value': this.value, '@type': CONSTRUCTOR, '@extra': this.extra};
 }

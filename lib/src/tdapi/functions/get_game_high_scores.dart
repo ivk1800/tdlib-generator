@@ -16,7 +16,7 @@ class GetGameHighScores extends TdFunction {
   final int userId;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getGameHighScores';
 

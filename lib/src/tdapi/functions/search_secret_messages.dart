@@ -31,7 +31,7 @@ class SearchSecretMessages extends TdFunction {
   final SearchMessagesFilter filter;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'searchSecretMessages';
 

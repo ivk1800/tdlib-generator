@@ -6,7 +6,7 @@ class CanTransferOwnership extends TdFunction {
   CanTransferOwnership();
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'canTransferOwnership';
 

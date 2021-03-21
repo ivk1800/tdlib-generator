@@ -32,7 +32,8 @@ class Message extends TdObject {
       required this.mediaAlbumId,
       required this.restrictionReason,
       required this.content,
-      ReplyMarkup? this.replyMarkup});
+      ReplyMarkup? this.replyMarkup,
+      this.extra});
 
   /// [id] Message identifier; unique for the chat to which the message belongs
   final int id;
@@ -140,6 +141,9 @@ class Message extends TdObject {
   /// [replyMarkup] Reply markup for the message; may be null
   final ReplyMarkup? replyMarkup;
 
+  /// callback sign
+  final dynamic? extra;
+
   static const String CONSTRUCTOR = 'message';
 
   static Message? fromJson(Map<String, dynamic>? json) {
@@ -216,6 +220,7 @@ class Message extends TdObject {
         'restriction_reason': this.restrictionReason,
         'content': this.content,
         'reply_markup': this.replyMarkup,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }

@@ -13,7 +13,7 @@ class SetCustomLanguagePack extends TdFunction {
   final List<LanguagePackString> strings;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'setCustomLanguagePack';
 

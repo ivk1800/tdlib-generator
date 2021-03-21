@@ -8,7 +8,7 @@ class DeletePassportElement extends TdFunction {
   final PassportElementType type;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'deletePassportElement';
 

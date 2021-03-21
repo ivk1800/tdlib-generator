@@ -12,7 +12,7 @@ class CreateTemporaryPassword extends TdFunction {
   final int validFor;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'createTemporaryPassword';
 

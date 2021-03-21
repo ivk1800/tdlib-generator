@@ -8,7 +8,7 @@ class SendEmailAddressVerificationCode extends TdFunction {
   final String emailAddress;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'sendEmailAddressVerificationCode';
 

@@ -15,7 +15,7 @@ class AddContact extends TdFunction {
   final bool sharePhoneNumber;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'addContact';
 

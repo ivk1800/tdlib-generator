@@ -12,7 +12,7 @@ class CreateNewBasicGroupChat extends TdFunction {
   final String title;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'createNewBasicGroupChat';
 

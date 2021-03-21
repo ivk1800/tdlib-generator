@@ -26,7 +26,7 @@ class AnswerCallbackQuery extends TdFunction {
   final int cacheTime;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'answerCallbackQuery';
 

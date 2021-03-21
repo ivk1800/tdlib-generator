@@ -12,7 +12,7 @@ class GetChatNotificationSettingsExceptions extends TdFunction {
   final bool compareSound;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getChatNotificationSettingsExceptions';
 

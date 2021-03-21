@@ -18,7 +18,7 @@ class SendChatAction extends TdFunction {
   final ChatAction action;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'sendChatAction';
 

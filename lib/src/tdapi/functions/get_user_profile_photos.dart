@@ -16,7 +16,7 @@ class GetUserProfilePhotos extends TdFunction {
   final int limit;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'getUserProfilePhotos';
 

@@ -18,7 +18,7 @@ class ChangeStickerSet extends TdFunction {
   final bool isArchived;
 
   /// callback sign
-  dynamic extra;
+  dynamic? extra;
 
   static const String CONSTRUCTOR = 'changeStickerSet';
 

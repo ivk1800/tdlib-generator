@@ -7,7 +7,8 @@ class PasswordState extends TdObject {
       required this.passwordHint,
       required this.hasRecoveryEmailAddress,
       required this.hasPassportData,
-      EmailAddressAuthenticationCodeInfo? this.recoveryEmailAddressCodeInfo});
+      EmailAddressAuthenticationCodeInfo? this.recoveryEmailAddressCodeInfo,
+      this.extra});
 
   /// [hasPassword] True, if a 2-step verification password is set
   final bool hasPassword;
@@ -24,6 +25,9 @@ class PasswordState extends TdObject {
   /// [recoveryEmailAddressCodeInfo] Information about the recovery email
   /// to which the confirmation email was sent; may be null
   final EmailAddressAuthenticationCodeInfo? recoveryEmailAddressCodeInfo;
+
+  /// callback sign
+  final dynamic? extra;
 
   static const String CONSTRUCTOR = 'passwordState';
 
@@ -51,6 +55,7 @@ class PasswordState extends TdObject {
         'has_recovery_email_address': this.hasRecoveryEmailAddress,
         'has_passport_data': this.hasPassportData,
         'recovery_email_address_code_info': this.recoveryEmailAddressCodeInfo,
-        '@type': CONSTRUCTOR
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
       };
 }
