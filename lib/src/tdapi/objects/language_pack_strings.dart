@@ -20,7 +20,8 @@ class LanguagePackStrings extends TdObject {
     return LanguagePackStrings(
         strings: List<LanguagePackString>.from((json['strings}'] ?? [])
             .map((item) => LanguagePackString.fromJson(item))
-            .toList()));
+            .toList()),
+        extra: json['@extra']);
   }
 
   @override

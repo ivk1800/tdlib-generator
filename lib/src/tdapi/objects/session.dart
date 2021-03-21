@@ -97,7 +97,8 @@ class Session extends TdObject {
         lastActiveDate: json['last_active_date'],
         ip: json['ip'],
         country: json['country'],
-        region: json['region']);
+        region: json['region'],
+        extra: json['@extra']);
   }
 
   @override

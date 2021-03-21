@@ -61,7 +61,8 @@ class ChatInviteLinkInfo extends TdObject {
         memberUserIds: List<int>.from((json['member_user_ids}'] ?? [])
             .map((item) => json['int'])
             .toList()),
-        isPublic: json['is_public']);
+        isPublic: json['is_public'],
+        extra: json['@extra']);
   }
 
   @override

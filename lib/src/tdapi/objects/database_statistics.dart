@@ -17,7 +17,8 @@ class DatabaseStatistics extends TdObject {
       return null;
     }
 
-    return DatabaseStatistics(statistics: json['statistics']);
+    return DatabaseStatistics(
+        statistics: json['statistics'], extra: json['@extra']);
   }
 
   @override

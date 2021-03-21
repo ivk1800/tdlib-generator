@@ -21,7 +21,8 @@ class ChatAdministrators extends TdObject {
         administrators: List<ChatAdministrator>.from(
             (json['administrators}'] ?? [])
                 .map((item) => ChatAdministrator.fromJson(item))
-                .toList()));
+                .toList()),
+        extra: json['@extra']);
   }
 
   @override

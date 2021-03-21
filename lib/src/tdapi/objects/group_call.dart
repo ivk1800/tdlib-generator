@@ -82,7 +82,8 @@ class GroupCall extends TdObject {
         muteNewParticipants: json['mute_new_participants'],
         allowedChangeMuteNewParticipants:
             json['allowed_change_mute_new_participants'],
-        duration: json['duration']);
+        duration: json['duration'],
+        extra: json['@extra']);
   }
 
   @override

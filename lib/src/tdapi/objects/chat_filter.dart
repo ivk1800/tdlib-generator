@@ -92,7 +92,8 @@ class ChatFilter extends TdObject {
         includeNonContacts: json['include_non_contacts'],
         includeBots: json['include_bots'],
         includeGroups: json['include_groups'],
-        includeChannels: json['include_channels']);
+        includeChannels: json['include_channels'],
+        extra: json['@extra']);
   }
 
   @override

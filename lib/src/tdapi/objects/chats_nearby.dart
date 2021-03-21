@@ -28,7 +28,8 @@ class ChatsNearby extends TdObject {
         supergroupsNearby: List<ChatNearby>.from(
             (json['supergroups_nearby}'] ?? [])
                 .map((item) => ChatNearby.fromJson(item))
-                .toList()));
+                .toList()),
+        extra: json['@extra']);
   }
 
   @override

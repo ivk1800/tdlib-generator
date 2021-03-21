@@ -41,7 +41,8 @@ class StorageStatisticsFast extends TdObject {
         fileCount: json['file_count'],
         databaseSize: json['database_size'],
         languagePackDatabaseSize: json['language_pack_database_size'],
-        logSize: json['log_size']);
+        logSize: json['log_size'],
+        extra: json['@extra']);
   }
 
   @override

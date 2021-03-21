@@ -43,7 +43,8 @@ class WebPageInstantView extends TdObject {
         viewCount: json['view_count'],
         version: json['version'],
         isRtl: json['is_rtl'],
-        isFull: json['is_full']);
+        isFull: json['is_full'],
+        extra: json['@extra']);
   }
 
   @override

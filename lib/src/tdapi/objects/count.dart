@@ -17,7 +17,7 @@ class Count extends TdObject {
       return null;
     }
 
-    return Count(count: json['count']);
+    return Count(count: json['count'], extra: json['@extra']);
   }
 
   @override

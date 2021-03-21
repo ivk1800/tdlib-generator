@@ -25,7 +25,8 @@ class EmailAddressAuthenticationCodeInfo extends TdObject {
 
     return EmailAddressAuthenticationCodeInfo(
         emailAddressPattern: json['email_address_pattern'],
-        length: json['length']);
+        length: json['length'],
+        extra: json['@extra']);
   }
 
   @override

@@ -17,7 +17,7 @@ class Text extends TdObject {
       return null;
     }
 
-    return Text(text: json['text']);
+    return Text(text: json['text'], extra: json['@extra']);
   }
 
   @override

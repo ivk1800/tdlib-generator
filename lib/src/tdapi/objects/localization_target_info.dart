@@ -21,7 +21,8 @@ class LocalizationTargetInfo extends TdObject {
         languagePacks: List<LanguagePackInfo>.from(
             (json['language_packs}'] ?? [])
                 .map((item) => LanguagePackInfo.fromJson(item))
-                .toList()));
+                .toList()),
+        extra: json['@extra']);
   }
 
   @override

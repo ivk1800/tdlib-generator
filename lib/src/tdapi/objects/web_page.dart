@@ -124,7 +124,8 @@ class WebPage extends TdObject {
         video: Video.fromJson(json['video']),
         videoNote: VideoNote.fromJson(json['video_note']),
         voiceNote: VoiceNote.fromJson(json['voice_note']),
-        instantViewVersion: json['instant_view_version']);
+        instantViewVersion: json['instant_view_version'],
+        extra: json['@extra']);
   }
 
   @override

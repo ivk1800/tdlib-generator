@@ -70,7 +70,8 @@ class UserFullInfo extends TdObject {
         bio: json['bio'],
         shareText: json['share_text'],
         groupInCommonCount: json['group_in_common_count'],
-        botInfo: BotInfo.fromJson(json['bot_info']));
+        botInfo: BotInfo.fromJson(json['bot_info']),
+        extra: json['@extra']);
   }
 
   @override

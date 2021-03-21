@@ -28,7 +28,8 @@ class FormattedText extends TdObject {
         text: json['text'],
         entities: List<TextEntity>.from((json['entities}'] ?? [])
             .map((item) => TextEntity.fromJson(item))
-            .toList()));
+            .toList()),
+        extra: json['@extra']);
   }
 
   @override

@@ -33,7 +33,8 @@ class PhoneNumberInfo extends TdObject {
     return PhoneNumberInfo(
         country: CountryInfo.fromJson(json['country']),
         countryCallingCode: json['country_calling_code'],
-        formattedPhoneNumber: json['formatted_phone_number']);
+        formattedPhoneNumber: json['formatted_phone_number'],
+        extra: json['@extra']);
   }
 
   @override

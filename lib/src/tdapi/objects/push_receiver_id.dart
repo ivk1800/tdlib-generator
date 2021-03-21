@@ -18,7 +18,8 @@ class PushReceiverId extends TdObject {
       return null;
     }
 
-    return PushReceiverId(id: int.tryParse(json['id']) ?? 0);
+    return PushReceiverId(
+        id: int.tryParse(json['id']) ?? 0, extra: json['@extra']);
   }
 
   @override

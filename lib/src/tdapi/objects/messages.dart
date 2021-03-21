@@ -25,7 +25,8 @@ class Messages extends TdObject {
         totalCount: json['total_count'],
         messages: List<Message>.from((json['messages}'] ?? [])
             .map((item) => Message.fromJson(item))
-            .toList()));
+            .toList()),
+        extra: json['@extra']);
   }
 
   @override

@@ -19,7 +19,7 @@ class AccountTtl extends TdObject {
       return null;
     }
 
-    return AccountTtl(days: json['days']);
+    return AccountTtl(days: json['days'], extra: json['@extra']);
   }
 
   @override

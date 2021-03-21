@@ -32,7 +32,8 @@ class FoundMessages extends TdObject {
         messages: List<Message>.from((json['messages}'] ?? [])
             .map((item) => Message.fromJson(item))
             .toList()),
-        nextOffset: json['next_offset']);
+        nextOffset: json['next_offset'],
+        extra: json['@extra']);
   }
 
   @override

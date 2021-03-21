@@ -46,7 +46,8 @@ class Proxy extends TdObject {
         port: json['port'],
         lastUsedDate: json['last_used_date'],
         isEnabled: json['is_enabled'],
-        type: ProxyType.fromJson(json['type'])!);
+        type: ProxyType.fromJson(json['type'])!,
+        extra: json['@extra']);
   }
 
   @override

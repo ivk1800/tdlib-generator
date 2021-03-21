@@ -17,7 +17,7 @@ class Seconds extends TdObject {
       return null;
     }
 
-    return Seconds(seconds: json['seconds']);
+    return Seconds(seconds: json['seconds'], extra: json['@extra']);
   }
 
   @override

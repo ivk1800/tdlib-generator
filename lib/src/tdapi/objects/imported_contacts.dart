@@ -28,7 +28,8 @@ class ImportedContacts extends TdObject {
             (json['user_ids}'] ?? []).map((item) => json['int']).toList()),
         importerCount: List<int>.from((json['importer_count}'] ?? [])
             .map((item) => json['int'])
-            .toList()));
+            .toList()),
+        extra: json['@extra']);
   }
 
   @override

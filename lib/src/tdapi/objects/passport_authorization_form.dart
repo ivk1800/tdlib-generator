@@ -34,7 +34,8 @@ class PassportAuthorizationForm extends TdObject {
             (json['required_elements}'] ?? [])
                 .map((item) => PassportRequiredElement.fromJson(item))
                 .toList()),
-        privacyPolicyUrl: json['privacy_policy_url']);
+        privacyPolicyUrl: json['privacy_policy_url'],
+        extra: json['@extra']);
   }
 
   @override

@@ -41,7 +41,8 @@ class MessageLinkInfo extends TdObject {
         chatId: json['chat_id'],
         message: Message.fromJson(json['message']),
         forAlbum: json['for_album'],
-        forComment: json['for_comment']);
+        forComment: json['for_comment'],
+        extra: json['@extra']);
   }
 
   @override

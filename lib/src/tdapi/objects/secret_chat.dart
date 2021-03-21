@@ -58,7 +58,8 @@ class SecretChat extends TdObject {
         isOutbound: json['is_outbound'],
         ttl: json['ttl'],
         keyHash: json['key_hash'],
-        layer: json['layer']);
+        layer: json['layer'],
+        extra: json['@extra']);
   }
 
   @override

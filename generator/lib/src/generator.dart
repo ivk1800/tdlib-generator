@@ -265,13 +265,20 @@ class Generator {
               }""")
           ]);
         } else if (value.group == Group.Objects) {
+          var initializers = Map.fromEntries(value.variables.map((e) => MapEntry(
+                    e.name.toVariableName(),
+                    cb.refer(_createInitializer(e)))));
+
+          var canBeReturnByFunction = _canBeReturnByFunction(value.name);
+          if (canBeReturnByFunction) {
+            initializers['extra'] = cb.refer("json['@extra']");
+          }
+
           b.statements.addAll([
-            cb.Code("return ${value.variables.isEmpty ? 'const' : ''}"),
+            cb.Code("return ${value.variables.isEmpty && !canBeReturnByFunction ? 'const' : ''}"),
             cb.ToCodeExpression(cb.refer(value.name).newInstance(
                 <cb.Expression>[],
-                Map.fromEntries(value.variables.map((e) => MapEntry(
-                    e.name.toVariableName(),
-                    cb.refer(_createInitializer(e))))))),
+                initializers)),
             cb.Code(';')
           ]);
         }
@@ -280,6 +287,10 @@ class Generator {
   }
 
   bool _canBeReturnByFunction(String className) {
+    if (className == "TdError") {
+      return true;
+    }
+
     return classes
         .where((element) => element.group == Group.Functions)
         .any((element) {

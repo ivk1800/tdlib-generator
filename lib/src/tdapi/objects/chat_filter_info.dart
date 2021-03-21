@@ -31,7 +31,10 @@ class ChatFilterInfo extends TdObject {
     }
 
     return ChatFilterInfo(
-        id: json['id'], title: json['title'], iconName: json['icon_name']);
+        id: json['id'],
+        title: json['title'],
+        iconName: json['icon_name'],
+        extra: json['@extra']);
   }
 
   @override

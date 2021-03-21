@@ -45,7 +45,8 @@ class PaymentReceipt extends TdObject {
         invoice: Invoice.fromJson(json['invoice'])!,
         orderInfo: OrderInfo.fromJson(json['order_info']),
         shippingOption: ShippingOption.fromJson(json['shipping_option']),
-        credentialsTitle: json['credentials_title']);
+        credentialsTitle: json['credentials_title'],
+        extra: json['@extra']);
   }
 
   @override

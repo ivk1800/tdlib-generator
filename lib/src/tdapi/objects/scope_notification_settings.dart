@@ -44,7 +44,8 @@ class ScopeNotificationSettings extends TdObject {
         showPreview: json['show_preview'],
         disablePinnedMessageNotifications:
             json['disable_pinned_message_notifications'],
-        disableMentionNotifications: json['disable_mention_notifications']);
+        disableMentionNotifications: json['disable_mention_notifications'],
+        extra: json['@extra']);
   }
 
   @override

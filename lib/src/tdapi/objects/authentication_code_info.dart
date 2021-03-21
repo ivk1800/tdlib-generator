@@ -36,7 +36,8 @@ class AuthenticationCodeInfo extends TdObject {
         phoneNumber: json['phone_number'],
         type: AuthenticationCodeType.fromJson(json['type'])!,
         nextType: AuthenticationCodeType.fromJson(json['next_type']),
-        timeout: json['timeout']);
+        timeout: json['timeout'],
+        extra: json['@extra']);
   }
 
   @override

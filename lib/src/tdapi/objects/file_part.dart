@@ -17,7 +17,7 @@ class FilePart extends TdObject {
       return null;
     }
 
-    return FilePart(data: json['data']);
+    return FilePart(data: json['data'], extra: json['@extra']);
   }
 
   @override

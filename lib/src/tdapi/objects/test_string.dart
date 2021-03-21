@@ -17,7 +17,7 @@ class TestString extends TdObject {
       return null;
     }
 
-    return TestString(value: json['value']);
+    return TestString(value: json['value'], extra: json['@extra']);
   }
 
   @override

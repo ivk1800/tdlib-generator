@@ -154,7 +154,8 @@ class Chat extends TdObject {
         isVoiceChatEmpty: json['is_voice_chat_empty'],
         replyMarkupMessageId: json['reply_markup_message_id'],
         draftMessage: DraftMessage.fromJson(json['draft_message']),
-        clientData: json['client_data']);
+        clientData: json['client_data'],
+        extra: json['@extra']);
   }
 
   @override

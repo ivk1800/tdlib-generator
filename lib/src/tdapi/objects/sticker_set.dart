@@ -93,7 +93,8 @@ class StickerSet extends TdObject {
             .toList()),
         emojis: List<Emojis>.from((json['emojis}'] ?? [])
             .map((item) => Emojis.fromJson(item))
-            .toList()));
+            .toList()),
+        extra: json['@extra']);
   }
 
   @override

@@ -17,7 +17,8 @@ class LogVerbosityLevel extends TdObject {
       return null;
     }
 
-    return LogVerbosityLevel(verbosityLevel: json['verbosity_level']);
+    return LogVerbosityLevel(
+        verbosityLevel: json['verbosity_level'], extra: json['@extra']);
   }
 
   @override

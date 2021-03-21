@@ -42,7 +42,8 @@ class BasicGroup extends TdObject {
         memberCount: json['member_count'],
         status: ChatMemberStatus.fromJson(json['status'])!,
         isActive: json['is_active'],
-        upgradedToSupergroupId: json['upgraded_to_supergroup_id']);
+        upgradedToSupergroupId: json['upgraded_to_supergroup_id'],
+        extra: json['@extra']);
   }
 
   @override

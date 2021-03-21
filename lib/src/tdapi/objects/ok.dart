@@ -15,7 +15,7 @@ class Ok extends TdObject {
       return null;
     }
 
-    return const Ok();
+    return Ok(extra: json['@extra']);
   }
 
   @override

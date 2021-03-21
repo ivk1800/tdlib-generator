@@ -19,7 +19,8 @@ class LogTags extends TdObject {
 
     return LogTags(
         tags: List<String>.from(
-            (json['tags}'] ?? []).map((item) => json['String']).toList()));
+            (json['tags}'] ?? []).map((item) => json['String']).toList()),
+        extra: json['@extra']);
   }
 
   @override

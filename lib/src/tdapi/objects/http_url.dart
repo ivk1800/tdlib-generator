@@ -17,7 +17,7 @@ class HttpUrl extends TdObject {
       return null;
     }
 
-    return HttpUrl(url: json['url']);
+    return HttpUrl(url: json['url'], extra: json['@extra']);
   }
 
   @override

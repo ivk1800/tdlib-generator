@@ -20,7 +20,8 @@ class Sessions extends TdObject {
     return Sessions(
         sessions: List<Session>.from((json['sessions}'] ?? [])
             .map((item) => Session.fromJson(item))
-            .toList()));
+            .toList()),
+        extra: json['@extra']);
   }
 
   @override

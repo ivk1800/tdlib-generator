@@ -43,7 +43,8 @@ class PasswordState extends TdObject {
         hasPassportData: json['has_passport_data'],
         recoveryEmailAddressCodeInfo:
             EmailAddressAuthenticationCodeInfo.fromJson(
-                json['recovery_email_address_code_info']));
+                json['recovery_email_address_code_info']),
+        extra: json['@extra']);
   }
 
   @override

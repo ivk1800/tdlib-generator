@@ -19,7 +19,8 @@ class Emojis extends TdObject {
 
     return Emojis(
         emojis: List<String>.from(
-            (json['emojis}'] ?? []).map((item) => json['String']).toList()));
+            (json['emojis}'] ?? []).map((item) => json['String']).toList()),
+        extra: json['@extra']);
   }
 
   @override

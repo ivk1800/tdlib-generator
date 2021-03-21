@@ -17,7 +17,7 @@ class GroupCallId extends TdObject {
       return null;
     }
 
-    return GroupCallId(id: json['id']);
+    return GroupCallId(id: json['id'], extra: json['@extra']);
   }
 
   @override

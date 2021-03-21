@@ -18,7 +18,8 @@ class RecoveryEmailAddress extends TdObject {
     }
 
     return RecoveryEmailAddress(
-        recoveryEmailAddress: json['recovery_email_address']);
+        recoveryEmailAddress: json['recovery_email_address'],
+        extra: json['@extra']);
   }
 
   @override

@@ -41,7 +41,8 @@ class File extends TdObject {
         size: json['size'],
         expectedSize: json['expected_size'],
         local: LocalFile.fromJson(json['local'])!,
-        remote: RemoteFile.fromJson(json['remote'])!);
+        remote: RemoteFile.fromJson(json['remote'])!,
+        extra: json['@extra']);
   }
 
   @override

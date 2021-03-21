@@ -96,7 +96,8 @@ class Supergroup extends TdObject {
         isChannel: json['is_channel'],
         isVerified: json['is_verified'],
         restrictionReason: json['restriction_reason'],
-        isScam: json['is_scam']);
+        isScam: json['is_scam'],
+        extra: json['@extra']);
   }
 
   @override

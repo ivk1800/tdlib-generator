@@ -99,7 +99,8 @@ class User extends TdObject {
         isScam: json['is_scam'],
         haveAccess: json['have_access'],
         type: UserType.fromJson(json['type'])!,
-        languageCode: json['language_code']);
+        languageCode: json['language_code'],
+        extra: json['@extra']);
   }
 
   @override

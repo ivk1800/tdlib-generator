@@ -23,7 +23,9 @@ class TemporaryPasswordState extends TdObject {
     }
 
     return TemporaryPasswordState(
-        hasPassword: json['has_password'], validFor: json['valid_for']);
+        hasPassword: json['has_password'],
+        validFor: json['valid_for'],
+        extra: json['@extra']);
   }
 
   @override

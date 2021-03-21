@@ -24,7 +24,8 @@ class StickerSets extends TdObject {
         totalCount: json['total_count'],
         sets: List<StickerSetInfo>.from((json['sets}'] ?? [])
             .map((item) => StickerSetInfo.fromJson(item))
-            .toList()));
+            .toList()),
+        extra: json['@extra']);
   }
 
   @override

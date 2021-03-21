@@ -23,7 +23,8 @@ class DeepLinkInfo extends TdObject {
 
     return DeepLinkInfo(
         text: FormattedText.fromJson(json['text'])!,
-        needUpdateApplication: json['need_update_application']);
+        needUpdateApplication: json['need_update_application'],
+        extra: json['@extra']);
   }
 
   @override

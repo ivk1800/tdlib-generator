@@ -20,7 +20,8 @@ class MessageLink extends TdObject {
       return null;
     }
 
-    return MessageLink(link: json['link'], isPublic: json['is_public']);
+    return MessageLink(
+        link: json['link'], isPublic: json['is_public'], extra: json['@extra']);
   }
 
   @override

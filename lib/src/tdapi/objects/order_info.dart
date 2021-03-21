@@ -35,7 +35,8 @@ class OrderInfo extends TdObject {
         name: json['name'],
         phoneNumber: json['phone_number'],
         emailAddress: json['email_address'],
-        shippingAddress: Address.fromJson(json['shipping_address']));
+        shippingAddress: Address.fromJson(json['shipping_address']),
+        extra: json['@extra']);
   }
 
   @override

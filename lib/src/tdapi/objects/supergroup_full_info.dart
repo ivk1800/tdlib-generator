@@ -125,7 +125,8 @@ class SupergroupFullInfo extends TdObject {
         location: ChatLocation.fromJson(json['location']),
         inviteLink: json['invite_link'],
         upgradedFromBasicGroupId: json['upgraded_from_basic_group_id'],
-        upgradedFromMaxMessageId: json['upgraded_from_max_message_id']);
+        upgradedFromMaxMessageId: json['upgraded_from_max_message_id'],
+        extra: json['@extra']);
   }
 
   @override

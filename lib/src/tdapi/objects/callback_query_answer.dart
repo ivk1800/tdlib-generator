@@ -29,7 +29,10 @@ class CallbackQueryAnswer extends TdObject {
     }
 
     return CallbackQueryAnswer(
-        text: json['text'], showAlert: json['show_alert'], url: json['url']);
+        text: json['text'],
+        showAlert: json['show_alert'],
+        url: json['url'],
+        extra: json['@extra']);
   }
 
   @override

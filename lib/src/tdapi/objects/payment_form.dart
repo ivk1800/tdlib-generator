@@ -54,7 +54,8 @@ class PaymentForm extends TdObject {
         savedOrderInfo: OrderInfo.fromJson(json['saved_order_info']),
         savedCredentials: SavedCredentials.fromJson(json['saved_credentials']),
         canSaveCredentials: json['can_save_credentials'],
-        needPassword: json['need_password']);
+        needPassword: json['need_password'],
+        extra: json['@extra']);
   }
 
   @override

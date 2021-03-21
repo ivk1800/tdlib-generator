@@ -17,7 +17,7 @@ class CustomRequestResult extends TdObject {
       return null;
     }
 
-    return CustomRequestResult(result: json['result']);
+    return CustomRequestResult(result: json['result'], extra: json['@extra']);
   }
 
   @override

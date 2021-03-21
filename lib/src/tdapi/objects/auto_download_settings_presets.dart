@@ -32,7 +32,8 @@ class AutoDownloadSettingsPresets extends TdObject {
     return AutoDownloadSettingsPresets(
         low: AutoDownloadSettings.fromJson(json['low'])!,
         medium: AutoDownloadSettings.fromJson(json['medium'])!,
-        high: AutoDownloadSettings.fromJson(json['high'])!);
+        high: AutoDownloadSettings.fromJson(json['high'])!,
+        extra: json['@extra']);
   }
 
   @override

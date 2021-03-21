@@ -19,7 +19,8 @@ class MessageStatistics extends TdObject {
 
     return MessageStatistics(
         messageInteractionGraph:
-            StatisticalGraph.fromJson(json['message_interaction_graph'])!);
+            StatisticalGraph.fromJson(json['message_interaction_graph'])!,
+        extra: json['@extra']);
   }
 
   @override

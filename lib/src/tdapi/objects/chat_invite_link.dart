@@ -17,7 +17,8 @@ class ChatInviteLink extends TdObject {
       return null;
     }
 
-    return ChatInviteLink(inviteLink: json['invite_link']);
+    return ChatInviteLink(
+        inviteLink: json['invite_link'], extra: json['@extra']);
   }
 
   @override

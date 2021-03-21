@@ -19,7 +19,8 @@ class Hashtags extends TdObject {
 
     return Hashtags(
         hashtags: List<String>.from(
-            (json['hashtags}'] ?? []).map((item) => json['String']).toList()));
+            (json['hashtags}'] ?? []).map((item) => json['String']).toList()),
+        extra: json['@extra']);
   }
 
   @override

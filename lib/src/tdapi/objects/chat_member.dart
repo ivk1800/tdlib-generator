@@ -42,7 +42,8 @@ class ChatMember extends TdObject {
         inviterUserId: json['inviter_user_id'],
         joinedChatDate: json['joined_chat_date'],
         status: ChatMemberStatus.fromJson(json['status'])!,
-        botInfo: BotInfo.fromJson(json['bot_info']));
+        botInfo: BotInfo.fromJson(json['bot_info']),
+        extra: json['@extra']);
   }
 
   @override

@@ -46,7 +46,8 @@ class InlineQueryResults extends TdObject {
             .map((item) => InlineQueryResult.fromJson(item))
             .toList()),
         switchPmText: json['switch_pm_text'],
-        switchPmParameter: json['switch_pm_parameter']);
+        switchPmParameter: json['switch_pm_parameter'],
+        extra: json['@extra']);
   }
 
   @override

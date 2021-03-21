@@ -20,7 +20,8 @@ class TMeUrls extends TdObject {
     return TMeUrls(
         urls: List<TMeUrl>.from((json['urls}'] ?? [])
             .map((item) => TMeUrl.fromJson(item))
-            .toList()));
+            .toList()),
+        extra: json['@extra']);
   }
 
   @override

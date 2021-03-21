@@ -17,7 +17,7 @@ class TestBytes extends TdObject {
       return null;
     }
 
-    return TestBytes(value: json['value']);
+    return TestBytes(value: json['value'], extra: json['@extra']);
   }
 
   @override

@@ -183,7 +183,8 @@ class Message extends TdObject {
         mediaAlbumId: int.tryParse(json['media_album_id']) ?? 0,
         restrictionReason: json['restriction_reason'],
         content: MessageContent.fromJson(json['content'])!,
-        replyMarkup: ReplyMarkup.fromJson(json['reply_markup']));
+        replyMarkup: ReplyMarkup.fromJson(json['reply_markup']),
+        extra: json['@extra']);
   }
 
   @override

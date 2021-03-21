@@ -24,7 +24,8 @@ class BankCardInfo extends TdObject {
         title: json['title'],
         actions: List<BankCardActionOpenUrl>.from((json['actions}'] ?? [])
             .map((item) => BankCardActionOpenUrl.fromJson(item))
-            .toList()));
+            .toList()),
+        extra: json['@extra']);
   }
 
   @override

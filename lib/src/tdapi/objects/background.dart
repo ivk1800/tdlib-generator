@@ -46,7 +46,8 @@ class Background extends TdObject {
         isDark: json['is_dark'],
         name: json['name'],
         document: Document.fromJson(json['document']),
-        type: BackgroundType.fromJson(json['type'])!);
+        type: BackgroundType.fromJson(json['type'])!,
+        extra: json['@extra']);
   }
 
   @override

@@ -17,7 +17,7 @@ class CallId extends TdObject {
       return null;
     }
 
-    return CallId(id: json['id']);
+    return CallId(id: json['id'], extra: json['@extra']);
   }
 
   @override

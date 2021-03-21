@@ -86,7 +86,8 @@ class LanguagePackInfo extends TdObject {
         totalStringCount: json['total_string_count'],
         translatedStringCount: json['translated_string_count'],
         localStringCount: json['local_string_count'],
-        translationUrl: json['translation_url']);
+        translationUrl: json['translation_url'],
+        extra: json['@extra']);
   }
 
   @override
