@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns the received vector of strings; for testing only. This is an
 /// method. Can be called before authorization

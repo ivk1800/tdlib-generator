@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The parameters of animation search through
 /// bot has changed

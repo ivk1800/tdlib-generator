@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents result of checking whether the current session can be used to
 /// a chat ownership to another user

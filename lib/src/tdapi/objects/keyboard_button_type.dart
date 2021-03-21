@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Describes a keyboard button type
 abstract class KeyboardButtonType extends TdObject {

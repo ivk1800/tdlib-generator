@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Searches for ordinary sticker sets by looking for specified query in their
 /// and name. Excludes installed sticker sets from the results

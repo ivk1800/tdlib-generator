@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains a list of hashtags
 class Hashtags extends TdObject {

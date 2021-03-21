@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns only messages containing URLs
 class SearchMessagesFilterUrl extends SearchMessagesFilter {

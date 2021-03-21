@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Creates a new supergroup or channel and sends a corresponding
 /// Returns the newly created chat

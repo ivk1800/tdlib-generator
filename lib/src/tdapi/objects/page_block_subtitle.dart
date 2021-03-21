@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The subtitle of a page
 class PageBlockSubtitle extends PageBlock {

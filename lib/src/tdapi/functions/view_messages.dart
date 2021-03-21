@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Informs TDLib that messages are being viewed by the user. Many useful
 /// depend on whether the messages are currently being viewed or not (e.g.,

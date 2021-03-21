@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A message with a poll. Polls can't be sent to secret chats. Polls can be
 /// only to a private chat with a bot

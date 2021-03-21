@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns a list of service actions taken by chat members and administrators
 /// the last 48 hours. Available only for supergroups and channels. Requires

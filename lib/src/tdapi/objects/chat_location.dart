@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents a location to which a chat is connected
 class ChatLocation extends TdObject {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains information about one session in a Telegram application used by
 /// current user. Sessions should be shown to the user in the returned order

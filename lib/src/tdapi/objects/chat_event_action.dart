@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents a chat event
 abstract class ChatEventAction extends TdObject {

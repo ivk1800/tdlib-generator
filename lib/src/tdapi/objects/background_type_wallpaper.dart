@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A wallpaper in JPEG format
 class BackgroundTypeWallpaper extends BackgroundType {

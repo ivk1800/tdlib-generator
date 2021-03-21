@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains the description of an error in a Telegram Passport element; for
 /// only

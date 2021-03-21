@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A preformatted text paragraph
 class PageBlockPreformatted extends PageBlock {

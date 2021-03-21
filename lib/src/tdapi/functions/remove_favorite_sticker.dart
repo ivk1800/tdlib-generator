@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Removes a sticker from the list of favorite stickers
 class RemoveFavoriteSticker extends TdFunction {

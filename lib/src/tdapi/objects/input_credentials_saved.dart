@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Applies if a user chooses some previously saved payment credentials. To
 /// their previously saved credentials, the user must have a valid temporary

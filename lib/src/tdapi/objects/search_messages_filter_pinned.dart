@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns only pinned messages
 class SearchMessagesFilterPinned extends SearchMessagesFilter {

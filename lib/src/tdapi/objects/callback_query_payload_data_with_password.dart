@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The payload for a callback button requiring password
 class CallbackQueryPayloadDataWithPassword extends CallbackQueryPayload {

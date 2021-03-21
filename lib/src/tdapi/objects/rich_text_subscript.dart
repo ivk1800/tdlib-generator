@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A subscript rich text
 class RichTextSubscript extends RichText {

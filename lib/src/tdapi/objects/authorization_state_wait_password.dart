@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The user has been authorized, but needs to enter a password to start using
 /// application

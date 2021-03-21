@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Informs the server about the number of pending bot updates if they haven't
 /// processed for a long time; for bots only

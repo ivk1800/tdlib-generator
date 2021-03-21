@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A token for Apple Push Notification service
 class DeviceTokenApplePush extends DeviceToken {

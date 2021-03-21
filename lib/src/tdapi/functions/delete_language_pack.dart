@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Deletes all information about a language pack in the current localization
 /// The language pack which is currently in use (including base language pack)

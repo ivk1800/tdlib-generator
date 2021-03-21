@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Adds the current user as a new member to a chat. Private and secret chats
 /// be joined using this method

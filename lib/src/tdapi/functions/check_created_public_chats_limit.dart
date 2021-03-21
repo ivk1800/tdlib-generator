@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Checks whether the maximum number of owned public chats has been reached.
 /// corresponding error if the limit was reached

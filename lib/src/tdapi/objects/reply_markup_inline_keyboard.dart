@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains an inline keyboard layout
 class ReplyMarkupInlineKeyboard extends ReplyMarkup {

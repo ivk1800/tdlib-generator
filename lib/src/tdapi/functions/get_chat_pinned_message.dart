@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns information about a newest pinned message in the chat
 class GetChatPinnedMessage extends TdFunction {

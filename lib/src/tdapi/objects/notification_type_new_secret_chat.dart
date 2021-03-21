@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// New secret chat was created
 class NotificationTypeNewSecretChat extends NotificationType {

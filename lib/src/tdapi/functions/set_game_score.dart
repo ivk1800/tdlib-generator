@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Updates the game score of the specified user in the game; for bots only
 class SetGameScore extends TdFunction {

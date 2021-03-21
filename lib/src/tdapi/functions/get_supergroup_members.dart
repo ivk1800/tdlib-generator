@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns information about members or banned users in a supergroup or
 /// Can be used only if SupergroupFullInfo.can_get_members == true;

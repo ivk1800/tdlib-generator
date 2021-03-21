@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Checks the authentication code. Works only when the current authorization
 /// is authorizationStateWaitCode

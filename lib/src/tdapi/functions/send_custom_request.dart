@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Sends a custom request; for bots only
 class SendCustomRequest extends TdFunction {

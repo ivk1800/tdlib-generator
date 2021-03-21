@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A deleted chat photo
 class MessageChatDeletePhoto extends MessageContent {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Uploads a PNG image with a sticker; for bots only; returns the uploaded
 class UploadStickerFile extends TdFunction {

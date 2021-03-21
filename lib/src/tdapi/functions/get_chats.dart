@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns an ordered list of chats in a chat list. Chats are sorted by the
 /// (chat.position.order, chat.id) in descending order. (For example, to get a

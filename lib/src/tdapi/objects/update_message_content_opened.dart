@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The message content was opened. Updates voice note messages to "listened",
 /// note messages to "viewed" and starts the TTL timer for self-destructing

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Telegram Passport data has been received; for bots only
 class MessagePassportDataReceived extends MessageContent {

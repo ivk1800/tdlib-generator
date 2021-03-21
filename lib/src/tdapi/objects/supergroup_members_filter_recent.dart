@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns recently active users in reverse chronological order
 class SupergroupMembersFilterRecent extends SupergroupMembersFilter {

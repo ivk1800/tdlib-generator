@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Sets the parameters for TDLib initialization. Works only when the current
 /// state is authorizationStateWaitTdlibParameters
@@ -15,10 +15,8 @@ class SetTdlibParameters extends TdFunction {
 
   @override
   String getConstructor() => CONSTRUCTOR;
-
   @override
-  Map<String, dynamic> toJson() =>
-      {
+  Map<String, dynamic> toJson() => {
         'parameters': this.parameters,
         '@type': CONSTRUCTOR,
         '@extra': this.extra

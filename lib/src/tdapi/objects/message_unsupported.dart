@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Message content that is not supported in the current TDLib version
 class MessageUnsupported extends MessageContent {

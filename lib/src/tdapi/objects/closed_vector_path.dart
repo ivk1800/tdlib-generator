@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents a closed vector path. The path begins at the end point of the
 /// command

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A straight line to a given point
 class VectorPathCommandLine extends VectorPathCommand {

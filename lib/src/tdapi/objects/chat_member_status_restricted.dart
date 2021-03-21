@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The user is under certain restrictions in the chat. Not supported in basic
 /// and channels

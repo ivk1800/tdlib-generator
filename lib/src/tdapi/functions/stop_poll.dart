@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Stops a poll. A poll in a message can be stopped when the message has
 /// flag set

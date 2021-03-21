@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains a custom keyboard layout to quickly reply to bots
 class ReplyMarkupShowKeyboard extends ReplyMarkup {

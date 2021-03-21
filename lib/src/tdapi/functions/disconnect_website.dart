@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Disconnects website from the current user's Telegram account
 class DisconnectWebsite extends TdFunction {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents a cell of a table
 class PageBlockTableCell extends TdObject {

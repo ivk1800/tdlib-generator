@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns information about a chat filter by its identifier
 class GetChatFilter extends TdFunction {

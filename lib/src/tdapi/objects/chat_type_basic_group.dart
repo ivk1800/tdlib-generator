@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A basic group (i.e., a chat with 0-200 other users)
 class ChatTypeBasicGroup extends ChatType {

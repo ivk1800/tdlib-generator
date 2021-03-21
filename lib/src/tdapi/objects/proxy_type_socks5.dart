@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A SOCKS5 proxy server
 class ProxyTypeSocks5 extends ProxyType {

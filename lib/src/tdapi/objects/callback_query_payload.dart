@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents a payload of a callback query
 abstract class CallbackQueryPayload extends TdObject {

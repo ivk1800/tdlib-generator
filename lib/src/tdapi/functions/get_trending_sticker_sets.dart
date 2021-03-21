@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns a list of trending sticker sets. For the optimal performance the
 /// of returned sticker sets is chosen by the library

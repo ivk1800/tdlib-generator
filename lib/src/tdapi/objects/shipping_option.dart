@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// One shipping option
 class ShippingOption extends TdObject {

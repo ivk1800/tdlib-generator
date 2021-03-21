@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A new message was received; can also be an outgoing message
 class UpdateNewMessage extends Update {

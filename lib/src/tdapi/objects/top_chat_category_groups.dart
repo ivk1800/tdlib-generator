@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A category containing frequently used basic groups and supergroups
 class TopChatCategoryGroups extends TopChatCategory {

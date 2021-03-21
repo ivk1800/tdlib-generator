@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// An animation in MPEG4 format; must be square, at most 10 seconds long,
 /// width between 160 and 800 and be at most 2MB in size

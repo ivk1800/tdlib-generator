@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Describes the different types of activity in a chat
 abstract class ChatAction extends TdObject {

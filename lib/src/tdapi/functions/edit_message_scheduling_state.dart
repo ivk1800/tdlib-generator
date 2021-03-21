@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Edits the time when a scheduled message will be sent. Scheduling state of
 /// messages in the same album or forwarded together with the message will be

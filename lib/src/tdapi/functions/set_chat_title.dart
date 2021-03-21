@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Changes the chat title. Supported only for basic groups, supergroups and
 /// Requires can_change_info rights

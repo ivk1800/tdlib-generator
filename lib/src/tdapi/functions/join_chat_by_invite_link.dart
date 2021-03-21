@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Uses an invite link to add the current user to the chat if possible. The
 /// member will not be added until the chat state has been synchronized with

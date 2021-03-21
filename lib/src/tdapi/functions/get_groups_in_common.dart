@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns a list of common group chats with a given user. Chats are sorted
 /// their type and creation date

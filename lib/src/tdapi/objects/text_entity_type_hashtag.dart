@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A hashtag text, beginning with "#"
 class TextEntityTypeHashtag extends TextEntityType {

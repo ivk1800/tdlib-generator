@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Saves application log event on the server. Can be called before
 class SaveApplicationLogEvent extends TdFunction {

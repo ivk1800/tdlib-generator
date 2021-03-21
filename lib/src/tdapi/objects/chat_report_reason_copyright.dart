@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The chat contains copyrighted content
 class ChatReportReasonCopyright extends ChatReportReason {

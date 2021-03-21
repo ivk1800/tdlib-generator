@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The message will be sent when the peer will be online. Applicable to
 /// chats only and when the exact online status of the peer is known

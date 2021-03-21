@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The list of favorite stickers was updated
 class UpdateFavoriteStickers extends Update {

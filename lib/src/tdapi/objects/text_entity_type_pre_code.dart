@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Text that must be formatted as if inside pre, and code HTML tags
 class TextEntityTypePreCode extends TextEntityType {

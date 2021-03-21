@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Sends 2-10 messages grouped together into an album. Currently only audio,
 /// photo and video messages can be grouped into an album. Documents and audio

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents a vector path command
 abstract class VectorPathCommand extends TdObject {

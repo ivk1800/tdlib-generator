@@ -6,5 +6,5 @@ import 'generator.dart';
 void main() {
   List<Class> classes = Parser().parse();
 
-  Generator().generate(classes);
+  Generator(classes).generate();
 }

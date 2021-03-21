@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// TDLib needs TdlibParameters for initialization
 class AuthorizationStateWaitTdlibParameters extends AuthorizationState {

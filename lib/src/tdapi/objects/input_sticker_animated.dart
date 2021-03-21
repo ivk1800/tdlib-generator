@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// An animated sticker in TGS format
 class InputStickerAnimated extends InputSticker {

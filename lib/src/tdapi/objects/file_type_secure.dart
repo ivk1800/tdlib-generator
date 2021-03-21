@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The file is a file from Secure storage used for storing Telegram Passport
 class FileTypeSecure extends FileType {

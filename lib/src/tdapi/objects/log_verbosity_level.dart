@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains a TDLib internal log verbosity level
 class LogVerbosityLevel extends TdObject {

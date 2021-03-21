@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// An embedded web page
 class PageBlockEmbedded extends PageBlock {

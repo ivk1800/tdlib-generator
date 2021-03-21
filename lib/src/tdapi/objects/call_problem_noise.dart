@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The user heard background noise
 class CallProblemNoise extends CallProblem {

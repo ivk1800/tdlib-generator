@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns an HTTP URL which can be used to automatically authorize the user
 /// a website after clicking an inline button of type

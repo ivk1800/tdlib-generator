@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The user is a member of a chat, without any additional privileges or
 class ChatMemberStatusMember extends ChatMemberStatus {

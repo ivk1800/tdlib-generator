@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A data field contains an error. The error is considered resolved when the
 /// value changes

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The file is a sticker
 class FileTypeSticker extends FileType {

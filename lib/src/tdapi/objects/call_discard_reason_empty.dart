@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The call wasn't discarded, or the reason is unknown
 class CallDiscardReasonEmpty extends CallDiscardReason {

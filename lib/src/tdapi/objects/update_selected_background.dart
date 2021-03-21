@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The selected background has changed
 class UpdateSelectedBackground extends Update {

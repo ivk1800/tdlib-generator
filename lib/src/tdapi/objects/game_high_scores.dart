@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains a list of game high scores
 class GameHighScores extends TdObject {

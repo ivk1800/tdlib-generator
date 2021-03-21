@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A poll was updated; for bots only
 class UpdatePoll extends Update {

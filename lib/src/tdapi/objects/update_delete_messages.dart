@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Some messages were deleted
 class UpdateDeleteMessages extends Update {

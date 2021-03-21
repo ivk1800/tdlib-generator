@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Removes a group of active notifications. Needs to be called only if the
 /// group is removed by the current user

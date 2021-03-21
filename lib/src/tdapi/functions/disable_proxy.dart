@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Disables the currently enabled proxy. Can be called before authorization
 class DisableProxy extends TdFunction {

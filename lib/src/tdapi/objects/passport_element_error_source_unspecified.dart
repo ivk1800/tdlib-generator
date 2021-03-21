@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The element contains an error in an unspecified place. The error will be
 /// resolved when new data is added

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The username can be set
 class CheckChatUsernameResultOk extends CheckChatUsernameResult {

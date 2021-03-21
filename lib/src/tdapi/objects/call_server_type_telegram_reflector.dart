@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A Telegram call reflector
 class CallServerTypeTelegramReflector extends CallServerType {

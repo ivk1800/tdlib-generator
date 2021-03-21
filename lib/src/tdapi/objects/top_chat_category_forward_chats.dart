@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A category containing frequently used chats used to forward messages
 class TopChatCategoryForwardChats extends TopChatCategory {

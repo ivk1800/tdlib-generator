@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns only incoming call messages with missed/declined discard reasons
 class SearchMessagesFilterMissedCall extends SearchMessagesFilter {

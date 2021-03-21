@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains notifications about data changes
 abstract class Update extends TdObject {

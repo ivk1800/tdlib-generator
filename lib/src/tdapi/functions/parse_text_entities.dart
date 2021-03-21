@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Parses Bold, Italic, Underline, Strikethrough, Code, Pre, PreCode, TextUrl
 /// MentionName entities contained in the text. Can be called synchronously

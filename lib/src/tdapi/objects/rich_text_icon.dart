@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A small image inside the text
 class RichTextIcon extends RichText {

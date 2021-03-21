@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Searches for a sticker set by its name
 class SearchStickerSet extends TdFunction {

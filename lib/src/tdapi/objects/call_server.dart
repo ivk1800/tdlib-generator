@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Describes a server for relaying call data
 class CallServer extends TdObject {

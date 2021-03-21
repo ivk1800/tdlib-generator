@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The message will be sent at the specified date
 class MessageSchedulingStateSendAtDate extends MessageSchedulingState {

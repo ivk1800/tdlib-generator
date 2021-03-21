@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The message failed to be sent
 class MessageSendingStateFailed extends MessageSendingState {

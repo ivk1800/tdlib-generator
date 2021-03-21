@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A Telegram Passport element to be saved containing the user's bank
 class InputPassportElementBankStatement extends InputPassportElement {

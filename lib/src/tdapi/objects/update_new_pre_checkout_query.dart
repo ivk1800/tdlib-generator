@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A new incoming pre-checkout query; for bots only. Contains full
 /// about a checkout

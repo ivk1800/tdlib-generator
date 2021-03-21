@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns users which can be mentioned in the supergroup
 class SupergroupMembersFilterMention extends SupergroupMembersFilter {

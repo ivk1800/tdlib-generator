@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Stops the downloading of a file. If a file has already been downloaded,
 /// nothing

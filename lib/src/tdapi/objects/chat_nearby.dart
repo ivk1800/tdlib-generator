@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Describes a chat located nearby
 class ChatNearby extends TdObject {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns messages in a message thread of a message. Can be used only if
 /// == true. Message thread of a channel message is in the channel's linked

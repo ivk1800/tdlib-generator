@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The content should be center-aligned
 class PageBlockHorizontalAlignmentCenter extends PageBlockHorizontalAlignment {

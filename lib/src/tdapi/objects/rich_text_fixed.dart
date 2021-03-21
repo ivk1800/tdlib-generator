@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A fixed-width rich text
 class RichTextFixed extends RichText {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A slideshow
 class PageBlockSlideshow extends PageBlock {

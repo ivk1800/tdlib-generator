@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A button that opens a specified URL
 class InlineKeyboardButtonTypeUrl extends InlineKeyboardButtonType {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Searches for recently used hashtags by their prefix
 class SearchHashtags extends TdFunction {

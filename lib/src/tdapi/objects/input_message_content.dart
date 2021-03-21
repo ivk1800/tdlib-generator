@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The content of a message to send
 abstract class InputMessageContent extends TdObject {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains the content of a message
 abstract class MessageContent extends TdObject {

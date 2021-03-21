@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A chat draft has changed. Be aware that the update may come in the
 /// opened chat but with old content of the draft. If the user has changed the

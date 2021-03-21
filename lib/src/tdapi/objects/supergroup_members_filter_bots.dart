@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns bot members of the supergroup or channel
 class SupergroupMembersFilterBots extends SupergroupMembersFilter {

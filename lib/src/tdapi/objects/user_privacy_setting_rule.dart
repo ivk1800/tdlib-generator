@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents a single rule for managing privacy settings
 abstract class UserPrivacySettingRule extends TdObject {

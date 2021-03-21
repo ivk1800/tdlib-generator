@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Changes the position of a sticker in the set to which it belongs; for bots
 /// The sticker set must have been created by the bot

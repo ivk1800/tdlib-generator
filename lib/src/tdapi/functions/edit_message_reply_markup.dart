@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Edits the message reply markup; for bots only. Returns the edited message
 /// the edit is completed on the server side

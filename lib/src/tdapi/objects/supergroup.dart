@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents a supergroup or channel with zero or more members (subscribers
 /// the case of channels). From the point of view of the system, a channel is

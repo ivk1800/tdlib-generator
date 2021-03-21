@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Adds a chat to a chat list. A chat can't be simultaneously in Main and
 /// chat lists, so it is automatically removed from another one if needed

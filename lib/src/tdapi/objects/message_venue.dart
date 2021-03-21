@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A message with information about a venue
 class MessageVenue extends MessageContent {

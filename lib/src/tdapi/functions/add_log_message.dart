@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Adds a message to TDLib internal log. Can be called synchronously
 class AddLogMessage extends TdFunction {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A detailed statistics about a channel chat
 class ChatStatisticsChannel extends ChatStatistics {

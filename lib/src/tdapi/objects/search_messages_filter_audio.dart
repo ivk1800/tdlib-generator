@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns only audio messages
 class SearchMessagesFilterAudio extends SearchMessagesFilter {

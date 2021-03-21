@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// No information on the user besides the user identifier is available, yet
 /// user has not been deleted. This object is extremely rare and must be

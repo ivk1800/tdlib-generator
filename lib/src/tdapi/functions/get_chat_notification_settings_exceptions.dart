@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns list of chats with non-default notification settings
 class GetChatNotificationSettingsExceptions extends TdFunction {

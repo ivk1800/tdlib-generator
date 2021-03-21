@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Manually adds a new animation to the list of saved animations. The new
 /// is added to the beginning of the list. If the animation was already in the

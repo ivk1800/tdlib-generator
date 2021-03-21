@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Sets auto-download settings
 class SetAutoDownloadSettings extends TdFunction {

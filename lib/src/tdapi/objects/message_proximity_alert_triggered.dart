@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A user in the chat came within proximity alert range
 class MessageProximityAlertTriggered extends MessageContent {

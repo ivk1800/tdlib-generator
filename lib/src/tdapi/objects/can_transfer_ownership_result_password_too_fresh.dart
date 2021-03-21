@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The 2-step verification was enabled recently, user needs to wait
 class CanTransferOwnershipResultPasswordTooFresh

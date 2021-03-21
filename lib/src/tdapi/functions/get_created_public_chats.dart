@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns a list of public chats of the specified type, owned by the user
 class GetCreatedPublicChats extends TdFunction {

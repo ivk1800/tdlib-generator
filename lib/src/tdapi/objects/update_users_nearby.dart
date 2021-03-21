@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The list of users nearby has changed. The update is guaranteed to be sent
 /// 60 seconds after a successful searchChatsNearby request

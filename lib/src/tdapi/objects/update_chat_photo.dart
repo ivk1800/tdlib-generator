@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A chat photo was changed
 class UpdateChatPhoto extends Update {

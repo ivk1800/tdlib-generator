@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A contact has registered with Telegram
 class PushMessageContentContactRegistered extends PushMessageContent {

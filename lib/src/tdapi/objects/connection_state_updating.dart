@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Downloading data received while the application was offline
 class ConnectionStateUpdating extends ConnectionState {

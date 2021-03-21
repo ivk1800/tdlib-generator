@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Instructs application to force a reply to this message
 class ReplyMarkupForceReply extends ReplyMarkup {

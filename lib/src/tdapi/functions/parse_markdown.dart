@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Parses Markdown entities in a human-friendly format, ignoring markup
 /// Can be called synchronously

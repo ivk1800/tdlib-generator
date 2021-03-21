@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The chat is public, because it has username
 class PublicChatTypeHasUsername extends PublicChatType {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A video message
 class PushMessageContentVideo extends PushMessageContent {

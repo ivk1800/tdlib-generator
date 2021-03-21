@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns an HTTP URL which can be used to automatically log in to the
 /// platform and suggest new emoji replacements. The URL will be valid for 30

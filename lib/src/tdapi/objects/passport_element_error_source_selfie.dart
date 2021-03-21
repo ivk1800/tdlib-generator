@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The selfie with the document contains an error. The error will be
 /// resolved when the file with the selfie changes

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns a list of installed sticker sets
 class GetInstalledStickerSets extends TdFunction {

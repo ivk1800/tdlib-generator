@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The title of a chat was changed
 class UpdateChatTitle extends Update {

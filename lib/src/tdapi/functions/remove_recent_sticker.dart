@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Removes a sticker from the list of recently used stickers
 class RemoveRecentSticker extends TdFunction {

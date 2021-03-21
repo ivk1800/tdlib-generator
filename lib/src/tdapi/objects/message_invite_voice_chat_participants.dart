@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A message with information about an invite to a voice chat
 class MessageInviteVoiceChatParticipants extends MessageContent {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns game high scores and some part of the high score table in the
 /// of the specified user; for bots only

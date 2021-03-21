@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The list of recently used stickers was updated
 class UpdateRecentStickers extends Update {

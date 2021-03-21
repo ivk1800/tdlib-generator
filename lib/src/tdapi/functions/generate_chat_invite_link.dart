@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Generates a new invite link for a chat; the previously generated link is
 /// Available for basic groups, supergroups, and channels. Requires

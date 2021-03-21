@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Marks all mentions in a chat as read
 class ReadAllChatMentions extends TdFunction {

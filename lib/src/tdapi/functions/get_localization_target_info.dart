@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns information about the current localization target. This is an
 /// request if only_local is true. Can be called before authorization

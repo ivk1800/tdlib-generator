@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Sets the current network type. Can be called before authorization. Calling
 /// method forces all network connections to reopen, mitigating the delay in

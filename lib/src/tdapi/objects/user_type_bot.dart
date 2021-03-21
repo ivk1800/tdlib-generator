@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A bot (see https://core.telegram.org/bots)
 class UserTypeBot extends UserType {

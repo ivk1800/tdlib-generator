@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Sets the phone number of the user and sends an authentication code to the
 /// Works only when the current authorization state is

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The file contains an error. The error is considered resolved when the file
 class InputPassportElementErrorSourceFile

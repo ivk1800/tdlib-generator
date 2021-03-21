@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The text uses HTML-style formatting. The same as Telegram Bot API "HTML"
 /// mode

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns an IETF language tag of the language preferred in the country,
 /// should be used to fill native fields in Telegram Passport personal

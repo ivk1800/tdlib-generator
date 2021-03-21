@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Checks the authentication token of a bot; to log in as a bot. Works only
 /// the current authorization state is authorizationStateWaitPhoneNumber. Can

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A newly created voice chat
 class MessageVoiceChatStarted extends MessageContent {

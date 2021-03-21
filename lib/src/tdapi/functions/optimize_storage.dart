@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Optimizes storage usage, i.e. deletes some files and returns new storage
 /// statistics. Secret thumbnails can't be deleted

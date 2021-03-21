@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Specifies the supported call protocols
 class CallProtocol extends TdObject {

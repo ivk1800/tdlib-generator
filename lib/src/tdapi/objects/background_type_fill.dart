@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A filled background
 class BackgroundTypeFill extends BackgroundType {

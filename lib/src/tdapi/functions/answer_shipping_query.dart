@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Sets the result of a shipping query; for bots only
 class AnswerShippingQuery extends TdFunction {

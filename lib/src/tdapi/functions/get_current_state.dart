@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns all updates needed to restore current TDLib state, i.e. all actual
 /// and others. This is especially useful if TDLib is run in a separate

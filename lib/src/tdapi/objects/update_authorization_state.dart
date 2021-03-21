@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The user authorization state has changed
 class UpdateAuthorizationState extends Update {

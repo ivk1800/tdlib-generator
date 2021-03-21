@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns full information about a user by their identifier
 class GetUserFullInfo extends TdFunction {

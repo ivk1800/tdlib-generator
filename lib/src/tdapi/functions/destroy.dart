@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Closes the TDLib instance, destroying all local data without a proper
 /// The current user session will remain in the list of all active sessions.

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Incoming messages were read or number of unread messages has been changed
 class UpdateChatReadInbox extends Update {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The call is ready to use
 class CallStateReady extends CallState {

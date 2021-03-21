@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns only messages with mentions of the current user, or messages that
 /// replies to their messages

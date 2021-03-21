@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Sets the value of an option. (Check the list of available options on
 /// Only writable options can be set. Can be called before authorization

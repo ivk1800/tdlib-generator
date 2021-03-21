@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns current verbosity level of the internal logging of TDLib. Can be
 /// synchronously

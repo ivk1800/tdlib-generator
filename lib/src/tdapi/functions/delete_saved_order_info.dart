@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Deletes saved order info
 class DeleteSavedOrderInfo extends TdFunction {

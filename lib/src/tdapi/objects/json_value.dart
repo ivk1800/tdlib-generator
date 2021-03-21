@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents a JSON value
 abstract class JsonValue extends TdObject {

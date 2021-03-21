@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns the default text for invitation messages to be used as a
 /// when the current user invites friends to Telegram

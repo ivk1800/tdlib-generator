@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A message with an invoice from a bot
 class PushMessageContentInvoice extends PushMessageContent {

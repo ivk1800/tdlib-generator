@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Sends a callback query to a bot and returns an answer. Returns an error
 /// code 502 if the bot fails to answer the query before the query timeout

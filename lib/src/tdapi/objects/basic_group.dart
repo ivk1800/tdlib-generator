@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents a basic group of 0-200 users (must be upgraded to a supergroup
 /// accommodate more than 200 users)

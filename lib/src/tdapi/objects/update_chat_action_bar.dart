@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The chat action bar was changed
 class UpdateChatActionBar extends Update {

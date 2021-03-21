@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The message content has changed
 class UpdateMessageContent extends Update {

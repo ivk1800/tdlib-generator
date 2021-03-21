@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Changes the owner of a chat. The current user must be a current owner of
 /// chat. Use the method canTransferOwnership to check whether the ownership

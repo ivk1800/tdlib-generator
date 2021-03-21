@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The is_all_history_available setting of a supergroup was toggled
 class ChatEventIsAllHistoryAvailableToggled extends ChatEventAction {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The chat is a location-based supergroup, which can be reported as having
 /// location using the method reportChat with the reason

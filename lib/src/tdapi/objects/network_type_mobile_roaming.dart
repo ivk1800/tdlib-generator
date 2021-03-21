@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A mobile roaming network
 class NetworkTypeMobileRoaming extends NetworkType {

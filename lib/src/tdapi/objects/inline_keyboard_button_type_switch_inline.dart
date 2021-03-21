@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A button that forces an inline query to the bot to be inserted in the
 /// field

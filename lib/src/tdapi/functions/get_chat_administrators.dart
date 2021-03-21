@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns a list of administrators of the chat with their custom titles
 class GetChatAdministrators extends TdFunction {

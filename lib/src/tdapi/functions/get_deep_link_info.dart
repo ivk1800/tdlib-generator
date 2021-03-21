@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns information about a tg:// deep link. Use
 /// or "tg:some_unsupported_feature" for testing. Returns a 404 error for

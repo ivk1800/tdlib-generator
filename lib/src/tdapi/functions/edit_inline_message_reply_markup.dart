@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Edits the reply markup of an inline message sent via a bot; for bots only
 class EditInlineMessageReplyMarkup extends TdFunction {

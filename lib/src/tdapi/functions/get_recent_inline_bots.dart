@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns up to 20 recently used inline bots in the order of their last
 class GetRecentInlineBots extends TdFunction {

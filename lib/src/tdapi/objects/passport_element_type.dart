@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains the type of a Telegram Passport element
 abstract class PassportElementType extends TdObject {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Describes a statistical graph
 abstract class StatisticalGraph extends TdObject {

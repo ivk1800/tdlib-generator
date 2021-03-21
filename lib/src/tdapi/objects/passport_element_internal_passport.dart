@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A Telegram Passport element containing the user's internal passport
 class PassportElementInternalPassport extends PassportElement {

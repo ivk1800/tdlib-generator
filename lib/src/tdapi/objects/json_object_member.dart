@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents one member of a JSON object
 class JsonObjectMember extends TdObject {

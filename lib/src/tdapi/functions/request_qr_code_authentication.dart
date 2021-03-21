@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Requests QR code authentication by scanning a QR code on another logged in
 /// Works only when the current authorization state is

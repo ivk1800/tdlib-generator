@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains information about the payment method chosen by the user
 abstract class InputCredentials extends TdObject {

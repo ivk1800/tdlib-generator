@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The file type is not yet known
 class FileTypeUnknown extends FileType {

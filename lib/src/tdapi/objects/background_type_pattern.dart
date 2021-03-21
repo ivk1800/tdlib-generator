@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A PNG or TGV (gzipped subset of SVG with MIME type
 /// pattern to be combined with the background fill chosen by the user

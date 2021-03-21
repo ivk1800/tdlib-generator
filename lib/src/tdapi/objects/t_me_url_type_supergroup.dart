@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A URL linking to a public supergroup or channel
 class TMeUrlTypeSupergroup extends TMeUrlType {

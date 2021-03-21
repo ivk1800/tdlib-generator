@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Toggles whether a group call participant is muted, unmuted, or allowed to
 /// themself

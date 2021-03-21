@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The chat contains pornographic messages
 class ChatReportReasonPornography extends ChatReportReason {

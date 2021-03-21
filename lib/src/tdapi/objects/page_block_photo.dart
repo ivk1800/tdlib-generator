@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A photo
 class PageBlockPhoto extends PageBlock {

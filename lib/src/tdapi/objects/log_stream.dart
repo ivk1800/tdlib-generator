@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Describes a stream to which TDLib internal log is written
 abstract class LogStream extends TdObject {

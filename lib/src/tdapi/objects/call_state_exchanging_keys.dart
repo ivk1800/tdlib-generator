@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The call has been answered and encryption keys are being exchanged
 class CallStateExchangingKeys extends CallState {

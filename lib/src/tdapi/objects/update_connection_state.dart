@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The connection state has changed. This update must be used only to show a
 /// description of the connection state

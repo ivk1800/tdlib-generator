@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Describes a chat or user profile photo
 class ChatPhoto extends TdObject {

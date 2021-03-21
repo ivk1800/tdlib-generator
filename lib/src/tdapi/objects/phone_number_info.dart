@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains information about a phone number
 class PhoneNumberInfo extends TdObject {

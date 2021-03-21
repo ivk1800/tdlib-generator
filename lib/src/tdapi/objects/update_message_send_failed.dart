@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A message failed to send. Be aware that some messages being sent can be
 /// deleted, in which case updateDeleteMessages will be received instead of

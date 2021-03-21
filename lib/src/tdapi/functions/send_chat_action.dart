@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Sends a notification about user activity in a chat
 class SendChatAction extends TdFunction {

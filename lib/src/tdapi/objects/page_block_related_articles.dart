@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Related articles
 class PageBlockRelatedArticles extends PageBlock {

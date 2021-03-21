@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Edits information about a custom local language pack in the current
 /// target. Can be called before authorization

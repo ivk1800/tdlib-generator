@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Pins a message in a chat; requires can_pin_messages rights or
 /// rights in the channel

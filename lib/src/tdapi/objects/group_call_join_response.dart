@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Describes a join response for interaction with tgcalls
 class GroupCallJoinResponse extends TdObject {

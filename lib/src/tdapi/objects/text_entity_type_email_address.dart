@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// An email address
 class TextEntityTypeEmailAddress extends TextEntityType {

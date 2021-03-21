@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The chat promotes violence
 class ChatReportReasonViolence extends ChatReportReason {

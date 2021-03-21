@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Changes the location of the current user. Needs to be called if
 /// is true and location changes for more than 1 kilometer

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents a video
 class InlineQueryResultVideo extends InlineQueryResult {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A chat. (Can be a private chat, basic group, supergroup, or secret chat)
 class Chat extends TdObject {

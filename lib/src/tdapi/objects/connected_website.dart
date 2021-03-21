@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains information about one website the current user is logged in with
 class ConnectedWebsite extends TdObject {

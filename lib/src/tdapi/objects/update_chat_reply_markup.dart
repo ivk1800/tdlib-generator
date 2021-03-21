@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The default chat reply markup was changed. Can occur because new messages
 /// reply markup were received or because an old reply markup was hidden by

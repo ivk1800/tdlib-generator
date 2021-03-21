@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The information about interactions with a message has changed
 class UpdateMessageInteractionInfo extends Update {

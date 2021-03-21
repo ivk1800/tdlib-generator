@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains information about the origin of a forwarded message
 abstract class MessageForwardOrigin extends TdObject {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The log is written to a file
 class LogStreamFile extends LogStream {

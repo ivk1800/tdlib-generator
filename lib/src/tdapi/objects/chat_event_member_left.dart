@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A member left the chat
 class ChatEventMemberLeft extends ChatEventAction {

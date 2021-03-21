@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A button with a game that sends a callback query to a bot. This button
 /// be in the first column and row of the keyboard and can be attached only to

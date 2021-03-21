@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Animated variant of a chat photo in MPEG4 format
 class AnimatedChatPhoto extends TdObject {

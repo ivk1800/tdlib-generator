@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Portion of the price of a product (e.g., "delivery cost", "tax amount")
 class LabeledPricePart extends TdObject {

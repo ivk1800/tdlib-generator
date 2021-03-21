@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Adds a new sticker to the list of favorite stickers. The new sticker is
 /// to the top of the list. If the sticker was already in the list, it is

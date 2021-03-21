@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Some language pack strings have been updated
 class UpdateLanguagePackStrings extends Update {

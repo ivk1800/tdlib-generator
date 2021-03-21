@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents a numeric JSON value
 class JsonValueNumber extends JsonValue {

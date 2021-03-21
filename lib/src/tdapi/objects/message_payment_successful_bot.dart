@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A payment has been completed; for bots only
 class MessagePaymentSuccessfulBot extends MessageContent {

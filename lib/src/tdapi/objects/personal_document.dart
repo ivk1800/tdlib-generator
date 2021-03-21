@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A personal document, containing some information about a user
 class PersonalDocument extends TdObject {

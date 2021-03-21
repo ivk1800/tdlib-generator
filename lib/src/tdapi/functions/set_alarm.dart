@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Succeeds after a specified amount of time has passed. Can be called before
 class SetAlarm extends TdFunction {

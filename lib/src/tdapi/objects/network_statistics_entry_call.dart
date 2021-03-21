@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains information about the total amount of data that was used for
 class NetworkStatisticsEntryCall extends NetworkStatisticsEntry {

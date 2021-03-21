@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Changes the status of a chat member, needs appropriate privileges. This
 /// is currently not suitable for adding new members to the chat and

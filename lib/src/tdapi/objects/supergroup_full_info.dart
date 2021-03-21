@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains full information about a supergroup or channel
 class SupergroupFullInfo extends TdObject {

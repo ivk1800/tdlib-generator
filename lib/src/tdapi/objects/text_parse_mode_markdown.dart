@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The text uses Markdown-style formatting
 class TextParseModeMarkdown extends TextParseMode {

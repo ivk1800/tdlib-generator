@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The number of online group members has changed. This update with non-zero
 /// is sent only for currently opened chats. There is no guarantee that it

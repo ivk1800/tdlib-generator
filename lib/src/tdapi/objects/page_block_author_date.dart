@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The author and publishing date of a page
 class PageBlockAuthorDate extends PageBlock {

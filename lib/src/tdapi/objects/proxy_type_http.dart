@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A HTTP transparent proxy server
 class ProxyTypeHttp extends ProxyType {

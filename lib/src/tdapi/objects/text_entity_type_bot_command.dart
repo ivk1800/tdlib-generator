@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A bot command, beginning with "/". This shouldn't be highlighted if there
 /// no bots in the chat

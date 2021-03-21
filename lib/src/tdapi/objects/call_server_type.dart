@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Describes the type of a call server
 abstract class CallServerType extends TdObject {

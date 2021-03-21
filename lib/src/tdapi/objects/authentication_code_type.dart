@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Provides information about the method by which an authentication code is
 /// to the user

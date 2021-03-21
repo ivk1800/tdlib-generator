@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Describes the types of chats to which notification settings are applied
 abstract class NotificationSettingsScope extends TdObject {

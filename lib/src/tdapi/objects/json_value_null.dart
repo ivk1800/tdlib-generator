@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents a null JSON value
 class JsonValueNull extends JsonValue {

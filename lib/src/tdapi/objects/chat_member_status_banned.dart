@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The user was banned (and hence is not a member of the chat). Implies the
 /// can't return to the chat or view messages

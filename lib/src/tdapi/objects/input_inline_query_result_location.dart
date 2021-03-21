@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents a point on the map
 class InputInlineQueryResultLocation extends InputInlineQueryResult {

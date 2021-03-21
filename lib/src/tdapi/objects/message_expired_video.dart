@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// An expired video message (self-destructed after TTL has elapsed)
 class MessageExpiredVideo extends MessageContent {

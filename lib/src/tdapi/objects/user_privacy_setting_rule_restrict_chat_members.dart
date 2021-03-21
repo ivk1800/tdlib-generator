@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A rule to restrict all members of specified basic groups and supergroups
 /// doing something

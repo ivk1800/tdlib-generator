@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents an integer option
 class OptionValueInteger extends OptionValue {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A voice note message
 class MessageVoiceNote extends MessageContent {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The user is a member of a chat and has some additional privileges. In
 /// groups, administrators can edit and delete messages sent by others, add

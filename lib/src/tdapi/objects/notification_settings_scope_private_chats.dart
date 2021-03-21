@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Notification settings applied to all private and secret chats when the
 /// chat setting has a default value

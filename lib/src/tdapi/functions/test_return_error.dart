@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns the specified error and ensures that the Error object is used; for
 /// only. Can be called synchronously

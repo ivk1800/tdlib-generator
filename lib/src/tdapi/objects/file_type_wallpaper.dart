@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The file is a wallpaper or a background pattern
 class FileTypeWallpaper extends FileType {

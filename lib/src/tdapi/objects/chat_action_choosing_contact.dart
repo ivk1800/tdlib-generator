@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The user is picking a contact to send
 class ChatActionChoosingContact extends ChatAction {

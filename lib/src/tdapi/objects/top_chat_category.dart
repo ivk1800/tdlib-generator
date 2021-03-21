@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents the categories of chats for which a list of frequently used
 /// can be retrieved

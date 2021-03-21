@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A mention of a user by their username
 class TextEntityTypeMention extends TextEntityType {

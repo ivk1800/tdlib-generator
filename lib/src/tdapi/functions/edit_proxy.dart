@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Edits an existing proxy server for network requests. Can be called before
 class EditProxy extends TdFunction {

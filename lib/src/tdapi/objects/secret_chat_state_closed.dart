@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The secret chat is closed
 class SecretChatStateClosed extends SecretChatState {

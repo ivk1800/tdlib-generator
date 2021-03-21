@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Information about a file was updated
 class UpdateFile extends Update {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains information about a Telegram Passport elements and corresponding
 class PassportElementsWithErrors extends TdObject {

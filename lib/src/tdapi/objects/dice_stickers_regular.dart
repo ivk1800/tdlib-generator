@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A regular animated sticker
 class DiceStickersRegular extends DiceStickers {

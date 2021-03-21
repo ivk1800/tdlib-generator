@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A chat member was restricted/unrestricted or banned/unbanned, or the list
 /// their restrictions has changed

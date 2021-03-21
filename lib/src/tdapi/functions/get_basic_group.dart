@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns information about a basic group by its identifier. This is an
 /// request if the current user is not a bot

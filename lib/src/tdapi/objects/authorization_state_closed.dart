@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// TDLib client is in its final state. All databases are closed and all
 /// are released. No other updates will be received after this. All queries

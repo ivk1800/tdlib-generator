@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A token for Simple Push API for Firefox OS
 class DeviceTokenSimplePush extends DeviceToken {

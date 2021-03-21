@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The user is offline, but was online last week
 class UserStatusLastWeek extends UserStatus {

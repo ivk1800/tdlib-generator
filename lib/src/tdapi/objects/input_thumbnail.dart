@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A thumbnail to be sent along with a file; must be in JPEG or WEBP format
 /// stickers, and less than 200 KB in size

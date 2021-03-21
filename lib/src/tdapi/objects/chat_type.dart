@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Describes the type of a chat
 abstract class ChatType extends TdObject {

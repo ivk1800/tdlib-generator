@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Sends phone number confirmation code. Should be called when user presses
 /// or "tg://confirmphone?phone=*******&hash=**********" link

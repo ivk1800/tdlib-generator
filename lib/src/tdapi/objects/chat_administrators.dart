@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents a list of chat administrators
 class ChatAdministrators extends TdObject {

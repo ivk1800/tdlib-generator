@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A mask should be placed relatively to the mouth
 class MaskPointMouth extends MaskPoint {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Describes an item of a list page block
 class PageBlockListItem extends TdObject {

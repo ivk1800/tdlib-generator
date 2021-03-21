@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The speech was distorted
 class CallProblemDistortedSpeech extends CallProblem {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A group containing notifications of type notificationTypeNewMessage and
 /// with unread mentions of the current user, replies to their messages, or a

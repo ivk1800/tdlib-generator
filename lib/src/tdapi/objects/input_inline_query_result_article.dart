@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents a link to an article or web page
 class InputInlineQueryResultArticle extends InputInlineQueryResult {

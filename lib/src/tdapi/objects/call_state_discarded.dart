@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The call has ended successfully
 class CallStateDiscarded extends CallState {

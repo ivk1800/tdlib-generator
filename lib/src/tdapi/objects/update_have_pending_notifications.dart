@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Describes whether there are some pending notification updates. Can be used
 /// prevent application from killing, while there are some pending

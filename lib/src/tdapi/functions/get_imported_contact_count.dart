@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns the total number of imported contacts
 class GetImportedContactCount extends TdFunction {

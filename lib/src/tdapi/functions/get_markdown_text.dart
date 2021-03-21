@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Replaces text entities with Markdown formatting in a human-friendly
 /// Entities that can't be represented in Markdown unambiguously are kept as

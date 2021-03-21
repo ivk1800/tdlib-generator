@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A new high score was achieved in a game
 class MessageGameScore extends MessageContent {

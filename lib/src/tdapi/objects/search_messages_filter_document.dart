@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns only document messages
 class SearchMessagesFilterDocument extends SearchMessagesFilter {

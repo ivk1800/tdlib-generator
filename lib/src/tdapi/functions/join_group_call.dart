@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Joins a group call
 class JoinGroupCall extends TdFunction {

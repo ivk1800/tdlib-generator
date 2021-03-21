@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Discards a call
 class DiscardCall extends TdFunction {

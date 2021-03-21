@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The user is uploading a video
 class ChatActionUploadingVideo extends ChatAction {

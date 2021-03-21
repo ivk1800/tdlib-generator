@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns the squared received number; for testing only. This is an offline
 /// Can be called before authorization

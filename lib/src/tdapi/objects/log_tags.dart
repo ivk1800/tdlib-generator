@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains a list of available TDLib internal log tags
 class LogTags extends TdObject {

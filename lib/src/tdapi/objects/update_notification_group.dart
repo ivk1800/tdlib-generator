@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A list of active notifications in a notification group has changed
 class UpdateNotificationGroup extends Update {

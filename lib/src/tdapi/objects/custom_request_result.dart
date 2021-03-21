@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains the result of a custom request
 class CustomRequestResult extends TdObject {

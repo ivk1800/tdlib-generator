@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// An embedded post
 class PageBlockEmbeddedPost extends PageBlock {

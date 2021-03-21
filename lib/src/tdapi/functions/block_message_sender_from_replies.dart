@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Blocks an original sender of a message in the Replies chat
 class BlockMessageSenderFromReplies extends TdFunction {

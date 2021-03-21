@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Finishes user registration. Works only when the current authorization
 /// is authorizationStateWaitRegistration

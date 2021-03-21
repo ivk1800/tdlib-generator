@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns an HTTPS link to a message in a chat. Available only for already
 /// messages in supergroups and channels. This is an offline request

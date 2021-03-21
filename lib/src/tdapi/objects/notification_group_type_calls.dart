@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A group containing notifications of type notificationTypeNewCall
 class NotificationGroupTypeCalls extends NotificationGroupType {

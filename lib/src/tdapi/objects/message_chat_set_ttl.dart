@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The TTL (Time To Live) setting messages in a secret chat has been changed
 class MessageChatSetTtl extends MessageContent {

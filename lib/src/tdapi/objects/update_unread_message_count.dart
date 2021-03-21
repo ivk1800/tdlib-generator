@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Number of unread messages in a chat list has changed. This update is sent
 /// if the message database is used

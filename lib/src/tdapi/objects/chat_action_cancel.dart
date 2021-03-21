@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The user has cancelled the previous action
 class ChatActionCancel extends ChatAction {

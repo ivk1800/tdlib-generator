@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A simple button, with text that should be sent when the button is pressed
 class KeyboardButtonTypeText extends KeyboardButtonType {

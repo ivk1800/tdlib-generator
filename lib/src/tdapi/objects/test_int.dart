@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A simple object containing a number; for testing only
 class TestInt extends TdObject {

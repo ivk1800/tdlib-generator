@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Changes the pinned state of a chat. There can be up to
 /// pinned non-secret chats and the same number of secret chats in the

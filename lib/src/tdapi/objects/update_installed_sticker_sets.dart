@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The list of installed sticker sets was updated
 class UpdateInstalledStickerSets extends Update {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// An MTProto proxy server
 class ProxyTypeMtproto extends ProxyType {

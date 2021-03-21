@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The other side couldn't hear the user
 class CallProblemSilentRemote extends CallProblem {

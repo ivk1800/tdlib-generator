@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains information about an invoice payment form
 class PaymentForm extends TdObject {

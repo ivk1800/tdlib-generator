@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains a description of a custom keyboard and actions that can be done
 /// it to quickly reply to bots

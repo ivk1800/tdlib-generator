@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Describes the type of a background
 abstract class BackgroundType extends TdObject {

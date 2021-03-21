@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A list of data blocks
 class PageBlockList extends PageBlock {

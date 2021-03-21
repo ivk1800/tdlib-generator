@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents link to a JPEG image
 class InputInlineQueryResultPhoto extends InputInlineQueryResult {

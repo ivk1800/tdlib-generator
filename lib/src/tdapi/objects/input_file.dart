@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Points to a file
 abstract class InputFile extends TdObject {

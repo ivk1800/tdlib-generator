@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents an unknown option or an option which has a default value
 class OptionValueEmpty extends OptionValue {

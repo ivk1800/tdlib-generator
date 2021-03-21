@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Changes the chat members permissions. Supported only for basic groups and
 /// Requires can_restrict_members administrator right

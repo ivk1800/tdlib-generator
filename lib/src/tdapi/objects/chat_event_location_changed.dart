@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The supergroup location was changed
 class ChatEventLocationChanged extends ChatEventAction {

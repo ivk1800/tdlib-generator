@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Changes application-specific data associated with a chat
 class SetChatClientData extends TdFunction {

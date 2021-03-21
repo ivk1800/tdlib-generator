@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The list of suggested to the user actions has changed
 class UpdateSuggestedActions extends Update {

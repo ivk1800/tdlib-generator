@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Changes the notification settings of a chat. Notification settings of a
 /// with the current user (Saved Messages) can't be changed

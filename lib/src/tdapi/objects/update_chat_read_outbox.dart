@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Outgoing messages were read
 class UpdateChatReadOutbox extends Update {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A static sticker in PNG format, which will be converted to WEBP
 class InputStickerStatic extends InputSticker {

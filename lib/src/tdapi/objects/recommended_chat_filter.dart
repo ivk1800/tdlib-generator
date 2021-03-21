@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Describes a recommended chat filter
 class RecommendedChatFilter extends TdObject {

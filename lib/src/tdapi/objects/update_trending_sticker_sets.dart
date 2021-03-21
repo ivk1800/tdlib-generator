@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The list of trending sticker sets was updated or some of them were viewed
 class UpdateTrendingStickerSets extends Update {

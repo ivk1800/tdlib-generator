@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// An italicized rich text
 class RichTextItalic extends RichText {

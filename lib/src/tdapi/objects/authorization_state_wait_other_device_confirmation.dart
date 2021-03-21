@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The user needs to confirm authorization on another logged in device by
 /// a QR code with the provided link

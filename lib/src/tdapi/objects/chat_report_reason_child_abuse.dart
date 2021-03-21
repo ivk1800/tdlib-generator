@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The chat has child abuse related content
 class ChatReportReasonChildAbuse extends ChatReportReason {

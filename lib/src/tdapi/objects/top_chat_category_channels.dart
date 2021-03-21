@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A category containing frequently used channels
 class TopChatCategoryChannels extends TopChatCategory {

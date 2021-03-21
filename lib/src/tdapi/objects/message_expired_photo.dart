@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// An expired photo message (self-destructed after TTL has elapsed)
 class MessageExpiredPhoto extends MessageContent {

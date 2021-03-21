@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Changes the marked as unread state of a chat
 class ToggleChatIsMarkedAsUnread extends TdFunction {

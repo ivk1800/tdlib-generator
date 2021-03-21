@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The call has ended with an error
 class CallStateError extends CallState {

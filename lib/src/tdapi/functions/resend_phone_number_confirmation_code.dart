@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Resends phone number confirmation code
 class ResendPhoneNumberConfirmationCode extends TdFunction {

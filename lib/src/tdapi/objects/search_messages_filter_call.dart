@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns only call messages
 class SearchMessagesFilterCall extends SearchMessagesFilter {

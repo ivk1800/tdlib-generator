@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns the received vector of objects containing a string; for testing
 /// This is an offline method. Can be called before authorization

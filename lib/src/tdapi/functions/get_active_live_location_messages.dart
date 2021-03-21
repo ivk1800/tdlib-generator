@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns all active live locations that should be updated by the
 /// The list is persistent across application restarts only if the message

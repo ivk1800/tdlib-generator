@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A language pack string which has different forms based on the number of
 /// object it mentions. See

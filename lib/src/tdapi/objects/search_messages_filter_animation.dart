@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns only animation messages
 class SearchMessagesFilterAnimation extends SearchMessagesFilter {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A rich text phone number
 class RichTextPhoneNumber extends RichText {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents result of checking whether a username can be set for a chat
 abstract class CheckChatUsernameResult extends TdObject {

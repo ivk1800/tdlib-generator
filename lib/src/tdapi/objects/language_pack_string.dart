@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents one language pack string
 class LanguagePackString extends TdObject {

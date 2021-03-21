@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents a single result of an inline query
 abstract class InlineQueryResult extends TdObject {

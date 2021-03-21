@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Removes the current user from chat members. Private and secret chats can't
 /// left using this method

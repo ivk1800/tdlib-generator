@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Adds a user to the contact list or edits an existing contact by their user
 class AddContact extends TdFunction {

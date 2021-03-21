@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A Wi-Fi network
 class NetworkTypeWiFi extends NetworkType {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The message is being sent now, but has not yet been delivered to the
 class MessageSendingStatePending extends MessageSendingState {

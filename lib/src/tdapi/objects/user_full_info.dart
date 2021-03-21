@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains full information about a user
 class UserFullInfo extends TdObject {

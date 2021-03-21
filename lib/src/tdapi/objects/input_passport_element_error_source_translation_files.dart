@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The translation of the document contains an error. The error is considered
 /// when the list of files changes

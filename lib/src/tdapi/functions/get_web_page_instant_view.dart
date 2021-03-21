@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns an instant view version of a web page if available. Returns a 404
 /// if the web page has no instant view page

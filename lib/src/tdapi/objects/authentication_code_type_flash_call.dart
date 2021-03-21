@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// An authentication code is delivered by an immediately cancelled call to
 /// specified phone number. The number from which the call was made is the

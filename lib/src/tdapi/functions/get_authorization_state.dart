@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns the current authorization state; this is an offline request. For
 /// purposes only. Use updateAuthorizationState instead to maintain the

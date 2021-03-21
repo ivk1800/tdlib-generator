@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Checks the email address verification code for Telegram Passport
 class CheckEmailAddressVerificationCode extends TdFunction {

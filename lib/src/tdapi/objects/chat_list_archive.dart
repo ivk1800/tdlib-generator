@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A list of chats usually located at the top of the main chat list. Unmuted
 /// are automatically moved from the Archive to the Main chat list when a new

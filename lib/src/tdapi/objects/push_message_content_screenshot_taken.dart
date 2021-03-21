@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A screenshot of a message in the chat has been taken
 class PushMessageContentScreenshotTaken extends PushMessageContent {

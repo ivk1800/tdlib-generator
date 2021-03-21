@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Stops the uploading of a file. Supported only for files uploaded by using
 /// For other files the behavior is undefined

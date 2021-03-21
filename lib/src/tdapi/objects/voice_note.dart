@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Describes a voice note. The voice note must be encoded with the Opus
 /// and stored inside an OGG container. Voice notes can have only a single

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Asynchronously uploads a file to the cloud without sending it in a
 /// updateFile will be used to notify about upload progress and successful

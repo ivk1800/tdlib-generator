@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns the profile photos of a user. The result of this query may be
 /// some photos might have been deleted already

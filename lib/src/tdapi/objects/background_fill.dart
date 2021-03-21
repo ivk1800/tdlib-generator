@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Describes a fill of a background
 abstract class BackgroundFill extends TdObject {

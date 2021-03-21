@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Closes the TDLib instance after a proper logout. Requires an available
 /// connection. All local data will be destroyed. After the logout completes,

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Removes a chat action bar without any other action
 class RemoveChatActionBar extends TdFunction {

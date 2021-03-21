@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A link to an anchor on the same web page
 class RichTextAnchorLink extends RichText {

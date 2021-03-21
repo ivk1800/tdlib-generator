@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains a value representing a number of seconds
 class Seconds extends TdObject {

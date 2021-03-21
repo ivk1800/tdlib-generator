@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A message has been successfully sent
 class UpdateMessageSendSucceeded extends Update {

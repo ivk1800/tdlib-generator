@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Changes the 2-step verification recovery email address of the user. If a
 /// recovery email address is specified, then the change will not be applied

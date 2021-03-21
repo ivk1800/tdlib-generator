@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The thumbnail is in JPEG format
 class ThumbnailFormatJpeg extends ThumbnailFormat {

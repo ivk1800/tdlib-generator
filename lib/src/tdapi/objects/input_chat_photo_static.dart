@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A static photo in JPEG format
 class InputChatPhotoStatic extends InputChatPhoto {

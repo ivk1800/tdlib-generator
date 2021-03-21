@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents information about a venue
 class InlineQueryResultVenue extends InlineQueryResult {

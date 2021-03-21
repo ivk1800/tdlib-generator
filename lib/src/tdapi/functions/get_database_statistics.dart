@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns database statistics
 class GetDatabaseStatistics extends TdFunction {

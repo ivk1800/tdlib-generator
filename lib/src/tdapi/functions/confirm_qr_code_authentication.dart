@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Confirms QR code authentication on another device. Returns created session
 /// success

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Applies if a user enters new credentials on a payment provider website
 class InputCredentialsNew extends InputCredentials {

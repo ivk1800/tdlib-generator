@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Currently waiting for the network to become available. Use setNetworkType
 /// change the available network type

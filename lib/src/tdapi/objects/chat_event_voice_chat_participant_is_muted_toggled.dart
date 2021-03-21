@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A voice chat participant was muted or unmuted
 class ChatEventVoiceChatParticipantIsMutedToggled extends ChatEventAction {

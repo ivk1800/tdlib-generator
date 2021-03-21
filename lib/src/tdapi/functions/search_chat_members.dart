@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Searches for a specified query in the first name, last name and username
 /// the members of a specified chat. Requires administrator rights in channels

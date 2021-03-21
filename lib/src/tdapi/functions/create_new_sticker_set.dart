@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Creates a new sticker set; for bots only. Returns the newly created
 /// set

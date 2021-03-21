@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A button that asks for password of the current user and then sends a
 /// query to a bot

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains the storage usage statistics for a specific chat
 class StorageStatisticsByChat extends TdObject {

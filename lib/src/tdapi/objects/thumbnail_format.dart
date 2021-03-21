@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Describes format of the thumbnail
 abstract class ThumbnailFormat extends TdObject {

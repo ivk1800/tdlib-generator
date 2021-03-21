@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A user changed the answer to a poll; for bots only
 class UpdatePollAnswer extends Update {

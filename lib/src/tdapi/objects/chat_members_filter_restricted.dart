@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns users under certain restrictions in the chat; can be used only by
 /// in a supergroup

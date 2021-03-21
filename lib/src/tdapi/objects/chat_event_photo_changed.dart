@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The chat photo was changed
 class ChatEventPhotoChanged extends ChatEventAction {

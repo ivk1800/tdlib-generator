@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns information about a file by its remote ID; this is an offline
 /// Can be used to register a URL as a file for further uploading, or sending

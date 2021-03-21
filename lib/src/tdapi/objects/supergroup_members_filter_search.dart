@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Used to search for supergroup or channel members via a (string) query
 class SupergroupMembersFilterSearch extends SupergroupMembersFilter {

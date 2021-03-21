@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A message with information about an ended call
 class MessageCall extends MessageContent {

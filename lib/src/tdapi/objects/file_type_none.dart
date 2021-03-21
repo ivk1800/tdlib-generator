@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The data is not a file
 class FileTypeNone extends FileType {

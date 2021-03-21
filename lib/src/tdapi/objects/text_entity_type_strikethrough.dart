@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A strikethrough text
 class TextEntityTypeStrikethrough extends TextEntityType {

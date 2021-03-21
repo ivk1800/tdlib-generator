@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The list of supported dice emojis has changed
 class UpdateDiceEmojis extends Update {

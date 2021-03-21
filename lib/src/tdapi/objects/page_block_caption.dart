@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains a caption of an instant view web page block, consisting of a text
 /// a trailing credit

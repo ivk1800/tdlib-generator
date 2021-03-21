@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns an invoice payment form. This method should be called when the
 /// presses inlineKeyboardButtonBuy

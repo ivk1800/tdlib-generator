@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The sign_messages setting of a channel was toggled
 class ChatEventSignMessagesToggled extends ChatEventAction {

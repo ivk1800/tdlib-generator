@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A simple object containing a string; for testing only
 class TestString extends TdObject {

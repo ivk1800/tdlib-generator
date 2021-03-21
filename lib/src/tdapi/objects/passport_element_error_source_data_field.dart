@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// One of the data fields contains an error. The error will be considered
 /// when the value of the field changes

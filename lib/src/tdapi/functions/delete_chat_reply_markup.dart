@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Deletes the default reply markup from a chat. Must be called after a
 /// keyboard or a ForceReply reply markup has been used. UpdateChatReplyMarkup

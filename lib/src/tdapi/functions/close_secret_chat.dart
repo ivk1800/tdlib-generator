@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Closes a secret chat, effectively transferring its state to
 class CloseSecretChat extends TdFunction {

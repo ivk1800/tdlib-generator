@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Describes an action associated with a bank card number
 class BankCardActionOpenUrl extends TdObject {

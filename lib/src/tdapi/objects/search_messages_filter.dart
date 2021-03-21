@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents a filter for message search results
 abstract class SearchMessagesFilter extends TdObject {

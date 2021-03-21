@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A list of privacy rules. Rules are matched in the specified order. The
 /// matched rule defines the privacy setting for a given user. If no rule

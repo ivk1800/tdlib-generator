@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns a list of frequently used chats. Supported only if the chat info
 /// is enabled

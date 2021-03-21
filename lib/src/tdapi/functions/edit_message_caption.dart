@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Edits the message content caption. Returns the edited message after the
 /// is completed on the server side

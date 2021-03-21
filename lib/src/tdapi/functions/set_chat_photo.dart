@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Changes the photo of a chat. Supported only for basic groups, supergroups
 /// channels. Requires can_change_info rights

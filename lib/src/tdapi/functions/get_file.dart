@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns information about a file; this is an offline request
 class GetFile extends TdFunction {

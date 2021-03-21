@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The footer of a page
 class PageBlockFooter extends PageBlock {

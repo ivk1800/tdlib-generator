@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns information about currently used log stream for internal logging
 /// TDLib. Can be called synchronously

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Deletes messages
 class DeleteMessages extends TdFunction {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Reads a part of a file from the TDLib file cache and returns read bytes.
 /// method is intended to be used only if the application has no direct access

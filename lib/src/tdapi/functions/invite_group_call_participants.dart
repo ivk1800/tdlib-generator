@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Invites users to a group call. Sends a service message of type
 /// for voice chats

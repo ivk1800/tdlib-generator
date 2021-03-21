@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A button that sends the user's phone number when pressed; available only
 /// private chats

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns the owner and administrators
 class SupergroupMembersFilterAdministrators extends SupergroupMembersFilter {

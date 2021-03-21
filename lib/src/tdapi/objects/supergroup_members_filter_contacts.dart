@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns contacts of the user, which are members of the supergroup or
 class SupergroupMembersFilterContacts extends SupergroupMembersFilter {

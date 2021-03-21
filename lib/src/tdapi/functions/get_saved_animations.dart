@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns saved animations
 class GetSavedAnimations extends TdFunction {

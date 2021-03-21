@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Informs TDLib that the message content has been opened (e.g., the user has
 /// a photo, video, document, location or venue, or has listened to an audio

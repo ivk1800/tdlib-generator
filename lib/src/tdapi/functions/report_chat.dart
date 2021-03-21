@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Reports a chat to the Telegram moderators. A chat can be reported only
 /// the chat action bar, or if this is a private chats with a bot, a private

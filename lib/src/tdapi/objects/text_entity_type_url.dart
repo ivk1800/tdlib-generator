@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// An HTTP URL
 class TextEntityTypeUrl extends TextEntityType {

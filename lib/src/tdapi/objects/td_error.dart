@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// An object of this type can be returned on every function call, in case of
 /// error

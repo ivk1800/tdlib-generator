@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns only failed to send messages. This filter can be used only if the
 /// database is used

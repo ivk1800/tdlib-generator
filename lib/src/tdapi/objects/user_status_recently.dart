@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The user was online recently
 class UserStatusRecently extends UserStatus {

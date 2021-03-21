@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents the result of an ImportContacts request
 class ImportedContacts extends TdObject {

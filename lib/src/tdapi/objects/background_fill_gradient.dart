@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Describes a gradient fill of a background
 class BackgroundFillGradient extends BackgroundFill {

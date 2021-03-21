@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains a detailed statistics about a chat
 abstract class ChatStatistics extends TdObject {

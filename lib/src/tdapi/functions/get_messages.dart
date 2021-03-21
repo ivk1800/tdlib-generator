@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns information about messages. If a message is not found, returns
 /// on the corresponding position of the result

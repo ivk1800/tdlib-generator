@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A poll in a message was stopped
 class ChatEventPollStopped extends ChatEventAction {

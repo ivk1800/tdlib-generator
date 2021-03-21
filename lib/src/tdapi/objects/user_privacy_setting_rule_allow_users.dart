@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A rule to allow certain specified users to do something
 class UserPrivacySettingRuleAllowUsers extends UserPrivacySettingRule {

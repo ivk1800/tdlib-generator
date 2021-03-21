@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A chat voice chat state has changed
 class UpdateChatVoiceChat extends Update {

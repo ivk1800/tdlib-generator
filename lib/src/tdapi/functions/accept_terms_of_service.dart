@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Accepts Telegram terms of services
 class AcceptTermsOfService extends TdFunction {

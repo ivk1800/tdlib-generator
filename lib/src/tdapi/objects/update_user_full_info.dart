@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Some data from userFullInfo has been changed
 class UpdateUserFullInfo extends Update {

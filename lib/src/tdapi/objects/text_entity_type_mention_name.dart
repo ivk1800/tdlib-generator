@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A text shows instead of a raw mention of the user (e.g., when the user has
 /// username)

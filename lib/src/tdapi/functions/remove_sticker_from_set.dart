@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Removes a sticker from the set to which it belongs; for bots only. The
 /// set must have been created by the bot

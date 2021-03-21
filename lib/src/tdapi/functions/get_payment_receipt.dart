@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns information about a successful payment
 class GetPaymentReceipt extends TdFunction {

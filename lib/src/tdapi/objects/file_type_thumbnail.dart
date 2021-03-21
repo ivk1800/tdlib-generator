@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The file is a thumbnail of another file
 class FileTypeThumbnail extends FileType {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// An empty block separating a page
 class PageBlockDivider extends PageBlock {

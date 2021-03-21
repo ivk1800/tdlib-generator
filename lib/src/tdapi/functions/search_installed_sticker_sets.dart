@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Searches for installed sticker sets by looking for specified query in
 /// title and name

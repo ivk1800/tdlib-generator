@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The log is written nowhere
 class LogStreamEmpty extends LogStream {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Describes an audio file. Audio is usually in MP3 or M4A format
 class Audio extends TdObject {

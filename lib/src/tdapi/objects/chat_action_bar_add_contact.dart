@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The chat is a private or secret chat and the other user can be added to
 /// contact list using the method addContact

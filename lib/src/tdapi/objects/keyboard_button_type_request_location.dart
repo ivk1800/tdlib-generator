@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A button that sends the user's location when pressed; available only in
 /// chats

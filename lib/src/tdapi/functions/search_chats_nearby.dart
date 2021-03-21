@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns a list of users and location-based supergroups nearby. The list of
 /// nearby will be updated for 60 seconds after the request by the updates

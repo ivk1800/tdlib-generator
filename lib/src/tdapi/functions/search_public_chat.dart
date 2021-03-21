@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Searches a public chat by its username. Currently only private chats,
 /// and channels can be public. Returns the chat if found; otherwise an error

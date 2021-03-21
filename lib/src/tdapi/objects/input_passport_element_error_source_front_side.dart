@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The front side of the document contains an error. The error is considered
 /// when the file with the front side of the document changes

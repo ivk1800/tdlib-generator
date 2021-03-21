@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A category containing frequently used private chats with non-bot users
 class TopChatCategoryUsers extends TopChatCategory {

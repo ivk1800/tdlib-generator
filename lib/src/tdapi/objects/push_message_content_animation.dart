@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// An animation message (GIF-style).
 class PushMessageContentAnimation extends PushMessageContent {

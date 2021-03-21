@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Specifies the kind of chat members to return in searchChatMembers
 abstract class ChatMembersFilter extends TdObject {

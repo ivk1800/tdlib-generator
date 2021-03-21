@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The secret chat is ready to use
 class SecretChatStateReady extends SecretChatState {

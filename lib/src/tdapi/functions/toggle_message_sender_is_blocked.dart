@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Changes the block state of a message sender. Currently, only users and
 /// chats can be blocked

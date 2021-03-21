@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// An underlined rich text
 class RichTextUnderline extends RichText {

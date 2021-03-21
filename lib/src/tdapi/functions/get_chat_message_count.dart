@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns approximate number of messages of the specified type in the chat
 class GetChatMessageCount extends TdFunction {

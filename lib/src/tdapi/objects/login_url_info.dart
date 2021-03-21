@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains information about an inline button of type
 abstract class LoginUrlInfo extends TdObject {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns strings from a language pack in the current localization target by
 /// keys. Can be called before authorization

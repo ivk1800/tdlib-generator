@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Edits the message content of a live location. Messages can be edited for a
 /// period of time specified in the live location. Returns the edited message

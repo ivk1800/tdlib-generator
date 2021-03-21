@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A chat member has gained/lost administrator status, or the list of their
 /// privileges has changed

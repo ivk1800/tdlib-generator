@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The chat contains a public service announcement
 class ChatSourcePublicServiceAnnouncement extends ChatSource {

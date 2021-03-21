@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns full information about a supergroup or a channel by its
 /// cached for up to 1 minute

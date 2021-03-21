@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The message was sent on behalf of a chat
 class MessageSenderChat extends MessageSender {

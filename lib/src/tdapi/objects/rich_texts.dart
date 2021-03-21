@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A concatenation of rich texts
 class RichTexts extends RichText {

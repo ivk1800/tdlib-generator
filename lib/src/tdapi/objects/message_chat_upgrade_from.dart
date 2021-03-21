@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A supergroup has been created from a basic group
 class MessageChatUpgradeFrom extends MessageContent {

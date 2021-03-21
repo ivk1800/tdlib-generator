@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Deletes saved credentials for all payment provider bots
 class DeleteSavedCredentials extends TdFunction {

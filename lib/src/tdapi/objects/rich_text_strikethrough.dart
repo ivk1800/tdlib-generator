@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A strikethrough rich text
 class RichTextStrikethrough extends RichText {

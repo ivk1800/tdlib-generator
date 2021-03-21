@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Describes the last time the user was online
 abstract class UserStatus extends TdObject {

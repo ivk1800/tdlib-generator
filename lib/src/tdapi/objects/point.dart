@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A point on a Cartesian plane
 class Point extends TdObject {

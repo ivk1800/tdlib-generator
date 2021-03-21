@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Closes the TDLib instance. All databases will be flushed to disk and
 /// closed. After the close completes, updateAuthorizationState with

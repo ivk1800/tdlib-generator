@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// TDLib needs the user's authentication code to authorize
 class AuthorizationStateWaitCode extends AuthorizationState {

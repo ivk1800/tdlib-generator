@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The content should be top-aligned
 class PageBlockVerticalAlignmentTop extends PageBlockVerticalAlignment {

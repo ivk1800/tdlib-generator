@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The user has chosen a result of an inline query; for bots only
 class UpdateNewChosenInlineResult extends Update {

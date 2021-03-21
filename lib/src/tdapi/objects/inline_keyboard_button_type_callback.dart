@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A button that sends a callback query to a bot
 class InlineKeyboardButtonTypeCallback extends InlineKeyboardButtonType {

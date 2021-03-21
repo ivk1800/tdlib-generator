@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The list of attached files contains an error. The error is considered
 /// when the file list changes

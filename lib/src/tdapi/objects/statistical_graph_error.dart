@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// An error message to be shown to the user instead of the graph
 class StatisticalGraphError extends StatisticalGraph {

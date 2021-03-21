@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns a list of archived sticker sets
 class GetArchivedStickerSets extends TdFunction {

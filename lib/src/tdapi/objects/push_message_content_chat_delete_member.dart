@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A chat member was deleted
 class PushMessageContentChatDeleteMember extends PushMessageContent {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Part of the face, relative to which a mask should be placed
 abstract class MaskPoint extends TdObject {

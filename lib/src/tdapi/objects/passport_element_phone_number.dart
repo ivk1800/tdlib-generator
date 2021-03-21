@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A Telegram Passport element containing the user's phone number
 class PassportElementPhoneNumber extends PassportElement {

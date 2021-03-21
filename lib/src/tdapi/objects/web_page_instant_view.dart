@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Describes an instant view page for a web page
 class WebPageInstantView extends TdObject {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The message was originally a post in a channel
 class MessageForwardOriginChannel extends MessageForwardOrigin {

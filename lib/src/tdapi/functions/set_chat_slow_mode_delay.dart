@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Changes the slow mode delay of a chat. Available only for supergroups;
 /// can_restrict_members rights

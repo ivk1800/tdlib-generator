@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A message with a poll
 class PushMessageContentPoll extends PushMessageContent {

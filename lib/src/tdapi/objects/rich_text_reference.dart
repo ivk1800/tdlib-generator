@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A reference to a richTexts object on the same web page
 class RichTextReference extends RichText {

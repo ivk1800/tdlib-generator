@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The message pinned state was changed
 class UpdateMessageIsPinned extends Update {

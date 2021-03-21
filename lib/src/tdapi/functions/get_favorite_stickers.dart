@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns favorite stickers
 class GetFavoriteStickers extends TdFunction {

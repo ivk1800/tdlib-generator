@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Downloads a file from the cloud. Download progress and completion of the
 /// will be notified through updateFile updates

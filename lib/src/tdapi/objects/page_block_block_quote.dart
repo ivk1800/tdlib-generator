@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A block quote
 class PageBlockBlockQuote extends PageBlock {

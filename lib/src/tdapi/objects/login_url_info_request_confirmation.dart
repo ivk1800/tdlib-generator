@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// An authorization confirmation dialog needs to be shown to the user
 class LoginUrlInfoRequestConfirmation extends LoginUrlInfo {

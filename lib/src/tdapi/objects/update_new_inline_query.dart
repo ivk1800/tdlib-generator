@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A new incoming inline query; for bots only
 class UpdateNewInlineQuery extends Update {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The chat is sponsored by the user's MTProxy server
 class ChatSourceMtprotoProxy extends ChatSource {

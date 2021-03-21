@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Changes the phone number of the user and sends an authentication code to
 /// user's new phone number. On success, returns information about the sent

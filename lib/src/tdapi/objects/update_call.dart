@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// New call was created or information about a call was updated
 class UpdateCall extends Update {

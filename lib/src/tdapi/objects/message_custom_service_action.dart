@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A non-standard action has happened in the chat
 class MessageCustomServiceAction extends MessageContent {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The user is uploading a voice note
 class ChatActionUploadingVoiceNote extends ChatAction {

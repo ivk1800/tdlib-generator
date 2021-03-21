@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns restricted supergroup members; can be used only by administrators
 class SupergroupMembersFilterRestricted extends SupergroupMembersFilter {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Hides a suggested action
 class HideSuggestedAction extends TdFunction {

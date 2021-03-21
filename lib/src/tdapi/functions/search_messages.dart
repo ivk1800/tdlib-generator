@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Searches for messages in all chats except secret chats. Returns the
 /// in reverse chronological order (i.e., in order of decreasing (date,

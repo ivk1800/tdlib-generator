@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Searches for stickers from public sticker sets that correspond to a given
 class SearchStickers extends TdFunction {

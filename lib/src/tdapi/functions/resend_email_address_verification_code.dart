@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Re-sends the code to verify an email address to be added to a user's
 /// Passport

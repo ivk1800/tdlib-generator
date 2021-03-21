@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Changes a profile photo for the current user
 class SetProfilePhoto extends TdFunction {

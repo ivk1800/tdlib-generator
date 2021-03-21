@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// An audio file
 class PageBlockAudio extends PageBlock {

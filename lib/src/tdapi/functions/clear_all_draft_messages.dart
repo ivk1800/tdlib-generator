@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Clears draft messages in all chats
 class ClearAllDraftMessages extends TdFunction {

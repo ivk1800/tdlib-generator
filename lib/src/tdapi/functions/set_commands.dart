@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Sets the list of commands supported by the bot; for bots only
 class SetCommands extends TdFunction {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents a set of filters used to obtain a chat event log
 class ChatEventLogFilters extends TdObject {

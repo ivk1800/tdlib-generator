@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Changes the current TTL setting (sets a new self-destruct timer) in a
 /// chat and sends the corresponding message

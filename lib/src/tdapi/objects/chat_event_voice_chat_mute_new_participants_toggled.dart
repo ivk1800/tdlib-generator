@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The mute_new_participants setting of a voice chat was toggled
 class ChatEventVoiceChatMuteNewParticipantsToggled extends ChatEventAction {

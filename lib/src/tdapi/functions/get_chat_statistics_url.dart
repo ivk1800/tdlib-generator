@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns an HTTP URL with the chat statistics. Currently this method of
 /// the statistics are disabled and can be deleted in the future

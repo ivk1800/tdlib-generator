@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A file defined by its unique ID
 class InputFileId extends InputFile {

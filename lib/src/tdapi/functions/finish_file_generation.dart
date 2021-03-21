@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Finishes the file generation
 class FinishFileGeneration extends TdFunction {

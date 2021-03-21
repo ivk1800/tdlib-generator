@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Changes the value of the default disable_notification parameter, used when
 /// message is sent to a chat

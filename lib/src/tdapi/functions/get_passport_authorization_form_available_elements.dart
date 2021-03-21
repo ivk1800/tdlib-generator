@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns already available Telegram Passport elements suitable for
 /// a Telegram Passport authorization form. Result can be received only once

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Registers the currently used device for receiving push notifications.
 /// a globally unique identifier of the push notification subscription

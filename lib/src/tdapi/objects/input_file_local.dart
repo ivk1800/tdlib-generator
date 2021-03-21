@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A file defined by a local path
 class InputFileLocal extends InputFile {

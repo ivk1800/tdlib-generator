@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Information about the email address authentication code that was sent
 class EmailAddressAuthenticationCodeInfo extends TdObject {

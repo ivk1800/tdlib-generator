@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A privacy setting for managing whether a link to the user's account is
 /// in forwarded messages

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns information about a supergroup or a channel by its identifier.
 /// is an offline request if the current user is not a bot

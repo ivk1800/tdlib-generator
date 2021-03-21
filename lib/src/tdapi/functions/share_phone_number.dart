@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Shares the phone number of the current user with a mutual contact.
 /// to be called when the user clicks on chatActionBarSharePhoneNumber

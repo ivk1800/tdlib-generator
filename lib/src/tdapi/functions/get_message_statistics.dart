@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns detailed statistics about a message. Can be used only if
 /// == true

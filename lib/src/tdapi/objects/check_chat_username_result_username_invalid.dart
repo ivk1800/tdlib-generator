@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The username is invalid
 class CheckChatUsernameResultUsernameInvalid extends CheckChatUsernameResult {

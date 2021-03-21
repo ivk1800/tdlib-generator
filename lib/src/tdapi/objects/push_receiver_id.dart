@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains a globally unique push receiver identifier, which can be used to
 /// which account has received a push notification

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// TDLib is closing, all subsequent queries will be answered with the error
 /// Note that closing TDLib can take a while. All resources will be freed only

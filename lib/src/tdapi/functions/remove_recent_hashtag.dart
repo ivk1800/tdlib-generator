@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Removes a hashtag from the list of recently used hashtags
 class RemoveRecentHashtag extends TdFunction {

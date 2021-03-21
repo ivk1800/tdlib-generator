@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Removes a pinned message from a chat; requires can_pin_messages rights in
 /// group or can_edit_messages rights in the channel

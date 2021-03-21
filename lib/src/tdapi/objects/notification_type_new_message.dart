@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// New message was received
 class NotificationTypeNewMessage extends NotificationType {

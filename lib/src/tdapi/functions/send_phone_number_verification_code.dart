@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Sends a code to verify a phone number to be added to a user's Telegram
 class SendPhoneNumberVerificationCode extends TdFunction {

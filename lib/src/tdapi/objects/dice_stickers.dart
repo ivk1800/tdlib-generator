@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains animated stickers which should be used for dice animation
 abstract class DiceStickers extends TdObject {

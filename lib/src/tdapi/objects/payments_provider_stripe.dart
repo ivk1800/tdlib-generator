@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Stripe payment provider
 class PaymentsProviderStripe extends TdObject {

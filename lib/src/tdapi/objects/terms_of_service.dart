@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains Telegram terms of service
 class TermsOfService extends TdObject {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A chat's has_scheduled_messages field has changed
 class UpdateChatHasScheduledMessages extends Update {

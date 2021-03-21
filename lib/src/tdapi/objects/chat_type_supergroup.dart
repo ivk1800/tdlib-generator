@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A supergroup (i.e. a chat with up to GetOption("supergroup_max_size")
 /// users), or channel (with unlimited members)

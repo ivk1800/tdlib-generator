@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The chat is a private or secret chat, which can be reported using the
 /// reportChat, or the other user can be blocked using the method blockUser,

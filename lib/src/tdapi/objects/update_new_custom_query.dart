@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A new incoming query; for bots only
 class UpdateNewCustomQuery extends Update {

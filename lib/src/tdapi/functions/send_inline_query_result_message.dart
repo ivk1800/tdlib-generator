@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Sends the result of an inline query as a message. Returns the sent
 /// Always clears a chat draft message

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains information about the sending state of the message
 abstract class MessageSendingState extends TdObject {

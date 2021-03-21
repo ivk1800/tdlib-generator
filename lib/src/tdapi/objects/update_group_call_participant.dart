@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Information about a group call participant was changed. The updates are
 /// only after the group call is received through getGroupCall and only if the

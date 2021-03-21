@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Enables a proxy. Only one proxy can be enabled at a time. Can be called
 /// authorization

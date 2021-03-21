@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains approximate storage usage statistics, excluding files of unknown
 /// type

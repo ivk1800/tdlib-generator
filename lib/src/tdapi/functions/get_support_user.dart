@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns a user that can be contacted to get support
 class GetSupportUser extends TdFunction {

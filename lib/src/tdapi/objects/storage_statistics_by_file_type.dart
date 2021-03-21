@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains the storage usage statistics for a specific file type
 class StorageStatisticsByFileType extends TdObject {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The slow_mode_delay setting of a supergroup was changed
 class ChatEventSlowModeDelayChanged extends ChatEventAction {

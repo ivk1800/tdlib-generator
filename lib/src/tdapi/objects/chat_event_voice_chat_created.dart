@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A voice chat was created
 class ChatEventVoiceChatCreated extends ChatEventAction {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Describes a user profile photo
 class ProfilePhoto extends TdObject {

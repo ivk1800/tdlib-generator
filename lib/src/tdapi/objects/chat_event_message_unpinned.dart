@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A message was unpinned
 class ChatEventMessageUnpinned extends ChatEventAction {

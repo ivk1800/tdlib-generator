@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The thumbnail is in TGS format. It will be used only for animated sticker
 class ThumbnailFormatTgs extends ThumbnailFormat {

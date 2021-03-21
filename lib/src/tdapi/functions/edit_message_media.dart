@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Edits the content of a message with an animation, an audio, a document, a
 /// or a video. The media in the message can't be replaced if the message was

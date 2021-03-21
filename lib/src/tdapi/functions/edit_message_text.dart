@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Edits the text of a message (or a text of a game message). Returns the
 /// message after the edit is completed on the server side

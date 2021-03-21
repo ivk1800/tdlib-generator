@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A chat invite link
 class TMeUrlTypeChatInvite extends TMeUrlType {

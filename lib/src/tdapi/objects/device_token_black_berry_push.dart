@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A token for BlackBerry Push Service
 class DeviceTokenBlackBerryPush extends DeviceToken {

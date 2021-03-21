@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Sets the verbosity level for a specified TDLib internal log tag. Can be
 /// synchronously

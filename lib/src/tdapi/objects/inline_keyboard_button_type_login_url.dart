@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A button that opens a specified URL and automatically authorize the
 /// user if allowed to do so

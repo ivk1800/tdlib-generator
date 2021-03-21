@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns all website where the current user used Telegram to log in
 class GetConnectedWebsites extends TdFunction {

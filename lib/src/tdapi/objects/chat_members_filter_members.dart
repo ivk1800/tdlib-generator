@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns all chat members, including restricted chat members
 class ChatMembersFilterMembers extends ChatMembersFilter {

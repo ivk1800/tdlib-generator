@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The list of saved animations was updated
 class UpdateSavedAnimations extends Update {

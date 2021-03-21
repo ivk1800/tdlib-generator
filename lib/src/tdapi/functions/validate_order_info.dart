@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Validates the order information provided by a user and returns the
 /// shipping options for a flexible invoice

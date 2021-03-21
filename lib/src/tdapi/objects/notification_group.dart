@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Describes a group of notifications
 class NotificationGroup extends TdObject {

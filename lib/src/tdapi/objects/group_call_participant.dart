@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents a group call participant
 class GroupCallParticipant extends TdObject {

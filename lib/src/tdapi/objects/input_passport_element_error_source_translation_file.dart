@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// One of the files containing the translation of the document contains an
 /// The error is considered resolved when the file with the translation

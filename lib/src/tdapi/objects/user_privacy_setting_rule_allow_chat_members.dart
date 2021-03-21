@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A rule to allow all members of certain specified basic groups and
 /// to doing something

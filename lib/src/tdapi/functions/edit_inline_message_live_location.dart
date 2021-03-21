@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Edits the content of a live location in an inline message sent via a bot;
 /// bots only

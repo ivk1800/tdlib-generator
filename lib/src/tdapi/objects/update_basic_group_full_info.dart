@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Some data from basicGroupFullInfo has been changed
 class UpdateBasicGroupFullInfo extends Update {

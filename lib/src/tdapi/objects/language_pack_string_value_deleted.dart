@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A deleted language pack string, the value should be taken from the
 /// english language pack

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A file defined by its remote ID. The remote ID is guaranteed to be usable
 /// if the corresponding file is still accessible to the user and known to

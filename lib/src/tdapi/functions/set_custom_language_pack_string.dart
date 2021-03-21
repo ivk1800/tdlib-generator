@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Adds, edits or deletes a string in a custom local language pack. Can be
 /// before authorization

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Reports some messages from a user in a supergroup as spam; requires
 /// rights in the supergroup

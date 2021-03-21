@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A URL linking to a sticker set
 class TMeUrlTypeStickerSet extends TMeUrlType {

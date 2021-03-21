@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents a document
 class InlineQueryResultDocument extends InlineQueryResult {

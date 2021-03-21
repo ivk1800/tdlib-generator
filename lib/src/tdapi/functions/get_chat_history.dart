@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns messages in a chat. The messages are returned in a reverse
 /// order (i.e., in order of decreasing message_id).. For optimal performance

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns users voted for the specified option in a non-anonymous polls. For
 /// optimal performance the number of returned users is chosen by the library

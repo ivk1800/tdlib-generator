@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns a 2-step verification recovery email address that was previously
 /// up. This method can be used to verify a password provided by the user

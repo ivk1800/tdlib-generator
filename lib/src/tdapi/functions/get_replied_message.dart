@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns information about a message that is replied by a given message.
 /// returns the pinned message, the game message, and the invoice message for

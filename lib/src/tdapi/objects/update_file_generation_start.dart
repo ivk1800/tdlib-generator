@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The file generation process needs to be started by the application
 class UpdateFileGenerationStart extends Update {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents a link to an opus-encoded audio file within an OGG container,
 /// channel audio

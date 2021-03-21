@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Changes the period of inactivity after which the account of the current
 /// will automatically be deleted

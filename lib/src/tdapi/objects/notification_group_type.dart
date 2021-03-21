@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Describes the type of notifications in a notification group
 abstract class NotificationGroupType extends TdObject {

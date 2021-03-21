@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Number of unread chats, i.e. with unread messages or marked as unread, has
 /// This update is sent only if the message database is used

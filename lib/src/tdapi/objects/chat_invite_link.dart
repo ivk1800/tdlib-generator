@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains a chat invite link
 class ChatInviteLink extends TdObject {

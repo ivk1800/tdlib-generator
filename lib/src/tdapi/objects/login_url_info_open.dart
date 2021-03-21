@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// An HTTP url needs to be open
 class LoginUrlInfoOpen extends LoginUrlInfo {

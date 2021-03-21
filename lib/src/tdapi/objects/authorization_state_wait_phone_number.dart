@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// TDLib needs the user's phone number to authorize. Call
 class AuthorizationStateWaitPhoneNumber extends AuthorizationState {

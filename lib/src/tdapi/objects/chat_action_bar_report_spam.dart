@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The chat can be reported as spam using the method reportChat with the
 /// chatReportReasonSpam

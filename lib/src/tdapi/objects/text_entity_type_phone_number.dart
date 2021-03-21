@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A phone number
 class TextEntityTypePhoneNumber extends TextEntityType {

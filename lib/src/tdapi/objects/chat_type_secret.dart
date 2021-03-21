@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A secret chat with a user
 class ChatTypeSecret extends ChatType {

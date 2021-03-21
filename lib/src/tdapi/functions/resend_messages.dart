@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Resends messages which failed to send. Can be called only for messages for
 /// messageSendingStateFailed.can_retry is true and after specified in

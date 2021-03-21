@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Describes a recently speaking user in a group call
 class GroupCallRecentSpeaker extends TdObject {

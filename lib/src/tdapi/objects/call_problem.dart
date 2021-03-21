@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Describes the exact type of a problem with a call
 abstract class CallProblem extends TdObject {

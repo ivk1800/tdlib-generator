@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Options to be used when a message is sent
 class MessageSendOptions extends TdObject {

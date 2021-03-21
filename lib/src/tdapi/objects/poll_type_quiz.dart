@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A poll in quiz mode, which has exactly one correct answer option and can
 /// answered only once

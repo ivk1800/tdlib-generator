@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A previously used profile photo of the current user
 class InputChatPhotoPrevious extends InputChatPhoto {

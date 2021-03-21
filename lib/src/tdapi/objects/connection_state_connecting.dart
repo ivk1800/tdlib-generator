@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Currently establishing a connection to the Telegram servers
 class ConnectionStateConnecting extends ConnectionState {

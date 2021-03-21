@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A newly created supergroup or channel
 class MessageSupergroupChatCreate extends MessageContent {

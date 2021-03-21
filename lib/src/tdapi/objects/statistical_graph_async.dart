@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The graph data to be asynchronously loaded through getStatisticalGraph
 class StatisticalGraphAsync extends StatisticalGraph {

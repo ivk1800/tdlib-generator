@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Searches for the specified query in the first names, last names and
 /// of the known user contacts

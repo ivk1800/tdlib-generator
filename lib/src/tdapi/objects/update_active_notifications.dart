@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains active notifications that was shown on previous application
 /// This update is sent only if the message database is used. In that case it

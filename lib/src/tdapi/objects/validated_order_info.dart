@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains a temporary identifier of validated order information, which is
 /// for one hour. Also contains the available shipping options

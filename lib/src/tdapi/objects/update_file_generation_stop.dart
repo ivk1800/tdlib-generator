@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// File generation is no longer needed
 class UpdateFileGenerationStop extends Update {

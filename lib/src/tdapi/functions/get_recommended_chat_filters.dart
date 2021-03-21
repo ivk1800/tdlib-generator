@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns recommended chat filters for the current user
 class GetRecommendedChatFilters extends TdFunction {

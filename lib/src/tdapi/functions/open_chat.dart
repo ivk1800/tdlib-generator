@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Informs TDLib that the chat is opened by the user. Many useful activities
 /// on the chat being opened or closed (e.g., in supergroups and channels all

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents a game
 class InputInlineQueryResultGame extends InputInlineQueryResult {

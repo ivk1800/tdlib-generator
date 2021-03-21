@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Deletes all messages sent by the specified user to a chat. Supported only
 /// supergroups; requires can_delete_messages administrator privileges

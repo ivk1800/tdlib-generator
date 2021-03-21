@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A token for Tizen Push Service
 class DeviceTokenTizenPush extends DeviceToken {

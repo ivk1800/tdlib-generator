@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The network is not available
 class NetworkTypeNone extends NetworkType {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains an HTTP URL
 class HttpUrl extends TdObject {

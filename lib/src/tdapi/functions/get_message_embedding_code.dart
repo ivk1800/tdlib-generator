@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns an HTML code for embedding the message. Available only for
 /// in supergroups and channels with a username

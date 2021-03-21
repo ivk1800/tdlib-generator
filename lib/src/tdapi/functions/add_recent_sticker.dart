@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Manually adds a new sticker to the list of recently used stickers. The new
 /// is added to the top of the list. If the sticker was already in the list,

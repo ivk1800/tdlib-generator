@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns a list of basic group and supergroup chats, which can be used as a
 /// group for a channel. Returned basic group chats must be first upgraded to

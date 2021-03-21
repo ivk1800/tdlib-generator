@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Searches for the specified query in the title and username of already
 /// chats, this is an offline request. Returns chats in the order seen in the

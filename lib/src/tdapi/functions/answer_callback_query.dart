@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Sets the result of a callback query; for bots only
 class AnswerCallbackQuery extends TdFunction {

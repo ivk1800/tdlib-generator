@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Changes the order of pinned chats
 class SetPinnedChats extends TdFunction {

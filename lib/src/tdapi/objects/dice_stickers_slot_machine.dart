@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Animated stickers to be combined into a slot machine
 class DiceStickersSlotMachine extends DiceStickers {

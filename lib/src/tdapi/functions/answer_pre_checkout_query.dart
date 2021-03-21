@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Sets the result of a pre-checkout query; for bots only
 class AnswerPreCheckoutQuery extends TdFunction {

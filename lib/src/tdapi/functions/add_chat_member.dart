@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Adds a new member to a chat. Members can't be added to private or secret
 /// Members will not be added until the chat state has been synchronized with

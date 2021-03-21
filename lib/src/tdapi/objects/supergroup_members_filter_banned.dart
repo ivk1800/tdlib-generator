@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns users banned from the supergroup or channel; can be used only by
 class SupergroupMembersFilterBanned extends SupergroupMembersFilter {

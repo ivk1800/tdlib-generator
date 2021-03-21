@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains statistics about messages sent by a user
 class ChatStatisticsMessageSenderInfo extends TdObject {

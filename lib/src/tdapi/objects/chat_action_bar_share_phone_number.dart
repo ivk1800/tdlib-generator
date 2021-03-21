@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The chat is a private or secret chat with a mutual contact and the user's
 /// number can be shared with the other user using the method sharePhoneNumber

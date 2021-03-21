@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Creates a new supergroup from an existing basic group and sends a
 /// messageChatUpgradeTo and messageChatUpgradeFrom; requires creator

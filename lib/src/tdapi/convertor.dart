@@ -1,4 +1,6 @@
-part of 'tdapi.dart';
+import 'dart:convert';
+
+import 'tdapi.dart';
 
 TdObject? convertToObject(String query) {
   if (query != null) {

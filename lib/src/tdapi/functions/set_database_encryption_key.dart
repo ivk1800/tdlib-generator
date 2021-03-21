@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Changes the database encryption key. Usually the encryption key is never
 /// and is stored in some OS keychain

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Notification settings applied to all channels when the corresponding chat
 /// has a default value

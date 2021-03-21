@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns chat lists to which the chat can be added. This is an offline
 class GetChatListsToAddChat extends TdFunction {

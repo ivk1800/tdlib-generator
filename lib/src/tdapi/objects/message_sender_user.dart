@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The message was sent by a known user
 class MessageSenderUser extends MessageSender {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents a single result of an inline query; for bots only
 abstract class InputInlineQueryResult extends TdObject {

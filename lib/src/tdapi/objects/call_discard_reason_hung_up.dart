@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The call was ended because one of the parties hung up
 class CallDiscardReasonHungUp extends CallDiscardReason {

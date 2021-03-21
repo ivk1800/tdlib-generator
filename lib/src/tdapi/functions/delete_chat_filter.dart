@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Deletes existing chat filter
 class DeleteChatFilter extends TdFunction {

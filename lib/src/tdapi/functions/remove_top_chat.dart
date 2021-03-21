@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Removes a chat from the list of frequently used chats. Supported only if
 /// chat info database is enabled

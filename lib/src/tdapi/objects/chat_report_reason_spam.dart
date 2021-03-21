@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The chat contains spam messages
 class ChatReportReasonSpam extends ChatReportReason {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A text description shown instead of a raw URL
 class TextEntityTypeTextUrl extends TextEntityType {

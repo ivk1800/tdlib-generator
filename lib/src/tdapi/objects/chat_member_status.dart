@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Provides information about the status of a member in a chat
 abstract class ChatMemberStatus extends TdObject {

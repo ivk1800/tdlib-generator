@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Sends a Telegram Passport authorization form, effectively sharing data
 /// the service. This method must be called after

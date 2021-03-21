@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Searches for call messages. Returns the results in reverse chronological
 /// (i. e., in order of decreasing message_id). For optimal performance the

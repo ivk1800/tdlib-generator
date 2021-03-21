@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Some data of a basic group has changed. This update is guaranteed to come
 /// the basic group identifier is returned to the application

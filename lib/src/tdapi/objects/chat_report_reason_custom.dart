@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A custom reason provided by the user
 class ChatReportReasonCustom extends ChatReportReason {

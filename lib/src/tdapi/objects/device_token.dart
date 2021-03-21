@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents a data needed to subscribe for push notifications through
 /// method. To use specific push notification service, the correct application

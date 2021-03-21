@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The last message of a chat was changed. If last_message is null, then the
 /// message in the chat became unknown. Some new unknown messages might be

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A document message (a general file)
 class PushMessageContentDocument extends PushMessageContent {

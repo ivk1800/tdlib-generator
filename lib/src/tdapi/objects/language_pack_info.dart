@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains information about a language pack
 class LanguagePackInfo extends TdObject {

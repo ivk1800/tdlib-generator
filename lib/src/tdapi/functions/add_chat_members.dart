@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Adds multiple new members to a chat. Currently this method is only
 /// for supergroups and channels. This method can't be used to join a chat.

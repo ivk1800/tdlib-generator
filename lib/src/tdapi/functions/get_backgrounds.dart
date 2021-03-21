@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns backgrounds installed by the user
 class GetBackgrounds extends TdFunction {

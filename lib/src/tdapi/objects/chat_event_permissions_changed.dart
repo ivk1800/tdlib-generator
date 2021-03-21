@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The chat permissions was changed
 class ChatEventPermissionsChanged extends ChatEventAction {

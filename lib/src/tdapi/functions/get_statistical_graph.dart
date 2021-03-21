@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Loads an asynchronous or a zoomed in statistical graph
 class GetStatisticalGraph extends TdFunction {

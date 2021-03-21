@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The file contains an error. The error will be considered resolved when the
 /// changes

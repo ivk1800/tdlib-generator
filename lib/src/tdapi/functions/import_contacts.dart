@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Adds new contacts or edits existing contacts by their phone numbers;
 /// user identifiers are ignored

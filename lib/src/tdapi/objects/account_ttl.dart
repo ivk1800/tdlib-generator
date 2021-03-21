@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains information about the period of inactivity after which the
 /// user's account will automatically be deleted

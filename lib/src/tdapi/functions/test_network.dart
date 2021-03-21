@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Sends a simple network request to the Telegram servers; for testing only.
 /// be called before authorization

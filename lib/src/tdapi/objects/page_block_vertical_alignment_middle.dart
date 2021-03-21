@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The content should be middle-aligned
 class PageBlockVerticalAlignmentMiddle extends PageBlockVerticalAlignment {

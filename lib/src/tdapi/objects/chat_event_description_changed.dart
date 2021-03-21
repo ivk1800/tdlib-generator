@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The chat description was changed
 class ChatEventDescriptionChanged extends ChatEventAction {

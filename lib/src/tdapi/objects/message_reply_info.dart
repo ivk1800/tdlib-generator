@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains information about replies to a message
 class MessageReplyInfo extends TdObject {

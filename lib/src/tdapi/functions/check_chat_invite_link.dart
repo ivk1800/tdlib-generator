@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Checks the validity of an invite link for a chat and returns information
 /// the corresponding chat

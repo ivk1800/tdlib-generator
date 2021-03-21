@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Changes imported contacts using the list of contacts saved on the device.
 /// newly added contacts and, if at least the file database is enabled,

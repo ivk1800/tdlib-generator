@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A new incoming callback query; for bots only
 class UpdateNewCallbackQuery extends Update {

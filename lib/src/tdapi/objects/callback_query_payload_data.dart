@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The payload for a general callback button
 class CallbackQueryPayloadData extends CallbackQueryPayload {

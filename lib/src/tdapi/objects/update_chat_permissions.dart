@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Chat permissions was changed
 class UpdateChatPermissions extends Update {

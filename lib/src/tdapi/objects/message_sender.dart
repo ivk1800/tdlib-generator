@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains information about the sender of a message
 abstract class MessageSender extends TdObject {

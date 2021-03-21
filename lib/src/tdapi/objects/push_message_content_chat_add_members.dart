@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// New chat members were invited to a group
 class PushMessageContentChatAddMembers extends PushMessageContent {

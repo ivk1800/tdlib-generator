@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Clears the list of recently found chats
 class ClearRecentlyFoundChats extends TdFunction {

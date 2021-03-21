@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The user heard their own voice
 class CallProblemEcho extends CallProblem {

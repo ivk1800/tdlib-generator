@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents a link to an MP3 audio file
 class InputInlineQueryResultAudio extends InputInlineQueryResult {

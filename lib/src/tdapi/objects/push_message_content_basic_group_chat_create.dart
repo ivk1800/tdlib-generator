@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A newly created basic group
 class PushMessageContentBasicGroupChatCreate extends PushMessageContent {

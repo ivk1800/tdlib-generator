@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Currently establishing a connection with a proxy server
 class ConnectionStateConnectingToProxy extends ConnectionState {

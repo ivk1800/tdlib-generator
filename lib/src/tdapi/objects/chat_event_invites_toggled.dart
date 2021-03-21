@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The can_invite_users permission of a supergroup chat was toggled
 class ChatEventInvitesToggled extends ChatEventAction {

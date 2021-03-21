@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns full information about a basic group by its identifier
 class GetBasicGroupFullInfo extends TdFunction {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Invites a bot to a chat (if it is not yet a member) and sends it the
 /// command. Bots can't be invited to a private chat other than the chat with

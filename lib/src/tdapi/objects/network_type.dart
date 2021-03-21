@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents the type of a network
 abstract class NetworkType extends TdObject {

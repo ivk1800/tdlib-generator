@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns application config, provided by the server. Can be called before
 class GetApplicationConfig extends TdFunction {

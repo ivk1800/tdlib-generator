@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Loads more group call participants. The loaded participants will be
 /// through updates. Use the field groupCall.loaded_all_participants to check

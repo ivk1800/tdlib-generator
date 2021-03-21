@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Changes the location of a chat. Available only for some location-based
 /// use supergroupFullInfo.can_set_location to check whether the method is

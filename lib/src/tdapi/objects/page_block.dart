@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Describes a block of an instant view web page
 abstract class PageBlock extends TdObject {

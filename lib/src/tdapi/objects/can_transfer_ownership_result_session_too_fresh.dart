@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The session was created recently, user needs to wait
 class CanTransferOwnershipResultSessionTooFresh

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns information about a language pack. Returned language pack
 /// may be different from a provided one. Can be called before authorization

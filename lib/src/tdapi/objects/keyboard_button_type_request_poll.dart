@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A button that allows the user to create and send a poll when pressed;
 /// only in private chats

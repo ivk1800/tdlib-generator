@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The message was originally sent by an anonymous chat administrator on
 /// of the chat

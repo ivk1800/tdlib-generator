@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents the current state of 2-step verification
 class PasswordState extends TdObject {

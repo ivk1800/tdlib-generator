@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Checks phone number confirmation code
 class CheckPhoneNumberConfirmationCode extends TdFunction {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The position of a chat in a chat list has changed. Instead of this update
 /// or updateChatDraftMessage might be sent

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The user is unregistered and need to accept terms of service and enter
 /// first name and last name to finish registration

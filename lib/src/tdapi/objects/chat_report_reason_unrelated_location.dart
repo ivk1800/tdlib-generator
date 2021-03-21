@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The location-based chat is unrelated to its stated location
 class ChatReportReasonUnrelatedLocation extends ChatReportReason {

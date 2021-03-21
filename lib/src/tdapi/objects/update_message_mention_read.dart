@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A message with an unread mention was read
 class UpdateMessageMentionRead extends Update {

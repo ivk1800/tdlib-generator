@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// An underlined text
 class TextEntityTypeUnderline extends TextEntityType {

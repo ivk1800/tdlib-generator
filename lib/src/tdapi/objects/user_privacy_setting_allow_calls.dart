@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A privacy setting for managing whether the user can be called
 class UserPrivacySettingAllowCalls extends UserPrivacySetting {

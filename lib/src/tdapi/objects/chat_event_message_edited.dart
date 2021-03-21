@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A message was edited
 class ChatEventMessageEdited extends ChatEventAction {

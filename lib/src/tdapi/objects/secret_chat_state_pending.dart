@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The secret chat is not yet created; waiting for the other user to get
 class SecretChatStatePending extends SecretChatState {

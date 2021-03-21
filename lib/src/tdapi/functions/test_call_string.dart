@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns the received string; for testing only. This is an offline method.
 /// be called before authorization

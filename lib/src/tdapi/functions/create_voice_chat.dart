@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Creates a voice chat (a group call bound to a chat). Available only for
 /// groups and supergroups; requires can_manage_voice_chats rights

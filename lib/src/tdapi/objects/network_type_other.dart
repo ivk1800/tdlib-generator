@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A different network type (e.g., Ethernet network)
 class NetworkTypeOther extends NetworkType {

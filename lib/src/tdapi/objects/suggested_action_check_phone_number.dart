@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Suggests the user to check authorization phone number and change the phone
 /// if it is inaccessible

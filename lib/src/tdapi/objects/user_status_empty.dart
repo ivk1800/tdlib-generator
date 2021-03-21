@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The user status was never changed
 class UserStatusEmpty extends UserStatus {

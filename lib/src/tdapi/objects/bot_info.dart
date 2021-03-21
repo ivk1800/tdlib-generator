@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Provides information about a bot and its supported commands
 class BotInfo extends TdObject {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Sends call signaling data
 class SendCallSignalingData extends TdFunction {

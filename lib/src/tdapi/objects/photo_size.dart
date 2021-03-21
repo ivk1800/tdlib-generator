@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Describes an image in JPEG format
 class PhotoSize extends TdObject {

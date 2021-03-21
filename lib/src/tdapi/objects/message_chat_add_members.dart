@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// New chat members were added
 class MessageChatAddMembers extends MessageContent {

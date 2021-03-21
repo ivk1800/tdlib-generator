@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The call was ended during the conversation because the users were
 class CallDiscardReasonDisconnected extends CallDiscardReason {

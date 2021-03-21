@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Deletes the account of the current user, deleting all information
 /// with the user from the server. The phone number of the account can be used

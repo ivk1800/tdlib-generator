@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A new chat has been loaded/created. This update is guaranteed to come
 /// the chat identifier is returned to the application. The chat field changes

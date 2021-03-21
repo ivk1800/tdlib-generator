@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns only photo and video messages
 class SearchMessagesFilterPhotoAndVideo extends SearchMessagesFilter {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Notification settings for some type of chats were updated
 class UpdateScopeNotificationSettings extends Update {

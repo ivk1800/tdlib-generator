@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Handles a push notification. Returns error with code 406 if the push
 /// is not supported and connection to the server is required to fetch new

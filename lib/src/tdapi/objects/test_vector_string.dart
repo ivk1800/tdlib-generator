@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A simple object containing a vector of strings; for testing only
 class TestVectorString extends TdObject {

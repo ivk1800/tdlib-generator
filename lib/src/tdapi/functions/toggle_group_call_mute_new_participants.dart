@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Toggles whether new participants of a group call can be unmuted only by
 /// of the group call. Requires can_manage_voice_chats rights in the

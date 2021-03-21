@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Some privacy setting rules have been changed
 class UpdateUserPrivacySettingRules extends Update {

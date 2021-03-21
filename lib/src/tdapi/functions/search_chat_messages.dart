@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Searches for messages with given words in the chat. Returns the results in
 /// chronological order, i.e. in order of decreasing message_id. Cannot be

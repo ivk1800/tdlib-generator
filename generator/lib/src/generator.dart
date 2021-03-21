@@ -15,121 +15,41 @@ class Generator {
   final Directory functionsDir = Directory("$tdApiDir/functions");
   final Directory objectsDir = Directory("$tdApiDir/objects");
 
-  void generate(List<Class> classes) {
+  final List<Class> classes;
+
+  Generator(this.classes);
+
+  void generate() {
     if (functionsDir.existsSync()) functionsDir.deleteSync(recursive: true);
     functionsDir.createSync(recursive: true);
 
     if (objectsDir.existsSync()) objectsDir.deleteSync(recursive: true);
     objectsDir.createSync(recursive: true);
 
-    final cb.DartEmitter emitter = cb.DartEmitter();
+    for (Class c in classes) {
+      final cb.DartEmitter emitter = cb.DartEmitter();
+      final cb.LibraryBuilder target = cb.LibraryBuilder();
 
-    for (Class value in classes) {
-      final generatedClass = cb.Class((b) {
-        b
-          ..docs.add("part of '../tdapi.dart';")
-          ..docs.addAll(value.description.resolveDoc())
-          ..name = value.name
-          ..extend = cb.refer(value.parent);
-        b.abstract = value.group == Group.Classes;
+      target.body.add(_createClass(c));
 
-        b.constructors.add(cb.Constructor((constructorBuilder) {
-          constructorBuilder.constant =
-              value.variables.isEmpty && value.group != Group.Functions;
-          constructorBuilder.optionalParameters
-              .addAll(value.variables.map((Variable v) {
-            return cb.Parameter((parameterBuilder) {
-              parameterBuilder.required = !v.isNullable;
-              parameterBuilder.named = true;
-              parameterBuilder.name = v.name.toVariableName();
-              parameterBuilder.toThis = true;
-
-              if (v.isNullable) {
-                parameterBuilder.type =
-                    cb.Reference('${v.type} ${v.isNullable ? '?' : ''}');
-              }
-            });
-          }));
-        }));
-
-        if (value.group != Group.Functions) {
-          b.methods.add(_createFromJsonStaticMethod(value, classes));
-        }
-
-        b.fields.addAll(value.variables.map((Variable v) {
-          return cb.Field((fieldBuilder) {
-            fieldBuilder.name = v.name.toVariableName();
-            fieldBuilder.type =
-                cb.Reference('${v.type} ${v.isNullable ? '?' : ''}');
-            fieldBuilder.modifier = cb.FieldModifier.final$;
-            fieldBuilder.docs.addAll(v.resolveFieldDoc());
-          });
-        }));
-
-        if (value.group == Group.Functions) {
-          b.fields.add(cb.Field((fieldBuilder) {
-            fieldBuilder.name = 'extra';
-            fieldBuilder.docs.add('/// callback sign');
-            fieldBuilder.type = cb.Reference('dynamic');
-          }));
-        }
-
-        b.fields.add(cb.Field((fieldBuilder) {
-          fieldBuilder.static = true;
-          fieldBuilder.modifier = cb.FieldModifier.constant;
-          fieldBuilder.name = 'CONSTRUCTOR';
-          fieldBuilder.type = cb.Reference('String');
-          fieldBuilder.assignment = cb.Code("'${value.constructor}'");
-        }));
-
-        b.methods.add(cb.Method((methodBuilder) {
-          methodBuilder.name = 'getConstructor';
-          methodBuilder.returns = cb.Reference('String');
-          methodBuilder.lambda = true;
-          methodBuilder.annotations.add(cb.Reference('override'));
-          methodBuilder.body = cb.Code('CONSTRUCTOR');
-        }));
-
-        if (value.group != Group.Classes) {
-          b.methods.add(cb.Method((methodBuilder) {
-            methodBuilder.name = 'toJson';
-            methodBuilder.returns = cb.TypeReference((b) => b
-              ..symbol = 'Map'
-              ..types.addAll([cb.refer("String"), cb.refer("dynamic")]));
-            methodBuilder.lambda = true;
-            methodBuilder.annotations.add(cb.Reference('override'));
-
-            final Map<String, dynamic> values = Map.fromEntries(value.variables
-                .map((e) => MapEntry(
-                    e.name, cb.refer('this.${e.name.toVariableName()}'))));
-            methodBuilder.body = cb.ToCodeExpression(
-                cb.literalMap(values..["@type"] = cb.refer('CONSTRUCTOR')));
-
-            if (value.group == Group.Functions) {
-              values['@extra'] = cb.refer('this.extra');
-            }
-          }));
-        }
-      });
-
-      final file = File('${getPathOf(value)}/${snakeCase(value.name)}.dart');
+      final file = File('${getPathOf(c)}/${snakeCase(c.name)}.dart');
       file.create();
       file.writeAsString(
-          DartFormatter().format('${generatedClass.accept(emitter)}'),
+          DartFormatter().format('${target.build().accept(emitter)}'),
           mode: FileMode.write);
     }
 
     List<String> c = <String>[
-      "import 'dart:convert' show json;",
-      "part 'function.dart';",
-      "part 'object.dart';",
-      "part 'convertor.dart';",
-      "part 'copy_extensions.dart';"
+      "export 'function.dart';",
+      "export 'object.dart';",
+      "export 'convertor.dart';",
+      "export 'copy_extensions.dart';",
+      "import 'package:tdlib/td_api.dart';"
     ];
 
     for (Class value in classes) {
       c.add(
-          'part \'${getGroupPath(value.group)}/${snakeCase(value.name)}.dart\';');
+          'export \'${getGroupPath(value.group)}/${snakeCase(value.name)}.dart\';');
     }
     c.add('');
     c.add(
@@ -156,7 +76,7 @@ class Generator {
 
     copyExtensionsFile.create();
 
-    final List<String> extenisonsLines = <String>["part of 'tdapi.dart';"];
+    final List<String> extenisonsLines = <String>["import 'tdapi.dart';"];
 
     for (Class value in classes) {
       if (value.variables.isEmpty) {
@@ -189,11 +109,100 @@ class Generator {
         }));
       });
       extenisonsLines
-          .add(DartFormatter().format('${extension.accept(emitter)}'));
+          .add(DartFormatter().format('${extension.accept(cb.DartEmitter())}'));
     }
 
     copyExtensionsFile.writeAsString(extenisonsLines.join('\n'),
         mode: FileMode.write);
+  }
+
+  cb.Class _createClass(Class c) {
+    return cb.Class((b) {
+      b
+        ..docs.add("import '../tdapi.dart';")
+        ..docs.addAll(c.description.resolveDoc())
+        ..name = c.name
+        ..extend = cb.refer(c.parent);
+      b.abstract = c.group == Group.Classes;
+
+      b.constructors.add(cb.Constructor((constructorBuilder) {
+        constructorBuilder.constant =
+            c.variables.isEmpty && c.group != Group.Functions;
+        constructorBuilder.optionalParameters
+            .addAll(c.variables.map((Variable v) {
+          return cb.Parameter((parameterBuilder) {
+            parameterBuilder.required = !v.isNullable;
+            parameterBuilder.named = true;
+            parameterBuilder.name = v.name.toVariableName();
+            parameterBuilder.toThis = true;
+
+            if (v.isNullable) {
+              parameterBuilder.type =
+                  cb.Reference('${v.type} ${v.isNullable ? '?' : ''}');
+            }
+          });
+        }));
+      }));
+
+      if (c.group != Group.Functions) {
+        b.methods.add(_createFromJsonStaticMethod(c, classes));
+      }
+
+      b.fields.addAll(c.variables.map((Variable v) {
+        return cb.Field((fieldBuilder) {
+          fieldBuilder.name = v.name.toVariableName();
+          fieldBuilder.type =
+              cb.Reference('${v.type} ${v.isNullable ? '?' : ''}');
+          fieldBuilder.modifier = cb.FieldModifier.final$;
+          fieldBuilder.docs.addAll(v.resolveFieldDoc());
+        });
+      }));
+
+      if (c.group == Group.Functions) {
+        b.fields.add(cb.Field((fieldBuilder) {
+          fieldBuilder.name = 'extra';
+          fieldBuilder.docs.add('/// callback sign');
+          fieldBuilder.type = cb.Reference('dynamic');
+        }));
+      }
+
+      b.fields.add(cb.Field((fieldBuilder) {
+        fieldBuilder.static = true;
+        fieldBuilder.modifier = cb.FieldModifier.constant;
+        fieldBuilder.name = 'CONSTRUCTOR';
+        fieldBuilder.type = cb.Reference('String');
+        fieldBuilder.assignment = cb.Code("'${c.constructor}'");
+      }));
+
+      b.methods.add(cb.Method((methodBuilder) {
+        methodBuilder.name = 'getConstructor';
+        methodBuilder.returns = cb.Reference('String');
+        methodBuilder.lambda = true;
+        methodBuilder.annotations.add(cb.Reference('override'));
+        methodBuilder.body = cb.Code('CONSTRUCTOR');
+      }));
+
+      if (c.group != Group.Classes) {
+        b.methods.add(cb.Method((methodBuilder) {
+          methodBuilder.name = 'toJson';
+          methodBuilder.returns = cb.TypeReference((b) => b
+            ..symbol = 'Map'
+            ..types.addAll([cb.refer("String"), cb.refer("dynamic")]));
+          methodBuilder.lambda = true;
+          methodBuilder.annotations.add(cb.Reference('override'));
+
+          final Map<String, dynamic> values = Map.fromEntries(c.variables.map(
+              (e) => MapEntry(
+                  e.name, cb.refer('this.${e.name.toVariableName()}'))));
+          methodBuilder.body = cb.ToCodeExpression(
+              cb.literalMap(values..["@type"] = cb.refer('CONSTRUCTOR')));
+
+          if (c.group == Group.Functions) {
+            values['@extra'] = cb.refer('this.extra');
+          }
+        }));
+      }
+    });
   }
 
   cb.Method _createFromJsonStaticMethod(Class value, List<Class> classes) {

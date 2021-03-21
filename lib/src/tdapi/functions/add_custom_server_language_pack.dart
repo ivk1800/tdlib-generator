@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Adds a custom server language pack to the list of installed language packs
 /// current localization target. Can be called before authorization

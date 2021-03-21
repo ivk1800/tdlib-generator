@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A message with an invoice; can be used only by bots and only in private
 class InputMessageInvoice extends InputMessageContent {

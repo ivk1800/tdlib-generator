@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns all found messages, no filter is applied
 class SearchMessagesFilterEmpty extends SearchMessagesFilter {

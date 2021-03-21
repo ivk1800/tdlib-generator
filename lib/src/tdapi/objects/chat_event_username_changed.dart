@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The chat username was changed
 class ChatEventUsernameChanged extends ChatEventAction {

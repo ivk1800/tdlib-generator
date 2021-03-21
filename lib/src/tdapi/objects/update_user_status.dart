@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The user went online or offline
 class UpdateUserStatus extends Update {

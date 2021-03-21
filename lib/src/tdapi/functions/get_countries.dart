@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns information about existing countries. Can be called before
 class GetCountries extends TdFunction {

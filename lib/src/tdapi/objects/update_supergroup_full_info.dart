@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Some data from supergroupFullInfo has been changed
 class UpdateSupergroupFullInfo extends Update {

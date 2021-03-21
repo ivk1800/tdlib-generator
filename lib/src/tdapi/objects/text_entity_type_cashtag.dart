@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A cashtag text, beginning with "$" and consisting of capital english
 /// (i.e. "$USD")

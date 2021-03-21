@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Informs the server that some trending sticker sets have been viewed by the
 class ViewTrendingStickerSets extends TdFunction {

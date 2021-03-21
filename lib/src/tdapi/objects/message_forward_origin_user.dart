@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The message was originally sent by a known user
 class MessageForwardOriginUser extends MessageForwardOrigin {

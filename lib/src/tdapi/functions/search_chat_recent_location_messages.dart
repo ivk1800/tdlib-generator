@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns information about the recent locations of chat members that were
 /// to the chat. Returns up to 1 location message per user

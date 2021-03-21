@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains encrypted Telegram Passport data credentials
 class EncryptedCredentials extends TdObject {

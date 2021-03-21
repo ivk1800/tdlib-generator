@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Changes the username of a supergroup or channel, requires owner privileges
 /// the supergroup or channel

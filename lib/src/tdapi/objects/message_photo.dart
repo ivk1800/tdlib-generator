@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A photo message
 class MessagePhoto extends MessageContent {

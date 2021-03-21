@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains information about saved card credentials
 class SavedCredentials extends TdObject {

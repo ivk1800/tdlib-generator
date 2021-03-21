@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Recovers the password using a recovery code sent to an email address that
 /// previously set up

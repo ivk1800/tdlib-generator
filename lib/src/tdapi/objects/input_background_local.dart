@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A background from a local file
 class InputBackgroundLocal extends InputBackground {

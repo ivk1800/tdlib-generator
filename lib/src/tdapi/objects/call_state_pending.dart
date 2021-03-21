@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The call is pending, waiting to be accepted by a user
 class CallStatePending extends CallState {

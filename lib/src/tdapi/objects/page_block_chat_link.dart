@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A link to a chat
 class PageBlockChatLink extends PageBlock {

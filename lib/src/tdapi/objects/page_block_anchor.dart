@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// An invisible anchor on a page, which can be used in a URL to open the page
 /// the specified anchor

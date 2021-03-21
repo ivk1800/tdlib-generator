@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Sets new log stream for internal logging of TDLib. Can be called
 class SetLogStream extends TdFunction {

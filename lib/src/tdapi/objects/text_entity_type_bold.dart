@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A bold text
 class TextEntityTypeBold extends TextEntityType {

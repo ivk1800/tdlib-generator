@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The call was ended before the conversation started. It was declined by the
 /// party

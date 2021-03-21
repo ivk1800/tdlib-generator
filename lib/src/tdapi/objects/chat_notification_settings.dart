@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains information about notification settings for a chat
 class ChatNotificationSettings extends TdObject {

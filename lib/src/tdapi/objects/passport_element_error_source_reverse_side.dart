@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The reverse side of the document contains an error. The error will be
 /// resolved when the file with the reverse side changes

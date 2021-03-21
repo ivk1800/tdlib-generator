@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Changes the draft message in a chat
 class SetChatDraftMessage extends TdFunction {

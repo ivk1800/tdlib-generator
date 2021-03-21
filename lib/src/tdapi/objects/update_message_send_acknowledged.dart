@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A request to send a message has reached the Telegram server. This doesn't
 /// that the message will be sent successfully or even that the send message

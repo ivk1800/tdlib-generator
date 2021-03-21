@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Describes a payload for interaction with tgcalls
 class GroupCallPayload extends TdObject {

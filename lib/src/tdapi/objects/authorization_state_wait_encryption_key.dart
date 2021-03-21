@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// TDLib needs an encryption key to decrypt the local database
 class AuthorizationStateWaitEncryptionKey extends AuthorizationState {

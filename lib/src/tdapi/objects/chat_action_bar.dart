@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Describes actions which should be possible to do through a chat action bar
 abstract class ChatActionBar extends TdObject {

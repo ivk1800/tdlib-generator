@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns users banned from the chat; can be used only by administrators in
 /// supergroup or in a channel

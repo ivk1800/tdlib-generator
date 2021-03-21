@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents the value of an option
 abstract class OptionValue extends TdObject {

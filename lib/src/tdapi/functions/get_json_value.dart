@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Converts a JSON-serialized string to corresponding JsonValue object. Can
 /// called synchronously

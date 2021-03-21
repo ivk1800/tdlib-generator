@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Edits the content of a message with an animation, an audio, a document, a
 /// or a video in an inline message sent via a bot; for bots only

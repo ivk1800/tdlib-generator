@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A message has been pinned
 class MessagePinMessage extends MessageContent {

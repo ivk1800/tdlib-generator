@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns the current state of 2-step verification
 class GetPasswordState extends TdFunction {

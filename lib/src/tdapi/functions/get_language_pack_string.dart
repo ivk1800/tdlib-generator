@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns a string stored in the local database from the specified
 /// target and language pack by its key. Returns a 404 error if the string is

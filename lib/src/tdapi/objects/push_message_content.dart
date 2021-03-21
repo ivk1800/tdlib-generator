@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains content of a push message notification
 abstract class PushMessageContent extends TdObject {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents a boolean JSON value
 class JsonValueBoolean extends JsonValue {

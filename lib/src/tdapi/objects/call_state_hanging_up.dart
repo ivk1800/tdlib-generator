@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The call is hanging up after discardCall has been called
 class CallStateHangingUp extends CallState {

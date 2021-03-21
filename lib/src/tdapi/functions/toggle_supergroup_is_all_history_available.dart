@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Toggles whether the message history of a supergroup is available to new
 /// requires can_change_info rights

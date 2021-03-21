@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Describes a video note. The video must be equal in width and height,
 /// to a circle, and stored in MPEG4 format

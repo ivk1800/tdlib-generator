@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A marked rich text
 class RichTextMarked extends RichText {

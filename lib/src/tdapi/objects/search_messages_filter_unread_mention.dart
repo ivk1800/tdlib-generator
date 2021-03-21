@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns only messages with unread mentions of the current user, or
 /// that are replies to their messages. When using this filter the results

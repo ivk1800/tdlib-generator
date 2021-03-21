@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Deletes a profile photo
 class DeleteProfilePhoto extends TdFunction {

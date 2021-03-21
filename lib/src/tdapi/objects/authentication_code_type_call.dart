@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// An authentication code is delivered via a phone call to the specified
 /// number

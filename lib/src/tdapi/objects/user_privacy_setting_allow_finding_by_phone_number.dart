@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A privacy setting for managing whether the user can be found by their
 /// number. Checked only if the phone number is not known to the other user.

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The call ended unexpectedly
 class CallProblemDropped extends CallProblem {

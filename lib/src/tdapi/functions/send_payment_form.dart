@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Sends a filled-out payment form to the bot for final verification
 class SendPaymentForm extends TdFunction {

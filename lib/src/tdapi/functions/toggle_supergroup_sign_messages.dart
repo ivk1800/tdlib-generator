@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Toggles sender signatures messages sent in a channel; requires
 /// rights

@@ -1,4 +1,4 @@
-part of 'tdapi.dart';
+import 'tdapi.dart';
 extension TdErrorCopyExtension on TdError {
   TdError copy({int? code, String? message}) =>
       TdError(code: code ?? this.code, message: message ?? this.message);

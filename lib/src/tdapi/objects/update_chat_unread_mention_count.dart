@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The chat unread_mention_count has changed
 class UpdateChatUnreadMentionCount extends Update {

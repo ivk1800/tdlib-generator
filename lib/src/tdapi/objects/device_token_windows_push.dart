@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A token for Windows Push Notification Services
 class DeviceTokenWindowsPush extends DeviceToken {

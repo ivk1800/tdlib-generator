@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A main list of chats
 class ChatListMain extends ChatList {

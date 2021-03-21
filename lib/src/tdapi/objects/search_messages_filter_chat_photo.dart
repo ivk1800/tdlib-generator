@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns only messages containing chat photos
 class SearchMessagesFilterChatPhoto extends SearchMessagesFilter {

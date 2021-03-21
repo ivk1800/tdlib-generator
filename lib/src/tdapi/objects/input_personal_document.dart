@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A personal document to be saved to Telegram Passport
 class InputPersonalDocument extends TdObject {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A privacy setting for managing whether the user's profile photo is visible
 class UserPrivacySettingShowProfilePhoto extends UserPrivacySetting {

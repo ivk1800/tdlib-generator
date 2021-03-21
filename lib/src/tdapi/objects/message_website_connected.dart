@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The current user has connected a website by logging in using Telegram
 /// Widget on it

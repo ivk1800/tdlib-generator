@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Edits existing chat filter. Returns information about the edited chat
 class EditChatFilter extends TdFunction {

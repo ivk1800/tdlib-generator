@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Checks whether a username can be set for a chat
 class CheckChatUsername extends TdFunction {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Removes potentially dangerous characters from the name of a file. The
 /// of the file name is supposed to be UTF-8. Returns an empty string on

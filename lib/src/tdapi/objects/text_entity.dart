@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents a part of the text that needs to be formatted in some unusual
 class TextEntity extends TdObject {

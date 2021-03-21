@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A group containing a notification of type notificationTypeNewSecretChat
 class NotificationGroupTypeSecretChat extends NotificationGroupType {

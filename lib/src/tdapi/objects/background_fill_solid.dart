@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Describes a solid fill of a background
 class BackgroundFillSolid extends BackgroundFill {

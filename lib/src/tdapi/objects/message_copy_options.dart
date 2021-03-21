@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Options to be used when a message content is copied without a link to the
 /// message

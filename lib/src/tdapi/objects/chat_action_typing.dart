@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The user is typing a message
 class ChatActionTyping extends ChatAction {

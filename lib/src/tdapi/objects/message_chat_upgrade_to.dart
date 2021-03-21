@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A basic group was upgraded to a supergroup and was deactivated as the
 class MessageChatUpgradeTo extends MessageContent {

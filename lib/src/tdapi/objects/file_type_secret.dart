@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The file was sent to a secret chat (the file type is not known to the
 class FileTypeSecret extends FileType {

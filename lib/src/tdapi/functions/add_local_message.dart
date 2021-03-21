@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Adds a local message to a chat. The message is persistent across
 /// restarts only if the message database is used. Returns the added message

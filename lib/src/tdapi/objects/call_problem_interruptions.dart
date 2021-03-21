@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The other side kept disappearing
 class CallProblemInterruptions extends CallProblem {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Changes the background selected by the user; adds background to the list
 /// installed backgrounds

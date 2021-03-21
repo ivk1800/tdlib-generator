@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A bank card number. The getBankCardInfo method can be used to get
 /// about the bank card

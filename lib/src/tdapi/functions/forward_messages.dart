@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Forwards previously sent messages. Returns the forwarded messages in the
 /// order as the message identifiers passed in message_ids. If a message can't

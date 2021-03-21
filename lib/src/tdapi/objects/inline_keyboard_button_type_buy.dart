@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A button to buy something. This button must be in the first column and row
 /// the keyboard and can be attached only to a message with content of the

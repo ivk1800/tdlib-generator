@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns information about a file with a map thumbnail in PNG format. Only
 /// thumbnail files with size less than 1MB can be downloaded

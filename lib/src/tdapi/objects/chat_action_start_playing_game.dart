@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The user has started to play a game
 class ChatActionStartPlayingGame extends ChatAction {

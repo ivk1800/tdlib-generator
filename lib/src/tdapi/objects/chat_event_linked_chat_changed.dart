@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The linked chat of a supergroup was changed
 class ChatEventLinkedChatChanged extends ChatEventAction {

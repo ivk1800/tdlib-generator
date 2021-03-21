@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Deletes a supergroup or channel along with all messages in the
 /// chat. This will release the supergroup or channel username and remove all

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A general message with hidden content
 class PushMessageContentHidden extends PushMessageContent {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains detailed information about a notification
 abstract class NotificationType extends TdObject {

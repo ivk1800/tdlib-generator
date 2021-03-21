@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents a link to a WEBP or TGS sticker
 class InputInlineQueryResultSticker extends InputInlineQueryResult {

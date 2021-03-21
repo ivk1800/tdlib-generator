@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns forwarded copies of a channel message to different public
 /// For optimal performance the number of returned messages is chosen by the

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Computes time needed to receive a response from a Telegram server through
 /// proxy. Can be called before authorization

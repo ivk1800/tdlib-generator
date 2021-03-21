@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A chat was blocked or unblocked
 class UpdateChatIsBlocked extends Update {

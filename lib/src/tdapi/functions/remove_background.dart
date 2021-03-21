@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Removes background from the list of installed backgrounds
 class RemoveBackground extends TdFunction {

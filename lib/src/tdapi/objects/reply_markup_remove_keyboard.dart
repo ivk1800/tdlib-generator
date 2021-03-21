@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Instructs application to remove the keyboard once this message has been
 /// This kind of keyboard can't be received in an incoming message; instead,

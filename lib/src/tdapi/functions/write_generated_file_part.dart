@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Writes a part of a generated file. This method is intended to be used only
 /// the application has no direct access to TDLib's file system, because it is

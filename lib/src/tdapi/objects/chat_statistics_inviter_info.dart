@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains statistics about number of new members invited by a user
 class ChatStatisticsInviterInfo extends TdObject {

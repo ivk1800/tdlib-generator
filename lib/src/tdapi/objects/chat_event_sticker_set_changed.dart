@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The supergroup sticker set was changed
 class ChatEventStickerSetChanged extends ChatEventAction {

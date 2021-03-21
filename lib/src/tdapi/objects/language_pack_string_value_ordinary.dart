@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// An ordinary language pack string
 class LanguagePackStringValueOrdinary extends LanguagePackStringValue {

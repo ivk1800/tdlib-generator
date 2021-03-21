@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Describes an action suggested to the current user
 abstract class SuggestedAction extends TdObject {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The user is not a chat member
 class ChatMemberStatusLeft extends ChatMemberStatus {

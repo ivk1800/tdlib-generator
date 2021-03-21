@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents the current authorization state of the TDLib client
 abstract class AuthorizationState extends TdObject {

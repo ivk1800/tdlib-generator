@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents a link to a page containing an embedded video player or a video
 class InputInlineQueryResultVideo extends InputInlineQueryResult {

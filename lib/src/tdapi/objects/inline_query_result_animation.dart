@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents an animation file
 class InlineQueryResultAnimation extends InlineQueryResult {

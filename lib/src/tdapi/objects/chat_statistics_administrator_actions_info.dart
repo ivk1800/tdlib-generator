@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains statistics about administrator actions done by a user
 class ChatStatisticsAdministratorActionsInfo extends TdObject {

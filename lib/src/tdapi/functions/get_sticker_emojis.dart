@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns emoji corresponding to a sticker. The list is only for
 /// purposes, because a sticker is always sent with a fixed emoji from the

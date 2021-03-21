@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains database statistics
 class DatabaseStatistics extends TdObject {

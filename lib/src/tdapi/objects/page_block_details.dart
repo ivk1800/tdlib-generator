@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A collapsible block
 class PageBlockDetails extends PageBlock {

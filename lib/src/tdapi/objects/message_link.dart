@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Contains an HTTPS link to a message in a supergroup or channel
 class MessageLink extends TdObject {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Does nothing; for testing only. This is an offline method. Can be called
 /// authorization

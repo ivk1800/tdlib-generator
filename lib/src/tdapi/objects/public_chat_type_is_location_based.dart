@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// The chat is public, because it is a location-based supergroup
 class PublicChatTypeIsLocationBased extends PublicChatType {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents a user contact
 class InlineQueryResultContact extends InlineQueryResult {

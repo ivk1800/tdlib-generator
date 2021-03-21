@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Service notification from the server. Upon receiving this the application
 /// show a popup with the content of the notification

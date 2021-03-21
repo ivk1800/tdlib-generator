@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A message with a live location was viewed. When the update is received,
 /// application is supposed to update the live location

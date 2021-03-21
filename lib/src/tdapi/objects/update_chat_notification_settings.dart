@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Notification settings for a chat were changed
 class UpdateChatNotificationSettings extends Update {

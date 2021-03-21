@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Some data of a supergroup or a channel has changed. This update is
 /// to come before the supergroup identifier is returned to the application

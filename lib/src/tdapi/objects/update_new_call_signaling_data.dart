@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// New call signaling data arrived
 class UpdateNewCallSignalingData extends Update {

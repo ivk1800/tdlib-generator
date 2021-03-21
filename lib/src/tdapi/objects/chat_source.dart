@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Describes a reason why an external chat is shown in a chat list
 abstract class ChatSource extends TdObject {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// A message containing a user contact
 class InputMessageContact extends InputMessageContent {

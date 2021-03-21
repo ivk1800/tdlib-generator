@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// User activity in the chat has changed
 class UpdateUserChatAction extends Update {

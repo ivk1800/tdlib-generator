@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns all active sessions of the current user
 class GetActiveSessions extends TdFunction {

@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Searches public chats by looking for specified query in their username and
 /// Currently only private chats, supergroups and channels can be public.

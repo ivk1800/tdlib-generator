@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Describes an animation file. The animation must be encoded in GIF or MPEG4
 class Animation extends TdObject {

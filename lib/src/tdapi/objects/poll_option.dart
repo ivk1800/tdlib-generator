@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Describes one answer option of a poll
 class PollOption extends TdObject {

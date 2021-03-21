@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Changes the user answer to a poll. A poll in quiz mode can be answered
 /// once

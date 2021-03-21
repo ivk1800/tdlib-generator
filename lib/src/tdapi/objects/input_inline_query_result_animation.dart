@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Represents a link to an animated GIF or an animated (i.e. without sound)
 /// AVC video

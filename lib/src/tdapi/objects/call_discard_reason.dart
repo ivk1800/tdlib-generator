@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Describes the reason why a call was discarded
 abstract class CallDiscardReason extends TdObject {

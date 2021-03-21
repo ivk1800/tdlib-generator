@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Returns only voice and video note messages
 class SearchMessagesFilterVoiceAndVideoNote extends SearchMessagesFilter {

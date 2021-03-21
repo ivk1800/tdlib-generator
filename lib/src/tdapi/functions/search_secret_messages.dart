@@ -1,4 +1,4 @@
-part of '../tdapi.dart';
+import '../tdapi.dart';
 
 /// Searches for messages in secret chats. Returns the results in reverse
 /// order. For optimal performance the number of returned messages is chosen
