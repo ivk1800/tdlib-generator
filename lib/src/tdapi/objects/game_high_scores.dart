@@ -17,7 +17,7 @@ class GameHighScores extends TdObject {
 
     return GameHighScores(
         scores: List<GameHighScore>.from((json['scores}'] ?? [])
-            .map((item) => GameHighScore.fromJson(json['GameHighScore'])!)
+            .map((item) => GameHighScore.fromJson(item))
             .toList()));
   }
 

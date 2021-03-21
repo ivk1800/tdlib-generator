@@ -37,7 +37,7 @@ class BasicGroupFullInfo extends TdObject {
         description: json['description'],
         creatorUserId: json['creator_user_id'],
         members: List<ChatMember>.from((json['members}'] ?? [])
-            .map((item) => ChatMember.fromJson(json['ChatMember'])!)
+            .map((item) => ChatMember.fromJson(item))
             .toList()),
         inviteLink: json['invite_link']);
   }

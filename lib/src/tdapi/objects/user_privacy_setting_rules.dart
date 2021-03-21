@@ -17,8 +17,7 @@ class UserPrivacySettingRules extends TdObject {
 
     return UserPrivacySettingRules(
         rules: List<UserPrivacySettingRule>.from((json['rules}'] ?? [])
-            .map((item) => UserPrivacySettingRule.fromJson(
-                json['UserPrivacySettingRule'])!)
+            .map((item) => UserPrivacySettingRule.fromJson(item))
             .toList()));
   }
 

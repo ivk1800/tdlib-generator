@@ -98,8 +98,7 @@ class ChatStatisticsChannel extends ChatStatistics {
             List<ChatStatisticsMessageInteractionInfo>.from(
                 (json['recent_message_interactions}'] ?? [])
                     .map((item) =>
-                        ChatStatisticsMessageInteractionInfo.fromJson(
-                            json['ChatStatisticsMessageInteractionInfo'])!)
+                        ChatStatisticsMessageInteractionInfo.fromJson(item))
                     .toList()));
   }
 

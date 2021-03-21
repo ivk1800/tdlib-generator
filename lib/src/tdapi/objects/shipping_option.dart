@@ -26,7 +26,7 @@ class ShippingOption extends TdObject {
         id: json['id'],
         title: json['title'],
         priceParts: List<LabeledPricePart>.from((json['price_parts}'] ?? [])
-            .map((item) => LabeledPricePart.fromJson(json['LabeledPricePart'])!)
+            .map((item) => LabeledPricePart.fromJson(item))
             .toList()));
   }
 

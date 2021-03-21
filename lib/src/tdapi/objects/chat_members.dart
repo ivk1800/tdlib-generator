@@ -21,7 +21,7 @@ class ChatMembers extends TdObject {
     return ChatMembers(
         totalCount: json['total_count'],
         members: List<ChatMember>.from((json['members}'] ?? [])
-            .map((item) => ChatMember.fromJson(json['ChatMember'])!)
+            .map((item) => ChatMember.fromJson(item))
             .toList()));
   }
 

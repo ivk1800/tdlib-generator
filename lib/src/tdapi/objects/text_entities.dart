@@ -17,7 +17,7 @@ class TextEntities extends TdObject {
 
     return TextEntities(
         entities: List<TextEntity>.from((json['entities}'] ?? [])
-            .map((item) => TextEntity.fromJson(json['TextEntity'])!)
+            .map((item) => TextEntity.fromJson(item))
             .toList()));
   }
 

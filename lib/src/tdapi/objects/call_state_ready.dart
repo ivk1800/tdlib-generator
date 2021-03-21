@@ -39,7 +39,7 @@ class CallStateReady extends CallState {
     return CallStateReady(
         protocol: CallProtocol.fromJson(json['protocol'])!,
         servers: List<CallServer>.from((json['servers}'] ?? [])
-            .map((item) => CallServer.fromJson(json['CallServer'])!)
+            .map((item) => CallServer.fromJson(item))
             .toList()),
         config: json['config'],
         encryptionKey: json['encryption_key'],

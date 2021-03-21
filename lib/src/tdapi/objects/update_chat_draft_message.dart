@@ -28,7 +28,7 @@ class UpdateChatDraftMessage extends Update {
         chatId: json['chat_id'],
         draftMessage: DraftMessage.fromJson(json['draft_message']),
         positions: List<ChatPosition>.from((json['positions}'] ?? [])
-            .map((item) => ChatPosition.fromJson(json['ChatPosition'])!)
+            .map((item) => ChatPosition.fromJson(item))
             .toList()));
   }
 

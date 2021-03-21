@@ -21,8 +21,7 @@ class MessagePassportDataReceived extends MessageContent {
 
     return MessagePassportDataReceived(
         elements: List<EncryptedPassportElement>.from((json['elements}'] ?? [])
-            .map((item) => EncryptedPassportElement.fromJson(
-                json['EncryptedPassportElement'])!)
+            .map((item) => EncryptedPassportElement.fromJson(item))
             .toList()),
         credentials: EncryptedCredentials.fromJson(json['credentials'])!);
   }

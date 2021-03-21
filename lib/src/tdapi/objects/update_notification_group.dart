@@ -53,7 +53,7 @@ class UpdateNotificationGroup extends Update {
         totalCount: json['total_count'],
         addedNotifications: List<Notification>.from(
             (json['added_notifications}'] ?? [])
-                .map((item) => Notification.fromJson(json['Notification'])!)
+                .map((item) => Notification.fromJson(item))
                 .toList()),
         removedNotificationIds: List<int>.from(
             (json['removed_notification_ids}'] ?? [])

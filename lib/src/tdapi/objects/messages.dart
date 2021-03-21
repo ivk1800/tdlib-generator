@@ -21,7 +21,7 @@ class Messages extends TdObject {
     return Messages(
         totalCount: json['total_count'],
         messages: List<Message>.from((json['messages}'] ?? [])
-            .map((item) => Message.fromJson(json['Message'])!)
+            .map((item) => Message.fromJson(item))
             .toList()));
   }
 

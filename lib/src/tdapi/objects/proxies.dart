@@ -17,7 +17,7 @@ class Proxies extends TdObject {
 
     return Proxies(
         proxies: List<Proxy>.from((json['proxies}'] ?? [])
-            .map((item) => Proxy.fromJson(json['Proxy'])!)
+            .map((item) => Proxy.fromJson(item))
             .toList()));
   }
 

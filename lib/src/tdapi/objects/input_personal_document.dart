@@ -20,10 +20,10 @@ class InputPersonalDocument extends TdObject {
 
     return InputPersonalDocument(
         files: List<InputFile>.from((json['files}'] ?? [])
-            .map((item) => InputFile.fromJson(json['InputFile'])!)
+            .map((item) => InputFile.fromJson(item))
             .toList()),
         translation: List<InputFile>.from((json['translation}'] ?? [])
-            .map((item) => InputFile.fromJson(json['InputFile'])!)
+            .map((item) => InputFile.fromJson(item))
             .toList()));
   }
 

@@ -17,7 +17,7 @@ class UpdateUsersNearby extends Update {
 
     return UpdateUsersNearby(
         usersNearby: List<ChatNearby>.from((json['users_nearby}'] ?? [])
-            .map((item) => ChatNearby.fromJson(json['ChatNearby'])!)
+            .map((item) => ChatNearby.fromJson(item))
             .toList()));
   }
 

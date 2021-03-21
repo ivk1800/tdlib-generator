@@ -258,7 +258,7 @@ class Generator {
     });
   }
 
-  String _createInitializer(Variable variable) {
+  String _createInitializer(Variable variable, [String? overrideJsonKey = null]) {
     if (variable.type.isDartType) {
       if (variable.type.rawType == "int64") {
         return "int.tryParse(json['${variable.name}']) ?? 0";
@@ -280,9 +280,12 @@ class Generator {
         "List<${genericType}>.from((json['${variable.name}}'] ?? []).map((item) => "
       ];
 
-      list.add(_createInitializer(genericVariable));
+      list.add(_createInitializer(genericVariable, 'item'));
       list.add(").toList())");
       return list.join();
+    }
+    if (overrideJsonKey != null) {
+      return "${variable.type}.fromJson($overrideJsonKey)";
     }
     return "${variable.type}.fromJson(json['${variable.name}'])${!variable.isNullable ? '!' : ''}";
   }

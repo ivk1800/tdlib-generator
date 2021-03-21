@@ -21,7 +21,7 @@ class BotInfo extends TdObject {
     return BotInfo(
         description: json['description'],
         commands: List<BotCommand>.from((json['commands}'] ?? [])
-            .map((item) => BotCommand.fromJson(json['BotCommand'])!)
+            .map((item) => BotCommand.fromJson(item))
             .toList()));
   }
 

@@ -36,7 +36,7 @@ class MessageReplyInfo extends TdObject {
         replyCount: json['reply_count'],
         recentRepliers: List<MessageSender>.from(
             (json['recent_repliers}'] ?? [])
-                .map((item) => MessageSender.fromJson(json['MessageSender'])!)
+                .map((item) => MessageSender.fromJson(item))
                 .toList()),
         lastReadInboxMessageId: json['last_read_inbox_message_id'],
         lastReadOutboxMessageId: json['last_read_outbox_message_id'],

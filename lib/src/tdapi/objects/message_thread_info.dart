@@ -37,7 +37,7 @@ class MessageThreadInfo extends TdObject {
         messageThreadId: json['message_thread_id'],
         replyInfo: MessageReplyInfo.fromJson(json['reply_info'])!,
         messages: List<Message>.from((json['messages}'] ?? [])
-            .map((item) => Message.fromJson(json['Message'])!)
+            .map((item) => Message.fromJson(item))
             .toList()),
         draftMessage: DraftMessage.fromJson(json['draft_message']));
   }

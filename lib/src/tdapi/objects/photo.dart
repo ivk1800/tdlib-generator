@@ -28,7 +28,7 @@ class Photo extends TdObject {
         hasStickers: json['has_stickers'],
         minithumbnail: Minithumbnail.fromJson(json['minithumbnail']),
         sizes: List<PhotoSize>.from((json['sizes}'] ?? [])
-            .map((item) => PhotoSize.fromJson(json['PhotoSize'])!)
+            .map((item) => PhotoSize.fromJson(item))
             .toList()));
   }
 

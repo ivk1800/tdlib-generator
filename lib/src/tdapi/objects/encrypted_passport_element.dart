@@ -55,10 +55,10 @@ class EncryptedPassportElement extends TdObject {
         reverseSide: DatedFile.fromJson(json['reverse_side']),
         selfie: DatedFile.fromJson(json['selfie']),
         translation: List<DatedFile>.from((json['translation}'] ?? [])
-            .map((item) => DatedFile.fromJson(json['DatedFile'])!)
+            .map((item) => DatedFile.fromJson(item))
             .toList()),
         files: List<DatedFile>.from((json['files}'] ?? [])
-            .map((item) => DatedFile.fromJson(json['DatedFile'])!)
+            .map((item) => DatedFile.fromJson(item))
             .toList()),
         value: json['value'],
         hash: json['hash']);

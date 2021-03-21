@@ -17,7 +17,7 @@ class TestVectorIntObject extends TdObject {
 
     return TestVectorIntObject(
         value: List<TestInt>.from((json['value}'] ?? [])
-            .map((item) => TestInt.fromJson(json['TestInt'])!)
+            .map((item) => TestInt.fromJson(item))
             .toList()));
   }
 

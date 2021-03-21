@@ -120,7 +120,7 @@ class Chat extends TdObject {
         permissions: ChatPermissions.fromJson(json['permissions'])!,
         lastMessage: Message.fromJson(json['last_message']),
         positions: List<ChatPosition>.from((json['positions}'] ?? [])
-            .map((item) => ChatPosition.fromJson(json['ChatPosition'])!)
+            .map((item) => ChatPosition.fromJson(item))
             .toList()),
         isMarkedAsUnread: json['is_marked_as_unread'],
         isBlocked: json['is_blocked'],

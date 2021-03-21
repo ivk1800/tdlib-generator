@@ -56,7 +56,7 @@ class Poll extends TdObject {
         id: int.tryParse(json['id']) ?? 0,
         question: json['question'],
         options: List<PollOption>.from((json['options}'] ?? [])
-            .map((item) => PollOption.fromJson(json['PollOption'])!)
+            .map((item) => PollOption.fromJson(item))
             .toList()),
         totalVoterCount: json['total_voter_count'],
         recentVoterUserIds: List<int>.from(

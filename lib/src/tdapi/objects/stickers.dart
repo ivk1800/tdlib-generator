@@ -17,7 +17,7 @@ class Stickers extends TdObject {
 
     return Stickers(
         stickers: List<Sticker>.from((json['stickers}'] ?? [])
-            .map((item) => Sticker.fromJson(json['Sticker'])!)
+            .map((item) => Sticker.fromJson(item))
             .toList()));
   }
 

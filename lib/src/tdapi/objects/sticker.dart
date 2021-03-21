@@ -61,7 +61,7 @@ class Sticker extends TdObject {
         isMask: json['is_mask'],
         maskPosition: MaskPosition.fromJson(json['mask_position']),
         outline: List<ClosedVectorPath>.from((json['outline}'] ?? [])
-            .map((item) => ClosedVectorPath.fromJson(json['ClosedVectorPath'])!)
+            .map((item) => ClosedVectorPath.fromJson(item))
             .toList()),
         thumbnail: Thumbnail.fromJson(json['thumbnail']),
         sticker: File.fromJson(json['sticker'])!);

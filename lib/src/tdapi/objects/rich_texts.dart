@@ -17,7 +17,7 @@ class RichTexts extends RichText {
 
     return RichTexts(
         texts: List<RichText>.from((json['texts}'] ?? [])
-            .map((item) => RichText.fromJson(json['RichText'])!)
+            .map((item) => RichText.fromJson(item))
             .toList()));
   }
 

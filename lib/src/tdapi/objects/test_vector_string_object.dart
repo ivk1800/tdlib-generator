@@ -17,7 +17,7 @@ class TestVectorStringObject extends TdObject {
 
     return TestVectorStringObject(
         value: List<TestString>.from((json['value}'] ?? [])
-            .map((item) => TestString.fromJson(json['TestString'])!)
+            .map((item) => TestString.fromJson(item))
             .toList()));
   }
 

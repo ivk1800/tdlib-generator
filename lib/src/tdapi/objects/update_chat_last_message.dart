@@ -28,7 +28,7 @@ class UpdateChatLastMessage extends Update {
         chatId: json['chat_id'],
         lastMessage: Message.fromJson(json['last_message']),
         positions: List<ChatPosition>.from((json['positions}'] ?? [])
-            .map((item) => ChatPosition.fromJson(json['ChatPosition'])!)
+            .map((item) => ChatPosition.fromJson(item))
             .toList()));
   }
 

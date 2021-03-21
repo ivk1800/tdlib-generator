@@ -17,7 +17,7 @@ class ConnectedWebsites extends TdObject {
 
     return ConnectedWebsites(
         websites: List<ConnectedWebsite>.from((json['websites}'] ?? [])
-            .map((item) => ConnectedWebsite.fromJson(json['ConnectedWebsite'])!)
+            .map((item) => ConnectedWebsite.fromJson(item))
             .toList()));
   }
 

@@ -21,7 +21,7 @@ class ChatPhotos extends TdObject {
     return ChatPhotos(
         totalCount: json['total_count'],
         photos: List<ChatPhoto>.from((json['photos}'] ?? [])
-            .map((item) => ChatPhoto.fromJson(json['ChatPhoto'])!)
+            .map((item) => ChatPhoto.fromJson(item))
             .toList()));
   }
 

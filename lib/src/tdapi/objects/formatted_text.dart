@@ -21,7 +21,7 @@ class FormattedText extends TdObject {
     return FormattedText(
         text: json['text'],
         entities: List<TextEntity>.from((json['entities}'] ?? [])
-            .map((item) => TextEntity.fromJson(json['TextEntity'])!)
+            .map((item) => TextEntity.fromJson(item))
             .toList()));
   }
 

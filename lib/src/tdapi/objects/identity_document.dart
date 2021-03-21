@@ -43,7 +43,7 @@ class IdentityDocument extends TdObject {
         reverseSide: DatedFile.fromJson(json['reverse_side'])!,
         selfie: DatedFile.fromJson(json['selfie']),
         translation: List<DatedFile>.from((json['translation}'] ?? [])
-            .map((item) => DatedFile.fromJson(json['DatedFile'])!)
+            .map((item) => DatedFile.fromJson(item))
             .toList()));
   }
 

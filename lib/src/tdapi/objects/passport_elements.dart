@@ -17,7 +17,7 @@ class PassportElements extends TdObject {
 
     return PassportElements(
         elements: List<PassportElement>.from((json['elements}'] ?? [])
-            .map((item) => PassportElement.fromJson(json['PassportElement'])!)
+            .map((item) => PassportElement.fromJson(item))
             .toList()));
   }
 

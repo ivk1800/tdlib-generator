@@ -33,8 +33,7 @@ class PageBlockTable extends PageBlock {
         cells: List<List<PageBlockTableCell>>.from((json['cells}'] ?? [])
             .map((item) => List<PageBlockTableCell>.from(
                 (json['List<PageBlockTableCell>}'] ?? [])
-                    .map((item) => PageBlockTableCell.fromJson(
-                        json['PageBlockTableCell'])!)
+                    .map((item) => PageBlockTableCell.fromJson(item))
                     .toList()))
             .toList()),
         isBordered: json['is_bordered'],
