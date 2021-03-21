@@ -19,7 +19,8 @@ class InputInlineQueryResultLocation extends InputInlineQueryResult {
   /// [location] Location result
   final Location location;
 
-  /// [livePeriod] Amount of time relative to the message sent time until the location can be updated, in seconds
+  /// [livePeriod] Amount of time relative to the message sent time until the
+  /// can be updated, in seconds
   final int livePeriod;
 
   /// [title] Title of the result
@@ -34,10 +35,13 @@ class InputInlineQueryResultLocation extends InputInlineQueryResult {
   /// [thumbnailHeight] Thumbnail height, if known
   final int thumbnailHeight;
 
-  /// [replyMarkup] The message reply markup. Must be of type replyMarkupInlineKeyboard or null
+  /// [replyMarkup] The message reply markup. Must be of type
+  /// or null
   final ReplyMarkup? replyMarkup;
 
-  /// [inputMessageContent] The content of the message to be sent. Must be one of the following types: InputMessageText, InputMessageLocation, InputMessageVenue or InputMessageContact
+  /// [inputMessageContent] The content of the message to be sent. Must be one
+  /// the following types: InputMessageText, InputMessageLocation,
+  /// or InputMessageContact
   final InputMessageContent inputMessageContent;
 
   static const String CONSTRUCTOR = 'inputInlineQueryResultLocation';

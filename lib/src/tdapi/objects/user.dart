@@ -44,7 +44,8 @@ class User extends TdObject {
   /// [isContact] The user is a contact of the current user
   final bool isContact;
 
-  /// [isMutualContact] The user is a contact of the current user and the current user is a contact of the user
+  /// [isMutualContact] The user is a contact of the current user and the
+  /// user is a contact of the user
   final bool isMutualContact;
 
   /// [isVerified] True, if the user is verified
@@ -53,19 +54,22 @@ class User extends TdObject {
   /// [isSupport] True, if the user is Telegram support account
   final bool isSupport;
 
-  /// [restrictionReason] If non-empty, it contains a human-readable description of the reason why access to this user must be restricted
+  /// [restrictionReason] If non-empty, it contains a human-readable description
+  /// the reason why access to this user must be restricted
   final String restrictionReason;
 
   /// [isScam] True, if many users reported this user as a scam
   final bool isScam;
 
-  /// [haveAccess] If false, the user is inaccessible, and the only information known about the user is inside this class. It can't be passed to any method except GetUser
+  /// [haveAccess] If false, the user is inaccessible, and the only information
+  /// about the user is inside this class. It can't be passed to any method
+  /// GetUser
   final bool haveAccess;
 
   /// [type] Type of the user
   final UserType type;
 
-  /// [languageCode] IETF language tag of the user's language; only available to bots
+  /// [languageCode] IETF language tag of the user's language; only available to
   final String languageCode;
 
   static const String CONSTRUCTOR = 'user';

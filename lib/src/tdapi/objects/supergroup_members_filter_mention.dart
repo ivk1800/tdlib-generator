@@ -8,7 +8,7 @@ class SupergroupMembersFilterMention extends SupergroupMembersFilter {
   /// [query] Query to search for
   final String query;
 
-  /// [messageThreadId] If non-zero, the identifier of the current message thread
+  /// [messageThreadId] If non-zero, the identifier of the current message
   final int messageThreadId;
 
   static const String CONSTRUCTOR = 'supergroupMembersFilterMention';

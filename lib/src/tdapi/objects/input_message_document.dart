@@ -14,10 +14,12 @@ class InputMessageDocument extends InputMessageContent {
   /// [thumbnail] Document thumbnail, if available
   final InputThumbnail thumbnail;
 
-  /// [disableContentTypeDetection] If true, automatic file type detection will be disabled and the document will be always sent as file. Always true for files sent to secret chats
+  /// [disableContentTypeDetection] If true, automatic file type detection will
+  /// disabled and the document will be always sent as file. Always true for
+  /// sent to secret chats
   final bool disableContentTypeDetection;
 
-  /// [caption] Document caption; 0-GetOption("message_caption_length_max") characters
+  /// [caption] Document caption; 0-GetOption("message_caption_length_max")
   final FormattedText caption;
 
   static const String CONSTRUCTOR = 'inputMessageDocument';

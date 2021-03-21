@@ -7,7 +7,7 @@ class MessageText extends MessageContent {
   /// [text] Text of the message
   final FormattedText text;
 
-  /// [webPage] A preview of the web page that's mentioned in the text; may be null
+  /// [webPage] A preview of the web page that's mentioned in the text; may be
   final WebPage? webPage;
 
   static const String CONSTRUCTOR = 'messageText';

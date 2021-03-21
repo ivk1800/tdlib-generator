@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Reports some messages from a user in a supergroup as spam; requires administrator rights in the supergroup
+/// Reports some messages from a user in a supergroup as spam; requires
+/// rights in the supergroup
 class ReportSupergroupSpam extends TdFunction {
   ReportSupergroupSpam(
       {required this.supergroupId,
@@ -13,7 +14,8 @@ class ReportSupergroupSpam extends TdFunction {
   /// [userId] User identifier
   final int userId;
 
-  /// [messageIds] Identifiers of messages sent in the supergroup by the user. This list must be non-empty
+  /// [messageIds] Identifiers of messages sent in the supergroup by the user.
+  /// list must be non-empty
   final List<int> messageIds;
 
   /// callback sign

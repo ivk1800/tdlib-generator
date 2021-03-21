@@ -7,7 +7,8 @@ class CreateSupergroupChat extends TdFunction {
   /// [supergroupId] Supergroup or channel identifier
   final int supergroupId;
 
-  /// [force] If true, the chat will be created without network request. In this case all information about the chat except its type, title and photo can be incorrect
+  /// [force] If true, the chat will be created without network request. In this
+  /// all information about the chat except its type, title and photo can be
   final bool force;
 
   /// callback sign

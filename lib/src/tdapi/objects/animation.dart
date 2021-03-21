@@ -1,6 +1,6 @@
 part of '../tdapi.dart';
 
-/// Describes an animation file. The animation must be encoded in GIF or MPEG4 format
+/// Describes an animation file. The animation must be encoded in GIF or MPEG4
 class Animation extends TdObject {
   Animation(
       {required this.duration,
@@ -28,7 +28,8 @@ class Animation extends TdObject {
   /// [mimeType] MIME type of the file, usually "image/gif" or "video/mp4"
   final String mimeType;
 
-  /// [hasStickers] True, if stickers were added to the animation. The list of corresponding sticker set can be received using getAttachedStickerSets
+  /// [hasStickers] True, if stickers were added to the animation. The list of
+  /// sticker set can be received using getAttachedStickerSets
   final bool hasStickers;
 
   /// [minithumbnail] Animation minithumbnail; may be null

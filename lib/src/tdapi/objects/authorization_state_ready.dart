@@ -1,6 +1,6 @@
 part of '../tdapi.dart';
 
-/// The user has been successfully authorized. TDLib is now ready to answer queries
+/// The user has been successfully authorized. TDLib is now ready to answer
 class AuthorizationStateReady extends AuthorizationState {
   const AuthorizationStateReady();
 

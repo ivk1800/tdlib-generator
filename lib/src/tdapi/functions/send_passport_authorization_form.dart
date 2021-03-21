@@ -1,6 +1,8 @@
 part of '../tdapi.dart';
 
-/// Sends a Telegram Passport authorization form, effectively sharing data with the service. This method must be called after getPassportAuthorizationFormAvailableElements if some previously available elements are going to be reused
+/// Sends a Telegram Passport authorization form, effectively sharing data
+/// the service. This method must be called after
+/// if some previously available elements are going to be reused
 class SendPassportAuthorizationForm extends TdFunction {
   SendPassportAuthorizationForm(
       {required this.autorizationFormId, required this.types});
@@ -8,7 +10,8 @@ class SendPassportAuthorizationForm extends TdFunction {
   /// [autorizationFormId] Authorization form identifier
   final int autorizationFormId;
 
-  /// [types] Types of Telegram Passport elements chosen by user to complete the authorization form
+  /// [types] Types of Telegram Passport elements chosen by user to complete the
+  /// form
   final List<PassportElementType> types;
 
   /// callback sign

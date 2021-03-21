@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Parses Markdown entities in a human-friendly format, ignoring markup errors. Can be called synchronously
+/// Parses Markdown entities in a human-friendly format, ignoring markup
+/// Can be called synchronously
 class ParseMarkdown extends TdFunction {
   ParseMarkdown({required this.text});
 

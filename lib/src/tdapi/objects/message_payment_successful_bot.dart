@@ -12,19 +12,21 @@ class MessagePaymentSuccessfulBot extends MessageContent {
       required this.telegramPaymentChargeId,
       required this.providerPaymentChargeId});
 
-  /// [invoiceMessageId] Identifier of the message with the corresponding invoice; can be an identifier of a deleted message
+  /// [invoiceMessageId] Identifier of the message with the corresponding
+  /// can be an identifier of a deleted message
   final int invoiceMessageId;
 
   /// [currency] Currency for price of the product
   final String currency;
 
-  /// [totalAmount] Total price for the product, in the minimal quantity of the currency
+  /// [totalAmount] Total price for the product, in the minimal quantity of the
   final int totalAmount;
 
   /// [invoicePayload] Invoice payload
   final String invoicePayload;
 
-  /// [shippingOptionId] Identifier of the shipping option chosen by the user; may be empty if not applicable
+  /// [shippingOptionId] Identifier of the shipping option chosen by the user;
+  /// be empty if not applicable
   final String shippingOptionId;
 
   /// [orderInfo] Information about the order; may be null

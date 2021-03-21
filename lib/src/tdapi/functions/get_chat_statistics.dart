@@ -1,6 +1,8 @@
 part of '../tdapi.dart';
 
-/// Returns detailed statistics about a chat. Currently this method can be used only for supergroups and channels. Can be used only if SupergroupFullInfo.can_get_statistics == true
+/// Returns detailed statistics about a chat. Currently this method can be
+/// only for supergroups and channels. Can be used only if
+/// == true
 class GetChatStatistics extends TdFunction {
   GetChatStatistics({required this.chatId, required this.isDark});
 

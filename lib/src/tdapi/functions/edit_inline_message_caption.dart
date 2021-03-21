@@ -13,7 +13,8 @@ class EditInlineMessageCaption extends TdFunction {
   /// [replyMarkup] The new message reply markup
   final ReplyMarkup replyMarkup;
 
-  /// [caption] New message content caption; 0-GetOption("message_caption_length_max") characters
+  /// [caption] New message content caption;
+  /// characters
   final FormattedText caption;
 
   /// callback sign

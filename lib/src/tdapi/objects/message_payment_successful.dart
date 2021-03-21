@@ -7,13 +7,14 @@ class MessagePaymentSuccessful extends MessageContent {
       required this.currency,
       required this.totalAmount});
 
-  /// [invoiceMessageId] Identifier of the message with the corresponding invoice; can be an identifier of a deleted message
+  /// [invoiceMessageId] Identifier of the message with the corresponding
+  /// can be an identifier of a deleted message
   final int invoiceMessageId;
 
   /// [currency] Currency for the price of the product
   final String currency;
 
-  /// [totalAmount] Total price for the product, in the minimal quantity of the currency
+  /// [totalAmount] Total price for the product, in the minimal quantity of the
   final int totalAmount;
 
   static const String CONSTRUCTOR = 'messagePaymentSuccessful';

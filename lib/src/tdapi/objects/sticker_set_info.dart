@@ -26,16 +26,20 @@ class StickerSetInfo extends TdObject {
   /// [name] Name of the sticker set
   final String name;
 
-  /// [thumbnail] Sticker set thumbnail in WEBP or TGS format with width and height 100; may be null
+  /// [thumbnail] Sticker set thumbnail in WEBP or TGS format with width and
+  /// 100; may be null
   final Thumbnail? thumbnail;
 
-  /// [thumbnailOutline] Sticker set thumbnail's outline represented as a list of closed vector paths; may be empty. The coordinate system origin is in the upper-left corner
+  /// [thumbnailOutline] Sticker set thumbnail's outline represented as a list
+  /// closed vector paths; may be empty. The coordinate system origin is in the
+  /// corner
   final List<ClosedVectorPath> thumbnailOutline;
 
-  /// [isInstalled] True, if the sticker set has been installed by the current user
+  /// [isInstalled] True, if the sticker set has been installed by the current
   final bool isInstalled;
 
-  /// [isArchived] True, if the sticker set has been archived. A sticker set can't be installed and archived simultaneously
+  /// [isArchived] True, if the sticker set has been archived. A sticker set
+  /// be installed and archived simultaneously
   final bool isArchived;
 
   /// [isOfficial] True, if the sticker set is official
@@ -53,7 +57,8 @@ class StickerSetInfo extends TdObject {
   /// [size] Total number of stickers in the set
   final int size;
 
-  /// [covers] Contains up to the first 5 stickers from the set, depending on the context. If the application needs more stickers the full set should be requested
+  /// [covers] Contains up to the first 5 stickers from the set, depending on
+  /// context. If the application needs more stickers the full set should be
   final List<Sticker> covers;
 
   static const String CONSTRUCTOR = 'stickerSetInfo';

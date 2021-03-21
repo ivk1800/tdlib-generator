@@ -1,10 +1,12 @@
 part of '../tdapi.dart';
 
-/// Returns an HTTP URL which can be used to automatically log in to the translation platform and suggest new emoji replacements. The URL will be valid for 30 seconds after generation
+/// Returns an HTTP URL which can be used to automatically log in to the
+/// platform and suggest new emoji replacements. The URL will be valid for 30
+/// after generation
 class GetEmojiSuggestionsUrl extends TdFunction {
   GetEmojiSuggestionsUrl({required this.languageCode});
 
-  /// [languageCode] Language code for which the emoji replacements will be suggested
+  /// [languageCode] Language code for which the emoji replacements will be
   final String languageCode;
 
   /// callback sign

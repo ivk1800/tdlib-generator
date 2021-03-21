@@ -7,7 +7,7 @@ class SetName extends TdFunction {
   /// [firstName] The new value of the first name for the user; 1-64 characters
   final String firstName;
 
-  /// [lastName] The new value of the optional last name for the user; 0-64 characters
+  /// [lastName] The new value of the optional last name for the user; 0-64
   final String lastName;
 
   /// callback sign

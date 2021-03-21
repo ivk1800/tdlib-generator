@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Returns information about a message with the callback button that originated a callback query; for bots only
+/// Returns information about a message with the callback button that
+/// a callback query; for bots only
 class GetCallbackQueryMessage extends TdFunction {
   GetCallbackQueryMessage(
       {required this.chatId,

@@ -1,6 +1,6 @@
 part of '../tdapi.dart';
 
-/// Contains information about a Telegram Passport elements and corresponding errors
+/// Contains information about a Telegram Passport elements and corresponding
 class PassportElementsWithErrors extends TdObject {
   PassportElementsWithErrors({required this.elements, required this.errors});
 

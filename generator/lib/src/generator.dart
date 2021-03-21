@@ -28,7 +28,7 @@ class Generator {
       final generatedClass = cb.Class((b) {
         b
           ..docs.add("part of '../tdapi.dart';")
-          ..docs.add("/// ${value.description}")
+          ..docs.addAll(value.description.resolveDoc())
           ..name = value.name
           ..extend = cb.refer(value.parent);
         b.abstract = value.group == Group.Classes;
@@ -62,7 +62,7 @@ class Generator {
             fieldBuilder.type =
                 cb.Reference('${v.type} ${v.isNullable ? '?' : ''}');
             fieldBuilder.modifier = cb.FieldModifier.final$;
-            fieldBuilder.docs.add('/// ${v.resolveFieldDoc()}');
+            fieldBuilder.docs.addAll(v.resolveFieldDoc());
           });
         }));
 
@@ -322,13 +322,35 @@ class Generator {
 
 extension _StringExtension on String {
   String toVariableName() => this.camelCase().lowerFirstChar();
+
+  List<String> resolveDoc() {
+    List<String> lines = <String>[];
+
+    var split = this.split(' ');
+
+    String currentLine = '///';
+
+    for (String word in split) {
+      String tempLine = '$currentLine $word';
+      if (tempLine.length > 78) {
+        lines.add(currentLine);
+        currentLine = '///';
+      } else {
+        currentLine = tempLine;
+      }
+    }
+    if (currentLine != '///') {
+      lines.add(currentLine);
+    }
+    return lines;
+  }
 }
 
 extension _VariableExtension on Variable {
-  String resolveFieldDoc() {
-    return this
-            .description
-            ?.replaceFirst(this.name, '[${this.name.toVariableName()}]') ??
-        '';
+  List<String> resolveFieldDoc() {
+    return description
+            ?.replaceFirst(this.name, '[${this.name.toVariableName()}]')
+            .resolveDoc() ??
+        [];
   }
 }

@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// The front side of the document contains an error. The error will be considered resolved when the file with the front side changes
+/// The front side of the document contains an error. The error will be
+/// resolved when the file with the front side changes
 class PassportElementErrorSourceFrontSide extends PassportElementErrorSource {
   const PassportElementErrorSourceFrontSide();
 

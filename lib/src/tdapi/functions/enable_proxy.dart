@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Enables a proxy. Only one proxy can be enabled at a time. Can be called before authorization
+/// Enables a proxy. Only one proxy can be enabled at a time. Can be called
+/// authorization
 class EnableProxy extends TdFunction {
   EnableProxy({required this.proxyId});
 

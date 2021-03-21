@@ -18,22 +18,26 @@ class UpdateNotificationGroup extends Update {
   /// [type] New type of the notification group
   final NotificationGroupType type;
 
-  /// [chatId] Identifier of a chat to which all notifications in the group belong
+  /// [chatId] Identifier of a chat to which all notifications in the group
   final int chatId;
 
-  /// [notificationSettingsChatId] Chat identifier, which notification settings must be applied to the added notifications
+  /// [notificationSettingsChatId] Chat identifier, which notification settings
+  /// be applied to the added notifications
   final int notificationSettingsChatId;
 
   /// [isSilent] True, if the notifications should be shown without sound
   final bool isSilent;
 
-  /// [totalCount] Total number of unread notifications in the group, can be bigger than number of active notifications
+  /// [totalCount] Total number of unread notifications in the group, can be
+  /// than number of active notifications
   final int totalCount;
 
-  /// [addedNotifications] List of added group notifications, sorted by notification ID
+  /// [addedNotifications] List of added group notifications, sorted by
+  /// ID
   final List<Notification> addedNotifications;
 
-  /// [removedNotificationIds] Identifiers of removed group notifications, sorted by notification ID
+  /// [removedNotificationIds] Identifiers of removed group notifications,
+  /// by notification ID
   final List<int> removedNotificationIds;
 
   static const String CONSTRUCTOR = 'updateNotificationGroup';

@@ -1,6 +1,6 @@
 part of '../tdapi.dart';
 
-/// A Telegram Passport element to be saved containing the user's driver license
+/// A Telegram Passport element to be saved containing the user's driver
 class InputPassportElementDriverLicense extends InputPassportElement {
   InputPassportElementDriverLicense({required this.driverLicense});
 

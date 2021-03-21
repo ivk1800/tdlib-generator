@@ -8,10 +8,12 @@ class GetChatMessageCount extends TdFunction {
   /// [chatId] Identifier of the chat in which to count messages
   final int chatId;
 
-  /// [filter] Filter for message content; searchMessagesFilterEmpty is unsupported in this function
+  /// [filter] Filter for message content; searchMessagesFilterEmpty is
+  /// in this function
   final SearchMessagesFilter filter;
 
-  /// [returnLocal] If true, returns count that is available locally without sending network requests, returning -1 if the number of messages is unknown
+  /// [returnLocal] If true, returns count that is available locally without
+  /// network requests, returning -1 if the number of messages is unknown
   final bool returnLocal;
 
   /// callback sign

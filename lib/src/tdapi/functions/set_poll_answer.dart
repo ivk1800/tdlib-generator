@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Changes the user answer to a poll. A poll in quiz mode can be answered only once
+/// Changes the user answer to a poll. A poll in quiz mode can be answered
+/// once
 class SetPollAnswer extends TdFunction {
   SetPollAnswer(
       {required this.chatId, required this.messageId, required this.optionIds});
@@ -11,7 +12,8 @@ class SetPollAnswer extends TdFunction {
   /// [messageId] Identifier of the message containing the poll
   final int messageId;
 
-  /// [optionIds] 0-based identifiers of answer options, chosen by the user. User can choose more than 1 answer option only is the poll allows multiple answers
+  /// [optionIds] 0-based identifiers of answer options, chosen by the user.
+  /// can choose more than 1 answer option only is the poll allows multiple
   final List<int> optionIds;
 
   /// callback sign

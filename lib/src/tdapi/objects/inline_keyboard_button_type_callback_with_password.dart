@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// A button that asks for password of the current user and then sends a callback query to a bot
+/// A button that asks for password of the current user and then sends a
+/// query to a bot
 class InlineKeyboardButtonTypeCallbackWithPassword
     extends InlineKeyboardButtonType {
   InlineKeyboardButtonTypeCallbackWithPassword({required this.data});

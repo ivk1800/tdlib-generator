@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Returns the extension of a file, guessed by its MIME type. Returns an empty string on failure. Can be called synchronously
+/// Returns the extension of a file, guessed by its MIME type. Returns an
+/// string on failure. Can be called synchronously
 class GetFileExtension extends TdFunction {
   GetFileExtension({required this.mimeType});
 

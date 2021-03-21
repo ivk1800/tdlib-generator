@@ -12,7 +12,8 @@ class PollOption extends TdObject {
   /// [text] Option text, 1-100 characters
   final String text;
 
-  /// [voterCount] Number of voters for this option, available only for closed or voted polls
+  /// [voterCount] Number of voters for this option, available only for closed
+  /// voted polls
   final int voterCount;
 
   /// [votePercentage] The percentage of votes for this option, 0-100
@@ -21,7 +22,8 @@ class PollOption extends TdObject {
   /// [isChosen] True, if the option was chosen by the user
   final bool isChosen;
 
-  /// [isBeingChosen] True, if the option is being chosen by a pending setPollAnswer request
+  /// [isBeingChosen] True, if the option is being chosen by a pending
+  /// request
   final bool isBeingChosen;
 
   static const String CONSTRUCTOR = 'pollOption';

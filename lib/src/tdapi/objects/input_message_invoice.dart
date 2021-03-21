@@ -1,6 +1,6 @@
 part of '../tdapi.dart';
 
-/// A message with an invoice; can be used only by bots and only in private chats
+/// A message with an invoice; can be used only by bots and only in private
 class InputMessageInvoice extends InputMessageContent {
   InputMessageInvoice(
       {required this.invoice,
@@ -42,10 +42,12 @@ class InputMessageInvoice extends InputMessageContent {
   /// [providerToken] Payment provider token
   final String providerToken;
 
-  /// [providerData] JSON-encoded data about the invoice, which will be shared with the payment provider
+  /// [providerData] JSON-encoded data about the invoice, which will be shared
+  /// the payment provider
   final String providerData;
 
-  /// [startParameter] Unique invoice bot start_parameter for the generation of this invoice
+  /// [startParameter] Unique invoice bot start_parameter for the generation of
+  /// invoice
   final String startParameter;
 
   static const String CONSTRUCTOR = 'inputMessageInvoice';

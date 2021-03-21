@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// A simple object containing a vector of objects that hold a string; for testing only
+/// A simple object containing a vector of objects that hold a string; for
+/// only
 class TestVectorStringObject extends TdObject {
   TestVectorStringObject({required this.value});
 

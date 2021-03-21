@@ -11,7 +11,9 @@ class SetStickerSetThumbnail extends TdFunction {
   /// [name] Sticker set name
   final String name;
 
-  /// [thumbnail] Thumbnail to set in PNG or TGS format. Animated thumbnail must be set for animated sticker sets and only for them. Pass a zero InputFileId to delete the thumbnail
+  /// [thumbnail] Thumbnail to set in PNG or TGS format. Animated thumbnail must
+  /// set for animated sticker sets and only for them. Pass a zero InputFileId
+  /// delete the thumbnail
   final InputFile thumbnail;
 
   /// callback sign

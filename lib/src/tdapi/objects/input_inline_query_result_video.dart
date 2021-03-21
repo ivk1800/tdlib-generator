@@ -1,6 +1,6 @@
 part of '../tdapi.dart';
 
-/// Represents a link to a page containing an embedded video player or a video file
+/// Represents a link to a page containing an embedded video player or a video
 class InputInlineQueryResultVideo extends InputInlineQueryResult {
   InputInlineQueryResultVideo(
       {required this.id,
@@ -30,7 +30,8 @@ class InputInlineQueryResultVideo extends InputInlineQueryResult {
   /// [videoUrl] URL of the embedded video player or video file
   final String videoUrl;
 
-  /// [mimeType] MIME type of the content of the video URL, only "text/html" or "video/mp4" are currently supported
+  /// [mimeType] MIME type of the content of the video URL, only "text/html" or
+  /// are currently supported
   final String mimeType;
 
   /// [videoWidth] Width of the video
@@ -42,10 +43,13 @@ class InputInlineQueryResultVideo extends InputInlineQueryResult {
   /// [videoDuration] Video duration, in seconds
   final int videoDuration;
 
-  /// [replyMarkup] The message reply markup. Must be of type replyMarkupInlineKeyboard or null
+  /// [replyMarkup] The message reply markup. Must be of type
+  /// or null
   final ReplyMarkup? replyMarkup;
 
-  /// [inputMessageContent] The content of the message to be sent. Must be one of the following types: InputMessageText, InputMessageVideo, InputMessageLocation, InputMessageVenue or InputMessageContact
+  /// [inputMessageContent] The content of the message to be sent. Must be one
+  /// the following types: InputMessageText, InputMessageVideo,
+  /// InputMessageVenue or InputMessageContact
   final InputMessageContent inputMessageContent;
 
   static const String CONSTRUCTOR = 'inputInlineQueryResultVideo';

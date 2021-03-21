@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Searches for the specified query in the first names, last names and usernames of the known user contacts
+/// Searches for the specified query in the first names, last names and
+/// of the known user contacts
 class SearchContacts extends TdFunction {
   SearchContacts({required this.query, required this.limit});
 

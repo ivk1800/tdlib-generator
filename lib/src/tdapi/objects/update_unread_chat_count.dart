@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Number of unread chats, i.e. with unread messages or marked as unread, has changed. This update is sent only if the message database is used
+/// Number of unread chats, i.e. with unread messages or marked as unread, has
+/// This update is sent only if the message database is used
 class UpdateUnreadChatCount extends Update {
   UpdateUnreadChatCount(
       {required this.chatList,
@@ -25,7 +26,7 @@ class UpdateUnreadChatCount extends Update {
   /// [markedAsUnreadCount] Total number of chats marked as unread
   final int markedAsUnreadCount;
 
-  /// [markedAsUnreadUnmutedCount] Total number of unmuted chats marked as unread
+  /// [markedAsUnreadUnmutedCount] Total number of unmuted chats marked as
   final int markedAsUnreadUnmutedCount;
 
   static const String CONSTRUCTOR = 'updateUnreadChatCount';

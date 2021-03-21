@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// A new incoming pre-checkout query; for bots only. Contains full information about a checkout
+/// A new incoming pre-checkout query; for bots only. Contains full
+/// about a checkout
 class UpdateNewPreCheckoutQuery extends Update {
   UpdateNewPreCheckoutQuery(
       {required this.id,
@@ -20,13 +21,14 @@ class UpdateNewPreCheckoutQuery extends Update {
   /// [currency] Currency for the product price
   final String currency;
 
-  /// [totalAmount] Total price for the product, in the minimal quantity of the currency
+  /// [totalAmount] Total price for the product, in the minimal quantity of the
   final int totalAmount;
 
   /// [invoicePayload] Invoice payload
   final String invoicePayload;
 
-  /// [shippingOptionId] Identifier of a shipping option chosen by the user; may be empty if not applicable
+  /// [shippingOptionId] Identifier of a shipping option chosen by the user; may
+  /// empty if not applicable
   final String shippingOptionId;
 
   /// [orderInfo] Information about the order; may be null

@@ -11,13 +11,17 @@ class UpdateFileGenerationStart extends Update {
   /// [generationId] Unique identifier for the generation process
   final int generationId;
 
-  /// [originalPath] The path to a file from which a new file is generated; may be empty
+  /// [originalPath] The path to a file from which a new file is generated; may
+  /// empty
   final String originalPath;
 
-  /// [destinationPath] The path to a file that should be created and where the new file should be generated
+  /// [destinationPath] The path to a file that should be created and where the
+  /// file should be generated
   final String destinationPath;
 
-  /// [conversion] String specifying the conversion applied to the original file. If conversion is "#url#" than original_path contains an HTTP/HTTPS URL of a file, which should be downloaded by the application
+  /// [conversion] String specifying the conversion applied to the original
+  /// If conversion is "#url#" than original_path contains an HTTP/HTTPS URL of
+  /// file, which should be downloaded by the application
   final String conversion;
 
   static const String CONSTRUCTOR = 'updateFileGenerationStart';

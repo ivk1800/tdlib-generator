@@ -12,10 +12,12 @@ class ChatInviteLinkInfo extends TdObject {
       required this.memberUserIds,
       required this.isPublic});
 
-  /// [chatId] Chat identifier of the invite link; 0 if the user has no access to the chat before joining
+  /// [chatId] Chat identifier of the invite link; 0 if the user has no access
+  /// the chat before joining
   final int chatId;
 
-  /// [accessibleFor] If non-zero, the amount of time for which read access to the chat will remain available, in seconds
+  /// [accessibleFor] If non-zero, the amount of time for which read access to
+  /// chat will remain available, in seconds
   final int accessibleFor;
 
   /// [type] Contains information about the type of the chat
@@ -30,10 +32,12 @@ class ChatInviteLinkInfo extends TdObject {
   /// [memberCount] Number of members in the chat
   final int memberCount;
 
-  /// [memberUserIds] User identifiers of some chat members that may be known to the current user
+  /// [memberUserIds] User identifiers of some chat members that may be known to
+  /// current user
   final List<int> memberUserIds;
 
-  /// [isPublic] True, if the chat is a public supergroup or channel, i.e. it has a username or it is a location-based supergroup
+  /// [isPublic] True, if the chat is a public supergroup or channel, i.e. it
+  /// a username or it is a location-based supergroup
   final bool isPublic;
 
   static const String CONSTRUCTOR = 'chatInviteLinkInfo';

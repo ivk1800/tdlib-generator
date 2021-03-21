@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// A chat member has gained/lost administrator status, or the list of their administrator privileges has changed
+/// A chat member has gained/lost administrator status, or the list of their
+/// privileges has changed
 class ChatEventMemberPromoted extends ChatEventAction {
   ChatEventMemberPromoted(
       {required this.userId, required this.oldStatus, required this.newStatus});

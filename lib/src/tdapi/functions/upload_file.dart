@@ -1,6 +1,9 @@
 part of '../tdapi.dart';
 
-/// Asynchronously uploads a file to the cloud without sending it in a message. updateFile will be used to notify about upload progress and successful completion of the upload. The file will not have a persistent remote identifier until it will be sent in a message
+/// Asynchronously uploads a file to the cloud without sending it in a
+/// updateFile will be used to notify about upload progress and successful
+/// of the upload. The file will not have a persistent remote identifier until
+/// will be sent in a message
 class UploadFile extends TdFunction {
   UploadFile(
       {required this.file, required this.fileType, required this.priority});
@@ -11,7 +14,9 @@ class UploadFile extends TdFunction {
   /// [fileType] File type
   final FileType fileType;
 
-  /// [priority] Priority of the upload (1-32). The higher the priority, the earlier the file will be uploaded. If the priorities of two files are equal, then the first one for which uploadFile was called will be uploaded first
+  /// [priority] Priority of the upload (1-32). The higher the priority, the
+  /// the file will be uploaded. If the priorities of two files are equal, then
+  /// first one for which uploadFile was called will be uploaded first
   final int priority;
 
   /// callback sign

@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// An authentication code is delivered via a phone call to the specified phone number
+/// An authentication code is delivered via a phone call to the specified
+/// number
 class AuthenticationCodeTypeCall extends AuthenticationCodeType {
   AuthenticationCodeTypeCall({required this.length});
 

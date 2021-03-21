@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// A new incoming shipping query; for bots only. Only for invoices with flexible price
+/// A new incoming shipping query; for bots only. Only for invoices with
+/// price
 class UpdateNewShippingQuery extends Update {
   UpdateNewShippingQuery(
       {required this.id,

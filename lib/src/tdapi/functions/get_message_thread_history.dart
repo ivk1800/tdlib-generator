@@ -1,6 +1,10 @@
 part of '../tdapi.dart';
 
-/// Returns messages in a message thread of a message. Can be used only if message.can_get_message_thread == true. Message thread of a channel message is in the channel's linked supergroup.. The messages are returned in a reverse chronological order (i.e., in order of decreasing message_id). For optimal performance the number of returned messages is chosen by the library
+/// Returns messages in a message thread of a message. Can be used only if
+/// == true. Message thread of a channel message is in the channel's linked
+/// The messages are returned in a reverse chronological order (i.e., in order
+/// decreasing message_id). For optimal performance the number of returned
+/// is chosen by the library
 class GetMessageThreadHistory extends TdFunction {
   GetMessageThreadHistory(
       {required this.chatId,
@@ -15,13 +19,18 @@ class GetMessageThreadHistory extends TdFunction {
   /// [messageId] Message identifier, which thread history needs to be returned
   final int messageId;
 
-  /// [fromMessageId] Identifier of the message starting from which history must be fetched; use 0 to get results from the last message
+  /// [fromMessageId] Identifier of the message starting from which history must
+  /// fetched; use 0 to get results from the last message
   final int fromMessageId;
 
-  /// [offset] Specify 0 to get results from exactly the from_message_id or a negative offset up to 99 to get additionally some newer messages
+  /// [offset] Specify 0 to get results from exactly the from_message_id or a
+  /// offset up to 99 to get additionally some newer messages
   final int offset;
 
-  /// [limit] The maximum number of messages to be returned; must be positive and can't be greater than 100. If the offset is negative, the limit must be greater than or equal to -offset. Fewer messages may be returned than specified by the limit, even if the end of the message thread history has not been reached
+  /// [limit] The maximum number of messages to be returned; must be positive
+  /// can't be greater than 100. If the offset is negative, the limit must be
+  /// than or equal to -offset. Fewer messages may be returned than specified by
+  /// limit, even if the end of the message thread history has not been reached
   final int limit;
 
   /// callback sign

@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// One of files with the translation of the document contains an error. The error will be considered resolved when the file changes
+/// One of files with the translation of the document contains an error. The
+/// will be considered resolved when the file changes
 class PassportElementErrorSourceTranslationFile
     extends PassportElementErrorSource {
   PassportElementErrorSourceTranslationFile({required this.fileIndex});

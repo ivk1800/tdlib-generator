@@ -4,7 +4,8 @@ part of '../tdapi.dart';
 class AddLogMessage extends TdFunction {
   AddLogMessage({required this.verbosityLevel, required this.text});
 
-  /// [verbosityLevel] The minimum verbosity level needed for the message to be logged, 0-1023
+  /// [verbosityLevel] The minimum verbosity level needed for the message to be
+  /// 0-1023
   final int verbosityLevel;
 
   /// [text] Text of a message to log

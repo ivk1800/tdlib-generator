@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Does nothing; for testing only. This is an offline method. Can be called before authorization
+/// Does nothing; for testing only. This is an offline method. Can be called
+/// authorization
 class TestCallEmpty extends TdFunction {
   TestCallEmpty();
 

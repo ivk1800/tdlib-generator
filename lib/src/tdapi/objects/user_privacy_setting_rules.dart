@@ -1,6 +1,8 @@
 part of '../tdapi.dart';
 
-/// A list of privacy rules. Rules are matched in the specified order. The first matched rule defines the privacy setting for a given user. If no rule matches, the action is not allowed
+/// A list of privacy rules. Rules are matched in the specified order. The
+/// matched rule defines the privacy setting for a given user. If no rule
+/// the action is not allowed
 class UserPrivacySettingRules extends TdObject {
   UserPrivacySettingRules({required this.rules});
 

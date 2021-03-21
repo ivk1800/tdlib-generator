@@ -11,7 +11,7 @@ class MessagePhoto extends MessageContent {
   /// [caption] Photo caption
   final FormattedText caption;
 
-  /// [isSecret] True, if the photo must be blurred and must be shown only while tapped
+  /// [isSecret] True, if the photo must be blurred and must be shown only while
   final bool isSecret;
 
   static const String CONSTRUCTOR = 'messagePhoto';

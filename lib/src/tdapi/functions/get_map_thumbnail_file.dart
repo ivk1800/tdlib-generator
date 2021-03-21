@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Returns information about a file with a map thumbnail in PNG format. Only map thumbnail files with size less than 1MB can be downloaded
+/// Returns information about a file with a map thumbnail in PNG format. Only
+/// thumbnail files with size less than 1MB can be downloaded
 class GetMapThumbnailFile extends TdFunction {
   GetMapThumbnailFile(
       {required this.location,
@@ -25,7 +26,8 @@ class GetMapThumbnailFile extends TdFunction {
   /// [scale] Map scale; 1-3
   final int scale;
 
-  /// [chatId] Identifier of a chat, in which the thumbnail will be shown. Use 0 if unknown
+  /// [chatId] Identifier of a chat, in which the thumbnail will be shown. Use 0
+  /// unknown
   final int chatId;
 
   /// callback sign

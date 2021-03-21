@@ -20,16 +20,22 @@ class ChatFilter extends TdObject {
   /// [title] The title of the filter; 1-12 characters without line feeds
   final String title;
 
-  /// [iconName] The icon name for short filter representation. If non-empty, must be one of "All", "Unread", "Unmuted", "Bots", "Channels", "Groups", "Private", "Custom", "Setup", "Cat", "Crown", "Favorite", "Flower", "Game", "Home", "Love", "Mask", "Party", "Sport", "Study", "Trade", "Travel", "Work".. If empty, use getChatFilterDefaultIconName to get default icon name for the filter
+  /// [iconName] The icon name for short filter representation. If non-empty,
+  /// be one of "All", "Unread", "Unmuted", "Bots", "Channels", "Groups",
+  /// "Custom", "Setup", "Cat", "Crown", "Favorite", "Flower", "Game", "Home",
+  /// "Mask", "Party", "Sport", "Study", "Trade", "Travel", "Work".. If empty,
+  /// getChatFilterDefaultIconName to get default icon name for the filter
   final String iconName;
 
-  /// [pinnedChatIds] The chat identifiers of pinned chats in the filtered chat list
+  /// [pinnedChatIds] The chat identifiers of pinned chats in the filtered chat
   final List<int> pinnedChatIds;
 
-  /// [includedChatIds] The chat identifiers of always included chats in the filtered chat list
+  /// [includedChatIds] The chat identifiers of always included chats in the
+  /// chat list
   final List<int> includedChatIds;
 
-  /// [excludedChatIds] The chat identifiers of always excluded chats in the filtered chat list
+  /// [excludedChatIds] The chat identifiers of always excluded chats in the
+  /// chat list
   final List<int> excludedChatIds;
 
   /// [excludeMuted] True, if muted chats need to be excluded

@@ -10,10 +10,12 @@ class LogStreamFile extends LogStream {
   /// [path] Path to the file to where the internal TDLib log will be written
   final String path;
 
-  /// [maxFileSize] The maximum size of the file to where the internal TDLib log is written before the file will be auto-rotated
+  /// [maxFileSize] The maximum size of the file to where the internal TDLib log
+  /// written before the file will be auto-rotated
   final int maxFileSize;
 
-  /// [redirectStderr] Pass true to additionally redirect stderr to the log file. Ignored on Windows
+  /// [redirectStderr] Pass true to additionally redirect stderr to the log
+  /// Ignored on Windows
   final bool redirectStderr;
 
   static const String CONSTRUCTOR = 'logStreamFile';

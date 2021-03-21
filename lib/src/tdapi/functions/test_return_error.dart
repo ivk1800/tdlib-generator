@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Returns the specified error and ensures that the Error object is used; for testing only. Can be called synchronously
+/// Returns the specified error and ensures that the Error object is used; for
+/// only. Can be called synchronously
 class TestReturnError extends TdFunction {
   TestReturnError({required this.error});
 

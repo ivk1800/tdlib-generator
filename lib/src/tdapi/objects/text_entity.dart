@@ -1,6 +1,6 @@
 part of '../tdapi.dart';
 
-/// Represents a part of the text that needs to be formatted in some unusual way
+/// Represents a part of the text that needs to be formatted in some unusual
 class TextEntity extends TdObject {
   TextEntity({required this.offset, required this.length, required this.type});
 

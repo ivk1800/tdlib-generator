@@ -1,6 +1,9 @@
 part of '../tdapi.dart';
 
-/// The user is a member of a chat and has some additional privileges. In basic groups, administrators can edit and delete messages sent by others, add new members, ban unprivileged members, and manage voice chats. In supergroups and channels, there are more detailed options for administrator privileges
+/// The user is a member of a chat and has some additional privileges. In
+/// groups, administrators can edit and delete messages sent by others, add
+/// members, ban unprivileged members, and manage voice chats. In supergroups
+/// channels, there are more detailed options for administrator privileges
 class ChatMemberStatusAdministrator extends ChatMemberStatus {
   ChatMemberStatusAdministrator(
       {required this.customTitle,
@@ -16,40 +19,52 @@ class ChatMemberStatusAdministrator extends ChatMemberStatus {
       required this.canManageVoiceChats,
       required this.isAnonymous});
 
-  /// [customTitle] A custom title of the administrator; 0-16 characters without emojis; applicable to supergroups only
+  /// [customTitle] A custom title of the administrator; 0-16 characters without
+  /// applicable to supergroups only
   final String customTitle;
 
-  /// [canBeEdited] True, if the current user can edit the administrator privileges for the called user
+  /// [canBeEdited] True, if the current user can edit the administrator
+  /// for the called user
   final bool canBeEdited;
 
-  /// [canChangeInfo] True, if the administrator can change the chat title, photo, and other settings
+  /// [canChangeInfo] True, if the administrator can change the chat title,
+  /// and other settings
   final bool canChangeInfo;
 
-  /// [canPostMessages] True, if the administrator can create channel posts; applicable to channels only
+  /// [canPostMessages] True, if the administrator can create channel posts;
+  /// to channels only
   final bool canPostMessages;
 
-  /// [canEditMessages] True, if the administrator can edit messages of other users and pin messages; applicable to channels only
+  /// [canEditMessages] True, if the administrator can edit messages of other
+  /// and pin messages; applicable to channels only
   final bool canEditMessages;
 
-  /// [canDeleteMessages] True, if the administrator can delete messages of other users
+  /// [canDeleteMessages] True, if the administrator can delete messages of
+  /// users
   final bool canDeleteMessages;
 
-  /// [canInviteUsers] True, if the administrator can invite new users to the chat
+  /// [canInviteUsers] True, if the administrator can invite new users to the
   final bool canInviteUsers;
 
-  /// [canRestrictMembers] True, if the administrator can restrict, ban, or unban chat members
+  /// [canRestrictMembers] True, if the administrator can restrict, ban, or
+  /// chat members
   final bool canRestrictMembers;
 
-  /// [canPinMessages] True, if the administrator can pin messages; applicable to groups only
+  /// [canPinMessages] True, if the administrator can pin messages; applicable
+  /// groups only
   final bool canPinMessages;
 
-  /// [canPromoteMembers] True, if the administrator can add new administrators with a subset of their own privileges or demote administrators that were directly or indirectly promoted by them
+  /// [canPromoteMembers] True, if the administrator can add new administrators
+  /// a subset of their own privileges or demote administrators that were
+  /// or indirectly promoted by them
   final bool canPromoteMembers;
 
-  /// [canManageVoiceChats] True, if the administrator can manage voice chats; applicable to groups only
+  /// [canManageVoiceChats] True, if the administrator can manage voice chats;
+  /// to groups only
   final bool canManageVoiceChats;
 
-  /// [isAnonymous] True, if the administrator isn't shown in the chat member list and sends messages anonymously; applicable to supergroups only
+  /// [isAnonymous] True, if the administrator isn't shown in the chat member
+  /// and sends messages anonymously; applicable to supergroups only
   final bool isAnonymous;
 
   static const String CONSTRUCTOR = 'chatMemberStatusAdministrator';

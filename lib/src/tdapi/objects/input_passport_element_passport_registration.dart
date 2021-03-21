@@ -1,6 +1,6 @@
 part of '../tdapi.dart';
 
-/// A Telegram Passport element to be saved containing the user's passport registration
+/// A Telegram Passport element to be saved containing the user's passport
 class InputPassportElementPassportRegistration extends InputPassportElement {
   InputPassportElementPassportRegistration(
       {required this.passportRegistration});

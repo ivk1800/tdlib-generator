@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Changes the period of inactivity after which the account of the current user will automatically be deleted
+/// Changes the period of inactivity after which the account of the current
+/// will automatically be deleted
 class SetAccountTtl extends TdFunction {
   SetAccountTtl({required this.ttl});
 

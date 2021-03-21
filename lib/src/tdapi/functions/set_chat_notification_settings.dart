@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Changes the notification settings of a chat. Notification settings of a chat with the current user (Saved Messages) can't be changed
+/// Changes the notification settings of a chat. Notification settings of a
+/// with the current user (Saved Messages) can't be changed
 class SetChatNotificationSettings extends TdFunction {
   SetChatNotificationSettings(
       {required this.chatId, required this.notificationSettings});
@@ -8,7 +9,8 @@ class SetChatNotificationSettings extends TdFunction {
   /// [chatId] Chat identifier
   final int chatId;
 
-  /// [notificationSettings] New notification settings for the chat. If the chat is muted for more than 1 week, it is considered to be muted forever
+  /// [notificationSettings] New notification settings for the chat. If the chat
+  /// muted for more than 1 week, it is considered to be muted forever
   final ChatNotificationSettings notificationSettings;
 
   /// callback sign

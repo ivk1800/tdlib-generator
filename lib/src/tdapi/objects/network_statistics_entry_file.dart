@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Contains information about the total amount of data that was used to send and receive files
+/// Contains information about the total amount of data that was used to send
+/// receive files
 class NetworkStatisticsEntryFile extends NetworkStatisticsEntry {
   NetworkStatisticsEntryFile(
       {required this.fileType,
@@ -11,7 +12,8 @@ class NetworkStatisticsEntryFile extends NetworkStatisticsEntry {
   /// [fileType] Type of the file the data is part of
   final FileType fileType;
 
-  /// [networkType] Type of the network the data was sent through. Call setNetworkType to maintain the actual network type
+  /// [networkType] Type of the network the data was sent through. Call
+  /// to maintain the actual network type
   final NetworkType networkType;
 
   /// [sentBytes] Total number of bytes sent

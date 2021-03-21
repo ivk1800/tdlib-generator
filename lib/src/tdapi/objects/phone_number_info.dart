@@ -7,13 +7,16 @@ class PhoneNumberInfo extends TdObject {
       required this.countryCallingCode,
       required this.formattedPhoneNumber});
 
-  /// [country] Information about the country to which the phone number belongs; may be null
+  /// [country] Information about the country to which the phone number belongs;
+  /// be null
   final CountryInfo? country;
 
-  /// [countryCallingCode] The part of the phone number denoting country calling code or its part
+  /// [countryCallingCode] The part of the phone number denoting country calling
+  /// or its part
   final String countryCallingCode;
 
-  /// [formattedPhoneNumber] The phone number without country calling code formatted accordingly to local rules
+  /// [formattedPhoneNumber] The phone number without country calling code
+  /// accordingly to local rules
   final String formattedPhoneNumber;
 
   static const String CONSTRUCTOR = 'phoneNumberInfo';

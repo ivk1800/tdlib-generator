@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Changes information about a chat. Available for basic groups, supergroups, and channels. Requires can_change_info rights
+/// Changes information about a chat. Available for basic groups, supergroups,
+/// channels. Requires can_change_info rights
 class SetChatDescription extends TdFunction {
   SetChatDescription({required this.chatId, required this.description});
 

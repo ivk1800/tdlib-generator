@@ -9,16 +9,18 @@ class MessageReplyInfo extends TdObject {
       required this.lastReadOutboxMessageId,
       required this.lastMessageId});
 
-  /// [replyCount] Number of times the message was directly or indirectly replied
+  /// [replyCount] Number of times the message was directly or indirectly
   final int replyCount;
 
-  /// [recentRepliers] Recent repliers to the message; available in channels with a discussion supergroup
+  /// [recentRepliers] Recent repliers to the message; available in channels
+  /// a discussion supergroup
   final List<MessageSender> recentRepliers;
 
-  /// [lastReadInboxMessageId] Identifier of the last read incoming reply to the message
+  /// [lastReadInboxMessageId] Identifier of the last read incoming reply to the
   final int lastReadInboxMessageId;
 
-  /// [lastReadOutboxMessageId] Identifier of the last read outgoing reply to the message
+  /// [lastReadOutboxMessageId] Identifier of the last read outgoing reply to
+  /// message
   final int lastReadOutboxMessageId;
 
   /// [lastMessageId] Identifier of the last reply to the message

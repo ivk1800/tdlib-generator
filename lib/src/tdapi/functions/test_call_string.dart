@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Returns the received string; for testing only. This is an offline method. Can be called before authorization
+/// Returns the received string; for testing only. This is an offline method.
+/// be called before authorization
 class TestCallString extends TdFunction {
   TestCallString({required this.x});
 

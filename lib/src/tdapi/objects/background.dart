@@ -16,13 +16,14 @@ class Background extends TdObject {
   /// [isDefault] True, if this is one of default backgrounds
   final bool isDefault;
 
-  /// [isDark] True, if the background is dark and is recommended to be used with dark theme
+  /// [isDark] True, if the background is dark and is recommended to be used
+  /// dark theme
   final bool isDark;
 
   /// [name] Unique background name
   final String name;
 
-  /// [document] Document with the background; may be null. Null only for filled backgrounds
+  /// [document] Document with the background; may be null. Null only for filled
   final Document? document;
 
   /// [type] Type of the background

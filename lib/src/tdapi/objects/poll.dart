@@ -26,7 +26,7 @@ class Poll extends TdObject {
   /// [totalVoterCount] Total number of voters, participating in the poll
   final int totalVoterCount;
 
-  /// [recentVoterUserIds] User identifiers of recent voters, if the poll is non-anonymous
+  /// [recentVoterUserIds] User identifiers of recent voters, if the poll is
   final List<int> recentVoterUserIds;
 
   /// [isAnonymous] True, if the poll is anonymous
@@ -35,10 +35,11 @@ class Poll extends TdObject {
   /// [type] Type of the poll
   final PollType type;
 
-  /// [openPeriod] Amount of time the poll will be active after creation, in seconds
+  /// [openPeriod] Amount of time the poll will be active after creation, in
   final int openPeriod;
 
-  /// [closeDate] Point in time (Unix timestamp) when the poll will be automatically closed
+  /// [closeDate] Point in time (Unix timestamp) when the poll will be
+  /// closed
   final int closeDate;
 
   /// [isClosed] True, if the poll is closed

@@ -8,10 +8,12 @@ class TermsOfService extends TdObject {
   /// [text] Text of the terms of service
   final FormattedText text;
 
-  /// [minUserAge] The minimum age of a user to be able to accept the terms; 0 if any
+  /// [minUserAge] The minimum age of a user to be able to accept the terms; 0
+  /// any
   final int minUserAge;
 
-  /// [showPopup] True, if a blocking popup with terms of service must be shown to the user
+  /// [showPopup] True, if a blocking popup with terms of service must be shown
+  /// the user
   final bool showPopup;
 
   static const String CONSTRUCTOR = 'termsOfService';

@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// A privacy setting for managing whether peer-to-peer connections can be used for calls
+/// A privacy setting for managing whether peer-to-peer connections can be
+/// for calls
 class UserPrivacySettingAllowPeerToPeerCalls extends UserPrivacySetting {
   const UserPrivacySettingAllowPeerToPeerCalls();
 

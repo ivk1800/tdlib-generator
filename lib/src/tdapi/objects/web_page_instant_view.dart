@@ -21,7 +21,8 @@ class WebPageInstantView extends TdObject {
   /// [isRtl] True, if the instant view must be shown from right to left
   final bool isRtl;
 
-  /// [isFull] True, if the instant view contains the full page. A network request might be needed to get the full web page instant view
+  /// [isFull] True, if the instant view contains the full page. A network
+  /// might be needed to get the full web page instant view
   final bool isFull;
 
   static const String CONSTRUCTOR = 'webPageInstantView';

@@ -4,7 +4,9 @@ part of '../tdapi.dart';
 class InputStickerAnimated extends InputSticker {
   InputStickerAnimated({required this.sticker, required this.emojis});
 
-  /// [sticker] File with the animated sticker. Only local or uploaded within a week files are supported. See https://core.telegram.org/animated_stickers#technical-requirements for technical requirements
+  /// [sticker] File with the animated sticker. Only local or uploaded within a
+  /// files are supported. See
+  /// for technical requirements
   final InputFile sticker;
 
   /// [emojis] Emojis corresponding to the sticker

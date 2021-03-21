@@ -17,7 +17,8 @@ class Invoice extends TdObject {
   /// [currency] ISO 4217 currency code
   final String currency;
 
-  /// [priceParts] A list of objects used to calculate the total price of the product
+  /// [priceParts] A list of objects used to calculate the total price of the
+  ///
   final List<LabeledPricePart> priceParts;
 
   /// [isTest] True, if the payment is a test payment
@@ -32,13 +33,15 @@ class Invoice extends TdObject {
   /// [needEmailAddress] True, if the user's email address is needed for payment
   final bool needEmailAddress;
 
-  /// [needShippingAddress] True, if the user's shipping address is needed for payment
+  /// [needShippingAddress] True, if the user's shipping address is needed for
   final bool needShippingAddress;
 
-  /// [sendPhoneNumberToProvider] True, if the user's phone number will be sent to the provider
+  /// [sendPhoneNumberToProvider] True, if the user's phone number will be sent
+  /// the provider
   final bool sendPhoneNumberToProvider;
 
-  /// [sendEmailAddressToProvider] True, if the user's email address will be sent to the provider
+  /// [sendEmailAddressToProvider] True, if the user's email address will be
+  /// to the provider
   final bool sendEmailAddressToProvider;
 
   /// [isFlexible] True, if the total price depends on the shipping method

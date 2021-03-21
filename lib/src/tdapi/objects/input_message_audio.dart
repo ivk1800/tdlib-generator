@@ -16,16 +16,18 @@ class InputMessageAudio extends InputMessageContent {
   /// [albumCoverThumbnail] Thumbnail of the cover for the album, if available
   final InputThumbnail albumCoverThumbnail;
 
-  /// [duration] Duration of the audio, in seconds; may be replaced by the server
+  /// [duration] Duration of the audio, in seconds; may be replaced by the
+  ///
   final int duration;
 
   /// [title] Title of the audio; 0-64 characters; may be replaced by the server
   final String title;
 
-  /// [performer] Performer of the audio; 0-64 characters, may be replaced by the server
+  /// [performer] Performer of the audio; 0-64 characters, may be replaced by
+  /// server
   final String performer;
 
-  /// [caption] Audio caption; 0-GetOption("message_caption_length_max") characters
+  /// [caption] Audio caption; 0-GetOption("message_caption_length_max")
   final FormattedText caption;
 
   static const String CONSTRUCTOR = 'inputMessageAudio';

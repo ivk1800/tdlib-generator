@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Applies if a user chooses some previously saved payment credentials. To use their previously saved credentials, the user must have a valid temporary password
+/// Applies if a user chooses some previously saved payment credentials. To
+/// their previously saved credentials, the user must have a valid temporary
 class InputCredentialsSaved extends InputCredentials {
   InputCredentialsSaved({required this.savedCredentialsId});
 

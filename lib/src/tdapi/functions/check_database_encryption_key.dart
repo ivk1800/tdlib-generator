@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Checks the database encryption key for correctness. Works only when the current authorization state is authorizationStateWaitEncryptionKey
+/// Checks the database encryption key for correctness. Works only when the
+/// authorization state is authorizationStateWaitEncryptionKey
 class CheckDatabaseEncryptionKey extends TdFunction {
   CheckDatabaseEncryptionKey({required this.encryptionKey});
 

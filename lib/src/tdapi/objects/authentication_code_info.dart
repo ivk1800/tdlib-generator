@@ -14,7 +14,8 @@ class AuthenticationCodeInfo extends TdObject {
   /// [type] Describes the way the code was sent to the user
   final AuthenticationCodeType type;
 
-  /// [nextType] Describes the way the next code will be sent to the user; may be null
+  /// [nextType] Describes the way the next code will be sent to the user; may
+  /// null
   final AuthenticationCodeType? nextType;
 
   /// [timeout] Timeout before the code should be re-sent, in seconds

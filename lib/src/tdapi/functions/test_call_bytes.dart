@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Returns the received bytes; for testing only. This is an offline method. Can be called before authorization
+/// Returns the received bytes; for testing only. This is an offline method.
+/// be called before authorization
 class TestCallBytes extends TdFunction {
   TestCallBytes({required this.x});
 

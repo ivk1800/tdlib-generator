@@ -1,6 +1,6 @@
 part of '../tdapi.dart';
 
-/// The secret chat is not yet created; waiting for the other user to get online
+/// The secret chat is not yet created; waiting for the other user to get
 class SecretChatStatePending extends SecretChatState {
   const SecretChatStatePending();
 

@@ -1,6 +1,9 @@
 part of '../tdapi.dart';
 
-/// A request to send a message has reached the Telegram server. This doesn't mean that the message will be sent successfully or even that the send message request will be processed. This update will be sent only if the option "use_quick_ack" is set to true. This update may be sent multiple times for the same message
+/// A request to send a message has reached the Telegram server. This doesn't
+/// that the message will be sent successfully or even that the send message
+/// will be processed. This update will be sent only if the option
+/// is set to true. This update may be sent multiple times for the same
 class UpdateMessageSendAcknowledged extends Update {
   UpdateMessageSendAcknowledged(
       {required this.chatId, required this.messageId});

@@ -19,7 +19,8 @@ class InputMessageVideo extends InputMessageContent {
   /// [thumbnail] Video thumbnail, if available
   final InputThumbnail thumbnail;
 
-  /// [addedStickerFileIds] File identifiers of the stickers added to the video, if applicable
+  /// [addedStickerFileIds] File identifiers of the stickers added to the video,
+  /// applicable
   final List<int> addedStickerFileIds;
 
   /// [duration] Duration of the video, in seconds
@@ -34,10 +35,11 @@ class InputMessageVideo extends InputMessageContent {
   /// [supportsStreaming] True, if the video should be tried to be streamed
   final bool supportsStreaming;
 
-  /// [caption] Video caption; 0-GetOption("message_caption_length_max") characters
+  /// [caption] Video caption; 0-GetOption("message_caption_length_max")
   final FormattedText caption;
 
-  /// [ttl] Video TTL (Time To Live), in seconds (0-60). A non-zero TTL can be specified only in private chats
+  /// [ttl] Video TTL (Time To Live), in seconds (0-60). A non-zero TTL can be
+  /// only in private chats
   final int ttl;
 
   static const String CONSTRUCTOR = 'inputMessageVideo';

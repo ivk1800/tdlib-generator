@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// An authentication code is delivered via an SMS message to the specified phone number
+/// An authentication code is delivered via an SMS message to the specified
+/// number
 class AuthenticationCodeTypeSms extends AuthenticationCodeType {
   AuthenticationCodeTypeSms({required this.length});
 

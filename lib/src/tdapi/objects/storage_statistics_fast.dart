@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Contains approximate storage usage statistics, excluding files of unknown file type
+/// Contains approximate storage usage statistics, excluding files of unknown
+/// type
 class StorageStatisticsFast extends TdObject {
   StorageStatisticsFast(
       {required this.filesSize,

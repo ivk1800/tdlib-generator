@@ -13,7 +13,8 @@ class ChangeStickerSet extends TdFunction {
   /// [isInstalled] The new value of is_installed
   final bool isInstalled;
 
-  /// [isArchived] The new value of is_archived. A sticker set can't be installed and archived simultaneously
+  /// [isArchived] The new value of is_archived. A sticker set can't be
+  /// and archived simultaneously
   final bool isArchived;
 
   /// callback sign

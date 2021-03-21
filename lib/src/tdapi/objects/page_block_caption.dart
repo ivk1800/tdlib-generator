@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Contains a caption of an instant view web page block, consisting of a text and a trailing credit
+/// Contains a caption of an instant view web page block, consisting of a text
+/// a trailing credit
 class PageBlockCaption extends TdObject {
   PageBlockCaption({required this.text, required this.credit});
 

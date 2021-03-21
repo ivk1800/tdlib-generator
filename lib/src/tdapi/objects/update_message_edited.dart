@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// A message was edited. Changes in the message content will come in a separate updateMessageContent
+/// A message was edited. Changes in the message content will come in a
+/// updateMessageContent
 class UpdateMessageEdited extends Update {
   UpdateMessageEdited(
       {required this.chatId,

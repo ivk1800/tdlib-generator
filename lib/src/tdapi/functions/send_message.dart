@@ -13,7 +13,8 @@ class SendMessage extends TdFunction {
   /// [chatId] Target chat
   final int chatId;
 
-  /// [messageThreadId] If not 0, a message thread identifier in which the message will be sent
+  /// [messageThreadId] If not 0, a message thread identifier in which the
+  /// will be sent
   final int messageThreadId;
 
   /// [replyToMessageId] Identifier of the message to reply to or 0

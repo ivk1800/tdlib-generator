@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Returns only failed to send messages. This filter can be used only if the message database is used
+/// Returns only failed to send messages. This filter can be used only if the
+/// database is used
 class SearchMessagesFilterFailedToSend extends SearchMessagesFilter {
   const SearchMessagesFilterFailedToSend();
 

@@ -27,10 +27,12 @@ class Audio extends TdObject {
   /// [mimeType] The MIME type of the file; as defined by the sender
   final String mimeType;
 
-  /// [albumCoverMinithumbnail] The minithumbnail of the album cover; may be null
+  /// [albumCoverMinithumbnail] The minithumbnail of the album cover; may be
   final Minithumbnail? albumCoverMinithumbnail;
 
-  /// [albumCoverThumbnail] The thumbnail of the album cover in JPEG format; as defined by the sender. The full size thumbnail should be extracted from the downloaded file; may be null
+  /// [albumCoverThumbnail] The thumbnail of the album cover in JPEG format; as
+  /// by the sender. The full size thumbnail should be extracted from the
+  /// file; may be null
   final Thumbnail? albumCoverThumbnail;
 
   /// [audio] File containing the audio

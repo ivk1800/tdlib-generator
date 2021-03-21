@@ -15,7 +15,8 @@ class File extends TdObject {
   /// [size] File size; 0 if unknown
   final int size;
 
-  /// [expectedSize] Expected file size in case the exact file size is unknown, but an approximate size is known. Can be used to show download/upload progress
+  /// [expectedSize] Expected file size in case the exact file size is unknown,
+  /// an approximate size is known. Can be used to show download/upload progress
   final int expectedSize;
 
   /// [local] Information about the local copy of the file

@@ -7,7 +7,7 @@ class PushMessageContentText extends PushMessageContent {
   /// [text] Message text
   final String text;
 
-  /// [isPinned] True, if the message is a pinned message with the specified content
+  /// [isPinned] True, if the message is a pinned message with the specified
   final bool isPinned;
 
   static const String CONSTRUCTOR = 'pushMessageContentText';

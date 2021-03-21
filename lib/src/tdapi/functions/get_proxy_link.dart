@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Returns an HTTPS link, which can be used to add a proxy. Available only for SOCKS5 and MTProto proxies. Can be called before authorization
+/// Returns an HTTPS link, which can be used to add a proxy. Available only
+/// SOCKS5 and MTProto proxies. Can be called before authorization
 class GetProxyLink extends TdFunction {
   GetProxyLink({required this.proxyId});
 

@@ -25,7 +25,7 @@ class CallStateReady extends CallState {
   /// [emojis] Encryption key emojis fingerprint
   final List<String> emojis;
 
-  /// [allowP2p] True, if peer-to-peer connection is allowed by users privacy settings
+  /// [allowP2p] True, if peer-to-peer connection is allowed by users privacy
   final bool allowP2p;
 
   static const String CONSTRUCTOR = 'callStateReady';

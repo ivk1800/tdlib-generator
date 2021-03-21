@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Returns a list of common group chats with a given user. Chats are sorted by their type and creation date
+/// Returns a list of common group chats with a given user. Chats are sorted
+/// their type and creation date
 class GetGroupsInCommon extends TdFunction {
   GetGroupsInCommon(
       {required this.userId, required this.offsetChatId, required this.limit});
@@ -8,7 +9,8 @@ class GetGroupsInCommon extends TdFunction {
   /// [userId] User identifier
   final int userId;
 
-  /// [offsetChatId] Chat identifier starting from which to return chats; use 0 for the first request
+  /// [offsetChatId] Chat identifier starting from which to return chats; use 0
+  /// the first request
   final int offsetChatId;
 
   /// [limit] The maximum number of chats to be returned; up to 100

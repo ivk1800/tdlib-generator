@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Returns the received vector of numbers; for testing only. This is an offline method. Can be called before authorization
+/// Returns the received vector of numbers; for testing only. This is an
+/// method. Can be called before authorization
 class TestCallVectorInt extends TdFunction {
   TestCallVectorInt({required this.x});
 

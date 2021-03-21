@@ -1,6 +1,6 @@
 part of '../tdapi.dart';
 
-/// A Telegram Passport element to be saved containing the user's personal details
+/// A Telegram Passport element to be saved containing the user's personal
 class InputPassportElementPersonalDetails extends InputPassportElement {
   InputPassportElementPersonalDetails({required this.personalDetails});
 

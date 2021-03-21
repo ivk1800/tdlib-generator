@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// A cashtag text, beginning with "$" and consisting of capital english letters (i.e. "$USD")
+/// A cashtag text, beginning with "$" and consisting of capital english
+/// (i.e. "$USD")
 class TextEntityTypeCashtag extends TextEntityType {
   const TextEntityTypeCashtag();
 

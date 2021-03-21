@@ -4,7 +4,8 @@ part of '../tdapi.dart';
 class CallStateError extends CallState {
   CallStateError({required this.error});
 
-  /// [error] Error. An error with the code 4005000 will be returned if an outgoing call is missed because of an expired timeout
+  /// [error] Error. An error with the code 4005000 will be returned if an
+  /// call is missed because of an expired timeout
   final TdError error;
 
   static const String CONSTRUCTOR = 'callStateError';

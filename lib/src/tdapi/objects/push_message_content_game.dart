@@ -7,7 +7,7 @@ class PushMessageContentGame extends PushMessageContent {
   /// [title] Game title, empty for pinned game message
   final String title;
 
-  /// [isPinned] True, if the message is a pinned message with the specified content
+  /// [isPinned] True, if the message is a pinned message with the specified
   final bool isPinned;
 
   static const String CONSTRUCTOR = 'pushMessageContentGame';

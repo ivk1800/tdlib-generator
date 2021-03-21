@@ -41,7 +41,8 @@ class Chat extends TdObject {
   /// [photo] Chat photo; may be null
   final ChatPhotoInfo? photo;
 
-  /// [permissions] Actions that non-administrator chat members are allowed to take in the chat
+  /// [permissions] Actions that non-administrator chat members are allowed to
+  /// in the chat
   final ChatPermissions permissions;
 
   /// [lastMessage] Last message in the chat; may be null
@@ -53,22 +54,27 @@ class Chat extends TdObject {
   /// [isMarkedAsUnread] True, if the chat is marked as unread
   final bool isMarkedAsUnread;
 
-  /// [isBlocked] True, if the chat is blocked by the current user and private messages from the chat can't be received
+  /// [isBlocked] True, if the chat is blocked by the current user and private
+  /// from the chat can't be received
   final bool isBlocked;
 
   /// [hasScheduledMessages] True, if the chat has scheduled messages
   final bool hasScheduledMessages;
 
-  /// [canBeDeletedOnlyForSelf] True, if the chat messages can be deleted only for the current user while other users will continue to see the messages
+  /// [canBeDeletedOnlyForSelf] True, if the chat messages can be deleted only
+  /// the current user while other users will continue to see the messages
   final bool canBeDeletedOnlyForSelf;
 
-  /// [canBeDeletedForAllUsers] True, if the chat messages can be deleted for all users
+  /// [canBeDeletedForAllUsers] True, if the chat messages can be deleted for
+  /// users
   final bool canBeDeletedForAllUsers;
 
-  /// [canBeReported] True, if the chat can be reported to Telegram moderators through reportChat
+  /// [canBeReported] True, if the chat can be reported to Telegram moderators
+  /// reportChat
   final bool canBeReported;
 
-  /// [defaultDisableNotification] Default value of the disable_notification parameter, used when a message is sent to the chat
+  /// [defaultDisableNotification] Default value of the disable_notification
+  /// used when a message is sent to the chat
   final bool defaultDisableNotification;
 
   /// [unreadCount] Number of unread messages in the chat
@@ -80,28 +86,33 @@ class Chat extends TdObject {
   /// [lastReadOutboxMessageId] Identifier of the last read outgoing message
   final int lastReadOutboxMessageId;
 
-  /// [unreadMentionCount] Number of unread messages with a mention/reply in the chat
+  /// [unreadMentionCount] Number of unread messages with a mention/reply in the
   final int unreadMentionCount;
 
   /// [notificationSettings] Notification settings for this chat
   final ChatNotificationSettings notificationSettings;
 
-  /// [actionBar] Describes actions which should be possible to do through a chat action bar; may be null
+  /// [actionBar] Describes actions which should be possible to do through a
+  /// action bar; may be null
   final ChatActionBar? actionBar;
 
-  /// [voiceChatGroupCallId] Group call identifier of an active voice chat; 0 if none or unknown. The voice chat can be received through the method getGroupCall
+  /// [voiceChatGroupCallId] Group call identifier of an active voice chat; 0 if
+  /// or unknown. The voice chat can be received through the method getGroupCall
   final int voiceChatGroupCallId;
 
   /// [isVoiceChatEmpty] True, if an active voice chat is empty
   final bool isVoiceChatEmpty;
 
-  /// [replyMarkupMessageId] Identifier of the message from which reply markup needs to be used; 0 if there is no default custom reply markup in the chat
+  /// [replyMarkupMessageId] Identifier of the message from which reply markup
+  /// to be used; 0 if there is no default custom reply markup in the chat
   final int replyMarkupMessageId;
 
   /// [draftMessage] A draft of a message in the chat; may be null
   final DraftMessage? draftMessage;
 
-  /// [clientData] Contains application-specific data associated with the chat. (For example, the chat scroll position or local chat notification settings can be stored here.) Persistent if the message database is used
+  /// [clientData] Contains application-specific data associated with the chat.
+  /// example, the chat scroll position or local chat notification settings can
+  /// stored here.) Persistent if the message database is used
   final String clientData;
 
   static const String CONSTRUCTOR = 'chat';

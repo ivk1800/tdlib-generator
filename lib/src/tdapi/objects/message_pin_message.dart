@@ -4,7 +4,8 @@ part of '../tdapi.dart';
 class MessagePinMessage extends MessageContent {
   MessagePinMessage({required this.messageId});
 
-  /// [messageId] Identifier of the pinned message, can be an identifier of a deleted message or 0
+  /// [messageId] Identifier of the pinned message, can be an identifier of a
+  /// message or 0
   final int messageId;
 
   static const String CONSTRUCTOR = 'messagePinMessage';

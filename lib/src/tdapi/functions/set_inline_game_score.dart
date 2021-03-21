@@ -21,7 +21,8 @@ class SetInlineGameScore extends TdFunction {
   /// [score] The new score
   final int score;
 
-  /// [force] Pass true to update the score even if it decreases. If the score is 0, the user will be deleted from the high score table
+  /// [force] Pass true to update the score even if it decreases. If the score
+  /// 0, the user will be deleted from the high score table
   final bool force;
 
   /// callback sign

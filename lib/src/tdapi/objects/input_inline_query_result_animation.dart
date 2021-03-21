@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Represents a link to an animated GIF or an animated (i.e. without sound) H.264/MPEG-4 AVC video
+/// Represents a link to an animated GIF or an animated (i.e. without sound)
+/// AVC video
 class InputInlineQueryResultAnimation extends InputInlineQueryResult {
   InputInlineQueryResultAnimation(
       {required this.id,
@@ -21,16 +22,18 @@ class InputInlineQueryResultAnimation extends InputInlineQueryResult {
   /// [title] Title of the query result
   final String title;
 
-  /// [thumbnailUrl] URL of the result thumbnail (JPEG, GIF, or MPEG4), if it exists
+  /// [thumbnailUrl] URL of the result thumbnail (JPEG, GIF, or MPEG4), if it
   final String thumbnailUrl;
 
-  /// [thumbnailMimeType] MIME type of the video thumbnail. If non-empty, must be one of "image/jpeg", "image/gif" and "video/mp4"
+  /// [thumbnailMimeType] MIME type of the video thumbnail. If non-empty, must
+  /// one of "image/jpeg", "image/gif" and "video/mp4"
   final String thumbnailMimeType;
 
   /// [videoUrl] The URL of the video file (file size must not exceed 1MB)
   final String videoUrl;
 
-  /// [videoMimeType] MIME type of the video file. Must be one of "image/gif" and "video/mp4"
+  /// [videoMimeType] MIME type of the video file. Must be one of "image/gif"
+  /// "video/mp4"
   final String videoMimeType;
 
   /// [videoDuration] Duration of the video, in seconds
@@ -42,10 +45,13 @@ class InputInlineQueryResultAnimation extends InputInlineQueryResult {
   /// [videoHeight] Height of the video
   final int videoHeight;
 
-  /// [replyMarkup] The message reply markup. Must be of type replyMarkupInlineKeyboard or null
+  /// [replyMarkup] The message reply markup. Must be of type
+  /// or null
   final ReplyMarkup? replyMarkup;
 
-  /// [inputMessageContent] The content of the message to be sent. Must be one of the following types: InputMessageText, InputMessageAnimation, InputMessageLocation, InputMessageVenue or InputMessageContact
+  /// [inputMessageContent] The content of the message to be sent. Must be one
+  /// the following types: InputMessageText, InputMessageAnimation,
+  /// InputMessageVenue or InputMessageContact
   final InputMessageContent inputMessageContent;
 
   static const String CONSTRUCTOR = 'inputInlineQueryResultAnimation';

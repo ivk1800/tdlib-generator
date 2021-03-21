@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// The user needs to confirm authorization on another logged in device by scanning a QR code with the provided link
+/// The user needs to confirm authorization on another logged in device by
+/// a QR code with the provided link
 class AuthorizationStateWaitOtherDeviceConfirmation extends AuthorizationState {
   AuthorizationStateWaitOtherDeviceConfirmation({required this.link});
 

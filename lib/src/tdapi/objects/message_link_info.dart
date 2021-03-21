@@ -12,16 +12,17 @@ class MessageLinkInfo extends TdObject {
   /// [isPublic] True, if the link is a public link for a message in a chat
   final bool isPublic;
 
-  /// [chatId] If found, identifier of the chat to which the message belongs, 0 otherwise
+  /// [chatId] If found, identifier of the chat to which the message belongs, 0
   final int chatId;
 
   /// [message] If found, the linked message; may be null
   final Message? message;
 
-  /// [forAlbum] True, if the whole media album to which the message belongs is linked
+  /// [forAlbum] True, if the whole media album to which the message belongs is
   final bool forAlbum;
 
-  /// [forComment] True, if the message is linked as a channel post comment or from a message thread
+  /// [forComment] True, if the message is linked as a channel post comment or
+  /// a message thread
   final bool forComment;
 
   static const String CONSTRUCTOR = 'messageLinkInfo';

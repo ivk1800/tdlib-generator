@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Changes the location of the current user. Needs to be called if GetOption("is_location_visible") is true and location changes for more than 1 kilometer
+/// Changes the location of the current user. Needs to be called if
+/// is true and location changes for more than 1 kilometer
 class SetLocation extends TdFunction {
   SetLocation({required this.location});
 

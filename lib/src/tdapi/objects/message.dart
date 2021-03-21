@@ -43,10 +43,11 @@ class Message extends TdObject {
   /// [chatId] Chat identifier
   final int chatId;
 
-  /// [sendingState] Information about the sending state of the message; may be null
+  /// [sendingState] Information about the sending state of the message; may be
   final MessageSendingState? sendingState;
 
-  /// [schedulingState] Information about the scheduling state of the message; may be null
+  /// [schedulingState] Information about the scheduling state of the message;
+  /// be null
   final MessageSchedulingState? schedulingState;
 
   /// [isOutgoing] True, if the message is outgoing
@@ -55,16 +56,19 @@ class Message extends TdObject {
   /// [isPinned] True, if the message is pinned
   final bool isPinned;
 
-  /// [canBeEdited] True, if the message can be edited. For live location and poll messages this fields shows whether editMessageLiveLocation or stopPoll can be used with this message by the application
+  /// [canBeEdited] True, if the message can be edited. For live location and
+  /// messages this fields shows whether editMessageLiveLocation or stopPoll can
+  /// used with this message by the application
   final bool canBeEdited;
 
   /// [canBeForwarded] True, if the message can be forwarded
   final bool canBeForwarded;
 
-  /// [canBeDeletedOnlyForSelf] True, if the message can be deleted only for the current user while other users will continue to see it
+  /// [canBeDeletedOnlyForSelf] True, if the message can be deleted only for the
+  /// user while other users will continue to see it
   final bool canBeDeletedOnlyForSelf;
 
-  /// [canBeDeletedForAllUsers] True, if the message can be deleted for all users
+  /// [canBeDeletedForAllUsers] True, if the message can be deleted for all
   final bool canBeDeletedForAllUsers;
 
   /// [canGetStatistics] True, if the message statistics are available
@@ -73,10 +77,12 @@ class Message extends TdObject {
   /// [canGetMessageThread] True, if the message thread info is available
   final bool canGetMessageThread;
 
-  /// [isChannelPost] True, if the message is a channel post. All messages to channels are channel posts, all other messages are not channel posts
+  /// [isChannelPost] True, if the message is a channel post. All messages to
+  /// are channel posts, all other messages are not channel posts
   final bool isChannelPost;
 
-  /// [containsUnreadMention] True, if the message contains an unread mention for the current user
+  /// [containsUnreadMention] True, if the message contains an unread mention
+  /// the current user
   final bool containsUnreadMention;
 
   /// [date] Point in time (Unix timestamp) when the message was sent
@@ -88,34 +94,44 @@ class Message extends TdObject {
   /// [forwardInfo] Information about the initial message sender; may be null
   final MessageForwardInfo? forwardInfo;
 
-  /// [interactionInfo] Information about interactions with the message; may be null
+  /// [interactionInfo] Information about interactions with the message; may be
   final MessageInteractionInfo? interactionInfo;
 
-  /// [replyInChatId] If non-zero, the identifier of the chat to which the replied message belongs; Currently, only messages in the Replies chat can have different reply_in_chat_id and chat_id
+  /// [replyInChatId] If non-zero, the identifier of the chat to which the
+  /// message belongs; Currently, only messages in the Replies chat can have
+  /// reply_in_chat_id and chat_id
   final int replyInChatId;
 
-  /// [replyToMessageId] If non-zero, the identifier of the message this message is replying to; can be the identifier of a deleted message
+  /// [replyToMessageId] If non-zero, the identifier of the message this message
+  /// replying to; can be the identifier of a deleted message
   final int replyToMessageId;
 
-  /// [messageThreadId] If non-zero, the identifier of the message thread the message belongs to; unique within the chat to which the message belongs
+  /// [messageThreadId] If non-zero, the identifier of the message thread the
+  /// belongs to; unique within the chat to which the message belongs
   final int messageThreadId;
 
-  /// [ttl] For self-destructing messages, the message's TTL (Time To Live), in seconds; 0 if none. TDLib will send updateDeleteMessages or updateMessageContent once the TTL expires
+  /// [ttl] For self-destructing messages, the message's TTL (Time To Live), in
+  /// 0 if none. TDLib will send updateDeleteMessages or updateMessageContent
+  /// the TTL expires
   final int ttl;
 
   /// [ttlExpiresIn] Time left before the message expires, in seconds
   final double ttlExpiresIn;
 
-  /// [viaBotUserId] If non-zero, the user identifier of the bot through which this message was sent
+  /// [viaBotUserId] If non-zero, the user identifier of the bot through which
+  /// message was sent
   final int viaBotUserId;
 
-  /// [authorSignature] For channel posts and anonymous group messages, optional author signature
+  /// [authorSignature] For channel posts and anonymous group messages, optional
+  /// signature
   final String authorSignature;
 
-  /// [mediaAlbumId] Unique identifier of an album this message belongs to. Only audios, documents, photos and videos can be grouped together in albums
+  /// [mediaAlbumId] Unique identifier of an album this message belongs to. Only
+  /// documents, photos and videos can be grouped together in albums
   final int mediaAlbumId;
 
-  /// [restrictionReason] If non-empty, contains a human-readable description of the reason why access to this message must be restricted
+  /// [restrictionReason] If non-empty, contains a human-readable description of
+  /// reason why access to this message must be restricted
   final String restrictionReason;
 
   /// [content] Content of the message

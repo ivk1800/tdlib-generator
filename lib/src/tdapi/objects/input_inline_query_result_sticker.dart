@@ -17,7 +17,8 @@ class InputInlineQueryResultSticker extends InputInlineQueryResult {
   /// [thumbnailUrl] URL of the sticker thumbnail, if it exists
   final String thumbnailUrl;
 
-  /// [stickerUrl] The URL of the WEBP or TGS sticker (sticker file size must not exceed 5MB)
+  /// [stickerUrl] The URL of the WEBP or TGS sticker (sticker file size must
+  /// exceed 5MB)
   final String stickerUrl;
 
   /// [stickerWidth] Width of the sticker
@@ -26,10 +27,13 @@ class InputInlineQueryResultSticker extends InputInlineQueryResult {
   /// [stickerHeight] Height of the sticker
   final int stickerHeight;
 
-  /// [replyMarkup] The message reply markup. Must be of type replyMarkupInlineKeyboard or null
+  /// [replyMarkup] The message reply markup. Must be of type
+  /// or null
   final ReplyMarkup? replyMarkup;
 
-  /// [inputMessageContent] The content of the message to be sent. Must be one of the following types: InputMessageText, inputMessageSticker, InputMessageLocation, InputMessageVenue or InputMessageContact
+  /// [inputMessageContent] The content of the message to be sent. Must be one
+  /// the following types: InputMessageText, inputMessageSticker,
+  /// InputMessageVenue or InputMessageContact
   final InputMessageContent inputMessageContent;
 
   static const String CONSTRUCTOR = 'inputInlineQueryResultSticker';

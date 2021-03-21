@@ -1,6 +1,6 @@
 part of '../tdapi.dart';
 
-/// The file was sent to a secret chat (the file type is not known to the server)
+/// The file was sent to a secret chat (the file type is not known to the
 class FileTypeSecret extends FileType {
   const FileTypeSecret();
 

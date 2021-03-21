@@ -1,6 +1,8 @@
 part of '../tdapi.dart';
 
-/// A list of chats usually located at the top of the main chat list. Unmuted chats are automatically moved from the Archive to the Main chat list when a new message arrives
+/// A list of chats usually located at the top of the main chat list. Unmuted
+/// are automatically moved from the Archive to the Main chat list when a new
+/// arrives
 class ChatListArchive extends ChatList {
   const ChatListArchive();
 

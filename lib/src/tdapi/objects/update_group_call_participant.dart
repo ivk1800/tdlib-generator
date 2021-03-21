@@ -1,6 +1,8 @@
 part of '../tdapi.dart';
 
-/// Information about a group call participant was changed. The updates are sent only after the group call is received through getGroupCall and only if the call is joined or being joined
+/// Information about a group call participant was changed. The updates are
+/// only after the group call is received through getGroupCall and only if the
+/// is joined or being joined
 class UpdateGroupCallParticipant extends Update {
   UpdateGroupCallParticipant(
       {required this.groupCallId, required this.participant});

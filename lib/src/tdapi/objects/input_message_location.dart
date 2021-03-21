@@ -11,13 +11,17 @@ class InputMessageLocation extends InputMessageContent {
   /// [location] Location to be sent
   final Location location;
 
-  /// [livePeriod] Period for which the location can be updated, in seconds; should be between 60 and 86400 for a live location and 0 otherwise
+  /// [livePeriod] Period for which the location can be updated, in seconds;
+  /// be between 60 and 86400 for a live location and 0 otherwise
   final int livePeriod;
 
-  /// [heading] For live locations, a direction in which the location moves, in degrees; 1-360. Pass 0 if unknown
+  /// [heading] For live locations, a direction in which the location moves, in
+  /// 1-360. Pass 0 if unknown
   final int heading;
 
-  /// [proximityAlertRadius] For live locations, a maximum distance to another chat member for proximity alerts, in meters (0-100000). Pass 0 if the notification is disabled. Can't be enabled in channels and Saved Messages
+  /// [proximityAlertRadius] For live locations, a maximum distance to another
+  /// member for proximity alerts, in meters (0-100000). Pass 0 if the
+  /// is disabled. Can't be enabled in channels and Saved Messages
   final int proximityAlertRadius;
 
   static const String CONSTRUCTOR = 'inputMessageLocation';

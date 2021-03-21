@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Returns the received vector of objects containing a string; for testing only. This is an offline method. Can be called before authorization
+/// Returns the received vector of objects containing a string; for testing
+/// This is an offline method. Can be called before authorization
 class TestCallVectorStringObject extends TdFunction {
   TestCallVectorStringObject({required this.x});
 

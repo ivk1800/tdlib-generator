@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Represents the type of a user. The following types are possible: regular users, deleted users and bots
+/// Represents the type of a user. The following types are possible: regular
+/// deleted users and bots
 abstract class UserType extends TdObject {
   const UserType();
 

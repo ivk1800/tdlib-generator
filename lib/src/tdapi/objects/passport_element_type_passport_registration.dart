@@ -1,6 +1,6 @@
 part of '../tdapi.dart';
 
-/// A Telegram Passport element containing the registration page of the user's passport
+/// A Telegram Passport element containing the registration page of the user's
 class PassportElementTypePassportRegistration extends PassportElementType {
   const PassportElementTypePassportRegistration();
 

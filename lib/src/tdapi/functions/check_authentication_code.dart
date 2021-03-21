@@ -1,10 +1,12 @@
 part of '../tdapi.dart';
 
-/// Checks the authentication code. Works only when the current authorization state is authorizationStateWaitCode
+/// Checks the authentication code. Works only when the current authorization
+/// is authorizationStateWaitCode
 class CheckAuthenticationCode extends TdFunction {
   CheckAuthenticationCode({required this.code});
 
-  /// [code] The verification code received via SMS, Telegram message, phone call, or flash call
+  /// [code] The verification code received via SMS, Telegram message, phone
+  /// or flash call
   final String code;
 
   /// callback sign

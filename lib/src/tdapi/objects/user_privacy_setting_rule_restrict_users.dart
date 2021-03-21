@@ -4,7 +4,8 @@ part of '../tdapi.dart';
 class UserPrivacySettingRuleRestrictUsers extends UserPrivacySettingRule {
   UserPrivacySettingRuleRestrictUsers({required this.userIds});
 
-  /// [userIds] The user identifiers, total number of users in all rules must not exceed 1000
+  /// [userIds] The user identifiers, total number of users in all rules must
+  /// exceed 1000
   final List<int> userIds;
 
   static const String CONSTRUCTOR = 'userPrivacySettingRuleRestrictUsers';

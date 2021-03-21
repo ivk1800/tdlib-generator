@@ -1,6 +1,8 @@
 part of '../tdapi.dart';
 
-/// Recovers the password with a password recovery code sent to an email address that was previously set up. Works only when the current authorization state is authorizationStateWaitPassword
+/// Recovers the password with a password recovery code sent to an email
+/// that was previously set up. Works only when the current authorization
+/// is authorizationStateWaitPassword
 class RecoverAuthenticationPassword extends TdFunction {
   RecoverAuthenticationPassword({required this.recoveryCode});
 

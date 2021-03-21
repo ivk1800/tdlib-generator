@@ -17,7 +17,8 @@ class MessageSendingStateFailed extends MessageSendingState {
   /// [canRetry] True, if the message can be re-sent
   final bool canRetry;
 
-  /// [retryAfter] Time left before the message can be re-sent, in seconds. No update is sent when this field changes
+  /// [retryAfter] Time left before the message can be re-sent, in seconds. No
+  /// is sent when this field changes
   final double retryAfter;
 
   static const String CONSTRUCTOR = 'messageSendingStateFailed';

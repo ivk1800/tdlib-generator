@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Number of unread messages in a chat list has changed. This update is sent only if the message database is used
+/// Number of unread messages in a chat list has changed. This update is sent
+/// if the message database is used
 class UpdateUnreadMessageCount extends Update {
   UpdateUnreadMessageCount(
       {required this.chatList,

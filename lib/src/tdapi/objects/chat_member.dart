@@ -12,16 +12,18 @@ class ChatMember extends TdObject {
   /// [userId] User identifier of the chat member
   final int userId;
 
-  /// [inviterUserId] Identifier of a user that invited/promoted/banned this member in the chat; 0 if unknown
+  /// [inviterUserId] Identifier of a user that invited/promoted/banned this
+  /// in the chat; 0 if unknown
   final int inviterUserId;
 
-  /// [joinedChatDate] Point in time (Unix timestamp) when the user joined the chat
+  /// [joinedChatDate] Point in time (Unix timestamp) when the user joined the
   final int joinedChatDate;
 
   /// [status] Status of the member in the chat
   final ChatMemberStatus status;
 
-  /// [botInfo] If the user is a bot, information about the bot; may be null. Can be null even for a bot if the bot is not the chat member
+  /// [botInfo] If the user is a bot, information about the bot; may be null.
+  /// be null even for a bot if the bot is not the chat member
   final BotInfo? botInfo;
 
   static const String CONSTRUCTOR = 'chatMember';

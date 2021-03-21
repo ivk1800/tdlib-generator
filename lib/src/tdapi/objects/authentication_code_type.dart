@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Provides information about the method by which an authentication code is delivered to the user
+/// Provides information about the method by which an authentication code is
+/// to the user
 abstract class AuthenticationCodeType extends TdObject {
   const AuthenticationCodeType();
 

@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Creates a voice chat (a group call bound to a chat). Available only for basic groups and supergroups; requires can_manage_voice_chats rights
+/// Creates a voice chat (a group call bound to a chat). Available only for
+/// groups and supergroups; requires can_manage_voice_chats rights
 class CreateVoiceChat extends TdFunction {
   CreateVoiceChat({required this.chatId});
 

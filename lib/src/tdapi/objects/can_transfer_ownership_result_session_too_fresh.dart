@@ -5,7 +5,8 @@ class CanTransferOwnershipResultSessionTooFresh
     extends CanTransferOwnershipResult {
   CanTransferOwnershipResultSessionTooFresh({required this.retryAfter});
 
-  /// [retryAfter] Time left before the session can be used to transfer ownership of a chat, in seconds
+  /// [retryAfter] Time left before the session can be used to transfer
+  /// of a chat, in seconds
   final int retryAfter;
 
   static const String CONSTRUCTOR = 'canTransferOwnershipResultSessionTooFresh';

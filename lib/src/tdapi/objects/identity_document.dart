@@ -19,13 +19,15 @@ class IdentityDocument extends TdObject {
   /// [frontSide] Front side of the document
   final DatedFile frontSide;
 
-  /// [reverseSide] Reverse side of the document; only for driver license and identity card
+  /// [reverseSide] Reverse side of the document; only for driver license and
+  /// card
   final DatedFile reverseSide;
 
   /// [selfie] Selfie with the document; may be null
   final DatedFile? selfie;
 
-  /// [translation] List of files containing a certified English translation of the document
+  /// [translation] List of files containing a certified English translation of
+  /// document
   final List<DatedFile> translation;
 
   static const String CONSTRUCTOR = 'identityDocument';

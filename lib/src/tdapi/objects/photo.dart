@@ -7,7 +7,8 @@ class Photo extends TdObject {
       Minithumbnail? this.minithumbnail,
       required this.sizes});
 
-  /// [hasStickers] True, if stickers were added to the photo. The list of corresponding sticker sets can be received using getAttachedStickerSets
+  /// [hasStickers] True, if stickers were added to the photo. The list of
+  /// sticker sets can be received using getAttachedStickerSets
   final bool hasStickers;
 
   /// [minithumbnail] Photo minithumbnail; may be null

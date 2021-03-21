@@ -1,6 +1,6 @@
 part of '../tdapi.dart';
 
-/// A Telegram Passport element to be saved containing the user's temporary registration
+/// A Telegram Passport element to be saved containing the user's temporary
 class InputPassportElementTemporaryRegistration extends InputPassportElement {
   InputPassportElementTemporaryRegistration(
       {required this.temporaryRegistration});

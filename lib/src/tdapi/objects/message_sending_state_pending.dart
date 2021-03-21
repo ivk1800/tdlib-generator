@@ -1,6 +1,6 @@
 part of '../tdapi.dart';
 
-/// The message is being sent now, but has not yet been delivered to the server
+/// The message is being sent now, but has not yet been delivered to the
 class MessageSendingStatePending extends MessageSendingState {
   const MessageSendingStatePending();
 

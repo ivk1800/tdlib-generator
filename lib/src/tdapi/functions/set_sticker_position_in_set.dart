@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Changes the position of a sticker in the set to which it belongs; for bots only. The sticker set must have been created by the bot
+/// Changes the position of a sticker in the set to which it belongs; for bots
+/// The sticker set must have been created by the bot
 class SetStickerPositionInSet extends TdFunction {
   SetStickerPositionInSet({required this.sticker, required this.position});
 

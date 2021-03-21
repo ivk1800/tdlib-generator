@@ -17,7 +17,8 @@ class SendCallRating extends TdFunction {
   /// [comment] An optional user comment if the rating is less than 5
   final String comment;
 
-  /// [problems] List of the exact types of problems with the call, specified by the user
+  /// [problems] List of the exact types of problems with the call, specified by
+  /// user
   final List<CallProblem> problems;
 
   /// callback sign

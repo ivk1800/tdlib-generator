@@ -19,7 +19,8 @@ class Proxy extends TdObject {
   /// [port] Proxy server port
   final int port;
 
-  /// [lastUsedDate] Point in time (Unix timestamp) when the proxy was last used; 0 if never
+  /// [lastUsedDate] Point in time (Unix timestamp) when the proxy was last
+  /// 0 if never
   final int lastUsedDate;
 
   /// [isEnabled] True, if the proxy is enabled now

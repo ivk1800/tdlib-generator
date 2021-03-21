@@ -11,7 +11,8 @@ class UpdateUserChatAction extends Update {
   /// [chatId] Chat identifier
   final int chatId;
 
-  /// [messageThreadId] If not 0, a message thread identifier in which the action was performed
+  /// [messageThreadId] If not 0, a message thread identifier in which the
+  /// was performed
   final int messageThreadId;
 
   /// [userId] Identifier of a user performing an action

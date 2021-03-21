@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// The connection state has changed. This update must be used only to show a human-readable description of the connection state
+/// The connection state has changed. This update must be used only to show a
+/// description of the connection state
 class UpdateConnectionState extends Update {
   UpdateConnectionState({required this.state});
 

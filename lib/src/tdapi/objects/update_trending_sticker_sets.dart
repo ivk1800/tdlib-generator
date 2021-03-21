@@ -4,7 +4,8 @@ part of '../tdapi.dart';
 class UpdateTrendingStickerSets extends Update {
   UpdateTrendingStickerSets({required this.stickerSets});
 
-  /// [stickerSets] The prefix of the list of trending sticker sets with the newest trending sticker sets
+  /// [stickerSets] The prefix of the list of trending sticker sets with the
+  /// trending sticker sets
   final StickerSets stickerSets;
 
   static const String CONSTRUCTOR = 'updateTrendingStickerSets';

@@ -1,10 +1,13 @@
 part of '../tdapi.dart';
 
-/// An object of this type can be returned on every function call, in case of an error
+/// An object of this type can be returned on every function call, in case of
+/// error
 class TdError extends TdObject {
   TdError({required this.code, required this.message});
 
-  /// [code] Error code; subject to future changes. If the error code is 406, the error message must not be processed in any way and must not be displayed to the user
+  /// [code] Error code; subject to future changes. If the error code is 406,
+  /// error message must not be processed in any way and must not be displayed
+  /// the user
   final int code;
 
   /// [message] Error message; subject to future changes

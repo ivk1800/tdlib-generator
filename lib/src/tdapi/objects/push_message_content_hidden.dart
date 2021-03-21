@@ -4,7 +4,7 @@ part of '../tdapi.dart';
 class PushMessageContentHidden extends PushMessageContent {
   PushMessageContentHidden({required this.isPinned});
 
-  /// [isPinned] True, if the message is a pinned message with the specified content
+  /// [isPinned] True, if the message is a pinned message with the specified
   final bool isPinned;
 
   static const String CONSTRUCTOR = 'pushMessageContentHidden';

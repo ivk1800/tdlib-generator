@@ -1,6 +1,9 @@
 part of '../tdapi.dart';
 
-/// Searches for messages in all chats except secret chats. Returns the results in reverse chronological order (i.e., in order of decreasing (date, chat_id, message_id)).. For optimal performance the number of returned messages is chosen by the library
+/// Searches for messages in all chats except secret chats. Returns the
+/// in reverse chronological order (i.e., in order of decreasing (date,
+/// message_id)).. For optimal performance the number of returned messages is
+/// by the library
 class SearchMessages extends TdFunction {
   SearchMessages(
       {required this.chatList,
@@ -13,25 +16,34 @@ class SearchMessages extends TdFunction {
       required this.minDate,
       required this.maxDate});
 
-  /// [chatList] Chat list in which to search messages; pass null to search in all chats regardless of their chat list
+  /// [chatList] Chat list in which to search messages; pass null to search in
+  /// chats regardless of their chat list
   final ChatList chatList;
 
   /// [query] Query to search for
   final String query;
 
-  /// [offsetDate] The date of the message starting from which the results should be fetched. Use 0 or any date in the future to get results from the last message
+  /// [offsetDate] The date of the message starting from which the results
+  /// be fetched. Use 0 or any date in the future to get results from the last
   final int offsetDate;
 
-  /// [offsetChatId] The chat identifier of the last found message, or 0 for the first request
+  /// [offsetChatId] The chat identifier of the last found message, or 0 for the
+  /// request
   final int offsetChatId;
 
-  /// [offsetMessageId] The message identifier of the last found message, or 0 for the first request
+  /// [offsetMessageId] The message identifier of the last found message, or 0
+  /// the first request
   final int offsetMessageId;
 
-  /// [limit] The maximum number of messages to be returned; up to 100. Fewer messages may be returned than specified by the limit, even if the end of the message history has not been reached
+  /// [limit] The maximum number of messages to be returned; up to 100. Fewer
+  /// may be returned than specified by the limit, even if the end of the
+  /// history has not been reached
   final int limit;
 
-  /// [filter] Filter for message content in the search results; searchMessagesFilterCall, searchMessagesFilterMissedCall, searchMessagesFilterMention, searchMessagesFilterUnreadMention, searchMessagesFilterFailedToSend and searchMessagesFilterPinned are unsupported in this function
+  /// [filter] Filter for message content in the search results;
+  /// searchMessagesFilterMissedCall, searchMessagesFilterMention,
+  /// searchMessagesFilterFailedToSend and searchMessagesFilterPinned are
+  /// in this function
   final SearchMessagesFilter filter;
 
   /// [minDate] If not 0, the minimum date of the messages to return

@@ -29,7 +29,8 @@ class Video extends TdObject {
   /// [mimeType] MIME type of the file; as defined by the sender
   final String mimeType;
 
-  /// [hasStickers] True, if stickers were added to the video. The list of corresponding sticker sets can be received using getAttachedStickerSets
+  /// [hasStickers] True, if stickers were added to the video. The list of
+  /// sticker sets can be received using getAttachedStickerSets
   final bool hasStickers;
 
   /// [supportsStreaming] True, if the video should be tried to be streamed
@@ -38,7 +39,8 @@ class Video extends TdObject {
   /// [minithumbnail] Video minithumbnail; may be null
   final Minithumbnail? minithumbnail;
 
-  /// [thumbnail] Video thumbnail in JPEG or MPEG4 format; as defined by the sender; may be null
+  /// [thumbnail] Video thumbnail in JPEG or MPEG4 format; as defined by the
+  /// may be null
   final Thumbnail? thumbnail;
 
   /// [video] File containing the video

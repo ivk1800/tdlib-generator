@@ -5,10 +5,11 @@ class ReorderInstalledStickerSets extends TdFunction {
   ReorderInstalledStickerSets(
       {required this.isMasks, required this.stickerSetIds});
 
-  /// [isMasks] Pass true to change the order of mask sticker sets; pass false to change the order of ordinary sticker sets
+  /// [isMasks] Pass true to change the order of mask sticker sets; pass false
+  /// change the order of ordinary sticker sets
   final bool isMasks;
 
-  /// [stickerSetIds] Identifiers of installed sticker sets in the new correct order
+  /// [stickerSetIds] Identifiers of installed sticker sets in the new correct
   final List<int> stickerSetIds;
 
   /// callback sign

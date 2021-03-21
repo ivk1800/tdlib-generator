@@ -8,7 +8,8 @@ class RichTextReference extends RichText {
   /// [text] The text
   final RichText text;
 
-  /// [anchorName] The name of a richTextAnchor object, which is the first element of the target richTexts object
+  /// [anchorName] The name of a richTextAnchor object, which is the first
+  /// of the target richTexts object
   final String anchorName;
 
   /// [url] An HTTP URL, opening the reference

@@ -9,13 +9,14 @@ class NotificationGroup extends TdObject {
       required this.totalCount,
       required this.notifications});
 
-  /// [id] Unique persistent auto-incremented from 1 identifier of the notification group
+  /// [id] Unique persistent auto-incremented from 1 identifier of the
+  /// group
   final int id;
 
   /// [type] Type of the group
   final NotificationGroupType type;
 
-  /// [chatId] Identifier of a chat to which all notifications in the group belong
+  /// [chatId] Identifier of a chat to which all notifications in the group
   final int chatId;
 
   /// [totalCount] Total number of active notifications in the group

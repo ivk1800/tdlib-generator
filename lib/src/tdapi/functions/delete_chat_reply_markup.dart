@@ -1,6 +1,8 @@
 part of '../tdapi.dart';
 
-/// Deletes the default reply markup from a chat. Must be called after a one-time keyboard or a ForceReply reply markup has been used. UpdateChatReplyMarkup will be sent if the reply markup will be changed
+/// Deletes the default reply markup from a chat. Must be called after a
+/// keyboard or a ForceReply reply markup has been used. UpdateChatReplyMarkup
+/// be sent if the reply markup will be changed
 class DeleteChatReplyMarkup extends TdFunction {
   DeleteChatReplyMarkup({required this.chatId, required this.messageId});
 

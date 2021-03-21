@@ -17,7 +17,8 @@ class InputMessageAnimation extends InputMessageContent {
   /// [thumbnail] Animation thumbnail, if available
   final InputThumbnail thumbnail;
 
-  /// [addedStickerFileIds] File identifiers of the stickers added to the animation, if applicable
+  /// [addedStickerFileIds] File identifiers of the stickers added to the
+  /// if applicable
   final List<int> addedStickerFileIds;
 
   /// [duration] Duration of the animation, in seconds
@@ -29,7 +30,7 @@ class InputMessageAnimation extends InputMessageContent {
   /// [height] Height of the animation; may be replaced by the server
   final int height;
 
-  /// [caption] Animation caption; 0-GetOption("message_caption_length_max") characters
+  /// [caption] Animation caption; 0-GetOption("message_caption_length_max")
   final FormattedText caption;
 
   static const String CONSTRUCTOR = 'inputMessageAnimation';

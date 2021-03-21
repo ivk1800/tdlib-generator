@@ -14,10 +14,12 @@ class InputMessageForwarded extends InputMessageContent {
   /// [messageId] Identifier of the message to forward
   final int messageId;
 
-  /// [inGameShare] True, if a game message should be shared within a launched game; applies only to game messages
+  /// [inGameShare] True, if a game message should be shared within a launched
+  /// applies only to game messages
   final bool inGameShare;
 
-  /// [copyOptions] Options to be used to copy content of the message without a link to the original message
+  /// [copyOptions] Options to be used to copy content of the message without a
+  /// to the original message
   final MessageCopyOptions copyOptions;
 
   static const String CONSTRUCTOR = 'inputMessageForwarded';

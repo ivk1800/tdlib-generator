@@ -22,7 +22,8 @@ class UpdateNewCallbackQuery extends Update {
   /// [messageId] Identifier of the message, from which the query originated
   final int messageId;
 
-  /// [chatInstance] Identifier that uniquely corresponds to the chat to which the message was sent
+  /// [chatInstance] Identifier that uniquely corresponds to the chat to which
+  /// message was sent
   final int chatInstance;
 
   /// [payload] Query payload

@@ -1,6 +1,8 @@
 part of '../tdapi.dart';
 
-/// The number of online group members has changed. This update with non-zero count is sent only for currently opened chats. There is no guarantee that it will be sent just after the count has changed
+/// The number of online group members has changed. This update with non-zero
+/// is sent only for currently opened chats. There is no guarantee that it
+/// be sent just after the count has changed
 class UpdateChatOnlineMemberCount extends Update {
   UpdateChatOnlineMemberCount(
       {required this.chatId, required this.onlineMemberCount});
@@ -8,7 +10,7 @@ class UpdateChatOnlineMemberCount extends Update {
   /// [chatId] Identifier of the chat
   final int chatId;
 
-  /// [onlineMemberCount] New number of online members in the chat, or 0 if unknown
+  /// [onlineMemberCount] New number of online members in the chat, or 0 if
   final int onlineMemberCount;
 
   static const String CONSTRUCTOR = 'updateChatOnlineMemberCount';

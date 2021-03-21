@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Contains the description of an error in a Telegram Passport element; for bots only
+/// Contains the description of an error in a Telegram Passport element; for
+/// only
 class InputPassportElementError extends TdObject {
   InputPassportElementError(
       {required this.type, required this.message, required this.source});

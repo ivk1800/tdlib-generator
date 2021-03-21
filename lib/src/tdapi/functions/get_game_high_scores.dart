@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Returns the high scores for a game and some part of the high score table in the range of the specified user; for bots only
+/// Returns the high scores for a game and some part of the high score table
+/// the range of the specified user; for bots only
 class GetGameHighScores extends TdFunction {
   GetGameHighScores(
       {required this.chatId, required this.messageId, required this.userId});

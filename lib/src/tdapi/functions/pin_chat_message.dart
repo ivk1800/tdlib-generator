@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Pins a message in a chat; requires can_pin_messages rights or can_edit_messages rights in the channel
+/// Pins a message in a chat; requires can_pin_messages rights or
+/// rights in the channel
 class PinChatMessage extends TdFunction {
   PinChatMessage(
       {required this.chatId,
@@ -14,10 +15,12 @@ class PinChatMessage extends TdFunction {
   /// [messageId] Identifier of the new pinned message
   final int messageId;
 
-  /// [disableNotification] True, if there should be no notification about the pinned message. Notifications are always disabled in channels and private chats
+  /// [disableNotification] True, if there should be no notification about the
+  /// message. Notifications are always disabled in channels and private chats
   final bool disableNotification;
 
-  /// [onlyForSelf] True, if the message needs to be pinned for one side only; private chats only
+  /// [onlyForSelf] True, if the message needs to be pinned for one side only;
+  /// chats only
   final bool onlyForSelf;
 
   /// callback sign

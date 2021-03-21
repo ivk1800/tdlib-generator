@@ -17,19 +17,22 @@ class PaymentForm extends TdObject {
   /// [url] Payment form URL
   final String url;
 
-  /// [paymentsProvider] Contains information about the payment provider, if available, to support it natively without the need for opening the URL; may be null
+  /// [paymentsProvider] Contains information about the payment provider, if
+  /// to support it natively without the need for opening the URL; may be null
   final PaymentsProviderStripe? paymentsProvider;
 
   /// [savedOrderInfo] Saved server-side order information; may be null
   final OrderInfo? savedOrderInfo;
 
-  /// [savedCredentials] Contains information about saved card credentials; may be null
+  /// [savedCredentials] Contains information about saved card credentials; may
+  /// null
   final SavedCredentials? savedCredentials;
 
   /// [canSaveCredentials] True, if the user can choose to save credentials
   final bool canSaveCredentials;
 
-  /// [needPassword] True, if the user will be able to save credentials protected by a password they set up
+  /// [needPassword] True, if the user will be able to save credentials
+  /// by a password they set up
   final bool needPassword;
 
   static const String CONSTRUCTOR = 'paymentForm';

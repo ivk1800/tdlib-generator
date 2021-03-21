@@ -8,7 +8,8 @@ class RichTextAnchorLink extends RichText {
   /// [text] The link text
   final RichText text;
 
-  /// [anchorName] The anchor name. If the name is empty, the link should bring back to top
+  /// [anchorName] The anchor name. If the name is empty, the link should bring
+  /// to top
   final String anchorName;
 
   /// [url] An HTTP URL, opening the anchor

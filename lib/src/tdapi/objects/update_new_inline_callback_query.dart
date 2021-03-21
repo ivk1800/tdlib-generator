@@ -15,10 +15,11 @@ class UpdateNewInlineCallbackQuery extends Update {
   /// [senderUserId] Identifier of the user who sent the query
   final int senderUserId;
 
-  /// [inlineMessageId] Identifier of the inline message, from which the query originated
+  /// [inlineMessageId] Identifier of the inline message, from which the query
   final String inlineMessageId;
 
-  /// [chatInstance] An identifier uniquely corresponding to the chat a message was sent to
+  /// [chatInstance] An identifier uniquely corresponding to the chat a message
+  /// sent to
   final int chatInstance;
 
   /// [payload] Query payload

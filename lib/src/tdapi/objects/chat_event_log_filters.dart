@@ -33,10 +33,11 @@ class ChatEventLogFilters extends TdObject {
   /// [memberInvites] True, if invited member events should be returned
   final bool memberInvites;
 
-  /// [memberPromotions] True, if member promotion/demotion events should be returned
+  /// [memberPromotions] True, if member promotion/demotion events should be
   final bool memberPromotions;
 
-  /// [memberRestrictions] True, if member restricted/unrestricted/banned/unbanned events should be returned
+  /// [memberRestrictions] True, if member
+  /// events should be returned
   final bool memberRestrictions;
 
   /// [infoChanges] True, if changes in chat information should be returned

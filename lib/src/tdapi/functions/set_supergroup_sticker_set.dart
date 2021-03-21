@@ -8,7 +8,8 @@ class SetSupergroupStickerSet extends TdFunction {
   /// [supergroupId] Identifier of the supergroup
   final int supergroupId;
 
-  /// [stickerSetId] New value of the supergroup sticker set identifier. Use 0 to remove the supergroup sticker set
+  /// [stickerSetId] New value of the supergroup sticker set identifier. Use 0
+  /// remove the supergroup sticker set
   final int stickerSetId;
 
   /// callback sign

@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// An authentication code is delivered via a private Telegram message, which can be viewed from another active session
+/// An authentication code is delivered via a private Telegram message, which
+/// be viewed from another active session
 class AuthenticationCodeTypeTelegramMessage extends AuthenticationCodeType {
   AuthenticationCodeTypeTelegramMessage({required this.length});
 

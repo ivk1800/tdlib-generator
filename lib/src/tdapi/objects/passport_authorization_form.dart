@@ -1,6 +1,6 @@
 part of '../tdapi.dart';
 
-/// Contains information about a Telegram Passport authorization form that was requested
+/// Contains information about a Telegram Passport authorization form that was
 class PassportAuthorizationForm extends TdObject {
   PassportAuthorizationForm(
       {required this.id,
@@ -10,7 +10,8 @@ class PassportAuthorizationForm extends TdObject {
   /// [id] Unique identifier of the authorization form
   final int id;
 
-  /// [requiredElements] Information about the Telegram Passport elements that must be provided to complete the form
+  /// [requiredElements] Information about the Telegram Passport elements that
+  /// be provided to complete the form
   final List<PassportRequiredElement> requiredElements;
 
   /// [privacyPolicyUrl] URL for the privacy policy of the service; may be empty

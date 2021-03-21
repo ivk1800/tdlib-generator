@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Contains a temporary identifier of validated order information, which is stored for one hour. Also contains the available shipping options
+/// Contains a temporary identifier of validated order information, which is
+/// for one hour. Also contains the available shipping options
 class ValidatedOrderInfo extends TdObject {
   ValidatedOrderInfo(
       {required this.orderInfoId, required this.shippingOptions});

@@ -1,6 +1,8 @@
 part of '../tdapi.dart';
 
-/// Contains active notifications that was shown on previous application launches. This update is sent only if the message database is used. In that case it comes once before any updateNotification and updateNotificationGroup update
+/// Contains active notifications that was shown on previous application
+/// This update is sent only if the message database is used. In that case it
+/// once before any updateNotification and updateNotificationGroup update
 class UpdateActiveNotifications extends Update {
   UpdateActiveNotifications({required this.groups});
 

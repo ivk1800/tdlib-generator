@@ -1,6 +1,10 @@
 part of '../tdapi.dart';
 
-/// Edits the content of a message with an animation, an audio, a document, a photo or a video. The media in the message can't be replaced if the message was set to self-destruct. Media can't be replaced by self-destructing media. Media in an album can be edited only to contain a photo or a video. Returns the edited message after the edit is completed on the server side
+/// Edits the content of a message with an animation, an audio, a document, a
+/// or a video. The media in the message can't be replaced if the message was
+/// to self-destruct. Media can't be replaced by self-destructing media. Media
+/// an album can be edited only to contain a photo or a video. Returns the
+/// message after the edit is completed on the server side
 class EditMessageMedia extends TdFunction {
   EditMessageMedia(
       {required this.chatId,
@@ -17,7 +21,9 @@ class EditMessageMedia extends TdFunction {
   /// [replyMarkup] The new message reply markup; for bots only
   final ReplyMarkup replyMarkup;
 
-  /// [inputMessageContent] New content of the message. Must be one of the following types: InputMessageAnimation, InputMessageAudio, InputMessageDocument, InputMessagePhoto or InputMessageVideo
+  /// [inputMessageContent] New content of the message. Must be one of the
+  /// types: InputMessageAnimation, InputMessageAudio, InputMessageDocument,
+  /// or InputMessageVideo
   final InputMessageContent inputMessageContent;
 
   /// callback sign

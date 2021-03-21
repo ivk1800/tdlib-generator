@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// The value of the default disable_notification parameter, used when a message is sent to the chat, was changed
+/// The value of the default disable_notification parameter, used when a
+/// is sent to the chat, was changed
 class UpdateChatDefaultDisableNotification extends Update {
   UpdateChatDefaultDisableNotification(
       {required this.chatId, required this.defaultDisableNotification});

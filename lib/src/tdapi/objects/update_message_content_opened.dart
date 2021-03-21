@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// The message content was opened. Updates voice note messages to "listened", video note messages to "viewed" and starts the TTL timer for self-destructing messages
+/// The message content was opened. Updates voice note messages to "listened",
+/// note messages to "viewed" and starts the TTL timer for self-destructing
 class UpdateMessageContentOpened extends Update {
   UpdateMessageContentOpened({required this.chatId, required this.messageId});
 

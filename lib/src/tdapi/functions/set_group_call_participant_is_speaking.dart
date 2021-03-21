@@ -10,7 +10,8 @@ class SetGroupCallParticipantIsSpeaking extends TdFunction {
   /// [groupCallId] Group call identifier
   final int groupCallId;
 
-  /// [source] Group call participant's synchronization source identifier, or 0 for the current user
+  /// [source] Group call participant's synchronization source identifier, or 0
+  /// the current user
   final int source;
 
   /// [isSpeaking] True, if the user is speaking

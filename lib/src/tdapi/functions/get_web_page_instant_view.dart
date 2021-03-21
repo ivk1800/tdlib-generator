@@ -1,13 +1,14 @@
 part of '../tdapi.dart';
 
-/// Returns an instant view version of a web page if available. Returns a 404 error if the web page has no instant view page
+/// Returns an instant view version of a web page if available. Returns a 404
+/// if the web page has no instant view page
 class GetWebPageInstantView extends TdFunction {
   GetWebPageInstantView({required this.url, required this.forceFull});
 
   /// [url] The web page URL
   final String url;
 
-  /// [forceFull] If true, the full instant view for the web page will be returned
+  /// [forceFull] If true, the full instant view for the web page will be
   final bool forceFull;
 
   /// callback sign

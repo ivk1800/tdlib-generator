@@ -1,6 +1,6 @@
 part of '../tdapi.dart';
 
-/// Returns application config, provided by the server. Can be called before authorization
+/// Returns application config, provided by the server. Can be called before
 class GetApplicationConfig extends TdFunction {
   GetApplicationConfig();
 

@@ -13,7 +13,8 @@ class UpdateMessageInteractionInfo extends Update {
   /// [messageId] Message identifier
   final int messageId;
 
-  /// [interactionInfo] New information about interactions with the message; may be null
+  /// [interactionInfo] New information about interactions with the message; may
+  /// null
   final MessageInteractionInfo? interactionInfo;
 
   static const String CONSTRUCTOR = 'updateMessageInteractionInfo';

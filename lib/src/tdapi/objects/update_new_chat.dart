@@ -1,6 +1,8 @@
 part of '../tdapi.dart';
 
-/// A new chat has been loaded/created. This update is guaranteed to come before the chat identifier is returned to the application. The chat field changes will be reported through separate updates
+/// A new chat has been loaded/created. This update is guaranteed to come
+/// the chat identifier is returned to the application. The chat field changes
+/// be reported through separate updates
 class UpdateNewChat extends Update {
   UpdateNewChat({required this.chat});
 

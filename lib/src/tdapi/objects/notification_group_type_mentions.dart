@@ -1,6 +1,8 @@
 part of '../tdapi.dart';
 
-/// A group containing notifications of type notificationTypeNewMessage and notificationTypeNewPushMessage with unread mentions of the current user, replies to their messages, or a pinned message
+/// A group containing notifications of type notificationTypeNewMessage and
+/// with unread mentions of the current user, replies to their messages, or a
+/// message
 class NotificationGroupTypeMentions extends NotificationGroupType {
   const NotificationGroupTypeMentions();
 

@@ -15,13 +15,14 @@ class AnswerCallbackQuery extends TdFunction {
   /// [text] Text of the answer
   final String text;
 
-  /// [showAlert] If true, an alert should be shown to the user instead of a toast notification
+  /// [showAlert] If true, an alert should be shown to the user instead of a
+  /// notification
   final bool showAlert;
 
   /// [url] URL to be opened
   final String url;
 
-  /// [cacheTime] Time during which the result of the query can be cached, in seconds
+  /// [cacheTime] Time during which the result of the query can be cached, in
   final int cacheTime;
 
   /// callback sign

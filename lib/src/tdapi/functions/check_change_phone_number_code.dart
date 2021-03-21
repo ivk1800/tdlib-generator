@@ -1,6 +1,6 @@
 part of '../tdapi.dart';
 
-/// Checks the authentication code sent to confirm a new phone number of the user
+/// Checks the authentication code sent to confirm a new phone number of the
 class CheckChangePhoneNumberCode extends TdFunction {
   CheckChangePhoneNumberCode({required this.code});
 

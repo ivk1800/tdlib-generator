@@ -18,13 +18,14 @@ class GroupCallParticipant extends TdObject {
   /// [source] User's synchronization source
   final int source;
 
-  /// [isSpeaking] True, if the participant is speaking as set by setGroupCallParticipantIsSpeaking
+  /// [isSpeaking] True, if the participant is speaking as set by
   final bool isSpeaking;
 
   /// [canBeMuted] True, if the current user can mute the participant
   final bool canBeMuted;
 
-  /// [canBeUnmuted] True, if the current user can allow the participant to unmute themself or unmute the participant (only for self)
+  /// [canBeUnmuted] True, if the current user can allow the participant to
+  /// themself or unmute the participant (only for self)
   final bool canBeUnmuted;
 
   /// [isMuted] True, if the participant is muted
@@ -33,7 +34,9 @@ class GroupCallParticipant extends TdObject {
   /// [canUnmuteSelf] True, if the participant can unmute themself
   final bool canUnmuteSelf;
 
-  /// [order] User's order in the group call participant list. The bigger is order, the higher is user in the list. If order is 0, the user must be removed from the participant list
+  /// [order] User's order in the group call participant list. The bigger is
+  /// the higher is user in the list. If order is 0, the user must be removed
+  /// the participant list
   final int order;
 
   static const String CONSTRUCTOR = 'groupCallParticipant';

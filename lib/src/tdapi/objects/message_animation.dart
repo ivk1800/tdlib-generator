@@ -11,7 +11,8 @@ class MessageAnimation extends MessageContent {
   /// [caption] Animation caption
   final FormattedText caption;
 
-  /// [isSecret] True, if the animation thumbnail must be blurred and the animation must be shown only while tapped
+  /// [isSecret] True, if the animation thumbnail must be blurred and the
+  /// must be shown only while tapped
   final bool isSecret;
 
   static const String CONSTRUCTOR = 'messageAnimation';

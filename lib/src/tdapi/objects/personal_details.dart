@@ -38,10 +38,12 @@ class PersonalDetails extends TdObject {
   /// [gender] Gender of the user, "male" or "female"
   final String gender;
 
-  /// [countryCode] A two-letter ISO 3166-1 alpha-2 country code of the user's country
+  /// [countryCode] A two-letter ISO 3166-1 alpha-2 country code of the user's
+  ///
   final String countryCode;
 
-  /// [residenceCountryCode] A two-letter ISO 3166-1 alpha-2 country code of the user's residence country
+  /// [residenceCountryCode] A two-letter ISO 3166-1 alpha-2 country code of the
+  /// residence country
   final String residenceCountryCode;
 
   static const String CONSTRUCTOR = 'personalDetails';

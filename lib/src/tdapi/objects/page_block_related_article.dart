@@ -25,7 +25,8 @@ class PageBlockRelatedArticle extends TdObject {
   /// [author] Article author; may be empty
   final String author;
 
-  /// [publishDate] Point in time (Unix timestamp) when the article was published; 0 if unknown
+  /// [publishDate] Point in time (Unix timestamp) when the article was
+  /// 0 if unknown
   final int publishDate;
 
   static const String CONSTRUCTOR = 'pageBlockRelatedArticle';

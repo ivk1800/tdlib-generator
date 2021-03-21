@@ -10,10 +10,11 @@ class Location extends TdObject {
   /// [latitude] Latitude of the location in degrees; as defined by the sender
   final double latitude;
 
-  /// [longitude] Longitude of the location, in degrees; as defined by the sender
+  /// [longitude] Longitude of the location, in degrees; as defined by the
   final double longitude;
 
-  /// [horizontalAccuracy] The estimated horizontal accuracy of the location, in meters; as defined by the sender. 0 if unknown
+  /// [horizontalAccuracy] The estimated horizontal accuracy of the location, in
+  /// as defined by the sender. 0 if unknown
   final double horizontalAccuracy;
 
   static const String CONSTRUCTOR = 'location';

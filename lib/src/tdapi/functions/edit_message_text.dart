@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Edits the text of a message (or a text of a game message). Returns the edited message after the edit is completed on the server side
+/// Edits the text of a message (or a text of a game message). Returns the
+/// message after the edit is completed on the server side
 class EditMessageText extends TdFunction {
   EditMessageText(
       {required this.chatId,
@@ -17,7 +18,7 @@ class EditMessageText extends TdFunction {
   /// [replyMarkup] The new message reply markup; for bots only
   final ReplyMarkup replyMarkup;
 
-  /// [inputMessageContent] New text content of the message. Should be of type InputMessageText
+  /// [inputMessageContent] New text content of the message. Should be of type
   final InputMessageContent inputMessageContent;
 
   /// callback sign

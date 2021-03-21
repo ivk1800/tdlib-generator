@@ -7,10 +7,13 @@ class InputMessageText extends InputMessageContent {
       required this.disableWebPagePreview,
       required this.clearDraft});
 
-  /// [text] Formatted text to be sent; 1-GetOption("message_text_length_max") characters. Only Bold, Italic, Underline, Strikethrough, Code, Pre, PreCode, TextUrl and MentionName entities are allowed to be specified manually
+  /// [text] Formatted text to be sent; 1-GetOption("message_text_length_max")
+  /// Only Bold, Italic, Underline, Strikethrough, Code, Pre, PreCode, TextUrl
+  /// MentionName entities are allowed to be specified manually
   final FormattedText text;
 
-  /// [disableWebPagePreview] True, if rich web page previews for URLs in the message text should be disabled
+  /// [disableWebPagePreview] True, if rich web page previews for URLs in the
+  /// text should be disabled
   final bool disableWebPagePreview;
 
   /// [clearDraft] True, if a chat message draft should be deleted

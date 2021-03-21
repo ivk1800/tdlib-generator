@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Returns a 2-step verification recovery email address that was previously set up. This method can be used to verify a password provided by the user
+/// Returns a 2-step verification recovery email address that was previously
+/// up. This method can be used to verify a password provided by the user
 class GetRecoveryEmailAddress extends TdFunction {
   GetRecoveryEmailAddress({required this.password});
 

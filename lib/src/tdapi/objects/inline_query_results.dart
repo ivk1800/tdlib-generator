@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Represents the results of the inline query. Use sendInlineQueryResultMessage to send the result of the query
+/// Represents the results of the inline query. Use
+/// to send the result of the query
 class InlineQueryResults extends TdObject {
   InlineQueryResults(
       {required this.inlineQueryId,
@@ -12,13 +13,16 @@ class InlineQueryResults extends TdObject {
   /// [inlineQueryId] Unique identifier of the inline query
   final int inlineQueryId;
 
-  /// [nextOffset] The offset for the next request. If empty, there are no more results
+  /// [nextOffset] The offset for the next request. If empty, there are no more
+  ///
   final String nextOffset;
 
   /// [results] Results of the query
   final List<InlineQueryResult> results;
 
-  /// [switchPmText] If non-empty, this text should be shown on the button, which opens a private chat with the bot and sends the bot a start message with the switch_pm_parameter
+  /// [switchPmText] If non-empty, this text should be shown on the button,
+  /// opens a private chat with the bot and sends the bot a start message with
+  /// switch_pm_parameter
   final String switchPmText;
 
   /// [switchPmParameter] Parameter for the bot start message

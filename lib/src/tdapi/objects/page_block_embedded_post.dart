@@ -19,7 +19,8 @@ class PageBlockEmbeddedPost extends PageBlock {
   /// [authorPhoto] Post author photo; may be null
   final Photo? authorPhoto;
 
-  /// [date] Point in time (Unix timestamp) when the post was created; 0 if unknown
+  /// [date] Point in time (Unix timestamp) when the post was created; 0 if
+  ///
   final int date;
 
   /// [pageBlocks] Post content

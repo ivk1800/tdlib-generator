@@ -10,7 +10,8 @@ class SetChatDraftMessage extends TdFunction {
   /// [chatId] Chat identifier
   final int chatId;
 
-  /// [messageThreadId] If not 0, a message thread identifier in which the draft was changed
+  /// [messageThreadId] If not 0, a message thread identifier in which the draft
+  /// changed
   final int messageThreadId;
 
   /// [draftMessage] New draft message; may be null

@@ -17,7 +17,7 @@ class InputMessageVoiceNote extends InputMessageContent {
   /// [waveform] Waveform representation of the voice note, in 5-bit format
   final String waveform;
 
-  /// [caption] Voice note caption; 0-GetOption("message_caption_length_max") characters
+  /// [caption] Voice note caption; 0-GetOption("message_caption_length_max")
   final FormattedText caption;
 
   static const String CONSTRUCTOR = 'inputMessageVoiceNote';

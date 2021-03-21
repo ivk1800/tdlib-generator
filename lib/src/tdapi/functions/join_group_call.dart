@@ -11,7 +11,8 @@ class JoinGroupCall extends TdFunction {
   /// [groupCallId] Group call identifier
   final int groupCallId;
 
-  /// [payload] Group join payload, received from tgcalls. Use null to cancel previous joinGroupCall request
+  /// [payload] Group join payload, received from tgcalls. Use null to cancel
+  /// joinGroupCall request
   final GroupCallPayload payload;
 
   /// [source] Caller synchronization source identifier; received from tgcalls

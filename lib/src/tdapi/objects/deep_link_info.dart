@@ -7,7 +7,7 @@ class DeepLinkInfo extends TdObject {
   /// [text] Text to be shown to the user
   final FormattedText text;
 
-  /// [needUpdateApplication] True, if user should be asked to update the application
+  /// [needUpdateApplication] True, if user should be asked to update the
   final bool needUpdateApplication;
 
   static const String CONSTRUCTOR = 'deepLinkInfo';

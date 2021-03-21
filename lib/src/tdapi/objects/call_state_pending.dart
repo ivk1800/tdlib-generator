@@ -7,7 +7,7 @@ class CallStatePending extends CallState {
   /// [isCreated] True, if the call has already been created by the server
   final bool isCreated;
 
-  /// [isReceived] True, if the call has already been received by the other party
+  /// [isReceived] True, if the call has already been received by the other
   final bool isReceived;
 
   static const String CONSTRUCTOR = 'callStatePending';

@@ -1,6 +1,6 @@
 part of '../tdapi.dart';
 
-/// The thumbnail is in PNG format. It will be used only for background patterns
+/// The thumbnail is in PNG format. It will be used only for background
 class ThumbnailFormatPng extends ThumbnailFormat {
   const ThumbnailFormatPng();
 

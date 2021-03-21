@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Resets all notification settings to their default values. By default, all chats are unmuted, the sound is set to "default" and message previews are shown
+/// Resets all notification settings to their default values. By default, all
+/// are unmuted, the sound is set to "default" and message previews are shown
 class ResetAllNotificationSettings extends TdFunction {
   ResetAllNotificationSettings();
 

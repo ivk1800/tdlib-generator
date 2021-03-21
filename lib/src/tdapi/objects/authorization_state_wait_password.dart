@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// The user has been authorized, but needs to enter a password to start using the application
+/// The user has been authorized, but needs to enter a password to start using
+/// application
 class AuthorizationStateWaitPassword extends AuthorizationState {
   AuthorizationStateWaitPassword(
       {required this.passwordHint,
@@ -10,10 +11,11 @@ class AuthorizationStateWaitPassword extends AuthorizationState {
   /// [passwordHint] Hint for the password; may be empty
   final String passwordHint;
 
-  /// [hasRecoveryEmailAddress] True, if a recovery email address has been set up
+  /// [hasRecoveryEmailAddress] True, if a recovery email address has been set
   final bool hasRecoveryEmailAddress;
 
-  /// [recoveryEmailAddressPattern] Pattern of the email address to which the recovery email was sent; empty until a recovery email has been sent
+  /// [recoveryEmailAddressPattern] Pattern of the email address to which the
+  /// email was sent; empty until a recovery email has been sent
   final String recoveryEmailAddressPattern;
 
   static const String CONSTRUCTOR = 'authorizationStateWaitPassword';

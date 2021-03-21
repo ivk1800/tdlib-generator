@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// The parameters of animation search through GetOption("animation_search_bot_username") bot has changed
+/// The parameters of animation search through
+/// bot has changed
 class UpdateAnimationSearchParameters extends Update {
   UpdateAnimationSearchParameters(
       {required this.provider, required this.emojis});

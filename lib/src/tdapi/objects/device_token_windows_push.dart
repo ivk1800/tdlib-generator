@@ -4,7 +4,8 @@ part of '../tdapi.dart';
 class DeviceTokenWindowsPush extends DeviceToken {
   DeviceTokenWindowsPush({required this.accessToken});
 
-  /// [accessToken] The access token that will be used to send notifications; may be empty to de-register a device
+  /// [accessToken] The access token that will be used to send notifications;
+  /// be empty to de-register a device
   final String accessToken;
 
   static const String CONSTRUCTOR = 'deviceTokenWindowsPush';

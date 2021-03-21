@@ -11,7 +11,8 @@ class ChatPosition extends TdObject {
   /// [list] The chat list
   final ChatList list;
 
-  /// [order] A parameter used to determine order of the chat in the chat list. Chats must be sorted by the pair (order, chat.id) in descending order
+  /// [order] A parameter used to determine order of the chat in the chat list.
+  /// must be sorted by the pair (order, chat.id) in descending order
   final int order;
 
   /// [isPinned] True, if the chat is pinned in the chat list

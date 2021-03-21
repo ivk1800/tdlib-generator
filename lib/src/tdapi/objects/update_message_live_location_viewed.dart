@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// A message with a live location was viewed. When the update is received, the application is supposed to update the live location
+/// A message with a live location was viewed. When the update is received,
+/// application is supposed to update the live location
 class UpdateMessageLiveLocationViewed extends Update {
   UpdateMessageLiveLocationViewed(
       {required this.chatId, required this.messageId});

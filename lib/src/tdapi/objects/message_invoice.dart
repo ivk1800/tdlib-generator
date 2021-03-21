@@ -28,7 +28,8 @@ class MessageInvoice extends MessageContent {
   /// [totalAmount] Product total price in the minimal quantity of the currency
   final int totalAmount;
 
-  /// [startParameter] Unique invoice bot start_parameter. To share an invoice use the URL https://t.me/{bot_username}?start={start_parameter}
+  /// [startParameter] Unique invoice bot start_parameter. To share an invoice
+  /// the URL https://t.me/{bot_username}?start={start_parameter}
   final String startParameter;
 
   /// [isTest] True, if the invoice is a test invoice
@@ -37,7 +38,8 @@ class MessageInvoice extends MessageContent {
   /// [needShippingAddress] True, if the shipping address should be specified
   final bool needShippingAddress;
 
-  /// [receiptMessageId] The identifier of the message with the receipt, after the product has been purchased
+  /// [receiptMessageId] The identifier of the message with the receipt, after
+  /// product has been purchased
   final int receiptMessageId;
 
   static const String CONSTRUCTOR = 'messageInvoice';

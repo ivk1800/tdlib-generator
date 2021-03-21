@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Returns the value of an option by its name. (Check the list of available options on https://core.telegram.org/tdlib/options.) Can be called before authorization
+/// Returns the value of an option by its name. (Check the list of available
+/// on https://core.telegram.org/tdlib/options.) Can be called before
 class GetOption extends TdFunction {
   GetOption({required this.name});
 

@@ -1,6 +1,6 @@
 part of '../tdapi.dart';
 
-/// Edits existing chat filter. Returns information about the edited chat filter
+/// Edits existing chat filter. Returns information about the edited chat
 class EditChatFilter extends TdFunction {
   EditChatFilter({required this.chatFilterId, required this.filter});
 

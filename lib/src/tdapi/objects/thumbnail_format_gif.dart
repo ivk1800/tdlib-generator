@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// The thumbnail is in static GIF format. It will be used only for some bot inline results
+/// The thumbnail is in static GIF format. It will be used only for some bot
+/// results
 class ThumbnailFormatGif extends ThumbnailFormat {
   const ThumbnailFormatGif();
 

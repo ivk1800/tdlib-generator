@@ -11,7 +11,8 @@ class MessageVideo extends MessageContent {
   /// [caption] Video caption
   final FormattedText caption;
 
-  /// [isSecret] True, if the video thumbnail must be blurred and the video must be shown only while tapped
+  /// [isSecret] True, if the video thumbnail must be blurred and the video must
+  /// shown only while tapped
   final bool isSecret;
 
   static const String CONSTRUCTOR = 'messageVideo';

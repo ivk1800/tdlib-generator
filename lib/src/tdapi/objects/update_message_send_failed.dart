@@ -1,6 +1,8 @@
 part of '../tdapi.dart';
 
-/// A message failed to send. Be aware that some messages being sent can be irrecoverably deleted, in which case updateDeleteMessages will be received instead of this update
+/// A message failed to send. Be aware that some messages being sent can be
+/// deleted, in which case updateDeleteMessages will be received instead of
+/// update
 class UpdateMessageSendFailed extends Update {
   UpdateMessageSendFailed(
       {required this.message,

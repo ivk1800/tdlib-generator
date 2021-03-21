@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Returns the period of inactivity after which the account of the current user will automatically be deleted
+/// Returns the period of inactivity after which the account of the current
+/// will automatically be deleted
 class GetAccountTtl extends TdFunction {
   GetAccountTtl();
 

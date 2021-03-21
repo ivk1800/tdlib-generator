@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// An object of this type is returned on a successful function call for certain functions
+/// An object of this type is returned on a successful function call for
+/// functions
 class Ok extends TdObject {
   const Ok();
 

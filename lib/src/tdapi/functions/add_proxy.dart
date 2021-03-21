@@ -1,6 +1,6 @@
 part of '../tdapi.dart';
 
-/// Adds a proxy server for network requests. Can be called before authorization
+/// Adds a proxy server for network requests. Can be called before
 class AddProxy extends TdFunction {
   AddProxy(
       {required this.server,

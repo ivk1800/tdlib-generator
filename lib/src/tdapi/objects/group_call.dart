@@ -25,7 +25,8 @@ class GroupCall extends TdObject {
   /// [isJoined] True, if the call is joined
   final bool isJoined;
 
-  /// [needRejoin] True, if user was kicked from the call because of network loss and the call needs to be rejoined
+  /// [needRejoin] True, if user was kicked from the call because of network
+  /// and the call needs to be rejoined
   final bool needRejoin;
 
   /// [canUnmuteSelf] True, if the current user can unmute themself
@@ -43,10 +44,12 @@ class GroupCall extends TdObject {
   /// [recentSpeakers] Recently speaking users in the group call
   final List<GroupCallRecentSpeaker> recentSpeakers;
 
-  /// [muteNewParticipants] True, if only group call administrators can unmute new participants
+  /// [muteNewParticipants] True, if only group call administrators can unmute
+  /// participants
   final bool muteNewParticipants;
 
-  /// [allowedChangeMuteNewParticipants] True, if group call administrators can enable or disable mute_new_participants setting
+  /// [allowedChangeMuteNewParticipants] True, if group call administrators can
+  /// or disable mute_new_participants setting
   final bool allowedChangeMuteNewParticipants;
 
   /// [duration] Call duration; for ended calls only

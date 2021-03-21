@@ -11,7 +11,8 @@ class ProxyTypeHttp extends ProxyType {
   /// [password] Password for logging in; may be empty
   final String password;
 
-  /// [httpOnly] Pass true if the proxy supports only HTTP requests and doesn't support transparent TCP connections via HTTP CONNECT method
+  /// [httpOnly] Pass true if the proxy supports only HTTP requests and doesn't
+  /// transparent TCP connections via HTTP CONNECT method
   final bool httpOnly;
 
   static const String CONSTRUCTOR = 'proxyTypeHttp';

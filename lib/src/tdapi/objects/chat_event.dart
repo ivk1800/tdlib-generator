@@ -14,7 +14,8 @@ class ChatEvent extends TdObject {
   /// [date] Point in time (Unix timestamp) when the event happened
   final int date;
 
-  /// [userId] Identifier of the user who performed the action that triggered the event
+  /// [userId] Identifier of the user who performed the action that triggered
+  /// event
   final int userId;
 
   /// [action] Action performed by the user

@@ -7,7 +7,8 @@ class PersonalDocument extends TdObject {
   /// [files] List of files containing the pages of the document
   final List<DatedFile> files;
 
-  /// [translation] List of files containing a certified English translation of the document
+  /// [translation] List of files containing a certified English translation of
+  /// document
   final List<DatedFile> translation;
 
   static const String CONSTRUCTOR = 'personalDocument';

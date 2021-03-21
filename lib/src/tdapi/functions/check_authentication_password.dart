@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Checks the authentication password for correctness. Works only when the current authorization state is authorizationStateWaitPassword
+/// Checks the authentication password for correctness. Works only when the
+/// authorization state is authorizationStateWaitPassword
 class CheckAuthenticationPassword extends TdFunction {
   CheckAuthenticationPassword({required this.password});
 

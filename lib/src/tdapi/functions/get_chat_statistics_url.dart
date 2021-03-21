@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Returns an HTTP URL with the chat statistics. Currently this method of getting the statistics are disabled and can be deleted in the future
+/// Returns an HTTP URL with the chat statistics. Currently this method of
+/// the statistics are disabled and can be deleted in the future
 class GetChatStatisticsUrl extends TdFunction {
   GetChatStatisticsUrl(
       {required this.chatId, required this.parameters, required this.isDark});

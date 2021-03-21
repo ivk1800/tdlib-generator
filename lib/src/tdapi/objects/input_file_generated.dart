@@ -7,10 +7,13 @@ class InputFileGenerated extends InputFile {
       required this.conversion,
       required this.expectedSize});
 
-  /// [originalPath] Local path to a file from which the file is generated; may be empty if there is no such file
+  /// [originalPath] Local path to a file from which the file is generated; may
+  /// empty if there is no such file
   final String originalPath;
 
-  /// [conversion] String specifying the conversion applied to the original file; should be persistent across application restarts. Conversions beginning with '#' are reserved for internal TDLib usage
+  /// [conversion] String specifying the conversion applied to the original
+  /// should be persistent across application restarts. Conversions beginning
+  /// '#' are reserved for internal TDLib usage
   final String conversion;
 
   /// [expectedSize] Expected size of the generated file; 0 if unknown

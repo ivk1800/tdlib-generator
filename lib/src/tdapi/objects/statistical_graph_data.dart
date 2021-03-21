@@ -7,7 +7,7 @@ class StatisticalGraphData extends StatisticalGraph {
   /// [jsonData] Graph data in JSON format
   final String jsonData;
 
-  /// [zoomToken] If non-empty, a token which can be used to receive a zoomed in graph
+  /// [zoomToken] If non-empty, a token which can be used to receive a zoomed in
   final String zoomToken;
 
   static const String CONSTRUCTOR = 'statisticalGraphData';

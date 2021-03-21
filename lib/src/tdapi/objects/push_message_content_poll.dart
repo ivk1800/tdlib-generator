@@ -13,7 +13,7 @@ class PushMessageContentPoll extends PushMessageContent {
   /// [isRegular] True, if the poll is regular and not in quiz mode
   final bool isRegular;
 
-  /// [isPinned] True, if the message is a pinned message with the specified content
+  /// [isPinned] True, if the message is a pinned message with the specified
   final bool isPinned;
 
   static const String CONSTRUCTOR = 'pushMessageContentPoll';

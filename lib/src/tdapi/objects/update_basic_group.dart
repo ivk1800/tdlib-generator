@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Some data of a basic group has changed. This update is guaranteed to come before the basic group identifier is returned to the application
+/// Some data of a basic group has changed. This update is guaranteed to come
+/// the basic group identifier is returned to the application
 class UpdateBasicGroup extends Update {
   UpdateBasicGroup({required this.basicGroup});
 

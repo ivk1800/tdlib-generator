@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// The list of attached files contains an error. The error is considered resolved when the file list changes
+/// The list of attached files contains an error. The error is considered
+/// when the file list changes
 class InputPassportElementErrorSourceFiles
     extends InputPassportElementErrorSource {
   InputPassportElementErrorSourceFiles({required this.fileHashes});

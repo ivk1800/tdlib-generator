@@ -14,10 +14,12 @@ class UpdateDeleteMessages extends Update {
   /// [messageIds] Identifiers of the deleted messages
   final List<int> messageIds;
 
-  /// [isPermanent] True, if the messages are permanently deleted by a user (as opposed to just becoming inaccessible)
+  /// [isPermanent] True, if the messages are permanently deleted by a user (as
+  /// to just becoming inaccessible)
   final bool isPermanent;
 
-  /// [fromCache] True, if the messages are deleted only from the cache and can possibly be retrieved again in the future
+  /// [fromCache] True, if the messages are deleted only from the cache and can
+  /// be retrieved again in the future
   final bool fromCache;
 
   static const String CONSTRUCTOR = 'updateDeleteMessages';

@@ -7,7 +7,8 @@ class PageBlockAuthorDate extends PageBlock {
   /// [author] Author
   final RichText author;
 
-  /// [publishDate] Point in time (Unix timestamp) when the article was published; 0 if unknown
+  /// [publishDate] Point in time (Unix timestamp) when the article was
+  /// 0 if unknown
   final int publishDate;
 
   static const String CONSTRUCTOR = 'pageBlockAuthorDate';

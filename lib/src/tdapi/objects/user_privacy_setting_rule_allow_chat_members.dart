@@ -1,10 +1,12 @@
 part of '../tdapi.dart';
 
-/// A rule to allow all members of certain specified basic groups and supergroups to doing something
+/// A rule to allow all members of certain specified basic groups and
+/// to doing something
 class UserPrivacySettingRuleAllowChatMembers extends UserPrivacySettingRule {
   UserPrivacySettingRuleAllowChatMembers({required this.chatIds});
 
-  /// [chatIds] The chat identifiers, total number of chats in all rules must not exceed 20
+  /// [chatIds] The chat identifiers, total number of chats in all rules must
+  /// exceed 20
   final List<int> chatIds;
 
   static const String CONSTRUCTOR = 'userPrivacySettingRuleAllowChatMembers';

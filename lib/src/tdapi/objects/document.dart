@@ -18,7 +18,8 @@ class Document extends TdObject {
   /// [minithumbnail] Document minithumbnail; may be null
   final Minithumbnail? minithumbnail;
 
-  /// [thumbnail] Document thumbnail in JPEG or PNG format (PNG will be used only for background patterns); as defined by the sender; may be null
+  /// [thumbnail] Document thumbnail in JPEG or PNG format (PNG will be used
+  /// for background patterns); as defined by the sender; may be null
   final Thumbnail? thumbnail;
 
   /// [document] File containing the document

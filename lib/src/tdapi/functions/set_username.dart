@@ -4,7 +4,8 @@ part of '../tdapi.dart';
 class SetUsername extends TdFunction {
   SetUsername({required this.username});
 
-  /// [username] The new value of the username. Use an empty string to remove the username
+  /// [username] The new value of the username. Use an empty string to remove
+  /// username
   final String username;
 
   /// callback sign

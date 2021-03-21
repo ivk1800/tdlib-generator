@@ -4,7 +4,7 @@ part of '../tdapi.dart';
 class CallbackQueryPayloadGame extends CallbackQueryPayload {
   CallbackQueryPayloadGame({required this.gameShortName});
 
-  /// [gameShortName] A short name of the game that was attached to the callback button
+  /// [gameShortName] A short name of the game that was attached to the callback
   final String gameShortName;
 
   static const String CONSTRUCTOR = 'callbackQueryPayloadGame';

@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Returns an HTTPS link to a message in a chat. Available only for already sent messages in supergroups and channels. This is an offline request
+/// Returns an HTTPS link to a message in a chat. Available only for already
+/// messages in supergroups and channels. This is an offline request
 class GetMessageLink extends TdFunction {
   GetMessageLink(
       {required this.chatId,
@@ -17,7 +18,8 @@ class GetMessageLink extends TdFunction {
   /// [forAlbum] Pass true to create a link for the whole media album
   final bool forAlbum;
 
-  /// [forComment] Pass true to create a link to the message as a channel post comment, or from a message thread
+  /// [forComment] Pass true to create a link to the message as a channel post
+  /// or from a message thread
   final bool forComment;
 
   /// callback sign

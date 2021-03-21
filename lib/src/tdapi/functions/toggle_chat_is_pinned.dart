@@ -1,6 +1,8 @@
 part of '../tdapi.dart';
 
-/// Changes the pinned state of a chat. There can be up to GetOption("pinned_chat_count_max")/GetOption("pinned_archived_chat_count_max") pinned non-secret chats and the same number of secret chats in the main/arhive chat list
+/// Changes the pinned state of a chat. There can be up to
+/// pinned non-secret chats and the same number of secret chats in the
+/// chat list
 class ToggleChatIsPinned extends TdFunction {
   ToggleChatIsPinned(
       {required this.chatList, required this.chatId, required this.isPinned});

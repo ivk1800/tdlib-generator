@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Stops the uploading of a file. Supported only for files uploaded by using uploadFile. For other files the behavior is undefined
+/// Stops the uploading of a file. Supported only for files uploaded by using
+/// For other files the behavior is undefined
 class CancelUploadFile extends TdFunction {
   CancelUploadFile({required this.fileId});
 

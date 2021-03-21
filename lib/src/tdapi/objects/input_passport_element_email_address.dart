@@ -1,6 +1,6 @@
 part of '../tdapi.dart';
 
-/// A Telegram Passport element to be saved containing the user's email address
+/// A Telegram Passport element to be saved containing the user's email
 class InputPassportElementEmailAddress extends InputPassportElement {
   InputPassportElementEmailAddress({required this.emailAddress});
 

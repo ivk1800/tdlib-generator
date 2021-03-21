@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// The call was ended before the conversation started. It was declined by the other party
+/// The call was ended before the conversation started. It was declined by the
+/// party
 class CallDiscardReasonDeclined extends CallDiscardReason {
   const CallDiscardReasonDeclined();
 

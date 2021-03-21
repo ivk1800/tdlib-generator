@@ -21,7 +21,8 @@ class BasicGroupFullInfo extends TdObject {
   /// [members] Group members
   final List<ChatMember> members;
 
-  /// [inviteLink] Invite link for this group; available only after it has been generated at least once and only for the group creator
+  /// [inviteLink] Invite link for this group; available only after it has been
+  /// at least once and only for the group creator
   final String inviteLink;
 
   static const String CONSTRUCTOR = 'basicGroupFullInfo';

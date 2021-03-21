@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Returns information about a button of type inlineKeyboardButtonTypeLoginUrl. The method needs to be called when the user presses the button
+/// Returns information about a button of type
+/// The method needs to be called when the user presses the button
 class GetLoginUrlInfo extends TdFunction {
   GetLoginUrlInfo(
       {required this.chatId, required this.messageId, required this.buttonId});

@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Sends the result of an inline query as a message. Returns the sent message. Always clears a chat draft message
+/// Sends the result of an inline query as a message. Returns the sent
+/// Always clears a chat draft message
 class SendInlineQueryResultMessage extends TdFunction {
   SendInlineQueryResultMessage(
       {required this.chatId,
@@ -14,7 +15,8 @@ class SendInlineQueryResultMessage extends TdFunction {
   /// [chatId] Target chat
   final int chatId;
 
-  /// [messageThreadId] If not 0, a message thread identifier in which the message will be sent
+  /// [messageThreadId] If not 0, a message thread identifier in which the
+  /// will be sent
   final int messageThreadId;
 
   /// [replyToMessageId] Identifier of a message to reply to or 0
@@ -29,7 +31,9 @@ class SendInlineQueryResultMessage extends TdFunction {
   /// [resultId] Identifier of the inline result
   final String resultId;
 
-  /// [hideViaBot] If true, there will be no mention of a bot, via which the message is sent. Can be used only for bots GetOption("animation_search_bot_username"), GetOption("photo_search_bot_username") and GetOption("venue_search_bot_username")
+  /// [hideViaBot] If true, there will be no mention of a bot, via which the
+  /// is sent. Can be used only for bots
+  /// GetOption("photo_search_bot_username") and
   final bool hideViaBot;
 
   /// callback sign

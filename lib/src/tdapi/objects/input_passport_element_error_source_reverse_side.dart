@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// The reverse side of the document contains an error. The error is considered resolved when the file with the reverse side of the document changes
+/// The reverse side of the document contains an error. The error is
+/// resolved when the file with the reverse side of the document changes
 class InputPassportElementErrorSourceReverseSide
     extends InputPassportElementErrorSource {
   InputPassportElementErrorSourceReverseSide({required this.fileHash});

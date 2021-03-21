@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Returns a list of sticker sets attached to a file. Currently only photos and videos can have attached sticker sets
+/// Returns a list of sticker sets attached to a file. Currently only photos
+/// videos can have attached sticker sets
 class GetAttachedStickerSets extends TdFunction {
   GetAttachedStickerSets({required this.fileId});
 

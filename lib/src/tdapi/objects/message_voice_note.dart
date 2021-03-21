@@ -13,7 +13,8 @@ class MessageVoiceNote extends MessageContent {
   /// [caption] Voice note caption
   final FormattedText caption;
 
-  /// [isListened] True, if at least one of the recipients has listened to the voice note
+  /// [isListened] True, if at least one of the recipients has listened to the
+  /// note
   final bool isListened;
 
   static const String CONSTRUCTOR = 'messageVoiceNote';

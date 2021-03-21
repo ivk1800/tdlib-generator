@@ -1,6 +1,6 @@
 part of '../tdapi.dart';
 
-/// Returns contacts of the user, which are members of the supergroup or channel
+/// Returns contacts of the user, which are members of the supergroup or
 class SupergroupMembersFilterContacts extends SupergroupMembersFilter {
   SupergroupMembersFilterContacts({required this.query});
 

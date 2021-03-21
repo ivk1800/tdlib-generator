@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// The call was ended before the conversation started. It was cancelled by the caller or missed by the other party
+/// The call was ended before the conversation started. It was cancelled by
+/// caller or missed by the other party
 class CallDiscardReasonMissed extends CallDiscardReason {
   const CallDiscardReasonMissed();
 

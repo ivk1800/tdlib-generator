@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Returns a globally unique push notification subscription identifier for identification of an account, which has received a push notification. Can be called synchronously
+/// Returns a globally unique push notification subscription identifier for
+/// of an account, which has received a push notification. Can be called
 class GetPushReceiverId extends TdFunction {
   GetPushReceiverId({required this.payload});
 

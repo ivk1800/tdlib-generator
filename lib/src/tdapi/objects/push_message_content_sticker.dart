@@ -11,7 +11,7 @@ class PushMessageContentSticker extends PushMessageContent {
   /// [emoji] Emoji corresponding to the sticker; may be empty
   final String emoji;
 
-  /// [isPinned] True, if the message is a pinned message with the specified content
+  /// [isPinned] True, if the message is a pinned message with the specified
   final bool isPinned;
 
   static const String CONSTRUCTOR = 'pushMessageContentSticker';

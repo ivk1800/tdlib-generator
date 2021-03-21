@@ -1,6 +1,8 @@
 part of '../tdapi.dart';
 
-/// Changes the password for the user. If a new recovery email address is specified, then the change will not be applied until the new recovery email address is confirmed
+/// Changes the password for the user. If a new recovery email address is
+/// then the change will not be applied until the new recovery email address
+/// confirmed
 class SetPassword extends TdFunction {
   SetPassword(
       {required this.oldPassword,
@@ -12,13 +14,15 @@ class SetPassword extends TdFunction {
   /// [oldPassword] Previous password of the user
   final String oldPassword;
 
-  /// [newPassword] New password of the user; may be empty to remove the password
+  /// [newPassword] New password of the user; may be empty to remove the
+  ///
   final String newPassword;
 
   /// [newHint] New password hint; may be empty
   final String newHint;
 
-  /// [setRecoveryEmailAddress] Pass true if the recovery email address should be changed
+  /// [setRecoveryEmailAddress] Pass true if the recovery email address should
+  /// changed
   final bool setRecoveryEmailAddress;
 
   /// [newRecoveryEmailAddress] New recovery email address; may be empty

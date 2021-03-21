@@ -14,7 +14,8 @@ class Sticker extends TdObject {
       Thumbnail? this.thumbnail,
       required this.sticker});
 
-  /// [setId] The identifier of the sticker set to which the sticker belongs; 0 if none
+  /// [setId] The identifier of the sticker set to which the sticker belongs; 0
+  /// none
   final int setId;
 
   /// [width] Sticker width; as defined by the sender
@@ -35,7 +36,8 @@ class Sticker extends TdObject {
   /// [maskPosition] Position where the mask should be placed; may be null
   final MaskPosition? maskPosition;
 
-  /// [outline] Sticker's outline represented as a list of closed vector paths; may be empty. The coordinate system origin is in the upper-left corner
+  /// [outline] Sticker's outline represented as a list of closed vector paths;
+  /// be empty. The coordinate system origin is in the upper-left corner
   final List<ClosedVectorPath> outline;
 
   /// [thumbnail] Sticker thumbnail in WEBP or JPEG format; may be null

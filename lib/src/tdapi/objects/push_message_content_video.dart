@@ -17,7 +17,7 @@ class PushMessageContentVideo extends PushMessageContent {
   /// [isSecret] True, if the video is secret
   final bool isSecret;
 
-  /// [isPinned] True, if the message is a pinned message with the specified content
+  /// [isPinned] True, if the message is a pinned message with the specified
   final bool isPinned;
 
   static const String CONSTRUCTOR = 'pushMessageContentVideo';

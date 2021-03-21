@@ -10,10 +10,12 @@ class MessageVideoNote extends MessageContent {
   /// [videoNote] The video note description
   final VideoNote videoNote;
 
-  /// [isViewed] True, if at least one of the recipients has viewed the video note
+  /// [isViewed] True, if at least one of the recipients has viewed the video
+  ///
   final bool isViewed;
 
-  /// [isSecret] True, if the video note thumbnail must be blurred and the video note must be shown only while tapped
+  /// [isSecret] True, if the video note thumbnail must be blurred and the video
+  /// must be shown only while tapped
   final bool isSecret;
 
   static const String CONSTRUCTOR = 'messageVideoNote';

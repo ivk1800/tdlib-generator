@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Contains information about a Telegram Passport element that was requested by a service
+/// Contains information about a Telegram Passport element that was requested
+/// a service
 class PassportSuitableElement extends TdObject {
   PassportSuitableElement(
       {required this.type,
@@ -11,13 +12,15 @@ class PassportSuitableElement extends TdObject {
   /// [type] Type of the element
   final PassportElementType type;
 
-  /// [isSelfieRequired] True, if a selfie is required with the identity document
+  /// [isSelfieRequired] True, if a selfie is required with the identity
   final bool isSelfieRequired;
 
-  /// [isTranslationRequired] True, if a certified English translation is required with the document
+  /// [isTranslationRequired] True, if a certified English translation is
+  /// with the document
   final bool isTranslationRequired;
 
-  /// [isNativeNameRequired] True, if personal details must include the user's name in the language of their country of residence
+  /// [isNativeNameRequired] True, if personal details must include the user's
+  /// in the language of their country of residence
   final bool isNativeNameRequired;
 
   static const String CONSTRUCTOR = 'passportSuitableElement';

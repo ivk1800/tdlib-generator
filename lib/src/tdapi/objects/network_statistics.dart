@@ -4,7 +4,8 @@ part of '../tdapi.dart';
 class NetworkStatistics extends TdObject {
   NetworkStatistics({required this.sinceDate, required this.entries});
 
-  /// [sinceDate] Point in time (Unix timestamp) from which the statistics are collected
+  /// [sinceDate] Point in time (Unix timestamp) from which the statistics are
+  ///
   final int sinceDate;
 
   /// [entries] Network statistics entries

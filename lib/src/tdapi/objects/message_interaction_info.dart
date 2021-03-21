@@ -13,7 +13,9 @@ class MessageInteractionInfo extends TdObject {
   /// [forwardCount] Number of times the message was forwarded
   final int forwardCount;
 
-  /// [replyInfo] Contains information about direct or indirect replies to the message; may be null. Currently, available only in channels with a discussion supergroup and discussion supergroups for messages, which are not replies itself
+  /// [replyInfo] Contains information about direct or indirect replies to the
+  /// may be null. Currently, available only in channels with a discussion
+  /// and discussion supergroups for messages, which are not replies itself
   final MessageReplyInfo? replyInfo;
 
   static const String CONSTRUCTOR = 'messageInteractionInfo';

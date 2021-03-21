@@ -31,7 +31,8 @@ class WebPage extends TdObject {
   /// [displayUrl] URL to display
   final String displayUrl;
 
-  /// [type] Type of the web page. Can be: article, photo, audio, video, document, profile, app, or something else
+  /// [type] Type of the web page. Can be: article, photo, audio, video,
+  /// profile, app, or something else
   final String type;
 
   /// [siteName] Short name of the site (e.g., Google Docs, App Store)
@@ -49,7 +50,7 @@ class WebPage extends TdObject {
   /// [embedUrl] URL to show in the embedded preview
   final String embedUrl;
 
-  /// [embedType] MIME type of the embedded preview, (e.g., text/html or video/mp4)
+  /// [embedType] MIME type of the embedded preview, (e.g., text/html or
   final String embedType;
 
   /// [embedWidth] Width of the embedded preview
@@ -64,28 +65,31 @@ class WebPage extends TdObject {
   /// [author] Author of the content
   final String author;
 
-  /// [animation] Preview of the content as an animation, if available; may be null
+  /// [animation] Preview of the content as an animation, if available; may be
   final Animation? animation;
 
   /// [audio] Preview of the content as an audio file, if available; may be null
   final Audio? audio;
 
-  /// [document] Preview of the content as a document, if available (currently only available for small PDF files and ZIP archives); may be null
+  /// [document] Preview of the content as a document, if available (currently
+  /// available for small PDF files and ZIP archives); may be null
   final Document? document;
 
-  /// [sticker] Preview of the content as a sticker for small WEBP files, if available; may be null
+  /// [sticker] Preview of the content as a sticker for small WEBP files, if
+  /// may be null
   final Sticker? sticker;
 
   /// [video] Preview of the content as a video, if available; may be null
   final Video? video;
 
-  /// [videoNote] Preview of the content as a video note, if available; may be null
+  /// [videoNote] Preview of the content as a video note, if available; may be
   final VideoNote? videoNote;
 
-  /// [voiceNote] Preview of the content as a voice note, if available; may be null
+  /// [voiceNote] Preview of the content as a voice note, if available; may be
   final VoiceNote? voiceNote;
 
-  /// [instantViewVersion] Version of instant view, available for the web page (currently can be 1 or 2), 0 if none
+  /// [instantViewVersion] Version of instant view, available for the web page
+  /// can be 1 or 2), 0 if none
   final int instantViewVersion;
 
   static const String CONSTRUCTOR = 'webPage';

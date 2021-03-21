@@ -21,7 +21,8 @@ class PasswordState extends TdObject {
   /// [hasPassportData] True, if some Telegram Passport elements were saved
   final bool hasPassportData;
 
-  /// [recoveryEmailAddressCodeInfo] Information about the recovery email address to which the confirmation email was sent; may be null
+  /// [recoveryEmailAddressCodeInfo] Information about the recovery email
+  /// to which the confirmation email was sent; may be null
   final EmailAddressAuthenticationCodeInfo? recoveryEmailAddressCodeInfo;
 
   static const String CONSTRUCTOR = 'passwordState';

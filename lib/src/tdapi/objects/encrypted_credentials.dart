@@ -11,7 +11,7 @@ class EncryptedCredentials extends TdObject {
   /// [hash] The decrypted data hash
   final String hash;
 
-  /// [secret] Secret for data decryption, encrypted with the service's public key
+  /// [secret] Secret for data decryption, encrypted with the service's public
   final String secret;
 
   static const String CONSTRUCTOR = 'encryptedCredentials';

@@ -1,6 +1,6 @@
 part of '../tdapi.dart';
 
-/// Contains information about an inline button of type inlineKeyboardButtonTypeLoginUrl
+/// Contains information about an inline button of type
 abstract class LoginUrlInfo extends TdObject {
   const LoginUrlInfo();
 

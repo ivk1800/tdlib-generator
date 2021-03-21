@@ -26,7 +26,8 @@ class InputInlineQueryResultDocument extends InputInlineQueryResult {
   /// [documentUrl] URL of the file
   final String documentUrl;
 
-  /// [mimeType] MIME type of the file content; only "application/pdf" and "application/zip" are currently allowed
+  /// [mimeType] MIME type of the file content; only "application/pdf" and
+  /// are currently allowed
   final String mimeType;
 
   /// [thumbnailUrl] The URL of the file thumbnail, if it exists
@@ -38,10 +39,13 @@ class InputInlineQueryResultDocument extends InputInlineQueryResult {
   /// [thumbnailHeight] Height of the thumbnail
   final int thumbnailHeight;
 
-  /// [replyMarkup] The message reply markup. Must be of type replyMarkupInlineKeyboard or null
+  /// [replyMarkup] The message reply markup. Must be of type
+  /// or null
   final ReplyMarkup? replyMarkup;
 
-  /// [inputMessageContent] The content of the message to be sent. Must be one of the following types: InputMessageText, InputMessageDocument, InputMessageLocation, InputMessageVenue or InputMessageContact
+  /// [inputMessageContent] The content of the message to be sent. Must be one
+  /// the following types: InputMessageText, InputMessageDocument,
+  /// InputMessageVenue or InputMessageContact
   final InputMessageContent inputMessageContent;
 
   static const String CONSTRUCTOR = 'inputInlineQueryResultDocument';

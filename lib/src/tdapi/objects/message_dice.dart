@@ -9,19 +9,22 @@ class MessageDice extends MessageContent {
       required this.value,
       required this.successAnimationFrameNumber});
 
-  /// [initialState] The animated stickers with the initial dice animation; may be null if unknown. updateMessageContent will be sent when the sticker became known
+  /// [initialState] The animated stickers with the initial dice animation; may
+  /// null if unknown. updateMessageContent will be sent when the sticker became
   final DiceStickers? initialState;
 
-  /// [finalState] The animated stickers with the final dice animation; may be null if unknown. updateMessageContent will be sent when the sticker became known
+  /// [finalState] The animated stickers with the final dice animation; may be
+  /// if unknown. updateMessageContent will be sent when the sticker became
   final DiceStickers? finalState;
 
   /// [emoji] Emoji on which the dice throw animation is based
   final String emoji;
 
-  /// [value] The dice value. If the value is 0, the dice don't have final state yet
+  /// [value] The dice value. If the value is 0, the dice don't have final state
   final int value;
 
-  /// [successAnimationFrameNumber] Number of frame after which a success animation like a shower of confetti needs to be shown on updateMessageSendSucceeded
+  /// [successAnimationFrameNumber] Number of frame after which a success
+  /// like a shower of confetti needs to be shown on updateMessageSendSucceeded
   final int successAnimationFrameNumber;
 
   static const String CONSTRUCTOR = 'messageDice';

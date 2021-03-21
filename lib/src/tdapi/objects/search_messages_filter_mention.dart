@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Returns only messages with mentions of the current user, or messages that are replies to their messages
+/// Returns only messages with mentions of the current user, or messages that
+/// replies to their messages
 class SearchMessagesFilterMention extends SearchMessagesFilter {
   const SearchMessagesFilterMention();
 

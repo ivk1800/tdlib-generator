@@ -8,7 +8,7 @@ class PushMessageContentVideoNote extends PushMessageContent {
   /// [videoNote] Message content; may be null
   final VideoNote? videoNote;
 
-  /// [isPinned] True, if the message is a pinned message with the specified content
+  /// [isPinned] True, if the message is a pinned message with the specified
   final bool isPinned;
 
   static const String CONSTRUCTOR = 'pushMessageContentVideoNote';

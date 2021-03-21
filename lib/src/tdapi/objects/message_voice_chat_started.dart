@@ -4,7 +4,8 @@ part of '../tdapi.dart';
 class MessageVoiceChatStarted extends MessageContent {
   MessageVoiceChatStarted({required this.groupCallId});
 
-  /// [groupCallId] Identifier of the voice chat. The voice chat can be received through the method getGroupCall
+  /// [groupCallId] Identifier of the voice chat. The voice chat can be received
+  /// the method getGroupCall
   final int groupCallId;
 
   static const String CONSTRUCTOR = 'messageVoiceChatStarted';

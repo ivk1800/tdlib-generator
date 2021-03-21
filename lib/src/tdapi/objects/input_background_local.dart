@@ -4,7 +4,9 @@ part of '../tdapi.dart';
 class InputBackgroundLocal extends InputBackground {
   InputBackgroundLocal({required this.background});
 
-  /// [background] Background file to use. Only inputFileLocal and inputFileGenerated are supported. The file must be in JPEG format for wallpapers and in PNG format for patterns
+  /// [background] Background file to use. Only inputFileLocal and
+  /// are supported. The file must be in JPEG format for wallpapers and in PNG
+  /// for patterns
   final InputFile background;
 
   static const String CONSTRUCTOR = 'inputBackgroundLocal';

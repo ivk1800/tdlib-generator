@@ -1,6 +1,8 @@
 part of '../tdapi.dart';
 
-/// Changes the location of a chat. Available only for some location-based supergroups, use supergroupFullInfo.can_set_location to check whether the method is allowed to use
+/// Changes the location of a chat. Available only for some location-based
+/// use supergroupFullInfo.can_set_location to check whether the method is
+/// to use
 class SetChatLocation extends TdFunction {
   SetChatLocation({required this.chatId, required this.location});
 

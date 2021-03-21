@@ -4,7 +4,8 @@ part of '../tdapi.dart';
 class TextParseModeMarkdown extends TextParseMode {
   TextParseModeMarkdown({required this.version});
 
-  /// [version] Version of the parser: 0 or 1 - Telegram Bot API "Markdown" parse mode, 2 - Telegram Bot API "MarkdownV2" parse mode
+  /// [version] Version of the parser: 0 or 1 - Telegram Bot API "Markdown"
+  /// mode, 2 - Telegram Bot API "MarkdownV2" parse mode
   final int version;
 
   static const String CONSTRUCTOR = 'textParseModeMarkdown';

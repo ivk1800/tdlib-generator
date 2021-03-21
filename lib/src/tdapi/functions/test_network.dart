@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Sends a simple network request to the Telegram servers; for testing only. Can be called before authorization
+/// Sends a simple network request to the Telegram servers; for testing only.
+/// be called before authorization
 class TestNetwork extends TdFunction {
   TestNetwork();
 

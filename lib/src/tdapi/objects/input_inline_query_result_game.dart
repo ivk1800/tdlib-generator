@@ -13,7 +13,8 @@ class InputInlineQueryResultGame extends InputInlineQueryResult {
   /// [gameShortName] Short name of the game
   final String gameShortName;
 
-  /// [replyMarkup] Message reply markup. Must be of type replyMarkupInlineKeyboard or null
+  /// [replyMarkup] Message reply markup. Must be of type
+  /// or null
   final ReplyMarkup? replyMarkup;
 
   static const String CONSTRUCTOR = 'inputInlineQueryResultGame';

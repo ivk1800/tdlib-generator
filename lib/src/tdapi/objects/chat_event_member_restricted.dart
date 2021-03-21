@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// A chat member was restricted/unrestricted or banned/unbanned, or the list of their restrictions has changed
+/// A chat member was restricted/unrestricted or banned/unbanned, or the list
+/// their restrictions has changed
 class ChatEventMemberRestricted extends ChatEventAction {
   ChatEventMemberRestricted(
       {required this.userId, required this.oldStatus, required this.newStatus});

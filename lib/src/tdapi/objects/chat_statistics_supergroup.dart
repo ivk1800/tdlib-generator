@@ -41,13 +41,14 @@ class ChatStatisticsSupergroup extends ChatStatistics {
   /// [joinGraph] A graph containing number of members joined and left the chat
   final StatisticalGraph joinGraph;
 
-  /// [joinBySourceGraph] A graph containing number of new member joins per source
+  /// [joinBySourceGraph] A graph containing number of new member joins per
   final StatisticalGraph joinBySourceGraph;
 
-  /// [languageGraph] A graph containing distribution of active users per language
+  /// [languageGraph] A graph containing distribution of active users per
   final StatisticalGraph languageGraph;
 
-  /// [messageContentGraph] A graph containing distribution of sent messages by content type
+  /// [messageContentGraph] A graph containing distribution of sent messages by
+  /// type
   final StatisticalGraph messageContentGraph;
 
   /// [actionGraph] A graph containing number of different actions in the chat
@@ -56,7 +57,7 @@ class ChatStatisticsSupergroup extends ChatStatistics {
   /// [dayGraph] A graph containing distribution of message views per hour
   final StatisticalGraph dayGraph;
 
-  /// [weekGraph] A graph containing distribution of message views per day of week
+  /// [weekGraph] A graph containing distribution of message views per day of
   final StatisticalGraph weekGraph;
 
   /// [topSenders] List of users sent most messages in the last week

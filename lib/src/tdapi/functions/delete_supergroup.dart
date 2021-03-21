@@ -1,6 +1,9 @@
 part of '../tdapi.dart';
 
-/// Deletes a supergroup or channel along with all messages in the corresponding chat. This will release the supergroup or channel username and remove all members; requires owner privileges in the supergroup or channel. Chats with more than 1000 members can't be deleted using this method
+/// Deletes a supergroup or channel along with all messages in the
+/// chat. This will release the supergroup or channel username and remove all
+/// requires owner privileges in the supergroup or channel. Chats with more
+/// 1000 members can't be deleted using this method
 class DeleteSupergroup extends TdFunction {
   DeleteSupergroup({required this.supergroupId});
 

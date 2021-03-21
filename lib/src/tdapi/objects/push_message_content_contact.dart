@@ -7,7 +7,7 @@ class PushMessageContentContact extends PushMessageContent {
   /// [name] Contact's name
   final String name;
 
-  /// [isPinned] True, if the message is a pinned message with the specified content
+  /// [isPinned] True, if the message is a pinned message with the specified
   final bool isPinned;
 
   static const String CONSTRUCTOR = 'pushMessageContentContact';

@@ -4,7 +4,8 @@ part of '../tdapi.dart';
 class PaymentResult extends TdObject {
   PaymentResult({required this.success, required this.verificationUrl});
 
-  /// [success] True, if the payment request was successful; otherwise the verification_url will be not empty
+  /// [success] True, if the payment request was successful; otherwise the
+  /// will be not empty
   final bool success;
 
   /// [verificationUrl] URL for additional payment credentials verification

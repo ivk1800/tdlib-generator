@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Returns information about a message, if it is available locally without sending network request. This is an offline request
+/// Returns information about a message, if it is available locally without
+/// network request. This is an offline request
 class GetMessageLocally extends TdFunction {
   GetMessageLocally({required this.chatId, required this.messageId});
 

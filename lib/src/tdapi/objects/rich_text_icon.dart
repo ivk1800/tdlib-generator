@@ -5,13 +5,14 @@ class RichTextIcon extends RichText {
   RichTextIcon(
       {required this.document, required this.width, required this.height});
 
-  /// [document] The image represented as a document. The image can be in GIF, JPEG or PNG format
+  /// [document] The image represented as a document. The image can be in GIF,
+  /// or PNG format
   final Document document;
 
-  /// [width] Width of a bounding box in which the image should be shown; 0 if unknown
+  /// [width] Width of a bounding box in which the image should be shown; 0 if
   final int width;
 
-  /// [height] Height of a bounding box in which the image should be shown; 0 if unknown
+  /// [height] Height of a bounding box in which the image should be shown; 0 if
   final int height;
 
   static const String CONSTRUCTOR = 'richTextIcon';

@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// A button that opens a specified URL and automatically authorize the current user if allowed to do so
+/// A button that opens a specified URL and automatically authorize the
+/// user if allowed to do so
 class InlineKeyboardButtonTypeLoginUrl extends InlineKeyboardButtonType {
   InlineKeyboardButtonTypeLoginUrl(
       {required this.url, required this.id, required this.forwardText});

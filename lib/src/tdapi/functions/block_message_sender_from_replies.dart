@@ -14,10 +14,10 @@ class BlockMessageSenderFromReplies extends TdFunction {
   /// [deleteMessage] Pass true if the message must be deleted
   final bool deleteMessage;
 
-  /// [deleteAllMessages] Pass true if all messages from the same sender must be deleted
+  /// [deleteAllMessages] Pass true if all messages from the same sender must be
   final bool deleteAllMessages;
 
-  /// [reportSpam] Pass true if the sender must be reported to the Telegram moderators
+  /// [reportSpam] Pass true if the sender must be reported to the Telegram
   final bool reportSpam;
 
   /// callback sign

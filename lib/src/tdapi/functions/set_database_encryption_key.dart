@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Changes the database encryption key. Usually the encryption key is never changed and is stored in some OS keychain
+/// Changes the database encryption key. Usually the encryption key is never
+/// and is stored in some OS keychain
 class SetDatabaseEncryptionKey extends TdFunction {
   SetDatabaseEncryptionKey({required this.newEncryptionKey});
 

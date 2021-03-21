@@ -1,6 +1,9 @@
 part of '../tdapi.dart';
 
-/// Informs TDLib that messages are being viewed by the user. Many useful activities depend on whether the messages are currently being viewed or not (e.g., marking messages as read, incrementing a view counter, updating a view counter, removing deleted messages in supergroups and channels)
+/// Informs TDLib that messages are being viewed by the user. Many useful
+/// depend on whether the messages are currently being viewed or not (e.g.,
+/// messages as read, incrementing a view counter, updating a view counter,
+/// deleted messages in supergroups and channels)
 class ViewMessages extends TdFunction {
   ViewMessages(
       {required this.chatId,
@@ -11,13 +14,15 @@ class ViewMessages extends TdFunction {
   /// [chatId] Chat identifier
   final int chatId;
 
-  /// [messageThreadId] If not 0, a message thread identifier in which the messages are being viewed
+  /// [messageThreadId] If not 0, a message thread identifier in which the
+  /// are being viewed
   final int messageThreadId;
 
   /// [messageIds] The identifiers of the messages being viewed
   final List<int> messageIds;
 
-  /// [forceRead] True, if messages in closed chats should be marked as read by the request
+  /// [forceRead] True, if messages in closed chats should be marked as read by
+  /// request
   final bool forceRead;
 
   /// callback sign

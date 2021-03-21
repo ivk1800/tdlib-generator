@@ -5,7 +5,8 @@ class UpdateMessageSendSucceeded extends Update {
   UpdateMessageSendSucceeded(
       {required this.message, required this.oldMessageId});
 
-  /// [message] Information about the sent message. Usually only the message identifier, date, and content are changed, but almost all other fields can also change
+  /// [message] Information about the sent message. Usually only the message
+  /// date, and content are changed, but almost all other fields can also change
   final Message message;
 
   /// [oldMessageId] The previous temporary message identifier

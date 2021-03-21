@@ -7,13 +7,16 @@ class PhoneNumberAuthenticationSettings extends TdObject {
       required this.isCurrentPhoneNumber,
       required this.allowSmsRetrieverApi});
 
-  /// [allowFlashCall] Pass true if the authentication code may be sent via flash call to the specified phone number
+  /// [allowFlashCall] Pass true if the authentication code may be sent via
+  /// call to the specified phone number
   final bool allowFlashCall;
 
-  /// [isCurrentPhoneNumber] Pass true if the authenticated phone number is used on the current device
+  /// [isCurrentPhoneNumber] Pass true if the authenticated phone number is used
+  /// the current device
   final bool isCurrentPhoneNumber;
 
-  /// [allowSmsRetrieverApi] For official applications only. True, if the application can use Android SMS Retriever API (requires Google Play Services
+  /// [allowSmsRetrieverApi] For official applications only. True, if the
+  /// can use Android SMS Retriever API (requires Google Play Services
   final bool allowSmsRetrieverApi;
 
   static const String CONSTRUCTOR = 'phoneNumberAuthenticationSettings';

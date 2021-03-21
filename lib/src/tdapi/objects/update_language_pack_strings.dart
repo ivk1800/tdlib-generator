@@ -7,7 +7,8 @@ class UpdateLanguagePackStrings extends Update {
       required this.languagePackId,
       required this.strings});
 
-  /// [localizationTarget] Localization target to which the language pack belongs
+  /// [localizationTarget] Localization target to which the language pack
+  ///
   final String localizationTarget;
 
   /// [languagePackId] Identifier of the updated language pack

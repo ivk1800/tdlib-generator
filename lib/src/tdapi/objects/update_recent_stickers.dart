@@ -4,7 +4,8 @@ part of '../tdapi.dart';
 class UpdateRecentStickers extends Update {
   UpdateRecentStickers({required this.isAttached, required this.stickerIds});
 
-  /// [isAttached] True, if the list of stickers attached to photo or video files was updated, otherwise the list of sent stickers is updated
+  /// [isAttached] True, if the list of stickers attached to photo or video
+  /// was updated, otherwise the list of sent stickers is updated
   final bool isAttached;
 
   /// [stickerIds] The new list of file identifiers of recently used stickers

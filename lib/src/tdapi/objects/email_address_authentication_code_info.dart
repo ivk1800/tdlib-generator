@@ -5,7 +5,8 @@ class EmailAddressAuthenticationCodeInfo extends TdObject {
   EmailAddressAuthenticationCodeInfo(
       {required this.emailAddressPattern, required this.length});
 
-  /// [emailAddressPattern] Pattern of the email address to which an authentication code was sent
+  /// [emailAddressPattern] Pattern of the email address to which an
+  /// code was sent
   final String emailAddressPattern;
 
   /// [length] Length of the code; 0 if unknown

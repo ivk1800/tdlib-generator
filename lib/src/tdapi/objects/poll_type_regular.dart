@@ -4,7 +4,7 @@ part of '../tdapi.dart';
 class PollTypeRegular extends PollType {
   PollTypeRegular({required this.allowMultipleAnswers});
 
-  /// [allowMultipleAnswers] True, if multiple answer options can be chosen simultaneously
+  /// [allowMultipleAnswers] True, if multiple answer options can be chosen
   final bool allowMultipleAnswers;
 
   static const String CONSTRUCTOR = 'pollTypeRegular';

@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Represents a closed vector path. The path begins at the end point of the last command
+/// Represents a closed vector path. The path begins at the end point of the
+/// command
 class ClosedVectorPath extends TdObject {
   ClosedVectorPath({required this.commands});
 

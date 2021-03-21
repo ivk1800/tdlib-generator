@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Some data of a secret chat has changed. This update is guaranteed to come before the secret chat identifier is returned to the application
+/// Some data of a secret chat has changed. This update is guaranteed to come
+/// the secret chat identifier is returned to the application
 class UpdateSecretChat extends Update {
   UpdateSecretChat({required this.secretChat});
 

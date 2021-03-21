@@ -7,7 +7,8 @@ class CreateTemporaryPassword extends TdFunction {
   /// [password] Persistent user password
   final String password;
 
-  /// [validFor] Time during which the temporary password will be valid, in seconds; should be between 60 and 86400
+  /// [validFor] Time during which the temporary password will be valid, in
+  /// should be between 60 and 86400
   final int validFor;
 
   /// callback sign

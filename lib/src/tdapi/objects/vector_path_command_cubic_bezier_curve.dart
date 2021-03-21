@@ -7,13 +7,10 @@ class VectorPathCommandCubicBezierCurve extends VectorPathCommand {
       required this.endControlPoint,
       required this.endPoint});
 
-  ///
   final Point startControlPoint;
 
-  ///
   final Point endControlPoint;
 
-  ///
   final Point endPoint;
 
   static const String CONSTRUCTOR = 'vectorPathCommandCubicBezierCurve';

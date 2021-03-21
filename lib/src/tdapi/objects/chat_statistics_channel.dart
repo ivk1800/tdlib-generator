@@ -28,10 +28,11 @@ class ChatStatisticsChannel extends ChatStatistics {
   /// [meanViewCount] Mean number of times the recently sent messages was viewed
   final StatisticalValue meanViewCount;
 
-  /// [meanShareCount] Mean number of times the recently sent messages was shared
+  /// [meanShareCount] Mean number of times the recently sent messages was
   final StatisticalValue meanShareCount;
 
-  /// [enabledNotificationsPercentage] A percentage of users with enabled notifications for the chat
+  /// [enabledNotificationsPercentage] A percentage of users with enabled
+  /// for the chat
   final double enabledNotificationsPercentage;
 
   /// [memberCountGraph] A graph containing number of members in the chat
@@ -40,28 +41,33 @@ class ChatStatisticsChannel extends ChatStatistics {
   /// [joinGraph] A graph containing number of members joined and left the chat
   final StatisticalGraph joinGraph;
 
-  /// [muteGraph] A graph containing number of members muted and unmuted the chat
+  /// [muteGraph] A graph containing number of members muted and unmuted the
   final StatisticalGraph muteGraph;
 
-  /// [viewCountByHourGraph] A graph containing number of message views in a given hour in the last two weeks
+  /// [viewCountByHourGraph] A graph containing number of message views in a
+  /// hour in the last two weeks
   final StatisticalGraph viewCountByHourGraph;
 
-  /// [viewCountBySourceGraph] A graph containing number of message views per source
+  /// [viewCountBySourceGraph] A graph containing number of message views per
   final StatisticalGraph viewCountBySourceGraph;
 
-  /// [joinBySourceGraph] A graph containing number of new member joins per source
+  /// [joinBySourceGraph] A graph containing number of new member joins per
   final StatisticalGraph joinBySourceGraph;
 
-  /// [languageGraph] A graph containing number of users viewed chat messages per language
+  /// [languageGraph] A graph containing number of users viewed chat messages
+  /// language
   final StatisticalGraph languageGraph;
 
-  /// [messageInteractionGraph] A graph containing number of chat message views and shares
+  /// [messageInteractionGraph] A graph containing number of chat message views
+  /// shares
   final StatisticalGraph messageInteractionGraph;
 
-  /// [instantViewInteractionGraph] A graph containing number of views of associated with the chat instant views
+  /// [instantViewInteractionGraph] A graph containing number of views of
+  /// with the chat instant views
   final StatisticalGraph instantViewInteractionGraph;
 
-  /// [recentMessageInteractions] Detailed statistics about number of views and shares of recently sent messages
+  /// [recentMessageInteractions] Detailed statistics about number of views and
+  /// of recently sent messages
   final List<ChatStatisticsMessageInteractionInfo> recentMessageInteractions;
 
   static const String CONSTRUCTOR = 'chatStatisticsChannel';

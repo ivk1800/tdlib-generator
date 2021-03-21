@@ -26,16 +26,20 @@ class StickerSet extends TdObject {
   /// [name] Name of the sticker set
   final String name;
 
-  /// [thumbnail] Sticker set thumbnail in WEBP or TGS format with width and height 100; may be null. The file can be downloaded only before the thumbnail is changed
+  /// [thumbnail] Sticker set thumbnail in WEBP or TGS format with width and
+  /// 100; may be null. The file can be downloaded only before the thumbnail is
   final Thumbnail? thumbnail;
 
-  /// [thumbnailOutline] Sticker set thumbnail's outline represented as a list of closed vector paths; may be empty. The coordinate system origin is in the upper-left corner
+  /// [thumbnailOutline] Sticker set thumbnail's outline represented as a list
+  /// closed vector paths; may be empty. The coordinate system origin is in the
+  /// corner
   final List<ClosedVectorPath> thumbnailOutline;
 
-  /// [isInstalled] True, if the sticker set has been installed by the current user
+  /// [isInstalled] True, if the sticker set has been installed by the current
   final bool isInstalled;
 
-  /// [isArchived] True, if the sticker set has been archived. A sticker set can't be installed and archived simultaneously
+  /// [isArchived] True, if the sticker set has been archived. A sticker set
+  /// be installed and archived simultaneously
   final bool isArchived;
 
   /// [isOfficial] True, if the sticker set is official
@@ -53,7 +57,9 @@ class StickerSet extends TdObject {
   /// [stickers] List of stickers in this set
   final List<Sticker> stickers;
 
-  /// [emojis] A list of emoji corresponding to the stickers in the same order. The list is only for informational purposes, because a sticker is always sent with a fixed emoji from the corresponding Sticker object
+  /// [emojis] A list of emoji corresponding to the stickers in the same order.
+  /// list is only for informational purposes, because a sticker is always sent
+  /// a fixed emoji from the corresponding Sticker object
   final List<Emojis> emojis;
 
   static const String CONSTRUCTOR = 'stickerSet';

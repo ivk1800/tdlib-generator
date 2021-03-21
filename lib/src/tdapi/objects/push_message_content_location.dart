@@ -7,7 +7,7 @@ class PushMessageContentLocation extends PushMessageContent {
   /// [isLive] True, if the location is live
   final bool isLive;
 
-  /// [isPinned] True, if the message is a pinned message with the specified content
+  /// [isPinned] True, if the message is a pinned message with the specified
   final bool isPinned;
 
   static const String CONSTRUCTOR = 'pushMessageContentLocation';

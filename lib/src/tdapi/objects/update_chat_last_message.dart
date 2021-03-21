@@ -1,6 +1,8 @@
 part of '../tdapi.dart';
 
-/// The last message of a chat was changed. If last_message is null, then the last message in the chat became unknown. Some new unknown messages might be added to the chat in this case
+/// The last message of a chat was changed. If last_message is null, then the
+/// message in the chat became unknown. Some new unknown messages might be
+/// to the chat in this case
 class UpdateChatLastMessage extends Update {
   UpdateChatLastMessage(
       {required this.chatId,

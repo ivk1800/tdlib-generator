@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Represents the categories of chats for which a list of frequently used chats can be retrieved
+/// Represents the categories of chats for which a list of frequently used
+/// can be retrieved
 abstract class TopChatCategory extends TdObject {
   const TopChatCategory();
 

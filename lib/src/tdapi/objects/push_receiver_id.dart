@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Contains a globally unique push receiver identifier, which can be used to identify which account has received a push notification
+/// Contains a globally unique push receiver identifier, which can be used to
+/// which account has received a push notification
 class PushReceiverId extends TdObject {
   PushReceiverId({required this.id});
 

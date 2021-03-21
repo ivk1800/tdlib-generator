@@ -21,19 +21,22 @@ class AutoDownloadSettings extends TdObject {
   /// [maxVideoFileSize] The maximum size of a video file to be auto-downloaded
   final int maxVideoFileSize;
 
-  /// [maxOtherFileSize] The maximum size of other file types to be auto-downloaded
+  /// [maxOtherFileSize] The maximum size of other file types to be
   final int maxOtherFileSize;
 
   /// [videoUploadBitrate] The maximum suggested bitrate for uploaded videos
   final int videoUploadBitrate;
 
-  /// [preloadLargeVideos] True, if the beginning of video files needs to be preloaded for instant playback
+  /// [preloadLargeVideos] True, if the beginning of video files needs to be
+  /// for instant playback
   final bool preloadLargeVideos;
 
-  /// [preloadNextAudio] True, if the next audio track needs to be preloaded while the user is listening to an audio file
+  /// [preloadNextAudio] True, if the next audio track needs to be preloaded
+  /// the user is listening to an audio file
   final bool preloadNextAudio;
 
-  /// [useLessDataForCalls] True, if "use less data for calls" option needs to be enabled
+  /// [useLessDataForCalls] True, if "use less data for calls" option needs to
+  /// enabled
   final bool useLessDataForCalls;
 
   static const String CONSTRUCTOR = 'autoDownloadSettings';

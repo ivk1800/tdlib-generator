@@ -1,11 +1,13 @@
 part of '../tdapi.dart';
 
-/// Searches for installed sticker sets by looking for specified query in their title and name
+/// Searches for installed sticker sets by looking for specified query in
+/// title and name
 class SearchInstalledStickerSets extends TdFunction {
   SearchInstalledStickerSets(
       {required this.isMasks, required this.query, required this.limit});
 
-  /// [isMasks] Pass true to return mask sticker sets; pass false to return ordinary sticker sets
+  /// [isMasks] Pass true to return mask sticker sets; pass false to return
+  /// sticker sets
   final bool isMasks;
 
   /// [query] Query to search for

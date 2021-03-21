@@ -1,13 +1,15 @@
 part of '../tdapi.dart';
 
-/// The position of a chat in a chat list has changed. Instead of this update updateChatLastMessage or updateChatDraftMessage might be sent
+/// The position of a chat in a chat list has changed. Instead of this update
+/// or updateChatDraftMessage might be sent
 class UpdateChatPosition extends Update {
   UpdateChatPosition({required this.chatId, required this.position});
 
   /// [chatId] Chat identifier
   final int chatId;
 
-  /// [position] New chat position. If new order is 0, then the chat needs to be removed from the list
+  /// [position] New chat position. If new order is 0, then the chat needs to be
+  /// from the list
   final ChatPosition position;
 
   static const String CONSTRUCTOR = 'updateChatPosition';

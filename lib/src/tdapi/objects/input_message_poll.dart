@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// A message with a poll. Polls can't be sent to secret chats. Polls can be sent only to a private chat with a bot
+/// A message with a poll. Polls can't be sent to secret chats. Polls can be
+/// only to a private chat with a bot
 class InputMessagePoll extends InputMessageContent {
   InputMessagePoll(
       {required this.question,
@@ -17,19 +18,22 @@ class InputMessagePoll extends InputMessageContent {
   /// [options] List of poll answer options, 2-10 strings 1-100 characters each
   final List<String> options;
 
-  /// [isAnonymous] True, if the poll voters are anonymous. Non-anonymous polls can't be sent or forwarded to channels
+  /// [isAnonymous] True, if the poll voters are anonymous. Non-anonymous polls
+  /// be sent or forwarded to channels
   final bool isAnonymous;
 
   /// [type] Type of the poll
   final PollType type;
 
-  /// [openPeriod] Amount of time the poll will be active after creation, in seconds; for bots only
+  /// [openPeriod] Amount of time the poll will be active after creation, in
+  /// for bots only
   final int openPeriod;
 
-  /// [closeDate] Point in time (Unix timestamp) when the poll will be automatically closed; for bots only
+  /// [closeDate] Point in time (Unix timestamp) when the poll will be
+  /// closed; for bots only
   final int closeDate;
 
-  /// [isClosed] True, if the poll needs to be sent already closed; for bots only
+  /// [isClosed] True, if the poll needs to be sent already closed; for bots
   final bool isClosed;
 
   static const String CONSTRUCTOR = 'inputMessagePoll';

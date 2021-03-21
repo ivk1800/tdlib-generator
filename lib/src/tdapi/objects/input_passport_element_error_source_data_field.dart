@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// A data field contains an error. The error is considered resolved when the field's value changes
+/// A data field contains an error. The error is considered resolved when the
+/// value changes
 class InputPassportElementErrorSourceDataField
     extends InputPassportElementErrorSource {
   InputPassportElementErrorSourceDataField(

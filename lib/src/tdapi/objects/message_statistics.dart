@@ -4,7 +4,7 @@ part of '../tdapi.dart';
 class MessageStatistics extends TdObject {
   MessageStatistics({required this.messageInteractionGraph});
 
-  /// [messageInteractionGraph] A graph containing number of message views and shares
+  /// [messageInteractionGraph] A graph containing number of message views and
   final StatisticalGraph messageInteractionGraph;
 
   static const String CONSTRUCTOR = 'messageStatistics';

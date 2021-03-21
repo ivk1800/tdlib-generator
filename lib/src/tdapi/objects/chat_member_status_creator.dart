@@ -7,10 +7,12 @@ class ChatMemberStatusCreator extends ChatMemberStatus {
       required this.isAnonymous,
       required this.isMember});
 
-  /// [customTitle] A custom title of the owner; 0-16 characters without emojis; applicable to supergroups only
+  /// [customTitle] A custom title of the owner; 0-16 characters without emojis;
+  /// to supergroups only
   final String customTitle;
 
-  /// [isAnonymous] True, if the creator isn't shown in the chat member list and sends messages anonymously; applicable to supergroups only
+  /// [isAnonymous] True, if the creator isn't shown in the chat member list and
+  /// messages anonymously; applicable to supergroups only
   final bool isAnonymous;
 
   /// [isMember] True, if the user is a member of the chat

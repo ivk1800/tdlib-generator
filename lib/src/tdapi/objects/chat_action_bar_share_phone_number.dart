@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// The chat is a private or secret chat with a mutual contact and the user's phone number can be shared with the other user using the method sharePhoneNumber
+/// The chat is a private or secret chat with a mutual contact and the user's
+/// number can be shared with the other user using the method sharePhoneNumber
 class ChatActionBarSharePhoneNumber extends ChatActionBar {
   const ChatActionBarSharePhoneNumber();
 

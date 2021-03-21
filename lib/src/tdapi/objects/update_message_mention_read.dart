@@ -13,7 +13,7 @@ class UpdateMessageMentionRead extends Update {
   /// [messageId] Message identifier
   final int messageId;
 
-  /// [unreadMentionCount] The new number of unread mention messages left in the chat
+  /// [unreadMentionCount] The new number of unread mention messages left in the
   final int unreadMentionCount;
 
   static const String CONSTRUCTOR = 'updateMessageMentionRead';

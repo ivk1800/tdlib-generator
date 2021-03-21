@@ -13,7 +13,8 @@ class MessageSendOptions extends TdObject {
   /// [fromBackground] Pass true if the message is sent from the background
   final bool fromBackground;
 
-  /// [schedulingState] Message scheduling state. Messages sent to a secret chat, live location messages and self-destructing messages can't be scheduled
+  /// [schedulingState] Message scheduling state. Messages sent to a secret
+  /// live location messages and self-destructing messages can't be scheduled
   final MessageSchedulingState schedulingState;
 
   static const String CONSTRUCTOR = 'messageSendOptions';

@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// The user has too much chats with username, one of them should be made private first
+/// The user has too much chats with username, one of them should be made
+/// first
 class CheckChatUsernameResultPublicChatsTooMuch
     extends CheckChatUsernameResult {
   const CheckChatUsernameResultPublicChatsTooMuch();

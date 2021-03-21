@@ -13,7 +13,8 @@ class CallStateDiscarded extends CallState {
   /// [needRating] True, if the call rating should be sent to the server
   final bool needRating;
 
-  /// [needDebugInformation] True, if the call debug information should be sent to the server
+  /// [needDebugInformation] True, if the call debug information should be sent
+  /// the server
   final bool needDebugInformation;
 
   static const String CONSTRUCTOR = 'callStateDiscarded';

@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// The list of users nearby has changed. The update is guaranteed to be sent only 60 seconds after a successful searchChatsNearby request
+/// The list of users nearby has changed. The update is guaranteed to be sent
+/// 60 seconds after a successful searchChatsNearby request
 class UpdateUsersNearby extends Update {
   UpdateUsersNearby({required this.usersNearby});
 

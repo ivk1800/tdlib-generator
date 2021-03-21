@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// An invisible anchor on a page, which can be used in a URL to open the page from the specified anchor
+/// An invisible anchor on a page, which can be used in a URL to open the page
+/// the specified anchor
 class PageBlockAnchor extends PageBlock {
   PageBlockAnchor({required this.name});
 

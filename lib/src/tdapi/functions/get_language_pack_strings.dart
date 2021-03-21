@@ -1,13 +1,15 @@
 part of '../tdapi.dart';
 
-/// Returns strings from a language pack in the current localization target by their keys. Can be called before authorization
+/// Returns strings from a language pack in the current localization target by
+/// keys. Can be called before authorization
 class GetLanguagePackStrings extends TdFunction {
   GetLanguagePackStrings({required this.languagePackId, required this.keys});
 
   /// [languagePackId] Language pack identifier of the strings to be returned
   final String languagePackId;
 
-  /// [keys] Language pack keys of the strings to be returned; leave empty to request all available strings
+  /// [keys] Language pack keys of the strings to be returned; leave empty to
+  /// all available strings
   final List<String> keys;
 
   /// callback sign

@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// The message was originally sent by an anonymous chat administrator on behalf of the chat
+/// The message was originally sent by an anonymous chat administrator on
+/// of the chat
 class MessageForwardOriginChat extends MessageForwardOrigin {
   MessageForwardOriginChat(
       {required this.senderChatId, required this.authorSignature});

@@ -14,7 +14,8 @@ class AnswerInlineQuery extends TdFunction {
   /// [inlineQueryId] Identifier of the inline query
   final int inlineQueryId;
 
-  /// [isPersonal] True, if the result of the query can be cached for the specified user
+  /// [isPersonal] True, if the result of the query can be cached for the
+  /// user
   final bool isPersonal;
 
   /// [results] The results of the query
@@ -23,10 +24,13 @@ class AnswerInlineQuery extends TdFunction {
   /// [cacheTime] Allowed time to cache the results of the query, in seconds
   final int cacheTime;
 
-  /// [nextOffset] Offset for the next inline query; pass an empty string if there are no more results
+  /// [nextOffset] Offset for the next inline query; pass an empty string if
+  /// are no more results
   final String nextOffset;
 
-  /// [switchPmText] If non-empty, this text should be shown on the button that opens a private chat with the bot and sends a start message to the bot with the parameter switch_pm_parameter
+  /// [switchPmText] If non-empty, this text should be shown on the button that
+  /// a private chat with the bot and sends a start message to the bot with the
+  /// switch_pm_parameter
   final String switchPmText;
 
   /// [switchPmParameter] The parameter for the bot start message

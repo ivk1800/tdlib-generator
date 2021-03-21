@@ -1,6 +1,6 @@
 part of '../tdapi.dart';
 
-/// Contains information about the total amount of data that was used for calls
+/// Contains information about the total amount of data that was used for
 class NetworkStatisticsEntryCall extends NetworkStatisticsEntry {
   NetworkStatisticsEntryCall(
       {required this.networkType,
@@ -8,7 +8,8 @@ class NetworkStatisticsEntryCall extends NetworkStatisticsEntry {
       required this.receivedBytes,
       required this.duration});
 
-  /// [networkType] Type of the network the data was sent through. Call setNetworkType to maintain the actual network type
+  /// [networkType] Type of the network the data was sent through. Call
+  /// to maintain the actual network type
   final NetworkType networkType;
 
   /// [sentBytes] Total number of bytes sent

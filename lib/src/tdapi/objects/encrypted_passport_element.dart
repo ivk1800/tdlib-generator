@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Contains information about an encrypted Telegram Passport element; for bots only
+/// Contains information about an encrypted Telegram Passport element; for
+/// only
 class EncryptedPassportElement extends TdObject {
   EncryptedPassportElement(
       {required this.type,
@@ -28,7 +29,8 @@ class EncryptedPassportElement extends TdObject {
   /// [selfie] Selfie with the document; may be null
   final DatedFile? selfie;
 
-  /// [translation] List of files containing a certified English translation of the document
+  /// [translation] List of files containing a certified English translation of
+  /// document
   final List<DatedFile> translation;
 
   /// [files] List of attached files

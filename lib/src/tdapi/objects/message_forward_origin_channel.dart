@@ -7,7 +7,7 @@ class MessageForwardOriginChannel extends MessageForwardOrigin {
       required this.messageId,
       required this.authorSignature});
 
-  /// [chatId] Identifier of the chat from which the message was originally forwarded
+  /// [chatId] Identifier of the chat from which the message was originally
   final int chatId;
 
   /// [messageId] Message identifier of the original message

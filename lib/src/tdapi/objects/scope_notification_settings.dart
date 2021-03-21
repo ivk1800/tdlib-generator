@@ -12,16 +12,19 @@ class ScopeNotificationSettings extends TdObject {
   /// [muteFor] Time left before notifications will be unmuted, in seconds
   final int muteFor;
 
-  /// [sound] The name of an audio file to be used for notification sounds; only applies to iOS applications
+  /// [sound] The name of an audio file to be used for notification sounds; only
+  /// to iOS applications
   final String sound;
 
-  /// [showPreview] True, if message content should be displayed in notifications
+  /// [showPreview] True, if message content should be displayed in
   final bool showPreview;
 
-  /// [disablePinnedMessageNotifications] True, if notifications for incoming pinned messages will be created as for an ordinary unread message
+  /// [disablePinnedMessageNotifications] True, if notifications for incoming
+  /// messages will be created as for an ordinary unread message
   final bool disablePinnedMessageNotifications;
 
-  /// [disableMentionNotifications] True, if notifications for messages with mentions will be created as for an ordinary unread message
+  /// [disableMentionNotifications] True, if notifications for messages with
+  /// will be created as for an ordinary unread message
   final bool disableMentionNotifications;
 
   static const String CONSTRUCTOR = 'scopeNotificationSettings';

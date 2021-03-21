@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Returns information about a user by their identifier. This is an offline request if the current user is not a bot
+/// Returns information about a user by their identifier. This is an offline
+/// if the current user is not a bot
 class GetUser extends TdFunction {
   GetUser({required this.userId});
 

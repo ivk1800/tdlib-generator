@@ -4,7 +4,8 @@ part of '../tdapi.dart';
 class ClearRecentStickers extends TdFunction {
   ClearRecentStickers({required this.isAttached});
 
-  /// [isAttached] Pass true to clear the list of stickers recently attached to photo or video files; pass false to clear the list of recently sent stickers
+  /// [isAttached] Pass true to clear the list of stickers recently attached to
+  /// or video files; pass false to clear the list of recently sent stickers
   final bool isAttached;
 
   /// callback sign

@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Contains a description of a custom keyboard and actions that can be done with it to quickly reply to bots
+/// Contains a description of a custom keyboard and actions that can be done
+/// it to quickly reply to bots
 abstract class ReplyMarkup extends TdObject {
   const ReplyMarkup();
 

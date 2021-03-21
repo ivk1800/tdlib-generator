@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Suggests the user to check authorization phone number and change the phone number if it is inaccessible
+/// Suggests the user to check authorization phone number and change the phone
+/// if it is inaccessible
 class SuggestedActionCheckPhoneNumber extends SuggestedAction {
   const SuggestedActionCheckPhoneNumber();
 

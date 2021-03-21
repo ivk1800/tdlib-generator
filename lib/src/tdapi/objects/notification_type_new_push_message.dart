@@ -9,10 +9,11 @@ class NotificationTypeNewPushMessage extends NotificationType {
       required this.isOutgoing,
       required this.content});
 
-  /// [messageId] The message identifier. The message will not be available in the chat history, but the ID can be used in viewMessages, or as reply_to_message_id
+  /// [messageId] The message identifier. The message will not be available in
+  /// chat history, but the ID can be used in viewMessages, or as
   final int messageId;
 
-  /// [sender] The sender of the message. Corresponding user or chat may be inaccessible
+  /// [sender] The sender of the message. Corresponding user or chat may be
   final MessageSender sender;
 
   /// [senderName] Name of the sender

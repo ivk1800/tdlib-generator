@@ -9,10 +9,12 @@ class DiceStickersSlotMachine extends DiceStickers {
       required this.centerReel,
       required this.rightReel});
 
-  /// [background] The animated sticker with the slot machine background. The background animation must start playing after all reel animations finish
+  /// [background] The animated sticker with the slot machine background. The
+  /// animation must start playing after all reel animations finish
   final Sticker background;
 
-  /// [lever] The animated sticker with the lever animation. The lever animation must play once in the initial dice state
+  /// [lever] The animated sticker with the lever animation. The lever animation
+  /// play once in the initial dice state
   final Sticker lever;
 
   /// [leftReel] The animated sticker with the left reel

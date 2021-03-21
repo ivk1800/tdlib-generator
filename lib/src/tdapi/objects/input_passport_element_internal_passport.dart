@@ -1,6 +1,6 @@
 part of '../tdapi.dart';
 
-/// A Telegram Passport element to be saved containing the user's internal passport
+/// A Telegram Passport element to be saved containing the user's internal
 class InputPassportElementInternalPassport extends InputPassportElement {
   InputPassportElementInternalPassport({required this.internalPassport});
 

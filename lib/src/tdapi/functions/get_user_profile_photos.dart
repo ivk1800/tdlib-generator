@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Returns the profile photos of a user. The result of this query may be outdated: some photos might have been deleted already
+/// Returns the profile photos of a user. The result of this query may be
+/// some photos might have been deleted already
 class GetUserProfilePhotos extends TdFunction {
   GetUserProfilePhotos(
       {required this.userId, required this.offset, required this.limit});

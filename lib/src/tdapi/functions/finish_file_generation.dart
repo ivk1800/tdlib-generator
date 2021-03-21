@@ -7,7 +7,7 @@ class FinishFileGeneration extends TdFunction {
   /// [generationId] The identifier of the generation process
   final int generationId;
 
-  /// [error] If set, means that file generation has failed and should be terminated
+  /// [error] If set, means that file generation has failed and should be
   final TdError error;
 
   /// callback sign

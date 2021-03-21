@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// A button that sends the user's location when pressed; available only in private chats
+/// A button that sends the user's location when pressed; available only in
+/// chats
 class KeyboardButtonTypeRequestLocation extends KeyboardButtonType {
   const KeyboardButtonTypeRequestLocation();
 

@@ -5,10 +5,12 @@ class MessageGameScore extends MessageContent {
   MessageGameScore(
       {required this.gameMessageId, required this.gameId, required this.score});
 
-  /// [gameMessageId] Identifier of the message with the game, can be an identifier of a deleted message
+  /// [gameMessageId] Identifier of the message with the game, can be an
+  /// of a deleted message
   final int gameMessageId;
 
-  /// [gameId] Identifier of the game; may be different from the games presented in the message with the game
+  /// [gameId] Identifier of the game; may be different from the games presented
+  /// the message with the game
   final int gameId;
 
   /// [score] New score

@@ -18,7 +18,8 @@ class MessageThreadInfo extends TdObject {
   /// [replyInfo] Contains information about the message thread
   final MessageReplyInfo replyInfo;
 
-  /// [messages] The messages from which the thread starts. The messages are returned in a reverse chronological order (i.e., in order of decreasing message_id)
+  /// [messages] The messages from which the thread starts. The messages are
+  /// in a reverse chronological order (i.e., in order of decreasing message_id)
   final List<Message> messages;
 
   /// [draftMessage] A draft of a message in the message thread; may be null

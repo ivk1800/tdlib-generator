@@ -14,7 +14,8 @@ class Game extends TdObject {
   /// [id] Game ID
   final int id;
 
-  /// [shortName] Game short name. To share a game use the URL https://t.me/{bot_username}?game={game_short_name}
+  /// [shortName] Game short name. To share a game use the URL
+  ///
   final String shortName;
 
   /// [title] Game title

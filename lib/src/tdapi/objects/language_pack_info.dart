@@ -20,7 +20,9 @@ class LanguagePackInfo extends TdObject {
   /// [id] Unique language pack identifier
   final String id;
 
-  /// [baseLanguagePackId] Identifier of a base language pack; may be empty. If a string is missed in the language pack, then it should be fetched from base language pack. Unsupported in custom language packs
+  /// [baseLanguagePackId] Identifier of a base language pack; may be empty. If
+  /// string is missed in the language pack, then it should be fetched from base
+  /// pack. Unsupported in custom language packs
   final String baseLanguagePackId;
 
   /// [name] Language name
@@ -29,7 +31,8 @@ class LanguagePackInfo extends TdObject {
   /// [nativeName] Name of the language in that language
   final String nativeName;
 
-  /// [pluralCode] A language code to be used to apply plural forms. See https://www.unicode.org/cldr/charts/latest/supplemental/language_plural_rules.html for more info
+  /// [pluralCode] A language code to be used to apply plural forms. See
+  /// for more info
   final String pluralCode;
 
   /// [isOfficial] True, if the language pack is official
@@ -44,16 +47,19 @@ class LanguagePackInfo extends TdObject {
   /// [isInstalled] True, if the language pack is installed by the current user
   final bool isInstalled;
 
-  /// [totalStringCount] Total number of non-deleted strings from the language pack
+  /// [totalStringCount] Total number of non-deleted strings from the language
   final int totalStringCount;
 
-  /// [translatedStringCount] Total number of translated strings from the language pack
+  /// [translatedStringCount] Total number of translated strings from the
+  /// pack
   final int translatedStringCount;
 
-  /// [localStringCount] Total number of non-deleted strings from the language pack available locally
+  /// [localStringCount] Total number of non-deleted strings from the language
+  /// available locally
   final int localStringCount;
 
-  /// [translationUrl] Link to language translation interface; empty for custom local language packs
+  /// [translationUrl] Link to language translation interface; empty for custom
+  /// language packs
   final String translationUrl;
 
   static const String CONSTRUCTOR = 'languagePackInfo';

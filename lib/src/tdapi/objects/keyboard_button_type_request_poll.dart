@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// A button that allows the user to create and send a poll when pressed; available only in private chats
+/// A button that allows the user to create and send a poll when pressed;
+/// only in private chats
 class KeyboardButtonTypeRequestPoll extends KeyboardButtonType {
   KeyboardButtonTypeRequestPoll(
       {required this.forceRegular, required this.forceQuiz});

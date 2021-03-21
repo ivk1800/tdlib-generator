@@ -1,6 +1,6 @@
 part of '../tdapi.dart';
 
-/// The call was ended during the conversation because the users were disconnected
+/// The call was ended during the conversation because the users were
 class CallDiscardReasonDisconnected extends CallDiscardReason {
   const CallDiscardReasonDisconnected();
 

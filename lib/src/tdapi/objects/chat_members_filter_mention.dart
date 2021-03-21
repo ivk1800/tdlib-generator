@@ -4,7 +4,7 @@ part of '../tdapi.dart';
 class ChatMembersFilterMention extends ChatMembersFilter {
   ChatMembersFilterMention({required this.messageThreadId});
 
-  /// [messageThreadId] If non-zero, the identifier of the current message thread
+  /// [messageThreadId] If non-zero, the identifier of the current message
   final int messageThreadId;
 
   static const String CONSTRUCTOR = 'chatMembersFilterMention';

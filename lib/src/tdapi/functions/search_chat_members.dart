@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Searches for a specified query in the first name, last name and username of the members of a specified chat. Requires administrator rights in channels
+/// Searches for a specified query in the first name, last name and username
+/// the members of a specified chat. Requires administrator rights in channels
 class SearchChatMembers extends TdFunction {
   SearchChatMembers(
       {required this.chatId,

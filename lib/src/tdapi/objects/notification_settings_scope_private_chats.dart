@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Notification settings applied to all private and secret chats when the corresponding chat setting has a default value
+/// Notification settings applied to all private and secret chats when the
+/// chat setting has a default value
 class NotificationSettingsScopePrivateChats extends NotificationSettingsScope {
   const NotificationSettingsScopePrivateChats();
 

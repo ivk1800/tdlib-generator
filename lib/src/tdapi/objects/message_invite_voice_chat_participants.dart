@@ -5,7 +5,8 @@ class MessageInviteVoiceChatParticipants extends MessageContent {
   MessageInviteVoiceChatParticipants(
       {required this.groupCallId, required this.userIds});
 
-  /// [groupCallId] Identifier of the voice chat. The voice chat can be received through the method getGroupCall
+  /// [groupCallId] Identifier of the voice chat. The voice chat can be received
+  /// the method getGroupCall
   final int groupCallId;
 
   /// [userIds] Invited user identifiers

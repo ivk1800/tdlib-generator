@@ -5,10 +5,12 @@ class ChatPhotoInfo extends TdObject {
   ChatPhotoInfo(
       {required this.small, required this.big, required this.hasAnimation});
 
-  /// [small] A small (160x160) chat photo variant in JPEG format. The file can be downloaded only before the photo is changed
+  /// [small] A small (160x160) chat photo variant in JPEG format. The file can
+  /// downloaded only before the photo is changed
   final File small;
 
-  /// [big] A big (640x640) chat photo variant in JPEG format. The file can be downloaded only before the photo is changed
+  /// [big] A big (640x640) chat photo variant in JPEG format. The file can be
+  /// only before the photo is changed
   final File big;
 
   /// [hasAnimation] True, if the photo has animated variant

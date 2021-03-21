@@ -12,22 +12,27 @@ class ChatPermissions extends TdObject {
       required this.canInviteUsers,
       required this.canPinMessages});
 
-  /// [canSendMessages] True, if the user can send text messages, contacts, locations, and venues
+  /// [canSendMessages] True, if the user can send text messages, contacts,
+  /// and venues
   final bool canSendMessages;
 
-  /// [canSendMediaMessages] True, if the user can send audio files, documents, photos, videos, video notes, and voice notes. Implies can_send_messages permissions
+  /// [canSendMediaMessages] True, if the user can send audio files, documents,
+  /// videos, video notes, and voice notes. Implies can_send_messages
   final bool canSendMediaMessages;
 
-  /// [canSendPolls] True, if the user can send polls. Implies can_send_messages permissions
+  /// [canSendPolls] True, if the user can send polls. Implies can_send_messages
   final bool canSendPolls;
 
-  /// [canSendOtherMessages] True, if the user can send animations, games, stickers, and dice and use inline bots. Implies can_send_messages permissions
+  /// [canSendOtherMessages] True, if the user can send animations, games,
+  /// and dice and use inline bots. Implies can_send_messages permissions
   final bool canSendOtherMessages;
 
-  /// [canAddWebPagePreviews] True, if the user may add a web page preview to their messages. Implies can_send_messages permissions
+  /// [canAddWebPagePreviews] True, if the user may add a web page preview to
+  /// messages. Implies can_send_messages permissions
   final bool canAddWebPagePreviews;
 
-  /// [canChangeInfo] True, if the user can change the chat title, photo, and other settings
+  /// [canChangeInfo] True, if the user can change the chat title, photo, and
+  /// settings
   final bool canChangeInfo;
 
   /// [canInviteUsers] True, if the user can invite new users to the chat

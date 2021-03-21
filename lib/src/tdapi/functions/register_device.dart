@@ -1,13 +1,14 @@
 part of '../tdapi.dart';
 
-/// Registers the currently used device for receiving push notifications. Returns a globally unique identifier of the push notification subscription
+/// Registers the currently used device for receiving push notifications.
+/// a globally unique identifier of the push notification subscription
 class RegisterDevice extends TdFunction {
   RegisterDevice({required this.deviceToken, required this.otherUserIds});
 
   /// [deviceToken] Device token
   final DeviceToken deviceToken;
 
-  /// [otherUserIds] List of user identifiers of other users currently using the application
+  /// [otherUserIds] List of user identifiers of other users currently using the
   final List<int> otherUserIds;
 
   /// callback sign

@@ -1,6 +1,6 @@
 part of '../tdapi.dart';
 
-/// Succeeds after a specified amount of time has passed. Can be called before initialization
+/// Succeeds after a specified amount of time has passed. Can be called before
 class SetAlarm extends TdFunction {
   SetAlarm({required this.seconds});
 

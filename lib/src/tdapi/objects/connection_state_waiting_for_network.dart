@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Currently waiting for the network to become available. Use setNetworkType to change the available network type
+/// Currently waiting for the network to become available. Use setNetworkType
+/// change the available network type
 class ConnectionStateWaitingForNetwork extends ConnectionState {
   const ConnectionStateWaitingForNetwork();
 

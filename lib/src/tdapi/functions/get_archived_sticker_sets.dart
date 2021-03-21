@@ -7,10 +7,12 @@ class GetArchivedStickerSets extends TdFunction {
       required this.offsetStickerSetId,
       required this.limit});
 
-  /// [isMasks] Pass true to return mask stickers sets; pass false to return ordinary sticker sets
+  /// [isMasks] Pass true to return mask stickers sets; pass false to return
+  /// sticker sets
   final bool isMasks;
 
-  /// [offsetStickerSetId] Identifier of the sticker set from which to return the result
+  /// [offsetStickerSetId] Identifier of the sticker set from which to return
+  /// result
   final int offsetStickerSetId;
 
   /// [limit] The maximum number of sticker sets to return

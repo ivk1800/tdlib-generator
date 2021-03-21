@@ -7,7 +7,7 @@ class LoginUrlInfoOpen extends LoginUrlInfo {
   /// [url] The URL to open
   final String url;
 
-  /// [skipConfirm] True, if there is no need to show an ordinary open URL confirm
+  /// [skipConfirm] True, if there is no need to show an ordinary open URL
   final bool skipConfirm;
 
   static const String CONSTRUCTOR = 'loginUrlInfoOpen';

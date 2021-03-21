@@ -8,7 +8,7 @@ class PushMessageContentVoiceNote extends PushMessageContent {
   /// [voiceNote] Message content; may be null
   final VoiceNote? voiceNote;
 
-  /// [isPinned] True, if the message is a pinned message with the specified content
+  /// [isPinned] True, if the message is a pinned message with the specified
   final bool isPinned;
 
   static const String CONSTRUCTOR = 'pushMessageContentVoiceNote';

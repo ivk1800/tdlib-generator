@@ -7,7 +7,7 @@ class GetChatMessageByDate extends TdFunction {
   /// [chatId] Chat identifier
   final int chatId;
 
-  /// [date] Point in time (Unix timestamp) relative to which to search for messages
+  /// [date] Point in time (Unix timestamp) relative to which to search for
   final int date;
 
   /// callback sign

@@ -1,10 +1,10 @@
 part of '../tdapi.dart';
 
-/// A basic group was upgraded to a supergroup and was deactivated as the result
+/// A basic group was upgraded to a supergroup and was deactivated as the
 class MessageChatUpgradeTo extends MessageContent {
   MessageChatUpgradeTo({required this.supergroupId});
 
-  /// [supergroupId] Identifier of the supergroup to which the basic group was upgraded
+  /// [supergroupId] Identifier of the supergroup to which the basic group was
   final int supergroupId;
 
   static const String CONSTRUCTOR = 'messageChatUpgradeTo';

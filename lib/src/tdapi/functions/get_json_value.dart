@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Converts a JSON-serialized string to corresponding JsonValue object. Can be called synchronously
+/// Converts a JSON-serialized string to corresponding JsonValue object. Can
+/// called synchronously
 class GetJsonValue extends TdFunction {
   GetJsonValue({required this.json});
 

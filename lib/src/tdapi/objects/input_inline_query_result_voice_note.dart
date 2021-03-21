@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// Represents a link to an opus-encoded audio file within an OGG container, single channel audio
+/// Represents a link to an opus-encoded audio file within an OGG container,
+/// channel audio
 class InputInlineQueryResultVoiceNote extends InputInlineQueryResult {
   InputInlineQueryResultVoiceNote(
       {required this.id,
@@ -22,10 +23,13 @@ class InputInlineQueryResultVoiceNote extends InputInlineQueryResult {
   /// [voiceNoteDuration] Duration of the voice note, in seconds
   final int voiceNoteDuration;
 
-  /// [replyMarkup] The message reply markup. Must be of type replyMarkupInlineKeyboard or null
+  /// [replyMarkup] The message reply markup. Must be of type
+  /// or null
   final ReplyMarkup? replyMarkup;
 
-  /// [inputMessageContent] The content of the message to be sent. Must be one of the following types: InputMessageText, InputMessageVoiceNote, InputMessageLocation, InputMessageVenue or InputMessageContact
+  /// [inputMessageContent] The content of the message to be sent. Must be one
+  /// the following types: InputMessageText, InputMessageVoiceNote,
+  /// InputMessageVenue or InputMessageContact
   final InputMessageContent inputMessageContent;
 
   static const String CONSTRUCTOR = 'inputInlineQueryResultVoiceNote';

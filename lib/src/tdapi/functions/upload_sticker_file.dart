@@ -1,13 +1,14 @@
 part of '../tdapi.dart';
 
-/// Uploads a PNG image with a sticker; for bots only; returns the uploaded file
+/// Uploads a PNG image with a sticker; for bots only; returns the uploaded
 class UploadStickerFile extends TdFunction {
   UploadStickerFile({required this.userId, required this.pngSticker});
 
   /// [userId] Sticker file owner
   final int userId;
 
-  /// [pngSticker] PNG image with the sticker; must be up to 512 KB in size and fit in 512x512 square
+  /// [pngSticker] PNG image with the sticker; must be up to 512 KB in size and
+  /// in 512x512 square
   final InputFile pngSticker;
 
   /// callback sign

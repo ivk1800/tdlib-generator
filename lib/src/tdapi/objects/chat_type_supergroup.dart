@@ -1,6 +1,7 @@
 part of '../tdapi.dart';
 
-/// A supergroup (i.e. a chat with up to GetOption("supergroup_max_size") other users), or channel (with unlimited members)
+/// A supergroup (i.e. a chat with up to GetOption("supergroup_max_size")
+/// users), or channel (with unlimited members)
 class ChatTypeSupergroup extends ChatType {
   ChatTypeSupergroup({required this.supergroupId, required this.isChannel});
 

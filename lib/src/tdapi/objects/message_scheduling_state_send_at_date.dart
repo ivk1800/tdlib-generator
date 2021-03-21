@@ -4,7 +4,8 @@ part of '../tdapi.dart';
 class MessageSchedulingStateSendAtDate extends MessageSchedulingState {
   MessageSchedulingStateSendAtDate({required this.sendDate});
 
-  /// [sendDate] Date the message will be sent. The date must be within 367 days in the future
+  /// [sendDate] Date the message will be sent. The date must be within 367 days
+  /// the future
   final int sendDate;
 
   static const String CONSTRUCTOR = 'messageSchedulingStateSendAtDate';

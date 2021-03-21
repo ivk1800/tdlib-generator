@@ -1,6 +1,8 @@
 part of '../tdapi.dart';
 
-/// Forwards previously sent messages. Returns the forwarded messages in the same order as the message identifiers passed in message_ids. If a message can't be forwarded, null will be returned instead of the message
+/// Forwards previously sent messages. Returns the forwarded messages in the
+/// order as the message identifiers passed in message_ids. If a message can't
+/// forwarded, null will be returned instead of the message
 class ForwardMessages extends TdFunction {
   ForwardMessages(
       {required this.chatId,
@@ -16,16 +18,20 @@ class ForwardMessages extends TdFunction {
   /// [fromChatId] Identifier of the chat from which to forward messages
   final int fromChatId;
 
-  /// [messageIds] Identifiers of the messages to forward. Message identifiers must be in a strictly increasing order. At most 100 messages can be forwarded simultaneously
+  /// [messageIds] Identifiers of the messages to forward. Message identifiers
+  /// be in a strictly increasing order. At most 100 messages can be forwarded
   final List<int> messageIds;
 
   /// [options] Options to be used to send the messages
   final MessageSendOptions options;
 
-  /// [sendCopy] True, if content of the messages needs to be copied without links to the original messages. Always true if the messages are forwarded to a secret chat
+  /// [sendCopy] True, if content of the messages needs to be copied without
+  /// to the original messages. Always true if the messages are forwarded to a
+  /// chat
   final bool sendCopy;
 
-  /// [removeCaption] True, if media caption of message copies needs to be removed. Ignored if send_copy is false
+  /// [removeCaption] True, if media caption of message copies needs to be
+  /// Ignored if send_copy is false
   final bool removeCaption;
 
   /// callback sign

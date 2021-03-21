@@ -1,6 +1,6 @@
 part of '../tdapi.dart';
 
-/// Returns users banned from the supergroup or channel; can be used only by administrators
+/// Returns users banned from the supergroup or channel; can be used only by
 class SupergroupMembersFilterBanned extends SupergroupMembersFilter {
   SupergroupMembersFilterBanned({required this.query});
 
