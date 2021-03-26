@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// presses inlineKeyboardButtonBuy
 /// Returns [PaymentForm]
 class GetPaymentForm extends TdFunction {
-  GetPaymentForm({required this.chatId, required this.messageId});
+  GetPaymentForm({required this.chatId, required this.messageId, this.extra});
 
   /// [chatId] Chat identifier of the Invoice message
   final int chatId;

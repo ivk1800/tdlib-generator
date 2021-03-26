@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Resends phone number confirmation code
 /// Returns [AuthenticationCodeInfo]
 class ResendPhoneNumberConfirmationCode extends TdFunction {
-  ResendPhoneNumberConfirmationCode();
+  ResendPhoneNumberConfirmationCode({this.extra});
 
   /// callback sign
   dynamic? extra;

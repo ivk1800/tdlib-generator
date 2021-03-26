@@ -9,7 +9,8 @@ class EditInlineMessageLiveLocation extends TdFunction {
       required this.replyMarkup,
       this.location,
       required this.heading,
-      required this.proximityAlertRadius});
+      required this.proximityAlertRadius,
+      this.extra});
 
   /// [inlineMessageId] Inline message identifier
   final String inlineMessageId;

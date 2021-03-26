@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// Returns [Ok]
 class ReorderInstalledStickerSets extends TdFunction {
   ReorderInstalledStickerSets(
-      {required this.isMasks, required this.stickerSetIds});
+      {required this.isMasks, required this.stickerSetIds, this.extra});
 
   /// [isMasks] Pass true to change the order of mask sticker sets; pass false
   /// change the order of ordinary sticker sets

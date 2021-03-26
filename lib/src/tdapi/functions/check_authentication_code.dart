@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// is authorizationStateWaitCode
 /// Returns [Ok]
 class CheckAuthenticationCode extends TdFunction {
-  CheckAuthenticationCode({required this.code});
+  CheckAuthenticationCode({required this.code, this.extra});
 
   /// [code] The verification code received via SMS, Telegram message, phone
   /// or flash call

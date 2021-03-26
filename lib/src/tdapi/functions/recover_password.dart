@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// previously set up
 /// Returns [PasswordState]
 class RecoverPassword extends TdFunction {
-  RecoverPassword({required this.recoveryCode});
+  RecoverPassword({required this.recoveryCode, this.extra});
 
   /// [recoveryCode] Recovery code to check
   final String recoveryCode;

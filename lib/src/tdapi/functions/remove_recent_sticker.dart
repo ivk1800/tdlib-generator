@@ -3,7 +3,8 @@ import '../tdapi.dart';
 /// Removes a sticker from the list of recently used stickers
 /// Returns [Ok]
 class RemoveRecentSticker extends TdFunction {
-  RemoveRecentSticker({required this.isAttached, required this.sticker});
+  RemoveRecentSticker(
+      {required this.isAttached, required this.sticker, this.extra});
 
   /// [isAttached] Pass true to remove the sticker from the list of stickers
   /// attached to photo or video files; pass false to remove the sticker from

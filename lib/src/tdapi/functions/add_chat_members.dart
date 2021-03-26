@@ -6,7 +6,7 @@ import '../tdapi.dart';
 /// be added until the chat state has been synchronized with the server
 /// Returns [Ok]
 class AddChatMembers extends TdFunction {
-  AddChatMembers({required this.chatId, required this.userIds});
+  AddChatMembers({required this.chatId, required this.userIds, this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;

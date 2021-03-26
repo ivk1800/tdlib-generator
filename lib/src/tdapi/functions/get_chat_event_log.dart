@@ -12,7 +12,8 @@ class GetChatEventLog extends TdFunction {
       required this.fromEventId,
       required this.limit,
       required this.filters,
-      required this.userIds});
+      required this.userIds,
+      this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;

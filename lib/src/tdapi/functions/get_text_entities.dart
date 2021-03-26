@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// numbers, URLs, and email addresses) contained in the text. Can be called
 /// Returns [TextEntities]
 class GetTextEntities extends TdFunction {
-  GetTextEntities({required this.text});
+  GetTextEntities({required this.text, this.extra});
 
   /// [text] The text in which to look for entites
   final String text;

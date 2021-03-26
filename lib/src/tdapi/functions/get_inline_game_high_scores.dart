@@ -5,7 +5,7 @@ import '../tdapi.dart';
 /// Returns [GameHighScores]
 class GetInlineGameHighScores extends TdFunction {
   GetInlineGameHighScores(
-      {required this.inlineMessageId, required this.userId});
+      {required this.inlineMessageId, required this.userId, this.extra});
 
   /// [inlineMessageId] Inline message identifier
   final String inlineMessageId;

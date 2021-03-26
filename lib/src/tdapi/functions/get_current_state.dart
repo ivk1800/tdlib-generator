@@ -5,7 +5,7 @@ import '../tdapi.dart';
 /// Can be called before initialization
 /// Returns [Updates]
 class GetCurrentState extends TdFunction {
-  GetCurrentState();
+  GetCurrentState({this.extra});
 
   /// callback sign
   dynamic? extra;

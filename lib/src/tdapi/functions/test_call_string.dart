@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// be called before authorization
 /// Returns [TestString]
 class TestCallString extends TdFunction {
-  TestCallString({required this.x});
+  TestCallString({required this.x, this.extra});
 
   /// [x] String to return
   final String x;

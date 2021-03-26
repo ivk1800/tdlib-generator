@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// called synchronously
 /// Returns [JsonValue]
 class GetJsonValue extends TdFunction {
-  GetJsonValue({required this.json});
+  GetJsonValue({required this.json, this.extra});
 
   /// [json] The JSON-serialized string
   final String json;

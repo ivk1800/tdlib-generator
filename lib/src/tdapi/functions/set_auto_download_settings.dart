@@ -3,7 +3,8 @@ import '../tdapi.dart';
 /// Sets auto-download settings
 /// Returns [Ok]
 class SetAutoDownloadSettings extends TdFunction {
-  SetAutoDownloadSettings({required this.settings, required this.type});
+  SetAutoDownloadSettings(
+      {required this.settings, required this.type, this.extra});
 
   /// [settings] New user auto-download settings
   final AutoDownloadSettings settings;

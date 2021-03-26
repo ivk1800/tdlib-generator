@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// of an account, which has received a push notification. Can be called
 /// Returns [PushReceiverId]
 class GetPushReceiverId extends TdFunction {
-  GetPushReceiverId({required this.payload});
+  GetPushReceiverId({required this.payload, this.extra});
 
   /// [payload] JSON-encoded push notification payload
   final String payload;

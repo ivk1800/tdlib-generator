@@ -4,7 +4,10 @@ import '../tdapi.dart';
 /// Returns [StickerSet]
 class SetStickerSetThumbnail extends TdFunction {
   SetStickerSetThumbnail(
-      {required this.userId, required this.name, required this.thumbnail});
+      {required this.userId,
+      required this.name,
+      required this.thumbnail,
+      this.extra});
 
   /// [userId] Sticker set owner
   final int userId;

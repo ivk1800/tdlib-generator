@@ -4,7 +4,8 @@ import '../tdapi.dart';
 /// synchronously
 /// Returns [Ok]
 class SetLogTagVerbosityLevel extends TdFunction {
-  SetLogTagVerbosityLevel({required this.tag, required this.newVerbosityLevel});
+  SetLogTagVerbosityLevel(
+      {required this.tag, required this.newVerbosityLevel, this.extra});
 
   /// [tag] Logging tag to change verbosity level
   final String tag;

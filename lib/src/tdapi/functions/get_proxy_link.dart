@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// SOCKS5 and MTProto proxies. Can be called before authorization
 /// Returns [Text]
 class GetProxyLink extends TdFunction {
-  GetProxyLink({required this.proxyId});
+  GetProxyLink({required this.proxyId, this.extra});
 
   /// [proxyId] Proxy identifier
   final int proxyId;

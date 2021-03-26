@@ -4,7 +4,8 @@ import '../tdapi.dart';
 /// to the chat. Returns up to 1 location message per user
 /// Returns [Messages]
 class SearchChatRecentLocationMessages extends TdFunction {
-  SearchChatRecentLocationMessages({required this.chatId, required this.limit});
+  SearchChatRecentLocationMessages(
+      {required this.chatId, required this.limit, this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;

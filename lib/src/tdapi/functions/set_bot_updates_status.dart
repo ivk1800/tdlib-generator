@@ -5,7 +5,9 @@ import '../tdapi.dart';
 /// Returns [Ok]
 class SetBotUpdatesStatus extends TdFunction {
   SetBotUpdatesStatus(
-      {required this.pendingUpdateCount, required this.errorMessage});
+      {required this.pendingUpdateCount,
+      required this.errorMessage,
+      this.extra});
 
   /// [pendingUpdateCount] The number of pending updates
   final int pendingUpdateCount;

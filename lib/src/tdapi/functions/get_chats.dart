@@ -11,7 +11,8 @@ class GetChats extends TdFunction {
       {required this.chatList,
       required this.offsetOrder,
       required this.offsetChatId,
-      required this.limit});
+      required this.limit,
+      this.extra});
 
   /// [chatList] The chat list in which to return chats
   final ChatList chatList;

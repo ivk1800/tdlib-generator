@@ -5,7 +5,10 @@ import '../tdapi.dart';
 /// Returns [ChatPhotos]
 class GetUserProfilePhotos extends TdFunction {
   GetUserProfilePhotos(
-      {required this.userId, required this.offset, required this.limit});
+      {required this.userId,
+      required this.offset,
+      required this.limit,
+      this.extra});
 
   /// [userId] User identifier
   final int userId;

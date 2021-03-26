@@ -5,7 +5,7 @@ import '../tdapi.dart';
 /// chat list
 /// Returns [Chats]
 class SearchChatsOnServer extends TdFunction {
-  SearchChatsOnServer({required this.query, required this.limit});
+  SearchChatsOnServer({required this.query, required this.limit, this.extra});
 
   /// [query] Query to search for
   final String query;

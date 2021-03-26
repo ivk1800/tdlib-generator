@@ -7,7 +7,8 @@ class BlockMessageSenderFromReplies extends TdFunction {
       {required this.messageId,
       required this.deleteMessage,
       required this.deleteAllMessages,
-      required this.reportSpam});
+      required this.reportSpam,
+      this.extra});
 
   /// [messageId] The identifier of an incoming message in the Replies chat
   final int messageId;

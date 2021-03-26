@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// only. Can be called synchronously
 /// Returns [Error]
 class TestReturnError extends TdFunction {
-  TestReturnError({required this.error});
+  TestReturnError({required this.error, this.extra});
 
   /// [error] The error to be returned
   final TdError error;

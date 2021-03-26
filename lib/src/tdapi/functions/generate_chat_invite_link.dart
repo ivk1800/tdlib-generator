@@ -5,7 +5,7 @@ import '../tdapi.dart';
 /// privileges and can_invite_users right
 /// Returns [ChatInviteLink]
 class GenerateChatInviteLink extends TdFunction {
-  GenerateChatInviteLink({required this.chatId});
+  GenerateChatInviteLink({required this.chatId, this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;

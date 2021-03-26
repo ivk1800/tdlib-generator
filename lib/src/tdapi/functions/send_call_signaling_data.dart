@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Sends call signaling data
 /// Returns [Ok]
 class SendCallSignalingData extends TdFunction {
-  SendCallSignalingData({required this.callId, required this.data});
+  SendCallSignalingData({required this.callId, required this.data, this.extra});
 
   /// [callId] Call identifier
   final int callId;

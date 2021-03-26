@@ -11,7 +11,8 @@ class ForwardMessages extends TdFunction {
       required this.messageIds,
       required this.options,
       required this.sendCopy,
-      required this.removeCaption});
+      required this.removeCaption,
+      this.extra});
 
   /// [chatId] Identifier of the chat to which to forward messages
   final int chatId;

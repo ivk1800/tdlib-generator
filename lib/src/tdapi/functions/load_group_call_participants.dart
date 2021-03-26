@@ -5,7 +5,8 @@ import '../tdapi.dart';
 /// all participants has already been loaded
 /// Returns [Ok]
 class LoadGroupCallParticipants extends TdFunction {
-  LoadGroupCallParticipants({required this.groupCallId, required this.limit});
+  LoadGroupCallParticipants(
+      {required this.groupCallId, required this.limit, this.extra});
 
   /// [groupCallId] Group call identifier. The group call must be previously
   /// through getGroupCall and must be joined or being joined

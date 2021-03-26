@@ -5,7 +5,7 @@ import '../tdapi.dart';
 /// Returns [Ok]
 class SetCustomLanguagePackString extends TdFunction {
   SetCustomLanguagePackString(
-      {required this.languagePackId, required this.newString});
+      {required this.languagePackId, required this.newString, this.extra});
 
   /// [languagePackId] Identifier of a previously added custom local language
   /// in the current localization target

@@ -9,7 +9,8 @@ import '../tdapi.dart';
 /// the application
 /// Returns [File]
 class GetRemoteFile extends TdFunction {
-  GetRemoteFile({required this.remoteFileId, required this.fileType});
+  GetRemoteFile(
+      {required this.remoteFileId, required this.fileType, this.extra});
 
   /// [remoteFileId] Remote identifier of the file to get
   final String remoteFileId;

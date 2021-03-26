@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Changes the bio of the current user
 /// Returns [Ok]
 class SetBio extends TdFunction {
-  SetBio({required this.bio});
+  SetBio({required this.bio, this.extra});
 
   /// [bio] The new value of the user bio; 0-70 characters without line feeds
   final String bio;

@@ -5,7 +5,9 @@ import '../tdapi.dart';
 /// Returns [Ok]
 class RemoveNotificationGroup extends TdFunction {
   RemoveNotificationGroup(
-      {required this.notificationGroupId, required this.maxNotificationId});
+      {required this.notificationGroupId,
+      required this.maxNotificationId,
+      this.extra});
 
   /// [notificationGroupId] Notification group identifier
   final int notificationGroupId;

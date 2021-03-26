@@ -4,7 +4,8 @@ import '../tdapi.dart';
 /// chats can be blocked
 /// Returns [Ok]
 class ToggleMessageSenderIsBlocked extends TdFunction {
-  ToggleMessageSenderIsBlocked({required this.sender, required this.isBlocked});
+  ToggleMessageSenderIsBlocked(
+      {required this.sender, required this.isBlocked, this.extra});
 
   /// [sender] Message Sender
   final MessageSender sender;

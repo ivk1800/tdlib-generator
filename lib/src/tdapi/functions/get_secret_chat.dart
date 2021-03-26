@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// request
 /// Returns [SecretChat]
 class GetSecretChat extends TdFunction {
-  GetSecretChat({required this.secretChatId});
+  GetSecretChat({required this.secretChatId, this.extra});
 
   /// [secretChatId] Secret chat identifier
   final int secretChatId;

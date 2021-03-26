@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// if the current user is not a bot
 /// Returns [User]
 class GetUser extends TdFunction {
-  GetUser({required this.userId});
+  GetUser({required this.userId, this.extra});
 
   /// [userId] User identifier
   final int userId;

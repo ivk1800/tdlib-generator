@@ -10,7 +10,8 @@ class GetMapThumbnailFile extends TdFunction {
       required this.width,
       required this.height,
       required this.scale,
-      required this.chatId});
+      required this.chatId,
+      this.extra});
 
   /// [location] Location of the map center
   final Location location;

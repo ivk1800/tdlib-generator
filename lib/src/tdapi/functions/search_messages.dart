@@ -15,7 +15,8 @@ class SearchMessages extends TdFunction {
       required this.limit,
       required this.filter,
       required this.minDate,
-      required this.maxDate});
+      required this.maxDate,
+      this.extra});
 
   /// [chatList] Chat list in which to search messages; pass null to search in
   /// chats regardless of their chat list

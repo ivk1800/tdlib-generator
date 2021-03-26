@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Returns the current user
 /// Returns [User]
 class GetMe extends TdFunction {
-  GetMe();
+  GetMe({this.extra});
 
   /// callback sign
   dynamic? extra;

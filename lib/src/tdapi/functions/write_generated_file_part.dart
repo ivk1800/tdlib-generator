@@ -6,7 +6,10 @@ import '../tdapi.dart';
 /// Returns [Ok]
 class WriteGeneratedFilePart extends TdFunction {
   WriteGeneratedFilePart(
-      {required this.generationId, required this.offset, required this.data});
+      {required this.generationId,
+      required this.offset,
+      required this.data,
+      this.extra});
 
   /// [generationId] The identifier of the generation process
   final int generationId;

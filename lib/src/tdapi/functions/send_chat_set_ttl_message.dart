@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// chat and sends the corresponding message
 /// Returns [Message]
 class SendChatSetTtlMessage extends TdFunction {
-  SendChatSetTtlMessage({required this.chatId, required this.ttl});
+  SendChatSetTtlMessage({required this.chatId, required this.ttl, this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;

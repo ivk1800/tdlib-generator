@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// Returns [Ok]
 class SetSupergroupStickerSet extends TdFunction {
   SetSupergroupStickerSet(
-      {required this.supergroupId, required this.stickerSetId});
+      {required this.supergroupId, required this.stickerSetId, this.extra});
 
   /// [supergroupId] Identifier of the supergroup
   final int supergroupId;

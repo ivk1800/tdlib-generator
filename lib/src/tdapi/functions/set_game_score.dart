@@ -9,7 +9,8 @@ class SetGameScore extends TdFunction {
       required this.editMessage,
       required this.userId,
       required this.score,
-      required this.force});
+      required this.force,
+      this.extra});
 
   /// [chatId] The chat to which the message with the game belongs
   final int chatId;

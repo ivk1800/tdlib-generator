@@ -4,7 +4,8 @@ import '../tdapi.dart';
 /// the supergroup or channel
 /// Returns [Ok]
 class SetSupergroupUsername extends TdFunction {
-  SetSupergroupUsername({required this.supergroupId, required this.username});
+  SetSupergroupUsername(
+      {required this.supergroupId, required this.username, this.extra});
 
   /// [supergroupId] Identifier of the supergroup or channel
   final int supergroupId;

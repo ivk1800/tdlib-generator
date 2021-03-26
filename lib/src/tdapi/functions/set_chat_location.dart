@@ -5,7 +5,7 @@ import '../tdapi.dart';
 /// to use
 /// Returns [Ok]
 class SetChatLocation extends TdFunction {
-  SetChatLocation({required this.chatId, required this.location});
+  SetChatLocation({required this.chatId, required this.location, this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;

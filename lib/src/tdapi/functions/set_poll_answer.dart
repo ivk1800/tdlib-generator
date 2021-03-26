@@ -5,7 +5,10 @@ import '../tdapi.dart';
 /// Returns [Ok]
 class SetPollAnswer extends TdFunction {
   SetPollAnswer(
-      {required this.chatId, required this.messageId, required this.optionIds});
+      {required this.chatId,
+      required this.messageId,
+      required this.optionIds,
+      this.extra});
 
   /// [chatId] Identifier of the chat to which the poll belongs
   final int chatId;

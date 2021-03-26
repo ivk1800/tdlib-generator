@@ -3,7 +3,8 @@ import '../tdapi.dart';
 /// Edits existing chat filter. Returns information about the edited chat
 /// Returns [ChatFilterInfo]
 class EditChatFilter extends TdFunction {
-  EditChatFilter({required this.chatFilterId, required this.filter});
+  EditChatFilter(
+      {required this.chatFilterId, required this.filter, this.extra});
 
   /// [chatFilterId] Chat filter identifier
   final int chatFilterId;

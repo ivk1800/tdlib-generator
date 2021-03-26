@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// == true
 /// Returns [MessageThreadInfo]
 class GetMessageThread extends TdFunction {
-  GetMessageThread({required this.chatId, required this.messageId});
+  GetMessageThread({required this.chatId, required this.messageId, this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;

@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Changes a profile photo for the current user
 /// Returns [Ok]
 class SetProfilePhoto extends TdFunction {
-  SetProfilePhoto({required this.photo});
+  SetProfilePhoto({required this.photo, this.extra});
 
   /// [photo] Profile photo to set
   final InputChatPhoto photo;

@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// if the current user is not a bot
 /// Returns [Chat]
 class GetChat extends TdFunction {
-  GetChat({required this.chatId});
+  GetChat({required this.chatId, this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;

@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// TDLib. Can be called synchronously
 /// Returns [LogStream]
 class GetLogStream extends TdFunction {
-  GetLogStream();
+  GetLogStream({this.extra});
 
   /// callback sign
   dynamic? extra;

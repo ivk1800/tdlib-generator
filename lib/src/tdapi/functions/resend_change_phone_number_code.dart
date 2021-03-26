@@ -5,7 +5,7 @@ import '../tdapi.dart';
 /// was not null
 /// Returns [AuthenticationCodeInfo]
 class ResendChangePhoneNumberCode extends TdFunction {
-  ResendChangePhoneNumberCode();
+  ResendChangePhoneNumberCode({this.extra});
 
   /// callback sign
   dynamic? extra;

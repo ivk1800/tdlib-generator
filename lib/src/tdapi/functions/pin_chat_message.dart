@@ -8,7 +8,8 @@ class PinChatMessage extends TdFunction {
       {required this.chatId,
       required this.messageId,
       required this.disableNotification,
-      required this.onlyForSelf});
+      required this.onlyForSelf,
+      this.extra});
 
   /// [chatId] Identifier of the chat
   final int chatId;

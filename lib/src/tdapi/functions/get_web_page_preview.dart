@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// too often. Returns a 404 error if the web page has no preview
 /// Returns [WebPage]
 class GetWebPagePreview extends TdFunction {
-  GetWebPagePreview({required this.text});
+  GetWebPagePreview({required this.text, this.extra});
 
   /// [text] Message text with formatting
   final FormattedText text;

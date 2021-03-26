@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// method. Can be called before authorization
 /// Returns [TestVectorString]
 class TestCallVectorString extends TdFunction {
-  TestCallVectorString({required this.x});
+  TestCallVectorString({required this.x, this.extra});
 
   /// [x] Vector of strings to return
   final List<String> x;

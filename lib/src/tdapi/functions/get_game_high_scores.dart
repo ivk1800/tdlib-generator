@@ -5,7 +5,10 @@ import '../tdapi.dart';
 /// Returns [GameHighScores]
 class GetGameHighScores extends TdFunction {
   GetGameHighScores(
-      {required this.chatId, required this.messageId, required this.userId});
+      {required this.chatId,
+      required this.messageId,
+      required this.userId,
+      this.extra});
 
   /// [chatId] The chat that contains the message with the game
   final int chatId;

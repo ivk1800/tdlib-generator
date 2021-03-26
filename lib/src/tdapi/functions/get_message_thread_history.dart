@@ -12,7 +12,8 @@ class GetMessageThreadHistory extends TdFunction {
       required this.messageId,
       required this.fromMessageId,
       required this.offset,
-      required this.limit});
+      required this.limit,
+      this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;

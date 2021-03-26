@@ -5,7 +5,7 @@ import '../tdapi.dart';
 /// is used
 /// Returns [Messages]
 class GetActiveLiveLocationMessages extends TdFunction {
-  GetActiveLiveLocationMessages();
+  GetActiveLiveLocationMessages({this.extra});
 
   /// callback sign
   dynamic? extra;

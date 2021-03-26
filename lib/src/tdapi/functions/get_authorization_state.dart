@@ -5,7 +5,7 @@ import '../tdapi.dart';
 /// authorization state. Can be called before initialization
 /// Returns [AuthorizationState]
 class GetAuthorizationState extends TdFunction {
-  GetAuthorizationState();
+  GetAuthorizationState({this.extra});
 
   /// callback sign
   dynamic? extra;

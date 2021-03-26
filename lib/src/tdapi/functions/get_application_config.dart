@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Returns application config, provided by the server. Can be called before
 /// Returns [JsonValue]
 class GetApplicationConfig extends TdFunction {
-  GetApplicationConfig();
+  GetApplicationConfig({this.extra});
 
   /// callback sign
   dynamic? extra;

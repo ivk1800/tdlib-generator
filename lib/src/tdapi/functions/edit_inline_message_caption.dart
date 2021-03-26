@@ -6,7 +6,8 @@ class EditInlineMessageCaption extends TdFunction {
   EditInlineMessageCaption(
       {required this.inlineMessageId,
       required this.replyMarkup,
-      required this.caption});
+      required this.caption,
+      this.extra});
 
   /// [inlineMessageId] Inline message identifier
   final String inlineMessageId;

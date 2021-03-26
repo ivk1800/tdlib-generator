@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// Returns [StatisticalGraph]
 class GetStatisticalGraph extends TdFunction {
   GetStatisticalGraph(
-      {required this.chatId, required this.token, required this.x});
+      {required this.chatId, required this.token, required this.x, this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;

@@ -7,7 +7,8 @@ class SendCallRating extends TdFunction {
       {required this.callId,
       required this.rating,
       required this.comment,
-      required this.problems});
+      required this.problems,
+      this.extra});
 
   /// [callId] Call identifier
   final int callId;

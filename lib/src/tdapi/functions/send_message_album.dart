@@ -11,7 +11,8 @@ class SendMessageAlbum extends TdFunction {
       required this.messageThreadId,
       required this.replyToMessageId,
       required this.options,
-      required this.inputMessageContents});
+      required this.inputMessageContents,
+      this.extra});
 
   /// [chatId] Target chat
   final int chatId;

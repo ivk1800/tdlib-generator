@@ -5,7 +5,7 @@ import '../tdapi.dart';
 /// Returns [Ok]
 class SetChatDiscussionGroup extends TdFunction {
   SetChatDiscussionGroup(
-      {required this.chatId, required this.discussionChatId});
+      {required this.chatId, required this.discussionChatId, this.extra});
 
   /// [chatId] Identifier of the channel chat. Pass 0 to remove a link from the
   /// passed in the second argument to a linked channel chat (requires

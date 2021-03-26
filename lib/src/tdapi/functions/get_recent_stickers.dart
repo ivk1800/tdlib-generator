@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Returns a list of recently used stickers
 /// Returns [Stickers]
 class GetRecentStickers extends TdFunction {
-  GetRecentStickers({required this.isAttached});
+  GetRecentStickers({required this.isAttached, this.extra});
 
   /// [isAttached] Pass true to return stickers and masks that were recently
   /// to photos or video files; pass false to return recently sent stickers

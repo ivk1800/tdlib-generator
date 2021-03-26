@@ -3,7 +3,8 @@ import '../tdapi.dart';
 /// Returns an existing chat corresponding to a known basic group
 /// Returns [Chat]
 class CreateBasicGroupChat extends TdFunction {
-  CreateBasicGroupChat({required this.basicGroupId, required this.force});
+  CreateBasicGroupChat(
+      {required this.basicGroupId, required this.force, this.extra});
 
   /// [basicGroupId] Basic group identifier
   final int basicGroupId;

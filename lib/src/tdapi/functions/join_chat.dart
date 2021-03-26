@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// be joined using this method
 /// Returns [Ok]
 class JoinChat extends TdFunction {
-  JoinChat({required this.chatId});
+  JoinChat({required this.chatId, this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;

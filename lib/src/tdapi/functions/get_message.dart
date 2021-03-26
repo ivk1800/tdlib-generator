@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Returns information about a message
 /// Returns [Message]
 class GetMessage extends TdFunction {
-  GetMessage({required this.chatId, required this.messageId});
+  GetMessage({required this.chatId, required this.messageId, this.extra});
 
   /// [chatId] Identifier of the chat the message belongs to
   final int chatId;

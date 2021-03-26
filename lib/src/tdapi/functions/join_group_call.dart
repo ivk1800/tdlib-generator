@@ -7,7 +7,8 @@ class JoinGroupCall extends TdFunction {
       {required this.groupCallId,
       required this.payload,
       required this.source,
-      required this.isMuted});
+      required this.isMuted,
+      this.extra});
 
   /// [groupCallId] Group call identifier
   final int groupCallId;

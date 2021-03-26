@@ -7,7 +7,10 @@ import '../tdapi.dart';
 /// Returns [Ok]
 class SetChatMemberStatus extends TdFunction {
   SetChatMemberStatus(
-      {required this.chatId, required this.userId, required this.status});
+      {required this.chatId,
+      required this.userId,
+      required this.status,
+      this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;

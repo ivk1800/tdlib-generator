@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Returns information about a group call
 /// Returns [GroupCall]
 class GetGroupCall extends TdFunction {
-  GetGroupCall({required this.groupCallId});
+  GetGroupCall({required this.groupCallId, this.extra});
 
   /// [groupCallId] Group call identifier
   final int groupCallId;

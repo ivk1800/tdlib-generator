@@ -7,7 +7,8 @@ class SetBackground extends TdFunction {
   SetBackground(
       {required this.background,
       required this.type,
-      required this.forDarkTheme});
+      required this.forDarkTheme,
+      this.extra});
 
   /// [background] The input background to use, null for filled backgrounds
   final InputBackground background;

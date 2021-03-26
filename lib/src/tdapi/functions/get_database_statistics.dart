@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Returns database statistics
 /// Returns [DatabaseStatistics]
 class GetDatabaseStatistics extends TdFunction {
-  GetDatabaseStatistics();
+  GetDatabaseStatistics({this.extra});
 
   /// callback sign
   dynamic? extra;

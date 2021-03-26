@@ -8,7 +8,8 @@ class CreateNewSupergroupChat extends TdFunction {
       {required this.title,
       required this.isChannel,
       required this.description,
-      required this.location});
+      required this.location,
+      this.extra});
 
   /// [title] Title of the new chat; 1-128 characters
   final String title;

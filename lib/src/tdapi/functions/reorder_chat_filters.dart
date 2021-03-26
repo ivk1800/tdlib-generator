@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Changes the order of chat filters
 /// Returns [Ok]
 class ReorderChatFilters extends TdFunction {
-  ReorderChatFilters({required this.chatFilterIds});
+  ReorderChatFilters({required this.chatFilterIds, this.extra});
 
   /// [chatFilterIds] Identifiers of chat filters in the new correct order
   final List<int> chatFilterIds;

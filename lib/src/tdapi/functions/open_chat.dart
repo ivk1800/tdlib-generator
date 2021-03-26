@@ -5,7 +5,7 @@ import '../tdapi.dart';
 /// are received only for opened chats)
 /// Returns [Ok]
 class OpenChat extends TdFunction {
-  OpenChat({required this.chatId});
+  OpenChat({required this.chatId, this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;

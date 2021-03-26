@@ -8,7 +8,8 @@ class DiscardCall extends TdFunction {
       required this.isDisconnected,
       required this.duration,
       required this.isVideo,
-      required this.connectionId});
+      required this.connectionId,
+      this.extra});
 
   /// [callId] Call identifier
   final int callId;

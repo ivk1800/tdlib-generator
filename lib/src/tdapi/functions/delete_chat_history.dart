@@ -8,7 +8,8 @@ class DeleteChatHistory extends TdFunction {
   DeleteChatHistory(
       {required this.chatId,
       required this.removeFromChatList,
-      required this.revoke});
+      required this.revoke,
+      this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;

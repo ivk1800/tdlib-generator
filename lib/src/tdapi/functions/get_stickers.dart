@@ -5,7 +5,7 @@ import '../tdapi.dart';
 /// be returned
 /// Returns [Stickers]
 class GetStickers extends TdFunction {
-  GetStickers({required this.emoji, required this.limit});
+  GetStickers({required this.emoji, required this.limit, this.extra});
 
   /// [emoji] String representation of emoji. If empty, returns all known
   /// stickers

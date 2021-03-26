@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// chat
 /// Returns [Ok]
 class DiscardGroupCall extends TdFunction {
-  DiscardGroupCall({required this.groupCallId});
+  DiscardGroupCall({required this.groupCallId, this.extra});
 
   /// [groupCallId] Group call identifier
   final int groupCallId;

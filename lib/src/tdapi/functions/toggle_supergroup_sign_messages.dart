@@ -5,7 +5,7 @@ import '../tdapi.dart';
 /// Returns [Ok]
 class ToggleSupergroupSignMessages extends TdFunction {
   ToggleSupergroupSignMessages(
-      {required this.supergroupId, required this.signMessages});
+      {required this.supergroupId, required this.signMessages, this.extra});
 
   /// [supergroupId] Identifier of the channel
   final int supergroupId;

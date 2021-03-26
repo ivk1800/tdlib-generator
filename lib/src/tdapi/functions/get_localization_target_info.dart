@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// request if only_local is true. Can be called before authorization
 /// Returns [LocalizationTargetInfo]
 class GetLocalizationTargetInfo extends TdFunction {
-  GetLocalizationTargetInfo({required this.onlyLocal});
+  GetLocalizationTargetInfo({required this.onlyLocal, this.extra});
 
   /// [onlyLocal] If true, returns only locally available information without
   /// network requests

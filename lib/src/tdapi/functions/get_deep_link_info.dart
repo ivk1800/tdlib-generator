@@ -5,7 +5,7 @@ import '../tdapi.dart';
 /// links. Can be called before authorization
 /// Returns [DeepLinkInfo]
 class GetDeepLinkInfo extends TdFunction {
-  GetDeepLinkInfo({required this.link});
+  GetDeepLinkInfo({required this.link, this.extra});
 
   /// [link] The link
   final String link;

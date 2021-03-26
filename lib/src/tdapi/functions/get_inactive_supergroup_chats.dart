@@ -5,7 +5,7 @@ import '../tdapi.dart';
 /// CHANNELS_TOO_MUCH error
 /// Returns [Chats]
 class GetInactiveSupergroupChats extends TdFunction {
-  GetInactiveSupergroupChats();
+  GetInactiveSupergroupChats({this.extra});
 
   /// callback sign
   dynamic? extra;

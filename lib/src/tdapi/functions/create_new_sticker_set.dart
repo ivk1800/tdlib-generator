@@ -9,7 +9,8 @@ class CreateNewStickerSet extends TdFunction {
       required this.title,
       required this.name,
       required this.isMasks,
-      required this.stickers});
+      required this.stickers,
+      this.extra});
 
   /// [userId] Sticker set owner
   final int userId;

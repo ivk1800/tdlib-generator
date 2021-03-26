@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// MentionName entities contained in the text. Can be called synchronously
 /// Returns [FormattedText]
 class ParseTextEntities extends TdFunction {
-  ParseTextEntities({required this.text, required this.parseMode});
+  ParseTextEntities({required this.text, required this.parseMode, this.extra});
 
   /// [text] The text to parse
   final String text;

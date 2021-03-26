@@ -4,7 +4,8 @@ import '../tdapi.dart';
 /// Returns the newly created chat
 /// Returns [Chat]
 class CreateNewBasicGroupChat extends TdFunction {
-  CreateNewBasicGroupChat({required this.userIds, required this.title});
+  CreateNewBasicGroupChat(
+      {required this.userIds, required this.title, this.extra});
 
   /// [userIds] Identifiers of users to be added to the basic group
   final List<int> userIds;

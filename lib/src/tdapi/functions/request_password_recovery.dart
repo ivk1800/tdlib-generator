@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// set up
 /// Returns [EmailAddressAuthenticationCodeInfo]
 class RequestPasswordRecovery extends TdFunction {
-  RequestPasswordRecovery();
+  RequestPasswordRecovery({this.extra});
 
   /// callback sign
   dynamic? extra;

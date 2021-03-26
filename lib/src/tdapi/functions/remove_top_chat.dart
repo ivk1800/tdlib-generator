@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// chat info database is enabled
 /// Returns [Ok]
 class RemoveTopChat extends TdFunction {
-  RemoveTopChat({required this.category, required this.chatId});
+  RemoveTopChat({required this.category, required this.chatId, this.extra});
 
   /// [category] Category of frequently used chats
   final TopChatCategory category;

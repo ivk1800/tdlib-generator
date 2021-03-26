@@ -5,7 +5,9 @@ import '../tdapi.dart';
 /// Returns [Ok]
 class ToggleChatDefaultDisableNotification extends TdFunction {
   ToggleChatDefaultDisableNotification(
-      {required this.chatId, required this.defaultDisableNotification});
+      {required this.chatId,
+      required this.defaultDisableNotification,
+      this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;

@@ -11,7 +11,8 @@ class SendInlineQueryResultMessage extends TdFunction {
       required this.options,
       required this.queryId,
       required this.resultId,
-      required this.hideViaBot});
+      required this.hideViaBot,
+      this.extra});
 
   /// [chatId] Target chat
   final int chatId;

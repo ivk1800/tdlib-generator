@@ -7,7 +7,7 @@ import '../tdapi.dart';
 /// first
 /// Returns [Chats]
 class GetSuitableDiscussionChats extends TdFunction {
-  GetSuitableDiscussionChats();
+  GetSuitableDiscussionChats({this.extra});
 
   /// callback sign
   dynamic? extra;

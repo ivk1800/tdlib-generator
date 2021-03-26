@@ -11,7 +11,8 @@ class EditMessageLiveLocation extends TdFunction {
       required this.replyMarkup,
       this.location,
       required this.heading,
-      required this.proximityAlertRadius});
+      required this.proximityAlertRadius,
+      this.extra});
 
   /// [chatId] The chat the message belongs to
   final int chatId;

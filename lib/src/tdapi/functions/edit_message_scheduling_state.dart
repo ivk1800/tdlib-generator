@@ -8,7 +8,8 @@ class EditMessageSchedulingState extends TdFunction {
   EditMessageSchedulingState(
       {required this.chatId,
       required this.messageId,
-      required this.schedulingState});
+      required this.schedulingState,
+      this.extra});
 
   /// [chatId] The chat the message belongs to
   final int chatId;

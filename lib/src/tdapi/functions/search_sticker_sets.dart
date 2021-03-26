@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// and name. Excludes installed sticker sets from the results
 /// Returns [StickerSets]
 class SearchStickerSets extends TdFunction {
-  SearchStickerSets({required this.query});
+  SearchStickerSets({required this.query, this.extra});
 
   /// [query] Query to search for
   final String query;

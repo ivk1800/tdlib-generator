@@ -4,7 +4,8 @@ import '../tdapi.dart';
 /// user's new phone number. On success, returns information about the sent
 /// Returns [AuthenticationCodeInfo]
 class ChangePhoneNumber extends TdFunction {
-  ChangePhoneNumber({required this.phoneNumber, required this.settings});
+  ChangePhoneNumber(
+      {required this.phoneNumber, required this.settings, this.extra});
 
   /// [phoneNumber] The new phone number of the user in international format
   final String phoneNumber;

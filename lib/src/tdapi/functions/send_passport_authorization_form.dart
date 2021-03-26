@@ -6,7 +6,7 @@ import '../tdapi.dart';
 /// Returns [Ok]
 class SendPassportAuthorizationForm extends TdFunction {
   SendPassportAuthorizationForm(
-      {required this.autorizationFormId, required this.types});
+      {required this.autorizationFormId, required this.types, this.extra});
 
   /// [autorizationFormId] Authorization form identifier
   final int autorizationFormId;

@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// groups and supergroups; requires can_manage_voice_chats rights
 /// Returns [GroupCallId]
 class CreateVoiceChat extends TdFunction {
-  CreateVoiceChat({required this.chatId});
+  CreateVoiceChat({required this.chatId, this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;

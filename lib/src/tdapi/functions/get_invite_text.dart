@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// when the current user invites friends to Telegram
 /// Returns [Text]
 class GetInviteText extends TdFunction {
-  GetInviteText();
+  GetInviteText({this.extra});
 
   /// callback sign
   dynamic? extra;

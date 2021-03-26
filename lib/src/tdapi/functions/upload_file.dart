@@ -7,7 +7,10 @@ import '../tdapi.dart';
 /// Returns [File]
 class UploadFile extends TdFunction {
   UploadFile(
-      {required this.file, required this.fileType, required this.priority});
+      {required this.file,
+      required this.fileType,
+      required this.priority,
+      this.extra});
 
   /// [file] File to upload
   final InputFile file;

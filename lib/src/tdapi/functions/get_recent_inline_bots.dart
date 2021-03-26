@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Returns up to 20 recently used inline bots in the order of their last
 /// Returns [Users]
 class GetRecentInlineBots extends TdFunction {
-  GetRecentInlineBots();
+  GetRecentInlineBots({this.extra});
 
   /// callback sign
   dynamic? extra;

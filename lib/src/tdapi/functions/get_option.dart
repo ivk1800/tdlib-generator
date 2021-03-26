@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// on https://core.telegram.org/tdlib/options.) Can be called before
 /// Returns [OptionValue]
 class GetOption extends TdFunction {
-  GetOption({required this.name});
+  GetOption({required this.name, this.extra});
 
   /// [name] The name of the option
   final String name;

@@ -5,7 +5,10 @@ import '../tdapi.dart';
 /// Returns [Ok]
 class ToggleGroupCallParticipantIsMuted extends TdFunction {
   ToggleGroupCallParticipantIsMuted(
-      {required this.groupCallId, required this.userId, required this.isMuted});
+      {required this.groupCallId,
+      required this.userId,
+      required this.isMuted,
+      this.extra});
 
   /// [groupCallId] Group call identifier
   final int groupCallId;

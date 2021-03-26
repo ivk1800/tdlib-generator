@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Returns information about a chat filter by its identifier
 /// Returns [ChatFilter]
 class GetChatFilter extends TdFunction {
-  GetChatFilter({required this.chatFilterId});
+  GetChatFilter({required this.chatFilterId, this.extra});
 
   /// [chatFilterId] Chat filter identifier
   final int chatFilterId;

@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Returns all user contacts
 /// Returns [Users]
 class GetContacts extends TdFunction {
-  GetContacts();
+  GetContacts({this.extra});
 
   /// callback sign
   dynamic? extra;

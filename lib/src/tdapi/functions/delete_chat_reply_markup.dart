@@ -5,7 +5,8 @@ import '../tdapi.dart';
 /// be sent if the reply markup will be changed
 /// Returns [Ok]
 class DeleteChatReplyMarkup extends TdFunction {
-  DeleteChatReplyMarkup({required this.chatId, required this.messageId});
+  DeleteChatReplyMarkup(
+      {required this.chatId, required this.messageId, this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;

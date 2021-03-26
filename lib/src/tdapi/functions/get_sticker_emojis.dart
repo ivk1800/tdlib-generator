@@ -5,7 +5,7 @@ import '../tdapi.dart';
 /// Sticker object
 /// Returns [Emojis]
 class GetStickerEmojis extends TdFunction {
-  GetStickerEmojis({required this.sticker});
+  GetStickerEmojis({required this.sticker, this.extra});
 
   /// [sticker] Sticker file identifier
   final InputFile sticker;

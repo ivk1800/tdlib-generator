@@ -4,7 +4,8 @@ import '../tdapi.dart';
 /// supergroups; requires can_delete_messages administrator privileges
 /// Returns [Ok]
 class DeleteChatMessagesFromUser extends TdFunction {
-  DeleteChatMessagesFromUser({required this.chatId, required this.userId});
+  DeleteChatMessagesFromUser(
+      {required this.chatId, required this.userId, this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;

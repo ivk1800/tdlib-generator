@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// chronological order (i.e., in order of decreasing message_id)
 /// Returns [Messages]
 class GetChatScheduledMessages extends TdFunction {
-  GetChatScheduledMessages({required this.chatId});
+  GetChatScheduledMessages({required this.chatId, this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;

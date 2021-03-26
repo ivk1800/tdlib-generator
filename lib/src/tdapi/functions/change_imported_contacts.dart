@@ -6,7 +6,7 @@ import '../tdapi.dart';
 /// query, so only one query is possible at the same time
 /// Returns [ImportedContacts]
 class ChangeImportedContacts extends TdFunction {
-  ChangeImportedContacts({required this.contacts});
+  ChangeImportedContacts({required this.contacts, this.extra});
 
   /// [contacts] The new list of contacts, contact's vCard are ignored and are
   /// imported

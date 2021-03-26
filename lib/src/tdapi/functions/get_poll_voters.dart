@@ -9,7 +9,8 @@ class GetPollVoters extends TdFunction {
       required this.messageId,
       required this.optionId,
       required this.offset,
-      required this.limit});
+      required this.limit,
+      this.extra});
 
   /// [chatId] Identifier of the chat to which the poll belongs
   final int chatId;

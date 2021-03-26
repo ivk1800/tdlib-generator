@@ -7,7 +7,8 @@ class ReportSupergroupSpam extends TdFunction {
   ReportSupergroupSpam(
       {required this.supergroupId,
       required this.userId,
-      required this.messageIds});
+      required this.messageIds,
+      this.extra});
 
   /// [supergroupId] Supergroup identifier
   final int supergroupId;

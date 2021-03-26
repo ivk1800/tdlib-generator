@@ -6,7 +6,10 @@ import '../tdapi.dart';
 /// Returns [Ok]
 class ToggleChatIsPinned extends TdFunction {
   ToggleChatIsPinned(
-      {required this.chatList, required this.chatId, required this.isPinned});
+      {required this.chatList,
+      required this.chatId,
+      required this.isPinned,
+      this.extra});
 
   /// [chatList] Chat list in which to change the pinned state of the chat
   final ChatList chatList;

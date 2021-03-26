@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Sets new log stream for internal logging of TDLib. Can be called
 /// Returns [Ok]
 class SetLogStream extends TdFunction {
-  SetLogStream({required this.logStream});
+  SetLogStream({required this.logStream, this.extra});
 
   /// [logStream] New log stream
   final LogStream logStream;

@@ -5,7 +5,7 @@ import '../tdapi.dart';
 /// Returns [Ok]
 class InviteGroupCallParticipants extends TdFunction {
   InviteGroupCallParticipants(
-      {required this.groupCallId, required this.userIds});
+      {required this.groupCallId, required this.userIds, this.extra});
 
   /// [groupCallId] Group call identifier
   final int groupCallId;

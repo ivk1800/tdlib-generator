@@ -5,7 +5,10 @@ import '../tdapi.dart';
 /// Returns [MessageStatistics]
 class GetMessageStatistics extends TdFunction {
   GetMessageStatistics(
-      {required this.chatId, required this.messageId, required this.isDark});
+      {required this.chatId,
+      required this.messageId,
+      required this.isDark,
+      this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;

@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Returns favorite stickers
 /// Returns [Stickers]
 class GetFavoriteStickers extends TdFunction {
-  GetFavoriteStickers();
+  GetFavoriteStickers({this.extra});
 
   /// callback sign
   dynamic? extra;

@@ -5,7 +5,7 @@ import '../tdapi.dart';
 /// Can be called synchronously
 /// Returns [FormattedText]
 class GetMarkdownText extends TdFunction {
-  GetMarkdownText({required this.text});
+  GetMarkdownText({required this.text, this.extra});
 
   /// [text] The text
   final FormattedText text;

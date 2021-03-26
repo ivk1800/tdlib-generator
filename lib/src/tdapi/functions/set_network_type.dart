@@ -8,7 +8,7 @@ import '../tdapi.dart';
 /// data usage statistics
 /// Returns [Ok]
 class SetNetworkType extends TdFunction {
-  SetNetworkType({required this.type});
+  SetNetworkType({required this.type, this.extra});
 
   /// [type] The new network type. By default, networkTypeOther
   final NetworkType type;

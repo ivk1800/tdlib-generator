@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// success
 /// Returns [Session]
 class ConfirmQrCodeAuthentication extends TdFunction {
-  ConfirmQrCodeAuthentication({required this.link});
+  ConfirmQrCodeAuthentication({required this.link, this.extra});
 
   /// [link] A link from a QR code. The link must be scanned by the in-app
   final String link;

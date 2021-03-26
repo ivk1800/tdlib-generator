@@ -8,7 +8,8 @@ class ValidateOrderInfo extends TdFunction {
       {required this.chatId,
       required this.messageId,
       required this.orderInfo,
-      required this.allowSave});
+      required this.allowSave,
+      this.extra});
 
   /// [chatId] Chat identifier of the Invoice message
   final int chatId;

@@ -8,7 +8,8 @@ class SetInlineGameScore extends TdFunction {
       required this.editMessage,
       required this.userId,
       required this.score,
-      required this.force});
+      required this.force,
+      this.extra});
 
   /// [inlineMessageId] Inline message identifier
   final String inlineMessageId;

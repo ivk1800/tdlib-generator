@@ -6,7 +6,7 @@ import '../tdapi.dart';
 /// Returns [PassportElementsWithErrors]
 class GetPassportAuthorizationFormAvailableElements extends TdFunction {
   GetPassportAuthorizationFormAvailableElements(
-      {required this.autorizationFormId, required this.password});
+      {required this.autorizationFormId, required this.password, this.extra});
 
   /// [autorizationFormId] Authorization form identifier
   final int autorizationFormId;

@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// may be different from a provided one. Can be called before authorization
 /// Returns [LanguagePackInfo]
 class GetLanguagePackInfo extends TdFunction {
-  GetLanguagePackInfo({required this.languagePackId});
+  GetLanguagePackInfo({required this.languagePackId, this.extra});
 
   /// [languagePackId] Language pack identifier
   final String languagePackId;

@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Removes an animation from the list of saved animations
 /// Returns [Ok]
 class RemoveSavedAnimation extends TdFunction {
-  RemoveSavedAnimation({required this.animation});
+  RemoveSavedAnimation({required this.animation, this.extra});
 
   /// [animation] Animation file to be removed
   final InputFile animation;

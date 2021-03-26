@@ -4,7 +4,8 @@ import '../tdapi.dart';
 /// if the web page has no instant view page
 /// Returns [WebPageInstantView]
 class GetWebPageInstantView extends TdFunction {
-  GetWebPageInstantView({required this.url, required this.forceFull});
+  GetWebPageInstantView(
+      {required this.url, required this.forceFull, this.extra});
 
   /// [url] The web page URL
   final String url;

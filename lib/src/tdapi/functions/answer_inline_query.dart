@@ -10,7 +10,8 @@ class AnswerInlineQuery extends TdFunction {
       required this.cacheTime,
       required this.nextOffset,
       required this.switchPmText,
-      required this.switchPmParameter});
+      required this.switchPmParameter,
+      this.extra});
 
   /// [inlineQueryId] Identifier of the inline query
   final int inlineQueryId;

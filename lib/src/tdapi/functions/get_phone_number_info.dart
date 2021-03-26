@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// authorization
 /// Returns [PhoneNumberInfo]
 class GetPhoneNumberInfo extends TdFunction {
-  GetPhoneNumberInfo({required this.phoneNumberPrefix});
+  GetPhoneNumberInfo({required this.phoneNumberPrefix, this.extra});
 
   /// [phoneNumberPrefix] The phone number prefix
   final String phoneNumberPrefix;

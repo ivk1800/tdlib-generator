@@ -5,7 +5,10 @@ import '../tdapi.dart';
 /// Returns [CallbackQueryAnswer]
 class GetCallbackQueryAnswer extends TdFunction {
   GetCallbackQueryAnswer(
-      {required this.chatId, required this.messageId, required this.payload});
+      {required this.chatId,
+      required this.messageId,
+      required this.payload,
+      this.extra});
 
   /// [chatId] Identifier of the chat with the message
   final int chatId;

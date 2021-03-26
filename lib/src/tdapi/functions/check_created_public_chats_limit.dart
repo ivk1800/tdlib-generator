@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// corresponding error if the limit was reached
 /// Returns [Ok]
 class CheckCreatedPublicChatsLimit extends TdFunction {
-  CheckCreatedPublicChatsLimit({required this.type});
+  CheckCreatedPublicChatsLimit({required this.type, this.extra});
 
   /// [type] Type of the public chats, for which to check the limit
   final PublicChatType type;

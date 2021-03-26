@@ -5,7 +5,7 @@ import '../tdapi.dart';
 /// for the current used/base language packs. Can be called before
 /// Returns [Ok]
 class SynchronizeLanguagePack extends TdFunction {
-  SynchronizeLanguagePack({required this.languagePackId});
+  SynchronizeLanguagePack({required this.languagePackId, this.extra});
 
   /// [languagePackId] Language pack identifier
   final String languagePackId;

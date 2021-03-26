@@ -6,7 +6,7 @@ import '../tdapi.dart';
 /// this list
 /// Returns [Ok]
 class AddFavoriteSticker extends TdFunction {
-  AddFavoriteSticker({required this.sticker});
+  AddFavoriteSticker({required this.sticker, this.extra});
 
   /// [sticker] Sticker file to add
   final InputFile sticker;

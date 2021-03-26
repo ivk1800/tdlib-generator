@@ -9,7 +9,8 @@ class GetSupergroupMembers extends TdFunction {
       {required this.supergroupId,
       required this.filter,
       required this.offset,
-      required this.limit});
+      required this.limit,
+      this.extra});
 
   /// [supergroupId] Identifier of the supergroup or channel
   final int supergroupId;

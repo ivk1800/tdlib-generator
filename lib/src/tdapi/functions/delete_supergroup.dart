@@ -6,7 +6,7 @@ import '../tdapi.dart';
 /// 1000 members can't be deleted using this method
 /// Returns [Ok]
 class DeleteSupergroup extends TdFunction {
-  DeleteSupergroup({required this.supergroupId});
+  DeleteSupergroup({required this.supergroupId, this.extra});
 
   /// [supergroupId] Identifier of the supergroup or channel
   final int supergroupId;

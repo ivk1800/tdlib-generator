@@ -8,7 +8,7 @@ import '../tdapi.dart';
 /// instead of the message
 /// Returns [Messages]
 class ResendMessages extends TdFunction {
-  ResendMessages({required this.chatId, required this.messageIds});
+  ResendMessages({required this.chatId, required this.messageIds, this.extra});
 
   /// [chatId] Identifier of the chat to send messages
   final int chatId;

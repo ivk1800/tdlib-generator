@@ -3,7 +3,8 @@ import '../tdapi.dart';
 /// Changes application-specific data associated with a chat
 /// Returns [Ok]
 class SetChatClientData extends TdFunction {
-  SetChatClientData({required this.chatId, required this.clientData});
+  SetChatClientData(
+      {required this.chatId, required this.clientData, this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;

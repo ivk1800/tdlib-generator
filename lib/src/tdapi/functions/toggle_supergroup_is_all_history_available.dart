@@ -5,7 +5,9 @@ import '../tdapi.dart';
 /// Returns [Ok]
 class ToggleSupergroupIsAllHistoryAvailable extends TdFunction {
   ToggleSupergroupIsAllHistoryAvailable(
-      {required this.supergroupId, required this.isAllHistoryAvailable});
+      {required this.supergroupId,
+      required this.isAllHistoryAvailable,
+      this.extra});
 
   /// [supergroupId] The identifier of the supergroup
   final int supergroupId;

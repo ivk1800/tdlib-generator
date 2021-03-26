@@ -4,7 +4,10 @@ import '../tdapi.dart';
 /// Returns [CallId]
 class CreateCall extends TdFunction {
   CreateCall(
-      {required this.userId, required this.protocol, required this.isVideo});
+      {required this.userId,
+      required this.protocol,
+      required this.isVideo,
+      this.extra});
 
   /// [userId] Identifier of the user to be called
   final int userId;

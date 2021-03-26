@@ -6,7 +6,7 @@ import '../tdapi.dart';
 /// not miss new chats
 /// Returns [ChatsNearby]
 class SearchChatsNearby extends TdFunction {
-  SearchChatsNearby({required this.location});
+  SearchChatsNearby({required this.location, this.extra});
 
   /// [location] Current user location
   final Location location;

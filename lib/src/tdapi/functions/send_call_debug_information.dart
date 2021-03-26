@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// Returns [Ok]
 class SendCallDebugInformation extends TdFunction {
   SendCallDebugInformation(
-      {required this.callId, required this.debugInformation});
+      {required this.callId, required this.debugInformation, this.extra});
 
   /// [callId] Call identifier
   final int callId;

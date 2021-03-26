@@ -8,7 +8,8 @@ class EditMessageCaption extends TdFunction {
       {required this.chatId,
       required this.messageId,
       required this.replyMarkup,
-      required this.caption});
+      required this.caption,
+      this.extra});
 
   /// [chatId] The chat the message belongs to
   final int chatId;

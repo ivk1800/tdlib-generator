@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// string on failure. Can be called synchronously
 /// Returns [Text]
 class GetFileMimeType extends TdFunction {
-  GetFileMimeType({required this.fileName});
+  GetFileMimeType({required this.fileName, this.extra});
 
   /// [fileName] The name of the file or path to the file
   final String fileName;

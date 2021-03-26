@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// will automatically be deleted
 /// Returns [AccountTtl]
 class GetAccountTtl extends TdFunction {
-  GetAccountTtl();
+  GetAccountTtl({this.extra});
 
   /// callback sign
   dynamic? extra;

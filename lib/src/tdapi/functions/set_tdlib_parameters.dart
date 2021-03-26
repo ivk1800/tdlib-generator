@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// state is authorizationStateWaitTdlibParameters
 /// Returns [Ok]
 class SetTdlibParameters extends TdFunction {
-  SetTdlibParameters({required this.parameters});
+  SetTdlibParameters({required this.parameters, this.extra});
 
   /// [parameters] Parameters
   final TdlibParameters parameters;

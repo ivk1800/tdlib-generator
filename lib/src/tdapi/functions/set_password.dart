@@ -10,7 +10,8 @@ class SetPassword extends TdFunction {
       required this.newPassword,
       required this.newHint,
       required this.setRecoveryEmailAddress,
-      required this.newRecoveryEmailAddress});
+      required this.newRecoveryEmailAddress,
+      this.extra});
 
   /// [oldPassword] Previous password of the user
   final String oldPassword;

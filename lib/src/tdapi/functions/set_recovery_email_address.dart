@@ -8,7 +8,9 @@ import '../tdapi.dart';
 /// Returns [PasswordState]
 class SetRecoveryEmailAddress extends TdFunction {
   SetRecoveryEmailAddress(
-      {required this.password, required this.newRecoveryEmailAddress});
+      {required this.password,
+      required this.newRecoveryEmailAddress,
+      this.extra});
 
   /// [password] Password of the current user
   final String password;

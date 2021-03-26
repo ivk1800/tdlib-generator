@@ -4,7 +4,8 @@ import '../tdapi.dart';
 /// The sticker set must have been created by the bot
 /// Returns [Ok]
 class SetStickerPositionInSet extends TdFunction {
-  SetStickerPositionInSet({required this.sticker, required this.position});
+  SetStickerPositionInSet(
+      {required this.sticker, required this.position, this.extra});
 
   /// [sticker] Sticker
   final InputFile sticker;

@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Returns all website where the current user used Telegram to log in
 /// Returns [ConnectedWebsites]
 class GetConnectedWebsites extends TdFunction {
-  GetConnectedWebsites();
+  GetConnectedWebsites({this.extra});
 
   /// callback sign
   dynamic? extra;

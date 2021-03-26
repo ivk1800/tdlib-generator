@@ -5,7 +5,7 @@ import '../tdapi.dart';
 /// Can be called synchronously
 /// Returns [Text]
 class CleanFileName extends TdFunction {
-  CleanFileName({required this.fileName});
+  CleanFileName({required this.fileName, this.extra});
 
   /// [fileName] File name or path to the file
   final String fileName;

@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Accepts an incoming call
 /// Returns [Ok]
 class AcceptCall extends TdFunction {
-  AcceptCall({required this.callId, required this.protocol});
+  AcceptCall({required this.callId, required this.protocol, this.extra});
 
   /// [callId] Call identifier
   final int callId;

@@ -5,7 +5,7 @@ import '../tdapi.dart';
 /// Returns a 404 error if unknown
 /// Returns [Text]
 class GetPreferredCountryLanguage extends TdFunction {
-  GetPreferredCountryLanguage({required this.countryCode});
+  GetPreferredCountryLanguage({required this.countryCode, this.extra});
 
   /// [countryCode] A two-letter ISO 3166-1 alpha-2 country code
   final String countryCode;

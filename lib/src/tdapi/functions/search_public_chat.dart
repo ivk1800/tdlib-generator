@@ -5,7 +5,7 @@ import '../tdapi.dart';
 /// returned
 /// Returns [Chat]
 class SearchPublicChat extends TdFunction {
-  SearchPublicChat({required this.username});
+  SearchPublicChat({required this.username, this.extra});
 
   /// [username] Username to be resolved
   final String username;

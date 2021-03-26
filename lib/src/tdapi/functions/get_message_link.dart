@@ -8,7 +8,8 @@ class GetMessageLink extends TdFunction {
       {required this.chatId,
       required this.messageId,
       required this.forAlbum,
-      required this.forComment});
+      required this.forComment,
+      this.extra});
 
   /// [chatId] Identifier of the chat to which the message belongs
   final int chatId;

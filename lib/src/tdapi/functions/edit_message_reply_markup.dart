@@ -7,7 +7,8 @@ class EditMessageReplyMarkup extends TdFunction {
   EditMessageReplyMarkup(
       {required this.chatId,
       required this.messageId,
-      required this.replyMarkup});
+      required this.replyMarkup,
+      this.extra});
 
   /// [chatId] The chat the message belongs to
   final int chatId;

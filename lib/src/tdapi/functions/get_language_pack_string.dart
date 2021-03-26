@@ -9,7 +9,8 @@ class GetLanguagePackString extends TdFunction {
       {required this.languagePackDatabasePath,
       required this.localizationTarget,
       required this.languagePackId,
-      required this.key});
+      required this.key,
+      this.extra});
 
   /// [languagePackDatabasePath] Path to the language pack database in which
   /// are stored

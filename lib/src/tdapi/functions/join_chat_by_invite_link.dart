@@ -5,7 +5,7 @@ import '../tdapi.dart';
 /// server
 /// Returns [Chat]
 class JoinChatByInviteLink extends TdFunction {
-  JoinChatByInviteLink({required this.inviteLink});
+  JoinChatByInviteLink({required this.inviteLink, this.extra});
 
   /// [inviteLink] Invite link to import; should begin with
   /// "https://telegram.me/joinchat/", or "https://telegram.dog/joinchat/"

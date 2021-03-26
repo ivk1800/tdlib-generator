@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Sets the verbosity level of the internal logging of TDLib. Can be called
 /// Returns [Ok]
 class SetLogVerbosityLevel extends TdFunction {
-  SetLogVerbosityLevel({required this.newVerbosityLevel});
+  SetLogVerbosityLevel({required this.newVerbosityLevel, this.extra});
 
   /// [newVerbosityLevel] New value of the verbosity level for logging. Value 0
   /// to fatal errors, value 1 corresponds to errors, value 2 corresponds to

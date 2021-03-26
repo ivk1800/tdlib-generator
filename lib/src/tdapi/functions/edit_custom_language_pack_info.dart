@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// target. Can be called before authorization
 /// Returns [Ok]
 class EditCustomLanguagePackInfo extends TdFunction {
-  EditCustomLanguagePackInfo({required this.info});
+  EditCustomLanguagePackInfo({required this.info, this.extra});
 
   /// [info] New information about the custom local language pack
   final LanguagePackInfo info;

@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// For other files the behavior is undefined
 /// Returns [Ok]
 class CancelUploadFile extends TdFunction {
-  CancelUploadFile({required this.fileId});
+  CancelUploadFile({required this.fileId, this.extra});
 
   /// [fileId] Identifier of the file to stop uploading
   final int fileId;

@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// is an offline method. Can be called before authorization
 /// Returns [Update]
 class TestUseUpdate extends TdFunction {
-  TestUseUpdate();
+  TestUseUpdate({this.extra});
 
   /// callback sign
   dynamic? extra;

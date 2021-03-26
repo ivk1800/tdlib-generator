@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// is authorizationStateWaitRegistration
 /// Returns [Ok]
 class RegisterUser extends TdFunction {
-  RegisterUser({required this.firstName, required this.lastName});
+  RegisterUser({required this.firstName, required this.lastName, this.extra});
 
   /// [firstName] The first name of the user; 1-64 characters
   final String firstName;

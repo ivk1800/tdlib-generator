@@ -6,7 +6,8 @@ class AnswerShippingQuery extends TdFunction {
   AnswerShippingQuery(
       {required this.shippingQueryId,
       required this.shippingOptions,
-      required this.errorMessage});
+      required this.errorMessage,
+      this.extra});
 
   /// [shippingQueryId] Identifier of the shipping query
   final int shippingQueryId;

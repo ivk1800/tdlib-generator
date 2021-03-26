@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Sets the list of commands supported by the bot; for bots only
 /// Returns [Ok]
 class SetCommands extends TdFunction {
-  SetCommands({required this.commands});
+  SetCommands({required this.commands, this.extra});
 
   /// [commands] List of the bot's commands
   final List<BotCommand> commands;

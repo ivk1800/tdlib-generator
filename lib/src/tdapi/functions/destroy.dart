@@ -6,7 +6,7 @@ import '../tdapi.dart';
 /// with authorizationStateClosed will be sent. Can be called before
 /// Returns [Ok]
 class Destroy extends TdFunction {
-  Destroy();
+  Destroy({this.extra});
 
   /// callback sign
   dynamic? extra;

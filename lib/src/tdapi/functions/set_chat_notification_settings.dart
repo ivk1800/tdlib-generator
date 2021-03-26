@@ -5,7 +5,7 @@ import '../tdapi.dart';
 /// Returns [Ok]
 class SetChatNotificationSettings extends TdFunction {
   SetChatNotificationSettings(
-      {required this.chatId, required this.notificationSettings});
+      {required this.chatId, required this.notificationSettings, this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;

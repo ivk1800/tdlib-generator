@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// Requires can_change_info rights
 /// Returns [Ok]
 class SetChatTitle extends TdFunction {
-  SetChatTitle({required this.chatId, required this.title});
+  SetChatTitle({required this.chatId, required this.title, this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;

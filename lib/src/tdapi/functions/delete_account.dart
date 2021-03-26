@@ -6,7 +6,7 @@ import '../tdapi.dart';
 /// state is authorizationStateWaitPassword
 /// Returns [Ok]
 class DeleteAccount extends TdFunction {
-  DeleteAccount({required this.reason});
+  DeleteAccount({required this.reason, this.extra});
 
   /// [reason] The reason why the account was deleted; optional
   final String reason;

@@ -6,7 +6,8 @@ class SearchEmojis extends TdFunction {
   SearchEmojis(
       {required this.text,
       required this.exactMatch,
-      required this.inputLanguageCodes});
+      required this.inputLanguageCodes,
+      this.extra});
 
   /// [text] Text to search for
   final String text;

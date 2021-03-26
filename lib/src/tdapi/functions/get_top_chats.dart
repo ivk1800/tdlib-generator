@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// is enabled
 /// Returns [Chats]
 class GetTopChats extends TdFunction {
-  GetTopChats({required this.category, required this.limit});
+  GetTopChats({required this.category, required this.limit, this.extra});
 
   /// [category] Category of chats to be returned
   final TopChatCategory category;

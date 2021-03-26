@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// Only writable options can be set. Can be called before authorization
 /// Returns [Ok]
 class SetOption extends TdFunction {
-  SetOption({required this.name, required this.value});
+  SetOption({required this.name, required this.value, this.extra});
 
   /// [name] The name of the option
   final String name;

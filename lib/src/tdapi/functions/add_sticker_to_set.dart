@@ -4,7 +4,10 @@ import '../tdapi.dart';
 /// Returns [StickerSet]
 class AddStickerToSet extends TdFunction {
   AddStickerToSet(
-      {required this.userId, required this.name, required this.sticker});
+      {required this.userId,
+      required this.name,
+      required this.sticker,
+      this.extra});
 
   /// [userId] Sticker set owner
   final int userId;

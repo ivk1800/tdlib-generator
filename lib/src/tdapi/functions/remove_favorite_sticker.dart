@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Removes a sticker from the list of favorite stickers
 /// Returns [Ok]
 class RemoveFavoriteSticker extends TdFunction {
-  RemoveFavoriteSticker({required this.sticker});
+  RemoveFavoriteSticker({required this.sticker, this.extra});
 
   /// [sticker] Sticker file to delete from the list
   final InputFile sticker;

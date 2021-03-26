@@ -11,7 +11,8 @@ class GetChatHistory extends TdFunction {
       required this.fromMessageId,
       required this.offset,
       required this.limit,
-      required this.onlyLocal});
+      required this.onlyLocal,
+      this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;

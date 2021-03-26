@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// is true and location changes for more than 1 kilometer
 /// Returns [Ok]
 class SetLocation extends TdFunction {
-  SetLocation({required this.location});
+  SetLocation({required this.location, this.extra});
 
   /// [location] The new location of the user
   final Location location;

@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Deletes saved order info
 /// Returns [Ok]
 class DeleteSavedOrderInfo extends TdFunction {
-  DeleteSavedOrderInfo();
+  DeleteSavedOrderInfo({this.extra});
 
   /// callback sign
   dynamic? extra;

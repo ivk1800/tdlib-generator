@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// Returns [AuthenticationCodeInfo]
 class SendPhoneNumberVerificationCode extends TdFunction {
   SendPhoneNumberVerificationCode(
-      {required this.phoneNumber, required this.settings});
+      {required this.phoneNumber, required this.settings, this.extra});
 
   /// [phoneNumber] The phone number of the user, in international format
   final String phoneNumber;

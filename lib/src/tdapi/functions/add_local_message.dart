@@ -9,7 +9,8 @@ class AddLocalMessage extends TdFunction {
       required this.sender,
       required this.replyToMessageId,
       required this.disableNotification,
-      required this.inputMessageContent});
+      required this.inputMessageContent,
+      this.extra});
 
   /// [chatId] Target chat
   final int chatId;

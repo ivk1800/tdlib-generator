@@ -3,7 +3,8 @@ import '../tdapi.dart';
 /// Adds or changes a custom local language pack to the current localization
 /// Returns [Ok]
 class SetCustomLanguagePack extends TdFunction {
-  SetCustomLanguagePack({required this.info, required this.strings});
+  SetCustomLanguagePack(
+      {required this.info, required this.strings, this.extra});
 
   /// [info] Information about the language pack. Language pack ID must start
   /// 'X', consist only of English letters, digits and hyphens, and must not

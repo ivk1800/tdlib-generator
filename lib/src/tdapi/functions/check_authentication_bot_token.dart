@@ -6,7 +6,7 @@ import '../tdapi.dart';
 /// log in
 /// Returns [Ok]
 class CheckAuthenticationBotToken extends TdFunction {
-  CheckAuthenticationBotToken({required this.token});
+  CheckAuthenticationBotToken({required this.token, this.extra});
 
   /// [token] The bot token
   final String token;

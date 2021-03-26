@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// channels. Requires can_change_info rights
 /// Returns [Ok]
 class SetChatPhoto extends TdFunction {
-  SetChatPhoto({required this.chatId, required this.photo});
+  SetChatPhoto({required this.chatId, required this.photo, this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;

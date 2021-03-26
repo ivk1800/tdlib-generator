@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Removes a chat action bar without any other action
 /// Returns [Ok]
 class RemoveChatActionBar extends TdFunction {
-  RemoveChatActionBar({required this.chatId});
+  RemoveChatActionBar({required this.chatId, this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;

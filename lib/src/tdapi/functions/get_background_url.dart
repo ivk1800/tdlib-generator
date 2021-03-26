@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Constructs a persistent HTTP URL for a background
 /// Returns [HttpUrl]
 class GetBackgroundUrl extends TdFunction {
-  GetBackgroundUrl({required this.name, required this.type});
+  GetBackgroundUrl({required this.name, required this.type, this.extra});
 
   /// [name] Background name
   final String name;

@@ -5,7 +5,8 @@ import '../tdapi.dart';
 /// the errors are fixed
 /// Returns [Ok]
 class SetPassportElementErrors extends TdFunction {
-  SetPassportElementErrors({required this.userId, required this.errors});
+  SetPassportElementErrors(
+      {required this.userId, required this.errors, this.extra});
 
   /// [userId] User identifier
   final int userId;

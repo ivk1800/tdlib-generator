@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// Can be called before authorization
 /// Returns [TestInt]
 class TestSquareInt extends TdFunction {
-  TestSquareInt({required this.x});
+  TestSquareInt({required this.x, this.extra});
 
   /// [x] Number to square
   final int x;

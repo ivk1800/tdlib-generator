@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Creates new chat filter. Returns information about the created chat filter
 /// Returns [ChatFilterInfo]
 class CreateChatFilter extends TdFunction {
-  CreateChatFilter({required this.filter});
+  CreateChatFilter({required this.filter, this.extra});
 
   /// [filter] Chat filter
   final ChatFilter filter;

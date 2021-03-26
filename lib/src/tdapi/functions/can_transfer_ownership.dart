@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// to another user
 /// Returns [CanTransferOwnershipResult]
 class CanTransferOwnership extends TdFunction {
-  CanTransferOwnership();
+  CanTransferOwnership({this.extra});
 
   /// callback sign
   dynamic? extra;

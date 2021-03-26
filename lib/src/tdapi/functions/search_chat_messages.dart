@@ -15,7 +15,8 @@ class SearchChatMessages extends TdFunction {
       required this.offset,
       required this.limit,
       required this.filter,
-      required this.messageThreadId});
+      required this.messageThreadId,
+      this.extra});
 
   /// [chatId] Identifier of the chat in which to search messages
   final int chatId;

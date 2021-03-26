@@ -9,7 +9,8 @@ class SendMessage extends TdFunction {
       required this.replyToMessageId,
       required this.options,
       required this.replyMarkup,
-      required this.inputMessageContent});
+      required this.inputMessageContent,
+      this.extra});
 
   /// [chatId] Target chat
   final int chatId;

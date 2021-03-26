@@ -8,7 +8,7 @@ import '../tdapi.dart';
 /// Returns [Ok]
 class SetAuthenticationPhoneNumber extends TdFunction {
   SetAuthenticationPhoneNumber(
-      {required this.phoneNumber, required this.settings});
+      {required this.phoneNumber, required this.settings, this.extra});
 
   /// [phoneNumber] The phone number of the user, in international format
   final String phoneNumber;

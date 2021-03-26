@@ -8,7 +8,8 @@ class EditMessageText extends TdFunction {
       {required this.chatId,
       required this.messageId,
       required this.replyMarkup,
-      required this.inputMessageContent});
+      required this.inputMessageContent,
+      this.extra});
 
   /// [chatId] The chat the message belongs to
   final int chatId;

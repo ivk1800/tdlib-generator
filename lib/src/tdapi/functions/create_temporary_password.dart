@@ -3,7 +3,8 @@ import '../tdapi.dart';
 /// Creates a new temporary password for processing payments
 /// Returns [TemporaryPasswordState]
 class CreateTemporaryPassword extends TdFunction {
-  CreateTemporaryPassword({required this.password, required this.validFor});
+  CreateTemporaryPassword(
+      {required this.password, required this.validFor, this.extra});
 
   /// [password] Persistent user password
   final String password;

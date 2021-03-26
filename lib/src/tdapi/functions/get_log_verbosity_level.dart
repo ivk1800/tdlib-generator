@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// synchronously
 /// Returns [LogVerbosityLevel]
 class GetLogVerbosityLevel extends TdFunction {
-  GetLogVerbosityLevel();
+  GetLogVerbosityLevel({this.extra});
 
   /// callback sign
   dynamic? extra;

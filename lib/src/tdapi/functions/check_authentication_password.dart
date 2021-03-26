@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// authorization state is authorizationStateWaitPassword
 /// Returns [Ok]
 class CheckAuthenticationPassword extends TdFunction {
-  CheckAuthenticationPassword({required this.password});
+  CheckAuthenticationPassword({required this.password, this.extra});
 
   /// [password] The password to check
   final String password;

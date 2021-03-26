@@ -7,7 +7,10 @@ import '../tdapi.dart';
 /// Returns [Ok]
 class TransferChatOwnership extends TdFunction {
   TransferChatOwnership(
-      {required this.chatId, required this.userId, required this.password});
+      {required this.chatId,
+      required this.userId,
+      required this.password,
+      this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;

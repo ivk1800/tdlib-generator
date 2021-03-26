@@ -7,7 +7,8 @@ class EditInlineMessageMedia extends TdFunction {
   EditInlineMessageMedia(
       {required this.inlineMessageId,
       required this.replyMarkup,
-      required this.inputMessageContent});
+      required this.inputMessageContent,
+      this.extra});
 
   /// [inlineMessageId] Inline message identifier
   final String inlineMessageId;

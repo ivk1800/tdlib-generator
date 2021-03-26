@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// and is stored in some OS keychain
 /// Returns [Ok]
 class SetDatabaseEncryptionKey extends TdFunction {
-  SetDatabaseEncryptionKey({required this.newEncryptionKey});
+  SetDatabaseEncryptionKey({required this.newEncryptionKey, this.extra});
 
   /// [newEncryptionKey] New encryption key
   final String newEncryptionKey;

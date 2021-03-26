@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// user identifiers are ignored
 /// Returns [ImportedContacts]
 class ImportContacts extends TdFunction {
-  ImportContacts({required this.contacts});
+  ImportContacts({required this.contacts, this.extra});
 
   /// [contacts] The list of contacts to import or edit; contacts' vCard are
   /// and are not imported

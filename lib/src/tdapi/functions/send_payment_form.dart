@@ -8,7 +8,8 @@ class SendPaymentForm extends TdFunction {
       required this.messageId,
       required this.orderInfoId,
       required this.shippingOptionId,
-      required this.credentials});
+      required this.credentials,
+      this.extra});
 
   /// [chatId] Chat identifier of the Invoice message
   final int chatId;

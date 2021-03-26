@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// are unmuted, the sound is set to "default" and message previews are shown
 /// Returns [Ok]
 class ResetAllNotificationSettings extends TdFunction {
-  ResetAllNotificationSettings();
+  ResetAllNotificationSettings({this.extra});
 
   /// callback sign
   dynamic? extra;

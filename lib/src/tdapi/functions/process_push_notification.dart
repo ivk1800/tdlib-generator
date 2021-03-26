@@ -5,7 +5,7 @@ import '../tdapi.dart';
 /// Can be called before authorization
 /// Returns [Ok]
 class ProcessPushNotification extends TdFunction {
-  ProcessPushNotification({required this.payload});
+  ProcessPushNotification({required this.payload, this.extra});
 
   /// [payload] JSON-encoded push notification payload with all fields sent by
   /// server, and "google.sent_time" and "google.notification.sound" fields

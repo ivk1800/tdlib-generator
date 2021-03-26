@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// Returns [Ok]
 class EditInlineMessageReplyMarkup extends TdFunction {
   EditInlineMessageReplyMarkup(
-      {required this.inlineMessageId, required this.replyMarkup});
+      {required this.inlineMessageId, required this.replyMarkup, this.extra});
 
   /// [inlineMessageId] Inline message identifier
   final String inlineMessageId;

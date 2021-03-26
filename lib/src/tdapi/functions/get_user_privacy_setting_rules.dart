@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Returns the current privacy settings
 /// Returns [UserPrivacySettingRules]
 class GetUserPrivacySettingRules extends TdFunction {
-  GetUserPrivacySettingRules({required this.setting});
+  GetUserPrivacySettingRules({required this.setting, this.extra});
 
   /// [setting] The privacy setting
   final UserPrivacySetting setting;

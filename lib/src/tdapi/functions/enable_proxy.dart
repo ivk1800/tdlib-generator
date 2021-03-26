@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// authorization
 /// Returns [Ok]
 class EnableProxy extends TdFunction {
-  EnableProxy({required this.proxyId});
+  EnableProxy({required this.proxyId, this.extra});
 
   /// [proxyId] Proxy identifier
   final int proxyId;

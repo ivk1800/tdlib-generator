@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// authorization state is authorizationStateWaitEncryptionKey
 /// Returns [Ok]
 class CheckDatabaseEncryptionKey extends TdFunction {
-  CheckDatabaseEncryptionKey({required this.encryptionKey});
+  CheckDatabaseEncryptionKey({required this.encryptionKey, this.extra});
 
   /// [encryptionKey] Encryption key to check or set up
   final String encryptionKey;

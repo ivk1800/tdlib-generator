@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// videos can have attached sticker sets
 /// Returns [StickerSets]
 class GetAttachedStickerSets extends TdFunction {
-  GetAttachedStickerSets({required this.fileId});
+  GetAttachedStickerSets({required this.fileId, this.extra});
 
   /// [fileId] File identifier
   final int fileId;

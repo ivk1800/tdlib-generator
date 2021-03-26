@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// group or can_edit_messages rights in the channel
 /// Returns [Ok]
 class UnpinChatMessage extends TdFunction {
-  UnpinChatMessage({required this.chatId, required this.messageId});
+  UnpinChatMessage({required this.chatId, required this.messageId, this.extra});
 
   /// [chatId] Identifier of the chat
   final int chatId;

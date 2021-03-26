@@ -5,7 +5,7 @@ import '../tdapi.dart';
 /// with authorizationStateClosed will be sent
 /// Returns [Ok]
 class LogOut extends TdFunction {
-  LogOut();
+  LogOut({this.extra});
 
   /// callback sign
   dynamic? extra;

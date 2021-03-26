@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// Can be called synchronously
 /// Returns [FormattedText]
 class ParseMarkdown extends TdFunction {
-  ParseMarkdown({required this.text});
+  ParseMarkdown({required this.text, this.extra});
 
   /// [text] The text to parse. For example, "__italic__
   final FormattedText text;

@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Returns a list of public chats of the specified type, owned by the user
 /// Returns [Chats]
 class GetCreatedPublicChats extends TdFunction {
-  GetCreatedPublicChats({required this.type});
+  GetCreatedPublicChats({required this.type, this.extra});
 
   /// [type] Type of the public chats to return
   final PublicChatType type;

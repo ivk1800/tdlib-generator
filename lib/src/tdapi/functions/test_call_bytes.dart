@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// be called before authorization
 /// Returns [TestBytes]
 class TestCallBytes extends TdFunction {
-  TestCallBytes({required this.x});
+  TestCallBytes({required this.x, this.extra});
 
   /// [x] Bytes to return
   final String x;

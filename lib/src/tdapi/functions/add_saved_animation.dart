@@ -6,7 +6,7 @@ import '../tdapi.dart';
 /// can be added to the list
 /// Returns [Ok]
 class AddSavedAnimation extends TdFunction {
-  AddSavedAnimation({required this.animation});
+  AddSavedAnimation({required this.animation, this.extra});
 
   /// [animation] The animation file to be added. Only animations known to the
   /// (i.e. successfully sent via a message) can be added to the list

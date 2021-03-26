@@ -8,7 +8,8 @@ class EditProxy extends TdFunction {
       required this.server,
       required this.port,
       required this.enable,
-      required this.type});
+      required this.type,
+      this.extra});
 
   /// [proxyId] Proxy identifier
   final int proxyId;

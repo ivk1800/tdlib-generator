@@ -6,7 +6,8 @@ class SetGroupCallParticipantIsSpeaking extends TdFunction {
   SetGroupCallParticipantIsSpeaking(
       {required this.groupCallId,
       required this.source,
-      required this.isSpeaking});
+      required this.isSpeaking,
+      this.extra});
 
   /// [groupCallId] Group call identifier
   final int groupCallId;

@@ -10,7 +10,8 @@ class SearchSecretMessages extends TdFunction {
       required this.query,
       required this.offset,
       required this.limit,
-      required this.filter});
+      required this.filter,
+      this.extra});
 
   /// [chatId] Identifier of the chat in which to search. Specify 0 to search in
   /// secret chats

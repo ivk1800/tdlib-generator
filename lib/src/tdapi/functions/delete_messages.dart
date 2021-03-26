@@ -4,7 +4,10 @@ import '../tdapi.dart';
 /// Returns [Ok]
 class DeleteMessages extends TdFunction {
   DeleteMessages(
-      {required this.chatId, required this.messageIds, required this.revoke});
+      {required this.chatId,
+      required this.messageIds,
+      required this.revoke,
+      this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;

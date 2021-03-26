@@ -5,7 +5,8 @@ import '../tdapi.dart';
 /// phone number or the chosen email address must be verified first
 /// Returns [PassportElement]
 class SetPassportElement extends TdFunction {
-  SetPassportElement({required this.element, required this.password});
+  SetPassportElement(
+      {required this.element, required this.password, this.extra});
 
   /// [element] Input Telegram Passport element
   final InputPassportElement element;

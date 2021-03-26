@@ -7,7 +7,8 @@ class StopPoll extends TdFunction {
   StopPoll(
       {required this.chatId,
       required this.messageId,
-      required this.replyMarkup});
+      required this.replyMarkup,
+      this.extra});
 
   /// [chatId] Identifier of the chat to which the poll belongs
   final int chatId;

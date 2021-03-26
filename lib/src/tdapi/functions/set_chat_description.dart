@@ -4,7 +4,8 @@ import '../tdapi.dart';
 /// channels. Requires can_change_info rights
 /// Returns [Ok]
 class SetChatDescription extends TdFunction {
-  SetChatDescription({required this.chatId, required this.description});
+  SetChatDescription(
+      {required this.chatId, required this.description, this.extra});
 
   /// [chatId] Identifier of the chat
   final int chatId;

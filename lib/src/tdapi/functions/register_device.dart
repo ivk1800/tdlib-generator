@@ -4,7 +4,8 @@ import '../tdapi.dart';
 /// a globally unique identifier of the push notification subscription
 /// Returns [PushReceiverId]
 class RegisterDevice extends TdFunction {
-  RegisterDevice({required this.deviceToken, required this.otherUserIds});
+  RegisterDevice(
+      {required this.deviceToken, required this.otherUserIds, this.extra});
 
   /// [deviceToken] Device token
   final DeviceToken deviceToken;

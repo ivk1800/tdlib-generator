@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// will automatically be deleted
 /// Returns [Ok]
 class SetAccountTtl extends TdFunction {
-  SetAccountTtl({required this.ttl});
+  SetAccountTtl({required this.ttl, this.extra});
 
   /// [ttl] New account TTL
   final AccountTtl ttl;

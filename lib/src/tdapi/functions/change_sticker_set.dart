@@ -6,7 +6,8 @@ class ChangeStickerSet extends TdFunction {
   ChangeStickerSet(
       {required this.setId,
       required this.isInstalled,
-      required this.isArchived});
+      required this.isArchived,
+      this.extra});
 
   /// [setId] Identifier of the sticker set
   final int setId;

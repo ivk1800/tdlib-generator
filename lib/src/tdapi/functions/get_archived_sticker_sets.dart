@@ -6,7 +6,8 @@ class GetArchivedStickerSets extends TdFunction {
   GetArchivedStickerSets(
       {required this.isMasks,
       required this.offsetStickerSetId,
-      required this.limit});
+      required this.limit,
+      this.extra});
 
   /// [isMasks] Pass true to return mask stickers sets; pass false to return
   /// sticker sets

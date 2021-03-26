@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Returns saved order info, if any
 /// Returns [OrderInfo]
 class GetSavedOrderInfo extends TdFunction {
-  GetSavedOrderInfo();
+  GetSavedOrderInfo({this.extra});
 
   /// callback sign
   dynamic? extra;

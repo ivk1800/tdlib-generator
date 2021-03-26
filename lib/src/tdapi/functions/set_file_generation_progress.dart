@@ -6,7 +6,8 @@ class SetFileGenerationProgress extends TdFunction {
   SetFileGenerationProgress(
       {required this.generationId,
       required this.expectedSize,
-      required this.localPrefixSize});
+      required this.localPrefixSize,
+      this.extra});
 
   /// [generationId] The identifier of the generation process
   final int generationId;

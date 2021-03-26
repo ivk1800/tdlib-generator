@@ -9,7 +9,8 @@ class TestProxy extends TdFunction {
       required this.port,
       required this.type,
       required this.dcId,
-      required this.timeout});
+      required this.timeout,
+      this.extra});
 
   /// [server] Proxy server IP address
   final String server;

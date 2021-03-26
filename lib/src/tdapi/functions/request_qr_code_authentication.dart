@@ -7,7 +7,7 @@ import '../tdapi.dart';
 /// authorizationStateWaitPassword
 /// Returns [Ok]
 class RequestQrCodeAuthentication extends TdFunction {
-  RequestQrCodeAuthentication({required this.otherUserIds});
+  RequestQrCodeAuthentication({required this.otherUserIds, this.extra});
 
   /// [otherUserIds] List of user identifiers of other users currently using the
   final List<int> otherUserIds;

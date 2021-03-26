@@ -5,7 +5,10 @@ import '../tdapi.dart';
 /// Returns [Text]
 class GetMessageEmbeddingCode extends TdFunction {
   GetMessageEmbeddingCode(
-      {required this.chatId, required this.messageId, required this.forAlbum});
+      {required this.chatId,
+      required this.messageId,
+      required this.forAlbum,
+      this.extra});
 
   /// [chatId] Identifier of the chat to which the message belongs
   final int chatId;

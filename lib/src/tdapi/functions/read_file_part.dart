@@ -7,7 +7,10 @@ import '../tdapi.dart';
 /// Returns [FilePart]
 class ReadFilePart extends TdFunction {
   ReadFilePart(
-      {required this.fileId, required this.offset, required this.count});
+      {required this.fileId,
+      required this.offset,
+      required this.count,
+      this.extra});
 
   /// [fileId] Identifier of the file. The file must be located in the TDLib
   /// cache

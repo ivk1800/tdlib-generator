@@ -13,7 +13,8 @@ class OptimizeStorage extends TdFunction {
       required this.chatIds,
       required this.excludeChatIds,
       required this.returnDeletedFileStatistics,
-      required this.chatLimit});
+      required this.chatLimit,
+      this.extra});
 
   /// [size] Limit on the total size of files after deletion. Pass -1 to use the
   /// limit

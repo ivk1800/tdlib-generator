@@ -6,7 +6,10 @@ import '../tdapi.dart';
 /// Returns [Ok]
 class AddChatMember extends TdFunction {
   AddChatMember(
-      {required this.chatId, required this.userId, required this.forwardLimit});
+      {required this.chatId,
+      required this.userId,
+      required this.forwardLimit,
+      this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;

@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Returns list of proxies that are currently set up. Can be called before
 /// Returns [Proxies]
 class GetProxies extends TdFunction {
-  GetProxies();
+  GetProxies({this.extra});
 
   /// callback sign
   dynamic? extra;

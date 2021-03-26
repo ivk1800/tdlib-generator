@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// of the known user contacts
 /// Returns [Users]
 class SearchContacts extends TdFunction {
-  SearchContacts({required this.query, required this.limit});
+  SearchContacts({required this.query, required this.limit, this.extra});
 
   /// [query] Query to search for; may be empty to return all contacts
   final String query;

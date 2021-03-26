@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Returns saved animations
 /// Returns [Animations]
 class GetSavedAnimations extends TdFunction {
-  GetSavedAnimations();
+  GetSavedAnimations({this.extra});
 
   /// callback sign
   dynamic? extra;

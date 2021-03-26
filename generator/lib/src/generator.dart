@@ -143,7 +143,7 @@ class Generator {
           });
         }));
 
-        if (canBeReturnByFunction) {
+        if (canBeReturnByFunction || c.group == Group.Functions) {
           constructorBuilder.optionalParameters
               .add(cb.Parameter((parameterBuilder) {
             parameterBuilder.named = true;

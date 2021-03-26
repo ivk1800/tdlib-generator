@@ -5,7 +5,10 @@ import '../tdapi.dart';
 /// Returns [StickerSets]
 class SearchInstalledStickerSets extends TdFunction {
   SearchInstalledStickerSets(
-      {required this.isMasks, required this.query, required this.limit});
+      {required this.isMasks,
+      required this.query,
+      required this.limit,
+      this.extra});
 
   /// [isMasks] Pass true to return mask sticker sets; pass false to return
   /// sticker sets

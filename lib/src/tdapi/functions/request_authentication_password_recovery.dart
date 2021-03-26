@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// set up. Works only when the current authorization state is
 /// Returns [Ok]
 class RequestAuthenticationPasswordRecovery extends TdFunction {
-  RequestAuthenticationPasswordRecovery();
+  RequestAuthenticationPasswordRecovery({this.extra});
 
   /// callback sign
   dynamic? extra;

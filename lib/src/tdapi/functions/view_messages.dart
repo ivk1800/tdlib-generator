@@ -10,7 +10,8 @@ class ViewMessages extends TdFunction {
       {required this.chatId,
       required this.messageThreadId,
       required this.messageIds,
-      required this.forceRead});
+      required this.forceRead,
+      this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;

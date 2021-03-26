@@ -5,7 +5,10 @@ import '../tdapi.dart';
 /// Returns [HttpUrl]
 class GetChatStatisticsUrl extends TdFunction {
   GetChatStatisticsUrl(
-      {required this.chatId, required this.parameters, required this.isDark});
+      {required this.chatId,
+      required this.parameters,
+      required this.isDark,
+      this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;

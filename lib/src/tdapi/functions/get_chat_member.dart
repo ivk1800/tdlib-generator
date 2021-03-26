@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Returns information about a single member of a chat
 /// Returns [ChatMember]
 class GetChatMember extends TdFunction {
-  GetChatMember({required this.chatId, required this.userId});
+  GetChatMember({required this.chatId, required this.userId, this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;

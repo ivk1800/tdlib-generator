@@ -4,7 +4,8 @@ import '../tdapi.dart';
 /// keys. Can be called before authorization
 /// Returns [LanguagePackStrings]
 class GetLanguagePackStrings extends TdFunction {
-  GetLanguagePackStrings({required this.languagePackId, required this.keys});
+  GetLanguagePackStrings(
+      {required this.languagePackId, required this.keys, this.extra});
 
   /// [languagePackId] Language pack identifier of the strings to be returned
   final String languagePackId;

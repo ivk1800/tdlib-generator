@@ -5,7 +5,7 @@ import '../tdapi.dart';
 /// list first
 /// Returns [Ok]
 class AddRecentlyFoundChat extends TdFunction {
-  AddRecentlyFoundChat({required this.chatId});
+  AddRecentlyFoundChat({required this.chatId, this.extra});
 
   /// [chatId] Identifier of the chat to add
   final int chatId;

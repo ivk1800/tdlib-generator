@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// left using this method
 /// Returns [Ok]
 class LeaveChat extends TdFunction {
-  LeaveChat({required this.chatId});
+  LeaveChat({required this.chatId, this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;

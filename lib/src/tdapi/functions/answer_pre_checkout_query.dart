@@ -4,7 +4,9 @@ import '../tdapi.dart';
 /// Returns [Ok]
 class AnswerPreCheckoutQuery extends TdFunction {
   AnswerPreCheckoutQuery(
-      {required this.preCheckoutQueryId, required this.errorMessage});
+      {required this.preCheckoutQueryId,
+      required this.errorMessage,
+      this.extra});
 
   /// [preCheckoutQueryId] Identifier of the pre-checkout query
   final int preCheckoutQueryId;

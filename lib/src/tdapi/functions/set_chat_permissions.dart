@@ -4,7 +4,8 @@ import '../tdapi.dart';
 /// Requires can_restrict_members administrator right
 /// Returns [Ok]
 class SetChatPermissions extends TdFunction {
-  SetChatPermissions({required this.chatId, required this.permissions});
+  SetChatPermissions(
+      {required this.chatId, required this.permissions, this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;

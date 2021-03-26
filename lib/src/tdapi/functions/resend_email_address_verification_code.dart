@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// Passport
 /// Returns [EmailAddressAuthenticationCodeInfo]
 class ResendEmailAddressVerificationCode extends TdFunction {
-  ResendEmailAddressVerificationCode();
+  ResendEmailAddressVerificationCode({this.extra});
 
   /// callback sign
   dynamic? extra;

@@ -4,7 +4,10 @@ import '../tdapi.dart';
 /// Returns [Count]
 class GetChatMessageCount extends TdFunction {
   GetChatMessageCount(
-      {required this.chatId, required this.filter, required this.returnLocal});
+      {required this.chatId,
+      required this.filter,
+      required this.returnLocal,
+      this.extra});
 
   /// [chatId] Identifier of the chat in which to count messages
   final int chatId;

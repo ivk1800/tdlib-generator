@@ -3,7 +3,8 @@ import '../tdapi.dart';
 /// Finishes the file generation
 /// Returns [Ok]
 class FinishFileGeneration extends TdFunction {
-  FinishFileGeneration({required this.generationId, required this.error});
+  FinishFileGeneration(
+      {required this.generationId, required this.error, this.extra});
 
   /// [generationId] The identifier of the generation process
   final int generationId;

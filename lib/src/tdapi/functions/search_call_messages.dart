@@ -8,7 +8,8 @@ class SearchCallMessages extends TdFunction {
   SearchCallMessages(
       {required this.fromMessageId,
       required this.limit,
-      required this.onlyMissed});
+      required this.onlyMissed,
+      this.extra});
 
   /// [fromMessageId] Identifier of the message from which to search; use 0 to
   /// results from the last message

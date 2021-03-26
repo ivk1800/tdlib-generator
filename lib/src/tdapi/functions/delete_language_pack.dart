@@ -5,7 +5,7 @@ import '../tdapi.dart';
 /// is being synchronized can't be deleted. Can be called before authorization
 /// Returns [Ok]
 class DeleteLanguagePack extends TdFunction {
-  DeleteLanguagePack({required this.languagePackId});
+  DeleteLanguagePack({required this.languagePackId, this.extra});
 
   /// [languagePackId] Identifier of the language pack to delete
   final String languagePackId;

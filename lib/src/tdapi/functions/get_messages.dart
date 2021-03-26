@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// on the corresponding position of the result
 /// Returns [Messages]
 class GetMessages extends TdFunction {
-  GetMessages({required this.chatId, required this.messageIds});
+  GetMessages({required this.chatId, required this.messageIds, this.extra});
 
   /// [chatId] Identifier of the chat the messages belong to
   final int chatId;

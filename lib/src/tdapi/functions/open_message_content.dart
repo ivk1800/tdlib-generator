@@ -6,7 +6,8 @@ import '../tdapi.dart';
 /// if something has changed
 /// Returns [Ok]
 class OpenMessageContent extends TdFunction {
-  OpenMessageContent({required this.chatId, required this.messageId});
+  OpenMessageContent(
+      {required this.chatId, required this.messageId, this.extra});
 
   /// [chatId] Chat identifier of the message
   final int chatId;

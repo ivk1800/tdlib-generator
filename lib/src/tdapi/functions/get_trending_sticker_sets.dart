@@ -4,7 +4,8 @@ import '../tdapi.dart';
 /// of returned sticker sets is chosen by the library
 /// Returns [StickerSets]
 class GetTrendingStickerSets extends TdFunction {
-  GetTrendingStickerSets({required this.offset, required this.limit});
+  GetTrendingStickerSets(
+      {required this.offset, required this.limit, this.extra});
 
   /// [offset] The offset from which to return the sticker sets; must be
   final int offset;

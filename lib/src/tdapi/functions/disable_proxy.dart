@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Disables the currently enabled proxy. Can be called before authorization
 /// Returns [Ok]
 class DisableProxy extends TdFunction {
-  DisableProxy();
+  DisableProxy({this.extra});
 
   /// callback sign
   dynamic? extra;

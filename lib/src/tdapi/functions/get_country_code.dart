@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// ISO 3166-1 alpha-2 country code. Can be called before authorization
 /// Returns [Text]
 class GetCountryCode extends TdFunction {
-  GetCountryCode();
+  GetCountryCode({this.extra});
 
   /// callback sign
   dynamic? extra;

@@ -7,7 +7,8 @@ class AddProxy extends TdFunction {
       {required this.server,
       required this.port,
       required this.enable,
-      required this.type});
+      required this.type,
+      this.extra});
 
   /// [server] Proxy server IP address
   final String server;

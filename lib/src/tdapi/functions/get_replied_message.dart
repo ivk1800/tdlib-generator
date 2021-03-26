@@ -6,7 +6,8 @@ import '../tdapi.dart';
 /// respectively
 /// Returns [Message]
 class GetRepliedMessage extends TdFunction {
-  GetRepliedMessage({required this.chatId, required this.messageId});
+  GetRepliedMessage(
+      {required this.chatId, required this.messageId, this.extra});
 
   /// [chatId] Identifier of the chat the message belongs to
   final int chatId;

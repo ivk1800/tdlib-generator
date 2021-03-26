@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// authorization
 /// Returns [Ok]
 class TestCallEmpty extends TdFunction {
-  TestCallEmpty();
+  TestCallEmpty({this.extra});
 
   /// callback sign
   dynamic? extra;

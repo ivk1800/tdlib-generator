@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Searches for recently used hashtags by their prefix
 /// Returns [Hashtags]
 class SearchHashtags extends TdFunction {
-  SearchHashtags({required this.prefix, required this.limit});
+  SearchHashtags({required this.prefix, required this.limit, this.extra});
 
   /// [prefix] Hashtag prefix to search for
   final String prefix;

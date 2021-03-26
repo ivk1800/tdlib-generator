@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// is an offline request if the current user is not a bot
 /// Returns [Supergroup]
 class GetSupergroup extends TdFunction {
-  GetSupergroup({required this.supergroupId});
+  GetSupergroup({required this.supergroupId, this.extra});
 
   /// [supergroupId] Supergroup or channel identifier
   final int supergroupId;

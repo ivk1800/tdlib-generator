@@ -7,7 +7,8 @@ class GetPassportAuthorizationForm extends TdFunction {
       {required this.botUserId,
       required this.scope,
       required this.publicKey,
-      required this.nonce});
+      required this.nonce,
+      this.extra});
 
   /// [botUserId] User identifier of the service's bot
   final int botUserId;

@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Changes the order of pinned chats
 /// Returns [Ok]
 class SetPinnedChats extends TdFunction {
-  SetPinnedChats({required this.chatList, required this.chatIds});
+  SetPinnedChats({required this.chatList, required this.chatIds, this.extra});
 
   /// [chatList] Chat list in which to change the order of pinned chats
   final ChatList chatList;

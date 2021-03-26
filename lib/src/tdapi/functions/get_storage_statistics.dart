@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Returns storage usage statistics. Can be called before authorization
 /// Returns [StorageStatistics]
 class GetStorageStatistics extends TdFunction {
-  GetStorageStatistics({required this.chatLimit});
+  GetStorageStatistics({required this.chatLimit, this.extra});
 
   /// [chatLimit] The maximum number of chats with the largest storage usage for
   /// separate statistics should be returned. All other chats will be grouped in

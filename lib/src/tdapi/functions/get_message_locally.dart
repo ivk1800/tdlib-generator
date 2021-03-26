@@ -4,7 +4,8 @@ import '../tdapi.dart';
 /// network request. This is an offline request
 /// Returns [Message]
 class GetMessageLocally extends TdFunction {
-  GetMessageLocally({required this.chatId, required this.messageId});
+  GetMessageLocally(
+      {required this.chatId, required this.messageId, this.extra});
 
   /// [chatId] Identifier of the chat the message belongs to
   final int chatId;

@@ -5,7 +5,10 @@ import '../tdapi.dart';
 /// Returns [Chats]
 class GetGroupsInCommon extends TdFunction {
   GetGroupsInCommon(
-      {required this.userId, required this.offsetChatId, required this.limit});
+      {required this.userId,
+      required this.offsetChatId,
+      required this.limit,
+      this.extra});
 
   /// [userId] User identifier
   final int userId;

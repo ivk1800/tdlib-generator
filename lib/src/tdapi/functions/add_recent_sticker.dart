@@ -6,7 +6,8 @@ import '../tdapi.dart';
 /// be added to this list
 /// Returns [Stickers]
 class AddRecentSticker extends TdFunction {
-  AddRecentSticker({required this.isAttached, required this.sticker});
+  AddRecentSticker(
+      {required this.isAttached, required this.sticker, this.extra});
 
   /// [isAttached] Pass true to add the sticker to the list of stickers recently
   /// to photo or video files; pass false to add the sticker to the list of

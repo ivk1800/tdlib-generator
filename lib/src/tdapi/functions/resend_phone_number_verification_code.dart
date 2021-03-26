@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// Passport
 /// Returns [AuthenticationCodeInfo]
 class ResendPhoneNumberVerificationCode extends TdFunction {
-  ResendPhoneNumberVerificationCode();
+  ResendPhoneNumberVerificationCode({this.extra});
 
   /// callback sign
   dynamic? extra;

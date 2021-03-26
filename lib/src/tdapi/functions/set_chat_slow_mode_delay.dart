@@ -4,7 +4,8 @@ import '../tdapi.dart';
 /// can_restrict_members rights
 /// Returns [Ok]
 class SetChatSlowModeDelay extends TdFunction {
-  SetChatSlowModeDelay({required this.chatId, required this.slowModeDelay});
+  SetChatSlowModeDelay(
+      {required this.chatId, required this.slowModeDelay, this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;

@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// be called before authorization
 /// Returns [Ok]
 class TestNetwork extends TdFunction {
-  TestNetwork();
+  TestNetwork({this.extra});
 
   /// callback sign
   dynamic? extra;

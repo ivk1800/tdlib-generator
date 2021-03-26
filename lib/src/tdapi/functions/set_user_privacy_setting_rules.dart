@@ -3,7 +3,8 @@ import '../tdapi.dart';
 /// Changes user privacy settings
 /// Returns [Ok]
 class SetUserPrivacySettingRules extends TdFunction {
-  SetUserPrivacySettingRules({required this.setting, required this.rules});
+  SetUserPrivacySettingRules(
+      {required this.setting, required this.rules, this.extra});
 
   /// [setting] The privacy setting
   final UserPrivacySetting setting;

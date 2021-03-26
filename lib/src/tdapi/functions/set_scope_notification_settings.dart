@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// Returns [Ok]
 class SetScopeNotificationSettings extends TdFunction {
   SetScopeNotificationSettings(
-      {required this.scope, required this.notificationSettings});
+      {required this.scope, required this.notificationSettings, this.extra});
 
   /// [scope] Types of chats for which to change the notification settings
   final NotificationSettingsScope scope;

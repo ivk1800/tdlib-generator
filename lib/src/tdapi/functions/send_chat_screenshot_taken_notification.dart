@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// and secret chats
 /// Returns [Ok]
 class SendChatScreenshotTakenNotification extends TdFunction {
-  SendChatScreenshotTakenNotification({required this.chatId});
+  SendChatScreenshotTakenNotification({required this.chatId, this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;

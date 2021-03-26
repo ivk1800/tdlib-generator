@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// on the chat being opened or closed
 /// Returns [Ok]
 class CloseChat extends TdFunction {
-  CloseChat({required this.chatId});
+  CloseChat({required this.chatId, this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;

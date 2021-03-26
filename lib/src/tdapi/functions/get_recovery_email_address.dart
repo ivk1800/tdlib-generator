@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// up. This method can be used to verify a password provided by the user
 /// Returns [RecoveryEmailAddress]
 class GetRecoveryEmailAddress extends TdFunction {
-  GetRecoveryEmailAddress({required this.password});
+  GetRecoveryEmailAddress({required this.password, this.extra});
 
   /// [password] The password for the current user
   final String password;

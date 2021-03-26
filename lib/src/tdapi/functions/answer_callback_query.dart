@@ -8,7 +8,8 @@ class AnswerCallbackQuery extends TdFunction {
       required this.text,
       required this.showAlert,
       required this.url,
-      required this.cacheTime});
+      required this.cacheTime,
+      this.extra});
 
   /// [callbackQueryId] Identifier of the callback query
   final int callbackQueryId;

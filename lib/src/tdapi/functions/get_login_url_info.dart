@@ -5,7 +5,10 @@ import '../tdapi.dart';
 /// Returns [LoginUrlInfo]
 class GetLoginUrlInfo extends TdFunction {
   GetLoginUrlInfo(
-      {required this.chatId, required this.messageId, required this.buttonId});
+      {required this.chatId,
+      required this.messageId,
+      required this.buttonId,
+      this.extra});
 
   /// [chatId] Chat identifier of the message with the button
   final int chatId;

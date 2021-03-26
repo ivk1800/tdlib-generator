@@ -7,7 +7,10 @@ import '../tdapi.dart';
 /// Returns [Message]
 class SendBotStartMessage extends TdFunction {
   SendBotStartMessage(
-      {required this.botUserId, required this.chatId, required this.parameter});
+      {required this.botUserId,
+      required this.chatId,
+      required this.parameter,
+      this.extra});
 
   /// [botUserId] Identifier of the bot
   final int botUserId;

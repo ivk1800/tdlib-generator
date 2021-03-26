@@ -8,7 +8,8 @@ class SearchChatMembers extends TdFunction {
       {required this.chatId,
       required this.query,
       required this.limit,
-      required this.filter});
+      required this.filter,
+      this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;

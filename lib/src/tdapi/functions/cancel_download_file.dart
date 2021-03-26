@@ -4,7 +4,8 @@ import '../tdapi.dart';
 /// nothing
 /// Returns [Ok]
 class CancelDownloadFile extends TdFunction {
-  CancelDownloadFile({required this.fileId, required this.onlyIfPending});
+  CancelDownloadFile(
+      {required this.fileId, required this.onlyIfPending, this.extra});
 
   /// [fileId] Identifier of a file to stop downloading
   final int fileId;

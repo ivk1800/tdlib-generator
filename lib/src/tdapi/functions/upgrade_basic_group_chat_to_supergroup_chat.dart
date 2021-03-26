@@ -5,7 +5,7 @@ import '../tdapi.dart';
 /// Deactivates the original basic group
 /// Returns [Chat]
 class UpgradeBasicGroupChatToSupergroupChat extends TdFunction {
-  UpgradeBasicGroupChatToSupergroupChat({required this.chatId});
+  UpgradeBasicGroupChatToSupergroupChat({required this.chatId, this.extra});
 
   /// [chatId] Identifier of the chat to upgrade
   final int chatId;

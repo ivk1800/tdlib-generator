@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// the corresponding chat
 /// Returns [ChatInviteLinkInfo]
 class CheckChatInviteLink extends TdFunction {
-  CheckChatInviteLink({required this.inviteLink});
+  CheckChatInviteLink({required this.inviteLink, this.extra});
 
   /// [inviteLink] Invite link to be checked; should begin with
   /// "https://telegram.me/joinchat/", or "https://telegram.dog/joinchat/"

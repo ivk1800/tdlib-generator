@@ -7,7 +7,8 @@ class GetCallbackQueryMessage extends TdFunction {
   GetCallbackQueryMessage(
       {required this.chatId,
       required this.messageId,
-      required this.callbackQueryId});
+      required this.callbackQueryId,
+      this.extra});
 
   /// [chatId] Identifier of the chat the message belongs to
   final int chatId;

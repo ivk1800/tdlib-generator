@@ -11,7 +11,8 @@ class GetLoginUrl extends TdFunction {
       {required this.chatId,
       required this.messageId,
       required this.buttonId,
-      required this.allowWriteAccess});
+      required this.allowWriteAccess,
+      this.extra});
 
   /// [chatId] Chat identifier of the message with the button
   final int chatId;

@@ -5,7 +5,10 @@ import '../tdapi.dart';
 /// Returns [AuthenticationCodeInfo]
 class SendPhoneNumberConfirmationCode extends TdFunction {
   SendPhoneNumberConfirmationCode(
-      {required this.hash, required this.phoneNumber, required this.settings});
+      {required this.hash,
+      required this.phoneNumber,
+      required this.settings,
+      this.extra});
 
   /// [hash] Value of the "hash" parameter from the link
   final String hash;

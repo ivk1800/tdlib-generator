@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Returns auto-download settings presets for the current user
 /// Returns [AutoDownloadSettingsPresets]
 class GetAutoDownloadSettingsPresets extends TdFunction {
-  GetAutoDownloadSettingsPresets();
+  GetAutoDownloadSettingsPresets({this.extra});
 
   /// callback sign
   dynamic? extra;

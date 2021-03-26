@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Informs the server that some trending sticker sets have been viewed by the
 /// Returns [Ok]
 class ViewTrendingStickerSets extends TdFunction {
-  ViewTrendingStickerSets({required this.stickerSetIds});
+  ViewTrendingStickerSets({required this.stickerSetIds, this.extra});
 
   /// [stickerSetIds] Identifiers of viewed trending sticker sets
   final List<int> stickerSetIds;

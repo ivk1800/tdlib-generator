@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// set must have been created by the bot
 /// Returns [Ok]
 class RemoveStickerFromSet extends TdFunction {
-  RemoveStickerFromSet({required this.sticker});
+  RemoveStickerFromSet({required this.sticker, this.extra});
 
   /// [sticker] Sticker
   final InputFile sticker;

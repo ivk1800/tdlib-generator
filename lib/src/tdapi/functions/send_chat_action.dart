@@ -6,7 +6,8 @@ class SendChatAction extends TdFunction {
   SendChatAction(
       {required this.chatId,
       required this.messageThreadId,
-      required this.action});
+      required this.action,
+      this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;

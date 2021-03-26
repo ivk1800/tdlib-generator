@@ -5,7 +5,7 @@ import '../tdapi.dart';
 /// after generation
 /// Returns [HttpUrl]
 class GetEmojiSuggestionsUrl extends TdFunction {
-  GetEmojiSuggestionsUrl({required this.languageCode});
+  GetEmojiSuggestionsUrl({required this.languageCode, this.extra});
 
   /// [languageCode] Language code for which the emoji replacements will be
   final String languageCode;

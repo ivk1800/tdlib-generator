@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// chat lists, so it is automatically removed from another one if needed
 /// Returns [Ok]
 class AddChatToList extends TdFunction {
-  AddChatToList({required this.chatId, required this.chatList});
+  AddChatToList({required this.chatId, required this.chatList, this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;

@@ -3,7 +3,8 @@ import '../tdapi.dart';
 /// Uploads a PNG image with a sticker; for bots only; returns the uploaded
 /// Returns [File]
 class UploadStickerFile extends TdFunction {
-  UploadStickerFile({required this.userId, required this.pngSticker});
+  UploadStickerFile(
+      {required this.userId, required this.pngSticker, this.extra});
 
   /// [userId] Sticker file owner
   final int userId;

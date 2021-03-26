@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Returns information about existing countries. Can be called before
 /// Returns [Countries]
 class GetCountries extends TdFunction {
-  GetCountries();
+  GetCountries({this.extra});
 
   /// callback sign
   dynamic? extra;

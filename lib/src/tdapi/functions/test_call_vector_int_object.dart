@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// This is an offline method. Can be called before authorization
 /// Returns [TestVectorIntObject]
 class TestCallVectorIntObject extends TdFunction {
-  TestCallVectorIntObject({required this.x});
+  TestCallVectorIntObject({required this.x, this.extra});
 
   /// [x] Vector of objects to return
   final List<TestInt> x;

@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Forces an updates.getDifference call to the Telegram servers; for testing
 /// Returns [Ok]
 class TestGetDifference extends TdFunction {
-  TestGetDifference();
+  TestGetDifference({this.extra});
 
   /// callback sign
   dynamic? extra;

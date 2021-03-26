@@ -8,7 +8,8 @@ class GetMessagePublicForwards extends TdFunction {
       {required this.chatId,
       required this.messageId,
       required this.offset,
-      required this.limit});
+      required this.limit,
+      this.extra});
 
   /// [chatId] Chat identifier of the message
   final int chatId;

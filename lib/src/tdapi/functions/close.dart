@@ -5,7 +5,7 @@ import '../tdapi.dart';
 /// will be sent. Can be called before initialization
 /// Returns [Ok]
 class Close extends TdFunction {
-  Close();
+  Close({this.extra});
 
   /// callback sign
   dynamic? extra;

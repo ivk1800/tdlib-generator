@@ -9,7 +9,8 @@ class DownloadFile extends TdFunction {
       required this.priority,
       required this.offset,
       required this.limit,
-      required this.synchronous});
+      required this.synchronous,
+      this.extra});
 
   /// [fileId] Identifier of the file to download
   final int fileId;

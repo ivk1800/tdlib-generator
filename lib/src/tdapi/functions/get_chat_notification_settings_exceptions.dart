@@ -4,7 +4,7 @@ import '../tdapi.dart';
 /// Returns [Chats]
 class GetChatNotificationSettingsExceptions extends TdFunction {
   GetChatNotificationSettingsExceptions(
-      {required this.scope, required this.compareSound});
+      {required this.scope, required this.compareSound, this.extra});
 
   /// [scope] If specified, only chats from the specified scope will be returned
   final NotificationSettingsScope scope;

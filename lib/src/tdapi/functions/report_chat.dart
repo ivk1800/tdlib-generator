@@ -7,7 +7,10 @@ import '../tdapi.dart';
 /// Returns [Ok]
 class ReportChat extends TdFunction {
   ReportChat(
-      {required this.chatId, required this.reason, required this.messageIds});
+      {required this.chatId,
+      required this.reason,
+      required this.messageIds,
+      this.extra});
 
   /// [chatId] Chat identifier
   final int chatId;
