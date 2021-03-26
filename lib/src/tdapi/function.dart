@@ -5,5 +5,7 @@ abstract class TdFunction {
 
   Map<String, dynamic> toJson();
 
+  dynamic? getExtra() => null;
+
   String getConstructor() => CONSTRUCTOR;
 }
