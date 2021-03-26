@@ -5,9 +5,9 @@ class ChatPhoto extends TdObject {
   ChatPhoto(
       {required this.id,
       required this.addedDate,
-      Minithumbnail? this.minithumbnail,
+      this.minithumbnail,
       required this.sizes,
-      AnimatedChatPhoto? this.animation});
+      this.animation});
 
   /// [id] Unique photo identifier
   final int id;
@@ -35,7 +35,7 @@ class ChatPhoto extends TdObject {
         id: int.tryParse(json['id']) ?? 0,
         addedDate: json['added_date'],
         minithumbnail: Minithumbnail.fromJson(json['minithumbnail']),
-        sizes: List<PhotoSize>.from((json['sizes}'] ?? [])
+        sizes: List<PhotoSize>.from((json['sizes'] ?? [])
             .map((item) => PhotoSize.fromJson(item))
             .toList()),
         animation: AnimatedChatPhoto.fromJson(json['animation']));

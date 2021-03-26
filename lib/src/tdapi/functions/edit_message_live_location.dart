@@ -9,7 +9,7 @@ class EditMessageLiveLocation extends TdFunction {
       {required this.chatId,
       required this.messageId,
       required this.replyMarkup,
-      Location? this.location,
+      this.location,
       required this.heading,
       required this.proximityAlertRadius});
 

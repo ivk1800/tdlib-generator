@@ -15,9 +15,8 @@ class UpdateSavedAnimations extends Update {
     }
 
     return UpdateSavedAnimations(
-        animationIds: List<int>.from((json['animation_ids}'] ?? [])
-            .map((item) => json['int'])
-            .toList()));
+        animationIds: List<int>.from(
+            (json['animation_ids'] ?? []).map((item) => json['int']).toList()));
   }
 
   @override

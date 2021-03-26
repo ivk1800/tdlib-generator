@@ -7,7 +7,7 @@ class Background extends TdObject {
       required this.isDefault,
       required this.isDark,
       required this.name,
-      Document? this.document,
+      this.document,
       required this.type,
       this.extra});
 

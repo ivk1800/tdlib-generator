@@ -10,7 +10,7 @@ class UpdateNewPreCheckoutQuery extends Update {
       required this.totalAmount,
       required this.invoicePayload,
       required this.shippingOptionId,
-      OrderInfo? this.orderInfo});
+      this.orderInfo});
 
   /// [id] Unique query identifier
   final int id;

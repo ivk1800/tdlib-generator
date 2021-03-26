@@ -15,7 +15,7 @@ class MessagePassportDataSent extends MessageContent {
     }
 
     return MessagePassportDataSent(
-        types: List<PassportElementType>.from((json['types}'] ?? [])
+        types: List<PassportElementType>.from((json['types'] ?? [])
             .map((item) => PassportElementType.fromJson(item))
             .toList()));
   }

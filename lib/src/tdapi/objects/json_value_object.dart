@@ -15,7 +15,7 @@ class JsonValueObject extends JsonValue {
     }
 
     return JsonValueObject(
-        members: List<JsonObjectMember>.from((json['members}'] ?? [])
+        members: List<JsonObjectMember>.from((json['members'] ?? [])
             .map((item) => JsonObjectMember.fromJson(item))
             .toList()));
   }

@@ -18,7 +18,7 @@ class InputPassportElementErrorSourceFiles
     }
 
     return InputPassportElementErrorSourceFiles(
-        fileHashes: List<String>.from((json['file_hashes}'] ?? [])
+        fileHashes: List<String>.from((json['file_hashes'] ?? [])
             .map((item) => json['String'])
             .toList()));
   }

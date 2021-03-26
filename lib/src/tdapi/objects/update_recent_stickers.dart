@@ -21,7 +21,7 @@ class UpdateRecentStickers extends Update {
     return UpdateRecentStickers(
         isAttached: json['is_attached'],
         stickerIds: List<int>.from(
-            (json['sticker_ids}'] ?? []).map((item) => json['int']).toList()));
+            (json['sticker_ids'] ?? []).map((item) => json['int']).toList()));
   }
 
   @override

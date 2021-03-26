@@ -9,8 +9,8 @@ class Animation extends TdObject {
       required this.fileName,
       required this.mimeType,
       required this.hasStickers,
-      Minithumbnail? this.minithumbnail,
-      Thumbnail? this.thumbnail,
+      this.minithumbnail,
+      this.thumbnail,
       required this.animation});
 
   /// [duration] Duration of the animation, in seconds; as defined by the sender

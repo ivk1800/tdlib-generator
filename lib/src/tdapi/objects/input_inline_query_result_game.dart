@@ -3,9 +3,7 @@ import '../tdapi.dart';
 /// Represents a game
 class InputInlineQueryResultGame extends InputInlineQueryResult {
   InputInlineQueryResultGame(
-      {required this.id,
-      required this.gameShortName,
-      ReplyMarkup? this.replyMarkup});
+      {required this.id, required this.gameShortName, this.replyMarkup});
 
   /// [id] Unique identifier of the query result
   final String id;

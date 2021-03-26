@@ -37,13 +37,13 @@ class CallStateReady extends CallState {
 
     return CallStateReady(
         protocol: CallProtocol.fromJson(json['protocol'])!,
-        servers: List<CallServer>.from((json['servers}'] ?? [])
+        servers: List<CallServer>.from((json['servers'] ?? [])
             .map((item) => CallServer.fromJson(item))
             .toList()),
         config: json['config'],
         encryptionKey: json['encryption_key'],
         emojis: List<String>.from(
-            (json['emojis}'] ?? []).map((item) => json['String']).toList()),
+            (json['emojis'] ?? []).map((item) => json['String']).toList()),
         allowP2p: json['allow_p2p']);
   }
 

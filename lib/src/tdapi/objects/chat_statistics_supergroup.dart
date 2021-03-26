@@ -94,16 +94,16 @@ class ChatStatisticsSupergroup extends ChatStatistics {
         dayGraph: StatisticalGraph.fromJson(json['day_graph'])!,
         weekGraph: StatisticalGraph.fromJson(json['week_graph'])!,
         topSenders: List<ChatStatisticsMessageSenderInfo>.from(
-            (json['top_senders}'] ?? [])
+            (json['top_senders'] ?? [])
                 .map((item) => ChatStatisticsMessageSenderInfo.fromJson(item))
                 .toList()),
         topAdministrators: List<ChatStatisticsAdministratorActionsInfo>.from(
-            (json['top_administrators}'] ?? [])
+            (json['top_administrators'] ?? [])
                 .map((item) =>
                     ChatStatisticsAdministratorActionsInfo.fromJson(item))
                 .toList()),
         topInviters: List<ChatStatisticsInviterInfo>.from(
-            (json['top_inviters}'] ?? [])
+            (json['top_inviters'] ?? [])
                 .map((item) => ChatStatisticsInviterInfo.fromJson(item))
                 .toList()));
   }

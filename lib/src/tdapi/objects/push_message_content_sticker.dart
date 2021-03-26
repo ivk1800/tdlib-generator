@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// A message with a sticker
 class PushMessageContentSticker extends PushMessageContent {
   PushMessageContentSticker(
-      {Sticker? this.sticker, required this.emoji, required this.isPinned});
+      {this.sticker, required this.emoji, required this.isPinned});
 
   /// [sticker] Message content; may be null
   final Sticker? sticker;

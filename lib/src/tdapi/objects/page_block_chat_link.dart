@@ -2,8 +2,7 @@ import '../tdapi.dart';
 
 /// A link to a chat
 class PageBlockChatLink extends PageBlock {
-  PageBlockChatLink(
-      {required this.title, ChatPhotoInfo? this.photo, required this.username});
+  PageBlockChatLink({required this.title, this.photo, required this.username});
 
   /// [title] Chat title
   final String title;

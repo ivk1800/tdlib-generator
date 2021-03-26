@@ -7,7 +7,7 @@ class UpdateMessageEdited extends Update {
       {required this.chatId,
       required this.messageId,
       required this.editDate,
-      ReplyMarkup? this.replyMarkup});
+      this.replyMarkup});
 
   /// [chatId] Chat identifier
   final int chatId;

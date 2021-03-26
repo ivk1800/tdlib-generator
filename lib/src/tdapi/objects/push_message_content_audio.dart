@@ -2,7 +2,7 @@ import '../tdapi.dart';
 
 /// An audio message
 class PushMessageContentAudio extends PushMessageContent {
-  PushMessageContentAudio({Audio? this.audio, required this.isPinned});
+  PushMessageContentAudio({this.audio, required this.isPinned});
 
   /// [audio] Message content; may be null
   final Audio? audio;

@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Represents information about a venue
 class InlineQueryResultVenue extends InlineQueryResult {
   InlineQueryResultVenue(
-      {required this.id, required this.venue, Thumbnail? this.thumbnail});
+      {required this.id, required this.venue, this.thumbnail});
 
   /// [id] Unique identifier of the query result
   final String id;

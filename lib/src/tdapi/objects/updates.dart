@@ -18,7 +18,7 @@ class Updates extends TdObject {
     }
 
     return Updates(
-        updates: List<Update>.from((json['updates}'] ?? [])
+        updates: List<Update>.from((json['updates'] ?? [])
             .map((item) => Update.fromJson(item))
             .toList()),
         extra: json['@extra']);

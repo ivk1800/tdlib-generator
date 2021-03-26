@@ -46,7 +46,7 @@ class InputMessagePhoto extends InputMessageContent {
         photo: InputFile.fromJson(json['photo'])!,
         thumbnail: InputThumbnail.fromJson(json['thumbnail'])!,
         addedStickerFileIds: List<int>.from(
-            (json['added_sticker_file_ids}'] ?? [])
+            (json['added_sticker_file_ids'] ?? [])
                 .map((item) => json['int'])
                 .toList()),
         width: json['width'],

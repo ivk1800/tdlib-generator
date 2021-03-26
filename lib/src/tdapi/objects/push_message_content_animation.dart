@@ -3,9 +3,7 @@ import '../tdapi.dart';
 /// An animation message (GIF-style).
 class PushMessageContentAnimation extends PushMessageContent {
   PushMessageContentAnimation(
-      {Animation? this.animation,
-      required this.caption,
-      required this.isPinned});
+      {this.animation, required this.caption, required this.isPinned});
 
   /// [animation] Message content; may be null
   final Animation? animation;

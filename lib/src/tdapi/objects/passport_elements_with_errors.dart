@@ -22,10 +22,10 @@ class PassportElementsWithErrors extends TdObject {
     }
 
     return PassportElementsWithErrors(
-        elements: List<PassportElement>.from((json['elements}'] ?? [])
+        elements: List<PassportElement>.from((json['elements'] ?? [])
             .map((item) => PassportElement.fromJson(item))
             .toList()),
-        errors: List<PassportElementError>.from((json['errors}'] ?? [])
+        errors: List<PassportElementError>.from((json['errors'] ?? [])
             .map((item) => PassportElementError.fromJson(item))
             .toList()),
         extra: json['@extra']);

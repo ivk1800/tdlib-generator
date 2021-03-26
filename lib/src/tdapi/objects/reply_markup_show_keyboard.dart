@@ -30,9 +30,9 @@ class ReplyMarkupShowKeyboard extends ReplyMarkup {
     }
 
     return ReplyMarkupShowKeyboard(
-        rows: List<List<KeyboardButton>>.from((json['rows}'] ?? [])
+        rows: List<List<KeyboardButton>>.from((json['rows'] ?? [])
             .map((item) => List<KeyboardButton>.from(
-                (json['List<KeyboardButton>}'] ?? [])
+                (json['List<KeyboardButton>'] ?? [])
                     .map((item) => KeyboardButton.fromJson(item))
                     .toList()))
             .toList()),

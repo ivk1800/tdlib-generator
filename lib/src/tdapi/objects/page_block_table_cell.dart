@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Represents a cell of a table
 class PageBlockTableCell extends TdObject {
   PageBlockTableCell(
-      {RichText? this.text,
+      {this.text,
       required this.isHeader,
       required this.colspan,
       required this.rowspan,

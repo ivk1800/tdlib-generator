@@ -7,7 +7,7 @@ class ChatMember extends TdObject {
       required this.inviterUserId,
       required this.joinedChatDate,
       required this.status,
-      BotInfo? this.botInfo,
+      this.botInfo,
       this.extra});
 
   /// [userId] User identifier of the chat member

@@ -18,7 +18,7 @@ class Countries extends TdObject {
     }
 
     return Countries(
-        countries: List<CountryInfo>.from((json['countries}'] ?? [])
+        countries: List<CountryInfo>.from((json['countries'] ?? [])
             .map((item) => CountryInfo.fromJson(item))
             .toList()),
         extra: json['@extra']);

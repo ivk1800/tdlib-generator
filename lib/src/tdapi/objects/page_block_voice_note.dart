@@ -2,7 +2,7 @@ import '../tdapi.dart';
 
 /// A voice note
 class PageBlockVoiceNote extends PageBlock {
-  PageBlockVoiceNote({VoiceNote? this.voiceNote, required this.caption});
+  PageBlockVoiceNote({this.voiceNote, required this.caption});
 
   /// [voiceNote] Voice note; may be null
   final VoiceNote? voiceNote;

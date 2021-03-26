@@ -56,7 +56,7 @@ class Invoice extends TdObject {
 
     return Invoice(
         currency: json['currency'],
-        priceParts: List<LabeledPricePart>.from((json['price_parts}'] ?? [])
+        priceParts: List<LabeledPricePart>.from((json['price_parts'] ?? [])
             .map((item) => LabeledPricePart.fromJson(item))
             .toList()),
         isTest: json['is_test'],

@@ -5,8 +5,8 @@ class Document extends TdObject {
   Document(
       {required this.fileName,
       required this.mimeType,
-      Minithumbnail? this.minithumbnail,
-      Thumbnail? this.thumbnail,
+      this.minithumbnail,
+      this.thumbnail,
       required this.document});
 
   /// [fileName] Original name of the file; as defined by the sender

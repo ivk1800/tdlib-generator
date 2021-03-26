@@ -7,7 +7,7 @@ class PasswordState extends TdObject {
       required this.passwordHint,
       required this.hasRecoveryEmailAddress,
       required this.hasPassportData,
-      EmailAddressAuthenticationCodeInfo? this.recoveryEmailAddressCodeInfo,
+      this.recoveryEmailAddressCodeInfo,
       this.extra});
 
   /// [hasPassword] True, if a 2-step verification password is set

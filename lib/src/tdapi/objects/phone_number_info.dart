@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Contains information about a phone number
 class PhoneNumberInfo extends TdObject {
   PhoneNumberInfo(
-      {CountryInfo? this.country,
+      {this.country,
       required this.countryCallingCode,
       required this.formattedPhoneNumber,
       this.extra});

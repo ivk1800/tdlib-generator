@@ -5,7 +5,7 @@ class PageBlockEmbeddedPost extends PageBlock {
   PageBlockEmbeddedPost(
       {required this.url,
       required this.author,
-      Photo? this.authorPhoto,
+      this.authorPhoto,
       required this.date,
       required this.pageBlocks,
       required this.caption});
@@ -41,7 +41,7 @@ class PageBlockEmbeddedPost extends PageBlock {
         author: json['author'],
         authorPhoto: Photo.fromJson(json['author_photo']),
         date: json['date'],
-        pageBlocks: List<PageBlock>.from((json['page_blocks}'] ?? [])
+        pageBlocks: List<PageBlock>.from((json['page_blocks'] ?? [])
             .map((item) => PageBlock.fromJson(item))
             .toList()),
         caption: PageBlockCaption.fromJson(json['caption'])!);

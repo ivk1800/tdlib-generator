@@ -43,7 +43,7 @@ class InputIdentityDocument extends TdObject {
         frontSide: InputFile.fromJson(json['front_side'])!,
         reverseSide: InputFile.fromJson(json['reverse_side'])!,
         selfie: InputFile.fromJson(json['selfie'])!,
-        translation: List<InputFile>.from((json['translation}'] ?? [])
+        translation: List<InputFile>.from((json['translation'] ?? [])
             .map((item) => InputFile.fromJson(item))
             .toList()));
   }

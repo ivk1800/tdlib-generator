@@ -13,7 +13,7 @@ class InputInlineQueryResultAnimation extends InputInlineQueryResult {
       required this.videoDuration,
       required this.videoWidth,
       required this.videoHeight,
-      ReplyMarkup? this.replyMarkup,
+      this.replyMarkup,
       required this.inputMessageContent});
 
   /// [id] Unique identifier of the query result

@@ -2,7 +2,7 @@ import '../tdapi.dart';
 
 /// The chat action bar was changed
 class UpdateChatActionBar extends Update {
-  UpdateChatActionBar({required this.chatId, ChatActionBar? this.actionBar});
+  UpdateChatActionBar({required this.chatId, this.actionBar});
 
   /// [chatId] Chat identifier
   final int chatId;

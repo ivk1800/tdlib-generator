@@ -3,9 +3,7 @@ import '../tdapi.dart';
 /// A static sticker in PNG format, which will be converted to WEBP
 class InputStickerStatic extends InputSticker {
   InputStickerStatic(
-      {required this.sticker,
-      required this.emojis,
-      MaskPosition? this.maskPosition});
+      {required this.sticker, required this.emojis, this.maskPosition});
 
   /// [sticker] PNG image with the sticker; must be up to 512 KB in size and fit
   /// a 512x512 square

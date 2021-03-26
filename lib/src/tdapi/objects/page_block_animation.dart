@@ -3,9 +3,7 @@ import '../tdapi.dart';
 /// An animation
 class PageBlockAnimation extends PageBlock {
   PageBlockAnimation(
-      {Animation? this.animation,
-      required this.caption,
-      required this.needAutoplay});
+      {this.animation, required this.caption, required this.needAutoplay});
 
   /// [animation] Animation file; may be null
   final Animation? animation;

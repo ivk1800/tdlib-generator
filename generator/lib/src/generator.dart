@@ -140,11 +140,6 @@ class Generator {
             parameterBuilder.named = true;
             parameterBuilder.name = v.name.toVariableName();
             parameterBuilder.toThis = true;
-
-            if (v.isNullable) {
-              parameterBuilder.type =
-                  cb.Reference('${v.type} ${v.isNullable ? '?' : ''}');
-            }
           });
         }));
 
@@ -322,7 +317,7 @@ class Generator {
           isNullable: false);
 
       List<String> list = [
-        "List<${genericType}>.from((json['${variable.name}}'] ?? []).map((item) => "
+        "List<${genericType}>.from((json['${variable.name}'] ?? []).map((item) => "
       ];
 
       list.add(_createInitializer(genericVariable, 'item'));

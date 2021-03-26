@@ -18,7 +18,7 @@ class ChatEvents extends TdObject {
     }
 
     return ChatEvents(
-        events: List<ChatEvent>.from((json['events}'] ?? [])
+        events: List<ChatEvent>.from((json['events'] ?? [])
             .map((item) => ChatEvent.fromJson(item))
             .toList()),
         extra: json['@extra']);

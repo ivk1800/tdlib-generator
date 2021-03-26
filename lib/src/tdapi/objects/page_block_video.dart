@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// A video
 class PageBlockVideo extends PageBlock {
   PageBlockVideo(
-      {Video? this.video,
+      {this.video,
       required this.caption,
       required this.needAutoplay,
       required this.isLooped});

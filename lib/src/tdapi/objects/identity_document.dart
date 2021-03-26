@@ -4,10 +4,10 @@ import '../tdapi.dart';
 class IdentityDocument extends TdObject {
   IdentityDocument(
       {required this.number,
-      Date? this.expiryDate,
+      this.expiryDate,
       required this.frontSide,
       required this.reverseSide,
-      DatedFile? this.selfie,
+      this.selfie,
       required this.translation});
 
   /// [number] Document number; 1-24 characters
@@ -43,7 +43,7 @@ class IdentityDocument extends TdObject {
         frontSide: DatedFile.fromJson(json['front_side'])!,
         reverseSide: DatedFile.fromJson(json['reverse_side'])!,
         selfie: DatedFile.fromJson(json['selfie']),
-        translation: List<DatedFile>.from((json['translation}'] ?? [])
+        translation: List<DatedFile>.from((json['translation'] ?? [])
             .map((item) => DatedFile.fromJson(item))
             .toList()));
   }

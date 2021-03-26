@@ -18,7 +18,7 @@ class PageBlockCollage extends PageBlock {
     }
 
     return PageBlockCollage(
-        pageBlocks: List<PageBlock>.from((json['page_blocks}'] ?? [])
+        pageBlocks: List<PageBlock>.from((json['page_blocks'] ?? [])
             .map((item) => PageBlock.fromJson(item))
             .toList()),
         caption: PageBlockCaption.fromJson(json['caption'])!);

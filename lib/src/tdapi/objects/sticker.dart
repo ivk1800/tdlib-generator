@@ -9,9 +9,9 @@ class Sticker extends TdObject {
       required this.emoji,
       required this.isAnimated,
       required this.isMask,
-      MaskPosition? this.maskPosition,
+      this.maskPosition,
       required this.outline,
-      Thumbnail? this.thumbnail,
+      this.thumbnail,
       required this.sticker});
 
   /// [setId] The identifier of the sticker set to which the sticker belongs; 0
@@ -61,7 +61,7 @@ class Sticker extends TdObject {
         isAnimated: json['is_animated'],
         isMask: json['is_mask'],
         maskPosition: MaskPosition.fromJson(json['mask_position']),
-        outline: List<ClosedVectorPath>.from((json['outline}'] ?? [])
+        outline: List<ClosedVectorPath>.from((json['outline'] ?? [])
             .map((item) => ClosedVectorPath.fromJson(item))
             .toList()),
         thumbnail: Thumbnail.fromJson(json['thumbnail']),

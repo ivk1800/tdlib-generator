@@ -12,7 +12,7 @@ class InputInlineQueryResultVideo extends InputInlineQueryResult {
       required this.videoWidth,
       required this.videoHeight,
       required this.videoDuration,
-      ReplyMarkup? this.replyMarkup,
+      this.replyMarkup,
       required this.inputMessageContent});
 
   /// [id] Unique identifier of the query result

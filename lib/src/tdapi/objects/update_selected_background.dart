@@ -2,8 +2,7 @@ import '../tdapi.dart';
 
 /// The selected background has changed
 class UpdateSelectedBackground extends Update {
-  UpdateSelectedBackground(
-      {required this.forDarkTheme, Background? this.background});
+  UpdateSelectedBackground({required this.forDarkTheme, this.background});
 
   /// [forDarkTheme] True, if background for dark theme has changed
   final bool forDarkTheme;

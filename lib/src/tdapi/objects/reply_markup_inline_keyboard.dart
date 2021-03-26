@@ -15,9 +15,9 @@ class ReplyMarkupInlineKeyboard extends ReplyMarkup {
     }
 
     return ReplyMarkupInlineKeyboard(
-        rows: List<List<InlineKeyboardButton>>.from((json['rows}'] ?? [])
+        rows: List<List<InlineKeyboardButton>>.from((json['rows'] ?? [])
             .map((item) => List<InlineKeyboardButton>.from(
-                (json['List<InlineKeyboardButton>}'] ?? [])
+                (json['List<InlineKeyboardButton>'] ?? [])
                     .map((item) => InlineKeyboardButton.fromJson(item))
                     .toList()))
             .toList()));

@@ -24,7 +24,7 @@ class GroupCallJoinResponse extends TdObject {
     return GroupCallJoinResponse(
         payload: GroupCallPayload.fromJson(json['payload'])!,
         candidates: List<GroupCallJoinResponseCandidate>.from(
-            (json['candidates}'] ?? [])
+            (json['candidates'] ?? [])
                 .map((item) => GroupCallJoinResponseCandidate.fromJson(item))
                 .toList()),
         extra: json['@extra']);

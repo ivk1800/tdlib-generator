@@ -44,7 +44,7 @@ class InputMessageAnimation extends InputMessageContent {
         animation: InputFile.fromJson(json['animation'])!,
         thumbnail: InputThumbnail.fromJson(json['thumbnail'])!,
         addedStickerFileIds: List<int>.from(
-            (json['added_sticker_file_ids}'] ?? [])
+            (json['added_sticker_file_ids'] ?? [])
                 .map((item) => json['int'])
                 .toList()),
         duration: json['duration'],

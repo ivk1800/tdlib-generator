@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Contains full information about a supergroup or channel
 class SupergroupFullInfo extends TdObject {
   SupergroupFullInfo(
-      {ChatPhoto? this.photo,
+      {this.photo,
       required this.description,
       required this.memberCount,
       required this.administratorCount,
@@ -19,7 +19,7 @@ class SupergroupFullInfo extends TdObject {
       required this.canGetStatistics,
       required this.isAllHistoryAvailable,
       required this.stickerSetId,
-      ChatLocation? this.location,
+      this.location,
       required this.inviteLink,
       required this.upgradedFromBasicGroupId,
       required this.upgradedFromMaxMessageId,

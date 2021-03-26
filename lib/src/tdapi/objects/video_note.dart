@@ -6,8 +6,8 @@ class VideoNote extends TdObject {
   VideoNote(
       {required this.duration,
       required this.length,
-      Minithumbnail? this.minithumbnail,
-      Thumbnail? this.thumbnail,
+      this.minithumbnail,
+      this.thumbnail,
       required this.video});
 
   /// [duration] Duration of the video, in seconds; as defined by the sender

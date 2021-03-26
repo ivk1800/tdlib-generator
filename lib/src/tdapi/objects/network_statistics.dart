@@ -24,7 +24,7 @@ class NetworkStatistics extends TdObject {
 
     return NetworkStatistics(
         sinceDate: json['since_date'],
-        entries: List<NetworkStatisticsEntry>.from((json['entries}'] ?? [])
+        entries: List<NetworkStatisticsEntry>.from((json['entries'] ?? [])
             .map((item) => NetworkStatisticsEntry.fromJson(item))
             .toList()),
         extra: json['@extra']);

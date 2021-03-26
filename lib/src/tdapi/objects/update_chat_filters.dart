@@ -15,7 +15,7 @@ class UpdateChatFilters extends Update {
     }
 
     return UpdateChatFilters(
-        chatFilters: List<ChatFilterInfo>.from((json['chat_filters}'] ?? [])
+        chatFilters: List<ChatFilterInfo>.from((json['chat_filters'] ?? [])
             .map((item) => ChatFilterInfo.fromJson(item))
             .toList()));
   }

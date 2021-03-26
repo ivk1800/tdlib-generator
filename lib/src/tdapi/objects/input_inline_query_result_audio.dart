@@ -8,7 +8,7 @@ class InputInlineQueryResultAudio extends InputInlineQueryResult {
       required this.performer,
       required this.audioUrl,
       required this.audioDuration,
-      ReplyMarkup? this.replyMarkup,
+      this.replyMarkup,
       required this.inputMessageContent});
 
   /// [id] Unique identifier of the query result

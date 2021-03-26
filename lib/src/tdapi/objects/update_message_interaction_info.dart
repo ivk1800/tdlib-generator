@@ -3,9 +3,7 @@ import '../tdapi.dart';
 /// The information about interactions with a message has changed
 class UpdateMessageInteractionInfo extends Update {
   UpdateMessageInteractionInfo(
-      {required this.chatId,
-      required this.messageId,
-      MessageInteractionInfo? this.interactionInfo});
+      {required this.chatId, required this.messageId, this.interactionInfo});
 
   /// [chatId] Chat identifier
   final int chatId;

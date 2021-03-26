@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Contains full information about a basic group
 class BasicGroupFullInfo extends TdObject {
   BasicGroupFullInfo(
-      {ChatPhoto? this.photo,
+      {this.photo,
       required this.description,
       required this.creatorUserId,
       required this.members,
@@ -40,7 +40,7 @@ class BasicGroupFullInfo extends TdObject {
         photo: ChatPhoto.fromJson(json['photo']),
         description: json['description'],
         creatorUserId: json['creator_user_id'],
-        members: List<ChatMember>.from((json['members}'] ?? [])
+        members: List<ChatMember>.from((json['members'] ?? [])
             .map((item) => ChatMember.fromJson(item))
             .toList()),
         inviteLink: json['invite_link'],

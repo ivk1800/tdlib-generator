@@ -3,9 +3,7 @@ import '../tdapi.dart';
 /// Contains information about interactions with a message
 class MessageInteractionInfo extends TdObject {
   MessageInteractionInfo(
-      {required this.viewCount,
-      required this.forwardCount,
-      MessageReplyInfo? this.replyInfo});
+      {required this.viewCount, required this.forwardCount, this.replyInfo});
 
   /// [viewCount] Number of times the message was viewed
   final int viewCount;

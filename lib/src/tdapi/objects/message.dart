@@ -6,8 +6,8 @@ class Message extends TdObject {
       {required this.id,
       required this.sender,
       required this.chatId,
-      MessageSendingState? this.sendingState,
-      MessageSchedulingState? this.schedulingState,
+      this.sendingState,
+      this.schedulingState,
       required this.isOutgoing,
       required this.isPinned,
       required this.canBeEdited,
@@ -20,8 +20,8 @@ class Message extends TdObject {
       required this.containsUnreadMention,
       required this.date,
       required this.editDate,
-      MessageForwardInfo? this.forwardInfo,
-      MessageInteractionInfo? this.interactionInfo,
+      this.forwardInfo,
+      this.interactionInfo,
       required this.replyInChatId,
       required this.replyToMessageId,
       required this.messageThreadId,
@@ -32,7 +32,7 @@ class Message extends TdObject {
       required this.mediaAlbumId,
       required this.restrictionReason,
       required this.content,
-      ReplyMarkup? this.replyMarkup,
+      this.replyMarkup,
       this.extra});
 
   /// [id] Message identifier; unique for the chat to which the message belongs

@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Contains full information about a user
 class UserFullInfo extends TdObject {
   UserFullInfo(
-      {ChatPhoto? this.photo,
+      {this.photo,
       required this.isBlocked,
       required this.canBeCalled,
       required this.supportsVideoCalls,
@@ -12,7 +12,7 @@ class UserFullInfo extends TdObject {
       required this.bio,
       required this.shareText,
       required this.groupInCommonCount,
-      BotInfo? this.botInfo,
+      this.botInfo,
       this.extra});
 
   /// [photo] User profile photo; may be null

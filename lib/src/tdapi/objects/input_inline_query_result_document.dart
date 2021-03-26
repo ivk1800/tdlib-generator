@@ -11,7 +11,7 @@ class InputInlineQueryResultDocument extends InputInlineQueryResult {
       required this.thumbnailUrl,
       required this.thumbnailWidth,
       required this.thumbnailHeight,
-      ReplyMarkup? this.replyMarkup,
+      this.replyMarkup,
       required this.inputMessageContent});
 
   /// [id] Unique identifier of the query result

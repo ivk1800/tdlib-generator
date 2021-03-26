@@ -6,7 +6,7 @@ class InlineQueryResultLocation extends InlineQueryResult {
       {required this.id,
       required this.location,
       required this.title,
-      Thumbnail? this.thumbnail});
+      this.thumbnail});
 
   /// [id] Unique identifier of the query result
   final String id;

@@ -8,7 +8,7 @@ class InputInlineQueryResultVoiceNote extends InputInlineQueryResult {
       required this.title,
       required this.voiceNoteUrl,
       required this.voiceNoteDuration,
-      ReplyMarkup? this.replyMarkup,
+      this.replyMarkup,
       required this.inputMessageContent});
 
   /// [id] Unique identifier of the query result

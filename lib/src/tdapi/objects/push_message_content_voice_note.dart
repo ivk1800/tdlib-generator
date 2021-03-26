@@ -2,8 +2,7 @@ import '../tdapi.dart';
 
 /// A voice note message
 class PushMessageContentVoiceNote extends PushMessageContent {
-  PushMessageContentVoiceNote(
-      {VoiceNote? this.voiceNote, required this.isPinned});
+  PushMessageContentVoiceNote({this.voiceNote, required this.isPinned});
 
   /// [voiceNote] Message content; may be null
   final VoiceNote? voiceNote;

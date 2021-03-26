@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// Represents a user contact
 class InlineQueryResultContact extends InlineQueryResult {
   InlineQueryResultContact(
-      {required this.id, required this.contact, Thumbnail? this.thumbnail});
+      {required this.id, required this.contact, this.thumbnail});
 
   /// [id] Unique identifier of the query result
   final String id;

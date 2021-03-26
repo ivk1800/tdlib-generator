@@ -2,7 +2,7 @@ import '../tdapi.dart';
 
 /// A document message (a general file)
 class PushMessageContentDocument extends PushMessageContent {
-  PushMessageContentDocument({Document? this.document, required this.isPinned});
+  PushMessageContentDocument({this.document, required this.isPinned});
 
   /// [document] Message content; may be null
   final Document? document;

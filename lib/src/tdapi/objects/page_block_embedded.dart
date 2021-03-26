@@ -5,7 +5,7 @@ class PageBlockEmbedded extends PageBlock {
   PageBlockEmbedded(
       {required this.url,
       required this.html,
-      Photo? this.posterPhoto,
+      this.posterPhoto,
       required this.width,
       required this.height,
       required this.caption,

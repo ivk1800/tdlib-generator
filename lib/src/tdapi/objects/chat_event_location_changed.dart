@@ -2,8 +2,7 @@ import '../tdapi.dart';
 
 /// The supergroup location was changed
 class ChatEventLocationChanged extends ChatEventAction {
-  ChatEventLocationChanged(
-      {ChatLocation? this.oldLocation, ChatLocation? this.newLocation});
+  ChatEventLocationChanged({this.oldLocation, this.newLocation});
 
   /// [oldLocation] Previous location; may be null
   final ChatLocation? oldLocation;

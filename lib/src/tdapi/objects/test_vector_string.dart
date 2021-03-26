@@ -19,7 +19,7 @@ class TestVectorString extends TdObject {
 
     return TestVectorString(
         value: List<String>.from(
-            (json['value}'] ?? []).map((item) => json['String']).toList()),
+            (json['value'] ?? []).map((item) => json['String']).toList()),
         extra: json['@extra']);
   }
 

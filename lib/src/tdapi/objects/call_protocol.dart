@@ -36,7 +36,7 @@ class CallProtocol extends TdObject {
         udpReflector: json['udp_reflector'],
         minLayer: json['min_layer'],
         maxLayer: json['max_layer'],
-        libraryVersions: List<String>.from((json['library_versions}'] ?? [])
+        libraryVersions: List<String>.from((json['library_versions'] ?? [])
             .map((item) => json['String'])
             .toList()));
   }

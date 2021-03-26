@@ -22,11 +22,11 @@ class ChatsNearby extends TdObject {
     }
 
     return ChatsNearby(
-        usersNearby: List<ChatNearby>.from((json['users_nearby}'] ?? [])
+        usersNearby: List<ChatNearby>.from((json['users_nearby'] ?? [])
             .map((item) => ChatNearby.fromJson(item))
             .toList()),
         supergroupsNearby: List<ChatNearby>.from(
-            (json['supergroups_nearby}'] ?? [])
+            (json['supergroups_nearby'] ?? [])
                 .map((item) => ChatNearby.fromJson(item))
                 .toList()),
         extra: json['@extra']);

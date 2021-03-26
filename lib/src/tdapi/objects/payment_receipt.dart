@@ -6,8 +6,8 @@ class PaymentReceipt extends TdObject {
       {required this.date,
       required this.paymentsProviderUserId,
       required this.invoice,
-      OrderInfo? this.orderInfo,
-      ShippingOption? this.shippingOption,
+      this.orderInfo,
+      this.shippingOption,
       required this.credentialsTitle,
       this.extra});
 

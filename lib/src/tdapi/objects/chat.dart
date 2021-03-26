@@ -6,9 +6,9 @@ class Chat extends TdObject {
       {required this.id,
       required this.type,
       required this.title,
-      ChatPhotoInfo? this.photo,
+      this.photo,
       required this.permissions,
-      Message? this.lastMessage,
+      this.lastMessage,
       required this.positions,
       required this.isMarkedAsUnread,
       required this.isBlocked,
@@ -22,11 +22,11 @@ class Chat extends TdObject {
       required this.lastReadOutboxMessageId,
       required this.unreadMentionCount,
       required this.notificationSettings,
-      ChatActionBar? this.actionBar,
+      this.actionBar,
       required this.voiceChatGroupCallId,
       required this.isVoiceChatEmpty,
       required this.replyMarkupMessageId,
-      DraftMessage? this.draftMessage,
+      this.draftMessage,
       required this.clientData,
       this.extra});
 
@@ -133,7 +133,7 @@ class Chat extends TdObject {
         photo: ChatPhotoInfo.fromJson(json['photo']),
         permissions: ChatPermissions.fromJson(json['permissions'])!,
         lastMessage: Message.fromJson(json['last_message']),
-        positions: List<ChatPosition>.from((json['positions}'] ?? [])
+        positions: List<ChatPosition>.from((json['positions'] ?? [])
             .map((item) => ChatPosition.fromJson(item))
             .toList()),
         isMarkedAsUnread: json['is_marked_as_unread'],

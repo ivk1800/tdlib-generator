@@ -29,9 +29,9 @@ class PageBlockTable extends PageBlock {
 
     return PageBlockTable(
         caption: RichText.fromJson(json['caption'])!,
-        cells: List<List<PageBlockTableCell>>.from((json['cells}'] ?? [])
+        cells: List<List<PageBlockTableCell>>.from((json['cells'] ?? [])
             .map((item) => List<PageBlockTableCell>.from(
-                (json['List<PageBlockTableCell>}'] ?? [])
+                (json['List<PageBlockTableCell>'] ?? [])
                     .map((item) => PageBlockTableCell.fromJson(item))
                     .toList()))
             .toList()),

@@ -5,9 +5,7 @@ import '../tdapi.dart';
 /// to the chat in this case
 class UpdateChatLastMessage extends Update {
   UpdateChatLastMessage(
-      {required this.chatId,
-      Message? this.lastMessage,
-      required this.positions});
+      {required this.chatId, this.lastMessage, required this.positions});
 
   /// [chatId] Chat identifier
   final int chatId;
@@ -28,7 +26,7 @@ class UpdateChatLastMessage extends Update {
     return UpdateChatLastMessage(
         chatId: json['chat_id'],
         lastMessage: Message.fromJson(json['last_message']),
-        positions: List<ChatPosition>.from((json['positions}'] ?? [])
+        positions: List<ChatPosition>.from((json['positions'] ?? [])
             .map((item) => ChatPosition.fromJson(item))
             .toList()));
   }

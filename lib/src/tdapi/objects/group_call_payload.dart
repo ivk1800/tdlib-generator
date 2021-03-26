@@ -25,7 +25,7 @@ class GroupCallPayload extends TdObject {
         ufrag: json['ufrag'],
         pwd: json['pwd'],
         fingerprints: List<GroupCallPayloadFingerprint>.from(
-            (json['fingerprints}'] ?? [])
+            (json['fingerprints'] ?? [])
                 .map((item) => GroupCallPayloadFingerprint.fromJson(item))
                 .toList()));
   }

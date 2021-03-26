@@ -15,7 +15,7 @@ class JsonValueArray extends JsonValue {
     }
 
     return JsonValueArray(
-        values: List<JsonValue>.from((json['values}'] ?? [])
+        values: List<JsonValue>.from((json['values'] ?? [])
             .map((item) => JsonValue.fromJson(item))
             .toList()));
   }

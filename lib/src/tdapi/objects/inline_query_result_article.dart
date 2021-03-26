@@ -8,7 +8,7 @@ class InlineQueryResultArticle extends InlineQueryResult {
       required this.hideUrl,
       required this.title,
       required this.description,
-      Thumbnail? this.thumbnail});
+      this.thumbnail});
 
   /// [id] Unique identifier of the query result
   final String id;

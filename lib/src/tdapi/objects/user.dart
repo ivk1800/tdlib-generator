@@ -9,7 +9,7 @@ class User extends TdObject {
       required this.username,
       required this.phoneNumber,
       required this.status,
-      ProfilePhoto? this.profilePhoto,
+      this.profilePhoto,
       required this.isContact,
       required this.isMutualContact,
       required this.isVerified,

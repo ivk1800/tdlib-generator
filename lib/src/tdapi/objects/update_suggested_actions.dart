@@ -19,11 +19,11 @@ class UpdateSuggestedActions extends Update {
     }
 
     return UpdateSuggestedActions(
-        addedActions: List<SuggestedAction>.from((json['added_actions}'] ?? [])
+        addedActions: List<SuggestedAction>.from((json['added_actions'] ?? [])
             .map((item) => SuggestedAction.fromJson(item))
             .toList()),
         removedActions: List<SuggestedAction>.from(
-            (json['removed_actions}'] ?? [])
+            (json['removed_actions'] ?? [])
                 .map((item) => SuggestedAction.fromJson(item))
                 .toList()));
   }

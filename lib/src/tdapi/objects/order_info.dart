@@ -6,7 +6,7 @@ class OrderInfo extends TdObject {
       {required this.name,
       required this.phoneNumber,
       required this.emailAddress,
-      Address? this.shippingAddress,
+      this.shippingAddress,
       this.extra});
 
   /// [name] Name of the user

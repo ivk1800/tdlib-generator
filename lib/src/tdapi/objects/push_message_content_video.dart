@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// A video message
 class PushMessageContentVideo extends PushMessageContent {
   PushMessageContentVideo(
-      {Video? this.video,
+      {this.video,
       required this.caption,
       required this.isSecret,
       required this.isPinned});

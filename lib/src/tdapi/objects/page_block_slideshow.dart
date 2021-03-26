@@ -18,7 +18,7 @@ class PageBlockSlideshow extends PageBlock {
     }
 
     return PageBlockSlideshow(
-        pageBlocks: List<PageBlock>.from((json['page_blocks}'] ?? [])
+        pageBlocks: List<PageBlock>.from((json['page_blocks'] ?? [])
             .map((item) => PageBlock.fromJson(item))
             .toList()),
         caption: PageBlockCaption.fromJson(json['caption'])!);

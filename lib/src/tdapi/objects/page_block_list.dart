@@ -15,7 +15,7 @@ class PageBlockList extends PageBlock {
     }
 
     return PageBlockList(
-        items: List<PageBlockListItem>.from((json['items}'] ?? [])
+        items: List<PageBlockListItem>.from((json['items'] ?? [])
             .map((item) => PageBlockListItem.fromJson(item))
             .toList()));
   }

@@ -5,7 +5,7 @@ class MessageInvoice extends MessageContent {
   MessageInvoice(
       {required this.title,
       required this.description,
-      Photo? this.photo,
+      this.photo,
       required this.currency,
       required this.totalAmount,
       required this.startParameter,

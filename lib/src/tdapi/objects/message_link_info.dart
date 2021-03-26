@@ -5,7 +5,7 @@ class MessageLinkInfo extends TdObject {
   MessageLinkInfo(
       {required this.isPublic,
       required this.chatId,
-      Message? this.message,
+      this.message,
       required this.forAlbum,
       required this.forComment,
       this.extra});

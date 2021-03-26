@@ -4,9 +4,7 @@ import '../tdapi.dart';
 /// Returns [Ok]
 class SetChatDraftMessage extends TdFunction {
   SetChatDraftMessage(
-      {required this.chatId,
-      required this.messageThreadId,
-      DraftMessage? this.draftMessage});
+      {required this.chatId, required this.messageThreadId, this.draftMessage});
 
   /// [chatId] Chat identifier
   final int chatId;

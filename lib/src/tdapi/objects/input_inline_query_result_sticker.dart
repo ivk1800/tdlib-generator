@@ -8,7 +8,7 @@ class InputInlineQueryResultSticker extends InputInlineQueryResult {
       required this.stickerUrl,
       required this.stickerWidth,
       required this.stickerHeight,
-      ReplyMarkup? this.replyMarkup,
+      this.replyMarkup,
       required this.inputMessageContent});
 
   /// [id] Unique identifier of the query result

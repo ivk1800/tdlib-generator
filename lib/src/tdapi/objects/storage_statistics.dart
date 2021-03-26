@@ -30,7 +30,7 @@ class StorageStatistics extends TdObject {
     return StorageStatistics(
         size: json['size'],
         count: json['count'],
-        byChat: List<StorageStatisticsByChat>.from((json['by_chat}'] ?? [])
+        byChat: List<StorageStatisticsByChat>.from((json['by_chat'] ?? [])
             .map((item) => StorageStatisticsByChat.fromJson(item))
             .toList()),
         extra: json['@extra']);

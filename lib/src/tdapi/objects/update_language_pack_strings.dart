@@ -27,7 +27,7 @@ class UpdateLanguagePackStrings extends Update {
     return UpdateLanguagePackStrings(
         localizationTarget: json['localization_target'],
         languagePackId: json['language_pack_id'],
-        strings: List<LanguagePackString>.from((json['strings}'] ?? [])
+        strings: List<LanguagePackString>.from((json['strings'] ?? [])
             .map((item) => LanguagePackString.fromJson(item))
             .toList()));
   }

@@ -3,7 +3,7 @@ import '../tdapi.dart';
 /// A photo message
 class PushMessageContentPhoto extends PushMessageContent {
   PushMessageContentPhoto(
-      {Photo? this.photo,
+      {this.photo,
       required this.caption,
       required this.isSecret,
       required this.isPinned});

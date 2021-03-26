@@ -5,7 +5,7 @@ class AuthenticationCodeInfo extends TdObject {
   AuthenticationCodeInfo(
       {required this.phoneNumber,
       required this.type,
-      AuthenticationCodeType? this.nextType,
+      this.nextType,
       required this.timeout,
       this.extra});
 

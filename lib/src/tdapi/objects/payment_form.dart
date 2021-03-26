@@ -5,9 +5,9 @@ class PaymentForm extends TdObject {
   PaymentForm(
       {required this.invoice,
       required this.url,
-      PaymentsProviderStripe? this.paymentsProvider,
-      OrderInfo? this.savedOrderInfo,
-      SavedCredentials? this.savedCredentials,
+      this.paymentsProvider,
+      this.savedOrderInfo,
+      this.savedCredentials,
       required this.canSaveCredentials,
       required this.needPassword,
       this.extra});

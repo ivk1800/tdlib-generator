@@ -36,7 +36,7 @@ class CountryInfo extends TdObject {
         name: json['name'],
         englishName: json['english_name'],
         isHidden: json['is_hidden'],
-        callingCodes: List<String>.from((json['calling_codes}'] ?? [])
+        callingCodes: List<String>.from((json['calling_codes'] ?? [])
             .map((item) => json['String'])
             .toList()));
   }

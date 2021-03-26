@@ -10,7 +10,7 @@ class InputInlineQueryResultPhoto extends InputInlineQueryResult {
       required this.photoUrl,
       required this.photoWidth,
       required this.photoHeight,
-      ReplyMarkup? this.replyMarkup,
+      this.replyMarkup,
       required this.inputMessageContent});
 
   /// [id] Unique identifier of the query result

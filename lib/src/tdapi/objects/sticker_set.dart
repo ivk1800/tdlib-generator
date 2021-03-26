@@ -6,7 +6,7 @@ class StickerSet extends TdObject {
       {required this.id,
       required this.title,
       required this.name,
-      Thumbnail? this.thumbnail,
+      this.thumbnail,
       required this.thumbnailOutline,
       required this.isInstalled,
       required this.isArchived,
@@ -79,7 +79,7 @@ class StickerSet extends TdObject {
         name: json['name'],
         thumbnail: Thumbnail.fromJson(json['thumbnail']),
         thumbnailOutline: List<ClosedVectorPath>.from(
-            (json['thumbnail_outline}'] ?? [])
+            (json['thumbnail_outline'] ?? [])
                 .map((item) => ClosedVectorPath.fromJson(item))
                 .toList()),
         isInstalled: json['is_installed'],
@@ -88,10 +88,10 @@ class StickerSet extends TdObject {
         isAnimated: json['is_animated'],
         isMasks: json['is_masks'],
         isViewed: json['is_viewed'],
-        stickers: List<Sticker>.from((json['stickers}'] ?? [])
+        stickers: List<Sticker>.from((json['stickers'] ?? [])
             .map((item) => Sticker.fromJson(item))
             .toList()),
-        emojis: List<Emojis>.from((json['emojis}'] ?? [])
+        emojis: List<Emojis>.from((json['emojis'] ?? [])
             .map((item) => Emojis.fromJson(item))
             .toList()),
         extra: json['@extra']);

@@ -2,7 +2,7 @@ import '../tdapi.dart';
 
 /// An audio file
 class PageBlockAudio extends PageBlock {
-  PageBlockAudio({Audio? this.audio, required this.caption});
+  PageBlockAudio({this.audio, required this.caption});
 
   /// [audio] Audio file; may be null
   final Audio? audio;

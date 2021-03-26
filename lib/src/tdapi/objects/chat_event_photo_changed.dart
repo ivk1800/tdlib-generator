@@ -2,7 +2,7 @@ import '../tdapi.dart';
 
 /// The chat photo was changed
 class ChatEventPhotoChanged extends ChatEventAction {
-  ChatEventPhotoChanged({ChatPhoto? this.oldPhoto, ChatPhoto? this.newPhoto});
+  ChatEventPhotoChanged({this.oldPhoto, this.newPhoto});
 
   /// [oldPhoto] Previous chat photo value; may be null
   final ChatPhoto? oldPhoto;

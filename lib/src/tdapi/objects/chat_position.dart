@@ -6,7 +6,7 @@ class ChatPosition extends TdObject {
       {required this.list,
       required this.order,
       required this.isPinned,
-      ChatSource? this.source});
+      this.source});
 
   /// [list] The chat list
   final ChatList list;

@@ -19,7 +19,7 @@ class TestVectorIntObject extends TdObject {
     }
 
     return TestVectorIntObject(
-        value: List<TestInt>.from((json['value}'] ?? [])
+        value: List<TestInt>.from((json['value'] ?? [])
             .map((item) => TestInt.fromJson(item))
             .toList()),
         extra: json['@extra']);

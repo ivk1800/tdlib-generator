@@ -2,7 +2,7 @@ import '../tdapi.dart';
 
 /// A text message
 class MessageText extends MessageContent {
-  MessageText({required this.text, WebPage? this.webPage});
+  MessageText({required this.text, this.webPage});
 
   /// [text] Text of the message
   final FormattedText text;

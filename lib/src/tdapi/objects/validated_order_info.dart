@@ -25,7 +25,7 @@ class ValidatedOrderInfo extends TdObject {
     return ValidatedOrderInfo(
         orderInfoId: json['order_info_id'],
         shippingOptions: List<ShippingOption>.from(
-            (json['shipping_options}'] ?? [])
+            (json['shipping_options'] ?? [])
                 .map((item) => ShippingOption.fromJson(item))
                 .toList()),
         extra: json['@extra']);

@@ -7,8 +7,8 @@ class EncryptedPassportElement extends TdObject {
       {required this.type,
       required this.data,
       required this.frontSide,
-      DatedFile? this.reverseSide,
-      DatedFile? this.selfie,
+      this.reverseSide,
+      this.selfie,
       required this.translation,
       required this.files,
       required this.value,
@@ -55,10 +55,10 @@ class EncryptedPassportElement extends TdObject {
         frontSide: DatedFile.fromJson(json['front_side'])!,
         reverseSide: DatedFile.fromJson(json['reverse_side']),
         selfie: DatedFile.fromJson(json['selfie']),
-        translation: List<DatedFile>.from((json['translation}'] ?? [])
+        translation: List<DatedFile>.from((json['translation'] ?? [])
             .map((item) => DatedFile.fromJson(item))
             .toList()),
-        files: List<DatedFile>.from((json['files}'] ?? [])
+        files: List<DatedFile>.from((json['files'] ?? [])
             .map((item) => DatedFile.fromJson(item))
             .toList()),
         value: json['value'],

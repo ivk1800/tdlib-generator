@@ -6,7 +6,7 @@ class PageBlockRelatedArticle extends TdObject {
       {required this.url,
       required this.title,
       required this.description,
-      Photo? this.photo,
+      this.photo,
       required this.author,
       required this.publishDate});
 

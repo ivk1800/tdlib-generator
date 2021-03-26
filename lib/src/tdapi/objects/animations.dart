@@ -18,7 +18,7 @@ class Animations extends TdObject {
     }
 
     return Animations(
-        animations: List<Animation>.from((json['animations}'] ?? [])
+        animations: List<Animation>.from((json['animations'] ?? [])
             .map((item) => Animation.fromJson(item))
             .toList()),
         extra: json['@extra']);

@@ -4,7 +4,7 @@ import '../tdapi.dart';
 class UpdateNewChosenInlineResult extends Update {
   UpdateNewChosenInlineResult(
       {required this.senderUserId,
-      Location? this.userLocation,
+      this.userLocation,
       required this.query,
       required this.resultId,
       required this.inlineMessageId});

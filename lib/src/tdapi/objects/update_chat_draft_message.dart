@@ -5,9 +5,7 @@ import '../tdapi.dart';
 /// of the draft, this update shouldn't be applied
 class UpdateChatDraftMessage extends Update {
   UpdateChatDraftMessage(
-      {required this.chatId,
-      DraftMessage? this.draftMessage,
-      required this.positions});
+      {required this.chatId, this.draftMessage, required this.positions});
 
   /// [chatId] Chat identifier
   final int chatId;
@@ -28,7 +26,7 @@ class UpdateChatDraftMessage extends Update {
     return UpdateChatDraftMessage(
         chatId: json['chat_id'],
         draftMessage: DraftMessage.fromJson(json['draft_message']),
-        positions: List<ChatPosition>.from((json['positions}'] ?? [])
+        positions: List<ChatPosition>.from((json['positions'] ?? [])
             .map((item) => ChatPosition.fromJson(item))
             .toList()));
   }

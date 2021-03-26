@@ -18,7 +18,7 @@ class UserPrivacySettingRuleAllowUsers extends UserPrivacySettingRule {
 
     return UserPrivacySettingRuleAllowUsers(
         userIds: List<int>.from(
-            (json['user_ids}'] ?? []).map((item) => json['int']).toList()));
+            (json['user_ids'] ?? []).map((item) => json['int']).toList()));
   }
 
   @override

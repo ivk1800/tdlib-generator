@@ -8,7 +8,7 @@ class MessagePaymentSuccessfulBot extends MessageContent {
       required this.totalAmount,
       required this.invoicePayload,
       required this.shippingOptionId,
-      OrderInfo? this.orderInfo,
+      this.orderInfo,
       required this.telegramPaymentChargeId,
       required this.providerPaymentChargeId});
 

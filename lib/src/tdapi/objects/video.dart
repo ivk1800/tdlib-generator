@@ -10,8 +10,8 @@ class Video extends TdObject {
       required this.mimeType,
       required this.hasStickers,
       required this.supportsStreaming,
-      Minithumbnail? this.minithumbnail,
-      Thumbnail? this.thumbnail,
+      this.minithumbnail,
+      this.thumbnail,
       required this.video});
 
   /// [duration] Duration of the video, in seconds; as defined by the sender

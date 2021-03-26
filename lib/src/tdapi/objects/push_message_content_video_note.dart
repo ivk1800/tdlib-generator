@@ -2,8 +2,7 @@ import '../tdapi.dart';
 
 /// A video note message
 class PushMessageContentVideoNote extends PushMessageContent {
-  PushMessageContentVideoNote(
-      {VideoNote? this.videoNote, required this.isPinned});
+  PushMessageContentVideoNote({this.videoNote, required this.isPinned});
 
   /// [videoNote] Message content; may be null
   final VideoNote? videoNote;

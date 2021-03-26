@@ -2,7 +2,7 @@ import '../tdapi.dart';
 
 /// A chat photo was changed
 class UpdateChatPhoto extends Update {
-  UpdateChatPhoto({required this.chatId, ChatPhotoInfo? this.photo});
+  UpdateChatPhoto({required this.chatId, this.photo});
 
   /// [chatId] Chat identifier
   final int chatId;

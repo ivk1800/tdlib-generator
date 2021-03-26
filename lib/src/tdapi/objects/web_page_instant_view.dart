@@ -37,7 +37,7 @@ class WebPageInstantView extends TdObject {
     }
 
     return WebPageInstantView(
-        pageBlocks: List<PageBlock>.from((json['page_blocks}'] ?? [])
+        pageBlocks: List<PageBlock>.from((json['page_blocks'] ?? [])
             .map((item) => PageBlock.fromJson(item))
             .toList()),
         viewCount: json['view_count'],

@@ -5,8 +5,8 @@ class UpdateNewInlineQuery extends Update {
   UpdateNewInlineQuery(
       {required this.id,
       required this.senderUserId,
-      Location? this.userLocation,
-      ChatType? this.chatType,
+      this.userLocation,
+      this.chatType,
       required this.query,
       required this.offset});
 

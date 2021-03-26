@@ -76,7 +76,7 @@ class GroupCall extends TdObject {
         participantCount: json['participant_count'],
         loadedAllParticipants: json['loaded_all_participants'],
         recentSpeakers: List<GroupCallRecentSpeaker>.from(
-            (json['recent_speakers}'] ?? [])
+            (json['recent_speakers'] ?? [])
                 .map((item) => GroupCallRecentSpeaker.fromJson(item))
                 .toList()),
         muteNewParticipants: json['mute_new_participants'],

@@ -19,7 +19,7 @@ class RecommendedChatFilters extends TdObject {
 
     return RecommendedChatFilters(
         chatFilters: List<RecommendedChatFilter>.from(
-            (json['chat_filters}'] ?? [])
+            (json['chat_filters'] ?? [])
                 .map((item) => RecommendedChatFilter.fromJson(item))
                 .toList()),
         extra: json['@extra']);

@@ -20,7 +20,7 @@ class UpdateInstalledStickerSets extends Update {
 
     return UpdateInstalledStickerSets(
         isMasks: json['is_masks'],
-        stickerSetIds: List<int>.from((json['sticker_set_ids}'] ?? [])
+        stickerSetIds: List<int>.from((json['sticker_set_ids'] ?? [])
             .map((item) => json['int'])
             .toList()));
   }

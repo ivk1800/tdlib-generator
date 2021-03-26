@@ -8,8 +8,8 @@ class Audio extends TdObject {
       required this.performer,
       required this.fileName,
       required this.mimeType,
-      Minithumbnail? this.albumCoverMinithumbnail,
-      Thumbnail? this.albumCoverThumbnail,
+      this.albumCoverMinithumbnail,
+      this.albumCoverThumbnail,
       required this.audio});
 
   /// [duration] Duration of the audio, in seconds; as defined by the sender

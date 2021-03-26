@@ -7,7 +7,7 @@ class MessageThreadInfo extends TdObject {
       required this.messageThreadId,
       required this.replyInfo,
       required this.messages,
-      DraftMessage? this.draftMessage,
+      this.draftMessage,
       this.extra});
 
   /// [chatId] Identifier of the chat to which the message thread belongs
@@ -40,7 +40,7 @@ class MessageThreadInfo extends TdObject {
         chatId: json['chat_id'],
         messageThreadId: json['message_thread_id'],
         replyInfo: MessageReplyInfo.fromJson(json['reply_info'])!,
-        messages: List<Message>.from((json['messages}'] ?? [])
+        messages: List<Message>.from((json['messages'] ?? [])
             .map((item) => Message.fromJson(item))
             .toList()),
         draftMessage: DraftMessage.fromJson(json['draft_message']),

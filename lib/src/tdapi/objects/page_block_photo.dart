@@ -2,7 +2,7 @@ import '../tdapi.dart';
 
 /// A photo
 class PageBlockPhoto extends PageBlock {
-  PageBlockPhoto({Photo? this.photo, required this.caption, required this.url});
+  PageBlockPhoto({this.photo, required this.caption, required this.url});
 
   /// [photo] Photo file; may be null
   final Photo? photo;

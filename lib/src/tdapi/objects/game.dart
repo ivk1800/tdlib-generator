@@ -9,7 +9,7 @@ class Game extends TdObject {
       required this.text,
       required this.description,
       required this.photo,
-      Animation? this.animation});
+      this.animation});
 
   /// [id] Game ID
   final int id;

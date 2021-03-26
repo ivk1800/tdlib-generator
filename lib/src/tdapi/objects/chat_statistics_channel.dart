@@ -101,7 +101,7 @@ class ChatStatisticsChannel extends ChatStatistics {
             StatisticalGraph.fromJson(json['instant_view_interaction_graph'])!,
         recentMessageInteractions:
             List<ChatStatisticsMessageInteractionInfo>.from(
-                (json['recent_message_interactions}'] ?? [])
+                (json['recent_message_interactions'] ?? [])
                     .map((item) =>
                         ChatStatisticsMessageInteractionInfo.fromJson(item))
                     .toList()));

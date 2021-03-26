@@ -2,8 +2,7 @@ import '../tdapi.dart';
 
 /// Contains a list of messages
 class Messages extends TdObject {
-  Messages(
-      {required this.totalCount, List<Message>? this.messages, this.extra});
+  Messages({required this.totalCount, this.messages, this.extra});
 
   /// [totalCount] Approximate total count of messages found
   final int totalCount;
@@ -23,7 +22,7 @@ class Messages extends TdObject {
 
     return Messages(
         totalCount: json['total_count'],
-        messages: List<Message>.from((json['messages}'] ?? [])
+        messages: List<Message>.from((json['messages'] ?? [])
             .map((item) => Message.fromJson(item))
             .toList()),
         extra: json['@extra']);
