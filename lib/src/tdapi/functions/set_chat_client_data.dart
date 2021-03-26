@@ -17,6 +17,8 @@ class SetChatClientData extends TdFunction {
   static const String CONSTRUCTOR = 'setChatClientData';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

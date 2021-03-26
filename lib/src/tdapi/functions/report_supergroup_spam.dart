@@ -25,6 +25,8 @@ class ReportSupergroupSpam extends TdFunction {
   static const String CONSTRUCTOR = 'reportSupergroupSpam';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

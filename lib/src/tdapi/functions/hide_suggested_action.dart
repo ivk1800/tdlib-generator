@@ -14,6 +14,8 @@ class HideSuggestedAction extends TdFunction {
   static const String CONSTRUCTOR = 'hideSuggestedAction';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

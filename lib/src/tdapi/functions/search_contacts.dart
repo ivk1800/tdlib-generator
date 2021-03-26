@@ -18,6 +18,8 @@ class SearchContacts extends TdFunction {
   static const String CONSTRUCTOR = 'searchContacts';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

@@ -14,6 +14,8 @@ class GetChatPinnedMessage extends TdFunction {
   static const String CONSTRUCTOR = 'getChatPinnedMessage';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>

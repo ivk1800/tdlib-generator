@@ -17,6 +17,8 @@ class SetName extends TdFunction {
   static const String CONSTRUCTOR = 'setName';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

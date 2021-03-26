@@ -33,6 +33,8 @@ class FormattedText extends TdObject {
   }
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

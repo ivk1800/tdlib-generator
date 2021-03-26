@@ -18,6 +18,8 @@ class GetBlockedMessageSenders extends TdFunction {
   static const String CONSTRUCTOR = 'getBlockedMessageSenders';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

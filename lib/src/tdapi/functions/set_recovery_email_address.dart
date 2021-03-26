@@ -22,6 +22,8 @@ class SetRecoveryEmailAddress extends TdFunction {
   static const String CONSTRUCTOR = 'setRecoveryEmailAddress';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

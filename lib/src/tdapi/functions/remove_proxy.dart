@@ -14,6 +14,8 @@ class RemoveProxy extends TdFunction {
   static const String CONSTRUCTOR = 'removeProxy';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>

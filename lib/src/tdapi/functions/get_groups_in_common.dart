@@ -23,6 +23,8 @@ class GetGroupsInCommon extends TdFunction {
   static const String CONSTRUCTOR = 'getGroupsInCommon';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

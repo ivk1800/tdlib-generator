@@ -16,6 +16,8 @@ class SynchronizeLanguagePack extends TdFunction {
   static const String CONSTRUCTOR = 'synchronizeLanguagePack';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

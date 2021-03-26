@@ -14,6 +14,8 @@ class GetGroupCall extends TdFunction {
   static const String CONSTRUCTOR = 'getGroupCall';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

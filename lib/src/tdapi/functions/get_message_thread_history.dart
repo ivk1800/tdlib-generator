@@ -40,6 +40,8 @@ class GetMessageThreadHistory extends TdFunction {
   static const String CONSTRUCTOR = 'getMessageThreadHistory';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

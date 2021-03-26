@@ -1,14 +1,13 @@
 import 'dart:async';
 import 'dart:io';
-import 'package:flutter/material.dart' show ChangeNotifier;
-import 'package:permission_handler/permission_handler.dart';
-import 'package:path_provider/path_provider.dart';
-
-import 'package:tdlib/td_client.dart';
-import 'package:tdlib/td_api.dart';
-import 'package:tdlib_example/services/locator.dart';
 import 'dart:math' show Random;
 
+import 'package:flutter/material.dart' show ChangeNotifier;
+import 'package:path_provider/path_provider.dart';
+import 'package:permission_handler/permission_handler.dart';
+import 'package:tdlib/td_api.dart';
+import 'package:tdlib/td_client.dart';
+import 'package:tdlib_example/services/locator.dart';
 import 'package:tdlib_example/utils/const.dart';
 
 int _random() => Random().nextInt(10000000);
@@ -69,16 +68,12 @@ class TelegramService extends ChangeNotifier {
     }
   }
 
-  Future _resolveEvent(event) async {
-    try {
-      final int extraId = event.extra;
-      if (results.containsKey(extraId)) {
-        results.remove(extraId).complete(event);
-      } else if (callbackResults.containsKey(extraId)) {
-        await callbackResults.remove(extraId);
-      }
-    } catch (e) {
-      print(e);
+  Future _resolveEvent(TdObject event) async {
+    final dynamic extraId = event.getExtra();
+    if (results.containsKey(extraId)) {
+      results.remove(extraId).complete(event);
+    } else if (callbackResults.containsKey(extraId)) {
+      await callbackResults.remove(extraId);
     }
   }
 

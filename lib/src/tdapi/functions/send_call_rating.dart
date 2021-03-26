@@ -28,6 +28,8 @@ class SendCallRating extends TdFunction {
   static const String CONSTRUCTOR = 'sendCallRating';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

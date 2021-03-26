@@ -23,6 +23,8 @@ class SetFileGenerationProgress extends TdFunction {
   static const String CONSTRUCTOR = 'setFileGenerationProgress';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

@@ -17,6 +17,8 @@ class SearchChatsNearby extends TdFunction {
   static const String CONSTRUCTOR = 'searchChatsNearby';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

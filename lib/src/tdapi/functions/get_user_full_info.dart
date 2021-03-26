@@ -14,6 +14,8 @@ class GetUserFullInfo extends TdFunction {
   static const String CONSTRUCTOR = 'getUserFullInfo';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>

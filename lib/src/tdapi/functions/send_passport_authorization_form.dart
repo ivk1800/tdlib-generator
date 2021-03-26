@@ -21,6 +21,8 @@ class SendPassportAuthorizationForm extends TdFunction {
   static const String CONSTRUCTOR = 'sendPassportAuthorizationForm';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

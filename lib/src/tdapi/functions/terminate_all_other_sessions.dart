@@ -11,6 +11,8 @@ class TerminateAllOtherSessions extends TdFunction {
   static const String CONSTRUCTOR = 'terminateAllOtherSessions';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {'@type': CONSTRUCTOR, '@extra': this.extra};

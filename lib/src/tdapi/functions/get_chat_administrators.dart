@@ -14,6 +14,8 @@ class GetChatAdministrators extends TdFunction {
   static const String CONSTRUCTOR = 'getChatAdministrators';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>

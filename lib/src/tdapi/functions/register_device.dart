@@ -18,6 +18,8 @@ class RegisterDevice extends TdFunction {
   static const String CONSTRUCTOR = 'registerDevice';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

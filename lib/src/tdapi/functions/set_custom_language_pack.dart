@@ -19,6 +19,8 @@ class SetCustomLanguagePack extends TdFunction {
   static const String CONSTRUCTOR = 'setCustomLanguagePack';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

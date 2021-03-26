@@ -7,5 +7,7 @@ abstract class TdObject {
 
   Map<String, dynamic> toJson();
 
+  dynamic? getExtra() => null;
+
   String getConstructor() => CONSTRUCTOR;
 }

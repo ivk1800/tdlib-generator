@@ -15,6 +15,8 @@ class GetFileExtension extends TdFunction {
   static const String CONSTRUCTOR = 'getFileExtension';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>

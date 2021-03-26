@@ -17,6 +17,8 @@ class CheckAuthenticationBotToken extends TdFunction {
   static const String CONSTRUCTOR = 'checkAuthenticationBotToken';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>

@@ -176,6 +176,14 @@ class Generator {
             fieldBuilder.modifier = cb.FieldModifier.final$;
           }
         }));
+
+        b.methods.add(cb.Method((methodBuilder) {
+          methodBuilder.name = 'getExtra';
+          methodBuilder.returns = cb.Reference('dynamic?');
+          methodBuilder.lambda = true;
+          methodBuilder.annotations.add(cb.Reference('override'));
+          methodBuilder.body = cb.Code('this.extra');
+        }));
       }
 
       b.fields.add(cb.Field((fieldBuilder) {

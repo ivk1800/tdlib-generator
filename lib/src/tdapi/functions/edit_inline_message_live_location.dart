@@ -35,6 +35,8 @@ class EditInlineMessageLiveLocation extends TdFunction {
   static const String CONSTRUCTOR = 'editInlineMessageLiveLocation';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

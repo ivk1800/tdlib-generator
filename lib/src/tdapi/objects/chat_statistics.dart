@@ -28,5 +28,7 @@ abstract class ChatStatistics extends TdObject {
   }
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
 }

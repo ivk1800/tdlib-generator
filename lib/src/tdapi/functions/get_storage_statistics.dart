@@ -17,6 +17,8 @@ class GetStorageStatistics extends TdFunction {
   static const String CONSTRUCTOR = 'getStorageStatistics';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

@@ -19,6 +19,8 @@ class ToggleSupergroupSignMessages extends TdFunction {
   static const String CONSTRUCTOR = 'toggleSupergroupSignMessages';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

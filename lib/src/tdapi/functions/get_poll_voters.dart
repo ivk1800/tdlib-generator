@@ -34,6 +34,8 @@ class GetPollVoters extends TdFunction {
   static const String CONSTRUCTOR = 'getPollVoters';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

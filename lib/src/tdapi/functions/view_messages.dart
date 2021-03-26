@@ -32,6 +32,8 @@ class ViewMessages extends TdFunction {
   static const String CONSTRUCTOR = 'viewMessages';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

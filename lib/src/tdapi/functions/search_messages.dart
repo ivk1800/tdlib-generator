@@ -59,6 +59,8 @@ class SearchMessages extends TdFunction {
   static const String CONSTRUCTOR = 'searchMessages';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

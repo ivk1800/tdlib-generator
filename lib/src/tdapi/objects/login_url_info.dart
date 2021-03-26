@@ -28,5 +28,7 @@ abstract class LoginUrlInfo extends TdObject {
   }
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
 }

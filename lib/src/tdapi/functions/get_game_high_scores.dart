@@ -22,6 +22,8 @@ class GetGameHighScores extends TdFunction {
   static const String CONSTRUCTOR = 'getGameHighScores';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

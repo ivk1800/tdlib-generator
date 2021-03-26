@@ -27,6 +27,8 @@ class ReadFilePart extends TdFunction {
   static const String CONSTRUCTOR = 'readFilePart';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

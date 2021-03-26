@@ -16,6 +16,8 @@ class DeleteLanguagePack extends TdFunction {
   static const String CONSTRUCTOR = 'deleteLanguagePack';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

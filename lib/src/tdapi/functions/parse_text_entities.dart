@@ -18,6 +18,8 @@ class ParseTextEntities extends TdFunction {
   static const String CONSTRUCTOR = 'parseTextEntities';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

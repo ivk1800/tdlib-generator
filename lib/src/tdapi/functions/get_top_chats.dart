@@ -18,6 +18,8 @@ class GetTopChats extends TdFunction {
   static const String CONSTRUCTOR = 'getTopChats';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

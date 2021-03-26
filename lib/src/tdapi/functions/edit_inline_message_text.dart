@@ -23,6 +23,8 @@ class EditInlineMessageText extends TdFunction {
   static const String CONSTRUCTOR = 'editInlineMessageText';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

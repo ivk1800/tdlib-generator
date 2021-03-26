@@ -24,6 +24,8 @@ class EditMessageReplyMarkup extends TdFunction {
   static const String CONSTRUCTOR = 'editMessageReplyMarkup';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

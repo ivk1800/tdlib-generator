@@ -19,6 +19,8 @@ class ToggleChatDefaultDisableNotification extends TdFunction {
   static const String CONSTRUCTOR = 'toggleChatDefaultDisableNotification';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

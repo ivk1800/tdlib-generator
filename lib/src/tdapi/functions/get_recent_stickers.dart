@@ -15,6 +15,8 @@ class GetRecentStickers extends TdFunction {
   static const String CONSTRUCTOR = 'getRecentStickers';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

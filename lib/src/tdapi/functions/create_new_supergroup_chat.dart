@@ -28,6 +28,8 @@ class CreateNewSupergroupChat extends TdFunction {
   static const String CONSTRUCTOR = 'createNewSupergroupChat';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

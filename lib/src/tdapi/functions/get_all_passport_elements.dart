@@ -14,6 +14,8 @@ class GetAllPassportElements extends TdFunction {
   static const String CONSTRUCTOR = 'getAllPassportElements';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>

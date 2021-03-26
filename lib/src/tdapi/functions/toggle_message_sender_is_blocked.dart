@@ -18,6 +18,8 @@ class ToggleMessageSenderIsBlocked extends TdFunction {
   static const String CONSTRUCTOR = 'toggleMessageSenderIsBlocked';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

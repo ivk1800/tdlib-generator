@@ -18,6 +18,8 @@ class SetChatPermissions extends TdFunction {
   static const String CONSTRUCTOR = 'setChatPermissions';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

@@ -11,6 +11,8 @@ class GetRecommendedChatFilters extends TdFunction {
   static const String CONSTRUCTOR = 'getRecommendedChatFilters';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {'@type': CONSTRUCTOR, '@extra': this.extra};

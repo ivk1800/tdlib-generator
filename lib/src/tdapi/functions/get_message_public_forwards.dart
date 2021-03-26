@@ -31,6 +31,8 @@ class GetMessagePublicForwards extends TdFunction {
   static const String CONSTRUCTOR = 'getMessagePublicForwards';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

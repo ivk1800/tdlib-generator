@@ -60,6 +60,8 @@ class OptimizeStorage extends TdFunction {
   static const String CONSTRUCTOR = 'optimizeStorage';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

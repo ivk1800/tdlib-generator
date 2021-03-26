@@ -40,6 +40,8 @@ class GetChatEventLog extends TdFunction {
   static const String CONSTRUCTOR = 'getChatEventLog';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

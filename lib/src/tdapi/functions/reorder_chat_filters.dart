@@ -14,6 +14,8 @@ class ReorderChatFilters extends TdFunction {
   static const String CONSTRUCTOR = 'reorderChatFilters';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

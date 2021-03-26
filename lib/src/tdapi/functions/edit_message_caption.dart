@@ -29,6 +29,8 @@ class EditMessageCaption extends TdFunction {
   static const String CONSTRUCTOR = 'editMessageCaption';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

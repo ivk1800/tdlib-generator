@@ -14,6 +14,8 @@ class AddNetworkStatistics extends TdFunction {
   static const String CONSTRUCTOR = 'addNetworkStatistics';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

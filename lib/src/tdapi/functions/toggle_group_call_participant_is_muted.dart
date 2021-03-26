@@ -22,6 +22,8 @@ class ToggleGroupCallParticipantIsMuted extends TdFunction {
   static const String CONSTRUCTOR = 'toggleGroupCallParticipantIsMuted';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

@@ -11,6 +11,8 @@ class GetSavedOrderInfo extends TdFunction {
   static const String CONSTRUCTOR = 'getSavedOrderInfo';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {'@type': CONSTRUCTOR, '@extra': this.extra};

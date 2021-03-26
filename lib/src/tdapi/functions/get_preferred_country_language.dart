@@ -16,6 +16,8 @@ class GetPreferredCountryLanguage extends TdFunction {
   static const String CONSTRUCTOR = 'getPreferredCountryLanguage';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {

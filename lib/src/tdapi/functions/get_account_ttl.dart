@@ -12,6 +12,8 @@ class GetAccountTtl extends TdFunction {
   static const String CONSTRUCTOR = 'getAccountTtl';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {'@type': CONSTRUCTOR, '@extra': this.extra};

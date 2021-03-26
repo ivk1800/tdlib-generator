@@ -17,6 +17,8 @@ class AddFavoriteSticker extends TdFunction {
   static const String CONSTRUCTOR = 'addFavoriteSticker';
 
   @override
+  dynamic? getExtra() => this.extra;
+  @override
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
