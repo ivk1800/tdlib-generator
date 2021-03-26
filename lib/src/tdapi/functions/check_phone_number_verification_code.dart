@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Checks the phone number verification code for Telegram Passport
+/// Returns [Ok]
 class CheckPhoneNumberVerificationCode extends TdFunction {
   CheckPhoneNumberVerificationCode({required this.code});
 

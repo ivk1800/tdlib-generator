@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Uploads a PNG image with a sticker; for bots only; returns the uploaded
+/// Returns [File]
 class UploadStickerFile extends TdFunction {
   UploadStickerFile({required this.userId, required this.pngSticker});
 
@@ -21,7 +22,7 @@ class UploadStickerFile extends TdFunction {
   @override
   Map<String, dynamic> toJson() => {
         'user_id': this.userId,
-        'png_sticker': this.pngSticker,
+        'png_sticker': this.pngSticker.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

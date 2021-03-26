@@ -40,8 +40,8 @@ class NetworkStatisticsEntryFile extends NetworkStatisticsEntry {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'file_type': this.fileType,
-        'network_type': this.networkType,
+        'file_type': this.fileType.toJson(),
+        'network_type': this.networkType.toJson(),
         'sent_bytes': this.sentBytes,
         'received_bytes': this.receivedBytes,
         '@type': CONSTRUCTOR

@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Deletes messages
+/// Returns [Ok]
 class DeleteMessages extends TdFunction {
   DeleteMessages(
       {required this.chatId, required this.messageIds, required this.revoke});
@@ -25,7 +26,7 @@ class DeleteMessages extends TdFunction {
   @override
   Map<String, dynamic> toJson() => {
         'chat_id': this.chatId,
-        'message_ids': this.messageIds,
+        'message_ids': messageIds.map((item) => item).toList(),
         'revoke': this.revoke,
         '@type': CONSTRUCTOR,
         '@extra': this.extra

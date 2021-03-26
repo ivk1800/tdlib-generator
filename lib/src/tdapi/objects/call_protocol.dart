@@ -49,7 +49,7 @@ class CallProtocol extends TdObject {
         'udp_reflector': this.udpReflector,
         'min_layer': this.minLayer,
         'max_layer': this.maxLayer,
-        'library_versions': this.libraryVersions,
+        'library_versions': libraryVersions.map((item) => item).toList(),
         '@type': CONSTRUCTOR
       };
 }

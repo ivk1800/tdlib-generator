@@ -36,8 +36,8 @@ class ImportedContacts extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'user_ids': this.userIds,
-        'importer_count': this.importerCount,
+        'user_ids': userIds.map((item) => item).toList(),
+        'importer_count': importerCount.map((item) => item).toList(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

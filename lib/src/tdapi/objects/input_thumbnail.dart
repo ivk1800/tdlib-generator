@@ -33,7 +33,7 @@ class InputThumbnail extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'thumbnail': this.thumbnail,
+        'thumbnail': this.thumbnail.toJson(),
         'width': this.width,
         'height': this.height,
         '@type': CONSTRUCTOR

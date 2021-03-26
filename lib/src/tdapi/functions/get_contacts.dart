@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Returns all user contacts
+/// Returns [Users]
 class GetContacts extends TdFunction {
   GetContacts();
 

@@ -40,7 +40,7 @@ class UpdateMessageSendFailed extends Update {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'message': this.message,
+        'message': this.message.toJson(),
         'old_message_id': this.oldMessageId,
         'error_code': this.errorCode,
         'error_message': this.errorMessage,

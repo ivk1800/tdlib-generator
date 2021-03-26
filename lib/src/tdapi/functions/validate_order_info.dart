@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Validates the order information provided by a user and returns the
 /// shipping options for a flexible invoice
+/// Returns [ValidatedOrderInfo]
 class ValidateOrderInfo extends TdFunction {
   ValidateOrderInfo(
       {required this.chatId,
@@ -32,7 +33,7 @@ class ValidateOrderInfo extends TdFunction {
   Map<String, dynamic> toJson() => {
         'chat_id': this.chatId,
         'message_id': this.messageId,
-        'order_info': this.orderInfo,
+        'order_info': this.orderInfo.toJson(),
         'allow_save': this.allowSave,
         '@type': CONSTRUCTOR,
         '@extra': this.extra

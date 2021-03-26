@@ -23,5 +23,5 @@ class InputPassportElementBankStatement extends InputPassportElement {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'bank_statement': this.bankStatement, '@type': CONSTRUCTOR};
+      {'bank_statement': this.bankStatement.toJson(), '@type': CONSTRUCTOR};
 }

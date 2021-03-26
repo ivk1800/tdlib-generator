@@ -4,6 +4,7 @@ import '../tdapi.dart';
 /// the current authorization state is authorizationStateWaitPhoneNumber. Can
 /// used instead of setAuthenticationPhoneNumber and checkAuthenticationCode
 /// log in
+/// Returns [Ok]
 class CheckAuthenticationBotToken extends TdFunction {
   CheckAuthenticationBotToken({required this.token});
 

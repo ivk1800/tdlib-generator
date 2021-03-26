@@ -3,6 +3,7 @@ import '../tdapi.dart';
 /// Fetches the latest versions of all strings from a language pack in the
 /// localization target from the server. This method shouldn't be called
 /// for the current used/base language packs. Can be called before
+/// Returns [Ok]
 class SynchronizeLanguagePack extends TdFunction {
   SynchronizeLanguagePack({required this.languagePackId});
 

@@ -3,6 +3,7 @@ import '../tdapi.dart';
 /// Creates a new supergroup from an existing basic group and sends a
 /// messageChatUpgradeTo and messageChatUpgradeFrom; requires creator
 /// Deactivates the original basic group
+/// Returns [Chat]
 class UpgradeBasicGroupChatToSupergroupChat extends TdFunction {
   UpgradeBasicGroupChatToSupergroupChat({required this.chatId});
 

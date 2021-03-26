@@ -27,7 +27,7 @@ class UpdateChatActionBar extends Update {
   @override
   Map<String, dynamic> toJson() => {
         'chat_id': this.chatId,
-        'action_bar': this.actionBar,
+        'action_bar': this.actionBar?.toJson(),
         '@type': CONSTRUCTOR
       };
 }

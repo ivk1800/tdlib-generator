@@ -43,7 +43,8 @@ class PassportAuthorizationForm extends TdObject {
   @override
   Map<String, dynamic> toJson() => {
         'id': this.id,
-        'required_elements': this.requiredElements,
+        'required_elements':
+            requiredElements.map((item) => item.toJson()).toList(),
         'privacy_policy_url': this.privacyPolicyUrl,
         '@type': CONSTRUCTOR,
         '@extra': this.extra

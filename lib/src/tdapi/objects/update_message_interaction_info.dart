@@ -37,7 +37,7 @@ class UpdateMessageInteractionInfo extends Update {
   Map<String, dynamic> toJson() => {
         'chat_id': this.chatId,
         'message_id': this.messageId,
-        'interaction_info': this.interactionInfo,
+        'interaction_info': this.interactionInfo?.toJson(),
         '@type': CONSTRUCTOR
       };
 }

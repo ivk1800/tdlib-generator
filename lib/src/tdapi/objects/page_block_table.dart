@@ -43,8 +43,10 @@ class PageBlockTable extends PageBlock {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'caption': this.caption,
-        'cells': this.cells,
+        'caption': this.caption.toJson(),
+        'cells': cells
+            .map((item) => item.map((item) => item.toJson()).toList())
+            .toList(),
         'is_bordered': this.isBordered,
         'is_striped': this.isStriped,
         '@type': CONSTRUCTOR

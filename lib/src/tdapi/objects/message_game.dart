@@ -20,5 +20,6 @@ class MessageGame extends MessageContent {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() => {'game': this.game, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() =>
+      {'game': this.game.toJson(), '@type': CONSTRUCTOR};
 }

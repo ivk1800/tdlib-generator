@@ -21,5 +21,6 @@ class UpdateUser extends Update {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() => {'user': this.user, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() =>
+      {'user': this.user.toJson(), '@type': CONSTRUCTOR};
 }

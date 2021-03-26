@@ -3,6 +3,7 @@ import '../tdapi.dart';
 /// Searches for call messages. Returns the results in reverse chronological
 /// (i. e., in order of decreasing message_id). For optimal performance the
 /// of returned messages is chosen by the library
+/// Returns [Messages]
 class SearchCallMessages extends TdFunction {
   SearchCallMessages(
       {required this.fromMessageId,

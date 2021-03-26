@@ -42,7 +42,7 @@ class InputMessageLocation extends InputMessageContent {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'location': this.location,
+        'location': this.location.toJson(),
         'live_period': this.livePeriod,
         'heading': this.heading,
         'proximity_alert_radius': this.proximityAlertRadius,

@@ -4,6 +4,7 @@ import '../tdapi.dart';
 /// method is intended to be used only if the application has no direct access
 /// TDLib's file system, because it is usually slower than a direct read from
 /// file
+/// Returns [FilePart]
 class ReadFilePart extends TdFunction {
   ReadFilePart(
       {required this.fileId, required this.offset, required this.count});

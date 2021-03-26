@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Checks the authentication password for correctness. Works only when the
 /// authorization state is authorizationStateWaitPassword
+/// Returns [Ok]
 class CheckAuthenticationPassword extends TdFunction {
   CheckAuthenticationPassword({required this.password});
 

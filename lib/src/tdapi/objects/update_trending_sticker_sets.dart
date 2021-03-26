@@ -23,5 +23,5 @@ class UpdateTrendingStickerSets extends Update {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'sticker_sets': this.stickerSets, '@type': CONSTRUCTOR};
+      {'sticker_sets': this.stickerSets.toJson(), '@type': CONSTRUCTOR};
 }

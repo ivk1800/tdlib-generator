@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Toggles sender signatures messages sent in a channel; requires
 /// rights
+/// Returns [Ok]
 class ToggleSupergroupSignMessages extends TdFunction {
   ToggleSupergroupSignMessages(
       {required this.supergroupId, required this.signMessages});

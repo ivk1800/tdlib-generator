@@ -22,6 +22,8 @@ class UpdateFavoriteStickers extends Update {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'sticker_ids': this.stickerIds, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() => {
+        'sticker_ids': stickerIds.map((item) => item).toList(),
+        '@type': CONSTRUCTOR
+      };
 }

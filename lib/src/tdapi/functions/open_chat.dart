@@ -3,6 +3,7 @@ import '../tdapi.dart';
 /// Informs TDLib that the chat is opened by the user. Many useful activities
 /// on the chat being opened or closed (e.g., in supergroups and channels all
 /// are received only for opened chats)
+/// Returns [Ok]
 class OpenChat extends TdFunction {
   OpenChat({required this.chatId});
 

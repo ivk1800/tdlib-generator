@@ -45,8 +45,8 @@ class AuthenticationCodeInfo extends TdObject {
   @override
   Map<String, dynamic> toJson() => {
         'phone_number': this.phoneNumber,
-        'type': this.type,
-        'next_type': this.nextType,
+        'type': this.type.toJson(),
+        'next_type': this.nextType?.toJson(),
         'timeout': this.timeout,
         '@type': CONSTRUCTOR,
         '@extra': this.extra

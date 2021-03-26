@@ -31,7 +31,7 @@ class MessageInviteVoiceChatParticipants extends MessageContent {
   @override
   Map<String, dynamic> toJson() => {
         'group_call_id': this.groupCallId,
-        'user_ids': this.userIds,
+        'user_ids': userIds.map((item) => item).toList(),
         '@type': CONSTRUCTOR
       };
 }

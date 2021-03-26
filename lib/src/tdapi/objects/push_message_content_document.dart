@@ -26,7 +26,7 @@ class PushMessageContentDocument extends PushMessageContent {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'document': this.document,
+        'document': this.document?.toJson(),
         'is_pinned': this.isPinned,
         '@type': CONSTRUCTOR
       };

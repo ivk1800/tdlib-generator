@@ -35,7 +35,7 @@ class MessageVideoNote extends MessageContent {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'video_note': this.videoNote,
+        'video_note': this.videoNote.toJson(),
         'is_viewed': this.isViewed,
         'is_secret': this.isSecret,
         '@type': CONSTRUCTOR

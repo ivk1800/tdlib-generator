@@ -26,5 +26,10 @@ class ReplyMarkupInlineKeyboard extends ReplyMarkup {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() => {'rows': this.rows, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() => {
+        'rows': rows
+            .map((item) => item.map((item) => item.toJson()).toList())
+            .toList(),
+        '@type': CONSTRUCTOR
+      };
 }

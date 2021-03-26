@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Creates a new basic group and sends a corresponding
 /// Returns the newly created chat
+/// Returns [Chat]
 class CreateNewBasicGroupChat extends TdFunction {
   CreateNewBasicGroupChat({required this.userIds, required this.title});
 
@@ -20,7 +21,7 @@ class CreateNewBasicGroupChat extends TdFunction {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'user_ids': this.userIds,
+        'user_ids': userIds.map((item) => item).toList(),
         'title': this.title,
         '@type': CONSTRUCTOR,
         '@extra': this.extra

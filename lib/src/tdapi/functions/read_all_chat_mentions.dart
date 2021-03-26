@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Marks all mentions in a chat as read
+/// Returns [Ok]
 class ReadAllChatMentions extends TdFunction {
   ReadAllChatMentions({required this.chatId});
 

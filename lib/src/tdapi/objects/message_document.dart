@@ -26,8 +26,8 @@ class MessageDocument extends MessageContent {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'document': this.document,
-        'caption': this.caption,
+        'document': this.document.toJson(),
+        'caption': this.caption.toJson(),
         '@type': CONSTRUCTOR
       };
 }

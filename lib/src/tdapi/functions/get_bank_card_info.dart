@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Returns information about a bank card
+/// Returns [BankCardInfo]
 class GetBankCardInfo extends TdFunction {
   GetBankCardInfo({required this.bankCardNumber});
 

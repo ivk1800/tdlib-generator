@@ -39,10 +39,10 @@ class ChatPosition extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'list': this.list,
+        'list': this.list.toJson(),
         'order': this.order,
         'is_pinned': this.isPinned,
-        'source': this.source,
+        'source': this.source?.toJson(),
         '@type': CONSTRUCTOR
       };
 }

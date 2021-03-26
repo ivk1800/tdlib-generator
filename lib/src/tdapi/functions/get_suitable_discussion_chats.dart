@@ -5,6 +5,7 @@ import '../tdapi.dart';
 /// before they can be set as a discussion group. To set a returned supergroup
 /// a discussion group, access to its old messages must be enabled using
 /// first
+/// Returns [Chats]
 class GetSuitableDiscussionChats extends TdFunction {
   GetSuitableDiscussionChats();
 

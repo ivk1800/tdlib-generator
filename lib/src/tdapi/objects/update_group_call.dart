@@ -21,5 +21,5 @@ class UpdateGroupCall extends Update {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'group_call': this.groupCall, '@type': CONSTRUCTOR};
+      {'group_call': this.groupCall.toJson(), '@type': CONSTRUCTOR};
 }

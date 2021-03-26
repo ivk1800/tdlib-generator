@@ -46,7 +46,7 @@ class OrderInfo extends TdObject {
         'name': this.name,
         'phone_number': this.phoneNumber,
         'email_address': this.emailAddress,
-        'shipping_address': this.shippingAddress,
+        'shipping_address': this.shippingAddress?.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

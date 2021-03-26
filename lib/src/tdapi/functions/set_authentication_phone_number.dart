@@ -5,6 +5,7 @@ import '../tdapi.dart';
 /// or if there is no pending authentication query and the current
 /// state is authorizationStateWaitCode, authorizationStateWaitRegistration,
 /// authorizationStateWaitPassword
+/// Returns [Ok]
 class SetAuthenticationPhoneNumber extends TdFunction {
   SetAuthenticationPhoneNumber(
       {required this.phoneNumber, required this.settings});
@@ -25,7 +26,7 @@ class SetAuthenticationPhoneNumber extends TdFunction {
   @override
   Map<String, dynamic> toJson() => {
         'phone_number': this.phoneNumber,
-        'settings': this.settings,
+        'settings': this.settings.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

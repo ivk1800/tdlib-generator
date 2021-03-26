@@ -42,7 +42,7 @@ class ChatEvent extends TdObject {
         'id': this.id,
         'date': this.date,
         'user_id': this.userId,
-        'action': this.action,
+        'action': this.action.toJson(),
         '@type': CONSTRUCTOR
       };
 }

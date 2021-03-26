@@ -4,6 +4,7 @@ import '../tdapi.dart';
 /// for supergroups and channels. This method can't be used to join a chat.
 /// can't be added to a channel if it has more than 200 members. Members will
 /// be added until the chat state has been synchronized with the server
+/// Returns [Ok]
 class AddChatMembers extends TdFunction {
   AddChatMembers({required this.chatId, required this.userIds});
 
@@ -24,7 +25,7 @@ class AddChatMembers extends TdFunction {
   @override
   Map<String, dynamic> toJson() => {
         'chat_id': this.chatId,
-        'user_ids': this.userIds,
+        'user_ids': userIds.map((item) => item).toList(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

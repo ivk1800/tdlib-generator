@@ -33,8 +33,8 @@ class PageBlockDetails extends PageBlock {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'header': this.header,
-        'page_blocks': this.pageBlocks,
+        'header': this.header.toJson(),
+        'page_blocks': pageBlocks.map((item) => item.toJson()).toList(),
         'is_open': this.isOpen,
         '@type': CONSTRUCTOR
       };

@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Returns storage usage statistics. Can be called before authorization
+/// Returns [StorageStatistics]
 class GetStorageStatistics extends TdFunction {
   GetStorageStatistics({required this.chatLimit});
 

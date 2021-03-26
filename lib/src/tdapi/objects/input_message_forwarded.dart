@@ -43,7 +43,7 @@ class InputMessageForwarded extends InputMessageContent {
         'from_chat_id': this.fromChatId,
         'message_id': this.messageId,
         'in_game_share': this.inGameShare,
-        'copy_options': this.copyOptions,
+        'copy_options': this.copyOptions.toJson(),
         '@type': CONSTRUCTOR
       };
 }

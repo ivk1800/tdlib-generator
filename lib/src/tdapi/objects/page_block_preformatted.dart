@@ -24,6 +24,9 @@ class PageBlockPreformatted extends PageBlock {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'text': this.text, 'language': this.language, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() => {
+        'text': this.text.toJson(),
+        'language': this.language,
+        '@type': CONSTRUCTOR
+      };
 }

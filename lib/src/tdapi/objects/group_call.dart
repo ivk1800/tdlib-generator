@@ -98,7 +98,7 @@ class GroupCall extends TdObject {
         'can_be_managed': this.canBeManaged,
         'participant_count': this.participantCount,
         'loaded_all_participants': this.loadedAllParticipants,
-        'recent_speakers': this.recentSpeakers,
+        'recent_speakers': recentSpeakers.map((item) => item.toJson()).toList(),
         'mute_new_participants': this.muteNewParticipants,
         'allowed_change_mute_new_participants':
             this.allowedChangeMuteNewParticipants,

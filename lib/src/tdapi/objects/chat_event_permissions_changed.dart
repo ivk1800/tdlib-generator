@@ -27,8 +27,8 @@ class ChatEventPermissionsChanged extends ChatEventAction {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'old_permissions': this.oldPermissions,
-        'new_permissions': this.newPermissions,
+        'old_permissions': this.oldPermissions.toJson(),
+        'new_permissions': this.newPermissions.toJson(),
         '@type': CONSTRUCTOR
       };
 }

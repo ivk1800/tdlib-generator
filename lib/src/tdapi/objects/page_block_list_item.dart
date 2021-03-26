@@ -29,7 +29,7 @@ class PageBlockListItem extends TdObject {
   @override
   Map<String, dynamic> toJson() => {
         'label': this.label,
-        'page_blocks': this.pageBlocks,
+        'page_blocks': pageBlocks.map((item) => item.toJson()).toList(),
         '@type': CONSTRUCTOR
       };
 }

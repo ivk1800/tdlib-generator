@@ -29,8 +29,8 @@ class MessagePassportDataReceived extends MessageContent {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'elements': this.elements,
-        'credentials': this.credentials,
+        'elements': elements.map((item) => item.toJson()).toList(),
+        'credentials': this.credentials.toJson(),
         '@type': CONSTRUCTOR
       };
 }

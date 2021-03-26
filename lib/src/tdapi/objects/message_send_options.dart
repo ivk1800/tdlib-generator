@@ -37,7 +37,7 @@ class MessageSendOptions extends TdObject {
   Map<String, dynamic> toJson() => {
         'disable_notification': this.disableNotification,
         'from_background': this.fromBackground,
-        'scheduling_state': this.schedulingState,
+        'scheduling_state': this.schedulingState.toJson(),
         '@type': CONSTRUCTOR
       };
 }

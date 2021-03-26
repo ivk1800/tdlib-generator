@@ -34,7 +34,7 @@ class CallStateDiscarded extends CallState {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'reason': this.reason,
+        'reason': this.reason.toJson(),
         'need_rating': this.needRating,
         'need_debug_information': this.needDebugInformation,
         '@type': CONSTRUCTOR

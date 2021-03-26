@@ -3,6 +3,7 @@ import '../tdapi.dart';
 /// Changes the password for the user. If a new recovery email address is
 /// then the change will not be applied until the new recovery email address
 /// confirmed
+/// Returns [PasswordState]
 class SetPassword extends TdFunction {
   SetPassword(
       {required this.oldPassword,

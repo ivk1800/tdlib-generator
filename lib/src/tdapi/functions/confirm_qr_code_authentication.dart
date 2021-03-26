@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Confirms QR code authentication on another device. Returns created session
 /// success
+/// Returns [Session]
 class ConfirmQrCodeAuthentication extends TdFunction {
   ConfirmQrCodeAuthentication({required this.link});
 

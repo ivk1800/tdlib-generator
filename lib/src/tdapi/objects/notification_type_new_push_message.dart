@@ -45,10 +45,10 @@ class NotificationTypeNewPushMessage extends NotificationType {
   @override
   Map<String, dynamic> toJson() => {
         'message_id': this.messageId,
-        'sender': this.sender,
+        'sender': this.sender.toJson(),
         'sender_name': this.senderName,
         'is_outgoing': this.isOutgoing,
-        'content': this.content,
+        'content': this.content.toJson(),
         '@type': CONSTRUCTOR
       };
 }

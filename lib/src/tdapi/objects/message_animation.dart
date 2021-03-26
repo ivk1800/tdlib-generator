@@ -32,8 +32,8 @@ class MessageAnimation extends MessageContent {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'animation': this.animation,
-        'caption': this.caption,
+        'animation': this.animation.toJson(),
+        'caption': this.caption.toJson(),
         'is_secret': this.isSecret,
         '@type': CONSTRUCTOR
       };

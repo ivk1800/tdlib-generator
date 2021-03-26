@@ -42,7 +42,7 @@ class UpdateUserChatAction extends Update {
         'chat_id': this.chatId,
         'message_thread_id': this.messageThreadId,
         'user_id': this.userId,
-        'action': this.action,
+        'action': this.action.toJson(),
         '@type': CONSTRUCTOR
       };
 }

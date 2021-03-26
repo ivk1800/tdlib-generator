@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Sets the result of an inline query; for bots only
+/// Returns [Ok]
 class AnswerInlineQuery extends TdFunction {
   AnswerInlineQuery(
       {required this.inlineQueryId,
@@ -47,7 +48,7 @@ class AnswerInlineQuery extends TdFunction {
   Map<String, dynamic> toJson() => {
         'inline_query_id': this.inlineQueryId,
         'is_personal': this.isPersonal,
-        'results': this.results,
+        'results': results.map((item) => item.toJson()).toList(),
         'cache_time': this.cacheTime,
         'next_offset': this.nextOffset,
         'switch_pm_text': this.switchPmText,

@@ -33,7 +33,7 @@ class StickerSets extends TdObject {
   @override
   Map<String, dynamic> toJson() => {
         'total_count': this.totalCount,
-        'sets': this.sets,
+        'sets': sets.map((item) => item.toJson()).toList(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

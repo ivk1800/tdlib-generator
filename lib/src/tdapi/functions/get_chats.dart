@@ -5,6 +5,7 @@ import '../tdapi.dart';
 /// of chats from the beginning, the offset_order should be equal to a biggest
 /// 64-bit number 9223372036854775807 == 2. For optimal performance the number
 /// returned chats is chosen by the library
+/// Returns [Chats]
 class GetChats extends TdFunction {
   GetChats(
       {required this.chatList,
@@ -34,7 +35,7 @@ class GetChats extends TdFunction {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'chat_list': this.chatList,
+        'chat_list': this.chatList.toJson(),
         'offset_order': this.offsetOrder,
         'offset_chat_id': this.offsetChatId,
         'limit': this.limit,

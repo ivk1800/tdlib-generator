@@ -28,7 +28,7 @@ class UpdateSelectedBackground extends Update {
   @override
   Map<String, dynamic> toJson() => {
         'for_dark_theme': this.forDarkTheme,
-        'background': this.background,
+        'background': this.background?.toJson(),
         '@type': CONSTRUCTOR
       };
 }

@@ -30,7 +30,7 @@ class UpdateInstalledStickerSets extends Update {
   @override
   Map<String, dynamic> toJson() => {
         'is_masks': this.isMasks,
-        'sticker_set_ids': this.stickerSetIds,
+        'sticker_set_ids': stickerSetIds.map((item) => item).toList(),
         '@type': CONSTRUCTOR
       };
 }

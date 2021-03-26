@@ -31,8 +31,8 @@ class PersonalDocument extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'files': this.files,
-        'translation': this.translation,
+        'files': files.map((item) => item.toJson()).toList(),
+        'translation': translation.map((item) => item.toJson()).toList(),
         '@type': CONSTRUCTOR
       };
 }

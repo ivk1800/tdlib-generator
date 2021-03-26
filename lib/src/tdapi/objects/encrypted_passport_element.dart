@@ -69,13 +69,13 @@ class EncryptedPassportElement extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'type': this.type,
+        'type': this.type.toJson(),
         'data': this.data,
-        'front_side': this.frontSide,
-        'reverse_side': this.reverseSide,
-        'selfie': this.selfie,
-        'translation': this.translation,
-        'files': this.files,
+        'front_side': this.frontSide.toJson(),
+        'reverse_side': this.reverseSide?.toJson(),
+        'selfie': this.selfie?.toJson(),
+        'translation': translation.map((item) => item.toJson()).toList(),
+        'files': files.map((item) => item.toJson()).toList(),
         'value': this.value,
         'hash': this.hash,
         '@type': CONSTRUCTOR

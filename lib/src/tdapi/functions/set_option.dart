@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Sets the value of an option. (Check the list of available options on
 /// Only writable options can be set. Can be called before authorization
+/// Returns [Ok]
 class SetOption extends TdFunction {
   SetOption({required this.name, required this.value});
 
@@ -21,7 +22,7 @@ class SetOption extends TdFunction {
   @override
   Map<String, dynamic> toJson() => {
         'name': this.name,
-        'value': this.value,
+        'value': this.value.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

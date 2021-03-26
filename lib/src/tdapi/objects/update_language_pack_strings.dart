@@ -38,7 +38,7 @@ class UpdateLanguagePackStrings extends Update {
   Map<String, dynamic> toJson() => {
         'localization_target': this.localizationTarget,
         'language_pack_id': this.languagePackId,
-        'strings': this.strings,
+        'strings': strings.map((item) => item.toJson()).toList(),
         '@type': CONSTRUCTOR
       };
 }

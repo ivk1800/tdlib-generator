@@ -28,7 +28,7 @@ class ChatLists extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'chat_lists': this.chatLists,
+        'chat_lists': chatLists.map((item) => item.toJson()).toList(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

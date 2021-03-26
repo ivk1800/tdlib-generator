@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Succeeds after a specified amount of time has passed. Can be called before
+/// Returns [Ok]
 class SetAlarm extends TdFunction {
   SetAlarm({required this.seconds});
 

@@ -112,22 +112,23 @@ class ChatStatisticsSupergroup extends ChatStatistics {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'period': this.period,
-        'member_count': this.memberCount,
-        'message_count': this.messageCount,
-        'viewer_count': this.viewerCount,
-        'sender_count': this.senderCount,
-        'member_count_graph': this.memberCountGraph,
-        'join_graph': this.joinGraph,
-        'join_by_source_graph': this.joinBySourceGraph,
-        'language_graph': this.languageGraph,
-        'message_content_graph': this.messageContentGraph,
-        'action_graph': this.actionGraph,
-        'day_graph': this.dayGraph,
-        'week_graph': this.weekGraph,
-        'top_senders': this.topSenders,
-        'top_administrators': this.topAdministrators,
-        'top_inviters': this.topInviters,
+        'period': this.period.toJson(),
+        'member_count': this.memberCount.toJson(),
+        'message_count': this.messageCount.toJson(),
+        'viewer_count': this.viewerCount.toJson(),
+        'sender_count': this.senderCount.toJson(),
+        'member_count_graph': this.memberCountGraph.toJson(),
+        'join_graph': this.joinGraph.toJson(),
+        'join_by_source_graph': this.joinBySourceGraph.toJson(),
+        'language_graph': this.languageGraph.toJson(),
+        'message_content_graph': this.messageContentGraph.toJson(),
+        'action_graph': this.actionGraph.toJson(),
+        'day_graph': this.dayGraph.toJson(),
+        'week_graph': this.weekGraph.toJson(),
+        'top_senders': topSenders.map((item) => item.toJson()).toList(),
+        'top_administrators':
+            topAdministrators.map((item) => item.toJson()).toList(),
+        'top_inviters': topInviters.map((item) => item.toJson()).toList(),
         '@type': CONSTRUCTOR
       };
 }

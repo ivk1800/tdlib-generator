@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Sends a custom request; for bots only
+/// Returns [CustomRequestResult]
 class SendCustomRequest extends TdFunction {
   SendCustomRequest({required this.method, required this.parameters});
 

@@ -27,6 +27,9 @@ class PassportElements extends TdObject {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'elements': this.elements, '@type': CONSTRUCTOR, '@extra': this.extra};
+  Map<String, dynamic> toJson() => {
+        'elements': elements.map((item) => item.toJson()).toList(),
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

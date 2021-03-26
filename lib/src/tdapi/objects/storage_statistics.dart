@@ -42,7 +42,7 @@ class StorageStatistics extends TdObject {
   Map<String, dynamic> toJson() => {
         'size': this.size,
         'count': this.count,
-        'by_chat': this.byChat,
+        'by_chat': byChat.map((item) => item.toJson()).toList(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

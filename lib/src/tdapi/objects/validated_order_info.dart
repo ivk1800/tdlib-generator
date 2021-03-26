@@ -36,7 +36,8 @@ class ValidatedOrderInfo extends TdObject {
   @override
   Map<String, dynamic> toJson() => {
         'order_info_id': this.orderInfoId,
-        'shipping_options': this.shippingOptions,
+        'shipping_options':
+            shippingOptions.map((item) => item.toJson()).toList(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

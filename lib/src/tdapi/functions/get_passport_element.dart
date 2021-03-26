@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Returns one of the available Telegram Passport elements
+/// Returns [PassportElement]
 class GetPassportElement extends TdFunction {
   GetPassportElement({required this.type, required this.password});
 
@@ -19,7 +20,7 @@ class GetPassportElement extends TdFunction {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'type': this.type,
+        'type': this.type.toJson(),
         'password': this.password,
         '@type': CONSTRUCTOR,
         '@extra': this.extra

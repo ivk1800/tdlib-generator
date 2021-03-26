@@ -38,10 +38,10 @@ class InputMessageVoiceNote extends InputMessageContent {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'voice_note': this.voiceNote,
+        'voice_note': this.voiceNote.toJson(),
         'duration': this.duration,
         'waveform': this.waveform,
-        'caption': this.caption,
+        'caption': this.caption.toJson(),
         '@type': CONSTRUCTOR
       };
 }

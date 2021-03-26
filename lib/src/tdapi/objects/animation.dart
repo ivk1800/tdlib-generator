@@ -70,9 +70,9 @@ class Animation extends TdObject {
         'file_name': this.fileName,
         'mime_type': this.mimeType,
         'has_stickers': this.hasStickers,
-        'minithumbnail': this.minithumbnail,
-        'thumbnail': this.thumbnail,
-        'animation': this.animation,
+        'minithumbnail': this.minithumbnail?.toJson(),
+        'thumbnail': this.thumbnail?.toJson(),
+        'animation': this.animation.toJson(),
         '@type': CONSTRUCTOR
       };
 }

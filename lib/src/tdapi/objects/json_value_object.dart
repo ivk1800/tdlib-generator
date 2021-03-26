@@ -23,6 +23,8 @@ class JsonValueObject extends JsonValue {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'members': this.members, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() => {
+        'members': members.map((item) => item.toJson()).toList(),
+        '@type': CONSTRUCTOR
+      };
 }

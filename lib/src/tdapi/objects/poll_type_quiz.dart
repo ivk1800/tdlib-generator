@@ -31,7 +31,7 @@ class PollTypeQuiz extends PollType {
   @override
   Map<String, dynamic> toJson() => {
         'correct_option_id': this.correctOptionId,
-        'explanation': this.explanation,
+        'explanation': this.explanation.toJson(),
         '@type': CONSTRUCTOR
       };
 }

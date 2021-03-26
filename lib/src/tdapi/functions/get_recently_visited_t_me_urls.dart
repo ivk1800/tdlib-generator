@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Returns t.me URLs recently visited by a newly registered user
+/// Returns [TMeUrls]
 class GetRecentlyVisitedTMeUrls extends TdFunction {
   GetRecentlyVisitedTMeUrls({required this.referrer});
 

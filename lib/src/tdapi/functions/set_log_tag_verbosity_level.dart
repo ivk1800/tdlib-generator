@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Sets the verbosity level for a specified TDLib internal log tag. Can be
 /// synchronously
+/// Returns [Ok]
 class SetLogTagVerbosityLevel extends TdFunction {
   SetLogTagVerbosityLevel({required this.tag, required this.newVerbosityLevel});
 

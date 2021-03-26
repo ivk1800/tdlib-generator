@@ -29,7 +29,7 @@ class BotInfo extends TdObject {
   @override
   Map<String, dynamic> toJson() => {
         'description': this.description,
-        'commands': this.commands,
+        'commands': commands.map((item) => item.toJson()).toList(),
         '@type': CONSTRUCTOR
       };
 }

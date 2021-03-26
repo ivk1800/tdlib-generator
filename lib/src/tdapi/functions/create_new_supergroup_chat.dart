@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Creates a new supergroup or channel and sends a corresponding
 /// Returns the newly created chat
+/// Returns [Chat]
 class CreateNewSupergroupChat extends TdFunction {
   CreateNewSupergroupChat(
       {required this.title,
@@ -33,7 +34,7 @@ class CreateNewSupergroupChat extends TdFunction {
         'title': this.title,
         'is_channel': this.isChannel,
         'description': this.description,
-        'location': this.location,
+        'location': this.location.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

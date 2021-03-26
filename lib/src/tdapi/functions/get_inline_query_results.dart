@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Sends an inline query to a bot and returns its results. Returns an error
 /// code 502 if the bot fails to answer the query before the query timeout
+/// Returns [InlineQueryResults]
 class GetInlineQueryResults extends TdFunction {
   GetInlineQueryResults(
       {required this.botUserId,
@@ -36,7 +37,7 @@ class GetInlineQueryResults extends TdFunction {
   Map<String, dynamic> toJson() => {
         'bot_user_id': this.botUserId,
         'chat_id': this.chatId,
-        'user_location': this.userLocation,
+        'user_location': this.userLocation.toJson(),
         'query': this.query,
         'offset': this.offset,
         '@type': CONSTRUCTOR,

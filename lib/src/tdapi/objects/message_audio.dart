@@ -25,6 +25,9 @@ class MessageAudio extends MessageContent {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'audio': this.audio, 'caption': this.caption, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() => {
+        'audio': this.audio.toJson(),
+        'caption': this.caption.toJson(),
+        '@type': CONSTRUCTOR
+      };
 }

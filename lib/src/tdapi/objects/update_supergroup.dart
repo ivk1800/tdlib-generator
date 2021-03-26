@@ -23,5 +23,5 @@ class UpdateSupergroup extends Update {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'supergroup': this.supergroup, '@type': CONSTRUCTOR};
+      {'supergroup': this.supergroup.toJson(), '@type': CONSTRUCTOR};
 }

@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Informs TDLib that the chat is closed by the user. Many useful activities
 /// on the chat being opened or closed
+/// Returns [Ok]
 class CloseChat extends TdFunction {
   CloseChat({required this.chatId});
 

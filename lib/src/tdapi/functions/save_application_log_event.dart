@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Saves application log event on the server. Can be called before
+/// Returns [Ok]
 class SaveApplicationLogEvent extends TdFunction {
   SaveApplicationLogEvent(
       {required this.type, required this.chatId, required this.data});
@@ -25,7 +26,7 @@ class SaveApplicationLogEvent extends TdFunction {
   Map<String, dynamic> toJson() => {
         'type': this.type,
         'chat_id': this.chatId,
-        'data': this.data,
+        'data': this.data.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

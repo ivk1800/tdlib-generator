@@ -4,6 +4,7 @@ import '../tdapi.dart';
 /// is added to the top of the list. If the sticker was already in the list,
 /// is removed from the list first. Only stickers belonging to a sticker set
 /// be added to this list
+/// Returns [Stickers]
 class AddRecentSticker extends TdFunction {
   AddRecentSticker({required this.isAttached, required this.sticker});
 
@@ -25,7 +26,7 @@ class AddRecentSticker extends TdFunction {
   @override
   Map<String, dynamic> toJson() => {
         'is_attached': this.isAttached,
-        'sticker': this.sticker,
+        'sticker': this.sticker.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

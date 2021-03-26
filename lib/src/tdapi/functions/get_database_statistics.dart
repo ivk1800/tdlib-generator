@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Returns database statistics
+/// Returns [DatabaseStatistics]
 class GetDatabaseStatistics extends TdFunction {
   GetDatabaseStatistics();
 

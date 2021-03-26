@@ -43,11 +43,11 @@ class PageBlockMap extends PageBlock {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'location': this.location,
+        'location': this.location.toJson(),
         'zoom': this.zoom,
         'width': this.width,
         'height': this.height,
-        'caption': this.caption,
+        'caption': this.caption.toJson(),
         '@type': CONSTRUCTOR
       };
 }

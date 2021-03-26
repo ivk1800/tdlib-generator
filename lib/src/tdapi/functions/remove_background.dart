@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Removes background from the list of installed backgrounds
+/// Returns [Ok]
 class RemoveBackground extends TdFunction {
   RemoveBackground({required this.backgroundId});
 

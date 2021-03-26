@@ -31,7 +31,7 @@ class PushMessageContentSticker extends PushMessageContent {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'sticker': this.sticker,
+        'sticker': this.sticker?.toJson(),
         'emoji': this.emoji,
         'is_pinned': this.isPinned,
         '@type': CONSTRUCTOR

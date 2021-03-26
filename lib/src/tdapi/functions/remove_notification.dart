@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Removes an active notification from notification list. Needs to be called
 /// if the notification is removed by the current user
+/// Returns [Ok]
 class RemoveNotification extends TdFunction {
   RemoveNotification(
       {required this.notificationGroupId, required this.notificationId});

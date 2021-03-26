@@ -39,7 +39,7 @@ class InlineQueryResultVideo extends InlineQueryResult {
   @override
   Map<String, dynamic> toJson() => {
         'id': this.id,
-        'video': this.video,
+        'video': this.video.toJson(),
         'title': this.title,
         'description': this.description,
         '@type': CONSTRUCTOR

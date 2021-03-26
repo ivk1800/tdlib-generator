@@ -5,6 +5,7 @@ import '../tdapi.dart';
 /// a meaningful number of results. Returns nothing if the length of the
 /// username prefix is less than 5. Excludes private chats with contacts and
 /// from the chat list from the results
+/// Returns [Chats]
 class SearchPublicChats extends TdFunction {
   SearchPublicChats({required this.query});
 

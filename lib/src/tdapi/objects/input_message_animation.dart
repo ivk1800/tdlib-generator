@@ -57,13 +57,14 @@ class InputMessageAnimation extends InputMessageContent {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'animation': this.animation,
-        'thumbnail': this.thumbnail,
-        'added_sticker_file_ids': this.addedStickerFileIds,
+        'animation': this.animation.toJson(),
+        'thumbnail': this.thumbnail.toJson(),
+        'added_sticker_file_ids':
+            addedStickerFileIds.map((item) => item).toList(),
         'duration': this.duration,
         'width': this.width,
         'height': this.height,
-        'caption': this.caption,
+        'caption': this.caption.toJson(),
         '@type': CONSTRUCTOR
       };
 }

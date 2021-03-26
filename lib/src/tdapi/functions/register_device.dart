@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Registers the currently used device for receiving push notifications.
 /// a globally unique identifier of the push notification subscription
+/// Returns [PushReceiverId]
 class RegisterDevice extends TdFunction {
   RegisterDevice({required this.deviceToken, required this.otherUserIds});
 
@@ -20,8 +21,8 @@ class RegisterDevice extends TdFunction {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'device_token': this.deviceToken,
-        'other_user_ids': this.otherUserIds,
+        'device_token': this.deviceToken.toJson(),
+        'other_user_ids': otherUserIds.map((item) => item).toList(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

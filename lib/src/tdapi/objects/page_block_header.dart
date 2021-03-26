@@ -21,5 +21,5 @@ class PageBlockHeader extends PageBlock {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'header': this.header, '@type': CONSTRUCTOR};
+      {'header': this.header.toJson(), '@type': CONSTRUCTOR};
 }

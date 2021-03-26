@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Returns a list of common group chats with a given user. Chats are sorted
 /// their type and creation date
+/// Returns [Chats]
 class GetGroupsInCommon extends TdFunction {
   GetGroupsInCommon(
       {required this.userId, required this.offsetChatId, required this.limit});

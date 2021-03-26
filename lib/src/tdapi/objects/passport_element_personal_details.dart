@@ -22,5 +22,5 @@ class PassportElementPersonalDetails extends PassportElement {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'personal_details': this.personalDetails, '@type': CONSTRUCTOR};
+      {'personal_details': this.personalDetails.toJson(), '@type': CONSTRUCTOR};
 }

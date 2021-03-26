@@ -45,7 +45,9 @@ class ReplyMarkupShowKeyboard extends ReplyMarkup {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'rows': this.rows,
+        'rows': rows
+            .map((item) => item.map((item) => item.toJson()).toList())
+            .toList(),
         'resize_keyboard': this.resizeKeyboard,
         'one_time': this.oneTime,
         'is_personal': this.isPersonal,

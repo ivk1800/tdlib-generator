@@ -25,5 +25,5 @@ class InlineQueryResultAudio extends InlineQueryResult {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'id': this.id, 'audio': this.audio, '@type': CONSTRUCTOR};
+      {'id': this.id, 'audio': this.audio.toJson(), '@type': CONSTRUCTOR};
 }

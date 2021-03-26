@@ -46,9 +46,9 @@ class Document extends TdObject {
   Map<String, dynamic> toJson() => {
         'file_name': this.fileName,
         'mime_type': this.mimeType,
-        'minithumbnail': this.minithumbnail,
-        'thumbnail': this.thumbnail,
-        'document': this.document,
+        'minithumbnail': this.minithumbnail?.toJson(),
+        'thumbnail': this.thumbnail?.toJson(),
+        'document': this.document.toJson(),
         '@type': CONSTRUCTOR
       };
 }

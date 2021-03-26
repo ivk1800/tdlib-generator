@@ -32,8 +32,8 @@ class InlineQueryResultVenue extends InlineQueryResult {
   @override
   Map<String, dynamic> toJson() => {
         'id': this.id,
-        'venue': this.venue,
-        'thumbnail': this.thumbnail,
+        'venue': this.venue.toJson(),
+        'thumbnail': this.thumbnail?.toJson(),
         '@type': CONSTRUCTOR
       };
 }

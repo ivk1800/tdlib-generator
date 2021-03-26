@@ -4,6 +4,7 @@ import '../tdapi.dart';
 /// the last 48 hours. Available only for supergroups and channels. Requires
 /// rights. Returns results in reverse chronological order (i. e., in order of
 /// event_id)
+/// Returns [ChatEvents]
 class GetChatEventLog extends TdFunction {
   GetChatEventLog(
       {required this.chatId,
@@ -46,8 +47,8 @@ class GetChatEventLog extends TdFunction {
         'query': this.query,
         'from_event_id': this.fromEventId,
         'limit': this.limit,
-        'filters': this.filters,
-        'user_ids': this.userIds,
+        'filters': this.filters.toJson(),
+        'user_ids': userIds.map((item) => item).toList(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

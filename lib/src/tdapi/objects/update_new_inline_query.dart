@@ -51,8 +51,8 @@ class UpdateNewInlineQuery extends Update {
   Map<String, dynamic> toJson() => {
         'id': this.id,
         'sender_user_id': this.senderUserId,
-        'user_location': this.userLocation,
-        'chat_type': this.chatType,
+        'user_location': this.userLocation?.toJson(),
+        'chat_type': this.chatType?.toJson(),
         'query': this.query,
         'offset': this.offset,
         '@type': CONSTRUCTOR

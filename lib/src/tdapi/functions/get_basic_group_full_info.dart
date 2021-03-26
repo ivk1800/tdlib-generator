@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Returns full information about a basic group by its identifier
+/// Returns [BasicGroupFullInfo]
 class GetBasicGroupFullInfo extends TdFunction {
   GetBasicGroupFullInfo({required this.basicGroupId});
 

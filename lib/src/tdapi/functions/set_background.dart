@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Changes the background selected by the user; adds background to the list
 /// installed backgrounds
+/// Returns [Background]
 class SetBackground extends TdFunction {
   SetBackground(
       {required this.background,
@@ -27,8 +28,8 @@ class SetBackground extends TdFunction {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'background': this.background,
-        'type': this.type,
+        'background': this.background.toJson(),
+        'type': this.type.toJson(),
         'for_dark_theme': this.forDarkTheme,
         '@type': CONSTRUCTOR,
         '@extra': this.extra

@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Returns current verbosity level of the internal logging of TDLib. Can be
 /// synchronously
+/// Returns [LogVerbosityLevel]
 class GetLogVerbosityLevel extends TdFunction {
   GetLogVerbosityLevel();
 

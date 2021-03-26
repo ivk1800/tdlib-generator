@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Re-sends the code to verify a phone number to be added to a user's
 /// Passport
+/// Returns [AuthenticationCodeInfo]
 class ResendPhoneNumberVerificationCode extends TdFunction {
   ResendPhoneNumberVerificationCode();
 

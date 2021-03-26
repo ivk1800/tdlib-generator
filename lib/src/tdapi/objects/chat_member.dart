@@ -53,8 +53,8 @@ class ChatMember extends TdObject {
         'user_id': this.userId,
         'inviter_user_id': this.inviterUserId,
         'joined_chat_date': this.joinedChatDate,
-        'status': this.status,
-        'bot_info': this.botInfo,
+        'status': this.status.toJson(),
+        'bot_info': this.botInfo?.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

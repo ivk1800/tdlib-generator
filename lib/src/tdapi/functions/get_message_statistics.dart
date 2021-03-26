@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Returns detailed statistics about a message. Can be used only if
 /// == true
+/// Returns [MessageStatistics]
 class GetMessageStatistics extends TdFunction {
   GetMessageStatistics(
       {required this.chatId, required this.messageId, required this.isDark});

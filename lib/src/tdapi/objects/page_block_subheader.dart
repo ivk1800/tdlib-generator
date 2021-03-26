@@ -21,5 +21,5 @@ class PageBlockSubheader extends PageBlock {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'subheader': this.subheader, '@type': CONSTRUCTOR};
+      {'subheader': this.subheader.toJson(), '@type': CONSTRUCTOR};
 }

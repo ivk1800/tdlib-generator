@@ -25,7 +25,7 @@ class InputPassportElementPassportRegistration extends InputPassportElement {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'passport_registration': this.passportRegistration,
+        'passport_registration': this.passportRegistration.toJson(),
         '@type': CONSTRUCTOR
       };
 }

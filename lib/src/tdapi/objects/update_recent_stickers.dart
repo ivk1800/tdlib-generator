@@ -29,7 +29,7 @@ class UpdateRecentStickers extends Update {
   @override
   Map<String, dynamic> toJson() => {
         'is_attached': this.isAttached,
-        'sticker_ids': this.stickerIds,
+        'sticker_ids': stickerIds.map((item) => item).toList(),
         '@type': CONSTRUCTOR
       };
 }

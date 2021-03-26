@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Checks the validity of an invite link for a chat and returns information
 /// the corresponding chat
+/// Returns [ChatInviteLinkInfo]
 class CheckChatInviteLink extends TdFunction {
   CheckChatInviteLink({required this.inviteLink});
 

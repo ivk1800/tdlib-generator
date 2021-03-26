@@ -27,7 +27,7 @@ class PageBlockAuthorDate extends PageBlock {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'author': this.author,
+        'author': this.author.toJson(),
         'publish_date': this.publishDate,
         '@type': CONSTRUCTOR
       };

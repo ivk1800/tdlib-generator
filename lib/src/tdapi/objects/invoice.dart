@@ -74,7 +74,7 @@ class Invoice extends TdObject {
   @override
   Map<String, dynamic> toJson() => {
         'currency': this.currency,
-        'price_parts': this.priceParts,
+        'price_parts': priceParts.map((item) => item.toJson()).toList(),
         'is_test': this.isTest,
         'need_name': this.needName,
         'need_phone_number': this.needPhoneNumber,

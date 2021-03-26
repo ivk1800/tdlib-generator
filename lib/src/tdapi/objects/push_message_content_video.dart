@@ -38,7 +38,7 @@ class PushMessageContentVideo extends PushMessageContent {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'video': this.video,
+        'video': this.video?.toJson(),
         'caption': this.caption,
         'is_secret': this.isSecret,
         'is_pinned': this.isPinned,

@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Edits the text of an inline text or game message sent via a bot; for bots
+/// Returns [Ok]
 class EditInlineMessageText extends TdFunction {
   EditInlineMessageText(
       {required this.inlineMessageId,
@@ -26,8 +27,8 @@ class EditInlineMessageText extends TdFunction {
   @override
   Map<String, dynamic> toJson() => {
         'inline_message_id': this.inlineMessageId,
-        'reply_markup': this.replyMarkup,
-        'input_message_content': this.inputMessageContent,
+        'reply_markup': this.replyMarkup.toJson(),
+        'input_message_content': this.inputMessageContent.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

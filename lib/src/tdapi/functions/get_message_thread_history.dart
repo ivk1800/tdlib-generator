@@ -5,6 +5,7 @@ import '../tdapi.dart';
 /// The messages are returned in a reverse chronological order (i.e., in order
 /// decreasing message_id). For optimal performance the number of returned
 /// is chosen by the library
+/// Returns [Messages]
 class GetMessageThreadHistory extends TdFunction {
   GetMessageThreadHistory(
       {required this.chatId,

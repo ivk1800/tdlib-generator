@@ -21,5 +21,5 @@ class MessageSticker extends MessageContent {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'sticker': this.sticker, '@type': CONSTRUCTOR};
+      {'sticker': this.sticker.toJson(), '@type': CONSTRUCTOR};
 }

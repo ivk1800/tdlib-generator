@@ -78,7 +78,7 @@ class UserFullInfo extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'photo': this.photo,
+        'photo': this.photo?.toJson(),
         'is_blocked': this.isBlocked,
         'can_be_called': this.canBeCalled,
         'supports_video_calls': this.supportsVideoCalls,
@@ -88,7 +88,7 @@ class UserFullInfo extends TdObject {
         'bio': this.bio,
         'share_text': this.shareText,
         'group_in_common_count': this.groupInCommonCount,
-        'bot_info': this.botInfo,
+        'bot_info': this.botInfo?.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

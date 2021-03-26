@@ -33,7 +33,7 @@ class PushMessageContentAnimation extends PushMessageContent {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'animation': this.animation,
+        'animation': this.animation?.toJson(),
         'caption': this.caption,
         'is_pinned': this.isPinned,
         '@type': CONSTRUCTOR

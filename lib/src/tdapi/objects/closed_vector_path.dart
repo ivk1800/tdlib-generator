@@ -24,6 +24,8 @@ class ClosedVectorPath extends TdObject {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'commands': this.commands, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() => {
+        'commands': commands.map((item) => item.toJson()).toList(),
+        '@type': CONSTRUCTOR
+      };
 }

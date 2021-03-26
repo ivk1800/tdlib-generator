@@ -24,5 +24,5 @@ class AuthorizationStateWaitRegistration extends AuthorizationState {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'terms_of_service': this.termsOfService, '@type': CONSTRUCTOR};
+      {'terms_of_service': this.termsOfService.toJson(), '@type': CONSTRUCTOR};
 }

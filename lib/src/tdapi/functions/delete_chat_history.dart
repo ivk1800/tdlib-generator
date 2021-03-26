@@ -3,6 +3,7 @@ import '../tdapi.dart';
 /// Deletes all messages in the chat. Use Chat.can_be_deleted_only_for_self
 /// Chat.can_be_deleted_for_all_users fields to find whether and how the
 /// can be applied to the chat
+/// Returns [Ok]
 class DeleteChatHistory extends TdFunction {
   DeleteChatHistory(
       {required this.chatId,

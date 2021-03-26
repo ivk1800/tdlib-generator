@@ -27,6 +27,9 @@ class Proxies extends TdObject {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'proxies': this.proxies, '@type': CONSTRUCTOR, '@extra': this.extra};
+  Map<String, dynamic> toJson() => {
+        'proxies': proxies.map((item) => item.toJson()).toList(),
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

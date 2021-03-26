@@ -32,8 +32,8 @@ class UpdateSuggestedActions extends Update {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'added_actions': this.addedActions,
-        'removed_actions': this.removedActions,
+        'added_actions': addedActions.map((item) => item.toJson()).toList(),
+        'removed_actions': removedActions.map((item) => item.toJson()).toList(),
         '@type': CONSTRUCTOR
       };
 }

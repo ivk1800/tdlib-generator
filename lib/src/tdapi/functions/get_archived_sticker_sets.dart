@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Returns a list of archived sticker sets
+/// Returns [StickerSets]
 class GetArchivedStickerSets extends TdFunction {
   GetArchivedStickerSets(
       {required this.isMasks,

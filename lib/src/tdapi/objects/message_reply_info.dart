@@ -49,7 +49,7 @@ class MessageReplyInfo extends TdObject {
   @override
   Map<String, dynamic> toJson() => {
         'reply_count': this.replyCount,
-        'recent_repliers': this.recentRepliers,
+        'recent_repliers': recentRepliers.map((item) => item.toJson()).toList(),
         'last_read_inbox_message_id': this.lastReadInboxMessageId,
         'last_read_outbox_message_id': this.lastReadOutboxMessageId,
         'last_message_id': this.lastMessageId,

@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Creates a new sticker set; for bots only. Returns the newly created
 /// set
+/// Returns [StickerSet]
 class CreateNewStickerSet extends TdFunction {
   CreateNewStickerSet(
       {required this.userId,
@@ -40,7 +41,7 @@ class CreateNewStickerSet extends TdFunction {
         'title': this.title,
         'name': this.name,
         'is_masks': this.isMasks,
-        'stickers': this.stickers,
+        'stickers': stickers.map((item) => item.toJson()).toList(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

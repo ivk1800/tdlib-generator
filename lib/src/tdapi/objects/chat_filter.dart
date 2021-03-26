@@ -102,9 +102,9 @@ class ChatFilter extends TdObject {
   Map<String, dynamic> toJson() => {
         'title': this.title,
         'icon_name': this.iconName,
-        'pinned_chat_ids': this.pinnedChatIds,
-        'included_chat_ids': this.includedChatIds,
-        'excluded_chat_ids': this.excludedChatIds,
+        'pinned_chat_ids': pinnedChatIds.map((item) => item).toList(),
+        'included_chat_ids': includedChatIds.map((item) => item).toList(),
+        'excluded_chat_ids': excludedChatIds.map((item) => item).toList(),
         'exclude_muted': this.excludeMuted,
         'exclude_read': this.excludeRead,
         'exclude_archived': this.excludeArchived,

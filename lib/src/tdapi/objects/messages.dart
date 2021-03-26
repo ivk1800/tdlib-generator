@@ -34,7 +34,7 @@ class Messages extends TdObject {
   @override
   Map<String, dynamic> toJson() => {
         'total_count': this.totalCount,
-        'messages': this.messages,
+        'messages': messages?.map((item) => item.toJson()).toList(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

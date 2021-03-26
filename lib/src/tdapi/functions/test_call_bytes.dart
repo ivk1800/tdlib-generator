@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Returns the received bytes; for testing only. This is an offline method.
 /// be called before authorization
+/// Returns [TestBytes]
 class TestCallBytes extends TdFunction {
   TestCallBytes({required this.x});
 

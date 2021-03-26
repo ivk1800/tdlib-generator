@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Adds a chat to a chat list. A chat can't be simultaneously in Main and
 /// chat lists, so it is automatically removed from another one if needed
+/// Returns [Ok]
 class AddChatToList extends TdFunction {
   AddChatToList({required this.chatId, required this.chatList});
 
@@ -21,7 +22,7 @@ class AddChatToList extends TdFunction {
   @override
   Map<String, dynamic> toJson() => {
         'chat_id': this.chatId,
-        'chat_list': this.chatList,
+        'chat_list': this.chatList.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

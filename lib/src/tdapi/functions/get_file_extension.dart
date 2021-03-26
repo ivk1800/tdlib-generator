@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Returns the extension of a file, guessed by its MIME type. Returns an
 /// string on failure. Can be called synchronously
+/// Returns [Text]
 class GetFileExtension extends TdFunction {
   GetFileExtension({required this.mimeType});
 

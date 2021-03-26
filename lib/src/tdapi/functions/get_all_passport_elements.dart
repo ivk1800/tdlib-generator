@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Returns all available Telegram Passport elements
+/// Returns [PassportElements]
 class GetAllPassportElements extends TdFunction {
   GetAllPassportElements({required this.password});
 

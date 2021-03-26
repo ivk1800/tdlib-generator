@@ -27,6 +27,9 @@ class GameHighScores extends TdObject {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'scores': this.scores, '@type': CONSTRUCTOR, '@extra': this.extra};
+  Map<String, dynamic> toJson() => {
+        'scores': scores.map((item) => item.toJson()).toList(),
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

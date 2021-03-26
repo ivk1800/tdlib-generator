@@ -75,7 +75,7 @@ class InputMessageInvoice extends InputMessageContent {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'invoice': this.invoice,
+        'invoice': this.invoice.toJson(),
         'title': this.title,
         'description': this.description,
         'photo_url': this.photoUrl,

@@ -4,6 +4,7 @@ import '../tdapi.dart';
 /// returns the pinned message, the game message, and the invoice message for
 /// of the types messagePinMessage, messageGameScore, and
 /// respectively
+/// Returns [Message]
 class GetRepliedMessage extends TdFunction {
   GetRepliedMessage({required this.chatId, required this.messageId});
 

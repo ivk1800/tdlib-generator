@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Finishes user registration. Works only when the current authorization
 /// is authorizationStateWaitRegistration
+/// Returns [Ok]
 class RegisterUser extends TdFunction {
   RegisterUser({required this.firstName, required this.lastName});
 

@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Adds a proxy server for network requests. Can be called before
+/// Returns [Proxy]
 class AddProxy extends TdFunction {
   AddProxy(
       {required this.server,
@@ -32,7 +33,7 @@ class AddProxy extends TdFunction {
         'server': this.server,
         'port': this.port,
         'enable': this.enable,
-        'type': this.type,
+        'type': this.type.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

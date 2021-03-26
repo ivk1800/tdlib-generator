@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Updates the game score of the specified user in the game; for bots only
+/// Returns [Message]
 class SetGameScore extends TdFunction {
   SetGameScore(
       {required this.chatId,

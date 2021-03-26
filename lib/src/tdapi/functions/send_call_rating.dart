@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Sends a call rating
+/// Returns [Ok]
 class SendCallRating extends TdFunction {
   SendCallRating(
       {required this.callId,
@@ -33,7 +34,7 @@ class SendCallRating extends TdFunction {
         'call_id': this.callId,
         'rating': this.rating,
         'comment': this.comment,
-        'problems': this.problems,
+        'problems': problems.map((item) => item.toJson()).toList(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

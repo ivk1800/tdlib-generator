@@ -27,6 +27,9 @@ class Stickers extends TdObject {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'stickers': this.stickers, '@type': CONSTRUCTOR, '@extra': this.extra};
+  Map<String, dynamic> toJson() => {
+        'stickers': stickers.map((item) => item.toJson()).toList(),
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

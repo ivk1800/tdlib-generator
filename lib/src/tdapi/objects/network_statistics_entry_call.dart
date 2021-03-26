@@ -39,7 +39,7 @@ class NetworkStatisticsEntryCall extends NetworkStatisticsEntry {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'network_type': this.networkType,
+        'network_type': this.networkType.toJson(),
         'sent_bytes': this.sentBytes,
         'received_bytes': this.receivedBytes,
         'duration': this.duration,

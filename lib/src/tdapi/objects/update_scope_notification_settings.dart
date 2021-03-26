@@ -28,8 +28,8 @@ class UpdateScopeNotificationSettings extends Update {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'scope': this.scope,
-        'notification_settings': this.notificationSettings,
+        'scope': this.scope.toJson(),
+        'notification_settings': this.notificationSettings.toJson(),
         '@type': CONSTRUCTOR
       };
 }

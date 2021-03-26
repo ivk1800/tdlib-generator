@@ -37,7 +37,7 @@ class FormattedText extends TdObject {
   @override
   Map<String, dynamic> toJson() => {
         'text': this.text,
-        'entities': this.entities,
+        'entities': entities.map((item) => item.toJson()).toList(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

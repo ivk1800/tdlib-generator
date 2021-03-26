@@ -71,11 +71,11 @@ class ChatInviteLinkInfo extends TdObject {
   Map<String, dynamic> toJson() => {
         'chat_id': this.chatId,
         'accessible_for': this.accessibleFor,
-        'type': this.type,
+        'type': this.type.toJson(),
         'title': this.title,
-        'photo': this.photo,
+        'photo': this.photo?.toJson(),
         'member_count': this.memberCount,
-        'member_user_ids': this.memberUserIds,
+        'member_user_ids': memberUserIds.map((item) => item).toList(),
         'is_public': this.isPublic,
         '@type': CONSTRUCTOR,
         '@extra': this.extra

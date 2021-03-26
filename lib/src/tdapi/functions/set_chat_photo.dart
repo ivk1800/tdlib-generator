@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Changes the photo of a chat. Supported only for basic groups, supergroups
 /// channels. Requires can_change_info rights
+/// Returns [Ok]
 class SetChatPhoto extends TdFunction {
   SetChatPhoto({required this.chatId, required this.photo});
 
@@ -21,7 +22,7 @@ class SetChatPhoto extends TdFunction {
   @override
   Map<String, dynamic> toJson() => {
         'chat_id': this.chatId,
-        'photo': this.photo,
+        'photo': this.photo.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

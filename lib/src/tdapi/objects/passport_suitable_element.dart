@@ -41,7 +41,7 @@ class PassportSuitableElement extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'type': this.type,
+        'type': this.type.toJson(),
         'is_selfie_required': this.isSelfieRequired,
         'is_translation_required': this.isTranslationRequired,
         'is_native_name_required': this.isNativeNameRequired,

@@ -33,7 +33,7 @@ class TermsOfService extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'text': this.text,
+        'text': this.text.toJson(),
         'min_user_age': this.minUserAge,
         'show_popup': this.showPopup,
         '@type': CONSTRUCTOR

@@ -20,5 +20,6 @@ class UpdateFile extends Update {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() => {'file': this.file, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() =>
+      {'file': this.file.toJson(), '@type': CONSTRUCTOR};
 }

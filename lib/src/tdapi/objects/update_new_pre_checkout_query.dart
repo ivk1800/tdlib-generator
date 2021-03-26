@@ -61,7 +61,7 @@ class UpdateNewPreCheckoutQuery extends Update {
         'total_amount': this.totalAmount,
         'invoice_payload': this.invoicePayload,
         'shipping_option_id': this.shippingOptionId,
-        'order_info': this.orderInfo,
+        'order_info': this.orderInfo?.toJson(),
         '@type': CONSTRUCTOR
       };
 }

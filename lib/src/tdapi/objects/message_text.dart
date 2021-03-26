@@ -25,6 +25,9 @@ class MessageText extends MessageContent {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'text': this.text, 'web_page': this.webPage, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() => {
+        'text': this.text.toJson(),
+        'web_page': this.webPage?.toJson(),
+        '@type': CONSTRUCTOR
+      };
 }

@@ -32,7 +32,7 @@ class InlineQueryResultVoiceNote extends InlineQueryResult {
   @override
   Map<String, dynamic> toJson() => {
         'id': this.id,
-        'voice_note': this.voiceNote,
+        'voice_note': this.voiceNote.toJson(),
         'title': this.title,
         '@type': CONSTRUCTOR
       };

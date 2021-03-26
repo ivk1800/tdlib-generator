@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Changes the discussion group of a channel chat; requires can_change_info
 /// in the channel if it is specified
+/// Returns [Ok]
 class SetChatDiscussionGroup extends TdFunction {
   SetChatDiscussionGroup(
       {required this.chatId, required this.discussionChatId});

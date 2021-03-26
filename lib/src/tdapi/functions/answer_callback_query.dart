@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Sets the result of a callback query; for bots only
+/// Returns [Ok]
 class AnswerCallbackQuery extends TdFunction {
   AnswerCallbackQuery(
       {required this.callbackQueryId,

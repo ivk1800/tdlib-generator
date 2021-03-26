@@ -26,6 +26,9 @@ class PageBlockCaption extends TdObject {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'text': this.text, 'credit': this.credit, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() => {
+        'text': this.text.toJson(),
+        'credit': this.credit.toJson(),
+        '@type': CONSTRUCTOR
+      };
 }

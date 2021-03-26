@@ -6,6 +6,7 @@ import '../tdapi.dart';
 /// even if the network type remains the same.. Network type is used to check
 /// the library can use the network at all and also for collecting detailed
 /// data usage statistics
+/// Returns [Ok]
 class SetNetworkType extends TdFunction {
   SetNetworkType({required this.type});
 
@@ -21,5 +22,5 @@ class SetNetworkType extends TdFunction {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'type': this.type, '@type': CONSTRUCTOR, '@extra': this.extra};
+      {'type': this.type.toJson(), '@type': CONSTRUCTOR, '@extra': this.extra};
 }

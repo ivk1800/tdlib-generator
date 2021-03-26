@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Returns a globally unique push notification subscription identifier for
 /// of an account, which has received a push notification. Can be called
+/// Returns [PushReceiverId]
 class GetPushReceiverId extends TdFunction {
   GetPushReceiverId({required this.payload});
 

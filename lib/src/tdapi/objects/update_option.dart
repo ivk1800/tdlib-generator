@@ -25,5 +25,5 @@ class UpdateOption extends Update {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'name': this.name, 'value': this.value, '@type': CONSTRUCTOR};
+      {'name': this.name, 'value': this.value.toJson(), '@type': CONSTRUCTOR};
 }

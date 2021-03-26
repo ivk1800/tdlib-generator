@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Returns information about a message with the callback button that
 /// a callback query; for bots only
+/// Returns [Message]
 class GetCallbackQueryMessage extends TdFunction {
   GetCallbackQueryMessage(
       {required this.chatId,

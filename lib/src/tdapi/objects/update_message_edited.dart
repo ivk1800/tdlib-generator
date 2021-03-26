@@ -42,7 +42,7 @@ class UpdateMessageEdited extends Update {
         'chat_id': this.chatId,
         'message_id': this.messageId,
         'edit_date': this.editDate,
-        'reply_markup': this.replyMarkup,
+        'reply_markup': this.replyMarkup?.toJson(),
         '@type': CONSTRUCTOR
       };
 }

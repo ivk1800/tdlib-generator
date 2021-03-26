@@ -56,7 +56,7 @@ class InlineQueryResults extends TdObject {
   Map<String, dynamic> toJson() => {
         'inline_query_id': this.inlineQueryId,
         'next_offset': this.nextOffset,
-        'results': this.results,
+        'results': results.map((item) => item.toJson()).toList(),
         'switch_pm_text': this.switchPmText,
         'switch_pm_parameter': this.switchPmParameter,
         '@type': CONSTRUCTOR,

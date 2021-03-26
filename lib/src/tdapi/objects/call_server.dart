@@ -47,7 +47,7 @@ class CallServer extends TdObject {
         'ip_address': this.ipAddress,
         'ipv6_address': this.ipv6Address,
         'port': this.port,
-        'type': this.type,
+        'type': this.type.toJson(),
         '@type': CONSTRUCTOR
       };
 }

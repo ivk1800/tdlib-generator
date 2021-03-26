@@ -26,6 +26,9 @@ class Emojis extends TdObject {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'emojis': this.emojis, '@type': CONSTRUCTOR, '@extra': this.extra};
+  Map<String, dynamic> toJson() => {
+        'emojis': emojis.map((item) => item).toList(),
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

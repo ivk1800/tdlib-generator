@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Creates a new call
+/// Returns [CallId]
 class CreateCall extends TdFunction {
   CreateCall(
       {required this.userId, required this.protocol, required this.isVideo});
@@ -24,7 +25,7 @@ class CreateCall extends TdFunction {
   @override
   Map<String, dynamic> toJson() => {
         'user_id': this.userId,
-        'protocol': this.protocol,
+        'protocol': this.protocol.toJson(),
         'is_video': this.isVideo,
         '@type': CONSTRUCTOR,
         '@extra': this.extra

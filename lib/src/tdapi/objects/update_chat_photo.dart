@@ -24,6 +24,9 @@ class UpdateChatPhoto extends Update {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'chat_id': this.chatId, 'photo': this.photo, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() => {
+        'chat_id': this.chatId,
+        'photo': this.photo?.toJson(),
+        '@type': CONSTRUCTOR
+      };
 }

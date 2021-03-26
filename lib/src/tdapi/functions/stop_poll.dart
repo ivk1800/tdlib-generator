@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Stops a poll. A poll in a message can be stopped when the message has
 /// flag set
+/// Returns [Ok]
 class StopPoll extends TdFunction {
   StopPoll(
       {required this.chatId,
@@ -28,7 +29,7 @@ class StopPoll extends TdFunction {
   Map<String, dynamic> toJson() => {
         'chat_id': this.chatId,
         'message_id': this.messageId,
-        'reply_markup': this.replyMarkup,
+        'reply_markup': this.replyMarkup.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

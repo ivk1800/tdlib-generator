@@ -25,6 +25,8 @@ class UpdateActiveNotifications extends Update {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'groups': this.groups, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() => {
+        'groups': groups.map((item) => item.toJson()).toList(),
+        '@type': CONSTRUCTOR
+      };
 }

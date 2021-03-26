@@ -77,9 +77,9 @@ class Video extends TdObject {
         'mime_type': this.mimeType,
         'has_stickers': this.hasStickers,
         'supports_streaming': this.supportsStreaming,
-        'minithumbnail': this.minithumbnail,
-        'thumbnail': this.thumbnail,
-        'video': this.video,
+        'minithumbnail': this.minithumbnail?.toJson(),
+        'thumbnail': this.thumbnail?.toJson(),
+        'video': this.video.toJson(),
         '@type': CONSTRUCTOR
       };
 }

@@ -39,7 +39,7 @@ class MessageCopyOptions extends TdObject {
   Map<String, dynamic> toJson() => {
         'send_copy': this.sendCopy,
         'replace_caption': this.replaceCaption,
-        'new_caption': this.newCaption,
+        'new_caption': this.newCaption.toJson(),
         '@type': CONSTRUCTOR
       };
 }

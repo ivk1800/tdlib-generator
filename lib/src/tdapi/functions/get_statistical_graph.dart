@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Loads an asynchronous or a zoomed in statistical graph
+/// Returns [StatisticalGraph]
 class GetStatisticalGraph extends TdFunction {
   GetStatisticalGraph(
       {required this.chatId, required this.token, required this.x});

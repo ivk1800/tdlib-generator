@@ -35,7 +35,7 @@ class ShippingOption extends TdObject {
   Map<String, dynamic> toJson() => {
         'id': this.id,
         'title': this.title,
-        'price_parts': this.priceParts,
+        'price_parts': priceParts.map((item) => item.toJson()).toList(),
         '@type': CONSTRUCTOR
       };
 }

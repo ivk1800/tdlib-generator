@@ -26,6 +26,9 @@ class PassportRequiredElement extends TdObject {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'suitable_elements': this.suitableElements, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() => {
+        'suitable_elements':
+            suitableElements.map((item) => item.toJson()).toList(),
+        '@type': CONSTRUCTOR
+      };
 }

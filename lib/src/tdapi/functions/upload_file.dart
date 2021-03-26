@@ -4,6 +4,7 @@ import '../tdapi.dart';
 /// updateFile will be used to notify about upload progress and successful
 /// of the upload. The file will not have a persistent remote identifier until
 /// will be sent in a message
+/// Returns [File]
 class UploadFile extends TdFunction {
   UploadFile(
       {required this.file, required this.fileType, required this.priority});
@@ -28,8 +29,8 @@ class UploadFile extends TdFunction {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'file': this.file,
-        'file_type': this.fileType,
+        'file': this.file.toJson(),
+        'file_type': this.fileType.toJson(),
         'priority': this.priority,
         '@type': CONSTRUCTOR,
         '@extra': this.extra

@@ -69,13 +69,15 @@ class UpdateNotificationGroup extends Update {
   @override
   Map<String, dynamic> toJson() => {
         'notification_group_id': this.notificationGroupId,
-        'type': this.type,
+        'type': this.type.toJson(),
         'chat_id': this.chatId,
         'notification_settings_chat_id': this.notificationSettingsChatId,
         'is_silent': this.isSilent,
         'total_count': this.totalCount,
-        'added_notifications': this.addedNotifications,
-        'removed_notification_ids': this.removedNotificationIds,
+        'added_notifications':
+            addedNotifications.map((item) => item.toJson()).toList(),
+        'removed_notification_ids':
+            removedNotificationIds.map((item) => item).toList(),
         '@type': CONSTRUCTOR
       };
 }

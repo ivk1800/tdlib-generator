@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Adds a new sticker to a set; for bots only. Returns the sticker set
+/// Returns [StickerSet]
 class AddStickerToSet extends TdFunction {
   AddStickerToSet(
       {required this.userId, required this.name, required this.sticker});
@@ -25,7 +26,7 @@ class AddStickerToSet extends TdFunction {
   Map<String, dynamic> toJson() => {
         'user_id': this.userId,
         'name': this.name,
-        'sticker': this.sticker,
+        'sticker': this.sticker.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

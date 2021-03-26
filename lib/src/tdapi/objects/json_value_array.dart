@@ -23,6 +23,8 @@ class JsonValueArray extends JsonValue {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'values': this.values, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() => {
+        'values': values.map((item) => item.toJson()).toList(),
+        '@type': CONSTRUCTOR
+      };
 }

@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Checks whether the current session can be used to transfer a chat
 /// to another user
+/// Returns [CanTransferOwnershipResult]
 class CanTransferOwnership extends TdFunction {
   CanTransferOwnership();
 

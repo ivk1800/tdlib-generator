@@ -25,5 +25,5 @@ class UserPrivacySettingRuleAllowUsers extends UserPrivacySettingRule {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'user_ids': this.userIds, '@type': CONSTRUCTOR};
+      {'user_ids': userIds.map((item) => item).toList(), '@type': CONSTRUCTOR};
 }

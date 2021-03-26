@@ -76,11 +76,12 @@ class Poll extends TdObject {
   Map<String, dynamic> toJson() => {
         'id': this.id,
         'question': this.question,
-        'options': this.options,
+        'options': options.map((item) => item.toJson()).toList(),
         'total_voter_count': this.totalVoterCount,
-        'recent_voter_user_ids': this.recentVoterUserIds,
+        'recent_voter_user_ids':
+            recentVoterUserIds.map((item) => item).toList(),
         'is_anonymous': this.isAnonymous,
-        'type': this.type,
+        'type': this.type.toJson(),
         'open_period': this.openPeriod,
         'close_date': this.closeDate,
         'is_closed': this.isClosed,

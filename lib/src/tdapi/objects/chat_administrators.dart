@@ -29,7 +29,7 @@ class ChatAdministrators extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'administrators': this.administrators,
+        'administrators': administrators.map((item) => item.toJson()).toList(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

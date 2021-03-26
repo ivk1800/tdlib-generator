@@ -65,7 +65,7 @@ class MessagePaymentSuccessfulBot extends MessageContent {
         'total_amount': this.totalAmount,
         'invoice_payload': this.invoicePayload,
         'shipping_option_id': this.shippingOptionId,
-        'order_info': this.orderInfo,
+        'order_info': this.orderInfo?.toJson(),
         'telegram_payment_charge_id': this.telegramPaymentChargeId,
         'provider_payment_charge_id': this.providerPaymentChargeId,
         '@type': CONSTRUCTOR

@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Informs TDLib on a file generation progress
+/// Returns [Ok]
 class SetFileGenerationProgress extends TdFunction {
   SetFileGenerationProgress(
       {required this.generationId,

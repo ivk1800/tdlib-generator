@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Changes the current TTL setting (sets a new self-destruct timer) in a
 /// chat and sends the corresponding message
+/// Returns [Message]
 class SendChatSetTtlMessage extends TdFunction {
   SendChatSetTtlMessage({required this.chatId, required this.ttl});
 

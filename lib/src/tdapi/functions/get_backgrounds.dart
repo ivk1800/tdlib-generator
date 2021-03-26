@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Returns backgrounds installed by the user
+/// Returns [Backgrounds]
 class GetBackgrounds extends TdFunction {
   GetBackgrounds({required this.forDarkTheme});
 

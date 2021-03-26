@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Edits an existing proxy server for network requests. Can be called before
+/// Returns [Proxy]
 class EditProxy extends TdFunction {
   EditProxy(
       {required this.proxyId,
@@ -37,7 +38,7 @@ class EditProxy extends TdFunction {
         'server': this.server,
         'port': this.port,
         'enable': this.enable,
-        'type': this.type,
+        'type': this.type.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

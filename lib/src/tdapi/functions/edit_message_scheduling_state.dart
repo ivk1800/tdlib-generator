@@ -3,6 +3,7 @@ import '../tdapi.dart';
 /// Edits the time when a scheduled message will be sent. Scheduling state of
 /// messages in the same album or forwarded together with the message will be
 /// changed
+/// Returns [Ok]
 class EditMessageSchedulingState extends TdFunction {
   EditMessageSchedulingState(
       {required this.chatId,
@@ -30,7 +31,7 @@ class EditMessageSchedulingState extends TdFunction {
   Map<String, dynamic> toJson() => {
         'chat_id': this.chatId,
         'message_id': this.messageId,
-        'scheduling_state': this.schedulingState,
+        'scheduling_state': this.schedulingState.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Removes a group of active notifications. Needs to be called only if the
 /// group is removed by the current user
+/// Returns [Ok]
 class RemoveNotificationGroup extends TdFunction {
   RemoveNotificationGroup(
       {required this.notificationGroupId, required this.maxNotificationId});

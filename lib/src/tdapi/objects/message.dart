@@ -192,10 +192,10 @@ class Message extends TdObject {
   @override
   Map<String, dynamic> toJson() => {
         'id': this.id,
-        'sender': this.sender,
+        'sender': this.sender.toJson(),
         'chat_id': this.chatId,
-        'sending_state': this.sendingState,
-        'scheduling_state': this.schedulingState,
+        'sending_state': this.sendingState?.toJson(),
+        'scheduling_state': this.schedulingState?.toJson(),
         'is_outgoing': this.isOutgoing,
         'is_pinned': this.isPinned,
         'can_be_edited': this.canBeEdited,
@@ -208,8 +208,8 @@ class Message extends TdObject {
         'contains_unread_mention': this.containsUnreadMention,
         'date': this.date,
         'edit_date': this.editDate,
-        'forward_info': this.forwardInfo,
-        'interaction_info': this.interactionInfo,
+        'forward_info': this.forwardInfo?.toJson(),
+        'interaction_info': this.interactionInfo?.toJson(),
         'reply_in_chat_id': this.replyInChatId,
         'reply_to_message_id': this.replyToMessageId,
         'message_thread_id': this.messageThreadId,
@@ -219,8 +219,8 @@ class Message extends TdObject {
         'author_signature': this.authorSignature,
         'media_album_id': this.mediaAlbumId,
         'restriction_reason': this.restrictionReason,
-        'content': this.content,
-        'reply_markup': this.replyMarkup,
+        'content': this.content.toJson(),
+        'reply_markup': this.replyMarkup?.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

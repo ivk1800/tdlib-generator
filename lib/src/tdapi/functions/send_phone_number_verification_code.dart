@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Sends a code to verify a phone number to be added to a user's Telegram
+/// Returns [AuthenticationCodeInfo]
 class SendPhoneNumberVerificationCode extends TdFunction {
   SendPhoneNumberVerificationCode(
       {required this.phoneNumber, required this.settings});
@@ -21,7 +22,7 @@ class SendPhoneNumberVerificationCode extends TdFunction {
   @override
   Map<String, dynamic> toJson() => {
         'phone_number': this.phoneNumber,
-        'settings': this.settings,
+        'settings': this.settings.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

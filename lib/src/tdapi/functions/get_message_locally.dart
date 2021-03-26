@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Returns information about a message, if it is available locally without
 /// network request. This is an offline request
+/// Returns [Message]
 class GetMessageLocally extends TdFunction {
   GetMessageLocally({required this.chatId, required this.messageId});
 

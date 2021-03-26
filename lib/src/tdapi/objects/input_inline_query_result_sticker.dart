@@ -63,8 +63,8 @@ class InputInlineQueryResultSticker extends InputInlineQueryResult {
         'sticker_url': this.stickerUrl,
         'sticker_width': this.stickerWidth,
         'sticker_height': this.stickerHeight,
-        'reply_markup': this.replyMarkup,
-        'input_message_content': this.inputMessageContent,
+        'reply_markup': this.replyMarkup?.toJson(),
+        'input_message_content': this.inputMessageContent.toJson(),
         '@type': CONSTRUCTOR
       };
 }

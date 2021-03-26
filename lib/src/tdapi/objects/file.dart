@@ -52,8 +52,8 @@ class File extends TdObject {
         'id': this.id,
         'size': this.size,
         'expected_size': this.expectedSize,
-        'local': this.local,
-        'remote': this.remote,
+        'local': this.local.toJson(),
+        'remote': this.remote.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

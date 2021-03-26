@@ -55,9 +55,9 @@ class PaymentReceipt extends TdObject {
   Map<String, dynamic> toJson() => {
         'date': this.date,
         'payments_provider_user_id': this.paymentsProviderUserId,
-        'invoice': this.invoice,
-        'order_info': this.orderInfo,
-        'shipping_option': this.shippingOption,
+        'invoice': this.invoice.toJson(),
+        'order_info': this.orderInfo?.toJson(),
+        'shipping_option': this.shippingOption?.toJson(),
         'credentials_title': this.credentialsTitle,
         '@type': CONSTRUCTOR,
         '@extra': this.extra

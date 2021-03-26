@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Returns information about a chat by its identifier, this is an offline
 /// if the current user is not a bot
+/// Returns [Chat]
 class GetChat extends TdFunction {
   GetChat({required this.chatId});
 

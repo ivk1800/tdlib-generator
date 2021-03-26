@@ -24,5 +24,5 @@ class DatedFile extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'file': this.file, 'date': this.date, '@type': CONSTRUCTOR};
+      {'file': this.file.toJson(), 'date': this.date, '@type': CONSTRUCTOR};
 }

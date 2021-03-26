@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Changes the phone number of the user and sends an authentication code to
 /// user's new phone number. On success, returns information about the sent
+/// Returns [AuthenticationCodeInfo]
 class ChangePhoneNumber extends TdFunction {
   ChangePhoneNumber({required this.phoneNumber, required this.settings});
 
@@ -21,7 +22,7 @@ class ChangePhoneNumber extends TdFunction {
   @override
   Map<String, dynamic> toJson() => {
         'phone_number': this.phoneNumber,
-        'settings': this.settings,
+        'settings': this.settings.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

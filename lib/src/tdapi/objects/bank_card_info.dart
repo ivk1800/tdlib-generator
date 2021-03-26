@@ -33,7 +33,7 @@ class BankCardInfo extends TdObject {
   @override
   Map<String, dynamic> toJson() => {
         'title': this.title,
-        'actions': this.actions,
+        'actions': actions.map((item) => item.toJson()).toList(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

@@ -3,6 +3,7 @@ import '../tdapi.dart';
 /// Changes the location of a chat. Available only for some location-based
 /// use supergroupFullInfo.can_set_location to check whether the method is
 /// to use
+/// Returns [Ok]
 class SetChatLocation extends TdFunction {
   SetChatLocation({required this.chatId, required this.location});
 
@@ -22,7 +23,7 @@ class SetChatLocation extends TdFunction {
   @override
   Map<String, dynamic> toJson() => {
         'chat_id': this.chatId,
-        'location': this.location,
+        'location': this.location.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

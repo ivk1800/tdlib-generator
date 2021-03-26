@@ -23,5 +23,5 @@ class UpdateDiceEmojis extends Update {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'emojis': this.emojis, '@type': CONSTRUCTOR};
+      {'emojis': emojis.map((item) => item).toList(), '@type': CONSTRUCTOR};
 }

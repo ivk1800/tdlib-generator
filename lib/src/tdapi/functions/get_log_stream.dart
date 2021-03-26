@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Returns information about currently used log stream for internal logging
 /// TDLib. Can be called synchronously
+/// Returns [LogStream]
 class GetLogStream extends TdFunction {
   GetLogStream();
 

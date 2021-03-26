@@ -42,7 +42,7 @@ class UpdateNewShippingQuery extends Update {
         'id': this.id,
         'sender_user_id': this.senderUserId,
         'invoice_payload': this.invoicePayload,
-        'shipping_address': this.shippingAddress,
+        'shipping_address': this.shippingAddress.toJson(),
         '@type': CONSTRUCTOR
       };
 }

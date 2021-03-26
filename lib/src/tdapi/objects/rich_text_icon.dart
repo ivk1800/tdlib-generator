@@ -32,7 +32,7 @@ class RichTextIcon extends RichText {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'document': this.document,
+        'document': this.document.toJson(),
         'width': this.width,
         'height': this.height,
         '@type': CONSTRUCTOR

@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Clears draft messages in all chats
+/// Returns [Ok]
 class ClearAllDraftMessages extends TdFunction {
   ClearAllDraftMessages({required this.excludeSecretChats});
 

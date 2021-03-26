@@ -96,8 +96,9 @@ class StickerSetInfo extends TdObject {
         'id': this.id,
         'title': this.title,
         'name': this.name,
-        'thumbnail': this.thumbnail,
-        'thumbnail_outline': this.thumbnailOutline,
+        'thumbnail': this.thumbnail?.toJson(),
+        'thumbnail_outline':
+            thumbnailOutline.map((item) => item.toJson()).toList(),
         'is_installed': this.isInstalled,
         'is_archived': this.isArchived,
         'is_official': this.isOfficial,
@@ -105,7 +106,7 @@ class StickerSetInfo extends TdObject {
         'is_masks': this.isMasks,
         'is_viewed': this.isViewed,
         'size': this.size,
-        'covers': this.covers,
+        'covers': covers.map((item) => item.toJson()).toList(),
         '@type': CONSTRUCTOR
       };
 }

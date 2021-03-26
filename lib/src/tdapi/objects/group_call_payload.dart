@@ -36,7 +36,7 @@ class GroupCallPayload extends TdObject {
   Map<String, dynamic> toJson() => {
         'ufrag': this.ufrag,
         'pwd': this.pwd,
-        'fingerprints': this.fingerprints,
+        'fingerprints': fingerprints.map((item) => item.toJson()).toList(),
         '@type': CONSTRUCTOR
       };
 }

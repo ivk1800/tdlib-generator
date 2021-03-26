@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Quickly returns approximate storage usage statistics. Can be called before
+/// Returns [StorageStatisticsFast]
 class GetStorageStatisticsFast extends TdFunction {
   GetStorageStatisticsFast();
 

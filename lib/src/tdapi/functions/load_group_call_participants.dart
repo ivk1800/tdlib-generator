@@ -3,6 +3,7 @@ import '../tdapi.dart';
 /// Loads more group call participants. The loaded participants will be
 /// through updates. Use the field groupCall.loaded_all_participants to check
 /// all participants has already been loaded
+/// Returns [Ok]
 class LoadGroupCallParticipants extends TdFunction {
   LoadGroupCallParticipants({required this.groupCallId, required this.limit});
 

@@ -24,5 +24,5 @@ class InputPassportElementRentalAgreement extends InputPassportElement {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'rental_agreement': this.rentalAgreement, '@type': CONSTRUCTOR};
+      {'rental_agreement': this.rentalAgreement.toJson(), '@type': CONSTRUCTOR};
 }

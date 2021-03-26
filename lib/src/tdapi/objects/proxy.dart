@@ -59,7 +59,7 @@ class Proxy extends TdObject {
         'port': this.port,
         'last_used_date': this.lastUsedDate,
         'is_enabled': this.isEnabled,
-        'type': this.type,
+        'type': this.type.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

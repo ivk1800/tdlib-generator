@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Changes the user answer to a poll. A poll in quiz mode can be answered
 /// once
+/// Returns [Ok]
 class SetPollAnswer extends TdFunction {
   SetPollAnswer(
       {required this.chatId, required this.messageId, required this.optionIds});
@@ -27,7 +28,7 @@ class SetPollAnswer extends TdFunction {
   Map<String, dynamic> toJson() => {
         'chat_id': this.chatId,
         'message_id': this.messageId,
-        'option_ids': this.optionIds,
+        'option_ids': optionIds.map((item) => item).toList(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

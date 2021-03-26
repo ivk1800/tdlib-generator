@@ -51,10 +51,10 @@ class BasicGroupFullInfo extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'photo': this.photo,
+        'photo': this.photo?.toJson(),
         'description': this.description,
         'creator_user_id': this.creatorUserId,
-        'members': this.members,
+        'members': members.map((item) => item.toJson()).toList(),
         'invite_link': this.inviteLink,
         '@type': CONSTRUCTOR,
         '@extra': this.extra

@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Returns information about a user by their identifier. This is an offline
 /// if the current user is not a bot
+/// Returns [User]
 class GetUser extends TdFunction {
   GetUser({required this.userId});
 

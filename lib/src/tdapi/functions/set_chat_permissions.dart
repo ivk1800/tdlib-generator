@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Changes the chat members permissions. Supported only for basic groups and
 /// Requires can_restrict_members administrator right
+/// Returns [Ok]
 class SetChatPermissions extends TdFunction {
   SetChatPermissions({required this.chatId, required this.permissions});
 
@@ -21,7 +22,7 @@ class SetChatPermissions extends TdFunction {
   @override
   Map<String, dynamic> toJson() => {
         'chat_id': this.chatId,
-        'permissions': this.permissions,
+        'permissions': this.permissions.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

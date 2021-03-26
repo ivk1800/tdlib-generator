@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Sends a filled-out payment form to the bot for final verification
+/// Returns [PaymentResult]
 class SendPaymentForm extends TdFunction {
   SendPaymentForm(
       {required this.chatId,
@@ -37,7 +38,7 @@ class SendPaymentForm extends TdFunction {
         'message_id': this.messageId,
         'order_info_id': this.orderInfoId,
         'shipping_option_id': this.shippingOptionId,
-        'credentials': this.credentials,
+        'credentials': this.credentials.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

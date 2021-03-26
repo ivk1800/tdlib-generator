@@ -4,6 +4,7 @@ import '../tdapi.dart';
 /// chat. Use the method canTransferOwnership to check whether the ownership
 /// be transferred from the current session. Available only for supergroups
 /// channel chats
+/// Returns [Ok]
 class TransferChatOwnership extends TdFunction {
   TransferChatOwnership(
       {required this.chatId, required this.userId, required this.password});

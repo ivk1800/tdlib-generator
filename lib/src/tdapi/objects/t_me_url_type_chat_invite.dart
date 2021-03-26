@@ -21,5 +21,6 @@ class TMeUrlTypeChatInvite extends TMeUrlType {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() => {'info': this.info, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() =>
+      {'info': this.info.toJson(), '@type': CONSTRUCTOR};
 }

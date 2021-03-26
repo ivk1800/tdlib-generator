@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Returns all entities (mentions, hashtags, cashtags, bot commands, bank
 /// numbers, URLs, and email addresses) contained in the text. Can be called
+/// Returns [TextEntities]
 class GetTextEntities extends TdFunction {
   GetTextEntities({required this.text});
 

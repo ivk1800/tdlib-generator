@@ -58,8 +58,8 @@ class Background extends TdObject {
         'is_default': this.isDefault,
         'is_dark': this.isDark,
         'name': this.name,
-        'document': this.document,
-        'type': this.type,
+        'document': this.document?.toJson(),
+        'type': this.type.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

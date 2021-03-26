@@ -44,7 +44,7 @@ class UpdateNewChosenInlineResult extends Update {
   @override
   Map<String, dynamic> toJson() => {
         'sender_user_id': this.senderUserId,
-        'user_location': this.userLocation,
+        'user_location': this.userLocation?.toJson(),
         'query': this.query,
         'result_id': this.resultId,
         'inline_message_id': this.inlineMessageId,

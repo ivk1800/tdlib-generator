@@ -22,5 +22,5 @@ class InputPassportElementAddress extends InputPassportElement {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'address': this.address, '@type': CONSTRUCTOR};
+      {'address': this.address.toJson(), '@type': CONSTRUCTOR};
 }

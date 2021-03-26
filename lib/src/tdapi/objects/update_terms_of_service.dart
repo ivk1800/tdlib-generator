@@ -30,7 +30,7 @@ class UpdateTermsOfService extends Update {
   @override
   Map<String, dynamic> toJson() => {
         'terms_of_service_id': this.termsOfServiceId,
-        'terms_of_service': this.termsOfService,
+        'terms_of_service': this.termsOfService.toJson(),
         '@type': CONSTRUCTOR
       };
 }

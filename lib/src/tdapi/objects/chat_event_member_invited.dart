@@ -25,6 +25,9 @@ class ChatEventMemberInvited extends ChatEventAction {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'user_id': this.userId, 'status': this.status, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() => {
+        'user_id': this.userId,
+        'status': this.status.toJson(),
+        '@type': CONSTRUCTOR
+      };
 }

@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Sends a simple network request to the Telegram servers; for testing only.
 /// be called before authorization
+/// Returns [Ok]
 class TestNetwork extends TdFunction {
   TestNetwork();
 

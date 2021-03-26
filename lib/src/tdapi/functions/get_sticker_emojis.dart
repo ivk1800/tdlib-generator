@@ -3,6 +3,7 @@ import '../tdapi.dart';
 /// Returns emoji corresponding to a sticker. The list is only for
 /// purposes, because a sticker is always sent with a fixed emoji from the
 /// Sticker object
+/// Returns [Emojis]
 class GetStickerEmojis extends TdFunction {
   GetStickerEmojis({required this.sticker});
 
@@ -17,6 +18,9 @@ class GetStickerEmojis extends TdFunction {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'sticker': this.sticker, '@type': CONSTRUCTOR, '@extra': this.extra};
+  Map<String, dynamic> toJson() => {
+        'sticker': this.sticker.toJson(),
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

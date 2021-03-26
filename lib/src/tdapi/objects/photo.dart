@@ -37,8 +37,8 @@ class Photo extends TdObject {
   @override
   Map<String, dynamic> toJson() => {
         'has_stickers': this.hasStickers,
-        'minithumbnail': this.minithumbnail,
-        'sizes': this.sizes,
+        'minithumbnail': this.minithumbnail?.toJson(),
+        'sizes': sizes.map((item) => item.toJson()).toList(),
         '@type': CONSTRUCTOR
       };
 }

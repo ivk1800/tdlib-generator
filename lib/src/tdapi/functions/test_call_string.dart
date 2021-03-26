@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Returns the received string; for testing only. This is an offline method.
 /// be called before authorization
+/// Returns [TestString]
 class TestCallString extends TdFunction {
   TestCallString({required this.x});
 

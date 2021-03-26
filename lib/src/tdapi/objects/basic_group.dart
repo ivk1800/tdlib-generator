@@ -52,7 +52,7 @@ class BasicGroup extends TdObject {
   Map<String, dynamic> toJson() => {
         'id': this.id,
         'member_count': this.memberCount,
-        'status': this.status,
+        'status': this.status.toJson(),
         'is_active': this.isActive,
         'upgraded_to_supergroup_id': this.upgradedToSupergroupId,
         '@type': CONSTRUCTOR,

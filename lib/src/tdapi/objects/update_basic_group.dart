@@ -23,5 +23,5 @@ class UpdateBasicGroup extends Update {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'basic_group': this.basicGroup, '@type': CONSTRUCTOR};
+      {'basic_group': this.basicGroup.toJson(), '@type': CONSTRUCTOR};
 }

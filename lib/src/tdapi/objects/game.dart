@@ -57,10 +57,10 @@ class Game extends TdObject {
         'id': this.id,
         'short_name': this.shortName,
         'title': this.title,
-        'text': this.text,
+        'text': this.text.toJson(),
         'description': this.description,
-        'photo': this.photo,
-        'animation': this.animation,
+        'photo': this.photo.toJson(),
+        'animation': this.animation?.toJson(),
         '@type': CONSTRUCTOR
       };
 }

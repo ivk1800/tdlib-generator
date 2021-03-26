@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Changes the block state of a message sender. Currently, only users and
 /// chats can be blocked
+/// Returns [Ok]
 class ToggleMessageSenderIsBlocked extends TdFunction {
   ToggleMessageSenderIsBlocked({required this.sender, required this.isBlocked});
 
@@ -20,7 +21,7 @@ class ToggleMessageSenderIsBlocked extends TdFunction {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'sender': this.sender,
+        'sender': this.sender.toJson(),
         'is_blocked': this.isBlocked,
         '@type': CONSTRUCTOR,
         '@extra': this.extra

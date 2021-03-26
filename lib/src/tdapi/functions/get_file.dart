@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Returns information about a file; this is an offline request
+/// Returns [File]
 class GetFile extends TdFunction {
   GetFile({required this.fileId});
 

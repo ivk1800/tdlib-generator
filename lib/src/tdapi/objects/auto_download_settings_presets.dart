@@ -40,9 +40,9 @@ class AutoDownloadSettingsPresets extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'low': this.low,
-        'medium': this.medium,
-        'high': this.high,
+        'low': this.low.toJson(),
+        'medium': this.medium.toJson(),
+        'high': this.high.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

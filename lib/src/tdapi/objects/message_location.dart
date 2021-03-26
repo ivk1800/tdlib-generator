@@ -48,7 +48,7 @@ class MessageLocation extends MessageContent {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'location': this.location,
+        'location': this.location.toJson(),
         'live_period': this.livePeriod,
         'expires_in': this.expiresIn,
         'heading': this.heading,

@@ -35,7 +35,7 @@ class NetworkStatistics extends TdObject {
   @override
   Map<String, dynamic> toJson() => {
         'since_date': this.sinceDate,
-        'entries': this.entries,
+        'entries': entries.map((item) => item.toJson()).toList(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

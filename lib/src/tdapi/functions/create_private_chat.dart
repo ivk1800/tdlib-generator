@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Returns an existing chat corresponding to a given user
+/// Returns [Chat]
 class CreatePrivateChat extends TdFunction {
   CreatePrivateChat({required this.userId, required this.force});
 

@@ -133,7 +133,7 @@ class SupergroupFullInfo extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'photo': this.photo,
+        'photo': this.photo?.toJson(),
         'description': this.description,
         'member_count': this.memberCount,
         'administrator_count': this.administratorCount,
@@ -149,7 +149,7 @@ class SupergroupFullInfo extends TdObject {
         'can_get_statistics': this.canGetStatistics,
         'is_all_history_available': this.isAllHistoryAvailable,
         'sticker_set_id': this.stickerSetId,
-        'location': this.location,
+        'location': this.location?.toJson(),
         'invite_link': this.inviteLink,
         'upgraded_from_basic_group_id': this.upgradedFromBasicGroupId,
         'upgraded_from_max_message_id': this.upgradedFromMaxMessageId,

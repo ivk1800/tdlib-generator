@@ -47,10 +47,10 @@ class NotificationGroup extends TdObject {
   @override
   Map<String, dynamic> toJson() => {
         'id': this.id,
-        'type': this.type,
+        'type': this.type.toJson(),
         'chat_id': this.chatId,
         'total_count': this.totalCount,
-        'notifications': this.notifications,
+        'notifications': notifications.map((item) => item.toJson()).toList(),
         '@type': CONSTRUCTOR
       };
 }

@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Returns saved animations
+/// Returns [Animations]
 class GetSavedAnimations extends TdFunction {
   GetSavedAnimations();
 

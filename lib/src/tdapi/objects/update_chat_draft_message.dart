@@ -38,8 +38,8 @@ class UpdateChatDraftMessage extends Update {
   @override
   Map<String, dynamic> toJson() => {
         'chat_id': this.chatId,
-        'draft_message': this.draftMessage,
-        'positions': this.positions,
+        'draft_message': this.draftMessage?.toJson(),
+        'positions': positions.map((item) => item.toJson()).toList(),
         '@type': CONSTRUCTOR
       };
 }

@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Parses Markdown entities in a human-friendly format, ignoring markup
 /// Can be called synchronously
+/// Returns [FormattedText]
 class ParseMarkdown extends TdFunction {
   ParseMarkdown({required this.text});
 
@@ -17,5 +18,5 @@ class ParseMarkdown extends TdFunction {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'text': this.text, '@type': CONSTRUCTOR, '@extra': this.extra};
+      {'text': this.text.toJson(), '@type': CONSTRUCTOR, '@extra': this.extra};
 }

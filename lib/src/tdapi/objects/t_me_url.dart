@@ -24,5 +24,5 @@ class TMeUrl extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'url': this.url, 'type': this.type, '@type': CONSTRUCTOR};
+      {'url': this.url, 'type': this.type.toJson(), '@type': CONSTRUCTOR};
 }

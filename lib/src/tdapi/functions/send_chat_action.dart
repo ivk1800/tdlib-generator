@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Sends a notification about user activity in a chat
+/// Returns [Ok]
 class SendChatAction extends TdFunction {
   SendChatAction(
       {required this.chatId,
@@ -28,7 +29,7 @@ class SendChatAction extends TdFunction {
   Map<String, dynamic> toJson() => {
         'chat_id': this.chatId,
         'message_thread_id': this.messageThreadId,
-        'action': this.action,
+        'action': this.action.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

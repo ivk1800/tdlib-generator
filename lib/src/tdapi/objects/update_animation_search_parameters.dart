@@ -28,6 +28,9 @@ class UpdateAnimationSearchParameters extends Update {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'provider': this.provider, 'emojis': this.emojis, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() => {
+        'provider': this.provider,
+        'emojis': emojis.map((item) => item).toList(),
+        '@type': CONSTRUCTOR
+      };
 }

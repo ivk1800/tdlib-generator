@@ -30,7 +30,7 @@ class InputChatPhotoAnimation extends InputChatPhoto {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'animation': this.animation,
+        'animation': this.animation.toJson(),
         'main_frame_timestamp': this.mainFrameTimestamp,
         '@type': CONSTRUCTOR
       };

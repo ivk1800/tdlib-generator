@@ -23,6 +23,8 @@ class MessageChatAddMembers extends MessageContent {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'member_user_ids': this.memberUserIds, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() => {
+        'member_user_ids': memberUserIds.map((item) => item).toList(),
+        '@type': CONSTRUCTOR
+      };
 }

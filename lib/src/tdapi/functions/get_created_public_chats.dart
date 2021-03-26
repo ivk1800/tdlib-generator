@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Returns a list of public chats of the specified type, owned by the user
+/// Returns [Chats]
 class GetCreatedPublicChats extends TdFunction {
   GetCreatedPublicChats({required this.type});
 
@@ -16,5 +17,5 @@ class GetCreatedPublicChats extends TdFunction {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'type': this.type, '@type': CONSTRUCTOR, '@extra': this.extra};
+      {'type': this.type.toJson(), '@type': CONSTRUCTOR, '@extra': this.extra};
 }

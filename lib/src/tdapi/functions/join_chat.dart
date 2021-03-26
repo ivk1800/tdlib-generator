@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Adds the current user as a new member to a chat. Private and secret chats
 /// be joined using this method
+/// Returns [Ok]
 class JoinChat extends TdFunction {
   JoinChat({required this.chatId});
 

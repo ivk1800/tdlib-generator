@@ -53,9 +53,9 @@ class MessageThreadInfo extends TdObject {
   Map<String, dynamic> toJson() => {
         'chat_id': this.chatId,
         'message_thread_id': this.messageThreadId,
-        'reply_info': this.replyInfo,
-        'messages': this.messages,
-        'draft_message': this.draftMessage,
+        'reply_info': this.replyInfo.toJson(),
+        'messages': messages.map((item) => item.toJson()).toList(),
+        'draft_message': this.draftMessage?.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

@@ -45,11 +45,11 @@ class DiceStickersSlotMachine extends DiceStickers {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'background': this.background,
-        'lever': this.lever,
-        'left_reel': this.leftReel,
-        'center_reel': this.centerReel,
-        'right_reel': this.rightReel,
+        'background': this.background.toJson(),
+        'lever': this.lever.toJson(),
+        'left_reel': this.leftReel.toJson(),
+        'center_reel': this.centerReel.toJson(),
+        'right_reel': this.rightReel.toJson(),
         '@type': CONSTRUCTOR
       };
 }

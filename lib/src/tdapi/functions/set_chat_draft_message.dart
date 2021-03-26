@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Changes the draft message in a chat
+/// Returns [Ok]
 class SetChatDraftMessage extends TdFunction {
   SetChatDraftMessage(
       {required this.chatId,
@@ -28,7 +29,7 @@ class SetChatDraftMessage extends TdFunction {
   Map<String, dynamic> toJson() => {
         'chat_id': this.chatId,
         'message_thread_id': this.messageThreadId,
-        'draft_message': this.draftMessage,
+        'draft_message': this.draftMessage?.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

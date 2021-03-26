@@ -32,7 +32,7 @@ class InlineQueryResultAnimation extends InlineQueryResult {
   @override
   Map<String, dynamic> toJson() => {
         'id': this.id,
-        'animation': this.animation,
+        'animation': this.animation.toJson(),
         'title': this.title,
         '@type': CONSTRUCTOR
       };

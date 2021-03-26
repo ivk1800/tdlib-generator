@@ -22,5 +22,5 @@ class ChatEventMessageUnpinned extends ChatEventAction {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'message': this.message, '@type': CONSTRUCTOR};
+      {'message': this.message.toJson(), '@type': CONSTRUCTOR};
 }

@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Sends a message. Returns the sent message
+/// Returns [Message]
 class SendMessage extends TdFunction {
   SendMessage(
       {required this.chatId,
@@ -41,9 +42,9 @@ class SendMessage extends TdFunction {
         'chat_id': this.chatId,
         'message_thread_id': this.messageThreadId,
         'reply_to_message_id': this.replyToMessageId,
-        'options': this.options,
-        'reply_markup': this.replyMarkup,
-        'input_message_content': this.inputMessageContent,
+        'options': this.options.toJson(),
+        'reply_markup': this.replyMarkup.toJson(),
+        'input_message_content': this.inputMessageContent.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

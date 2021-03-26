@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Sets a sticker set thumbnail; for bots only. Returns the sticker set
+/// Returns [StickerSet]
 class SetStickerSetThumbnail extends TdFunction {
   SetStickerSetThumbnail(
       {required this.userId, required this.name, required this.thumbnail});
@@ -27,7 +28,7 @@ class SetStickerSetThumbnail extends TdFunction {
   Map<String, dynamic> toJson() => {
         'user_id': this.userId,
         'name': this.name,
-        'thumbnail': this.thumbnail,
+        'thumbnail': this.thumbnail.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

@@ -23,5 +23,8 @@ class MessagePassportDataSent extends MessageContent {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() => {'types': this.types, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() => {
+        'types': types.map((item) => item.toJson()).toList(),
+        '@type': CONSTRUCTOR
+      };
 }

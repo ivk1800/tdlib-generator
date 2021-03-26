@@ -4,6 +4,7 @@ import '../tdapi.dart';
 /// the chat action bar, or if this is a private chats with a bot, a private
 /// with a user sharing their location, a supergroup, or a channel, since
 /// chats can't be checked by moderators
+/// Returns [Ok]
 class ReportChat extends TdFunction {
   ReportChat(
       {required this.chatId, required this.reason, required this.messageIds});
@@ -27,8 +28,8 @@ class ReportChat extends TdFunction {
   @override
   Map<String, dynamic> toJson() => {
         'chat_id': this.chatId,
-        'reason': this.reason,
-        'message_ids': this.messageIds,
+        'reason': this.reason.toJson(),
+        'message_ids': messageIds.map((item) => item).toList(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

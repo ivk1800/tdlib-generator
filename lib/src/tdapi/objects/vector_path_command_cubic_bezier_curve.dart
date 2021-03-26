@@ -31,9 +31,9 @@ class VectorPathCommandCubicBezierCurve extends VectorPathCommand {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'start_control_point': this.startControlPoint,
-        'end_control_point': this.endControlPoint,
-        'end_point': this.endPoint,
+        'start_control_point': this.startControlPoint.toJson(),
+        'end_control_point': this.endControlPoint.toJson(),
+        'end_point': this.endPoint.toJson(),
         '@type': CONSTRUCTOR
       };
 }

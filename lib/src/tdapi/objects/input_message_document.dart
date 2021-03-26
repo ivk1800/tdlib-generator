@@ -40,10 +40,10 @@ class InputMessageDocument extends InputMessageContent {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'document': this.document,
-        'thumbnail': this.thumbnail,
+        'document': this.document.toJson(),
+        'thumbnail': this.thumbnail.toJson(),
         'disable_content_type_detection': this.disableContentTypeDetection,
-        'caption': this.caption,
+        'caption': this.caption.toJson(),
         '@type': CONSTRUCTOR
       };
 }

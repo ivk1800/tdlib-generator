@@ -24,7 +24,7 @@ class PassportElementTemporaryRegistration extends PassportElement {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'temporary_registration': this.temporaryRegistration,
+        'temporary_registration': this.temporaryRegistration.toJson(),
         '@type': CONSTRUCTOR
       };
 }

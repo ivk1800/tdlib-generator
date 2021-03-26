@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Edits the content of a live location in an inline message sent via a bot;
 /// bots only
+/// Returns [Ok]
 class EditInlineMessageLiveLocation extends TdFunction {
   EditInlineMessageLiveLocation(
       {required this.inlineMessageId,
@@ -38,8 +39,8 @@ class EditInlineMessageLiveLocation extends TdFunction {
   @override
   Map<String, dynamic> toJson() => {
         'inline_message_id': this.inlineMessageId,
-        'reply_markup': this.replyMarkup,
-        'location': this.location,
+        'reply_markup': this.replyMarkup.toJson(),
+        'location': this.location?.toJson(),
         'heading': this.heading,
         'proximity_alert_radius': this.proximityAlertRadius,
         '@type': CONSTRUCTOR,

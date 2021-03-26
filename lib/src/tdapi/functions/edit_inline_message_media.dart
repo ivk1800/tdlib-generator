@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Edits the content of a message with an animation, an audio, a document, a
 /// or a video in an inline message sent via a bot; for bots only
+/// Returns [Ok]
 class EditInlineMessageMedia extends TdFunction {
   EditInlineMessageMedia(
       {required this.inlineMessageId,
@@ -29,8 +30,8 @@ class EditInlineMessageMedia extends TdFunction {
   @override
   Map<String, dynamic> toJson() => {
         'inline_message_id': this.inlineMessageId,
-        'reply_markup': this.replyMarkup,
-        'input_message_content': this.inputMessageContent,
+        'reply_markup': this.replyMarkup.toJson(),
+        'input_message_content': this.inputMessageContent.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

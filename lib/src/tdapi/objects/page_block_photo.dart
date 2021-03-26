@@ -30,8 +30,8 @@ class PageBlockPhoto extends PageBlock {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'photo': this.photo,
-        'caption': this.caption,
+        'photo': this.photo?.toJson(),
+        'caption': this.caption.toJson(),
         'url': this.url,
         '@type': CONSTRUCTOR
       };

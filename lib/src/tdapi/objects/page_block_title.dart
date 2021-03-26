@@ -20,5 +20,6 @@ class PageBlockTitle extends PageBlock {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() => {'title': this.title, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() =>
+      {'title': this.title.toJson(), '@type': CONSTRUCTOR};
 }

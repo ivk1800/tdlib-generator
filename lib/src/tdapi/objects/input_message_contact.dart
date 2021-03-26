@@ -21,5 +21,5 @@ class InputMessageContact extends InputMessageContent {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'contact': this.contact, '@type': CONSTRUCTOR};
+      {'contact': this.contact.toJson(), '@type': CONSTRUCTOR};
 }

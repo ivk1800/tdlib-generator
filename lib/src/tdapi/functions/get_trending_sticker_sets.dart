@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Returns a list of trending sticker sets. For the optimal performance the
 /// of returned sticker sets is chosen by the library
+/// Returns [StickerSets]
 class GetTrendingStickerSets extends TdFunction {
   GetTrendingStickerSets({required this.offset, required this.limit});
 

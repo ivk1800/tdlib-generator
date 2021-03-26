@@ -3,6 +3,7 @@ import '../tdapi.dart';
 /// Deletes all information about a language pack in the current localization
 /// The language pack which is currently in use (including base language pack)
 /// is being synchronized can't be deleted. Can be called before authorization
+/// Returns [Ok]
 class DeleteLanguagePack extends TdFunction {
   DeleteLanguagePack({required this.languagePackId});
 

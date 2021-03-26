@@ -54,7 +54,7 @@ class UpdateNewCallbackQuery extends Update {
         'chat_id': this.chatId,
         'message_id': this.messageId,
         'chat_instance': this.chatInstance,
-        'payload': this.payload,
+        'payload': this.payload.toJson(),
         '@type': CONSTRUCTOR
       };
 }

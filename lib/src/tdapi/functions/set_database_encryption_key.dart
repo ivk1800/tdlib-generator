@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Changes the database encryption key. Usually the encryption key is never
 /// and is stored in some OS keychain
+/// Returns [Ok]
 class SetDatabaseEncryptionKey extends TdFunction {
   SetDatabaseEncryptionKey({required this.newEncryptionKey});
 

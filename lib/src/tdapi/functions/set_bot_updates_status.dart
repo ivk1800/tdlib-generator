@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Informs the server about the number of pending bot updates if they haven't
 /// processed for a long time; for bots only
+/// Returns [Ok]
 class SetBotUpdatesStatus extends TdFunction {
   SetBotUpdatesStatus(
       {required this.pendingUpdateCount, required this.errorMessage});

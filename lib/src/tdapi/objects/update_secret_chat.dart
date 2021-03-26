@@ -23,5 +23,5 @@ class UpdateSecretChat extends Update {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'secret_chat': this.secretChat, '@type': CONSTRUCTOR};
+      {'secret_chat': this.secretChat.toJson(), '@type': CONSTRUCTOR};
 }

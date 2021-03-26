@@ -25,5 +25,5 @@ class InlineQueryResultGame extends InlineQueryResult {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'id': this.id, 'game': this.game, '@type': CONSTRUCTOR};
+      {'id': this.id, 'game': this.game.toJson(), '@type': CONSTRUCTOR};
 }

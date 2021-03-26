@@ -28,7 +28,7 @@ class Backgrounds extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'backgrounds': this.backgrounds,
+        'backgrounds': backgrounds.map((item) => item.toJson()).toList(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

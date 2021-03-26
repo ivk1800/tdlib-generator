@@ -27,7 +27,7 @@ class UpdateChatPermissions extends Update {
   @override
   Map<String, dynamic> toJson() => {
         'chat_id': this.chatId,
-        'permissions': this.permissions,
+        'permissions': this.permissions.toJson(),
         '@type': CONSTRUCTOR
       };
 }

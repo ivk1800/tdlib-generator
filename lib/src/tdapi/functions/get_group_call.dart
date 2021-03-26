@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Returns information about a group call
+/// Returns [GroupCall]
 class GetGroupCall extends TdFunction {
   GetGroupCall({required this.groupCallId});
 

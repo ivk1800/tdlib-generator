@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Changes the first and last name of the current user
+/// Returns [Ok]
 class SetName extends TdFunction {
   SetName({required this.firstName, required this.lastName});
 

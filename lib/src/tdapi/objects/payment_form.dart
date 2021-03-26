@@ -62,11 +62,11 @@ class PaymentForm extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'invoice': this.invoice,
+        'invoice': this.invoice.toJson(),
         'url': this.url,
-        'payments_provider': this.paymentsProvider,
-        'saved_order_info': this.savedOrderInfo,
-        'saved_credentials': this.savedCredentials,
+        'payments_provider': this.paymentsProvider?.toJson(),
+        'saved_order_info': this.savedOrderInfo?.toJson(),
+        'saved_credentials': this.savedCredentials?.toJson(),
         'can_save_credentials': this.canSaveCredentials,
         'need_password': this.needPassword,
         '@type': CONSTRUCTOR,

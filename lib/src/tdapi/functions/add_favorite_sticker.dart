@@ -4,6 +4,7 @@ import '../tdapi.dart';
 /// to the top of the list. If the sticker was already in the list, it is
 /// from the list first. Only stickers belonging to a sticker set can be added
 /// this list
+/// Returns [Ok]
 class AddFavoriteSticker extends TdFunction {
   AddFavoriteSticker({required this.sticker});
 
@@ -18,6 +19,9 @@ class AddFavoriteSticker extends TdFunction {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'sticker': this.sticker, '@type': CONSTRUCTOR, '@extra': this.extra};
+  Map<String, dynamic> toJson() => {
+        'sticker': this.sticker.toJson(),
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

@@ -78,10 +78,10 @@ class Sticker extends TdObject {
         'emoji': this.emoji,
         'is_animated': this.isAnimated,
         'is_mask': this.isMask,
-        'mask_position': this.maskPosition,
-        'outline': this.outline,
-        'thumbnail': this.thumbnail,
-        'sticker': this.sticker,
+        'mask_position': this.maskPosition?.toJson(),
+        'outline': outline.map((item) => item.toJson()).toList(),
+        'thumbnail': this.thumbnail?.toJson(),
+        'sticker': this.sticker.toJson(),
         '@type': CONSTRUCTOR
       };
 }

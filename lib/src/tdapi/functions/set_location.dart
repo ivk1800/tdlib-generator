@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Changes the location of the current user. Needs to be called if
 /// is true and location changes for more than 1 kilometer
+/// Returns [Ok]
 class SetLocation extends TdFunction {
   SetLocation({required this.location});
 
@@ -16,6 +17,9 @@ class SetLocation extends TdFunction {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'location': this.location, '@type': CONSTRUCTOR, '@extra': this.extra};
+  Map<String, dynamic> toJson() => {
+        'location': this.location.toJson(),
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

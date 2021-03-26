@@ -20,5 +20,6 @@ class InputMessageVenue extends InputMessageContent {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() => {'venue': this.venue, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() =>
+      {'venue': this.venue.toJson(), '@type': CONSTRUCTOR};
 }

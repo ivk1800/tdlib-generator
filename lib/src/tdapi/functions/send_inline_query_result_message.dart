@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Sends the result of an inline query as a message. Returns the sent
 /// Always clears a chat draft message
+/// Returns [Message]
 class SendInlineQueryResultMessage extends TdFunction {
   SendInlineQueryResultMessage(
       {required this.chatId,
@@ -48,7 +49,7 @@ class SendInlineQueryResultMessage extends TdFunction {
         'chat_id': this.chatId,
         'message_thread_id': this.messageThreadId,
         'reply_to_message_id': this.replyToMessageId,
-        'options': this.options,
+        'options': this.options.toJson(),
         'query_id': this.queryId,
         'result_id': this.resultId,
         'hide_via_bot': this.hideViaBot,

@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Changes the slow mode delay of a chat. Available only for supergroups;
 /// can_restrict_members rights
+/// Returns [Ok]
 class SetChatSlowModeDelay extends TdFunction {
   SetChatSlowModeDelay({required this.chatId, required this.slowModeDelay});
 

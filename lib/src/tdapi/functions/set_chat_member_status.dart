@@ -4,6 +4,7 @@ import '../tdapi.dart';
 /// is currently not suitable for adding new members to the chat and
 /// chat ownership; instead, use addChatMember or transferChatOwnership. The
 /// member status will not be changed until it has been synchronized with the
+/// Returns [Ok]
 class SetChatMemberStatus extends TdFunction {
   SetChatMemberStatus(
       {required this.chatId, required this.userId, required this.status});
@@ -28,7 +29,7 @@ class SetChatMemberStatus extends TdFunction {
   Map<String, dynamic> toJson() => {
         'chat_id': this.chatId,
         'user_id': this.userId,
-        'status': this.status,
+        'status': this.status.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

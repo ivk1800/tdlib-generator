@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Returns information about a public or private message link
+/// Returns [MessageLinkInfo]
 class GetMessageLinkInfo extends TdFunction {
   GetMessageLinkInfo({required this.url});
 

@@ -33,7 +33,7 @@ class ChatPhotos extends TdObject {
   @override
   Map<String, dynamic> toJson() => {
         'total_count': this.totalCount,
-        'photos': this.photos,
+        'photos': photos.map((item) => item.toJson()).toList(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Reports some messages from a user in a supergroup as spam; requires
 /// rights in the supergroup
+/// Returns [Ok]
 class ReportSupergroupSpam extends TdFunction {
   ReportSupergroupSpam(
       {required this.supergroupId,
@@ -29,7 +30,7 @@ class ReportSupergroupSpam extends TdFunction {
   Map<String, dynamic> toJson() => {
         'supergroup_id': this.supergroupId,
         'user_id': this.userId,
-        'message_ids': this.messageIds,
+        'message_ids': messageIds.map((item) => item).toList(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

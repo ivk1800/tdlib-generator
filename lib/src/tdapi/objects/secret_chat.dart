@@ -68,7 +68,7 @@ class SecretChat extends TdObject {
   Map<String, dynamic> toJson() => {
         'id': this.id,
         'user_id': this.userId,
-        'state': this.state,
+        'state': this.state.toJson(),
         'is_outbound': this.isOutbound,
         'ttl': this.ttl,
         'key_hash': this.keyHash,

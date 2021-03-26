@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Returns an HTTPS link, which can be used to add a proxy. Available only
 /// SOCKS5 and MTProto proxies. Can be called before authorization
+/// Returns [Text]
 class GetProxyLink extends TdFunction {
   GetProxyLink({required this.proxyId});
 

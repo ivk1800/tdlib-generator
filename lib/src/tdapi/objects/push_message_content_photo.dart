@@ -38,7 +38,7 @@ class PushMessageContentPhoto extends PushMessageContent {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'photo': this.photo,
+        'photo': this.photo?.toJson(),
         'caption': this.caption,
         'is_secret': this.isSecret,
         'is_pinned': this.isPinned,

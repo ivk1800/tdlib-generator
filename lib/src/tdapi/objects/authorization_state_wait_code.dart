@@ -22,5 +22,5 @@ class AuthorizationStateWaitCode extends AuthorizationState {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'code_info': this.codeInfo, '@type': CONSTRUCTOR};
+      {'code_info': this.codeInfo.toJson(), '@type': CONSTRUCTOR};
 }

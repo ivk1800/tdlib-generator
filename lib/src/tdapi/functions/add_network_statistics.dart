@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Adds the specified data to data usage statistics. Can be called before
+/// Returns [Ok]
 class AddNetworkStatistics extends TdFunction {
   AddNetworkStatistics({required this.entry});
 
@@ -15,6 +16,9 @@ class AddNetworkStatistics extends TdFunction {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'entry': this.entry, '@type': CONSTRUCTOR, '@extra': this.extra};
+  Map<String, dynamic> toJson() => {
+        'entry': this.entry.toJson(),
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

@@ -34,8 +34,8 @@ class GroupCallJoinResponse extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'payload': this.payload,
-        'candidates': this.candidates,
+        'payload': this.payload.toJson(),
+        'candidates': candidates.map((item) => item.toJson()).toList(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

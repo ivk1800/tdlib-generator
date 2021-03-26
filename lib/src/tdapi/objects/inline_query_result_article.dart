@@ -53,7 +53,7 @@ class InlineQueryResultArticle extends InlineQueryResult {
         'hide_url': this.hideUrl,
         'title': this.title,
         'description': this.description,
-        'thumbnail': this.thumbnail,
+        'thumbnail': this.thumbnail?.toJson(),
         '@type': CONSTRUCTOR
       };
 }

@@ -5,6 +5,7 @@ import '../tdapi.dart';
 /// to self-destruct. Media can't be replaced by self-destructing media. Media
 /// an album can be edited only to contain a photo or a video. Returns the
 /// message after the edit is completed on the server side
+/// Returns [Message]
 class EditMessageMedia extends TdFunction {
   EditMessageMedia(
       {required this.chatId,
@@ -37,8 +38,8 @@ class EditMessageMedia extends TdFunction {
   Map<String, dynamic> toJson() => {
         'chat_id': this.chatId,
         'message_id': this.messageId,
-        'reply_markup': this.replyMarkup,
-        'input_message_content': this.inputMessageContent,
+        'reply_markup': this.replyMarkup.toJson(),
+        'input_message_content': this.inputMessageContent.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

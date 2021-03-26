@@ -6,6 +6,7 @@ import '../tdapi.dart';
 /// is deleted. Returns the sent messages in the same order as the message
 /// passed in message_ids. If a message can't be re-sent, null will be
 /// instead of the message
+/// Returns [Messages]
 class ResendMessages extends TdFunction {
   ResendMessages({required this.chatId, required this.messageIds});
 
@@ -26,7 +27,7 @@ class ResendMessages extends TdFunction {
   @override
   Map<String, dynamic> toJson() => {
         'chat_id': this.chatId,
-        'message_ids': this.messageIds,
+        'message_ids': messageIds.map((item) => item).toList(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

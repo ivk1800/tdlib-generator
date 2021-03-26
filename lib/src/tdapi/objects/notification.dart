@@ -41,7 +41,7 @@ class Notification extends TdObject {
         'id': this.id,
         'date': this.date,
         'is_silent': this.isSilent,
-        'type': this.type,
+        'type': this.type.toJson(),
         '@type': CONSTRUCTOR
       };
 }

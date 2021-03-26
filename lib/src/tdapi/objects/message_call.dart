@@ -34,7 +34,7 @@ class MessageCall extends MessageContent {
   @override
   Map<String, dynamic> toJson() => {
         'is_video': this.isVideo,
-        'discard_reason': this.discardReason,
+        'discard_reason': this.discardReason.toJson(),
         'duration': this.duration,
         '@type': CONSTRUCTOR
       };

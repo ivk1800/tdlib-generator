@@ -27,7 +27,7 @@ class UpdateUserFullInfo extends Update {
   @override
   Map<String, dynamic> toJson() => {
         'user_id': this.userId,
-        'user_full_info': this.userFullInfo,
+        'user_full_info': this.userFullInfo.toJson(),
         '@type': CONSTRUCTOR
       };
 }

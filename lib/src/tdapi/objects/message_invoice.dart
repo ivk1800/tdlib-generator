@@ -67,7 +67,7 @@ class MessageInvoice extends MessageContent {
   Map<String, dynamic> toJson() => {
         'title': this.title,
         'description': this.description,
-        'photo': this.photo,
+        'photo': this.photo?.toJson(),
         'currency': this.currency,
         'total_amount': this.totalAmount,
         'start_parameter': this.startParameter,

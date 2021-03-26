@@ -69,14 +69,14 @@ class InputInlineQueryResultLocation extends InputInlineQueryResult {
   @override
   Map<String, dynamic> toJson() => {
         'id': this.id,
-        'location': this.location,
+        'location': this.location.toJson(),
         'live_period': this.livePeriod,
         'title': this.title,
         'thumbnail_url': this.thumbnailUrl,
         'thumbnail_width': this.thumbnailWidth,
         'thumbnail_height': this.thumbnailHeight,
-        'reply_markup': this.replyMarkup,
-        'input_message_content': this.inputMessageContent,
+        'reply_markup': this.replyMarkup?.toJson(),
+        'input_message_content': this.inputMessageContent.toJson(),
         '@type': CONSTRUCTOR
       };
 }

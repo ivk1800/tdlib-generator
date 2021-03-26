@@ -25,5 +25,5 @@ class JsonObjectMember extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'key': this.key, 'value': this.value, '@type': CONSTRUCTOR};
+      {'key': this.key, 'value': this.value.toJson(), '@type': CONSTRUCTOR};
 }

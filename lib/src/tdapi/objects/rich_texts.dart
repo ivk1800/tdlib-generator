@@ -23,5 +23,8 @@ class RichTexts extends RichText {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() => {'texts': this.texts, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() => {
+        'texts': texts.map((item) => item.toJson()).toList(),
+        '@type': CONSTRUCTOR
+      };
 }

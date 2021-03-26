@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Edits existing chat filter. Returns information about the edited chat
+/// Returns [ChatFilterInfo]
 class EditChatFilter extends TdFunction {
   EditChatFilter({required this.chatFilterId, required this.filter});
 
@@ -20,7 +21,7 @@ class EditChatFilter extends TdFunction {
   @override
   Map<String, dynamic> toJson() => {
         'chat_filter_id': this.chatFilterId,
-        'filter': this.filter,
+        'filter': this.filter.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

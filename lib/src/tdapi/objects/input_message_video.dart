@@ -68,14 +68,15 @@ class InputMessageVideo extends InputMessageContent {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'video': this.video,
-        'thumbnail': this.thumbnail,
-        'added_sticker_file_ids': this.addedStickerFileIds,
+        'video': this.video.toJson(),
+        'thumbnail': this.thumbnail.toJson(),
+        'added_sticker_file_ids':
+            addedStickerFileIds.map((item) => item).toList(),
         'duration': this.duration,
         'width': this.width,
         'height': this.height,
         'supports_streaming': this.supportsStreaming,
-        'caption': this.caption,
+        'caption': this.caption.toJson(),
         'ttl': this.ttl,
         '@type': CONSTRUCTOR
       };

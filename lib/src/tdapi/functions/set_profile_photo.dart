@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Changes a profile photo for the current user
+/// Returns [Ok]
 class SetProfilePhoto extends TdFunction {
   SetProfilePhoto({required this.photo});
 
@@ -15,6 +16,9 @@ class SetProfilePhoto extends TdFunction {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'photo': this.photo, '@type': CONSTRUCTOR, '@extra': this.extra};
+  Map<String, dynamic> toJson() => {
+        'photo': this.photo.toJson(),
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Searches for stickers from public sticker sets that correspond to a given
+/// Returns [Stickers]
 class SearchStickers extends TdFunction {
   SearchStickers({required this.emoji, required this.limit});
 

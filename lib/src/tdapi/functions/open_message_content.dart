@@ -4,6 +4,7 @@ import '../tdapi.dart';
 /// a photo, video, document, location or venue, or has listened to an audio
 /// or voice note message). An updateMessageContentOpened update will be
 /// if something has changed
+/// Returns [Ok]
 class OpenMessageContent extends TdFunction {
   OpenMessageContent({required this.chatId, required this.messageId});
 

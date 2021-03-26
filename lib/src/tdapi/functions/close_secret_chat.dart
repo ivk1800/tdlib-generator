@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Closes a secret chat, effectively transferring its state to
+/// Returns [Ok]
 class CloseSecretChat extends TdFunction {
   CloseSecretChat({required this.secretChatId});
 

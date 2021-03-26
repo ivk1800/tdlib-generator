@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Changes the bio of the current user
+/// Returns [Ok]
 class SetBio extends TdFunction {
   SetBio({required this.bio});
 

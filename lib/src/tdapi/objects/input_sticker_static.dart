@@ -34,9 +34,9 @@ class InputStickerStatic extends InputSticker {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'sticker': this.sticker,
+        'sticker': this.sticker.toJson(),
         'emojis': this.emojis,
-        'mask_position': this.maskPosition,
+        'mask_position': this.maskPosition?.toJson(),
         '@type': CONSTRUCTOR
       };
 }

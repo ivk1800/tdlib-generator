@@ -62,8 +62,8 @@ class InputInlineQueryResultAudio extends InputInlineQueryResult {
         'performer': this.performer,
         'audio_url': this.audioUrl,
         'audio_duration': this.audioDuration,
-        'reply_markup': this.replyMarkup,
-        'input_message_content': this.inputMessageContent,
+        'reply_markup': this.replyMarkup?.toJson(),
+        'input_message_content': this.inputMessageContent.toJson(),
         '@type': CONSTRUCTOR
       };
 }

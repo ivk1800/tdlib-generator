@@ -51,7 +51,7 @@ class WebPageInstantView extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'page_blocks': this.pageBlocks,
+        'page_blocks': pageBlocks.map((item) => item.toJson()).toList(),
         'view_count': this.viewCount,
         'version': this.version,
         'is_rtl': this.isRtl,

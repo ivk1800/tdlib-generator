@@ -23,6 +23,8 @@ class UpdateChatFilters extends Update {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'chat_filters': this.chatFilters, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() => {
+        'chat_filters': chatFilters.map((item) => item.toJson()).toList(),
+        '@type': CONSTRUCTOR
+      };
 }

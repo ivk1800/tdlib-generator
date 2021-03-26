@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Deletes a file from the TDLib file cache
+/// Returns [Ok]
 class DeleteFile extends TdFunction {
   DeleteFile({required this.fileId});
 

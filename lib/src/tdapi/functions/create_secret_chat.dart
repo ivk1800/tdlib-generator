@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Returns an existing chat corresponding to a known secret chat
+/// Returns [Chat]
 class CreateSecretChat extends TdFunction {
   CreateSecretChat({required this.secretChatId});
 

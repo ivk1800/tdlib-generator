@@ -4,6 +4,7 @@ import '../tdapi.dart';
 /// newly added contacts and, if at least the file database is enabled,
 /// recently deleted contacts.. Query result depends on the result of the
 /// query, so only one query is possible at the same time
+/// Returns [ImportedContacts]
 class ChangeImportedContacts extends TdFunction {
   ChangeImportedContacts({required this.contacts});
 
@@ -19,6 +20,9 @@ class ChangeImportedContacts extends TdFunction {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'contacts': this.contacts, '@type': CONSTRUCTOR, '@extra': this.extra};
+  Map<String, dynamic> toJson() => {
+        'contacts': contacts.map((item) => item.toJson()).toList(),
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

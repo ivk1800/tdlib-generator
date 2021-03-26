@@ -3,6 +3,7 @@ import '../tdapi.dart';
 /// Edits the message content of a live location. Messages can be edited for a
 /// period of time specified in the live location. Returns the edited message
 /// the edit is completed on the server side
+/// Returns [Message]
 class EditMessageLiveLocation extends TdFunction {
   EditMessageLiveLocation(
       {required this.chatId,
@@ -44,8 +45,8 @@ class EditMessageLiveLocation extends TdFunction {
   Map<String, dynamic> toJson() => {
         'chat_id': this.chatId,
         'message_id': this.messageId,
-        'reply_markup': this.replyMarkup,
-        'location': this.location,
+        'reply_markup': this.replyMarkup.toJson(),
+        'location': this.location?.toJson(),
         'heading': this.heading,
         'proximity_alert_radius': this.proximityAlertRadius,
         '@type': CONSTRUCTOR,

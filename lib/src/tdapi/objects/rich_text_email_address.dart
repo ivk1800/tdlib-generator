@@ -26,7 +26,7 @@ class RichTextEmailAddress extends RichText {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'text': this.text,
+        'text': this.text.toJson(),
         'email_address': this.emailAddress,
         '@type': CONSTRUCTOR
       };

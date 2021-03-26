@@ -39,9 +39,9 @@ class InlineQueryResultLocation extends InlineQueryResult {
   @override
   Map<String, dynamic> toJson() => {
         'id': this.id,
-        'location': this.location,
+        'location': this.location.toJson(),
         'title': this.title,
-        'thumbnail': this.thumbnail,
+        'thumbnail': this.thumbnail?.toJson(),
         '@type': CONSTRUCTOR
       };
 }

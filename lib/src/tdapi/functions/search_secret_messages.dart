@@ -3,6 +3,7 @@ import '../tdapi.dart';
 /// Searches for messages in secret chats. Returns the results in reverse
 /// order. For optimal performance the number of returned messages is chosen
 /// the library
+/// Returns [FoundMessages]
 class SearchSecretMessages extends TdFunction {
   SearchSecretMessages(
       {required this.chatId,
@@ -43,7 +44,7 @@ class SearchSecretMessages extends TdFunction {
         'query': this.query,
         'offset': this.offset,
         'limit': this.limit,
-        'filter': this.filter,
+        'filter': this.filter.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Returns approximate number of messages of the specified type in the chat
+/// Returns [Count]
 class GetChatMessageCount extends TdFunction {
   GetChatMessageCount(
       {required this.chatId, required this.filter, required this.returnLocal});
@@ -26,7 +27,7 @@ class GetChatMessageCount extends TdFunction {
   @override
   Map<String, dynamic> toJson() => {
         'chat_id': this.chatId,
-        'filter': this.filter,
+        'filter': this.filter.toJson(),
         'return_local': this.returnLocal,
         '@type': CONSTRUCTOR,
         '@extra': this.extra

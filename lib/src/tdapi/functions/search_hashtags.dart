@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Searches for recently used hashtags by their prefix
+/// Returns [Hashtags]
 class SearchHashtags extends TdFunction {
   SearchHashtags({required this.prefix, required this.limit});
 

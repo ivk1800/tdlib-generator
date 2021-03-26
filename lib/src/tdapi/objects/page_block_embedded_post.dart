@@ -53,10 +53,10 @@ class PageBlockEmbeddedPost extends PageBlock {
   Map<String, dynamic> toJson() => {
         'url': this.url,
         'author': this.author,
-        'author_photo': this.authorPhoto,
+        'author_photo': this.authorPhoto?.toJson(),
         'date': this.date,
-        'page_blocks': this.pageBlocks,
-        'caption': this.caption,
+        'page_blocks': pageBlocks.map((item) => item.toJson()).toList(),
+        'caption': this.caption.toJson(),
         '@type': CONSTRUCTOR
       };
 }

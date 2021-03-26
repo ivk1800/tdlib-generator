@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Edits the message content caption. Returns the edited message after the
 /// is completed on the server side
+/// Returns [Message]
 class EditMessageCaption extends TdFunction {
   EditMessageCaption(
       {required this.chatId,
@@ -33,8 +34,8 @@ class EditMessageCaption extends TdFunction {
   Map<String, dynamic> toJson() => {
         'chat_id': this.chatId,
         'message_id': this.messageId,
-        'reply_markup': this.replyMarkup,
-        'caption': this.caption,
+        'reply_markup': this.replyMarkup.toJson(),
+        'caption': this.caption.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

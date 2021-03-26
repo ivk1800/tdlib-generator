@@ -4,6 +4,7 @@ import '../tdapi.dart';
 /// command. Bots can't be invited to a private chat other than the chat with
 /// bot. Bots can't be invited to channels (although they can be added as
 /// and secret chats. Returns the sent message
+/// Returns [Message]
 class SendBotStartMessage extends TdFunction {
   SendBotStartMessage(
       {required this.botUserId, required this.chatId, required this.parameter});

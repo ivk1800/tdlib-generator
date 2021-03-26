@@ -49,12 +49,12 @@ class PageBlockTableCell extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'text': this.text,
+        'text': this.text?.toJson(),
         'is_header': this.isHeader,
         'colspan': this.colspan,
         'rowspan': this.rowspan,
-        'align': this.align,
-        'valign': this.valign,
+        'align': this.align.toJson(),
+        'valign': this.valign.toJson(),
         '@type': CONSTRUCTOR
       };
 }

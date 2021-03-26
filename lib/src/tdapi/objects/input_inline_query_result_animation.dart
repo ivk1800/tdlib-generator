@@ -89,8 +89,8 @@ class InputInlineQueryResultAnimation extends InputInlineQueryResult {
         'video_duration': this.videoDuration,
         'video_width': this.videoWidth,
         'video_height': this.videoHeight,
-        'reply_markup': this.replyMarkup,
-        'input_message_content': this.inputMessageContent,
+        'reply_markup': this.replyMarkup?.toJson(),
+        'input_message_content': this.inputMessageContent.toJson(),
         '@type': CONSTRUCTOR
       };
 }

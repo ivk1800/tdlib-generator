@@ -34,7 +34,7 @@ class AnimatedChatPhoto extends TdObject {
   @override
   Map<String, dynamic> toJson() => {
         'length': this.length,
-        'file': this.file,
+        'file': this.file.toJson(),
         'main_frame_timestamp': this.mainFrameTimestamp,
         '@type': CONSTRUCTOR
       };

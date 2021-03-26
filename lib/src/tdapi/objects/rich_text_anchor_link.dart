@@ -32,7 +32,7 @@ class RichTextAnchorLink extends RichText {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'text': this.text,
+        'text': this.text.toJson(),
         'anchor_name': this.anchorName,
         'url': this.url,
         '@type': CONSTRUCTOR

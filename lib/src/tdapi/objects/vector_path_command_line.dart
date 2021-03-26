@@ -21,5 +21,5 @@ class VectorPathCommandLine extends VectorPathCommand {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'end_point': this.endPoint, '@type': CONSTRUCTOR};
+      {'end_point': this.endPoint.toJson(), '@type': CONSTRUCTOR};
 }

@@ -28,8 +28,8 @@ class PageBlockSlideshow extends PageBlock {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'page_blocks': this.pageBlocks,
-        'caption': this.caption,
+        'page_blocks': pageBlocks.map((item) => item.toJson()).toList(),
+        'caption': this.caption.toJson(),
         '@type': CONSTRUCTOR
       };
 }

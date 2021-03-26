@@ -3,6 +3,7 @@ import '../tdapi.dart';
 /// Changes the pinned state of a chat. There can be up to
 /// pinned non-secret chats and the same number of secret chats in the
 /// chat list
+/// Returns [Ok]
 class ToggleChatIsPinned extends TdFunction {
   ToggleChatIsPinned(
       {required this.chatList, required this.chatId, required this.isPinned});
@@ -25,7 +26,7 @@ class ToggleChatIsPinned extends TdFunction {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'chat_list': this.chatList,
+        'chat_list': this.chatList.toJson(),
         'chat_id': this.chatId,
         'is_pinned': this.isPinned,
         '@type': CONSTRUCTOR,

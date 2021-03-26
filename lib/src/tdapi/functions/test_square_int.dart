@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Returns the squared received number; for testing only. This is an offline
 /// Can be called before authorization
+/// Returns [TestInt]
 class TestSquareInt extends TdFunction {
   TestSquareInt({required this.x});
 

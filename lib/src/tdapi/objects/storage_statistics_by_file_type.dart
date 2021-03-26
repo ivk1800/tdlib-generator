@@ -31,7 +31,7 @@ class StorageStatisticsByFileType extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'file_type': this.fileType,
+        'file_type': this.fileType.toJson(),
         'size': this.size,
         'count': this.count,
         '@type': CONSTRUCTOR

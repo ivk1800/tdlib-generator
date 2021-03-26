@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Creates new chat filter. Returns information about the created chat filter
+/// Returns [ChatFilterInfo]
 class CreateChatFilter extends TdFunction {
   CreateChatFilter({required this.filter});
 
@@ -15,6 +16,9 @@ class CreateChatFilter extends TdFunction {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'filter': this.filter, '@type': CONSTRUCTOR, '@extra': this.extra};
+  Map<String, dynamic> toJson() => {
+        'filter': this.filter.toJson(),
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

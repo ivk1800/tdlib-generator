@@ -22,5 +22,5 @@ class PassportElementIdentityCard extends PassportElement {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'identity_card': this.identityCard, '@type': CONSTRUCTOR};
+      {'identity_card': this.identityCard.toJson(), '@type': CONSTRUCTOR};
 }

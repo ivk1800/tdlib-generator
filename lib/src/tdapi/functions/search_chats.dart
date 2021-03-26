@@ -3,6 +3,7 @@ import '../tdapi.dart';
 /// Searches for the specified query in the title and username of already
 /// chats, this is an offline request. Returns chats in the order seen in the
 /// chat list
+/// Returns [Chats]
 class SearchChats extends TdFunction {
   SearchChats({required this.query, required this.limit});
 

@@ -35,7 +35,7 @@ class UpdateMessageContent extends Update {
   Map<String, dynamic> toJson() => {
         'chat_id': this.chatId,
         'message_id': this.messageId,
-        'new_content': this.newContent,
+        'new_content': this.newContent.toJson(),
         '@type': CONSTRUCTOR
       };
 }

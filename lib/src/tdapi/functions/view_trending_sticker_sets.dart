@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Informs the server that some trending sticker sets have been viewed by the
+/// Returns [Ok]
 class ViewTrendingStickerSets extends TdFunction {
   ViewTrendingStickerSets({required this.stickerSetIds});
 
@@ -16,7 +17,7 @@ class ViewTrendingStickerSets extends TdFunction {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'sticker_set_ids': this.stickerSetIds,
+        'sticker_set_ids': stickerSetIds.map((item) => item).toList(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

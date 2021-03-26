@@ -104,16 +104,17 @@ class StickerSet extends TdObject {
         'id': this.id,
         'title': this.title,
         'name': this.name,
-        'thumbnail': this.thumbnail,
-        'thumbnail_outline': this.thumbnailOutline,
+        'thumbnail': this.thumbnail?.toJson(),
+        'thumbnail_outline':
+            thumbnailOutline.map((item) => item.toJson()).toList(),
         'is_installed': this.isInstalled,
         'is_archived': this.isArchived,
         'is_official': this.isOfficial,
         'is_animated': this.isAnimated,
         'is_masks': this.isMasks,
         'is_viewed': this.isViewed,
-        'stickers': this.stickers,
-        'emojis': this.emojis,
+        'stickers': stickers.map((item) => item.toJson()).toList(),
+        'emojis': emojis.map((item) => item.toJson()).toList(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

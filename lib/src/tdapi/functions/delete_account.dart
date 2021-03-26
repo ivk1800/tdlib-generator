@@ -4,6 +4,7 @@ import '../tdapi.dart';
 /// with the user from the server. The phone number of the account can be used
 /// create a new account. Can be called before authorization when the current
 /// state is authorizationStateWaitPassword
+/// Returns [Ok]
 class DeleteAccount extends TdFunction {
   DeleteAccount({required this.reason});
 

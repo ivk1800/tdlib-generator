@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Searches for ordinary sticker sets by looking for specified query in their
 /// and name. Excludes installed sticker sets from the results
+/// Returns [StickerSets]
 class SearchStickerSets extends TdFunction {
   SearchStickerSets({required this.query});
 

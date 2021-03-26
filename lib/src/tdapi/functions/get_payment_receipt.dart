@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Returns information about a successful payment
+/// Returns [PaymentReceipt]
 class GetPaymentReceipt extends TdFunction {
   GetPaymentReceipt({required this.chatId, required this.messageId});
 

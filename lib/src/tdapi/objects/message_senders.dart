@@ -33,7 +33,7 @@ class MessageSenders extends TdObject {
   @override
   Map<String, dynamic> toJson() => {
         'total_count': this.totalCount,
-        'senders': this.senders,
+        'senders': senders.map((item) => item.toJson()).toList(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

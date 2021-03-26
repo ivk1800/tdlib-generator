@@ -49,7 +49,7 @@ class Venue extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'location': this.location,
+        'location': this.location.toJson(),
         'title': this.title,
         'address': this.address,
         'provider': this.provider,

@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Checks whether a username can be set for a chat
+/// Returns [CheckChatUsernameResult]
 class CheckChatUsername extends TdFunction {
   CheckChatUsername({required this.chatId, required this.username});
 

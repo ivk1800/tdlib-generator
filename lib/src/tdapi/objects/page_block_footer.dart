@@ -21,5 +21,5 @@ class PageBlockFooter extends PageBlock {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'footer': this.footer, '@type': CONSTRUCTOR};
+      {'footer': this.footer.toJson(), '@type': CONSTRUCTOR};
 }

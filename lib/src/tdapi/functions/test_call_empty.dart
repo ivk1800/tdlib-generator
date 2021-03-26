@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Does nothing; for testing only. This is an offline method. Can be called
 /// authorization
+/// Returns [Ok]
 class TestCallEmpty extends TdFunction {
   TestCallEmpty();
 

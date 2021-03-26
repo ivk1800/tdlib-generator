@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Deletes existing chat filter
+/// Returns [Ok]
 class DeleteChatFilter extends TdFunction {
   DeleteChatFilter({required this.chatFilterId});
 

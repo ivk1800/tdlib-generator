@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Optimizes storage usage, i.e. deletes some files and returns new storage
 /// statistics. Secret thumbnails can't be deleted
+/// Returns [StorageStatistics]
 class OptimizeStorage extends TdFunction {
   OptimizeStorage(
       {required this.size,
@@ -66,9 +67,9 @@ class OptimizeStorage extends TdFunction {
         'ttl': this.ttl,
         'count': this.count,
         'immunity_delay': this.immunityDelay,
-        'file_types': this.fileTypes,
-        'chat_ids': this.chatIds,
-        'exclude_chat_ids': this.excludeChatIds,
+        'file_types': fileTypes.map((item) => item.toJson()).toList(),
+        'chat_ids': chatIds.map((item) => item).toList(),
+        'exclude_chat_ids': excludeChatIds.map((item) => item).toList(),
         'return_deleted_file_statistics': this.returnDeletedFileStatistics,
         'chat_limit': this.chatLimit,
         '@type': CONSTRUCTOR,

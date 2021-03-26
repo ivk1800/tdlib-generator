@@ -49,7 +49,7 @@ class UpdateUnreadChatCount extends Update {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'chat_list': this.chatList,
+        'chat_list': this.chatList.toJson(),
         'total_count': this.totalCount,
         'unread_count': this.unreadCount,
         'unread_unmuted_count': this.unreadUnmutedCount,

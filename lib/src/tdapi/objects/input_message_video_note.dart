@@ -38,8 +38,8 @@ class InputMessageVideoNote extends InputMessageContent {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'video_note': this.videoNote,
-        'thumbnail': this.thumbnail,
+        'video_note': this.videoNote.toJson(),
+        'thumbnail': this.thumbnail.toJson(),
         'duration': this.duration,
         'length': this.length,
         '@type': CONSTRUCTOR

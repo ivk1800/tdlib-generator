@@ -26,6 +26,9 @@ class Hashtags extends TdObject {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'hashtags': this.hashtags, '@type': CONSTRUCTOR, '@extra': this.extra};
+  Map<String, dynamic> toJson() => {
+        'hashtags': hashtags.map((item) => item).toList(),
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

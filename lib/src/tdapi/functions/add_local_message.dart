@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Adds a local message to a chat. The message is persistent across
 /// restarts only if the message database is used. Returns the added message
+/// Returns [Message]
 class AddLocalMessage extends TdFunction {
   AddLocalMessage(
       {required this.chatId,
@@ -35,10 +36,10 @@ class AddLocalMessage extends TdFunction {
   @override
   Map<String, dynamic> toJson() => {
         'chat_id': this.chatId,
-        'sender': this.sender,
+        'sender': this.sender.toJson(),
         'reply_to_message_id': this.replyToMessageId,
         'disable_notification': this.disableNotification,
-        'input_message_content': this.inputMessageContent,
+        'input_message_content': this.inputMessageContent.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

@@ -57,8 +57,8 @@ class InputInlineQueryResultVoiceNote extends InputInlineQueryResult {
         'title': this.title,
         'voice_note_url': this.voiceNoteUrl,
         'voice_note_duration': this.voiceNoteDuration,
-        'reply_markup': this.replyMarkup,
-        'input_message_content': this.inputMessageContent,
+        'reply_markup': this.replyMarkup?.toJson(),
+        'input_message_content': this.inputMessageContent.toJson(),
         '@type': CONSTRUCTOR
       };
 }

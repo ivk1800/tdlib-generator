@@ -80,8 +80,8 @@ class InputInlineQueryResultArticle extends InputInlineQueryResult {
         'thumbnail_url': this.thumbnailUrl,
         'thumbnail_width': this.thumbnailWidth,
         'thumbnail_height': this.thumbnailHeight,
-        'reply_markup': this.replyMarkup,
-        'input_message_content': this.inputMessageContent,
+        'reply_markup': this.replyMarkup?.toJson(),
+        'input_message_content': this.inputMessageContent.toJson(),
         '@type': CONSTRUCTOR
       };
 }

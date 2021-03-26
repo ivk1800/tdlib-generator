@@ -26,8 +26,8 @@ class ChatEventMessageEdited extends ChatEventAction {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'old_message': this.oldMessage,
-        'new_message': this.newMessage,
+        'old_message': this.oldMessage.toJson(),
+        'new_message': this.newMessage.toJson(),
         '@type': CONSTRUCTOR
       };
 }

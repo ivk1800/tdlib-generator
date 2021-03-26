@@ -59,12 +59,13 @@ class InputMessagePhoto extends InputMessageContent {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'photo': this.photo,
-        'thumbnail': this.thumbnail,
-        'added_sticker_file_ids': this.addedStickerFileIds,
+        'photo': this.photo.toJson(),
+        'thumbnail': this.thumbnail.toJson(),
+        'added_sticker_file_ids':
+            addedStickerFileIds.map((item) => item).toList(),
         'width': this.width,
         'height': this.height,
-        'caption': this.caption,
+        'caption': this.caption.toJson(),
         'ttl': this.ttl,
         '@type': CONSTRUCTOR
       };

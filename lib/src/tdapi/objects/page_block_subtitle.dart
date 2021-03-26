@@ -21,5 +21,5 @@ class PageBlockSubtitle extends PageBlock {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'subtitle': this.subtitle, '@type': CONSTRUCTOR};
+      {'subtitle': this.subtitle.toJson(), '@type': CONSTRUCTOR};
 }

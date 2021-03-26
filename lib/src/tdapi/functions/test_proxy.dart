@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Sends a simple network request to the Telegram servers via proxy; for
 /// only. Can be called before authorization
+/// Returns [Ok]
 class TestProxy extends TdFunction {
   TestProxy(
       {required this.server,
@@ -36,7 +37,7 @@ class TestProxy extends TdFunction {
   Map<String, dynamic> toJson() => {
         'server': this.server,
         'port': this.port,
-        'type': this.type,
+        'type': this.type.toJson(),
         'dc_id': this.dcId,
         'timeout': this.timeout,
         '@type': CONSTRUCTOR,

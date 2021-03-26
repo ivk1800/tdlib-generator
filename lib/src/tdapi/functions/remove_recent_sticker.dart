@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Removes a sticker from the list of recently used stickers
+/// Returns [Ok]
 class RemoveRecentSticker extends TdFunction {
   RemoveRecentSticker({required this.isAttached, required this.sticker});
 
@@ -22,7 +23,7 @@ class RemoveRecentSticker extends TdFunction {
   @override
   Map<String, dynamic> toJson() => {
         'is_attached': this.isAttached,
-        'sticker': this.sticker,
+        'sticker': this.sticker.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

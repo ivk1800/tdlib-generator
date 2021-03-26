@@ -27,7 +27,7 @@ class MessageStatistics extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'message_interaction_graph': this.messageInteractionGraph,
+        'message_interaction_graph': this.messageInteractionGraph.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

@@ -27,6 +27,9 @@ class UpdateChatPosition extends Update {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'chat_id': this.chatId, 'position': this.position, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() => {
+        'chat_id': this.chatId,
+        'position': this.position.toJson(),
+        '@type': CONSTRUCTOR
+      };
 }

@@ -119,11 +119,15 @@ class Generator {
   cb.Class _createClass(Class c) {
     return cb.Class((b) {
       final bool canBeReturnByFunction = _canBeReturnByFunction(c.name);
-      b
-        ..docs.add("import '../tdapi.dart';")
-        ..docs.addAll(c.description.resolveDoc())
-        ..name = c.name
-        ..extend = cb.refer(c.parent);
+      b.docs.add("import '../tdapi.dart';");
+      b.docs.addAll(c.description.resolveDoc());
+
+      if (c.group == Group.Functions) {
+        b.docs.add('/// Returns [${c.returnType}]');
+      }
+
+      b.name = c.name;
+      b.extend = cb.refer(c.parent);
       b.abstract = c.group == Group.Classes;
 
       b.constructors.add(cb.Constructor((constructorBuilder) {
@@ -206,7 +210,7 @@ class Generator {
 
           final Map<String, dynamic> values = Map.fromEntries(c.variables.map(
               (e) => MapEntry(
-                  e.name, cb.refer('this.${e.name.toVariableName()}'))));
+                  e.name, cb.refer(_createVariableToJson(e)))));
           methodBuilder.body = cb.ToCodeExpression(
               cb.literalMap(values..["@type"] = cb.refer('CONSTRUCTOR')));
 
@@ -329,6 +333,38 @@ class Generator {
       return "${variable.type}.fromJson($overrideJsonKey)";
     }
     return "${variable.type}.fromJson(json['${variable.name}'])${!variable.isNullable ? '!' : ''}";
+  }
+
+  String _createVariableToJson(Variable variable,
+      [String? overrideVariableName]) {
+    if (variable.type.isDartType) {
+      if (overrideVariableName != null) {
+        return overrideVariableName;
+      }
+      return "this.${variable.name.toVariableName()}";
+    } else if (variable.type.isListType) {
+      String genericType = variable.type.type.substring(
+          variable.type.type.indexOf('<') + 1,
+          variable.type.type.lastIndexOf('>'));
+
+      Variable genericVariable = Variable(
+          name: genericType,
+          type: VariableType.fromRawType(rawType: genericType),
+          description: "",
+          isNullable: false);
+
+      List<String> list = [
+        "${overrideVariableName != null ? overrideVariableName : variable.name.toVariableName()}${variable.isNullable ? '?' : ''}.map((item) => "
+      ];
+
+      list.add(_createVariableToJson(genericVariable, 'item'));
+      list.add(").toList()");
+      return list.join();
+    }
+    if (overrideVariableName != null) {
+      return '${overrideVariableName}.toJson()';
+    }
+    return "this.${variable.name.toVariableName()}${variable.isNullable ? '?' : ''}.toJson()";
   }
 
   String getPathOf(Class value) {

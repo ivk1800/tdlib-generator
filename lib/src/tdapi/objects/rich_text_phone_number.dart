@@ -26,7 +26,7 @@ class RichTextPhoneNumber extends RichText {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'text': this.text,
+        'text': this.text.toJson(),
         'phone_number': this.phoneNumber,
         '@type': CONSTRUCTOR
       };

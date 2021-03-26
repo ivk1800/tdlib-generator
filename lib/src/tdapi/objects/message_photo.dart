@@ -31,8 +31,8 @@ class MessagePhoto extends MessageContent {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'photo': this.photo,
-        'caption': this.caption,
+        'photo': this.photo.toJson(),
+        'caption': this.caption.toJson(),
         'is_secret': this.isSecret,
         '@type': CONSTRUCTOR
       };

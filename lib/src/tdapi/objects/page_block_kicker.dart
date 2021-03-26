@@ -21,5 +21,5 @@ class PageBlockKicker extends PageBlock {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'kicker': this.kicker, '@type': CONSTRUCTOR};
+      {'kicker': this.kicker.toJson(), '@type': CONSTRUCTOR};
 }

@@ -29,7 +29,7 @@ class LocalizationTargetInfo extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'language_packs': this.languagePacks,
+        'language_packs': languagePacks.map((item) => item.toJson()).toList(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

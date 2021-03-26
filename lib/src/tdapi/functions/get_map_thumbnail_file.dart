@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Returns information about a file with a map thumbnail in PNG format. Only
 /// thumbnail files with size less than 1MB can be downloaded
+/// Returns [File]
 class GetMapThumbnailFile extends TdFunction {
   GetMapThumbnailFile(
       {required this.location,
@@ -39,7 +40,7 @@ class GetMapThumbnailFile extends TdFunction {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'location': this.location,
+        'location': this.location.toJson(),
         'zoom': this.zoom,
         'width': this.width,
         'height': this.height,

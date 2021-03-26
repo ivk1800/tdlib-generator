@@ -20,5 +20,6 @@ class RichTextMarked extends RichText {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() => {'text': this.text, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() =>
+      {'text': this.text.toJson(), '@type': CONSTRUCTOR};
 }

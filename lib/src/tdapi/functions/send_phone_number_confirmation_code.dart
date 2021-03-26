@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Sends phone number confirmation code. Should be called when user presses
 /// or "tg://confirmphone?phone=*******&hash=**********" link
+/// Returns [AuthenticationCodeInfo]
 class SendPhoneNumberConfirmationCode extends TdFunction {
   SendPhoneNumberConfirmationCode(
       {required this.hash, required this.phoneNumber, required this.settings});
@@ -26,7 +27,7 @@ class SendPhoneNumberConfirmationCode extends TdFunction {
   Map<String, dynamic> toJson() => {
         'hash': this.hash,
         'phone_number': this.phoneNumber,
-        'settings': this.settings,
+        'settings': this.settings.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

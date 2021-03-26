@@ -39,7 +39,7 @@ class ChatMemberStatusRestricted extends ChatMemberStatus {
   Map<String, dynamic> toJson() => {
         'is_member': this.isMember,
         'restricted_until_date': this.restrictedUntilDate,
-        'permissions': this.permissions,
+        'permissions': this.permissions.toJson(),
         '@type': CONSTRUCTOR
       };
 }

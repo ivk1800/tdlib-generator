@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Stops the downloading of a file. If a file has already been downloaded,
 /// nothing
+/// Returns [Ok]
 class CancelDownloadFile extends TdFunction {
   CancelDownloadFile({required this.fileId, required this.onlyIfPending});
 

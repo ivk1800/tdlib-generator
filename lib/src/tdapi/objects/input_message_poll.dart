@@ -59,9 +59,9 @@ class InputMessagePoll extends InputMessageContent {
   @override
   Map<String, dynamic> toJson() => {
         'question': this.question,
-        'options': this.options,
+        'options': options.map((item) => item).toList(),
         'is_anonymous': this.isAnonymous,
-        'type': this.type,
+        'type': this.type.toJson(),
         'open_period': this.openPeriod,
         'close_date': this.closeDate,
         'is_closed': this.isClosed,

@@ -20,5 +20,6 @@ class UpdateCall extends Update {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() => {'call': this.call, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() =>
+      {'call': this.call.toJson(), '@type': CONSTRUCTOR};
 }

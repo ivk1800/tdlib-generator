@@ -48,7 +48,7 @@ class UpdateNewInlineCallbackQuery extends Update {
         'sender_user_id': this.senderUserId,
         'inline_message_id': this.inlineMessageId,
         'chat_instance': this.chatInstance,
-        'payload': this.payload,
+        'payload': this.payload.toJson(),
         '@type': CONSTRUCTOR
       };
 }

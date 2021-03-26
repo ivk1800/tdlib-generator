@@ -34,7 +34,7 @@ class UpdatePollAnswer extends Update {
   Map<String, dynamic> toJson() => {
         'poll_id': this.pollId,
         'user_id': this.userId,
-        'option_ids': this.optionIds,
+        'option_ids': optionIds.map((item) => item).toList(),
         '@type': CONSTRUCTOR
       };
 }

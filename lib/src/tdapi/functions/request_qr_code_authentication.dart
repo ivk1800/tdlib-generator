@@ -5,6 +5,7 @@ import '../tdapi.dart';
 /// or if there is no pending authentication query and the current
 /// state is authorizationStateWaitCode, authorizationStateWaitRegistration,
 /// authorizationStateWaitPassword
+/// Returns [Ok]
 class RequestQrCodeAuthentication extends TdFunction {
   RequestQrCodeAuthentication({required this.otherUserIds});
 
@@ -20,7 +21,7 @@ class RequestQrCodeAuthentication extends TdFunction {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'other_user_ids': this.otherUserIds,
+        'other_user_ids': otherUserIds.map((item) => item).toList(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

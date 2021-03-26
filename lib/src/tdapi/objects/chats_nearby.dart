@@ -36,8 +36,9 @@ class ChatsNearby extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'users_nearby': this.usersNearby,
-        'supergroups_nearby': this.supergroupsNearby,
+        'users_nearby': usersNearby.map((item) => item.toJson()).toList(),
+        'supergroups_nearby':
+            supergroupsNearby.map((item) => item.toJson()).toList(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

@@ -51,12 +51,12 @@ class InputMessageAudio extends InputMessageContent {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'audio': this.audio,
-        'album_cover_thumbnail': this.albumCoverThumbnail,
+        'audio': this.audio.toJson(),
+        'album_cover_thumbnail': this.albumCoverThumbnail.toJson(),
         'duration': this.duration,
         'title': this.title,
         'performer': this.performer,
-        'caption': this.caption,
+        'caption': this.caption.toJson(),
         '@type': CONSTRUCTOR
       };
 }

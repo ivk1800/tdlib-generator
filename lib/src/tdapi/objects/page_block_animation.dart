@@ -33,8 +33,8 @@ class PageBlockAnimation extends PageBlock {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'animation': this.animation,
-        'caption': this.caption,
+        'animation': this.animation?.toJson(),
+        'caption': this.caption.toJson(),
         'need_autoplay': this.needAutoplay,
         '@type': CONSTRUCTOR
       };

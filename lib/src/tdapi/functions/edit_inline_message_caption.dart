@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Edits the caption of an inline message sent via a bot; for bots only
+/// Returns [Ok]
 class EditInlineMessageCaption extends TdFunction {
   EditInlineMessageCaption(
       {required this.inlineMessageId,
@@ -27,8 +28,8 @@ class EditInlineMessageCaption extends TdFunction {
   @override
   Map<String, dynamic> toJson() => {
         'inline_message_id': this.inlineMessageId,
-        'reply_markup': this.replyMarkup,
-        'caption': this.caption,
+        'reply_markup': this.replyMarkup.toJson(),
+        'caption': this.caption.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

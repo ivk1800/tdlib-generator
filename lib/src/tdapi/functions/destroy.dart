@@ -4,6 +4,7 @@ import '../tdapi.dart';
 /// The current user session will remain in the list of all active sessions.
 /// local data will be destroyed. After the destruction completes
 /// with authorizationStateClosed will be sent. Can be called before
+/// Returns [Ok]
 class Destroy extends TdFunction {
   Destroy();
 

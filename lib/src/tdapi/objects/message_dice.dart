@@ -46,8 +46,8 @@ class MessageDice extends MessageContent {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'initial_state': this.initialState,
-        'final_state': this.finalState,
+        'initial_state': this.initialState?.toJson(),
+        'final_state': this.finalState?.toJson(),
         'emoji': this.emoji,
         'value': this.value,
         'success_animation_frame_number': this.successAnimationFrameNumber,

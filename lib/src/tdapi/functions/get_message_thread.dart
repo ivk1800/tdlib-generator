@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Returns information about a message thread. Can be used only if
 /// == true
+/// Returns [MessageThreadInfo]
 class GetMessageThread extends TdFunction {
   GetMessageThread({required this.chatId, required this.messageId});
 

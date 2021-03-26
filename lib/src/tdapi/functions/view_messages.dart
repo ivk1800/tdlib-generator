@@ -4,6 +4,7 @@ import '../tdapi.dart';
 /// depend on whether the messages are currently being viewed or not (e.g.,
 /// messages as read, incrementing a view counter, updating a view counter,
 /// deleted messages in supergroups and channels)
+/// Returns [Ok]
 class ViewMessages extends TdFunction {
   ViewMessages(
       {required this.chatId,
@@ -36,7 +37,7 @@ class ViewMessages extends TdFunction {
   Map<String, dynamic> toJson() => {
         'chat_id': this.chatId,
         'message_thread_id': this.messageThreadId,
-        'message_ids': this.messageIds,
+        'message_ids': messageIds.map((item) => item).toList(),
         'force_read': this.forceRead,
         '@type': CONSTRUCTOR,
         '@extra': this.extra

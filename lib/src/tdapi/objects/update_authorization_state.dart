@@ -22,6 +22,8 @@ class UpdateAuthorizationState extends Update {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'authorization_state': this.authorizationState, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() => {
+        'authorization_state': this.authorizationState.toJson(),
+        '@type': CONSTRUCTOR
+      };
 }

@@ -26,6 +26,8 @@ class InputPassportElementErrorSourceFiles
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'file_hashes': this.fileHashes, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() => {
+        'file_hashes': fileHashes.map((item) => item).toList(),
+        '@type': CONSTRUCTOR
+      };
 }

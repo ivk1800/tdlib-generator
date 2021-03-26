@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Returns information about a single member of a chat
+/// Returns [ChatMember]
 class GetChatMember extends TdFunction {
   GetChatMember({required this.chatId, required this.userId});
 

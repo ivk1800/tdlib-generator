@@ -26,5 +26,5 @@ class UserPrivacySettingRuleRestrictChatMembers extends UserPrivacySettingRule {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'chat_ids': this.chatIds, '@type': CONSTRUCTOR};
+      {'chat_ids': chatIds.map((item) => item).toList(), '@type': CONSTRUCTOR};
 }

@@ -23,5 +23,5 @@ class InputPassportElementDriverLicense extends InputPassportElement {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'driver_license': this.driverLicense, '@type': CONSTRUCTOR};
+      {'driver_license': this.driverLicense.toJson(), '@type': CONSTRUCTOR};
 }

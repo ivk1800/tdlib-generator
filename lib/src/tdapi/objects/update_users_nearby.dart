@@ -24,6 +24,8 @@ class UpdateUsersNearby extends Update {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'users_nearby': this.usersNearby, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() => {
+        'users_nearby': usersNearby.map((item) => item.toJson()).toList(),
+        '@type': CONSTRUCTOR
+      };
 }

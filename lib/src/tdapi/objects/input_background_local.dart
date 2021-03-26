@@ -24,5 +24,5 @@ class InputBackgroundLocal extends InputBackground {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'background': this.background, '@type': CONSTRUCTOR};
+      {'background': this.background.toJson(), '@type': CONSTRUCTOR};
 }

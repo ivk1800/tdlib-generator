@@ -3,6 +3,7 @@ import '../tdapi.dart';
 /// Writes a part of a generated file. This method is intended to be used only
 /// the application has no direct access to TDLib's file system, because it is
 /// slower than a direct write to the destination file
+/// Returns [Ok]
 class WriteGeneratedFilePart extends TdFunction {
   WriteGeneratedFilePart(
       {required this.generationId, required this.offset, required this.data});

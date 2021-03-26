@@ -29,7 +29,7 @@ class UpdateSupergroupFullInfo extends Update {
   @override
   Map<String, dynamic> toJson() => {
         'supergroup_id': this.supergroupId,
-        'supergroup_full_info': this.supergroupFullInfo,
+        'supergroup_full_info': this.supergroupFullInfo.toJson(),
         '@type': CONSTRUCTOR
       };
 }

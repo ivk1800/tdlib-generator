@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Answers a custom query; for bots only
+/// Returns [Ok]
 class AnswerCustomQuery extends TdFunction {
   AnswerCustomQuery({required this.customQueryId, required this.data});
 

@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Checks the authentication code. Works only when the current authorization
 /// is authorizationStateWaitCode
+/// Returns [Ok]
 class CheckAuthenticationCode extends TdFunction {
   CheckAuthenticationCode({required this.code});
 

@@ -33,7 +33,7 @@ class PageBlockChatLink extends PageBlock {
   @override
   Map<String, dynamic> toJson() => {
         'title': this.title,
-        'photo': this.photo,
+        'photo': this.photo?.toJson(),
         'username': this.username,
         '@type': CONSTRUCTOR
       };

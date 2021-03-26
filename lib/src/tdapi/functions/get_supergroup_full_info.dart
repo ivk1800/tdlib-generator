@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Returns full information about a supergroup or a channel by its
 /// cached for up to 1 minute
+/// Returns [SupergroupFullInfo]
 class GetSupergroupFullInfo extends TdFunction {
   GetSupergroupFullInfo({required this.supergroupId});
 

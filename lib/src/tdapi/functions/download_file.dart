@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Downloads a file from the cloud. Download progress and completion of the
 /// will be notified through updateFile updates
+/// Returns [File]
 class DownloadFile extends TdFunction {
   DownloadFile(
       {required this.fileId,

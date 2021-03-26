@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Sets the result of a shipping query; for bots only
+/// Returns [Ok]
 class AnswerShippingQuery extends TdFunction {
   AnswerShippingQuery(
       {required this.shippingQueryId,
@@ -26,7 +27,8 @@ class AnswerShippingQuery extends TdFunction {
   @override
   Map<String, dynamic> toJson() => {
         'shipping_query_id': this.shippingQueryId,
-        'shipping_options': this.shippingOptions,
+        'shipping_options':
+            shippingOptions.map((item) => item.toJson()).toList(),
         'error_message': this.errorMessage,
         '@type': CONSTRUCTOR,
         '@extra': this.extra

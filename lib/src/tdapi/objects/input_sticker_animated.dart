@@ -26,6 +26,9 @@ class InputStickerAnimated extends InputSticker {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'sticker': this.sticker, 'emojis': this.emojis, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() => {
+        'sticker': this.sticker.toJson(),
+        'emojis': this.emojis,
+        '@type': CONSTRUCTOR
+      };
 }

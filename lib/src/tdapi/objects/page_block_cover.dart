@@ -20,5 +20,6 @@ class PageBlockCover extends PageBlock {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() => {'cover': this.cover, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() =>
+      {'cover': this.cover.toJson(), '@type': CONSTRUCTOR};
 }

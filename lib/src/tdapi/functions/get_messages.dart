@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Returns information about messages. If a message is not found, returns
 /// on the corresponding position of the result
+/// Returns [Messages]
 class GetMessages extends TdFunction {
   GetMessages({required this.chatId, required this.messageIds});
 
@@ -21,7 +22,7 @@ class GetMessages extends TdFunction {
   @override
   Map<String, dynamic> toJson() => {
         'chat_id': this.chatId,
-        'message_ids': this.messageIds,
+        'message_ids': messageIds.map((item) => item).toList(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

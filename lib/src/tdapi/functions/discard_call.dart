@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Discards a call
+/// Returns [Ok]
 class DiscardCall extends TdFunction {
   DiscardCall(
       {required this.callId,

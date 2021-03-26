@@ -21,5 +21,6 @@ class CallStateError extends CallState {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() => {'error': this.error, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() =>
+      {'error': this.error.toJson(), '@type': CONSTRUCTOR};
 }

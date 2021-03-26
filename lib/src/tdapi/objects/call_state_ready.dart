@@ -51,11 +51,11 @@ class CallStateReady extends CallState {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'protocol': this.protocol,
-        'servers': this.servers,
+        'protocol': this.protocol.toJson(),
+        'servers': servers.map((item) => item.toJson()).toList(),
         'config': this.config,
         'encryption_key': this.encryptionKey,
-        'emojis': this.emojis,
+        'emojis': emojis.map((item) => item).toList(),
         'allow_p2p': this.allowP2p,
         '@type': CONSTRUCTOR
       };

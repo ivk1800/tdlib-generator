@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Returns users voted for the specified option in a non-anonymous polls. For
 /// optimal performance the number of returned users is chosen by the library
+/// Returns [Users]
 class GetPollVoters extends TdFunction {
   GetPollVoters(
       {required this.chatId,

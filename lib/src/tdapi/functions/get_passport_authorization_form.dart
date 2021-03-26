@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Returns a Telegram Passport authorization form for sharing data with a
+/// Returns [PassportAuthorizationForm]
 class GetPassportAuthorizationForm extends TdFunction {
   GetPassportAuthorizationForm(
       {required this.botUserId,

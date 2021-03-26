@@ -33,7 +33,7 @@ class ChatMembers extends TdObject {
   @override
   Map<String, dynamic> toJson() => {
         'total_count': this.totalCount,
-        'members': this.members,
+        'members': members.map((item) => item.toJson()).toList(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Re-sends the code to verify an email address to be added to a user's
 /// Passport
+/// Returns [EmailAddressAuthenticationCodeInfo]
 class ResendEmailAddressVerificationCode extends TdFunction {
   ResendEmailAddressVerificationCode();
 

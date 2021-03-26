@@ -32,7 +32,7 @@ class TextEntity extends TdObject {
   Map<String, dynamic> toJson() => {
         'offset': this.offset,
         'length': this.length,
-        'type': this.type,
+        'type': this.type.toJson(),
         '@type': CONSTRUCTOR
       };
 }

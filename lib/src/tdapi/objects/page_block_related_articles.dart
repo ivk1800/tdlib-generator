@@ -27,6 +27,9 @@ class PageBlockRelatedArticles extends PageBlock {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'header': this.header, 'articles': this.articles, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() => {
+        'header': this.header.toJson(),
+        'articles': articles.map((item) => item.toJson()).toList(),
+        '@type': CONSTRUCTOR
+      };
 }

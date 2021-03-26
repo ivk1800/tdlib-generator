@@ -39,7 +39,7 @@ class InlineQueryResultPhoto extends InlineQueryResult {
   @override
   Map<String, dynamic> toJson() => {
         'id': this.id,
-        'photo': this.photo,
+        'photo': this.photo.toJson(),
         'title': this.title,
         'description': this.description,
         '@type': CONSTRUCTOR

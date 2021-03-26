@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Constructs a persistent HTTP URL for a background
+/// Returns [HttpUrl]
 class GetBackgroundUrl extends TdFunction {
   GetBackgroundUrl({required this.name, required this.type});
 
@@ -20,7 +21,7 @@ class GetBackgroundUrl extends TdFunction {
   @override
   Map<String, dynamic> toJson() => {
         'name': this.name,
-        'type': this.type,
+        'type': this.type.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

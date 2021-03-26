@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Returns information about a message
+/// Returns [Message]
 class GetMessage extends TdFunction {
   GetMessage({required this.chatId, required this.messageId});
 

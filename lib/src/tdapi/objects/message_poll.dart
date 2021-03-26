@@ -20,5 +20,6 @@ class MessagePoll extends MessageContent {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() => {'poll': this.poll, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() =>
+      {'poll': this.poll.toJson(), '@type': CONSTRUCTOR};
 }

@@ -27,6 +27,9 @@ class UpdateServiceNotification extends Update {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'type': this.type, 'content': this.content, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() => {
+        'type': this.type,
+        'content': this.content.toJson(),
+        '@type': CONSTRUCTOR
+      };
 }

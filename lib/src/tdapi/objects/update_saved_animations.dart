@@ -23,6 +23,8 @@ class UpdateSavedAnimations extends Update {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'animation_ids': this.animationIds, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() => {
+        'animation_ids': animationIds.map((item) => item).toList(),
+        '@type': CONSTRUCTOR
+      };
 }

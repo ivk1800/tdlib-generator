@@ -111,21 +111,23 @@ class ChatStatisticsChannel extends ChatStatistics {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'period': this.period,
-        'member_count': this.memberCount,
-        'mean_view_count': this.meanViewCount,
-        'mean_share_count': this.meanShareCount,
+        'period': this.period.toJson(),
+        'member_count': this.memberCount.toJson(),
+        'mean_view_count': this.meanViewCount.toJson(),
+        'mean_share_count': this.meanShareCount.toJson(),
         'enabled_notifications_percentage': this.enabledNotificationsPercentage,
-        'member_count_graph': this.memberCountGraph,
-        'join_graph': this.joinGraph,
-        'mute_graph': this.muteGraph,
-        'view_count_by_hour_graph': this.viewCountByHourGraph,
-        'view_count_by_source_graph': this.viewCountBySourceGraph,
-        'join_by_source_graph': this.joinBySourceGraph,
-        'language_graph': this.languageGraph,
-        'message_interaction_graph': this.messageInteractionGraph,
-        'instant_view_interaction_graph': this.instantViewInteractionGraph,
-        'recent_message_interactions': this.recentMessageInteractions,
+        'member_count_graph': this.memberCountGraph.toJson(),
+        'join_graph': this.joinGraph.toJson(),
+        'mute_graph': this.muteGraph.toJson(),
+        'view_count_by_hour_graph': this.viewCountByHourGraph.toJson(),
+        'view_count_by_source_graph': this.viewCountBySourceGraph.toJson(),
+        'join_by_source_graph': this.joinBySourceGraph.toJson(),
+        'language_graph': this.languageGraph.toJson(),
+        'message_interaction_graph': this.messageInteractionGraph.toJson(),
+        'instant_view_interaction_graph':
+            this.instantViewInteractionGraph.toJson(),
+        'recent_message_interactions':
+            recentMessageInteractions.map((item) => item.toJson()).toList(),
         '@type': CONSTRUCTOR
       };
 }

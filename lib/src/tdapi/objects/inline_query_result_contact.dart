@@ -32,8 +32,8 @@ class InlineQueryResultContact extends InlineQueryResult {
   @override
   Map<String, dynamic> toJson() => {
         'id': this.id,
-        'contact': this.contact,
-        'thumbnail': this.thumbnail,
+        'contact': this.contact.toJson(),
+        'thumbnail': this.thumbnail?.toJson(),
         '@type': CONSTRUCTOR
       };
 }

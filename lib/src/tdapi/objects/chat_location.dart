@@ -26,7 +26,7 @@ class ChatLocation extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'location': this.location,
+        'location': this.location.toJson(),
         'address': this.address,
         '@type': CONSTRUCTOR
       };

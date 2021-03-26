@@ -25,5 +25,5 @@ class KeyboardButton extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'text': this.text, 'type': this.type, '@type': CONSTRUCTOR};
+      {'text': this.text, 'type': this.type.toJson(), '@type': CONSTRUCTOR};
 }

@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Discards a group call. Requires can_manage_voice_chats rights in the
 /// chat
+/// Returns [Ok]
 class DiscardGroupCall extends TdFunction {
   DiscardGroupCall({required this.groupCallId});
 

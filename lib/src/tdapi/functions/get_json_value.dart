@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Converts a JSON-serialized string to corresponding JsonValue object. Can
 /// called synchronously
+/// Returns [JsonValue]
 class GetJsonValue extends TdFunction {
   GetJsonValue({required this.json});
 

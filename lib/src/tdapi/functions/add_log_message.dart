@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Adds a message to TDLib internal log. Can be called synchronously
+/// Returns [Ok]
 class AddLogMessage extends TdFunction {
   AddLogMessage({required this.verbosityLevel, required this.text});
 

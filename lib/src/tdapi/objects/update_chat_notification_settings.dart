@@ -29,7 +29,7 @@ class UpdateChatNotificationSettings extends Update {
   @override
   Map<String, dynamic> toJson() => {
         'chat_id': this.chatId,
-        'notification_settings': this.notificationSettings,
+        'notification_settings': this.notificationSettings.toJson(),
         '@type': CONSTRUCTOR
       };
 }

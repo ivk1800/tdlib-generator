@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Pins a message in a chat; requires can_pin_messages rights or
 /// rights in the channel
+/// Returns [Ok]
 class PinChatMessage extends TdFunction {
   PinChatMessage(
       {required this.chatId,

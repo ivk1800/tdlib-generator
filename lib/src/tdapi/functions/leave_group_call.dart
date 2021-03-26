@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Leaves a group call
+/// Returns [Ok]
 class LeaveGroupCall extends TdFunction {
   LeaveGroupCall({required this.groupCallId});
 

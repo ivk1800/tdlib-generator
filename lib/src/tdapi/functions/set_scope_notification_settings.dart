@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Changes notification settings for chats of a given type
+/// Returns [Ok]
 class SetScopeNotificationSettings extends TdFunction {
   SetScopeNotificationSettings(
       {required this.scope, required this.notificationSettings});
@@ -20,8 +21,8 @@ class SetScopeNotificationSettings extends TdFunction {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'scope': this.scope,
-        'notification_settings': this.notificationSettings,
+        'scope': this.scope.toJson(),
+        'notification_settings': this.notificationSettings.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

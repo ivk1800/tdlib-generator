@@ -20,5 +20,6 @@ class BackgroundTypeFill extends BackgroundType {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() => {'fill': this.fill, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() =>
+      {'fill': this.fill.toJson(), '@type': CONSTRUCTOR};
 }

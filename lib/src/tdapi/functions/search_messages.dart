@@ -4,6 +4,7 @@ import '../tdapi.dart';
 /// in reverse chronological order (i.e., in order of decreasing (date,
 /// message_id)).. For optimal performance the number of returned messages is
 /// by the library
+/// Returns [Messages]
 class SearchMessages extends TdFunction {
   SearchMessages(
       {required this.chatList,
@@ -61,13 +62,13 @@ class SearchMessages extends TdFunction {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'chat_list': this.chatList,
+        'chat_list': this.chatList.toJson(),
         'query': this.query,
         'offset_date': this.offsetDate,
         'offset_chat_id': this.offsetChatId,
         'offset_message_id': this.offsetMessageId,
         'limit': this.limit,
-        'filter': this.filter,
+        'filter': this.filter.toJson(),
         'min_date': this.minDate,
         'max_date': this.maxDate,
         '@type': CONSTRUCTOR,

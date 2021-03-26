@@ -25,5 +25,5 @@ class InlineQueryResultSticker extends InlineQueryResult {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'id': this.id, 'sticker': this.sticker, '@type': CONSTRUCTOR};
+      {'id': this.id, 'sticker': this.sticker.toJson(), '@type': CONSTRUCTOR};
 }

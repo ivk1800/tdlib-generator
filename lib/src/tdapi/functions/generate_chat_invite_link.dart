@@ -3,6 +3,7 @@ import '../tdapi.dart';
 /// Generates a new invite link for a chat; the previously generated link is
 /// Available for basic groups, supergroups, and channels. Requires
 /// privileges and can_invite_users right
+/// Returns [ChatInviteLink]
 class GenerateChatInviteLink extends TdFunction {
   GenerateChatInviteLink({required this.chatId});
 

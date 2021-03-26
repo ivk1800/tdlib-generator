@@ -3,6 +3,7 @@ import '../tdapi.dart';
 /// Returns information about members or banned users in a supergroup or
 /// Can be used only if SupergroupFullInfo.can_get_members == true;
 /// administrator privileges may be required for some filters
+/// Returns [ChatMembers]
 class GetSupergroupMembers extends TdFunction {
   GetSupergroupMembers(
       {required this.supergroupId,
@@ -32,7 +33,7 @@ class GetSupergroupMembers extends TdFunction {
   @override
   Map<String, dynamic> toJson() => {
         'supergroup_id': this.supergroupId,
-        'filter': this.filter,
+        'filter': this.filter.toJson(),
         'offset': this.offset,
         'limit': this.limit,
         '@type': CONSTRUCTOR,

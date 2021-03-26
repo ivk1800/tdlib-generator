@@ -3,6 +3,7 @@ import '../tdapi.dart';
 /// Returns stickers from the installed sticker sets that correspond to a
 /// emoji. If the emoji is not empty, favorite and recently used stickers may
 /// be returned
+/// Returns [Stickers]
 class GetStickers extends TdFunction {
   GetStickers({required this.emoji, required this.limit});
 

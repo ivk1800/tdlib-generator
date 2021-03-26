@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Changes the username of the current user
+/// Returns [Ok]
 class SetUsername extends TdFunction {
   SetUsername({required this.username});
 

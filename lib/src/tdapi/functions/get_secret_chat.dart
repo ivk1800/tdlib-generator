@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Returns information about a secret chat by its identifier. This is an
 /// request
+/// Returns [SecretChat]
 class GetSecretChat extends TdFunction {
   GetSecretChat({required this.secretChatId});
 

@@ -21,5 +21,6 @@ class InputChatPhotoStatic extends InputChatPhoto {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() => {'photo': this.photo, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() =>
+      {'photo': this.photo.toJson(), '@type': CONSTRUCTOR};
 }

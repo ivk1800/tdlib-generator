@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Removes a chat from the list of recently found chats
+/// Returns [Ok]
 class RemoveRecentlyFoundChat extends TdFunction {
   RemoveRecentlyFoundChat({required this.chatId});
 

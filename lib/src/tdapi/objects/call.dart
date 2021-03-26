@@ -47,7 +47,7 @@ class Call extends TdObject {
         'user_id': this.userId,
         'is_outgoing': this.isOutgoing,
         'is_video': this.isVideo,
-        'state': this.state,
+        'state': this.state.toJson(),
         '@type': CONSTRUCTOR
       };
 }

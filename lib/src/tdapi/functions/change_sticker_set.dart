@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Installs/uninstalls or activates/archives a sticker set
+/// Returns [Ok]
 class ChangeStickerSet extends TdFunction {
   ChangeStickerSet(
       {required this.setId,

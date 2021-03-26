@@ -3,6 +3,7 @@ import '../tdapi.dart';
 /// Forwards previously sent messages. Returns the forwarded messages in the
 /// order as the message identifiers passed in message_ids. If a message can't
 /// forwarded, null will be returned instead of the message
+/// Returns [Messages]
 class ForwardMessages extends TdFunction {
   ForwardMessages(
       {required this.chatId,
@@ -45,8 +46,8 @@ class ForwardMessages extends TdFunction {
   Map<String, dynamic> toJson() => {
         'chat_id': this.chatId,
         'from_chat_id': this.fromChatId,
-        'message_ids': this.messageIds,
-        'options': this.options,
+        'message_ids': messageIds.map((item) => item).toList(),
+        'options': this.options.toJson(),
         'send_copy': this.sendCopy,
         'remove_caption': this.removeCaption,
         '@type': CONSTRUCTOR,

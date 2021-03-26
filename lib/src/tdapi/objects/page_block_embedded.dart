@@ -60,10 +60,10 @@ class PageBlockEmbedded extends PageBlock {
   Map<String, dynamic> toJson() => {
         'url': this.url,
         'html': this.html,
-        'poster_photo': this.posterPhoto,
+        'poster_photo': this.posterPhoto?.toJson(),
         'width': this.width,
         'height': this.height,
-        'caption': this.caption,
+        'caption': this.caption.toJson(),
         'is_full_width': this.isFullWidth,
         'allow_scrolling': this.allowScrolling,
         '@type': CONSTRUCTOR

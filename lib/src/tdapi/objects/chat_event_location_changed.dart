@@ -27,8 +27,8 @@ class ChatEventLocationChanged extends ChatEventAction {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'old_location': this.oldLocation,
-        'new_location': this.newLocation,
+        'old_location': this.oldLocation?.toJson(),
+        'new_location': this.newLocation?.toJson(),
         '@type': CONSTRUCTOR
       };
 }

@@ -31,8 +31,8 @@ class MessageProximityAlertTriggered extends MessageContent {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'traveler': this.traveler,
-        'watcher': this.watcher,
+        'traveler': this.traveler.toJson(),
+        'watcher': this.watcher.toJson(),
         'distance': this.distance,
         '@type': CONSTRUCTOR
       };

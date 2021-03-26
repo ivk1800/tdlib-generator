@@ -36,7 +36,7 @@ class InputMessageText extends InputMessageContent {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'text': this.text,
+        'text': this.text.toJson(),
         'disable_web_page_preview': this.disableWebPagePreview,
         'clear_draft': this.clearDraft,
         '@type': CONSTRUCTOR

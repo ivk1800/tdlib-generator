@@ -30,7 +30,7 @@ class UpdateGroupCallParticipant extends Update {
   @override
   Map<String, dynamic> toJson() => {
         'group_call_id': this.groupCallId,
-        'participant': this.participant,
+        'participant': this.participant.toJson(),
         '@type': CONSTRUCTOR
       };
 }

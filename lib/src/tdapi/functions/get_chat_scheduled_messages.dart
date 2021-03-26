@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Returns all scheduled messages in a chat. The messages are returned in a
 /// chronological order (i.e., in order of decreasing message_id)
+/// Returns [Messages]
 class GetChatScheduledMessages extends TdFunction {
   GetChatScheduledMessages({required this.chatId});
 

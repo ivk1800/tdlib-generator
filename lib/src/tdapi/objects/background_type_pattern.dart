@@ -34,7 +34,7 @@ class BackgroundTypePattern extends BackgroundType {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'fill': this.fill,
+        'fill': this.fill.toJson(),
         'intensity': this.intensity,
         'is_moving': this.isMoving,
         '@type': CONSTRUCTOR

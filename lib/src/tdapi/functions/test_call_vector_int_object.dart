@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Returns the received vector of objects containing a number; for testing
 /// This is an offline method. Can be called before authorization
+/// Returns [TestVectorIntObject]
 class TestCallVectorIntObject extends TdFunction {
   TestCallVectorIntObject({required this.x});
 
@@ -16,6 +17,9 @@ class TestCallVectorIntObject extends TdFunction {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'x': this.x, '@type': CONSTRUCTOR, '@extra': this.extra};
+  Map<String, dynamic> toJson() => {
+        'x': x.map((item) => item.toJson()).toList(),
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

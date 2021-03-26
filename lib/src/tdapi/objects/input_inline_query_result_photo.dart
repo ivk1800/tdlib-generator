@@ -74,8 +74,8 @@ class InputInlineQueryResultPhoto extends InputInlineQueryResult {
         'photo_url': this.photoUrl,
         'photo_width': this.photoWidth,
         'photo_height': this.photoHeight,
-        'reply_markup': this.replyMarkup,
-        'input_message_content': this.inputMessageContent,
+        'reply_markup': this.replyMarkup?.toJson(),
+        'input_message_content': this.inputMessageContent.toJson(),
         '@type': CONSTRUCTOR
       };
 }

@@ -51,7 +51,7 @@ class MessageLinkInfo extends TdObject {
   Map<String, dynamic> toJson() => {
         'is_public': this.isPublic,
         'chat_id': this.chatId,
-        'message': this.message,
+        'message': this.message?.toJson(),
         'for_album': this.forAlbum,
         'for_comment': this.forComment,
         '@type': CONSTRUCTOR,

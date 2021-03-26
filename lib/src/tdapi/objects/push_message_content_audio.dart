@@ -24,6 +24,9 @@ class PushMessageContentAudio extends PushMessageContent {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'audio': this.audio, 'is_pinned': this.isPinned, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() => {
+        'audio': this.audio?.toJson(),
+        'is_pinned': this.isPinned,
+        '@type': CONSTRUCTOR
+      };
 }

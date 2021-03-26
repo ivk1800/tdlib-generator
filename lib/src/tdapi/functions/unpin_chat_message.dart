@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Removes a pinned message from a chat; requires can_pin_messages rights in
 /// group or can_edit_messages rights in the channel
+/// Returns [Ok]
 class UnpinChatMessage extends TdFunction {
   UnpinChatMessage({required this.chatId, required this.messageId});
 

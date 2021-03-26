@@ -27,7 +27,7 @@ class PushMessageContentVideoNote extends PushMessageContent {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'video_note': this.videoNote,
+        'video_note': this.videoNote?.toJson(),
         'is_pinned': this.isPinned,
         '@type': CONSTRUCTOR
       };

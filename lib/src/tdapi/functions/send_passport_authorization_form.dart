@@ -3,6 +3,7 @@ import '../tdapi.dart';
 /// Sends a Telegram Passport authorization form, effectively sharing data
 /// the service. This method must be called after
 /// if some previously available elements are going to be reused
+/// Returns [Ok]
 class SendPassportAuthorizationForm extends TdFunction {
   SendPassportAuthorizationForm(
       {required this.autorizationFormId, required this.types});
@@ -24,7 +25,7 @@ class SendPassportAuthorizationForm extends TdFunction {
   @override
   Map<String, dynamic> toJson() => {
         'autorization_form_id': this.autorizationFormId,
-        'types': this.types,
+        'types': types.map((item) => item.toJson()).toList(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

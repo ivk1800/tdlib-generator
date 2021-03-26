@@ -35,8 +35,8 @@ class PassportElementsWithErrors extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'elements': this.elements,
-        'errors': this.errors,
+        'elements': elements.map((item) => item.toJson()).toList(),
+        'errors': errors.map((item) => item.toJson()).toList(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

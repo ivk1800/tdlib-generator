@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Joins a group call
+/// Returns [GroupCallJoinResponse]
 class JoinGroupCall extends TdFunction {
   JoinGroupCall(
       {required this.groupCallId,
@@ -31,7 +32,7 @@ class JoinGroupCall extends TdFunction {
   @override
   Map<String, dynamic> toJson() => {
         'group_call_id': this.groupCallId,
-        'payload': this.payload,
+        'payload': this.payload.toJson(),
         'source': this.source,
         'is_muted': this.isMuted,
         '@type': CONSTRUCTOR,

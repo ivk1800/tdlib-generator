@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Resets all network data usage statistics to zero. Can be called before
+/// Returns [Ok]
 class ResetNetworkStatistics extends TdFunction {
   ResetNetworkStatistics();
 

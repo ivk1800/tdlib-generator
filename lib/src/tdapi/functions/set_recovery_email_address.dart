@@ -5,6 +5,7 @@ import '../tdapi.dart';
 /// the new recovery email address is confirmed.. If
 /// is the same as the email address that is currently set up, this call
 /// immediately and aborts all other requests waiting for an email
+/// Returns [PasswordState]
 class SetRecoveryEmailAddress extends TdFunction {
   SetRecoveryEmailAddress(
       {required this.password, required this.newRecoveryEmailAddress});

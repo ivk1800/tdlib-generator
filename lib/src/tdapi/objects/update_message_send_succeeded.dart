@@ -28,7 +28,7 @@ class UpdateMessageSendSucceeded extends Update {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'message': this.message,
+        'message': this.message.toJson(),
         'old_message_id': this.oldMessageId,
         '@type': CONSTRUCTOR
       };

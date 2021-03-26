@@ -5,6 +5,7 @@ import '../tdapi.dart';
 /// Use the method getLoginUrlInfo to find whether a prior user confirmation
 /// needed. If an error is returned, then the button must be handled as an
 /// URL button
+/// Returns [HttpUrl]
 class GetLoginUrl extends TdFunction {
   GetLoginUrl(
       {required this.chatId,

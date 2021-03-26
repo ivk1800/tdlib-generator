@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Returns all active sessions of the current user
+/// Returns [Sessions]
 class GetActiveSessions extends TdFunction {
   GetActiveSessions();
 

@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Adds or changes a custom local language pack to the current localization
+/// Returns [Ok]
 class SetCustomLanguagePack extends TdFunction {
   SetCustomLanguagePack({required this.info, required this.strings});
 
@@ -21,8 +22,8 @@ class SetCustomLanguagePack extends TdFunction {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'info': this.info,
-        'strings': this.strings,
+        'info': this.info.toJson(),
+        'strings': strings.map((item) => item.toJson()).toList(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

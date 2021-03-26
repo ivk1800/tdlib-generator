@@ -38,8 +38,8 @@ class PageBlockVideo extends PageBlock {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'video': this.video,
-        'caption': this.caption,
+        'video': this.video?.toJson(),
+        'caption': this.caption.toJson(),
         'need_autoplay': this.needAutoplay,
         'is_looped': this.isLooped,
         '@type': CONSTRUCTOR

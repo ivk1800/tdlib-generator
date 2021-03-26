@@ -31,7 +31,7 @@ class DeepLinkInfo extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'text': this.text,
+        'text': this.text.toJson(),
         'need_update_application': this.needUpdateApplication,
         '@type': CONSTRUCTOR,
         '@extra': this.extra

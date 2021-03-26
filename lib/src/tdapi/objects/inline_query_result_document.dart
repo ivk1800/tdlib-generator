@@ -39,7 +39,7 @@ class InlineQueryResultDocument extends InlineQueryResult {
   @override
   Map<String, dynamic> toJson() => {
         'id': this.id,
-        'document': this.document,
+        'document': this.document.toJson(),
         'title': this.title,
         'description': this.description,
         '@type': CONSTRUCTOR

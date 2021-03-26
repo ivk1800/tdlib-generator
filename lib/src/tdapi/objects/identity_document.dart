@@ -53,11 +53,11 @@ class IdentityDocument extends TdObject {
   @override
   Map<String, dynamic> toJson() => {
         'number': this.number,
-        'expiry_date': this.expiryDate,
-        'front_side': this.frontSide,
-        'reverse_side': this.reverseSide,
-        'selfie': this.selfie,
-        'translation': this.translation,
+        'expiry_date': this.expiryDate?.toJson(),
+        'front_side': this.frontSide.toJson(),
+        'reverse_side': this.reverseSide.toJson(),
+        'selfie': this.selfie?.toJson(),
+        'translation': translation.map((item) => item.toJson()).toList(),
         '@type': CONSTRUCTOR
       };
 }

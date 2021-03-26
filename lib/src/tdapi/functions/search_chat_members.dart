@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Searches for a specified query in the first name, last name and username
 /// the members of a specified chat. Requires administrator rights in channels
+/// Returns [ChatMembers]
 class SearchChatMembers extends TdFunction {
   SearchChatMembers(
       {required this.chatId,
@@ -33,7 +34,7 @@ class SearchChatMembers extends TdFunction {
         'chat_id': this.chatId,
         'query': this.query,
         'limit': this.limit,
-        'filter': this.filter,
+        'filter': this.filter.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

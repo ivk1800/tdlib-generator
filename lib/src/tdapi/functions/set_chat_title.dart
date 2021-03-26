@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Changes the chat title. Supported only for basic groups, supergroups and
 /// Requires can_change_info rights
+/// Returns [Ok]
 class SetChatTitle extends TdFunction {
   SetChatTitle({required this.chatId, required this.title});
 

@@ -43,8 +43,8 @@ class InputMessageSticker extends InputMessageContent {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'sticker': this.sticker,
-        'thumbnail': this.thumbnail,
+        'sticker': this.sticker.toJson(),
+        'thumbnail': this.thumbnail.toJson(),
         'width': this.width,
         'height': this.height,
         'emoji': this.emoji,

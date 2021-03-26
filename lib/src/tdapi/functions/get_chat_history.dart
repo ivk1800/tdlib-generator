@@ -4,6 +4,7 @@ import '../tdapi.dart';
 /// order (i.e., in order of decreasing message_id).. For optimal performance
 /// number of returned messages is chosen by the library. This is an offline
 /// if only_local is true
+/// Returns [Messages]
 class GetChatHistory extends TdFunction {
   GetChatHistory(
       {required this.chatId,

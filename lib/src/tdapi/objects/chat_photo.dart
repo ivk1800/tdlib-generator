@@ -47,9 +47,9 @@ class ChatPhoto extends TdObject {
   Map<String, dynamic> toJson() => {
         'id': this.id,
         'added_date': this.addedDate,
-        'minithumbnail': this.minithumbnail,
-        'sizes': this.sizes,
-        'animation': this.animation,
+        'minithumbnail': this.minithumbnail?.toJson(),
+        'sizes': sizes.map((item) => item.toJson()).toList(),
+        'animation': this.animation?.toJson(),
         '@type': CONSTRUCTOR
       };
 }

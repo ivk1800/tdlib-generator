@@ -25,6 +25,9 @@ class UpdateUserPrivacySettingRules extends Update {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'setting': this.setting, 'rules': this.rules, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() => {
+        'setting': this.setting.toJson(),
+        'rules': this.rules.toJson(),
+        '@type': CONSTRUCTOR
+      };
 }

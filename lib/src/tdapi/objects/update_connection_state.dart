@@ -22,5 +22,6 @@ class UpdateConnectionState extends Update {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() => {'state': this.state, '@type': CONSTRUCTOR};
+  Map<String, dynamic> toJson() =>
+      {'state': this.state.toJson(), '@type': CONSTRUCTOR};
 }

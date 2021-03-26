@@ -29,7 +29,7 @@ class UpdateBasicGroupFullInfo extends Update {
   @override
   Map<String, dynamic> toJson() => {
         'basic_group_id': this.basicGroupId,
-        'basic_group_full_info': this.basicGroupFullInfo,
+        'basic_group_full_info': this.basicGroupFullInfo.toJson(),
         '@type': CONSTRUCTOR
       };
 }

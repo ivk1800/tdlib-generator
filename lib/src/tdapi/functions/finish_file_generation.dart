@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Finishes the file generation
+/// Returns [Ok]
 class FinishFileGeneration extends TdFunction {
   FinishFileGeneration({required this.generationId, required this.error});
 
@@ -20,7 +21,7 @@ class FinishFileGeneration extends TdFunction {
   @override
   Map<String, dynamic> toJson() => {
         'generation_id': this.generationId,
-        'error': this.error,
+        'error': this.error.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

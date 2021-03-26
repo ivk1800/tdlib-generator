@@ -26,7 +26,7 @@ class RecommendedChatFilter extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'filter': this.filter,
+        'filter': this.filter.toJson(),
         'description': this.description,
         '@type': CONSTRUCTOR
       };

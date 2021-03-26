@@ -32,7 +32,7 @@ class Users extends TdObject {
   @override
   Map<String, dynamic> toJson() => {
         'total_count': this.totalCount,
-        'user_ids': this.userIds,
+        'user_ids': userIds.map((item) => item).toList(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

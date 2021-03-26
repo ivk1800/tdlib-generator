@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Adds a user to the contact list or edits an existing contact by their user
+/// Returns [Ok]
 class AddContact extends TdFunction {
   AddContact({required this.contact, required this.sharePhoneNumber});
 
@@ -23,7 +24,7 @@ class AddContact extends TdFunction {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'contact': this.contact,
+        'contact': this.contact.toJson(),
         'share_phone_number': this.sharePhoneNumber,
         '@type': CONSTRUCTOR,
         '@extra': this.extra

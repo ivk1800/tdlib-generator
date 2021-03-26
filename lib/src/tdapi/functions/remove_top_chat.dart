@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Removes a chat from the list of frequently used chats. Supported only if
 /// chat info database is enabled
+/// Returns [Ok]
 class RemoveTopChat extends TdFunction {
   RemoveTopChat({required this.category, required this.chatId});
 
@@ -20,7 +21,7 @@ class RemoveTopChat extends TdFunction {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'category': this.category,
+        'category': this.category.toJson(),
         'chat_id': this.chatId,
         '@type': CONSTRUCTOR,
         '@extra': this.extra

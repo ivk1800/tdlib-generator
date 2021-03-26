@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Searches for emojis by keywords. Supported only if the file database is
+/// Returns [Emojis]
 class SearchEmojis extends TdFunction {
   SearchEmojis(
       {required this.text,
@@ -29,7 +30,7 @@ class SearchEmojis extends TdFunction {
   Map<String, dynamic> toJson() => {
         'text': this.text,
         'exact_match': this.exactMatch,
-        'input_language_codes': this.inputLanguageCodes,
+        'input_language_codes': inputLanguageCodes.map((item) => item).toList(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

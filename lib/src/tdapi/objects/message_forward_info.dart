@@ -50,7 +50,7 @@ class MessageForwardInfo extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'origin': this.origin,
+        'origin': this.origin.toJson(),
         'date': this.date,
         'public_service_announcement_type': this.publicServiceAnnouncementType,
         'from_chat_id': this.fromChatId,

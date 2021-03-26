@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Hides a suggested action
+/// Returns [Ok]
 class HideSuggestedAction extends TdFunction {
   HideSuggestedAction({required this.action});
 
@@ -15,6 +16,9 @@ class HideSuggestedAction extends TdFunction {
   @override
   String getConstructor() => CONSTRUCTOR;
   @override
-  Map<String, dynamic> toJson() =>
-      {'action': this.action, '@type': CONSTRUCTOR, '@extra': this.extra};
+  Map<String, dynamic> toJson() => {
+        'action': this.action.toJson(),
+        '@type': CONSTRUCTOR,
+        '@extra': this.extra
+      };
 }

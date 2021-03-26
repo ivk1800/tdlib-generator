@@ -26,8 +26,8 @@ class ChatEventPhotoChanged extends ChatEventAction {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'old_photo': this.oldPhoto,
-        'new_photo': this.newPhoto,
+        'old_photo': this.oldPhoto?.toJson(),
+        'new_photo': this.newPhoto?.toJson(),
         '@type': CONSTRUCTOR
       };
 }

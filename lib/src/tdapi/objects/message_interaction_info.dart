@@ -37,7 +37,7 @@ class MessageInteractionInfo extends TdObject {
   Map<String, dynamic> toJson() => {
         'view_count': this.viewCount,
         'forward_count': this.forwardCount,
-        'reply_info': this.replyInfo,
+        'reply_info': this.replyInfo?.toJson(),
         '@type': CONSTRUCTOR
       };
 }

@@ -38,10 +38,10 @@ class Thumbnail extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'format': this.format,
+        'format': this.format.toJson(),
         'width': this.width,
         'height': this.height,
-        'file': this.file,
+        'file': this.file.toJson(),
         '@type': CONSTRUCTOR
       };
 }

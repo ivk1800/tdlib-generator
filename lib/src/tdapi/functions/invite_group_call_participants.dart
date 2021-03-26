@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Invites users to a group call. Sends a service message of type
 /// for voice chats
+/// Returns [Ok]
 class InviteGroupCallParticipants extends TdFunction {
   InviteGroupCallParticipants(
       {required this.groupCallId, required this.userIds});
@@ -22,7 +23,7 @@ class InviteGroupCallParticipants extends TdFunction {
   @override
   Map<String, dynamic> toJson() => {
         'group_call_id': this.groupCallId,
-        'user_ids': this.userIds,
+        'user_ids': userIds.map((item) => item).toList(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

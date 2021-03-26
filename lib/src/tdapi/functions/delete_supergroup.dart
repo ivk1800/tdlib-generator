@@ -4,6 +4,7 @@ import '../tdapi.dart';
 /// chat. This will release the supergroup or channel username and remove all
 /// requires owner privileges in the supergroup or channel. Chats with more
 /// 1000 members can't be deleted using this method
+/// Returns [Ok]
 class DeleteSupergroup extends TdFunction {
   DeleteSupergroup({required this.supergroupId});
 

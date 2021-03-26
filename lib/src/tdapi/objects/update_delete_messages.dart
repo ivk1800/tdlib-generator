@@ -42,7 +42,7 @@ class UpdateDeleteMessages extends Update {
   @override
   Map<String, dynamic> toJson() => {
         'chat_id': this.chatId,
-        'message_ids': this.messageIds,
+        'message_ids': messageIds.map((item) => item).toList(),
         'is_permanent': this.isPermanent,
         'from_cache': this.fromCache,
         '@type': CONSTRUCTOR

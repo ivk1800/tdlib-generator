@@ -47,9 +47,9 @@ class VideoNote extends TdObject {
   Map<String, dynamic> toJson() => {
         'duration': this.duration,
         'length': this.length,
-        'minithumbnail': this.minithumbnail,
-        'thumbnail': this.thumbnail,
-        'video': this.video,
+        'minithumbnail': this.minithumbnail?.toJson(),
+        'thumbnail': this.thumbnail?.toJson(),
+        'video': this.video.toJson(),
         '@type': CONSTRUCTOR
       };
 }

@@ -33,8 +33,8 @@ class ChatPhotoInfo extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'small': this.small,
-        'big': this.big,
+        'small': this.small.toJson(),
+        'big': this.big.toJson(),
         'has_animation': this.hasAnimation,
         '@type': CONSTRUCTOR
       };

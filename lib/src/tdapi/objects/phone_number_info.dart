@@ -41,7 +41,7 @@ class PhoneNumberInfo extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'country': this.country,
+        'country': this.country?.toJson(),
         'country_calling_code': this.countryCallingCode,
         'formatted_phone_number': this.formattedPhoneNumber,
         '@type': CONSTRUCTOR,

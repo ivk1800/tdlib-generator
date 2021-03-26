@@ -30,7 +30,7 @@ class MessageBasicGroupChatCreate extends MessageContent {
   @override
   Map<String, dynamic> toJson() => {
         'title': this.title,
-        'member_user_ids': this.memberUserIds,
+        'member_user_ids': memberUserIds.map((item) => item).toList(),
         '@type': CONSTRUCTOR
       };
 }

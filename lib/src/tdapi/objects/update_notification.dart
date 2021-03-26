@@ -28,7 +28,7 @@ class UpdateNotification extends Update {
   @override
   Map<String, dynamic> toJson() => {
         'notification_group_id': this.notificationGroupId,
-        'notification': this.notification,
+        'notification': this.notification.toJson(),
         '@type': CONSTRUCTOR
       };
 }

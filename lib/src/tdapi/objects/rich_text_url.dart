@@ -30,7 +30,7 @@ class RichTextUrl extends RichText {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'text': this.text,
+        'text': this.text.toJson(),
         'url': this.url,
         'is_cached': this.isCached,
         '@type': CONSTRUCTOR

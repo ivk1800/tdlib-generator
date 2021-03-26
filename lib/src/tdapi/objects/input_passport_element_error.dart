@@ -32,9 +32,9 @@ class InputPassportElementError extends TdObject {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'type': this.type,
+        'type': this.type.toJson(),
         'message': this.message,
-        'source': this.source,
+        'source': this.source.toJson(),
         '@type': CONSTRUCTOR
       };
 }

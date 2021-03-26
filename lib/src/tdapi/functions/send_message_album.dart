@@ -4,6 +4,7 @@ import '../tdapi.dart';
 /// photo and video messages can be grouped into an album. Documents and audio
 /// can be only grouped in an album with messages of the same type. Returns
 /// messages
+/// Returns [Messages]
 class SendMessageAlbum extends TdFunction {
   SendMessageAlbum(
       {required this.chatId,
@@ -41,8 +42,9 @@ class SendMessageAlbum extends TdFunction {
         'chat_id': this.chatId,
         'message_thread_id': this.messageThreadId,
         'reply_to_message_id': this.replyToMessageId,
-        'options': this.options,
-        'input_message_contents': this.inputMessageContents,
+        'options': this.options.toJson(),
+        'input_message_contents':
+            inputMessageContents.map((item) => item.toJson()).toList(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

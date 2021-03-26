@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Changes the order of installed sticker sets
+/// Returns [Ok]
 class ReorderInstalledStickerSets extends TdFunction {
   ReorderInstalledStickerSets(
       {required this.isMasks, required this.stickerSetIds});
@@ -22,7 +23,7 @@ class ReorderInstalledStickerSets extends TdFunction {
   @override
   Map<String, dynamic> toJson() => {
         'is_masks': this.isMasks,
-        'sticker_set_ids': this.stickerSetIds,
+        'sticker_set_ids': stickerSetIds.map((item) => item).toList(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

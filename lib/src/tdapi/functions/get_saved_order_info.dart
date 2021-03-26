@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Returns saved order info, if any
+/// Returns [OrderInfo]
 class GetSavedOrderInfo extends TdFunction {
   GetSavedOrderInfo();
 

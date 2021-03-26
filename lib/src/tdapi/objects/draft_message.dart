@@ -37,7 +37,7 @@ class DraftMessage extends TdObject {
   Map<String, dynamic> toJson() => {
         'reply_to_message_id': this.replyToMessageId,
         'date': this.date,
-        'input_message_text': this.inputMessageText,
+        'input_message_text': this.inputMessageText.toJson(),
         '@type': CONSTRUCTOR
       };
 }

@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Searches for installed sticker sets by looking for specified query in
 /// title and name
+/// Returns [StickerSets]
 class SearchInstalledStickerSets extends TdFunction {
   SearchInstalledStickerSets(
       {required this.isMasks, required this.query, required this.limit});

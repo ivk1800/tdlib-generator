@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Returns current verbosity level for a specified TDLib internal log tag.
 /// be called synchronously
+/// Returns [LogVerbosityLevel]
 class GetLogTagVerbosityLevel extends TdFunction {
   GetLogTagVerbosityLevel({required this.tag});
 

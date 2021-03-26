@@ -3,6 +3,7 @@ import '../tdapi.dart';
 /// Re-sends the authentication code sent to confirm a new phone number for
 /// user. Works only if the previously received authenticationCodeInfo
 /// was not null
+/// Returns [AuthenticationCodeInfo]
 class ResendChangePhoneNumberCode extends TdFunction {
   ResendChangePhoneNumberCode();
 

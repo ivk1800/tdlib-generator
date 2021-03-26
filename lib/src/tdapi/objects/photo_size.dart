@@ -47,10 +47,10 @@ class PhotoSize extends TdObject {
   @override
   Map<String, dynamic> toJson() => {
         'type': this.type,
-        'photo': this.photo,
+        'photo': this.photo.toJson(),
         'width': this.width,
         'height': this.height,
-        'progressive_sizes': this.progressiveSizes,
+        'progressive_sizes': progressiveSizes.map((item) => item).toList(),
         '@type': CONSTRUCTOR
       };
 }

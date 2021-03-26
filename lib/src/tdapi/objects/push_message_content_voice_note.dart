@@ -27,7 +27,7 @@ class PushMessageContentVoiceNote extends PushMessageContent {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'voice_note': this.voiceNote,
+        'voice_note': this.voiceNote?.toJson(),
         'is_pinned': this.isPinned,
         '@type': CONSTRUCTOR
       };

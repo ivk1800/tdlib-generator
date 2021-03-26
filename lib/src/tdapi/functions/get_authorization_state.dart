@@ -3,6 +3,7 @@ import '../tdapi.dart';
 /// Returns the current authorization state; this is an offline request. For
 /// purposes only. Use updateAuthorizationState instead to maintain the
 /// authorization state. Can be called before initialization
+/// Returns [AuthorizationState]
 class GetAuthorizationState extends TdFunction {
   GetAuthorizationState();
 

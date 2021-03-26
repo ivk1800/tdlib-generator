@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Sets the result of a pre-checkout query; for bots only
+/// Returns [Ok]
 class AnswerPreCheckoutQuery extends TdFunction {
   AnswerPreCheckoutQuery(
       {required this.preCheckoutQueryId, required this.errorMessage});

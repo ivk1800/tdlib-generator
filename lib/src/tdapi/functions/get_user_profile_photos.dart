@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Returns the profile photos of a user. The result of this query may be
 /// some photos might have been deleted already
+/// Returns [ChatPhotos]
 class GetUserProfilePhotos extends TdFunction {
   GetUserProfilePhotos(
       {required this.userId, required this.offset, required this.limit});

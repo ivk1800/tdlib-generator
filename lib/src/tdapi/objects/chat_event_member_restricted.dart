@@ -33,8 +33,8 @@ class ChatEventMemberRestricted extends ChatEventAction {
   @override
   Map<String, dynamic> toJson() => {
         'user_id': this.userId,
-        'old_status': this.oldStatus,
-        'new_status': this.newStatus,
+        'old_status': this.oldStatus.toJson(),
+        'new_status': this.newStatus.toJson(),
         '@type': CONSTRUCTOR
       };
 }

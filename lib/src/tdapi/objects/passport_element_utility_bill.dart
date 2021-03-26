@@ -22,5 +22,5 @@ class PassportElementUtilityBill extends PassportElement {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() =>
-      {'utility_bill': this.utilityBill, '@type': CONSTRUCTOR};
+      {'utility_bill': this.utilityBill.toJson(), '@type': CONSTRUCTOR};
 }

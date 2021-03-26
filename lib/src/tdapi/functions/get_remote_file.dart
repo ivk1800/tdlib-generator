@@ -7,6 +7,7 @@ import '../tdapi.dart';
 /// message must be not deleted and accessible to the user. If the file
 /// is disabled, then the corresponding object with the file must be preloaded
 /// the application
+/// Returns [File]
 class GetRemoteFile extends TdFunction {
   GetRemoteFile({required this.remoteFileId, required this.fileType});
 
@@ -26,7 +27,7 @@ class GetRemoteFile extends TdFunction {
   @override
   Map<String, dynamic> toJson() => {
         'remote_file_id': this.remoteFileId,
-        'file_type': this.fileType,
+        'file_type': this.fileType.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

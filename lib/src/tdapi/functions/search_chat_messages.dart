@@ -5,6 +5,7 @@ import '../tdapi.dart';
 /// in secret chats with a non-empty query. (searchSecretMessages should be
 /// instead), or without an enabled message database. For optimal performance
 /// number of returned messages is chosen by the library
+/// Returns [Messages]
 class SearchChatMessages extends TdFunction {
   SearchChatMessages(
       {required this.chatId,
@@ -58,11 +59,11 @@ class SearchChatMessages extends TdFunction {
   Map<String, dynamic> toJson() => {
         'chat_id': this.chatId,
         'query': this.query,
-        'sender': this.sender,
+        'sender': this.sender.toJson(),
         'from_message_id': this.fromMessageId,
         'offset': this.offset,
         'limit': this.limit,
-        'filter': this.filter,
+        'filter': this.filter.toJson(),
         'message_thread_id': this.messageThreadId,
         '@type': CONSTRUCTOR,
         '@extra': this.extra

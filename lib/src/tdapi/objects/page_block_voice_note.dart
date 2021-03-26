@@ -26,8 +26,8 @@ class PageBlockVoiceNote extends PageBlock {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'voice_note': this.voiceNote,
-        'caption': this.caption,
+        'voice_note': this.voiceNote?.toJson(),
+        'caption': this.caption.toJson(),
         '@type': CONSTRUCTOR
       };
 }

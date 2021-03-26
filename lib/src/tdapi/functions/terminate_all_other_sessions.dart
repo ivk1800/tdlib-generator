@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Terminates all other sessions of the current user
+/// Returns [Ok]
 class TerminateAllOtherSessions extends TdFunction {
   TerminateAllOtherSessions();
 

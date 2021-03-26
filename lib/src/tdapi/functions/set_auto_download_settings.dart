@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Sets auto-download settings
+/// Returns [Ok]
 class SetAutoDownloadSettings extends TdFunction {
   SetAutoDownloadSettings({required this.settings, required this.type});
 
@@ -19,8 +20,8 @@ class SetAutoDownloadSettings extends TdFunction {
   String getConstructor() => CONSTRUCTOR;
   @override
   Map<String, dynamic> toJson() => {
-        'settings': this.settings,
-        'type': this.type,
+        'settings': this.settings.toJson(),
+        'type': this.type.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

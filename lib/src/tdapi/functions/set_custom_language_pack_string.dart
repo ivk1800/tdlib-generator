@@ -2,6 +2,7 @@ import '../tdapi.dart';
 
 /// Adds, edits or deletes a string in a custom local language pack. Can be
 /// before authorization
+/// Returns [Ok]
 class SetCustomLanguagePackString extends TdFunction {
   SetCustomLanguagePackString(
       {required this.languagePackId, required this.newString});
@@ -23,7 +24,7 @@ class SetCustomLanguagePackString extends TdFunction {
   @override
   Map<String, dynamic> toJson() => {
         'language_pack_id': this.languagePackId,
-        'new_string': this.newString,
+        'new_string': this.newString.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

@@ -49,7 +49,7 @@ class CountryInfo extends TdObject {
         'name': this.name,
         'english_name': this.englishName,
         'is_hidden': this.isHidden,
-        'calling_codes': this.callingCodes,
+        'calling_codes': callingCodes.map((item) => item).toList(),
         '@type': CONSTRUCTOR
       };
 }

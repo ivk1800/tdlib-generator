@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Accepts Telegram terms of services
+/// Returns [Ok]
 class AcceptTermsOfService extends TdFunction {
   AcceptTermsOfService({required this.termsOfServiceId});
 

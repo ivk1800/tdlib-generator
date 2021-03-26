@@ -36,7 +36,7 @@ class InputInlineQueryResultGame extends InputInlineQueryResult {
   Map<String, dynamic> toJson() => {
         'id': this.id,
         'game_short_name': this.gameShortName,
-        'reply_markup': this.replyMarkup,
+        'reply_markup': this.replyMarkup?.toJson(),
         '@type': CONSTRUCTOR
       };
 }

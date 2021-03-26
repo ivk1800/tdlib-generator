@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Accepts an incoming call
+/// Returns [Ok]
 class AcceptCall extends TdFunction {
   AcceptCall({required this.callId, required this.protocol});
 
@@ -20,7 +21,7 @@ class AcceptCall extends TdFunction {
   @override
   Map<String, dynamic> toJson() => {
         'call_id': this.callId,
-        'protocol': this.protocol,
+        'protocol': this.protocol.toJson(),
         '@type': CONSTRUCTOR,
         '@extra': this.extra
       };

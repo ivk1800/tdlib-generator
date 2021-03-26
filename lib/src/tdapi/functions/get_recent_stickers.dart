@@ -1,6 +1,7 @@
 import '../tdapi.dart';
 
 /// Returns a list of recently used stickers
+/// Returns [Stickers]
 class GetRecentStickers extends TdFunction {
   GetRecentStickers({required this.isAttached});
 
