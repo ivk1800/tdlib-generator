@@ -20,9 +20,8 @@ class MessageBasicGroupChatCreate extends MessageContent {
 
     return MessageBasicGroupChatCreate(
         title: json['title'],
-        memberUserIds: List<int>.from((json['member_user_ids'] ?? [])
-            .map((item) => json['int'])
-            .toList()));
+        memberUserIds: List<int>.from(
+            (json['member_user_ids'] ?? []).map((item) => item).toList()));
   }
 
   @override

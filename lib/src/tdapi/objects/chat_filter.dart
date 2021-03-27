@@ -76,15 +76,12 @@ class ChatFilter extends TdObject {
     return ChatFilter(
         title: json['title'],
         iconName: json['icon_name'],
-        pinnedChatIds: List<int>.from((json['pinned_chat_ids'] ?? [])
-            .map((item) => json['int'])
-            .toList()),
-        includedChatIds: List<int>.from((json['included_chat_ids'] ?? [])
-            .map((item) => json['int'])
-            .toList()),
-        excludedChatIds: List<int>.from((json['excluded_chat_ids'] ?? [])
-            .map((item) => json['int'])
-            .toList()),
+        pinnedChatIds: List<int>.from(
+            (json['pinned_chat_ids'] ?? []).map((item) => item).toList()),
+        includedChatIds: List<int>.from(
+            (json['included_chat_ids'] ?? []).map((item) => item).toList()),
+        excludedChatIds: List<int>.from(
+            (json['excluded_chat_ids'] ?? []).map((item) => item).toList()),
         excludeMuted: json['exclude_muted'],
         excludeRead: json['exclude_read'],
         excludeArchived: json['exclude_archived'],

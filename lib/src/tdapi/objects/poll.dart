@@ -59,9 +59,8 @@ class Poll extends TdObject {
             .map((item) => PollOption.fromJson(item))
             .toList()),
         totalVoterCount: json['total_voter_count'],
-        recentVoterUserIds: List<int>.from((json['recent_voter_user_ids'] ?? [])
-            .map((item) => json['int'])
-            .toList()),
+        recentVoterUserIds: List<int>.from(
+            (json['recent_voter_user_ids'] ?? []).map((item) => item).toList()),
         isAnonymous: json['is_anonymous'],
         type: PollType.fromJson(json['type'])!,
         openPeriod: json['open_period'],

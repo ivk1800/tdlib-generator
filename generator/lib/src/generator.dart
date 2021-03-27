@@ -312,7 +312,11 @@ class Generator {
         return "int.tryParse(json['${variable.name}']) ?? 0";
       }
 
-      return "json['${variable.name}']";
+      if (overrideJsonKey != null) {
+        return overrideJsonKey;
+      } else {
+        return "json['${variable.name}']";
+      }
     } else if (variable.type.isListType) {
       String genericType = variable.type.type.substring(
           variable.type.type.indexOf('<') + 1,

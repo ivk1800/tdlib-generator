@@ -60,7 +60,7 @@ class UpdateNotificationGroup extends Update {
                 .toList()),
         removedNotificationIds: List<int>.from(
             (json['removed_notification_ids'] ?? [])
-                .map((item) => json['int'])
+                .map((item) => item)
                 .toList()));
   }
 

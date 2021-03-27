@@ -58,9 +58,8 @@ class ChatInviteLinkInfo extends TdObject {
         title: json['title'],
         photo: ChatPhotoInfo.fromJson(json['photo']),
         memberCount: json['member_count'],
-        memberUserIds: List<int>.from((json['member_user_ids'] ?? [])
-            .map((item) => json['int'])
-            .toList()),
+        memberUserIds: List<int>.from(
+            (json['member_user_ids'] ?? []).map((item) => item).toList()),
         isPublic: json['is_public'],
         extra: json['@extra']);
   }

@@ -16,7 +16,7 @@ class UpdateDiceEmojis extends Update {
 
     return UpdateDiceEmojis(
         emojis: List<String>.from(
-            (json['emojis'] ?? []).map((item) => json['String']).toList()));
+            (json['emojis'] ?? []).map((item) => item).toList()));
   }
 
   @override

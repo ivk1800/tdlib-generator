@@ -43,7 +43,7 @@ class CallStateReady extends CallState {
         config: json['config'],
         encryptionKey: json['encryption_key'],
         emojis: List<String>.from(
-            (json['emojis'] ?? []).map((item) => json['String']).toList()),
+            (json['emojis'] ?? []).map((item) => item).toList()),
         allowP2p: json['allow_p2p']);
   }
 

@@ -23,7 +23,7 @@ class MessageInviteVoiceChatParticipants extends MessageContent {
     return MessageInviteVoiceChatParticipants(
         groupCallId: json['group_call_id'],
         userIds: List<int>.from(
-            (json['user_ids'] ?? []).map((item) => json['int']).toList()));
+            (json['user_ids'] ?? []).map((item) => item).toList()));
   }
 
   @override

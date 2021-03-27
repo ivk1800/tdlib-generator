@@ -46,7 +46,7 @@ class InputMessagePoll extends InputMessageContent {
     return InputMessagePoll(
         question: json['question'],
         options: List<String>.from(
-            (json['options'] ?? []).map((item) => json['String']).toList()),
+            (json['options'] ?? []).map((item) => item).toList()),
         isAnonymous: json['is_anonymous'],
         type: PollType.fromJson(json['type'])!,
         openPeriod: json['open_period'],

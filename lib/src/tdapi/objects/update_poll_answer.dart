@@ -25,7 +25,7 @@ class UpdatePollAnswer extends Update {
         pollId: int.tryParse(json['poll_id']) ?? 0,
         userId: json['user_id'],
         optionIds: List<int>.from(
-            (json['option_ids'] ?? []).map((item) => json['int']).toList()));
+            (json['option_ids'] ?? []).map((item) => item).toList()));
   }
 
   @override
