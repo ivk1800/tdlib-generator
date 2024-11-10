@@ -1,8 +1,10 @@
-# TDLib
+# tdlib-generator
 
-#### Flutter Plugin for [TDLib (Telegram Database Library)](https://github.com/tdlib/td/tree/ebfe3f3d9998d8a034cb9147896a2b3d4f71eecb) v1.6.10
+Class generator for [tdlib-dart](https://github.com/ivk1800/tdlib-dart).
 
-Telegram Tdlib is a complete library for creating telegram clients, it also has a simple tdjson ready-to-use library to ease the integration with different programming languages and platforms.<br>
-This plugin is a complete tdlib-tdjson binding package to help you create your own Telegram clients.
+#### How use
 
-See the `example` directory for the complete sample app.
+1) Copy actual [td_api.tl](https://github.com/tdlib/td/blob/44b548c/td/generate/scheme/td_api.tl) to `root repository directory/data`.
+2) Specify path of [tdlib-dart](https://github.com/ivk1800/tdlib-dart) repository in `main.dart`.
+3) Run `main.dart`.
+4) Run `dart format .` in [tdlib-dart](https://github.com/ivk1800/tdlib-dart) root repository directory.
