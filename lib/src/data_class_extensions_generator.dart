@@ -21,8 +21,9 @@ class DataClassExtensionsGenerator {
         },
       );
 
-      output
-          .add(DartFormatter().format('${extension.accept(cb.DartEmitter())}'));
+      output.add(
+          DartFormatter(languageVersion: DartFormatter.latestLanguageVersion)
+              .format('${extension.accept(cb.DartEmitter())}'));
     }
 
     return output.join('\n');
