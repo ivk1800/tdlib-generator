@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:collection/collection.dart';
 import 'package:code_builder/code_builder.dart' as cb;
 import 'package:dart_style/dart_style.dart';
+import 'package:pool/pool.dart';
 import 'class.dart';
 import 'data_class_extensions_generator.dart';
 import 'group.dart';
@@ -38,36 +39,13 @@ class Generator {
   final List<Class> classes;
 
   cb.Allocator _allocator = cb.Allocator();
+  final pool = new Pool(50);
 
   Generator({required this.root, required this.classes});
 
-  void generate() {
-    if (!rootDir.existsSync()) {
-      throw "Root directory [${root}] not exist";
-    }
-    print("Root directory: ${root}");
-
-    if (functionsDir.existsSync()) functionsDir.deleteSync(recursive: true);
-    functionsDir.createSync(recursive: true);
-
-    if (objectsDir.existsSync()) objectsDir.deleteSync(recursive: true);
-    objectsDir.createSync(recursive: true);
-
-    for (final Class c in classes) {
-      final cb.DartEmitter emitter = cb.DartEmitter(allocator: _allocator);
-      final cb.LibraryBuilder target = cb.LibraryBuilder();
-
-      target.body.add(_createClass(c));
-
-      final File file = File('${getPathOf(c)}/${snakeCase(c.name)}.dart');
-      file.create();
-      file.writeAsString(
-        DartFormatter().format('${target.build().accept(emitter)}'),
-        mode: FileMode.write,
-      );
-      _allocator = cb.Allocator();
-    }
-
+  // generating exports block in tdapi.dart
+  void processTdApi() {
+    print(">> Processing TdAPI file...");
     final List<String> c = <String>[
       "export 'function.dart';",
       "export 'object.dart';",
@@ -85,7 +63,11 @@ class Generator {
     objFile.create();
     c.sort();
     objFile.writeAsString(c.join('\n'));
+  }
 
+  // processing extensions/extensions.dart
+  void processExtensionsFile() {
+    print(">> Processing extensions file...");
     if (extensionsFile.existsSync()) extensionsFile.deleteSync(recursive: true);
     extensionsFile.createSync(recursive: true);
 
@@ -113,13 +95,17 @@ class Generator {
 
       if (extension.methods.isNotEmpty) {
         extenisonsLines.add(
-          DartFormatter().format('${extension.accept(cb.DartEmitter())}'),
+          DartFormatter(languageVersion: DartFormatter.latestLanguageVersion)
+              .format('${extension.accept(cb.DartEmitter())}'),
         );
       }
     }
 
     extensionsFile.writeAsString(extenisonsLines.join('\n'));
+  }
 
+  void processConvertExtensionFile() {
+    print(">> Processing convert extensions file...");
     if (convertExtensionFile.existsSync()) {
       convertExtensionFile.deleteSync(recursive: true);
     }
@@ -154,7 +140,10 @@ class Generator {
     convertExtensionFileLines.add('} } }');
 
     convertExtensionFile.writeAsString(convertExtensionFileLines.join('\n'));
+  }
 
+  void processDataClassExtensions() {
+    print(">> Processing data class extensions...");
     if (dataClassExtensionsFile.existsSync()) {
       dataClassExtensionsFile.deleteSync(recursive: true);
     }
@@ -163,6 +152,45 @@ class Generator {
     dataClassExtensionsFile.writeAsString(
       DataClassExtensionsGenerator().generate(classes),
     );
+  }
+
+  Future<File> processClass(Class cls) {
+    print(">> Processing class: " + cls.name + "...");
+    final cb.DartEmitter emitter = cb.DartEmitter(allocator: _allocator);
+    final cb.LibraryBuilder target = cb.LibraryBuilder();
+
+    target.body.add(_createClass(cls));
+
+    final File file = File('${getPathOf(cls)}/${snakeCase(cls.name)}.dart');
+    file.create();
+    return file.writeAsString(
+      DartFormatter(languageVersion: DartFormatter.latestLanguageVersion)
+          .format('${target.build().accept(emitter)}'),
+      mode: FileMode.write,
+    );
+  }
+
+  void generate() async {
+    if (!rootDir.existsSync()) {
+      throw "Root directory [${root}] not exist";
+    }
+    print("Root directory: ${root}");
+
+    if (functionsDir.existsSync()) functionsDir.deleteSync(recursive: true);
+    functionsDir.createSync(recursive: true);
+
+    if (objectsDir.existsSync()) objectsDir.deleteSync(recursive: true);
+    objectsDir.createSync(recursive: true);
+
+    for (final Class c in classes) {
+      pool.withResource(() => processClass(c));
+    }
+
+    processTdApi();
+    processExtensionsFile();
+    processConvertExtensionFile();
+    processDataClassExtensions();
+    print(">> All done!");
   }
 
   cb.Method _createCopyMethod(Class tdClass) {
@@ -504,7 +532,7 @@ class Generator {
             if (json == null) {
               return null;
             }
-            
+
             ''',
           )
         ]);

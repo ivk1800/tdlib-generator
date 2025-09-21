@@ -11,7 +11,8 @@ class Parser {
   final RegExp sectionRegx = RegExp(r'---(\w+)---');
   final RegExp classRegx = RegExp(r'^//@class (\w+) @description (.*)');
   final RegExp docsRegx = RegExp(
-      r'//((-)|@)(description)?([\w -.,:;={}\?\/\(\)`~|[\]"]+)(@?)(.*)?');
+    r'//((-)|@)(description)?([\w -.,:;={}\?\/\(\)`~|[\]"]+)(@?)(.*)?',
+  );
   final RegExp fieldsRegx = RegExp(r'^(\w+) (.*)?= (\w+);$');
 
   List<Class> parse() {
@@ -131,7 +132,8 @@ class Parser {
                 element.startsWith('param_$variableName '),
           );
           return Variable(
-            isNullable: _resolveExceptionNotNullVar(className, variableName) ??
+            isNullable:
+                _resolveExceptionNotNullVar(className, variableName) ??
                 _resolveExceptionNullableVar(className, variableName) ??
                 _resolveNullableVar(description),
             name: variableName,
@@ -171,8 +173,11 @@ class Parser {
       _checkContainsVar(className, variableName, _exceptionNullableVars);
 
   bool? _resolveExceptionNotNullVar(String className, String variableName) {
-    final bool? result =
-        _checkContainsVar(className, variableName, _exceptionNotNullVars);
+    final bool? result = _checkContainsVar(
+      className,
+      variableName,
+      _exceptionNotNullVars,
+    );
     if (result != null) {
       return !result;
     }
@@ -185,8 +190,9 @@ class Parser {
     Map<String, List<String>> source,
   ) {
     final List<String>? classFields = source[className];
-    final String? field = classFields
-        ?.firstWhereOrNull((String element) => element == variableName);
+    final String? field = classFields?.firstWhereOrNull(
+      (String element) => element == variableName,
+    );
     if (field != null) {
       return true;
     }
