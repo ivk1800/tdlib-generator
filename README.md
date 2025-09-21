@@ -1,3 +1,8 @@
+### ⚠️ Archived  
+This repository is no longer maintained.
+
+I am no longer interested in **Dart** and don’t have time to continue development or provide support.
+
 # tdlib-generator
 
 Class generator for [tdlib-dart](https://github.com/ivk1800/tdlib-dart).
